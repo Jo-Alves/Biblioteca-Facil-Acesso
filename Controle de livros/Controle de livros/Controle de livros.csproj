@@ -1,0 +1,821 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A843B823-9982-4175-BCB5-12D0765265FE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Controle_de_livros</RootNamespace>
+    <AssemblyName>Controle de livros</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>e-book.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClassProject">
+      <HintPath>..\..\..\Dll\ClassProject\ClassProject\bin\Debug\ClassProject.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Autenticação\Alterar Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticação\Alterar Senha.Designer.cs">
+      <DependentUpon>Alterar Senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autenticação\DataSetAutenticacao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAutenticacao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\Buscar livros por Genero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Buscar livros por Genero.Designer.cs">
+      <DependentUpon>Buscar livros por Genero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroPrimeiroAcesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroPrimeiroAcesso.Designer.cs">
+      <DependentUpon>CadastroPrimeiroAcesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet%27s\DataSetTabelaUsuarioNome.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTabelaUsuarioNome.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Autenticacao.cs" />
+    <Compile Include="Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\Buscar livros por autor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Buscar livros por autor.Designer.cs">
+      <DependentUpon>Buscar livros por autor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\Buscar livros Literarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Buscar livros Literarios.Designer.cs">
+      <DependentUpon>Buscar livros Literarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\Buscar_Situacao_UsuarioAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Buscar_Situacao_UsuarioAluno.Designer.cs">
+      <DependentUpon>Buscar_Situacao_UsuarioAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\EmprestimoLivroDidatico.cs" />
+    <Compile Include="Classes\Emprestimo_Livro_Literario.cs" />
+    <Compile Include="Busca\Buscar usuários e livros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Buscar usuários e livros.Designer.cs">
+      <DependentUpon>Buscar usuários e livros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autenticação\Cadastrar login e senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticação\Cadastrar login e senha.Designer.cs">
+      <DependentUpon>Cadastrar login e senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro e edição\Cadastro livro didatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\Cadastro livro didatico.Designer.cs">
+      <DependentUpon>Cadastro livro didatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro e edição\Cadastro_Livro_Literario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\Cadastro_Livro_Literario.Designer.cs">
+      <DependentUpon>Cadastro_Livro_Literario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet%27s\DataSet_Usuario.cs">
+      <DependentUpon>DataSet_Usuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet%27s\DataSet_Usuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Usuario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\Emprestimo Livro DidaticoTemporaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\Emprestimo Livro DidaticoTemporaria.Designer.cs">
+      <DependentUpon>Emprestimo Livro DidaticoTemporaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\Devolucao livro didatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\Devolucao livro didatico.Designer.cs">
+      <DependentUpon>Devolucao livro didatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\Devolucao livro literario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\Devolucao livro literario.Designer.cs">
+      <DependentUpon>Devolucao livro literario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro e edição\Editar Excluir livro didatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\Editar Excluir livro didatico.Designer.cs">
+      <DependentUpon>Editar Excluir livro didatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro e edição\Editar Excluir livro literario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\Editar Excluir livro literario.Designer.cs">
+      <DependentUpon>Editar Excluir livro literario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro e edição\Editar_Excluir_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\Editar_Excluir_Usuario.Designer.cs">
+      <DependentUpon>Editar_Excluir_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\Emprestimo livro literario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\Emprestimo livro literario.Designer.cs">
+      <DependentUpon>Emprestimo livro literario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autenticação\Excluir Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticação\Excluir Usuario.Designer.cs">
+      <DependentUpon>Excluir Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Carregando.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carregando.Designer.cs">
+      <DependentUpon>Carregando.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fomulario_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fomulario_Principal.Designer.cs">
+      <DependentUpon>Fomulario_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro e edição\Cadastro_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\Cadastro_Usuario.Designer.cs">
+      <DependentUpon>Cadastro_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\Emprestimo_livro_didatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\Emprestimo_livro_didatico.Designer.cs">
+      <DependentUpon>Emprestimo_livro_didatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autenticação\FORMULARIO_AUTENTICACAO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autenticação\FORMULARIO_AUTENTICACAO.Designer.cs">
+      <DependentUpon>FORMULARIO_AUTENTICACAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Livros.cs" />
+    <Compile Include="Classes\Livro_Didatico.cs" />
+    <Compile Include="Classes\Livro_Literario.cs" />
+    <Compile Include="FrmAnaliseLivroMaisEmprestado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnaliseLivroMaisEmprestado.Designer.cs">
+      <DependentUpon>FrmAnaliseLivroMaisEmprestado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnaliseUsuarioMaisLeu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnaliseUsuarioMaisLeu.Designer.cs">
+      <DependentUpon>FrmAnaliseUsuarioMaisLeu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscaLivroLiterario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscaLivroLiterario.Designer.cs">
+      <DependentUpon>FrmBuscaLivroLiterario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarCliente.Designer.cs">
+      <DependentUpon>FrmBuscarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarLivroDidatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarLivroDidatico.Designer.cs">
+      <DependentUpon>FrmBuscarLivroDidatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuantidadeLivrosCadastrados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuantidadeLivrosCadastrados.Designer.cs">
+      <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.Designer.cs">
+      <DependentUpon>RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioEmpretimoLivrosLiterariosFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioEmpretimoLivrosLiterariosFuncionario.Designer.cs">
+      <DependentUpon>RelatorioEmpretimoLivrosLiterariosFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioEmpretimoLivrosLiterariosTerceiroscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioEmpretimoLivrosLiterariosTerceiroscs.Designer.cs">
+      <DependentUpon>RelatorioEmpretimoLivrosLiterariosTerceiroscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.Designer.cs">
+      <DependentUpon>RelatorioLivrosDidaticosEmprestadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelatorioLivrosLiterarioPorTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelatorioLivrosLiterarioPorTurma.Designer.cs">
+      <DependentUpon>RelatorioLivrosLiterarioPorTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\DataSet_Emprestimos.cs">
+      <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.Designer.cs">
+      <DependentUpon>RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\DataSet_Emprestimos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\Relatorio_Livros_Didaticos_Nao-Entregues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\Relatorio_Livros_Didaticos_Nao-Entregues.Designer.cs">
+      <DependentUpon>Relatorio_Livros_Didaticos_Nao-Entregues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\Relatório Livros Literários Nao Entregues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\Relatório Livros Literários Nao Entregues.Designer.cs">
+      <DependentUpon>Relatório Livros Literários Nao Entregues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RestauracaoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestauracaoSistema.Designer.cs">
+      <DependentUpon>RestauracaoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema_Controle_LivrosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistema_Controle_LivrosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema_Controle_LivrosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sistema_Controle_LivrosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="Emprestimo\Verificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\Verificar.Designer.cs">
+      <DependentUpon>Verificar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\Verificar_Livros_Didaticos_Emprestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Verificar_Livros_Didaticos_Emprestados.Designer.cs">
+      <DependentUpon>Verificar_Livros_Didaticos_Emprestados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\VerificarLivroLiterarioEmprestado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\VerificarLivroLiterarioEmprestado.Designer.cs">
+      <DependentUpon>VerificarLivroLiterarioEmprestado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busca\Verificar_Situacao_Funcionarios_Terceiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busca\Verificar_Situacao_Funcionarios_Terceiros.Designer.cs">
+      <DependentUpon>Verificar_Situacao_Funcionarios_Terceiros.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Autenticação\Alterar Senha.resx">
+      <DependentUpon>Alterar Senha.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Buscar livros por Genero.resx">
+      <DependentUpon>Buscar livros por Genero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Buscar livros por autor.resx">
+      <DependentUpon>Buscar livros por autor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Buscar livros Literarios.resx">
+      <DependentUpon>Buscar livros Literarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Buscar usuários e livros.resx">
+      <DependentUpon>Buscar usuários e livros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autenticação\Cadastrar login e senha.resx">
+      <DependentUpon>Cadastrar login e senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Buscar_Situacao_UsuarioAluno.resx">
+      <DependentUpon>Buscar_Situacao_UsuarioAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\Cadastro livro didatico.resx">
+      <DependentUpon>Cadastro livro didatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\Cadastro_Livro_Literario.resx">
+      <DependentUpon>Cadastro_Livro_Literario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroPrimeiroAcesso.resx">
+      <DependentUpon>CadastroPrimeiroAcesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\Emprestimo Livro DidaticoTemporaria.resx">
+      <DependentUpon>Emprestimo Livro DidaticoTemporaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\Devolucao livro didatico.resx">
+      <DependentUpon>Devolucao livro didatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\Devolucao livro literario.resx">
+      <DependentUpon>Devolucao livro literario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\Editar Excluir livro didatico.resx">
+      <DependentUpon>Editar Excluir livro didatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\Editar Excluir livro literario.resx">
+      <DependentUpon>Editar Excluir livro literario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\Editar_Excluir_Usuario.resx">
+      <DependentUpon>Editar_Excluir_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\Emprestimo_livro_didatico.resx">
+      <DependentUpon>Emprestimo_livro_didatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\Emprestimo livro literario.resx">
+      <DependentUpon>Emprestimo livro literario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autenticação\Excluir Usuario.resx">
+      <DependentUpon>Excluir Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carregando.resx">
+      <DependentUpon>Carregando.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fomulario_Principal.resx">
+      <DependentUpon>Fomulario_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\Cadastro_Usuario.resx">
+      <DependentUpon>Cadastro_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autenticação\FORMULARIO_AUTENTICACAO.resx">
+      <DependentUpon>FORMULARIO_AUTENTICACAO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnaliseLivroMaisEmprestado.resx">
+      <DependentUpon>FrmAnaliseLivroMaisEmprestado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnaliseUsuarioMaisLeu.resx">
+      <DependentUpon>FrmAnaliseUsuarioMaisLeu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscaLivroLiterario.resx">
+      <DependentUpon>FrmBuscaLivroLiterario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarCliente.resx">
+      <DependentUpon>FrmBuscarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarLivroDidatico.resx">
+      <DependentUpon>FrmBuscarLivroDidatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuantidadeLivrosCadastrados.resx">
+      <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.resx">
+      <DependentUpon>RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioEmpretimoLivrosLiterariosFuncionario.resx">
+      <DependentUpon>RelatorioEmpretimoLivrosLiterariosFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioEmpretimoLivrosLiterariosTerceiroscs.resx">
+      <DependentUpon>RelatorioEmpretimoLivrosLiterariosTerceiroscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioLivroLiterarioNaoEntregue.rdlc" />
+    <EmbeddedResource Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.resx">
+      <DependentUpon>RelatorioLivrosDidaticosEmprestadosFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelatorioLivrosLiterarioPorTurma.resx">
+      <DependentUpon>RelatorioLivrosLiterarioPorTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\GerarRelatorioPorTurma.rdlc" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosFO.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosOutros.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.resx">
+      <DependentUpon>RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\RELATORIO_LIVROS_DIDATICO_EMPRESTADOS_A_FUNCIONARIOS.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\RELATORIO_LIVROS_LITERARIOS_DEVOLVIDOS.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Relatorio_Livros_Didaticos_Nao-Entregues.resx">
+      <DependentUpon>Relatorio_Livros_Didaticos_Nao-Entregues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\Relatório Livros Literários Nao Entregues.resx">
+      <DependentUpon>Relatório Livros Literários Nao Entregues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\RELATORIO RELACAO DE ALUNOS COM LIVROS DIDÁTICOS EMPRESTADOS QUE NAO FORAM DEVOLVIDOS.rdlc" />
+    <EmbeddedResource Include="Emprestimo\Verificar.resx">
+      <DependentUpon>Verificar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Verificar_Livros_Didaticos_Emprestados.resx">
+      <DependentUpon>Verificar_Livros_Didaticos_Emprestados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\VerificarLivroLiterarioEmprestado.resx">
+      <DependentUpon>VerificarLivroLiterarioEmprestado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestauracaoSistema.resx">
+      <DependentUpon>RestauracaoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busca\Verificar_Situacao_Funcionarios_Terceiros.resx">
+      <DependentUpon>Verificar_Situacao_Funcionarios_Terceiros.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Autenticação\DataSetAutenticacao.xsc">
+      <DependentUpon>DataSetAutenticacao.xsd</DependentUpon>
+    </None>
+    <None Include="Autenticação\DataSetAutenticacao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAutenticacao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Autenticação\DataSetAutenticacao.xss">
+      <DependentUpon>DataSetAutenticacao.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet%27s\DataSetTabelaUsuarioNome.xsc">
+      <DependentUpon>DataSetTabelaUsuarioNome.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet%27s\DataSetTabelaUsuarioNome.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTabelaUsuarioNome.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet%27s\DataSetTabelaUsuarioNome.xss">
+      <DependentUpon>DataSetTabelaUsuarioNome.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet%27s\DataSet_Usuario.xsc">
+      <DependentUpon>DataSet_Usuario.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet%27s\DataSet_Usuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Usuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet%27s\DataSet_Usuario.xss">
+      <DependentUpon>DataSet_Usuario.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RELATÓRIOS\DataSet_Emprestimos.xsc">
+      <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
+    </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Emprestimos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimos.xss">
+      <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_Controle_LivrosDataSet.xsc">
+      <DependentUpon>Sistema_Controle_LivrosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_Controle_LivrosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sistema_Controle_LivrosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema_Controle_LivrosDataSet.xss">
+      <DependentUpon>Sistema_Controle_LivrosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_Controle_LivrosDataSet1.xsc">
+      <DependentUpon>Sistema_Controle_LivrosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Sistema_Controle_LivrosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sistema_Controle_LivrosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sistema_Controle_LivrosDataSet1.xss">
+      <DependentUpon>Sistema_Controle_LivrosDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e-book.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entrar1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Turn-On-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cadastrar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regulamento-da-biblioteca-colegio-salesiano-dom-bosco-cidade-alta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Group-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Group-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zerode-Plump-Drive-Floppy-blue.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Button-Button-Delete.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-Edit-Document.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_search.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-key-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Database-Backup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Saki-Snowish-Button-exit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Logout1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8WUJ2XuE_400x400.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8WUJ2XuE_400x4001.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-4-Rename.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-Text-Edit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="e-book.ico" />
+    <None Include="Resources\CleanMyMac-1-icon.png" />
+    <None Include="Resources\logout-icon1.png" />
+    <None Include="Resources\logout-icon.ico" />
+    <None Include="Resources\Avosoft-Warm-Toolbar-Print.ico" />
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Mimetypes-application-pdf.ico" />
+    <None Include="Resources\Button-Cancel-icon.png" />
+    <None Include="Resources\Image1.png" />
+    <None Include="Resources\Button-Cancel-icon %281%29.png" />
+    <None Include="Resources\Icons8-Windows-8-Database-Backup1.ico" />
+    <None Include="Resources\Blackvariant-Button-Ui-Requests-2-CleanMyMac-11.ico" />
+    <None Include="Resources\951701.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Jommans-Briefness-Search %281%29.ico" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-9-Magnifying-glass.ico" />
+    <None Include="Resources\backup-restore-icon2.png" />
+    <None Include="Resources\backup-restore-icon1.png" />
+    <None Include="Resources\backup-restore-icon.png" />
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-6-Backup-restore.ico" />
+    <None Include="Resources\Hopstarter-Mac-Folders-Documents.ico" />
+    <None Include="Resources\TMI-smiley.bmp" />
+    <None Include="Resources\TMI-smiley.ico" />
+    <None Include="Resources\download %282%29.ico" />
+    <None Include="Resources\download %281%291.ico" />
+    <None Include="Resources\download %281%29.ico" />
+    <None Include="Resources\Graphicloads-Polygon-Check-3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
