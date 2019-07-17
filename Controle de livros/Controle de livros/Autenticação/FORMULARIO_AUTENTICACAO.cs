@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ClassProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -63,6 +65,138 @@ namespace Controle_de_livros
                 }
             }
         }
+
+        string stringConn, _sql; bool retorno;
+        private void VerificarDataBase()
+        {
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHJjGrOXTsH7b9NW1qcCpVJxD4wsfhTDR6OXOUSfCqDynZ+0PYEaREWQ=="));
+            _sql = "Select * from Sys.Databases where name = 'Sistema_Controle_Livros'";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            try
+            {
+                conexao.Open();
+                comando.ExecuteNonQuery();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    retorno = true;
+                }
+                else
+                {
+                    retorno = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void createTabelas()
+        {
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
+            SqlCommand comando = new SqlCommand("", conexao);
+            comando.CommandText = "CREATE TABLE [dbo].[Login] (" +
+                "[Id]      INT IDENTITY(1, 1) NOT NULL," +
+                "[Usuario] VARCHAR(50) NULL," +
+                "[Senha] VARCHAR(10) NULL," +
+                "PRIMARY KEY CLUSTERED([Id] ASC));" +
+                "CREATE TABLE[dbo].[Usuario]" +
+                "([Cod_Usuario] INT IDENTITY(1, 1) NOT NULL," +
+                "[Nome_Usuario] VARCHAR(100) NOT NULL," +
+                "[Ano] VARCHAR(25) NULL," +
+                "[Turma] VARCHAR(14) NULL," +
+                "[Endereco] VARCHAR(30) NULL," +
+                "[Numero] VARCHAR(MAX)NULL," +
+                "[Telefone] VARCHAR(14) NULL," +
+                "[Ocupacao] VARCHAR(11) NOT NULL," +
+                "PRIMARY KEY CLUSTERED([Cod_Usuario] ASC));" +
+                "" +
+                "CREATE TABLE[dbo].[Livro_Literario]" +
+                "([N_Registro] INT           NOT NULL," +
+                "[Titulo] VARCHAR(MAX) NOT NULL," +
+                "[Autor]      VARCHAR(MAX) NULL," +
+                "[Genero] VARCHAR(MAX) NULL," +
+                "[Estante] VARCHAR(3) NULL," +
+                "PRIMARY KEY CLUSTERED([N_Registro] ASC));" +
+                "" +
+                "CREATE TABLE[dbo].[Livro_Didatico]" +
+                "([N_Registro] INT           NOT NULL," +
+                "[Disciplina] VARCHAR(300) NULL," +
+                "[Autor] VARCHAR(100) NULL," +
+                "[Ensino] VARCHAR(30)  NULL," +
+                "[Volume] VARCHAR(30)  NULL,   " +
+                "PRIMARY KEY CLUSTERED([N_Registro] ASC));" +
+                "" +
+                "CREATE TABLE[dbo].[Emprestimo_Livro_Literario](" +
+                "[Cod_Empretimo_Livro_Literario] INT          IDENTITY(1, 1) NOT NULL," +
+                "[Data_Solicitacao]              VARCHAR(11) NULL," +
+                "[Data_Entrega] VARCHAR(11) NULL," +
+                "[Cod_Usuario]INT NULL," +
+                "[N_Registro]                    INT NULL," +
+                "PRIMARY KEY CLUSTERED([Cod_Empretimo_Livro_Literario] ASC)," +
+                "FOREIGN KEY([Cod_Usuario]) REFERENCES[dbo].[Usuario] ([Cod_Usuario])," +
+                "FOREIGN KEY([N_Registro]) REFERENCES[dbo].[Livro_Literario] ([N_Registro]));" +
+                "" +
+                "CREATE TABLE[dbo].[Emprestimo_Livro_Didatico](" +
+                "[Cod_Emprestimo_Didatico] INT          IDENTITY(1,1) NOT NULL," +
+                "[Data_Entrega]            VARCHAR(11) NOT NULL," +
+                "[Data_Solicitacao]        VARCHAR(11) NULL," +
+                "[N_Registro]INT NULL," +
+                "[Cod_Usuario]             INT NULL," +
+                "PRIMARY KEY CLUSTERED([Cod_Emprestimo_Didatico] ASC)," +
+                "FOREIGN KEY([N_Registro]) REFERENCES[dbo].[Livro_Didatico] ([N_Registro])," +
+                "FOREIGN KEY([Cod_Usuario]) REFERENCES[dbo].[Usuario] ([Cod_Usuario]));" +
+                "CREATE TABLE[dbo].[EmprestimoTemporario](" +
+                "[Id] INT          IDENTITY(1, 1) NOT NULL," +
+                "[Livro] VARCHAR(300) NOT NULL," +
+                "[Turma]      VARCHAR(14) NULL," +
+                "[Professora] VARCHAR(50) NULL," +
+                "[Quantidade] INT NOT NULL," +
+                "PRIMARY KEY CLUSTERED([Id] ASC));" +
+                "" +
+                "INSERT INTO Login VALUES('Biblioteca','Educação')";
+
+            try
+            {
+                conexao.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void createDataBase()
+        {
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHJjGrOXTsH7b9NW1qcCpVJxD4wsfhTDR6OXOUSfCqDynZ+0PYEaREWQ=="));
+            SqlCommand comando = new SqlCommand("", conexao);
+            comando.CommandText = "CREATE DATABASE Sistema_Controle_Livros";
+
+            try
+            {
+                conexao.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
         private void txt_Usuario_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode== Keys.Enter)
@@ -107,8 +241,17 @@ namespace Controle_de_livros
         }
 
         private void FORMULARIO_AUTENTICACAO_Load(object sender, EventArgs e)
-        {           
-            this.loginTableAdapter.Fill(this.dataSetAutenticacao.Login);           
+        {
+            VerificarDataBase();
+            if (retorno == true)
+            {
+                this.loginTableAdapter.Fill(this.dataSetAutenticacao.Login);
+            }
+            else
+            {
+                createDataBase();
+                createTabelas();
+            }
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
