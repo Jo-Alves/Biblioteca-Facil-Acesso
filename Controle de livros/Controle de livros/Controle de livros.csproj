@@ -321,6 +321,12 @@
     <Compile Include="FrmBuscarLivroDidatico.Designer.cs">
       <DependentUpon>FrmBuscarLivroDidatico.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmInstituicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInstituicao.Designer.cs">
+      <DependentUpon>FrmInstituicao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuantidadeLivrosCadastrados.cs">
@@ -514,6 +520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarLivroDidatico.resx">
       <DependentUpon>FrmBuscarLivroDidatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInstituicao.resx">
+      <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuantidadeLivrosCadastrados.resx">
       <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
@@ -775,6 +784,8 @@
     <None Include="Resources\Icons8-Windows-8-Database-Backup1.ico" />
     <None Include="Resources\Blackvariant-Button-Ui-Requests-2-CleanMyMac-11.ico" />
     <None Include="Resources\951701.ico" />
+    <None Include="Resources\company-building-icon %28128px%29.png" />
+    <None Include="Resources\Settings-icon.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -239,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 310);
+            this.ClientSize = new System.Drawing.Size(545, 289);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.groupBox1);

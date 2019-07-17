@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controle_de_livros.Properties;
 
 namespace Controle_de_livros
 {
@@ -272,6 +273,17 @@ namespace Controle_de_livros
         {
             QuantidadeLivrosCadastrados quantidadeLivros = new QuantidadeLivrosCadastrados();
             quantidadeLivros.ShowDialog();
+        }
+
+        private void MenuInstituicao_Click(object sender, EventArgs e)
+        {
+            FrmInstituicao instituicao = new FrmInstituicao();
+            instituicao.ShowDialog();
+        }
+
+        private void Fomulario_Principal_Load(object sender, EventArgs e)
+        {
+            lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
         }
     }
 }

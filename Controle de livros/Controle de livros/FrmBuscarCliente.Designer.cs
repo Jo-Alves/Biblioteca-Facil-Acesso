@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_livros
 {
-    partial class FrmBuscarCliente
+    partial class FrmBuscarUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -196,7 +196,7 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // FrmBuscarCliente
+            // FrmBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,9 +211,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "FrmBuscarCliente";
+            this.Name = "FrmBuscarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pesquisar Cliente";
+            this.Text = "Pesquisar Usuário";
             this.Load += new System.EventHandler(this.FrmBuscarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).EndInit();
             this.ResumeLayout(false);

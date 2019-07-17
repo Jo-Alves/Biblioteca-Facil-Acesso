@@ -1,4 +1,6 @@
 ﻿using ClassProject;
+using Controle_de_livros.Properties;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,10 @@ namespace Controle_de_livros
         public RelatorioLivrosLiterarioPorTurma()
         {
             InitializeComponent();
+            ReportParameterCollection rpc = new ReportParameterCollection();
+            rpc.Add(new ReportParameter("biblioteca", Settings.Default["Biblioteca"].ToString()));
+            rpc.Add(new ReportParameter("instituicao", Settings.Default["Instituicao"].ToString()));
+            reportViewer.LocalReport.SetParameters(rpc);
         }
 
         string _sql;

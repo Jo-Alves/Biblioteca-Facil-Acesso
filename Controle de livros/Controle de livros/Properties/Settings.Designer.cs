@@ -55,5 +55,41 @@ namespace Controle_de_livros.Properties {
                 return ((string)(this["Sistema_Controle_LivrosConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Instituicao {
+            get {
+                return ((string)(this["Instituicao"]));
+            }
+            set {
+                this["Instituicao"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Biblioteca {
+            get {
+                return ((string)(this["Biblioteca"]));
+            }
+            set {
+                this["Biblioteca"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Rede {
+            get {
+                return ((string)(this["Rede"]));
+            }
+            set {
+                this["Rede"] = value;
+            }
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace Controle_de_livros
             }
             else
             {
-                FrmBuscarCliente bc = new FrmBuscarCliente("AbrirJanela");
+                FrmBuscarUsuario bc = new FrmBuscarUsuario("AbrirJanela");
                 bc.ShowDialog();
                 if(bc.Codigo >= 1)
                 {

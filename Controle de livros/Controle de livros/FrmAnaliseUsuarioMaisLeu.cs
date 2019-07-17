@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassProject;
 
 namespace Controle_de_livros
 {
     public partial class FrmAnaliseUsuarioMaisLeu : Form
     {
-        string stringConn = @"Data Source=LOCALHOST\SQLEXPRESS;Initial Catalog=Sistema_Controle_Livros;User ID=SA;Password=mQu5ue6PNAG3jDzrm4aXAA==", _sql, opcao;
+        string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), _sql, opcao;
         public FrmAnaliseUsuarioMaisLeu()
         {
             InitializeComponent();

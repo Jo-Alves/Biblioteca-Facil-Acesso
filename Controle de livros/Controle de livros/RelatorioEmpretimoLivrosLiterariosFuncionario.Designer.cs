@@ -31,13 +31,23 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RelatorioEmpretimoLivrosLiterariosFuncionario));
-            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
             this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tableEmprestimoLivrosLiterariosFuncionarioTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_EmprestimosTableAdapters.TableEmprestimoLivrosLiterariosFuncionarioTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tableEmprestimoLivrosLiterariosFuncionarioBindingSource
+            // 
+            this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource.DataMember = "TableEmprestimoLivrosLiterariosFuncionario";
+            this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource.DataSource = this.dataSet_Emprestimos;
+            // 
+            // dataSet_Emprestimos
+            // 
+            this.dataSet_Emprestimos.DataSetName = "DataSet_Emprestimos";
+            this.dataSet_Emprestimos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer2
             // 
@@ -52,21 +62,11 @@
             this.reportViewer2.Size = new System.Drawing.Size(1065, 706);
             this.reportViewer2.TabIndex = 0;
             // 
-            // dataSet_Emprestimos
-            // 
-            this.dataSet_Emprestimos.DataSetName = "DataSet_Emprestimos";
-            this.dataSet_Emprestimos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tableEmprestimoLivrosLiterariosFuncionarioBindingSource
-            // 
-            this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource.DataMember = "TableEmprestimoLivrosLiterariosFuncionario";
-            this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource.DataSource = this.dataSet_Emprestimos;
-            // 
             // tableEmprestimoLivrosLiterariosFuncionarioTableAdapter
             // 
             this.tableEmprestimoLivrosLiterariosFuncionarioTableAdapter.ClearBeforeFill = true;
             // 
-            // RelatorioEmpretimoLivrosLiterariosFO
+            // RelatorioEmpretimoLivrosLiterariosFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -77,12 +77,13 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "RelatorioEmpretimoLivrosLiterariosFO";
+            this.Name = "RelatorioEmpretimoLivrosLiterariosFuncionario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RELATÓRIO DE LIVROS EMPRESTADOS PARA FUNCIONÁRIOS";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RelatorioEmpretimoLivrosLiterariosFO_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivrosLiterariosFuncionarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
             this.ResumeLayout(false);
 
         }

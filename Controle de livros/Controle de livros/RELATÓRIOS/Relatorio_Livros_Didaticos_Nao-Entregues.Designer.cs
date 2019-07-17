@@ -80,6 +80,7 @@
             this.Name = "Relatorio_Livros_Didaticos_Nao_Entregues";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RELATÓRIO DE LIVROS DIDÁTICOS NÃO ENTREGUES";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Relatorio_Livros_Didaticos_Nao_Entregues_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabelaEmprestimoLivroDidaticoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
