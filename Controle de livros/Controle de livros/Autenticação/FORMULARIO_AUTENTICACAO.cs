@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controle_de_livros.Properties;
 
 namespace Controle_de_livros
 {
@@ -43,10 +44,17 @@ namespace Controle_de_livros
                     {
                         try
                         {
-                            autenticacao.Consultar();
-                            Fomulario_Principal FP = new Fomulario_Principal(cb_Usuario.Text);
-                            FP.Show();
-                            this.Visible = false;
+                            if (!string.IsNullOrEmpty(Settings.Default["Disco"].ToString()))
+                            {
+                                Fomulario_Principal FP = new Fomulario_Principal(cb_Usuario.Text);
+                                FP.Show();
+                                this.Visible = false;
+                            }
+                            else
+                            {
+                                FrmOpcaoDiretorio opcaoDiretorio = new FrmOpcaoDiretorio(cb_Usuario.Text);
+                                opcaoDiretorio.ShowDialog();
+                            }
                         }
                         catch (Exception ex)
                         {
@@ -249,8 +257,18 @@ namespace Controle_de_livros
             }
             else
             {
-                createDataBase();
-                createTabelas();
+                DialogResult dr = MessageBox.Show("É a primeira instalação?", "Aviso do sistema", MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if (dr == DialogResult.Yes)
+                {
+                    createDataBase();
+                    createTabelas();
+                }
+                else
+                {
+                    RestauracaoSistema restauracaoSistema = new RestauracaoSistema();
+                    restauracaoSistema.ShowDialog();
+                }
+                this.loginTableAdapter.Fill(this.dataSetAutenticacao.Login);
             }
         }
 

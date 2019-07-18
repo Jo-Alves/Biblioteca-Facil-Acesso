@@ -333,3 +333,4 @@ D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\ob
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle de livros.exe
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle de livros.pdb
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscarUsuario.resources
+D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmOpcaoDiretorio.resources

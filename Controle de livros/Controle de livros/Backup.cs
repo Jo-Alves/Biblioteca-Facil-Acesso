@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controle_de_livros.Properties;
 
 namespace Controle_de_livros
 {
@@ -43,7 +44,7 @@ namespace Controle_de_livros
         string Pasta;
         private void CriarPasta()
         {
-            Pasta = @"D:\Biblioteca Fácil Acesso\Sistema de Segurança\";
+            Pasta = Settings.Default["Disco"].ToString() + @"Biblioteca Fácil Acesso\Sistema de Segurança\";
             if (!Directory.Exists(Pasta))
             {
                 Directory.CreateDirectory(Pasta);

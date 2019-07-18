@@ -543,6 +543,16 @@ namespace Controle_de_livros.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap My_Pictures_icon {
+            get {
+                object obj = ResourceManager.GetObject("My-Pictures-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Mimetypes_application_pdf {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Mimetypes-application-pdf", resourceCulture);

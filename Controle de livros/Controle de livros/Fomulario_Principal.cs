@@ -13,10 +13,12 @@ namespace Controle_de_livros
 {
     public partial class Fomulario_Principal : Form
     {
+        string Usuario;
         public Fomulario_Principal(string Usuario)
         {
             InitializeComponent();
             this.Text = "Bibloteca Fácil Acesso - SISTEMA PARA CONTROLE DE LIVROS (Escola Estadual Felício dos Santos) === Usuário(a): " + Usuario.ToUpper();
+            this.Usuario = Usuario;
         }
 
         private void menu_Sair_Click(object sender, EventArgs e)
@@ -279,11 +281,19 @@ namespace Controle_de_livros
         {
             FrmInstituicao instituicao = new FrmInstituicao();
             instituicao.ShowDialog();
+            lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
+
         }
 
         private void Fomulario_Principal_Load(object sender, EventArgs e)
         {
             lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
+        }
+
+        private void OpçãoDeDisToolStripMenuItem_Click(object sender, EventArgs e)
+        {            
+            FrmOpcaoDiretorio opcaoDiretorio = new FrmOpcaoDiretorio(Usuario);
+            opcaoDiretorio.ShowDialog();
         }
     }
 }

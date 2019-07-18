@@ -327,6 +327,12 @@
     <Compile Include="FrmInstituicao.Designer.cs">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOpcaoDiretorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOpcaoDiretorio.designer.cs">
+      <DependentUpon>FrmOpcaoDiretorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuantidadeLivrosCadastrados.cs">
@@ -523,6 +529,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInstituicao.resx">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOpcaoDiretorio.resx">
+      <DependentUpon>FrmOpcaoDiretorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuantidadeLivrosCadastrados.resx">
       <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
@@ -786,6 +795,7 @@
     <None Include="Resources\951701.ico" />
     <None Include="Resources\company-building-icon %28128px%29.png" />
     <None Include="Resources\Settings-icon.png" />
+    <None Include="Resources\My-Pictures-icon.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
