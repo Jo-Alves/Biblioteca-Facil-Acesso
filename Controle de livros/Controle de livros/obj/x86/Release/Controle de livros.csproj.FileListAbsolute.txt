@@ -166,3 +166,4 @@ D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\ob
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\x86\Release\Controle de livros.csproj.CopyComplete
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\x86\Release\Controle de livros.exe
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\x86\Release\Controle de livros.pdb
+D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\x86\Release\Controle de livros.csprojAssemblyReference.cache

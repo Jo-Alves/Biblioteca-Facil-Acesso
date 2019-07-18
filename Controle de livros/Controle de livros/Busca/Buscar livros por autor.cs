@@ -170,7 +170,7 @@ namespace Controle_de_livros
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             txtGenero.Clear();
-            txt_Autor.Text = "";
+            txtAutor.Clear();
             txt_Estante.Clear();
             txt_Titulo.Clear();
             numQuantidadeLivroAutor.Value = 0;

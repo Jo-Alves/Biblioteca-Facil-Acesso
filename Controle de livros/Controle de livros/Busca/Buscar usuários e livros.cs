@@ -169,7 +169,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livros didáticos não encontrado!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros didáticos não encontrado!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -196,7 +196,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
