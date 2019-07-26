@@ -51,38 +51,38 @@
             // 
             // btn_Excluir
             // 
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Excluir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Button_Button_Delete;
             this.btn_Excluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Excluir.Location = new System.Drawing.Point(83, 145);
+            this.btn_Excluir.Location = new System.Drawing.Point(55, 219);
             this.btn_Excluir.Margin = new System.Windows.Forms.Padding(6);
             this.btn_Excluir.Name = "btn_Excluir";
-            this.btn_Excluir.Size = new System.Drawing.Size(102, 48);
+            this.btn_Excluir.Size = new System.Drawing.Size(126, 48);
             this.btn_Excluir.TabIndex = 7;
             this.btn_Excluir.Text = "Excluir";
-            this.btn_Excluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Excluir.UseVisualStyleBackColor = true;
             this.btn_Excluir.Click += new System.EventHandler(this.btn_Excluir_Click);
             // 
             // btn_Sair
             // 
+            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout1;
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sair.Location = new System.Drawing.Point(197, 145);
+            this.btn_Sair.Location = new System.Drawing.Point(193, 219);
             this.btn_Sair.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(77, 48);
+            this.btn_Sair.Size = new System.Drawing.Size(112, 48);
             this.btn_Sair.TabIndex = 8;
             this.btn_Sair.Text = "Sair";
-            this.btn_Sair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 44);
+            this.label1.Location = new System.Drawing.Point(13, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 19);
@@ -91,12 +91,13 @@
             // 
             // txt_SenhaAtual
             // 
+            this.txt_SenhaAtual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_SenhaAtual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SenhaAtual.Location = new System.Drawing.Point(126, 40);
+            this.txt_SenhaAtual.Location = new System.Drawing.Point(17, 86);
             this.txt_SenhaAtual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_SenhaAtual.MaxLength = 10;
             this.txt_SenhaAtual.Name = "txt_SenhaAtual";
-            this.txt_SenhaAtual.Size = new System.Drawing.Size(148, 26);
+            this.txt_SenhaAtual.Size = new System.Drawing.Size(288, 26);
             this.txt_SenhaAtual.TabIndex = 35;
             this.txt_SenhaAtual.UseSystemPasswordChar = true;
             this.txt_SenhaAtual.TextChanged += new System.EventHandler(this.txt_SenhaAtual_TextChanged);
@@ -116,7 +117,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 78);
+            this.label2.Location = new System.Drawing.Point(13, 128);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 17);
@@ -127,7 +128,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(61, 110);
+            this.label4.Location = new System.Drawing.Point(13, 156);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 19);
@@ -136,12 +137,13 @@
             // 
             // txt_Senha
             // 
+            this.txt_Senha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Senha.Location = new System.Drawing.Point(125, 106);
+            this.txt_Senha.Location = new System.Drawing.Point(17, 180);
             this.txt_Senha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Senha.MaxLength = 10;
             this.txt_Senha.Name = "txt_Senha";
-            this.txt_Senha.Size = new System.Drawing.Size(148, 26);
+            this.txt_Senha.Size = new System.Drawing.Size(288, 26);
             this.txt_Senha.TabIndex = 42;
             this.txt_Senha.UseSystemPasswordChar = true;
             // 
@@ -153,7 +155,7 @@
             // 
             this.lbl_Verificar.AutoSize = true;
             this.lbl_Verificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Verificar.Location = new System.Drawing.Point(132, 78);
+            this.lbl_Verificar.Location = new System.Drawing.Point(141, 156);
             this.lbl_Verificar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Verificar.Name = "lbl_Verificar";
             this.lbl_Verificar.Size = new System.Drawing.Size(0, 17);
@@ -162,13 +164,15 @@
             // 
             // cb_Usuario
             // 
+            this.cb_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Usuario.DataSource = this.loginBindingSource;
             this.cb_Usuario.DisplayMember = "Usuario";
             this.cb_Usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Usuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Usuario.FormattingEnabled = true;
-            this.cb_Usuario.Location = new System.Drawing.Point(125, 5);
+            this.cb_Usuario.Location = new System.Drawing.Point(17, 31);
             this.cb_Usuario.Name = "cb_Usuario";
-            this.cb_Usuario.Size = new System.Drawing.Size(195, 28);
+            this.cb_Usuario.Size = new System.Drawing.Size(288, 28);
             this.cb_Usuario.TabIndex = 45;
             // 
             // loginBindingSource
@@ -189,7 +193,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 200);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(326, 290);
             this.Controls.Add(this.cb_Usuario);
             this.Controls.Add(this.lbl_Verificar);
             this.Controls.Add(this.label4);

@@ -44,7 +44,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 55);
+            this.label2.Location = new System.Drawing.Point(41, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 19);
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 19);
+            this.label1.Location = new System.Drawing.Point(41, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 19);
@@ -64,12 +64,13 @@
             // 
             // txt_Senha
             // 
+            this.txt_Senha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Senha.Location = new System.Drawing.Point(126, 51);
+            this.txt_Senha.Location = new System.Drawing.Point(45, 88);
             this.txt_Senha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Senha.MaxLength = 10;
             this.txt_Senha.Name = "txt_Senha";
-            this.txt_Senha.Size = new System.Drawing.Size(195, 26);
+            this.txt_Senha.Size = new System.Drawing.Size(276, 26);
             this.txt_Senha.TabIndex = 9;
             this.txt_Senha.UseSystemPasswordChar = true;
             this.txt_Senha.TextChanged += new System.EventHandler(this.txt_Senha_TextChanged);
@@ -77,22 +78,24 @@
             // 
             // txt_Usuario
             // 
+            this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Usuario.Location = new System.Drawing.Point(126, 15);
+            this.txt_Usuario.Location = new System.Drawing.Point(45, 33);
             this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Usuario.MaxLength = 50;
             this.txt_Usuario.Name = "txt_Usuario";
-            this.txt_Usuario.Size = new System.Drawing.Size(195, 26);
+            this.txt_Usuario.Size = new System.Drawing.Size(276, 26);
             this.txt_Usuario.TabIndex = 8;
             this.txt_Usuario.TextChanged += new System.EventHandler(this.txt_Usuario_TextChanged);
             this.txt_Usuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Usuario_KeyDown);
             // 
             // Btn_Cadastrar
             // 
+            this.Btn_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cadastrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cadastrar.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Soft_Scraps_Text_Edit;
             this.Btn_Cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Cadastrar.Location = new System.Drawing.Point(89, 87);
+            this.Btn_Cadastrar.Location = new System.Drawing.Point(124, 130);
             this.Btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Btn_Cadastrar.Name = "Btn_Cadastrar";
             this.Btn_Cadastrar.Size = new System.Drawing.Size(112, 42);
@@ -108,10 +111,11 @@
             // 
             // Btn_Sair
             // 
+            this.Btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Sair.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout1;
             this.Btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Sair.Location = new System.Drawing.Point(209, 87);
+            this.Btn_Sair.Location = new System.Drawing.Point(244, 130);
             this.Btn_Sair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Btn_Sair.Name = "Btn_Sair";
             this.Btn_Sair.Size = new System.Drawing.Size(77, 42);
@@ -125,7 +129,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 158);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(358, 184);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Senha);

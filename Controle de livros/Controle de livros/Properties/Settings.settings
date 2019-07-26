@@ -32,9 +32,6 @@
     <Setting Name="Biblioteca" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="Rede" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
     <Setting Name="disco" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>

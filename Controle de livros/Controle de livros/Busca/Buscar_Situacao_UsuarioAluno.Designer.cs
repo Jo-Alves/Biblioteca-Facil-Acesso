@@ -80,14 +80,14 @@
             // 
             // btn_Limpar
             // 
+            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Limpar.Image = global::Controle_de_livros.Properties.Resources.Blackvariant_Button_Ui_Requests_2_CleanMyMac_1;
             this.btn_Limpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Limpar.Location = new System.Drawing.Point(956, 86);
             this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(95, 47);
+            this.btn_Limpar.Size = new System.Drawing.Size(122, 47);
             this.btn_Limpar.TabIndex = 12;
             this.btn_Limpar.Text = "Limpar";
-            this.btn_Limpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Limpar.UseVisualStyleBackColor = true;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
@@ -101,7 +101,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.groupBox4.Location = new System.Drawing.Point(515, 336);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(518, 105);
+            this.groupBox4.Size = new System.Drawing.Size(418, 105);
             this.groupBox4.TabIndex = 19;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Livros didáticos:";
@@ -109,6 +109,7 @@
             // txt_Quantidade
             // 
             this.txt_Quantidade.BackColor = System.Drawing.Color.White;
+            this.txt_Quantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Quantidade.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Quantidade.Location = new System.Drawing.Point(217, 65);
             this.txt_Quantidade.Name = "txt_Quantidade";
@@ -129,6 +130,7 @@
             // btn_Verificar
             // 
             this.btn_Verificar.Enabled = false;
+            this.btn_Verificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Verificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Verificar.Location = new System.Drawing.Point(274, 25);
             this.btn_Verificar.Name = "btn_Verificar";
@@ -141,6 +143,7 @@
             // txt_decisaoLivroDidatico
             // 
             this.txt_decisaoLivroDidatico.BackColor = System.Drawing.Color.White;
+            this.txt_decisaoLivroDidatico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_decisaoLivroDidatico.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_decisaoLivroDidatico.Location = new System.Drawing.Point(217, 33);
             this.txt_decisaoLivroDidatico.Name = "txt_decisaoLivroDidatico";
@@ -183,6 +186,7 @@
             // txt_Titulo
             // 
             this.txt_Titulo.BackColor = System.Drawing.Color.White;
+            this.txt_Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Titulo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Titulo.Location = new System.Drawing.Point(124, 60);
             this.txt_Titulo.Name = "txt_Titulo";
@@ -203,6 +207,7 @@
             // txt_status
             // 
             this.txt_status.BackColor = System.Drawing.Color.White;
+            this.txt_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_status.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_status.Location = new System.Drawing.Point(283, 131);
             this.txt_status.Name = "txt_status";
@@ -223,6 +228,7 @@
             // txt_DataEntrega
             // 
             this.txt_DataEntrega.BackColor = System.Drawing.Color.White;
+            this.txt_DataEntrega.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_DataEntrega.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DataEntrega.Location = new System.Drawing.Point(138, 130);
             this.txt_DataEntrega.Name = "txt_DataEntrega";
@@ -243,6 +249,7 @@
             // txt_DataSolicitacao
             // 
             this.txt_DataSolicitacao.BackColor = System.Drawing.Color.White;
+            this.txt_DataSolicitacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_DataSolicitacao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_DataSolicitacao.Location = new System.Drawing.Point(155, 94);
             this.txt_DataSolicitacao.Name = "txt_DataSolicitacao";
@@ -263,6 +270,7 @@
             // txt_Tempo
             // 
             this.txt_Tempo.BackColor = System.Drawing.Color.White;
+            this.txt_Tempo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Tempo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Tempo.Location = new System.Drawing.Point(415, 95);
             this.txt_Tempo.Name = "txt_Tempo";
@@ -283,6 +291,7 @@
             // txt_decisaoLivroLiterario
             // 
             this.txt_decisaoLivroLiterario.BackColor = System.Drawing.Color.White;
+            this.txt_decisaoLivroLiterario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_decisaoLivroLiterario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_decisaoLivroLiterario.Location = new System.Drawing.Point(206, 19);
             this.txt_decisaoLivroLiterario.Name = "txt_decisaoLivroLiterario";
@@ -319,6 +328,7 @@
             // txt_Codigo
             // 
             this.txt_Codigo.BackColor = System.Drawing.Color.White;
+            this.txt_Codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Codigo.Location = new System.Drawing.Point(94, 26);
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.ReadOnly = true;
@@ -339,6 +349,7 @@
             // txt_Turma
             // 
             this.txt_Turma.BackColor = System.Drawing.Color.White;
+            this.txt_Turma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Turma.Location = new System.Drawing.Point(94, 90);
             this.txt_Turma.Name = "txt_Turma";
             this.txt_Turma.ReadOnly = true;
@@ -368,6 +379,7 @@
             // txt_Ano
             // 
             this.txt_Ano.BackColor = System.Drawing.Color.White;
+            this.txt_Ano.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Ano.Location = new System.Drawing.Point(94, 58);
             this.txt_Ano.Name = "txt_Ano";
             this.txt_Ano.ReadOnly = true;
@@ -376,14 +388,14 @@
             // 
             // btn_Sair
             // 
+            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout1;
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sair.Location = new System.Drawing.Point(956, 33);
             this.btn_Sair.Name = "btn_Sair";
-            this.btn_Sair.Size = new System.Drawing.Size(77, 47);
+            this.btn_Sair.Size = new System.Drawing.Size(122, 47);
             this.btn_Sair.TabIndex = 35;
             this.btn_Sair.Text = "Sair";
-            this.btn_Sair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Sair.UseVisualStyleBackColor = true;
             this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click_1);
             // 
@@ -426,6 +438,7 @@
             // 
             // cb_Nome
             // 
+            this.cb_Nome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Nome.DataSource = this.usuarioBindingSource2;
             this.cb_Nome.DisplayMember = "Nome_Usuario";
             this.cb_Nome.FormattingEnabled = true;
@@ -449,6 +462,7 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Buscar.Location = new System.Drawing.Point(356, 17);
@@ -482,6 +496,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1101, 445);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

@@ -105,6 +105,7 @@
             // 
             // btn_BuscarRegistro
             // 
+            this.btn_BuscarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BuscarRegistro.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
             this.btn_BuscarRegistro.Location = new System.Drawing.Point(222, 19);
             this.btn_BuscarRegistro.Name = "btn_BuscarRegistro";
@@ -115,14 +116,14 @@
             // 
             // btn_LimparLivro
             // 
+            this.btn_LimparLivro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_LimparLivro.Image = global::Controle_de_livros.Properties.Resources.Blackvariant_Button_Ui_Requests_2_CleanMyMac_1;
             this.btn_LimparLivro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_LimparLivro.Location = new System.Drawing.Point(6, 226);
             this.btn_LimparLivro.Name = "btn_LimparLivro";
-            this.btn_LimparLivro.Size = new System.Drawing.Size(95, 41);
+            this.btn_LimparLivro.Size = new System.Drawing.Size(124, 41);
             this.btn_LimparLivro.TabIndex = 3;
             this.btn_LimparLivro.Text = "Limpar";
-            this.btn_LimparLivro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_LimparLivro.UseVisualStyleBackColor = true;
             this.btn_LimparLivro.Click += new System.EventHandler(this.btn_LimparLivro_Click);
             // 
@@ -165,6 +166,7 @@
             // 
             // txt_Registro
             // 
+            this.txt_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Registro.Location = new System.Drawing.Point(116, 25);
             this.txt_Registro.Name = "txt_Registro";
             this.txt_Registro.Size = new System.Drawing.Size(100, 26);
@@ -231,14 +233,14 @@
             // 
             // btn_Verificar
             // 
+            this.btn_Verificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Verificar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Verificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Verificar.Location = new System.Drawing.Point(233, 165);
             this.btn_Verificar.Name = "btn_Verificar";
-            this.btn_Verificar.Size = new System.Drawing.Size(93, 41);
+            this.btn_Verificar.Size = new System.Drawing.Size(133, 41);
             this.btn_Verificar.TabIndex = 2;
             this.btn_Verificar.Text = "Verificar";
-            this.btn_Verificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Verificar.UseVisualStyleBackColor = true;
             this.btn_Verificar.Click += new System.EventHandler(this.btn_Verificar_Click);
             // 
@@ -255,14 +257,14 @@
             // 
             // btn_LimparUsuario
             // 
+            this.btn_LimparUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_LimparUsuario.Image = global::Controle_de_livros.Properties.Resources.Blackvariant_Button_Ui_Requests_2_CleanMyMac_1;
             this.btn_LimparUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparUsuario.Location = new System.Drawing.Point(300, 226);
+            this.btn_LimparUsuario.Location = new System.Drawing.Point(272, 226);
             this.btn_LimparUsuario.Name = "btn_LimparUsuario";
-            this.btn_LimparUsuario.Size = new System.Drawing.Size(93, 41);
+            this.btn_LimparUsuario.Size = new System.Drawing.Size(121, 41);
             this.btn_LimparUsuario.TabIndex = 27;
             this.btn_LimparUsuario.Text = "Limpar";
-            this.btn_LimparUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_LimparUsuario.UseVisualStyleBackColor = true;
             this.btn_LimparUsuario.Click += new System.EventHandler(this.btn_LimparUsuario_Click);
             // 
@@ -300,6 +302,7 @@
             // 
             // btn_BuscarUsuario
             // 
+            this.btn_BuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BuscarUsuario.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
             this.btn_BuscarUsuario.Location = new System.Drawing.Point(259, 19);
             this.btn_BuscarUsuario.Name = "btn_BuscarUsuario";
@@ -373,6 +376,7 @@
             // 
             // txt_Codigo
             // 
+            this.txt_Codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Codigo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Codigo.Location = new System.Drawing.Point(141, 25);
             this.txt_Codigo.Margin = new System.Windows.Forms.Padding(4);
@@ -385,27 +389,27 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Image = global::Controle_de_livros.Properties.Resources.cancelar1;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(417, 298);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(191, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(226, 41);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar empréstimo";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btn_EfetuaEmprestimo
             // 
+            this.btn_EfetuaEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_EfetuaEmprestimo.Image = global::Controle_de_livros.Properties.Resources._8WUJ2XuE_400x4001;
             this.btn_EfetuaEmprestimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_EfetuaEmprestimo.Location = new System.Drawing.Point(228, 297);
+            this.btn_EfetuaEmprestimo.Location = new System.Drawing.Point(199, 297);
             this.btn_EfetuaEmprestimo.Name = "btn_EfetuaEmprestimo";
-            this.btn_EfetuaEmprestimo.Size = new System.Drawing.Size(183, 41);
+            this.btn_EfetuaEmprestimo.Size = new System.Drawing.Size(212, 41);
             this.btn_EfetuaEmprestimo.TabIndex = 4;
             this.btn_EfetuaEmprestimo.Text = "Efetuar empréstimo";
-            this.btn_EfetuaEmprestimo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_EfetuaEmprestimo.UseVisualStyleBackColor = true;
             this.btn_EfetuaEmprestimo.Click += new System.EventHandler(this.btn_EfetuaEmprestimo_Click);
             // 
@@ -413,6 +417,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(898, 344);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_EfetuaEmprestimo);

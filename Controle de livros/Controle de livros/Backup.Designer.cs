@@ -63,8 +63,9 @@
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Cancelar.Image = global::Controle_de_livros.Properties.Resources.Button_Cancel_icon__1_;
-            this.btn_Cancelar.Location = new System.Drawing.Point(30, 74);
+            this.btn_Cancelar.Location = new System.Drawing.Point(45, 73);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(179, 45);
             this.btn_Cancelar.TabIndex = 47;
@@ -75,8 +76,9 @@
             // btn_Backup
             // 
             this.btn_Backup.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_Backup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Backup.Image = global::Controle_de_livros.Properties.Resources.Icons8_Windows_8_Database_Backup1;
-            this.btn_Backup.Location = new System.Drawing.Point(215, 74);
+            this.btn_Backup.Location = new System.Drawing.Point(230, 73);
             this.btn_Backup.Name = "btn_Backup";
             this.btn_Backup.Size = new System.Drawing.Size(179, 45);
             this.btn_Backup.TabIndex = 0;
@@ -88,6 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(462, 140);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Backup);

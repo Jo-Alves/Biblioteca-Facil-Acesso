@@ -24,17 +24,15 @@ namespace Controle_de_livros
                 {
                 txtInstituicao.Text = Settings.Default["Instituicao"].ToString();
                 txtNomeBiblioteca.Text = Settings.Default["Biblioteca"].ToString();
-                cbRede.Text = Settings.Default["Rede"].ToString();
             }
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtInstituicao.Text != "" && txtInstituicao.Text != "" && cbRede.Text != "")
+            if (txtInstituicao.Text != "" && txtInstituicao.Text != "")
             {
                 Settings.Default["Instituicao"] = txtInstituicao.Text.Trim();
                 Settings.Default["Biblioteca"] = txtNomeBiblioteca.Text.Trim();
-                Settings.Default["Rede"] = cbRede.Text;
                 Settings.Default.Save();
                 this.Close();
             }

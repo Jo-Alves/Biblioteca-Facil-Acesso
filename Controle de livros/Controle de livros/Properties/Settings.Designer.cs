@@ -83,18 +83,6 @@ namespace Controle_de_livros.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Rede {
-            get {
-                return ((string)(this["Rede"]));
-            }
-            set {
-                this["Rede"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string disco {
             get {
                 return ((string)(this["disco"]));

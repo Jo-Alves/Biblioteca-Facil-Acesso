@@ -37,20 +37,20 @@
             this.btn_Entrar = new System.Windows.Forms.Button();
             this.btn_OcultarMostrar = new System.Windows.Forms.Button();
             this.cb_Usuario = new System.Windows.Forms.ComboBox();
+            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetAutenticacao = new Controle_de_livros.Autenticação.DataSetAutenticacao();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.dataSetAutenticacao = new Controle_de_livros.Autenticação.DataSetAutenticacao();
-            this.loginBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loginTableAdapter = new Controle_de_livros.Autenticação.DataSetAutenticacaoTableAdapters.LoginTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAutenticacao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAutenticacao)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 31);
+            this.label1.Location = new System.Drawing.Point(54, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 19);
             this.label1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 67);
+            this.label2.Location = new System.Drawing.Point(54, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 19);
             this.label2.TabIndex = 1;
@@ -68,8 +68,9 @@
             // 
             // txt_Senha
             // 
+            this.txt_Senha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Senha.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Senha.Location = new System.Drawing.Point(130, 64);
+            this.txt_Senha.Location = new System.Drawing.Point(58, 83);
             this.txt_Senha.MaxLength = 10;
             this.txt_Senha.Name = "txt_Senha";
             this.txt_Senha.Size = new System.Drawing.Size(196, 26);
@@ -79,10 +80,11 @@
             // 
             // btn_Cancelar
             // 
+            this.btn_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Cancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancelar.Image = global::Controle_de_livros.Properties.Resources.cancelar1;
             this.btn_Cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cancelar.Location = new System.Drawing.Point(217, 107);
+            this.btn_Cancelar.Location = new System.Drawing.Point(208, 127);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(109, 52);
             this.btn_Cancelar.TabIndex = 6;
@@ -94,10 +96,11 @@
             // 
             // btn_Entrar
             // 
+            this.btn_Entrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Entrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Entrar.Image = global::Controle_de_livros.Properties.Resources.logar;
             this.btn_Entrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Entrar.Location = new System.Drawing.Point(117, 107);
+            this.btn_Entrar.Location = new System.Drawing.Point(108, 127);
             this.btn_Entrar.Name = "btn_Entrar";
             this.btn_Entrar.Size = new System.Drawing.Size(94, 52);
             this.btn_Entrar.TabIndex = 4;
@@ -112,7 +115,7 @@
             this.btn_OcultarMostrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OcultarMostrar.Image = global::Controle_de_livros.Properties.Resources.download__2_;
             this.btn_OcultarMostrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_OcultarMostrar.Location = new System.Drawing.Point(332, 58);
+            this.btn_OcultarMostrar.Location = new System.Drawing.Point(260, 77);
             this.btn_OcultarMostrar.Name = "btn_OcultarMostrar";
             this.btn_OcultarMostrar.Size = new System.Drawing.Size(94, 37);
             this.btn_OcultarMostrar.TabIndex = 41;
@@ -123,20 +126,31 @@
             // 
             // cb_Usuario
             // 
+            this.cb_Usuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Usuario.DataSource = this.loginBindingSource;
             this.cb_Usuario.DisplayMember = "Usuario";
             this.cb_Usuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Usuario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Usuario.FormattingEnabled = true;
-            this.cb_Usuario.Location = new System.Drawing.Point(130, 28);
+            this.cb_Usuario.Location = new System.Drawing.Point(58, 31);
             this.cb_Usuario.Name = "cb_Usuario";
-            this.cb_Usuario.Size = new System.Drawing.Size(195, 27);
+            this.cb_Usuario.Size = new System.Drawing.Size(287, 27);
             this.cb_Usuario.TabIndex = 42;
+            // 
+            // loginBindingSource
+            // 
+            this.loginBindingSource.DataMember = "Login";
+            this.loginBindingSource.DataSource = this.dataSetAutenticacao;
+            // 
+            // dataSetAutenticacao
+            // 
+            this.dataSetAutenticacao.DataSetName = "DataSetAutenticacao";
+            this.dataSetAutenticacao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 177);
+            this.label3.Location = new System.Drawing.Point(70, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(263, 13);
             this.label3.TabIndex = 43;
@@ -145,23 +159,13 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(127, 190);
+            this.linkLabel1.Location = new System.Drawing.Point(116, 207);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(177, 13);
             this.linkLabel1.TabIndex = 44;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Clique aqui para restaurar o sistema.";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // dataSetAutenticacao
-            // 
-            this.dataSetAutenticacao.DataSetName = "DataSetAutenticacao";
-            this.dataSetAutenticacao.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loginBindingSource
-            // 
-            this.loginBindingSource.DataMember = "Login";
-            this.loginBindingSource.DataSource = this.dataSetAutenticacao;
             // 
             // loginTableAdapter
             // 
@@ -171,7 +175,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(444, 210);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(412, 227);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cb_Usuario);
@@ -190,8 +195,8 @@
             this.Text = "SISTEMA DE AUTENTICAÇÃO";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FORMULARIO_AUTENTICACAO_FormClosed);
             this.Load += new System.EventHandler(this.FORMULARIO_AUTENTICACAO_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetAutenticacao)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetAutenticacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

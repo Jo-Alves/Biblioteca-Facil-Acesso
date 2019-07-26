@@ -31,19 +31,20 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.dgv_Busca = new System.Windows.Forms.DataGridView();
-            this.btn_Pesquisar = new System.Windows.Forms.Button();
-            this.cb_Opcao = new System.Windows.Forms.ComboBox();
-            this.txt_Dados = new System.Windows.Forms.TextBox();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_Pesquisar = new System.Windows.Forms.Button();
+            this.cb_Opcao = new System.Windows.Forms.ComboBox();
+            this.txt_Dados = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(581, 324);
             this.btnCancelar.Name = "btnCancelar";
@@ -55,6 +56,7 @@
             // 
             // btnOk
             // 
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Location = new System.Drawing.Point(686, 324);
             this.btnOk.Name = "btnOk";
@@ -76,50 +78,15 @@
             this.Column2,
             this.Column3,
             this.Column6});
-            this.dgv_Busca.Location = new System.Drawing.Point(50, 76);
+            this.dgv_Busca.Location = new System.Drawing.Point(36, 76);
             this.dgv_Busca.Name = "dgv_Busca";
             this.dgv_Busca.ReadOnly = true;
             this.dgv_Busca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Busca.Size = new System.Drawing.Size(693, 242);
+            this.dgv_Busca.Size = new System.Drawing.Size(732, 242);
             this.dgv_Busca.TabIndex = 15;
             this.dgv_Busca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellClick);
             this.dgv_Busca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellDoubleClick);
             this.dgv_Busca.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Busca_DataBindingComplete);
-            // 
-            // btn_Pesquisar
-            // 
-            this.btn_Pesquisar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pesquisar.Location = new System.Drawing.Point(669, 6);
-            this.btn_Pesquisar.Name = "btn_Pesquisar";
-            this.btn_Pesquisar.Size = new System.Drawing.Size(99, 39);
-            this.btn_Pesquisar.TabIndex = 14;
-            this.btn_Pesquisar.Text = "Pesquisar";
-            this.btn_Pesquisar.UseVisualStyleBackColor = true;
-            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
-            // 
-            // cb_Opcao
-            // 
-            this.cb_Opcao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_Opcao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cb_Opcao.FormattingEnabled = true;
-            this.cb_Opcao.Items.AddRange(new object[] {
-            "Disciplina",
-            "Autor",
-            "Volume"});
-            this.cb_Opcao.Location = new System.Drawing.Point(527, 13);
-            this.cb_Opcao.Name = "cb_Opcao";
-            this.cb_Opcao.Size = new System.Drawing.Size(136, 27);
-            this.cb_Opcao.TabIndex = 13;
-            // 
-            // txt_Dados
-            // 
-            this.txt_Dados.Location = new System.Drawing.Point(36, 13);
-            this.txt_Dados.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Dados.Name = "txt_Dados";
-            this.txt_Dados.Size = new System.Drawing.Size(484, 26);
-            this.txt_Dados.TabIndex = 12;
-            this.txt_Dados.TextChanged += new System.EventHandler(this.txt_Dados_TextChanged);
-            this.txt_Dados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Dados_KeyDown);
             // 
             // Column4
             // 
@@ -166,11 +133,50 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 79;
             // 
-            // FrmPesquisarLivroDidatico
+            // btn_Pesquisar
+            // 
+            this.btn_Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Pesquisar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pesquisar.Location = new System.Drawing.Point(669, 6);
+            this.btn_Pesquisar.Name = "btn_Pesquisar";
+            this.btn_Pesquisar.Size = new System.Drawing.Size(99, 39);
+            this.btn_Pesquisar.TabIndex = 14;
+            this.btn_Pesquisar.Text = "Pesquisar";
+            this.btn_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_Pesquisar.Click += new System.EventHandler(this.btn_Pesquisar_Click);
+            // 
+            // cb_Opcao
+            // 
+            this.cb_Opcao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_Opcao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Opcao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_Opcao.FormattingEnabled = true;
+            this.cb_Opcao.Items.AddRange(new object[] {
+            "Disciplina",
+            "Autor",
+            "Volume"});
+            this.cb_Opcao.Location = new System.Drawing.Point(527, 13);
+            this.cb_Opcao.Name = "cb_Opcao";
+            this.cb_Opcao.Size = new System.Drawing.Size(136, 27);
+            this.cb_Opcao.TabIndex = 13;
+            // 
+            // txt_Dados
+            // 
+            this.txt_Dados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Dados.Location = new System.Drawing.Point(36, 13);
+            this.txt_Dados.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Dados.Name = "txt_Dados";
+            this.txt_Dados.Size = new System.Drawing.Size(484, 26);
+            this.txt_Dados.TabIndex = 12;
+            this.txt_Dados.TextChanged += new System.EventHandler(this.txt_Dados_TextChanged);
+            this.txt_Dados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Dados_KeyDown);
+            // 
+            // FrmBuscarLivroDidatico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 374);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(787, 369);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dgv_Busca);
@@ -181,7 +187,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "FrmPesquisarLivroDidatico";
+            this.Name = "FrmBuscarLivroDidatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Livro Didático";
             this.Load += new System.EventHandler(this.FrmPesquisarLivroDidatico_Load);

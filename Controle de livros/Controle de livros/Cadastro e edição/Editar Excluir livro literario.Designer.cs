@@ -160,7 +160,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.groupBox2.Location = new System.Drawing.Point(27, 25);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(501, 51);
+            this.groupBox2.Size = new System.Drawing.Size(525, 51);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar por:";
@@ -203,6 +203,7 @@
             // 
             // txt_Buscar
             // 
+            this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Buscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Buscar.Enabled = false;
             this.txt_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,20 +217,21 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Buscar.Location = new System.Drawing.Point(415, 90);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(113, 36);
+            this.btn_Buscar.Size = new System.Drawing.Size(137, 36);
             this.btn_Buscar.TabIndex = 0;
             this.btn_Buscar.Text = "Buscar";
-            this.btn_Buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Buscar.UseVisualStyleBackColor = true;
             this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
             // btn_Excluir
             // 
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Excluir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Button_Button_Delete;
             this.btn_Excluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,6 +246,7 @@
             // 
             // btn_Editar
             // 
+            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Editar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Soft_Scraps_Edit_Document;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -278,8 +281,10 @@
             // 
             // cb_Estante
             // 
+            this.cb_Estante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Estante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Estante.Enabled = false;
+            this.cb_Estante.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Estante.FormattingEnabled = true;
             this.cb_Estante.Items.AddRange(new object[] {
             "A",
@@ -325,6 +330,7 @@
             // 
             // txt_Genero
             // 
+            this.txt_Genero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Genero.Enabled = false;
             this.txt_Genero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Genero.Location = new System.Drawing.Point(131, 125);
@@ -335,6 +341,7 @@
             // 
             // txt_Autor
             // 
+            this.txt_Autor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Autor.Enabled = false;
             this.txt_Autor.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Autor.Location = new System.Drawing.Point(129, 93);
@@ -346,6 +353,7 @@
             // 
             // txt_Titulo
             // 
+            this.txt_Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Titulo.Enabled = false;
             this.txt_Titulo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Titulo.Location = new System.Drawing.Point(129, 61);
@@ -357,6 +365,7 @@
             // txt_Registro
             // 
             this.txt_Registro.BackColor = System.Drawing.Color.White;
+            this.txt_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Registro.Enabled = false;
             this.txt_Registro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Registro.Location = new System.Drawing.Point(129, 29);
@@ -415,6 +424,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(598, 537);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);

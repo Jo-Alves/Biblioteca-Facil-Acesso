@@ -50,9 +50,10 @@
             // 
             // btn_Sair
             // 
+            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout;
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sair.Location = new System.Drawing.Point(416, 225);
+            this.btn_Sair.Location = new System.Drawing.Point(508, 234);
             this.btn_Sair.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(114, 41);
@@ -63,9 +64,10 @@
             // 
             // btn_Salvar
             // 
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Salvar.Image = global::Controle_de_livros.Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Salvar.Location = new System.Drawing.Point(278, 225);
+            this.btn_Salvar.Location = new System.Drawing.Point(370, 234);
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(132, 41);
@@ -76,7 +78,8 @@
             // 
             // txt_Autor
             // 
-            this.txt_Autor.Location = new System.Drawing.Point(116, 89);
+            this.txt_Autor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Autor.Location = new System.Drawing.Point(242, 101);
             this.txt_Autor.MaxLength = 100;
             this.txt_Autor.Name = "txt_Autor";
             this.txt_Autor.Size = new System.Drawing.Size(360, 26);
@@ -86,7 +89,8 @@
             // 
             // txt_Registro
             // 
-            this.txt_Registro.Location = new System.Drawing.Point(116, 25);
+            this.txt_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Registro.Location = new System.Drawing.Point(29, 50);
             this.txt_Registro.Name = "txt_Registro";
             this.txt_Registro.Size = new System.Drawing.Size(100, 26);
             this.txt_Registro.TabIndex = 0;
@@ -98,7 +102,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(51, 124);
+            this.label4.Location = new System.Drawing.Point(25, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 19);
             this.label4.TabIndex = 3;
@@ -108,7 +112,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(60, 92);
+            this.label3.Location = new System.Drawing.Point(238, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 19);
             this.label3.TabIndex = 2;
@@ -118,7 +122,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 60);
+            this.label2.Location = new System.Drawing.Point(25, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 1;
@@ -128,7 +132,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 28);
+            this.label1.Location = new System.Drawing.Point(25, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 0;
@@ -149,7 +153,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(518, 206);
+            this.groupBox1.Size = new System.Drawing.Size(610, 203);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Livro:";
@@ -176,7 +180,7 @@
             "QUÍMICA",
             "RELIGIÃO",
             "SOCIOLOGIA"});
-            this.cb_Disciplina.Location = new System.Drawing.Point(116, 57);
+            this.cb_Disciplina.Location = new System.Drawing.Point(29, 101);
             this.cb_Disciplina.MaxLength = 300;
             this.cb_Disciplina.Name = "cb_Disciplina";
             this.cb_Disciplina.Size = new System.Drawing.Size(212, 27);
@@ -185,7 +189,9 @@
             // 
             // cb_Volume
             // 
+            this.cb_Volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Volume.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Volume.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Volume.FormattingEnabled = true;
             this.cb_Volume.Items.AddRange(new object[] {
             "",
@@ -199,7 +205,7 @@
             "Volume 8 - 8º Ano",
             "Volume 9 - 9º Ano",
             "Volume único"});
-            this.cb_Volume.Location = new System.Drawing.Point(116, 154);
+            this.cb_Volume.Location = new System.Drawing.Point(277, 159);
             this.cb_Volume.Name = "cb_Volume";
             this.cb_Volume.Size = new System.Drawing.Size(165, 27);
             this.cb_Volume.TabIndex = 4;
@@ -210,7 +216,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 157);
+            this.label5.Location = new System.Drawing.Point(282, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 19);
             this.label5.TabIndex = 8;
@@ -218,13 +224,15 @@
             // 
             // cb_Ensino
             // 
+            this.cb_Ensino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Ensino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_Ensino.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Ensino.FormattingEnabled = true;
             this.cb_Ensino.Items.AddRange(new object[] {
             "",
             "ENSINO FUNDAMENTAL",
             "ENSINO MÉDIO"});
-            this.cb_Ensino.Location = new System.Drawing.Point(116, 121);
+            this.cb_Ensino.Location = new System.Drawing.Point(29, 159);
             this.cb_Ensino.Name = "cb_Ensino";
             this.cb_Ensino.Size = new System.Drawing.Size(237, 27);
             this.cb_Ensino.TabIndex = 3;
@@ -239,7 +247,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 289);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(634, 278);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_Salvar);
             this.Controls.Add(this.groupBox1);

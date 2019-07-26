@@ -58,7 +58,7 @@
             this.dgvBusca.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -72,12 +72,12 @@
             this.Column3,
             this.Column4,
             this.Column2});
-            this.dgvBusca.Location = new System.Drawing.Point(98, 119);
+            this.dgvBusca.Location = new System.Drawing.Point(12, 119);
             this.dgvBusca.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBusca.Name = "dgvBusca";
             this.dgvBusca.ReadOnly = true;
             this.dgvBusca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBusca.Size = new System.Drawing.Size(797, 419);
+            this.dgvBusca.Size = new System.Drawing.Size(957, 419);
             this.dgvBusca.TabIndex = 0;
             this.dgvBusca.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvBusca_DataBindingComplete);
             // 
@@ -88,7 +88,7 @@
             this.Column5.HeaderText = "Código do Usuário";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 157;
+            this.Column5.Width = 150;
             // 
             // Column1
             // 
@@ -105,7 +105,7 @@
             this.Column3.HeaderText = "Ano";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 61;
+            this.Column3.Width = 60;
             // 
             // Column4
             // 
@@ -114,7 +114,7 @@
             this.Column4.HeaderText = "Turma";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 77;
+            this.Column4.Width = 72;
             // 
             // Column2
             // 
@@ -123,10 +123,11 @@
             this.Column2.HeaderText = "Quantidade de Livros lidos";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 213;
+            this.Column2.Width = 197;
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Buscar.Location = new System.Drawing.Point(870, 41);
             this.btn_Buscar.Name = "btn_Buscar";
@@ -138,6 +139,7 @@
             // 
             // cb_Opcao
             // 
+            this.cb_Opcao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Opcao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Opcao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Opcao.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -155,6 +157,7 @@
             // 
             // txt_Aluno
             // 
+            this.txt_Aluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Aluno.Location = new System.Drawing.Point(547, 46);
             this.txt_Aluno.Name = "txt_Aluno";
             this.txt_Aluno.Size = new System.Drawing.Size(317, 26);
@@ -190,6 +193,7 @@
             // 
             // btn_Pesquisar
             // 
+            this.btn_Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Pesquisar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Pesquisar.Location = new System.Drawing.Point(233, 48);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
@@ -241,6 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 551);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

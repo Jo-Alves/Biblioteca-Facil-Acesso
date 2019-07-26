@@ -112,6 +112,7 @@
             // 
             // cb_Turma
             // 
+            this.cb_Turma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Turma.FormattingEnabled = true;
             this.cb_Turma.Location = new System.Drawing.Point(262, 74);
             this.cb_Turma.Name = "cb_Turma";
@@ -131,6 +132,7 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btn_Buscar.Location = new System.Drawing.Point(518, 66);
@@ -173,6 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(702, 618);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

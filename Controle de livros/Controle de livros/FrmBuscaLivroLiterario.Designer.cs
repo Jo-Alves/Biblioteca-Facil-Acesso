@@ -43,6 +43,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(590, 324);
             this.btnCancelar.Name = "btnCancelar";
@@ -54,6 +55,7 @@
             // 
             // btnOk
             // 
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOk.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.Location = new System.Drawing.Point(695, 324);
             this.btnOk.Name = "btnOk";
@@ -74,11 +76,11 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgv_Busca.Location = new System.Drawing.Point(32, 76);
+            this.dgv_Busca.Location = new System.Drawing.Point(13, 76);
             this.dgv_Busca.Name = "dgv_Busca";
             this.dgv_Busca.ReadOnly = true;
             this.dgv_Busca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Busca.Size = new System.Drawing.Size(762, 242);
+            this.dgv_Busca.Size = new System.Drawing.Size(781, 242);
             this.dgv_Busca.TabIndex = 9;
             this.dgv_Busca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellClick);
             this.dgv_Busca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellDoubleClick);
@@ -122,6 +124,7 @@
             // 
             // btn_Pesquisar
             // 
+            this.btn_Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Pesquisar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Pesquisar.Location = new System.Drawing.Point(678, 6);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
@@ -133,6 +136,7 @@
             // 
             // cb_Opcao
             // 
+            this.cb_Opcao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Opcao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Opcao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Opcao.FormattingEnabled = true;
@@ -147,10 +151,11 @@
             // 
             // txt_Dados
             // 
-            this.txt_Dados.Location = new System.Drawing.Point(45, 13);
+            this.txt_Dados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Dados.Location = new System.Drawing.Point(13, 13);
             this.txt_Dados.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Dados.Name = "txt_Dados";
-            this.txt_Dados.Size = new System.Drawing.Size(484, 26);
+            this.txt_Dados.Size = new System.Drawing.Size(516, 26);
             this.txt_Dados.TabIndex = 6;
             this.txt_Dados.TextChanged += new System.EventHandler(this.txt_Dados_TextChanged);
             this.txt_Dados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Dados_KeyDown);
@@ -159,6 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(807, 372);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOk);

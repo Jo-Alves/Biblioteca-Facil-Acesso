@@ -130,6 +130,7 @@
             // 
             // txt_Nome
             // 
+            this.txt_Nome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Nome.Enabled = false;
             this.txt_Nome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nome.Location = new System.Drawing.Point(206, 50);
@@ -163,6 +164,7 @@
             // cb_Turma
             // 
             this.cb_Turma.AccessibleDescription = "";
+            this.cb_Turma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Turma.Enabled = false;
             this.cb_Turma.FormattingEnabled = true;
             this.cb_Turma.Location = new System.Drawing.Point(206, 116);
@@ -183,6 +185,7 @@
             // 
             // cb_Ano
             // 
+            this.cb_Ano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Ano.Enabled = false;
             this.cb_Ano.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ano.FormattingEnabled = true;
@@ -232,6 +235,7 @@
             // txt_Codigo
             // 
             this.txt_Codigo.BackColor = System.Drawing.Color.White;
+            this.txt_Codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Codigo.Enabled = false;
             this.txt_Codigo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Codigo.Location = new System.Drawing.Point(206, 20);
@@ -245,6 +249,7 @@
             // 
             // txt_Tel_Cel
             // 
+            this.txt_Tel_Cel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Tel_Cel.Enabled = false;
             this.txt_Tel_Cel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Tel_Cel.Location = new System.Drawing.Point(164, 87);
@@ -292,6 +297,7 @@
             // 
             // txt_Endereco
             // 
+            this.txt_Endereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Endereco.Enabled = false;
             this.txt_Endereco.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Endereco.Location = new System.Drawing.Point(164, 20);
@@ -319,6 +325,7 @@
             // 
             // txt_Numero
             // 
+            this.txt_Numero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Numero.Enabled = false;
             this.txt_Numero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Numero.Location = new System.Drawing.Point(164, 54);
@@ -458,6 +465,7 @@
             // 
             // txt_Buscar
             // 
+            this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Buscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Buscar.Location = new System.Drawing.Point(101, 31);
             this.txt_Buscar.Name = "txt_Buscar";
@@ -468,15 +476,15 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Buscar.Location = new System.Drawing.Point(460, 25);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(113, 36);
+            this.btn_Buscar.Size = new System.Drawing.Size(146, 36);
             this.btn_Buscar.TabIndex = 10;
             this.btn_Buscar.Text = "Buscar";
-            this.btn_Buscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Buscar.UseVisualStyleBackColor = true;
             this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
@@ -500,6 +508,7 @@
             // 
             // btn_Excluir
             // 
+            this.btn_Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Excluir.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Excluir.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Button_Button_Delete;
             this.btn_Excluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -514,6 +523,7 @@
             // 
             // btn_Editar
             // 
+            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Editar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Editar.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Soft_Scraps_Edit_Document;
             this.btn_Editar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -534,6 +544,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(643, 713);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

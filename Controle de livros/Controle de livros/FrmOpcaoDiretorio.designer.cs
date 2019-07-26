@@ -36,6 +36,7 @@
             // 
             // cbDiretorio
             // 
+            this.cbDiretorio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cbDiretorio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDiretorio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbDiretorio.FormattingEnabled = true;

@@ -127,9 +127,9 @@ namespace Controle_de_livros
                     conexao.Close();
                 }
             }
-            else if ((rb_Turma_Didatico.Checked) && (cb_Turma_Didatico.Text != ""))
+            else if ((rb_Turma_Didatico.Checked) && (txt_Turma_Didatico.Text != ""))
             {
-                _sql = "SELECT ld.N_Registro AS REGISTRO, ld.Disciplina AS DISCIPLINA, ld.Ensino AS ENSINO, epd.Data_Solicitacao AS DATA_DE_SOLICITAÇÃO, us.Nome_Usuario AS USUARIO, us.Turma AS TURMA, us.Ocupacao AS OCUPAÇÃO FROM Emprestimo_Livro_Didatico  epd JOIN Usuario us ON epd.Cod_Usuario = us.Cod_Usuario JOIN livro_Didatico ld ON epd.N_Registro= ld.N_Registro WHERE us.Turma = '" + cb_Turma_Didatico.Text + "' AND epd.Data_Solicitacao <>'' AND Data_Entrega = ''";
+                _sql = "SELECT ld.N_Registro AS REGISTRO, ld.Disciplina AS DISCIPLINA, ld.Ensino AS ENSINO, epd.Data_Solicitacao AS DATA_DE_SOLICITAÇÃO, us.Nome_Usuario AS USUARIO, us.Turma AS TURMA, us.Ocupacao AS OCUPAÇÃO FROM Emprestimo_Livro_Didatico  epd JOIN Usuario us ON epd.Cod_Usuario = us.Cod_Usuario JOIN livro_Didatico ld ON epd.N_Registro= ld.N_Registro WHERE us.Turma = '" + txt_Turma_Didatico.Text + "' AND epd.Data_Solicitacao <>'' AND Data_Entrega = ''";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 try
@@ -288,7 +288,7 @@ namespace Controle_de_livros
             }
             else if (rb_Turma_Literario.Checked)
             {
-                _sql = "SELECT ll.N_Registro AS REGISTRO, ll.Titulo AS TÍTULO, epl.Data_Solicitacao AS DATA_DE_SOLICITAÇÃO, us.Nome_Usuario AS USUARIO, us.Turma AS TURMA, us.Ocupacao AS OCUPAÇÃO FROM Emprestimo_Livro_Literario  epl JOIN Usuario us ON epl.Cod_Usuario = us.Cod_Usuario JOIN Livro_Literario ll ON epl.N_Registro= ll.N_Registro WHERE us.Turma = '" + cb_Turma_Literario.Text + "' AND epl.Data_Solicitacao <>'' AND epl.Data_Entrega = ''";
+                _sql = "SELECT ll.N_Registro AS REGISTRO, ll.Titulo AS TÍTULO, epl.Data_Solicitacao AS DATA_DE_SOLICITAÇÃO, us.Nome_Usuario AS USUARIO, us.Turma AS TURMA, us.Ocupacao AS OCUPAÇÃO FROM Emprestimo_Livro_Literario  epl JOIN Usuario us ON epl.Cod_Usuario = us.Cod_Usuario JOIN Livro_Literario ll ON epl.N_Registro= ll.N_Registro WHERE us.Turma = '" + txt_Turma_Literario.Text + "' AND epl.Data_Solicitacao <>'' AND epl.Data_Entrega = ''";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 try
@@ -373,8 +373,8 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Nome_CheckedChanged(object sender, EventArgs e)
@@ -384,8 +384,8 @@ namespace Controle_de_livros
             txt_Genero.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Ocupacao_CheckedChanged(object sender, EventArgs e)
@@ -395,8 +395,8 @@ namespace Controle_de_livros
             txt_Genero.Clear();
             txt_Nome.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Disciplina_CheckedChanged(object sender, EventArgs e)
@@ -406,8 +406,8 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Livro_Didatico_Nao_Entregues_CheckedChanged(object sender, EventArgs e)
@@ -418,8 +418,8 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Titulo_CheckedChanged(object sender, EventArgs e)
@@ -429,8 +429,8 @@ namespace Controle_de_livros
             txt_Genero.Clear();
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Genero_CheckedChanged(object sender, EventArgs e)
@@ -440,8 +440,8 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Autor_CheckedChanged(object sender, EventArgs e)
@@ -451,8 +451,8 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_TurmaDidatico_CheckedChanged(object sender, EventArgs e)
@@ -463,8 +463,8 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Livros_Literario_Nao_Entregues_CheckedChanged_1(object sender, EventArgs e)
@@ -475,25 +475,25 @@ namespace Controle_de_livros
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_TurmaLiterario_CheckedChanged(object sender, EventArgs e)
         {
-            cb_Turma_Didatico.Text = "";
+            txt_Turma_Didatico.Text = "";
             txt_Disciplina.Clear();
             txt_Genero.Clear();
             txt_Nome.Clear();
             txt_Ocupacao.Clear();
             txt_Titulo.Clear();
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Literario.Text = "";
         }
 
         private void rb_Livros_Didaticos_Nao_Entregues_CheckedChanged(object sender, EventArgs e)
         {
-            cb_Turma_Didatico.Text = "";
-            cb_Turma_Literario.Text = "";
+            txt_Turma_Didatico.Text = "";
+            txt_Turma_Literario.Text = "";
             txt_Autor.Clear();
             txt_Disciplina.Clear();
             txt_Genero.Clear();

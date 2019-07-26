@@ -35,6 +35,7 @@
             this.rb_Funcionario = new System.Windows.Forms.RadioButton();
             this.rb_Aluno = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_Codigo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_Turma = new System.Windows.Forms.ComboBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -55,7 +56,6 @@
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_Salvar = new System.Windows.Forms.Button();
             this.usuarioTableAdapter = new Controle_de_livros.DataSet_s.DataSet_UsuarioTableAdapters.UsuarioTableAdapter();
-            this.lbl_Codigo = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
@@ -137,6 +137,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do usuário:";
             // 
+            // lbl_Codigo
+            // 
+            this.lbl_Codigo.BackColor = System.Drawing.Color.White;
+            this.lbl_Codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_Codigo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Codigo.Location = new System.Drawing.Point(109, 36);
+            this.lbl_Codigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Codigo.Name = "lbl_Codigo";
+            this.lbl_Codigo.Size = new System.Drawing.Size(92, 27);
+            this.lbl_Codigo.TabIndex = 19;
+            this.lbl_Codigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -151,6 +163,7 @@
             // cb_Turma
             // 
             this.cb_Turma.AccessibleDescription = "";
+            this.cb_Turma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Turma.DataSource = this.usuarioBindingSource;
             this.cb_Turma.DisplayMember = "Turma";
             this.cb_Turma.FormattingEnabled = true;
@@ -182,6 +195,7 @@
             // 
             // cb_Ano
             // 
+            this.cb_Ano.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Ano.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Ano.FormattingEnabled = true;
             this.cb_Ano.Items.AddRange(new object[] {
@@ -230,6 +244,7 @@
             // 
             // txt_Nome
             // 
+            this.txt_Nome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Nome.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nome.Location = new System.Drawing.Point(109, 67);
             this.txt_Nome.Margin = new System.Windows.Forms.Padding(4);
@@ -261,6 +276,7 @@
             // 
             // txt_Tel_Cel
             // 
+            this.txt_Tel_Cel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Tel_Cel.Location = new System.Drawing.Point(109, 101);
             this.txt_Tel_Cel.MaxLength = 14;
             this.txt_Tel_Cel.Name = "txt_Tel_Cel";
@@ -305,6 +321,7 @@
             // 
             // txt_Endereco
             // 
+            this.txt_Endereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Endereco.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Endereco.Location = new System.Drawing.Point(109, 34);
             this.txt_Endereco.Margin = new System.Windows.Forms.Padding(4);
@@ -317,6 +334,7 @@
             // 
             // txt_Numero
             // 
+            this.txt_Numero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Numero.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Numero.Location = new System.Drawing.Point(109, 68);
             this.txt_Numero.Margin = new System.Windows.Forms.Padding(4);
@@ -333,6 +351,7 @@
             // 
             // btn_Sair
             // 
+            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout;
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sair.Location = new System.Drawing.Point(380, 454);
@@ -346,6 +365,7 @@
             // 
             // btn_Salvar
             // 
+            this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Salvar.Image = global::Controle_de_livros.Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Salvar.Location = new System.Drawing.Point(242, 454);
@@ -361,21 +381,11 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // lbl_Codigo
-            // 
-            this.lbl_Codigo.BackColor = System.Drawing.Color.White;
-            this.lbl_Codigo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Codigo.Location = new System.Drawing.Point(109, 36);
-            this.lbl_Codigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_Codigo.Name = "lbl_Codigo";
-            this.lbl_Codigo.Size = new System.Drawing.Size(92, 27);
-            this.lbl_Codigo.TabIndex = 19;
-            this.lbl_Codigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // A
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(507, 508);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btn_Sair);

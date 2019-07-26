@@ -70,12 +70,13 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Buscar.Location = new System.Drawing.Point(232, 25);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(125, 38);
+            this.btn_Buscar.Size = new System.Drawing.Size(144, 38);
             this.btn_Buscar.TabIndex = 19;
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
@@ -83,6 +84,7 @@
             // 
             // txt_Buscar
             // 
+            this.txt_Buscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Buscar.Location = new System.Drawing.Point(99, 32);
             this.txt_Buscar.Name = "txt_Buscar";
@@ -261,43 +263,43 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(406, 375);
+            this.btnCancelar.Location = new System.Drawing.Point(375, 375);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(86, 46);
+            this.btnCancelar.Size = new System.Drawing.Size(117, 46);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "Sair";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btn_EfetuarDevolucao
             // 
+            this.btn_EfetuarDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_EfetuarDevolucao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_EfetuarDevolucao.Image = global::Controle_de_livros.Properties.Resources._8WUJ2XuE_400x4001;
             this.btn_EfetuarDevolucao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_EfetuarDevolucao.Location = new System.Drawing.Point(223, 375);
+            this.btn_EfetuarDevolucao.Location = new System.Drawing.Point(158, 375);
             this.btn_EfetuarDevolucao.Name = "btn_EfetuarDevolucao";
-            this.btn_EfetuarDevolucao.Size = new System.Drawing.Size(177, 46);
+            this.btn_EfetuarDevolucao.Size = new System.Drawing.Size(211, 46);
             this.btn_EfetuarDevolucao.TabIndex = 20;
             this.btn_EfetuarDevolucao.Text = "Efetuar Devolução";
-            this.btn_EfetuarDevolucao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_EfetuarDevolucao.UseVisualStyleBackColor = true;
             this.btn_EfetuarDevolucao.Click += new System.EventHandler(this.btn_EfetuarDevolucao_Click);
             // 
             // btn_Limpar
             // 
+            this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Limpar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.Image = global::Controle_de_livros.Properties.Resources.Blackvariant_Button_Ui_Requests_2_CleanMyMac_1;
             this.btn_Limpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Limpar.Location = new System.Drawing.Point(123, 375);
+            this.btn_Limpar.Location = new System.Drawing.Point(26, 375);
             this.btn_Limpar.Name = "btn_Limpar";
-            this.btn_Limpar.Size = new System.Drawing.Size(94, 46);
+            this.btn_Limpar.Size = new System.Drawing.Size(126, 46);
             this.btn_Limpar.TabIndex = 23;
             this.btn_Limpar.Text = "Limpar";
-            this.btn_Limpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Limpar.UseVisualStyleBackColor = true;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
@@ -305,6 +307,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(504, 433);
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.btnCancelar);

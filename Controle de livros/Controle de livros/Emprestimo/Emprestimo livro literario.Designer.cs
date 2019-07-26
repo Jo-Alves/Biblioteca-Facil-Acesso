@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emprestimo_livro_literario));
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_Prazo = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbl_Autor = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_BuscarRegistro = new System.Windows.Forms.Button();
@@ -55,8 +57,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btn_EfetuaEmprestimo = new System.Windows.Forms.Button();
-            this.lbl_Prazo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +93,25 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Livro:";
             // 
+            // lbl_Prazo
+            // 
+            this.lbl_Prazo.AutoSize = true;
+            this.lbl_Prazo.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.lbl_Prazo.Location = new System.Drawing.Point(138, 202);
+            this.lbl_Prazo.Name = "lbl_Prazo";
+            this.lbl_Prazo.Size = new System.Drawing.Size(0, 19);
+            this.lbl_Prazo.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 202);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 19);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Prazo de entrega:";
+            // 
             // lbl_Autor
             // 
             this.lbl_Autor.AutoSize = true;
@@ -114,6 +133,7 @@
             // 
             // btn_BuscarRegistro
             // 
+            this.btn_BuscarRegistro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BuscarRegistro.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
             this.btn_BuscarRegistro.Location = new System.Drawing.Point(220, 18);
             this.btn_BuscarRegistro.Name = "btn_BuscarRegistro";
@@ -124,15 +144,15 @@
             // 
             // btn_LimparLivro
             // 
+            this.btn_LimparLivro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_LimparLivro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LimparLivro.Image = global::Controle_de_livros.Properties.Resources.Blackvariant_Button_Ui_Requests_2_CleanMyMac_1;
             this.btn_LimparLivro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_LimparLivro.Location = new System.Drawing.Point(6, 235);
             this.btn_LimparLivro.Name = "btn_LimparLivro";
-            this.btn_LimparLivro.Size = new System.Drawing.Size(94, 41);
+            this.btn_LimparLivro.Size = new System.Drawing.Size(126, 41);
             this.btn_LimparLivro.TabIndex = 4;
             this.btn_LimparLivro.Text = "Limpar";
-            this.btn_LimparLivro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_LimparLivro.Click += new System.EventHandler(this.btn_LimparLivro_Click);
             // 
             // lbl_DataSolicitacao
@@ -175,6 +195,7 @@
             // 
             // txt_Registro
             // 
+            this.txt_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Registro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Registro.Location = new System.Drawing.Point(106, 24);
             this.txt_Registro.Margin = new System.Windows.Forms.Padding(4);
@@ -187,6 +208,7 @@
             // 
             // txt_Codigo
             // 
+            this.txt_Codigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Codigo.Location = new System.Drawing.Point(132, 24);
             this.txt_Codigo.Name = "txt_Codigo";
             this.txt_Codigo.Size = new System.Drawing.Size(100, 26);
@@ -221,6 +243,7 @@
             // 
             // btn_BuscarUsuario
             // 
+            this.btn_BuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BuscarUsuario.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
             this.btn_BuscarUsuario.Location = new System.Drawing.Point(238, 18);
             this.btn_BuscarUsuario.Name = "btn_BuscarUsuario";
@@ -252,15 +275,15 @@
             // 
             // btn_LimparUsu
             // 
+            this.btn_LimparUsu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_LimparUsu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LimparUsu.Image = global::Controle_de_livros.Properties.Resources.Blackvariant_Button_Ui_Requests_2_CleanMyMac_1;
             this.btn_LimparUsu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimparUsu.Location = new System.Drawing.Point(299, 242);
+            this.btn_LimparUsu.Location = new System.Drawing.Point(267, 242);
             this.btn_LimparUsu.Name = "btn_LimparUsu";
-            this.btn_LimparUsu.Size = new System.Drawing.Size(94, 41);
+            this.btn_LimparUsu.Size = new System.Drawing.Size(126, 41);
             this.btn_LimparUsu.TabIndex = 2;
             this.btn_LimparUsu.Text = "Limpar";
-            this.btn_LimparUsu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_LimparUsu.UseVisualStyleBackColor = true;
             this.btn_LimparUsu.Click += new System.EventHandler(this.btn_LimparUsu_Click);
             // 
@@ -340,52 +363,34 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Image = global::Controle_de_livros.Properties.Resources.cancelar1;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(419, 309);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(191, 41);
+            this.btnCancelar.Size = new System.Drawing.Size(227, 41);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar empréstimo";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btn_EfetuaEmprestimo
             // 
+            this.btn_EfetuaEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_EfetuaEmprestimo.Image = global::Controle_de_livros.Properties.Resources._8WUJ2XuE_400x4001;
             this.btn_EfetuaEmprestimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_EfetuaEmprestimo.Location = new System.Drawing.Point(230, 308);
+            this.btn_EfetuaEmprestimo.Location = new System.Drawing.Point(202, 308);
             this.btn_EfetuaEmprestimo.Name = "btn_EfetuaEmprestimo";
-            this.btn_EfetuaEmprestimo.Size = new System.Drawing.Size(183, 41);
+            this.btn_EfetuaEmprestimo.Size = new System.Drawing.Size(211, 41);
             this.btn_EfetuaEmprestimo.TabIndex = 3;
             this.btn_EfetuaEmprestimo.Text = "Efetuar empréstimo";
-            this.btn_EfetuaEmprestimo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_EfetuaEmprestimo.Click += new System.EventHandler(this.btn_EfetuaEmprestimo_Click);
-            // 
-            // lbl_Prazo
-            // 
-            this.lbl_Prazo.AutoSize = true;
-            this.lbl_Prazo.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.lbl_Prazo.Location = new System.Drawing.Point(138, 202);
-            this.lbl_Prazo.Name = "lbl_Prazo";
-            this.lbl_Prazo.Size = new System.Drawing.Size(0, 19);
-            this.lbl_Prazo.TabIndex = 26;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 202);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 19);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Prazo de entrega:";
             // 
             // Emprestimo_livro_literario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(847, 361);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_EfetuaEmprestimo);

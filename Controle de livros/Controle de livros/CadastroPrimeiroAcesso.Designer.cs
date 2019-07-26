@@ -44,7 +44,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 54);
+            this.label2.Location = new System.Drawing.Point(49, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 19);
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 18);
+            this.label1.Location = new System.Drawing.Point(49, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 19);
@@ -64,8 +64,9 @@
             // 
             // txt_Senha
             // 
+            this.txt_Senha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Senha.Location = new System.Drawing.Point(130, 50);
+            this.txt_Senha.Location = new System.Drawing.Point(53, 88);
             this.txt_Senha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Senha.MaxLength = 10;
             this.txt_Senha.Name = "txt_Senha";
@@ -76,8 +77,9 @@
             // 
             // txt_Usuario
             // 
+            this.txt_Usuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Usuario.Location = new System.Drawing.Point(130, 14);
+            this.txt_Usuario.Location = new System.Drawing.Point(53, 33);
             this.txt_Usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_Usuario.MaxLength = 50;
             this.txt_Usuario.Name = "txt_Usuario";
@@ -87,10 +89,11 @@
             // 
             // Btn_Sair
             // 
+            this.Btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Sair.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout1;
             this.Btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Sair.Location = new System.Drawing.Point(213, 86);
+            this.Btn_Sair.Location = new System.Drawing.Point(171, 136);
             this.Btn_Sair.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Btn_Sair.Name = "Btn_Sair";
             this.Btn_Sair.Size = new System.Drawing.Size(77, 42);
@@ -102,10 +105,11 @@
             // 
             // Btn_Cadastrar
             // 
+            this.Btn_Cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Btn_Cadastrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Cadastrar.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Soft_Scraps_Text_Edit;
             this.Btn_Cadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btn_Cadastrar.Location = new System.Drawing.Point(93, 86);
+            this.Btn_Cadastrar.Location = new System.Drawing.Point(51, 136);
             this.Btn_Cadastrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Btn_Cadastrar.Name = "Btn_Cadastrar";
             this.Btn_Cadastrar.Size = new System.Drawing.Size(112, 42);
@@ -123,7 +127,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(348, 144);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(313, 188);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Senha);

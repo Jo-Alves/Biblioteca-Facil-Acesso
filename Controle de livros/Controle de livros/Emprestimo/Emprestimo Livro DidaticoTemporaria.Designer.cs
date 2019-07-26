@@ -36,6 +36,7 @@
             this.rb_FazerDevolucao = new System.Windows.Forms.RadioButton();
             this.rb_EfetuarEmprestimo = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cb_Professora = new System.Windows.Forms.ComboBox();
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.cb_Livros = new System.Windows.Forms.ComboBox();
             this.num_Quantidade = new System.Windows.Forms.NumericUpDown();
@@ -45,7 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.error_Provider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.cb_Professora = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_Quantidade)).BeginInit();
@@ -54,6 +54,7 @@
             // 
             // btn_Sair
             // 
+            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout;
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_Sair.Location = new System.Drawing.Point(344, 279);
@@ -67,6 +68,7 @@
             // 
             // btn_EfetuaEmprestimo
             // 
+            this.btn_EfetuaEmprestimo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_EfetuaEmprestimo.Image = global::Controle_de_livros.Properties.Resources._8WUJ2XuE_400x4001;
             this.btn_EfetuaEmprestimo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_EfetuaEmprestimo.Location = new System.Drawing.Point(154, 279);
@@ -133,8 +135,22 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
+            // cb_Professora
+            // 
+            this.cb_Professora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_Professora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cb_Professora.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cb_Professora.FormattingEnabled = true;
+            this.cb_Professora.Location = new System.Drawing.Point(118, 34);
+            this.cb_Professora.Name = "cb_Professora";
+            this.cb_Professora.Size = new System.Drawing.Size(212, 21);
+            this.cb_Professora.TabIndex = 14;
+            this.cb_Professora.SelectedIndexChanged += new System.EventHandler(this.cb_Professora_SelectedIndexChanged);
+            this.cb_Professora.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_Professora_KeyDown);
+            // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.Location = new System.Drawing.Point(341, 22);
             this.btn_Buscar.Name = "btn_Buscar";
@@ -146,6 +162,7 @@
             // 
             // cb_Livros
             // 
+            this.cb_Livros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Livros.FormattingEnabled = true;
             this.cb_Livros.Items.AddRange(new object[] {
             "",
@@ -184,6 +201,7 @@
             // 
             // txt_Turma
             // 
+            this.txt_Turma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Turma.Location = new System.Drawing.Point(119, 66);
             this.txt_Turma.MaxLength = 14;
             this.txt_Turma.Name = "txt_Turma";
@@ -236,22 +254,11 @@
             // 
             this.error_Provider.ContainerControl = this;
             // 
-            // cb_Professora
-            // 
-            this.cb_Professora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cb_Professora.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cb_Professora.FormattingEnabled = true;
-            this.cb_Professora.Location = new System.Drawing.Point(118, 34);
-            this.cb_Professora.Name = "cb_Professora";
-            this.cb_Professora.Size = new System.Drawing.Size(212, 21);
-            this.cb_Professora.TabIndex = 14;
-            this.cb_Professora.SelectedIndexChanged += new System.EventHandler(this.cb_Professora_SelectedIndexChanged);
-            this.cb_Professora.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_Professora_KeyDown);
-            // 
             // Emprestimo_Livro_DidaticoTemporaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(475, 331);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btn_EfetuaEmprestimo);

@@ -47,16 +47,18 @@
             // 
             // txt_Dados
             // 
-            this.txt_Dados.Location = new System.Drawing.Point(38, 29);
+            this.txt_Dados.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Dados.Location = new System.Drawing.Point(25, 29);
             this.txt_Dados.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Dados.Name = "txt_Dados";
-            this.txt_Dados.Size = new System.Drawing.Size(484, 26);
+            this.txt_Dados.Size = new System.Drawing.Size(497, 26);
             this.txt_Dados.TabIndex = 0;
             this.txt_Dados.TextChanged += new System.EventHandler(this.txt_Dados_TextChanged);
             this.txt_Dados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Dados_KeyDown);
             // 
             // cb_Opcao
             // 
+            this.cb_Opcao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Opcao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_Opcao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Opcao.FormattingEnabled = true;
@@ -72,6 +74,7 @@
             // 
             // btn_Pesquisar
             // 
+            this.btn_Pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Pesquisar.Location = new System.Drawing.Point(671, 22);
             this.btn_Pesquisar.Name = "btn_Pesquisar";
             this.btn_Pesquisar.Size = new System.Drawing.Size(99, 39);
@@ -178,6 +181,7 @@
             // 
             // btnOk
             // 
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOk.Location = new System.Drawing.Point(688, 340);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(99, 39);
@@ -188,6 +192,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancelar.Location = new System.Drawing.Point(583, 340);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(99, 39);
@@ -200,7 +205,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 383);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(799, 383);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dgv_Busca);

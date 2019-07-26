@@ -27,7 +27,6 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmAnaliseLivroMaisEmprestado.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmAnaliseUsuarioMaisLeu.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscaLivroLiterario.resources
-D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscarCliente.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscarLivroDidatico.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.QuantidadeLivrosCadastrados.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS.resources
@@ -334,3 +333,6 @@ D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\ob
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle de livros.pdb
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscarUsuario.resources
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmOpcaoDiretorio.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscarUsuario.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmInstituicao.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmOpcaoDiretorio.resources

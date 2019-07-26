@@ -34,9 +34,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView_Busca = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cb_Turma_Didatico = new System.Windows.Forms.ComboBox();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cb_Turma_Literario = new System.Windows.Forms.ComboBox();
             this.rb_Buscar_Todos_Livros_Didaticos = new System.Windows.Forms.RadioButton();
             this.rb_Buscar_Todos_Livros_Literarios = new System.Windows.Forms.RadioButton();
             this.rb_Livros_Literario_Nao_Entregues = new System.Windows.Forms.RadioButton();
@@ -62,6 +60,8 @@
             this.rb_Nome = new System.Windows.Forms.RadioButton();
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_Buscar = new System.Windows.Forms.Button();
+            this.txt_Turma_Literario = new System.Windows.Forms.TextBox();
+            this.txt_Turma_Didatico = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Busca)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -104,8 +104,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.cb_Turma_Didatico);
-            this.groupBox2.Controls.Add(this.cb_Turma_Literario);
+            this.groupBox2.Controls.Add(this.txt_Turma_Didatico);
+            this.groupBox2.Controls.Add(this.txt_Turma_Literario);
             this.groupBox2.Controls.Add(this.rb_Buscar_Todos_Livros_Didaticos);
             this.groupBox2.Controls.Add(this.rb_Buscar_Todos_Livros_Literarios);
             this.groupBox2.Controls.Add(this.rb_Livros_Literario_Nao_Entregues);
@@ -139,31 +139,9 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar dados";
             // 
-            // cb_Turma_Didatico
-            // 
-            this.cb_Turma_Didatico.DataSource = this.usuarioBindingSource;
-            this.cb_Turma_Didatico.DisplayMember = "Turma";
-            this.cb_Turma_Didatico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cb_Turma_Didatico.FormattingEnabled = true;
-            this.cb_Turma_Didatico.Location = new System.Drawing.Point(83, 249);
-            this.cb_Turma_Didatico.Name = "cb_Turma_Didatico";
-            this.cb_Turma_Didatico.Size = new System.Drawing.Size(107, 27);
-            this.cb_Turma_Didatico.TabIndex = 35;
-            // 
             // usuarioBindingSource
             // 
             this.usuarioBindingSource.DataMember = "Usuario";
-            // 
-            // cb_Turma_Literario
-            // 
-            this.cb_Turma_Literario.DataSource = this.usuarioBindingSource;
-            this.cb_Turma_Literario.DisplayMember = "Turma";
-            this.cb_Turma_Literario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
-            this.cb_Turma_Literario.FormattingEnabled = true;
-            this.cb_Turma_Literario.Location = new System.Drawing.Point(78, 496);
-            this.cb_Turma_Literario.Name = "cb_Turma_Literario";
-            this.cb_Turma_Literario.Size = new System.Drawing.Size(107, 27);
-            this.cb_Turma_Literario.TabIndex = 34;
             // 
             // rb_Buscar_Todos_Livros_Didaticos
             // 
@@ -276,6 +254,7 @@
             // 
             // txt_Autor
             // 
+            this.txt_Autor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Autor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Autor.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Autor.Location = new System.Drawing.Point(78, 438);
@@ -298,6 +277,7 @@
             // 
             // txt_Genero
             // 
+            this.txt_Genero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Genero.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Genero.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Genero.Location = new System.Drawing.Point(90, 395);
@@ -307,6 +287,7 @@
             // 
             // txt_Titulo
             // 
+            this.txt_Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Titulo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Titulo.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Titulo.Location = new System.Drawing.Point(79, 353);
@@ -335,6 +316,7 @@
             // 
             // txt_Disciplina
             // 
+            this.txt_Disciplina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Disciplina.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Disciplina.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Disciplina.Location = new System.Drawing.Point(106, 162);
@@ -345,6 +327,7 @@
             // 
             // txt_Ocupacao
             // 
+            this.txt_Ocupacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Ocupacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Ocupacao.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Ocupacao.Location = new System.Drawing.Point(106, 94);
@@ -355,6 +338,7 @@
             // 
             // txt_Nome
             // 
+            this.txt_Nome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Nome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txt_Nome.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txt_Nome.Location = new System.Drawing.Point(80, 54);
@@ -430,10 +414,11 @@
             // 
             // btn_Sair
             // 
+            this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.Custom_Icon_Design_Pretty_Office_11_Logout1;
             this.btn_Sair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Sair.Location = new System.Drawing.Point(696, 597);
+            this.btn_Sair.Location = new System.Drawing.Point(792, 597);
             this.btn_Sair.Name = "btn_Sair";
             this.btn_Sair.Size = new System.Drawing.Size(113, 48);
             this.btn_Sair.TabIndex = 3;
@@ -443,10 +428,11 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Buscar.Location = new System.Drawing.Point(577, 597);
+            this.btn_Buscar.Location = new System.Drawing.Point(673, 597);
             this.btn_Buscar.Name = "btn_Buscar";
             this.btn_Buscar.Size = new System.Drawing.Size(113, 48);
             this.btn_Buscar.TabIndex = 2;
@@ -454,10 +440,27 @@
             this.btn_Buscar.UseVisualStyleBackColor = true;
             this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
             // 
+            // txt_Turma_Literario
+            // 
+            this.txt_Turma_Literario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Turma_Literario.Location = new System.Drawing.Point(80, 499);
+            this.txt_Turma_Literario.Name = "txt_Turma_Literario";
+            this.txt_Turma_Literario.Size = new System.Drawing.Size(205, 26);
+            this.txt_Turma_Literario.TabIndex = 36;
+            // 
+            // txt_Turma_Didatico
+            // 
+            this.txt_Turma_Didatico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_Turma_Didatico.Location = new System.Drawing.Point(78, 249);
+            this.txt_Turma_Didatico.Name = "txt_Turma_Didatico";
+            this.txt_Turma_Didatico.Size = new System.Drawing.Size(207, 26);
+            this.txt_Turma_Didatico.TabIndex = 37;
+            // 
             // Buscar_usuários_e_livros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(908, 654);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.btn_Buscar);
@@ -510,8 +513,8 @@
         private System.Windows.Forms.RadioButton rb_Livros_Literario_Nao_Entregues;
         private System.Windows.Forms.RadioButton rb_Buscar_Todos_Livros_Literarios;
         private System.Windows.Forms.RadioButton rb_Buscar_Todos_Livros_Didaticos;
-        private System.Windows.Forms.ComboBox cb_Turma_Literario;
         private System.Windows.Forms.BindingSource usuarioBindingSource;     
-        private System.Windows.Forms.ComboBox cb_Turma_Didatico;
+        private System.Windows.Forms.TextBox txt_Turma_Literario;
+        private System.Windows.Forms.TextBox txt_Turma_Didatico;
     }
 }

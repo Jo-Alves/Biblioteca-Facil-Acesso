@@ -74,6 +74,7 @@
             // 
             // cb_Titulo
             // 
+            this.cb_Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cb_Titulo.FormattingEnabled = true;
             this.cb_Titulo.Location = new System.Drawing.Point(86, 37);
             this.cb_Titulo.Name = "cb_Titulo";
@@ -93,6 +94,7 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.Location = new System.Drawing.Point(423, 25);
             this.btn_Buscar.Name = "btn_Buscar";
@@ -139,6 +141,7 @@
             // txt_Autor
             // 
             this.txt_Autor.BackColor = System.Drawing.Color.White;
+            this.txt_Autor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Autor.Location = new System.Drawing.Point(78, 106);
             this.txt_Autor.Name = "txt_Autor";
             this.txt_Autor.ReadOnly = true;
@@ -148,6 +151,7 @@
             // txt_Estante
             // 
             this.txt_Estante.BackColor = System.Drawing.Color.White;
+            this.txt_Estante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Estante.Location = new System.Drawing.Point(78, 138);
             this.txt_Estante.Name = "txt_Estante";
             this.txt_Estante.ReadOnly = true;
@@ -157,6 +161,7 @@
             // num_QuantidadeTotalCadastrado
             // 
             this.num_QuantidadeTotalCadastrado.BackColor = System.Drawing.Color.White;
+            this.num_QuantidadeTotalCadastrado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.num_QuantidadeTotalCadastrado.Location = new System.Drawing.Point(410, 138);
             this.num_QuantidadeTotalCadastrado.Name = "num_QuantidadeTotalCadastrado";
             this.num_QuantidadeTotalCadastrado.ReadOnly = true;
@@ -166,6 +171,7 @@
             // num_QuantidadeDisponivel
             // 
             this.num_QuantidadeDisponivel.BackColor = System.Drawing.Color.White;
+            this.num_QuantidadeDisponivel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.num_QuantidadeDisponivel.Location = new System.Drawing.Point(410, 170);
             this.num_QuantidadeDisponivel.Name = "num_QuantidadeDisponivel";
             this.num_QuantidadeDisponivel.ReadOnly = true;
@@ -175,6 +181,7 @@
             // num_QuantidadeEmprestadas
             // 
             this.num_QuantidadeEmprestadas.BackColor = System.Drawing.Color.White;
+            this.num_QuantidadeEmprestadas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.num_QuantidadeEmprestadas.Location = new System.Drawing.Point(410, 204);
             this.num_QuantidadeEmprestadas.Name = "num_QuantidadeEmprestadas";
             this.num_QuantidadeEmprestadas.ReadOnly = true;
@@ -218,6 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(545, 378);
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.btn_Verificar);
