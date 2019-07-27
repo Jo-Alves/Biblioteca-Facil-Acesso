@@ -42,24 +42,9 @@ namespace Controle_de_livros
                     autenticacao._Senha = txt_Senha.Text;
                     if (autenticacao.Consultar() == true)
                     {
-                        try
-                        {
-                            if (!string.IsNullOrEmpty(Settings.Default["Disco"].ToString()))
-                            {
-                                Fomulario_Principal FP = new Fomulario_Principal(cb_Usuario.Text);
-                                FP.Show();
-                                this.Visible = false;
-                            }
-                            else
-                            {
-                                FrmOpcaoDiretorio opcaoDiretorio = new FrmOpcaoDiretorio(cb_Usuario.Text);
-                                opcaoDiretorio.ShowDialog();
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Erro na conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        Fomulario_Principal FP = new Fomulario_Principal(cb_Usuario.Text);
+                        FP.Show();
+                        this.Visible = false;
                     }
                     else
                     {
@@ -74,7 +59,7 @@ namespace Controle_de_livros
             }
         }
 
-        string stringConn, _sql; bool retorno;
+        string _sql; bool retorno;
         private void VerificarDataBase()
         {
             SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHJjGrOXTsH7b9NW1qcCpVJxD4wsfhTDR6OXOUSfCqDynZ+0PYEaREWQ=="));
@@ -173,6 +158,7 @@ namespace Controle_de_livros
             {
                 conexao.Open();
                 comando.ExecuteNonQuery();
+                MessageBox.Show("A Senha é educação. Você pode alterar a Senha como desejar depois.", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

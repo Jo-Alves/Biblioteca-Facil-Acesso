@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fomulario_Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.opçoesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.opçãoDeDisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oPÇÔESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuInstituicao = new System.Windows.Forms.ToolStripMenuItem();
             this.uSUARIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +70,7 @@
             this.dEVOLUÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DevolucaoLivroLiterario = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DevolucaoLivroDidatico = new System.Windows.Forms.ToolStripMenuItem();
+            this.opçoesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Sair = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNomeBiblioteca = new System.Windows.Forms.Label();
@@ -85,6 +84,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,24 +109,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(899, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // opçoesToolStripMenuItem
-            // 
-            this.opçoesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.opçãoDeDisToolStripMenuItem});
-            this.opçoesToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.Settings_icon;
-            this.opçoesToolStripMenuItem.Name = "opçoesToolStripMenuItem";
-            this.opçoesToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
-            this.opçoesToolStripMenuItem.Text = "Configurações";
-            // 
-            // opçãoDeDisToolStripMenuItem
-            // 
-            this.opçãoDeDisToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.My_Pictures_icon;
-            this.opçãoDeDisToolStripMenuItem.Name = "opçãoDeDisToolStripMenuItem";
-            this.opçãoDeDisToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.opçãoDeDisToolStripMenuItem.Size = new System.Drawing.Size(427, 22);
-            this.opçãoDeDisToolStripMenuItem.Text = "TROCAR DE OPÇÃO DE DIRETÓRIO PARA BACKU PADRÃO";
-            this.opçãoDeDisToolStripMenuItem.Click += new System.EventHandler(this.OpçãoDeDisToolStripMenuItem_Click);
             // 
             // oPÇÔESToolStripMenuItem
             // 
@@ -193,7 +175,7 @@
             this.menu_ExcluirLivroLiterario});
             this.lIVROLITERÁRIOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.Book_icon;
             this.lIVROLITERÁRIOToolStripMenuItem.Name = "lIVROLITERÁRIOToolStripMenuItem";
-            this.lIVROLITERÁRIOToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.lIVROLITERÁRIOToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
             this.lIVROLITERÁRIOToolStripMenuItem.Text = "LIVRO LITERÁRIO";
             // 
             // menu_CadastrarLivroLiterario
@@ -222,7 +204,7 @@
             this.menu_AlterarExcluirLivroDidatico});
             this.lIVRODIDÁTICOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.Book_icon;
             this.lIVRODIDÁTICOToolStripMenuItem.Name = "lIVRODIDÁTICOToolStripMenuItem";
-            this.lIVRODIDÁTICOToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.lIVRODIDÁTICOToolStripMenuItem.Size = new System.Drawing.Size(318, 22);
             this.lIVRODIDÁTICOToolStripMenuItem.Text = "LIVRO DIDÁTICO";
             // 
             // menu_CadastrarLivroDadatico
@@ -248,7 +230,8 @@
             // 
             this.Menu_QuantidadeLivrosCadastrados.Image = global::Controle_de_livros.Properties.Resources._951701;
             this.Menu_QuantidadeLivrosCadastrados.Name = "Menu_QuantidadeLivrosCadastrados";
-            this.Menu_QuantidadeLivrosCadastrados.Size = new System.Drawing.Size(275, 22);
+            this.Menu_QuantidadeLivrosCadastrados.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.Menu_QuantidadeLivrosCadastrados.Size = new System.Drawing.Size(318, 22);
             this.Menu_QuantidadeLivrosCadastrados.Text = "QUANTIDADE LIVROS CADASTRADOS";
             this.Menu_QuantidadeLivrosCadastrados.Click += new System.EventHandler(this.Menu_QuantidadeLivrosCadastrados_Click);
             // 
@@ -498,6 +481,15 @@
             this.menu_DevolucaoLivroDidatico.Text = "DE LIVRO DIDÁTICO";
             this.menu_DevolucaoLivroDidatico.Click += new System.EventHandler(this.menu_DevolucaoLivroDidatico_Click);
             // 
+            // opçoesToolStripMenuItem
+            // 
+            this.opçoesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem});
+            this.opçoesToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.Settings_icon;
+            this.opçoesToolStripMenuItem.Name = "opçoesToolStripMenuItem";
+            this.opçoesToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.opçoesToolStripMenuItem.Text = "Configurações";
+            // 
             // menu_Sair
             // 
             this.menu_Sair.Image = global::Controle_de_livros.Properties.Resources.Saki_Snowish_Button_exit;
@@ -645,6 +637,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.Settings_icon;
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
+            // 
             // Fomulario_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -730,6 +731,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuInstituicao;
         private System.Windows.Forms.Label lblNomeBiblioteca;
         private System.Windows.Forms.ToolStripMenuItem opçoesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem opçãoDeDisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
     }
 }

@@ -335,4 +335,4 @@ D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\ob
 D:\Meus Projetos\Biblioteca-Caixa-Facil\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmOpcaoDiretorio.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmBuscarUsuario.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmInstituicao.resources
-D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmOpcaoDiretorio.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmSettings.resources

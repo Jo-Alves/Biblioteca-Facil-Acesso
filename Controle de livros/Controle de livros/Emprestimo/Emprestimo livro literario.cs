@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controle_de_livros.Properties;
 
 namespace Controle_de_livros
 {
@@ -85,7 +86,9 @@ namespace Controle_de_livros
         {
             LimparLivro();
         }
-        string SituacaoUsu, situacaousu2;
+
+        string SituacaoUsu;
+
         private void selecaoEmprestimoLiterario_Usuario()
         {
             try { conexao = new SqlConnection(stringConn);
@@ -104,9 +107,7 @@ namespace Controle_de_livros
                     DateTime Da = Convert.ToDateTime(dataAtual);
                     TimeSpan resultadoSubtracao = Da.Subtract(Ds);
 
-                    SituacaoUsu = "O usuário está pendente com um livro!";
-                    situacaousu2 = "O usuário está pendente com um livro!";
-                    SituacaoUsu = "O usuário está pendente com um livro à " + resultadoSubtracao.Days.ToString() + " dia(s)!";
+                   SituacaoUsu = "O usuário está pendente com um livro à " + resultadoSubtracao.Days.ToString() + " dia(s)!";
                 }
                 else if ((lbl_Nome.Text == "") && (Tabela.Rows.Count == 0))
                 {
@@ -120,7 +121,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro na conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -157,7 +158,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro na conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return true;
         }
@@ -180,15 +181,7 @@ namespace Controle_de_livros
                 N_Registro = txt_Registro.Text.Trim();
                 if (SelecaoLivro() == true)
                 {
-                    SelecaoLivro();
-                    selecaoEmprestimoLiterario();
-                    lbl_DataSolicitacao.Text = DateTime.Now.ToShortDateString();
-
-                    string DataAtual = DateTime.Now.ToShortDateString();
-                    int dias = 10;
-                    DateTime dataAtual = Convert.ToDateTime(DataAtual);
-                    DateTime days = dataAtual.AddDays(dias);
-                    lbl_Prazo.Text = days.ToShortDateString();
+                    BuscarSelecaoLivro();
                 }
                 else
                 {
@@ -207,18 +200,23 @@ namespace Controle_de_livros
                     N_Registro = txt_Registro.Text.Trim();
                     if (SelecaoLivro() == true)
                     {
-                        SelecaoLivro();
-                        selecaoEmprestimoLiterario();
-                        lbl_DataSolicitacao.Text = DateTime.Now.ToShortDateString();
-
-                        string DataAtual = DateTime.Now.ToShortDateString();
-                        int dias = 10;
-                        DateTime dataAtual = Convert.ToDateTime(DataAtual);
-                        DateTime days = dataAtual.AddDays(dias);
-                        lbl_Prazo.Text = days.ToShortDateString();
+                        BuscarSelecaoLivro();
                     }
                 }
             }
+        }
+
+        private void BuscarSelecaoLivro()
+        {
+            SelecaoLivro();
+            selecaoEmprestimoLiterario();
+            lbl_DataSolicitacao.Text = DateTime.Now.ToShortDateString();
+
+            string DataAtual = DateTime.Now.ToShortDateString();
+            int dias = int.Parse(Settings.Default["qtdLimiteTempo"].ToString());
+            DateTime dataAtual = Convert.ToDateTime(DataAtual);
+            DateTime days = dataAtual.AddDays(dias);
+            lbl_Prazo.Text = days.ToShortDateString();
         }
 
         string situacao, N_Registro;
@@ -248,7 +246,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro na conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -275,7 +273,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro na conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return true;
         }

@@ -176,11 +176,6 @@ namespace Controle_de_livros
             rld.ShowDialog();
         }
 
-        private void menu_CadastrarLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void menu_CadastrarLogin_Click_1(object sender, EventArgs e)
         {
             Cadastrar_login_e_senha cls = new Cadastrar_login_e_senha();
@@ -290,10 +285,10 @@ namespace Controle_de_livros
             lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
         }
 
-        private void OpçãoDeDisToolStripMenuItem_Click(object sender, EventArgs e)
-        {            
-            FrmOpcaoDiretorio opcaoDiretorio = new FrmOpcaoDiretorio(Usuario);
-            opcaoDiretorio.ShowDialog();
+        private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSettings settings = new FrmSettings();
+            settings.ShowDialog();
         }
     }
 }

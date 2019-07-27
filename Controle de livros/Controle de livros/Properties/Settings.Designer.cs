@@ -82,13 +82,37 @@ namespace Controle_de_livros.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\")]
         public string disco {
             get {
                 return ((string)(this["disco"]));
             }
             set {
                 this["disco"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string qtdLimiteEmprestimo {
+            get {
+                return ((string)(this["qtdLimiteEmprestimo"]));
+            }
+            set {
+                this["qtdLimiteEmprestimo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public string qtdLimiteTempo {
+            get {
+                return ((string)(this["qtdLimiteTempo"]));
+            }
+            set {
+                this["qtdLimiteTempo"] = value;
             }
         }
     }

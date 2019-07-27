@@ -327,11 +327,11 @@
     <Compile Include="FrmInstituicao.Designer.cs">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOpcaoDiretorio.cs">
+    <Compile Include="FrmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOpcaoDiretorio.designer.cs">
-      <DependentUpon>FrmOpcaoDiretorio.cs</DependentUpon>
+    <Compile Include="FrmSettings.Designer.cs">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -530,8 +530,8 @@
     <EmbeddedResource Include="FrmInstituicao.resx">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOpcaoDiretorio.resx">
-      <DependentUpon>FrmOpcaoDiretorio.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSettings.resx">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuantidadeLivrosCadastrados.resx">
       <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
