@@ -212,11 +212,11 @@ namespace Controle_de_livros
                     usuario.ocupacao = rb_Funcionario.Text;
                 }
 
-                if (usuario.alterar() == true)
+                if (usuario.atualizar() == true)
                 {
                     try
                     {
-                        usuario.alterar();
+                        usuario.atualizar();
                         MessageBox.Show("Dados alterado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpar();
                         atualizar_cb_Turma();
@@ -265,11 +265,11 @@ namespace Controle_de_livros
                     usuario.ocupacao = rb_Funcionario.Text;
                 }
 
-                if (usuario.alterar() == true)
+                if (usuario.atualizar() == true)
                 {
                     try
                     {
-                        usuario.alterar();
+                        usuario.atualizar();
                         MessageBox.Show("Dados alterado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpar();
                         DataGridView_Atualizada();

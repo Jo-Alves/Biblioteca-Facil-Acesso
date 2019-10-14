@@ -97,7 +97,7 @@ namespace Controle_de_livros
             }
             else
             {
-                FrmBuscarUsuario bc = new FrmBuscarUsuario("AbrirJanela");
+                FrmBuscarUsuario bc = new FrmBuscarUsuario();
                 bc.ShowDialog();
                 if (bc.Codigo >= 1)
                 {
@@ -175,9 +175,9 @@ namespace Controle_de_livros
             {
                 FrmBuscarLivroDidatico ld = new FrmBuscarLivroDidatico();
                 ld.ShowDialog();
-                if (ld.Codigo >= 1)
+                if (ld.registro >= 1)
                 {
-                    Registro = ld.Codigo.ToString();
+                    Registro = ld.registro.ToString();
                     txt_Registro.Text = Registro;
                     if (SelecaoLivro() == true)
                     {

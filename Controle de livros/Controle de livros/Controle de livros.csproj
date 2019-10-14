@@ -135,6 +135,12 @@
     <Compile Include="Busca\Buscar livros por Genero.Designer.cs">
       <DependentUpon>Buscar livros por Genero.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cadastro e edição\FrmCadastroUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro e edição\FrmCadastroUsuarios.designer.cs">
+      <DependentUpon>FrmCadastroUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="CadastroPrimeiroAcesso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,17 +191,17 @@
     <Compile Include="Autenticação\Cadastrar login e senha.Designer.cs">
       <DependentUpon>Cadastrar login e senha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro e edição\Cadastro livro didatico.cs">
+    <Compile Include="Cadastro e edição\FrmLivroDidatico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro e edição\Cadastro livro didatico.Designer.cs">
-      <DependentUpon>Cadastro livro didatico.cs</DependentUpon>
+    <Compile Include="Cadastro e edição\FrmLivroDidatico.Designer.cs">
+      <DependentUpon>FrmLivroDidatico.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cadastro e edição\Cadastro_Livro_Literario.cs">
+    <Compile Include="Cadastro e edição\FrmLivroLiterario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro e edição\Cadastro_Livro_Literario.Designer.cs">
-      <DependentUpon>Cadastro_Livro_Literario.cs</DependentUpon>
+    <Compile Include="Cadastro e edição\FrmLivroLiterario.Designer.cs">
+      <DependentUpon>FrmLivroLiterario.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet%27s\DataSet_Usuario.cs">
       <DependentUpon>DataSet_Usuario.xsd</DependentUpon>
@@ -264,18 +270,6 @@
     <Compile Include="Carregando.Designer.cs">
       <DependentUpon>Carregando.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fomulario_Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fomulario_Principal.Designer.cs">
-      <DependentUpon>Fomulario_Principal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro e edição\Cadastro_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro e edição\Cadastro_Usuario.Designer.cs">
-      <DependentUpon>Cadastro_Usuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Emprestimo\Emprestimo_livro_didatico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,17 +303,17 @@
     <Compile Include="FrmBuscaLivroLiterario.Designer.cs">
       <DependentUpon>FrmBuscaLivroLiterario.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBuscarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBuscarCliente.Designer.cs">
-      <DependentUpon>FrmBuscarCliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmBuscarLivroDidatico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBuscarLivroDidatico.Designer.cs">
       <DependentUpon>FrmBuscarLivroDidatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBuscarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuscarUsuarios.designer.cs">
+      <DependentUpon>FrmBuscarUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmInstituicao.cs">
       <SubType>Form</SubType>
@@ -332,6 +326,12 @@
     </Compile>
     <Compile Include="FrmSettings.Designer.cs">
       <DependentUpon>FrmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTelaPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelaPrincipal.designer.cs">
+      <DependentUpon>FrmTelaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -464,11 +464,14 @@
     <EmbeddedResource Include="Busca\Buscar_Situacao_UsuarioAluno.resx">
       <DependentUpon>Buscar_Situacao_UsuarioAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro e edição\Cadastro livro didatico.resx">
-      <DependentUpon>Cadastro livro didatico.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastro e edição\FrmLivroDidatico.resx">
+      <DependentUpon>FrmLivroDidatico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro e edição\Cadastro_Livro_Literario.resx">
-      <DependentUpon>Cadastro_Livro_Literario.cs</DependentUpon>
+    <EmbeddedResource Include="Cadastro e edição\FrmLivroLiterario.resx">
+      <DependentUpon>FrmLivroLiterario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro e edição\FrmCadastroUsuarios.resx">
+      <DependentUpon>FrmCadastroUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroPrimeiroAcesso.resx">
       <DependentUpon>CadastroPrimeiroAcesso.cs</DependentUpon>
@@ -503,12 +506,6 @@
     <EmbeddedResource Include="Carregando.resx">
       <DependentUpon>Carregando.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Fomulario_Principal.resx">
-      <DependentUpon>Fomulario_Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro e edição\Cadastro_Usuario.resx">
-      <DependentUpon>Cadastro_Usuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Autenticação\FORMULARIO_AUTENTICACAO.resx">
       <DependentUpon>FORMULARIO_AUTENTICACAO.cs</DependentUpon>
     </EmbeddedResource>
@@ -521,17 +518,20 @@
     <EmbeddedResource Include="FrmBuscaLivroLiterario.resx">
       <DependentUpon>FrmBuscaLivroLiterario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBuscarCliente.resx">
-      <DependentUpon>FrmBuscarCliente.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmBuscarLivroDidatico.resx">
       <DependentUpon>FrmBuscarLivroDidatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuscarUsuarios.resx">
+      <DependentUpon>FrmBuscarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInstituicao.resx">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSettings.resx">
       <DependentUpon>FrmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelaPrincipal.resx">
+      <DependentUpon>FrmTelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuantidadeLivrosCadastrados.resx">
       <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
@@ -796,6 +796,11 @@
     <None Include="Resources\company-building-icon %28128px%29.png" />
     <None Include="Resources\Settings-icon.png" />
     <None Include="Resources\My-Pictures-icon.png" />
+    <None Include="Resources\Edit-Document-icon 32x32.png" />
+    <None Include="Resources\Button-Delete-icon 32x32.png" />
+    <None Include="Resources\Actions-list-add-icon.png" />
+    <None Include="Resources\ocultar 32x32.png" />
+    <None Include="Resources\ver 32x32.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

@@ -80,19 +80,32 @@ namespace Controle_de_livros
         {
 
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQL = "UPDATE Livro_Literario SET N_Registro = @Registro, Titulo = @Titulo, Genero = @Genero, Autor = @Autor, Estante = @Estante WHERE  N_Registro =  @Registro";
-            SqlCommand comando = new SqlCommand(_SQL, conexao);
-            comando.CommandText = _SQL;
-            comando.Parameters.AddWithValue("@Registro", registro);
-            comando.Parameters.AddWithValue("@Titulo", titulo);
-            comando.Parameters.AddWithValue("@Genero", genero);
-            comando.Parameters.AddWithValue("@Autor", autor);
-            comando.Parameters.AddWithValue("Estante", estante);
+            string _sql = "SELECT * FROM Livro_Literario WHERE N_Registro = @N_Registro";
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.Parameters.AddWithValue("@N_Registro", registro);
             try
             {
                 conexao.Open();
-                comando.ExecuteNonQuery();
-                return true;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count >= 1)
+                {
+                    _sql = "UPDATE Livro_Literario SET N_Registro = @Registro, Titulo = @Titulo, Genero = @Genero, Autor = @Autor, Estante = @Estante WHERE  N_Registro =  @Registro";
+                    SqlCommand comando = new SqlCommand(_sql, conexao);
+                    comando.CommandText = _sql;
+                    comando.Parameters.AddWithValue("@Registro", registro);
+                    comando.Parameters.AddWithValue("@Titulo", titulo);
+                    comando.Parameters.AddWithValue("@Genero", genero);
+                    comando.Parameters.AddWithValue("@Autor", autor);
+                    comando.Parameters.AddWithValue("Estante", estante);
+                    comando.ExecuteNonQuery();
+                    return true;
+                }
+                else
+                {
+                    return false;
+
+                }
             }
             catch
             {
@@ -103,20 +116,31 @@ namespace Controle_de_livros
                 conexao.Close();
             }
         }
+
         public override bool Deletar()
         {
 
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQL = "DELETE FROM Livro_Literario WHERE  N_Registro =  @Registro";
-            SqlCommand comando = new SqlCommand(_SQL, conexao);
-            comando.CommandText = _SQL;
-            comando.Parameters.AddWithValue("@Registro", registro);
-
+            string _sql = "SELECT * FROM Livro_Literario WHERE N_Registro = @N_Registro";
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.Parameters.AddWithValue("@N_Registro", registro);
             try
             {
                 conexao.Open();
-                comando.ExecuteNonQuery();
-                return true;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count >= 1)
+                {
+                    _sql = "DELETE FROM Livro_Literario WHERE  N_Registro =  @N_Registro";
+                    SqlCommand comando = new SqlCommand(_sql, conexao);
+                    comando.CommandText = _sql;
+                    comando.Parameters.AddWithValue("@N_Registro", registro);
+
+                    comando.ExecuteNonQuery();
+                    return true;
+                }
+                else
+                    return false;
             }
             catch
             {

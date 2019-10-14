@@ -16,7 +16,11 @@ namespace Controle_de_livros
     {
         string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), _sql;
 
-        public int Codigo { get; set; }
+        public int registro { get; set; }
+        public string disciplina { get; set; }
+        public string autor { get; set; }
+        public string ensino { get; set; }
+        public string volume { get; set; }
 
         public FrmBuscarLivroDidatico()
         {
@@ -50,13 +54,13 @@ namespace Controle_de_livros
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Codigo = 0;
+            registro = 0;
             Close();
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (Codigo >= 1)
+            if (registro >= 1)
                 Close();
             else
                 MessageBox.Show("Selecione o dado a ser confirmado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -64,14 +68,29 @@ namespace Controle_de_livros
 
         private void dgv_Busca_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow linhas = dgv_Busca.Rows[e.RowIndex];
-            Codigo = int.Parse(linhas.Cells[0].Value.ToString());
-            Close();
+            if (e.RowIndex > -1)
+            {
+                DataGridViewRow linhas = dgv_Busca.Rows[e.RowIndex];
+                registro = int.Parse(linhas.Cells[0].Value.ToString());
+                disciplina = linhas.Cells[1].Value.ToString();
+                autor = linhas.Cells[2].Value.ToString();
+                ensino = linhas.Cells[3].Value.ToString();
+                volume = linhas.Cells[4].Value.ToString();
+                Close();
+            }
         }
 
         private void dgv_Busca_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           Codigo = int.Parse(dgv_Busca[0, e.RowIndex].Value.ToString());
+            if (e.RowIndex > -1)
+            {
+                DataGridViewRow linhas = dgv_Busca.Rows[e.RowIndex];
+                registro = int.Parse(linhas.Cells[0].Value.ToString());
+                disciplina = linhas.Cells[1].Value.ToString();
+                autor = linhas.Cells[2].Value.ToString();
+                ensino = linhas.Cells[3].Value.ToString();
+                volume = linhas.Cells[4].Value.ToString();
+            }
         }
 
         private void dgv_Busca_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)

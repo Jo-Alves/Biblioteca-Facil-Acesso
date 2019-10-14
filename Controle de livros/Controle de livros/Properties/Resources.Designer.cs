@@ -93,6 +93,16 @@ namespace Controle_de_livros.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Actions_list_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("Actions_list_add_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Avosoft_Warm_Toolbar_Print {
             get {
                 object obj = ResourceManager.GetObject("Avosoft-Warm-Toolbar-Print", resourceCulture);
@@ -166,6 +176,16 @@ namespace Controle_de_livros.Properties {
         internal static System.Drawing.Bitmap Button_Cancel_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Button-Cancel-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Delete_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Button_Delete_icon_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +346,16 @@ namespace Controle_de_livros.Properties {
         internal static System.Drawing.Bitmap e_book {
             get {
                 object obj = ResourceManager.GetObject("e-book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_Document_icon_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("Edit_Document_icon_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,6 +583,16 @@ namespace Controle_de_livros.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ocultar_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("ocultar_32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Mimetypes_application_pdf {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Mimetypes-application-pdf", resourceCulture);
@@ -636,6 +676,16 @@ namespace Controle_de_livros.Properties {
         internal static System.Drawing.Bitmap User_Group_icon1 {
             get {
                 object obj = ResourceManager.GetObject("User-Group-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ver_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("ver_32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

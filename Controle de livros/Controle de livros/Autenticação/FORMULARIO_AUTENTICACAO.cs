@@ -42,8 +42,8 @@ namespace Controle_de_livros
                     autenticacao._Senha = txt_Senha.Text;
                     if (autenticacao.Consultar() == true)
                     {
-                        Fomulario_Principal FP = new Fomulario_Principal(cb_Usuario.Text);
-                        FP.Show();
+                        FrmTelaPrincipal telaPrincipal = new FrmTelaPrincipal(cb_Usuario.Text);
+                        telaPrincipal.Show();
                         this.Visible = false;
                     }
                     else
@@ -211,24 +211,25 @@ namespace Controle_de_livros
         {
             Cadastrar_login_e_senha CLS = new Cadastrar_login_e_senha();
             CLS.ShowDialog();
-        }      
+        }
 
-        private void btn_OcultarMostrar_Click_1(object sender, EventArgs e)
+        string Opcao = "Mostrar";
+        private void btn_OcultarMostrar_Click(object sender, EventArgs e)
         {
-            string Opcao = btn_OcultarMostrar.Text;
             switch (Opcao)
             {
                 case "Mostrar":
                     txt_Senha.UseSystemPasswordChar = false;
-                    btn_OcultarMostrar.Text = "Ocultar";
-                    this.btn_OcultarMostrar.Image = Properties.Resources.TMI_smiley1;                 this.btn_OcultarMostrar.ImageAlign = ContentAlignment.MiddleLeft;
+                    this.btn_OcultarMostrar.Image = Properties.Resources.ocultar_32x32;
+                    Opcao = "Ocultar";
+                    toolTip.SetToolTip(this.btn_OcultarMostrar, "Ocultar");
                     break;
 
                 case "Ocultar":
                     txt_Senha.UseSystemPasswordChar = true;
-                    btn_OcultarMostrar.Text = "Mostrar";
-                    this.btn_OcultarMostrar.Image = Properties.Resources.download__2_;
-                    this.btn_OcultarMostrar.ImageAlign = ContentAlignment.MiddleLeft;
+                    Opcao = "Mostrar";
+                    this.btn_OcultarMostrar.Image = Properties.Resources.ver_32x32;
+                    toolTip.SetToolTip(this.btn_OcultarMostrar, "Mostrar");
                     break;
             }
             txt_Senha.Focus();

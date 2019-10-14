@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.loginTableAdapter = new Controle_de_livros.Autenticação.DataSetAutenticacaoTableAdapters.LoginTableAdapter();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetAutenticacao)).BeginInit();
             this.SuspendLayout();
@@ -113,16 +114,15 @@
             // 
             this.btn_OcultarMostrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_OcultarMostrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OcultarMostrar.Image = global::Controle_de_livros.Properties.Resources.download__2_;
-            this.btn_OcultarMostrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_OcultarMostrar.Image = global::Controle_de_livros.Properties.Resources.ver_32x32;
             this.btn_OcultarMostrar.Location = new System.Drawing.Point(260, 77);
             this.btn_OcultarMostrar.Name = "btn_OcultarMostrar";
-            this.btn_OcultarMostrar.Size = new System.Drawing.Size(94, 37);
+            this.btn_OcultarMostrar.Size = new System.Drawing.Size(85, 37);
             this.btn_OcultarMostrar.TabIndex = 41;
-            this.btn_OcultarMostrar.Text = "Mostrar";
             this.btn_OcultarMostrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.toolTip.SetToolTip(this.btn_OcultarMostrar, "Mostrar");
             this.btn_OcultarMostrar.UseVisualStyleBackColor = true;
-            this.btn_OcultarMostrar.Click += new System.EventHandler(this.btn_OcultarMostrar_Click_1);
+            this.btn_OcultarMostrar.Click += new System.EventHandler(this.btn_OcultarMostrar_Click);
             // 
             // cb_Usuario
             // 
@@ -216,5 +216,6 @@
         private Autenticação.DataSetAutenticacao dataSetAutenticacao;
         private System.Windows.Forms.BindingSource loginBindingSource;
         private Autenticação.DataSetAutenticacaoTableAdapters.LoginTableAdapter loginTableAdapter;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
