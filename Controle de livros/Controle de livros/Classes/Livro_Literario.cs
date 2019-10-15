@@ -76,7 +76,7 @@ namespace Controle_de_livros
                 }
             }
         }
-        public override bool Alterar()
+        public override bool Atualizar()
         {
 
             SqlConnection conexao = new SqlConnection(stringConn);

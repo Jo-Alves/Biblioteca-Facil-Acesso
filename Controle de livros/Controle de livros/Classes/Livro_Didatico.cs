@@ -9,7 +9,7 @@ using ClassProject;
 
 namespace Controle_de_livros
 {
-    class Livro_Didatico: Livros
+    class Livro_Didatico : Livros
     {
         string stringConn = Security.Dry(System.Configuration.ConfigurationSettings.AppSettings["CadeiaConexao"]);
 
@@ -36,13 +36,13 @@ namespace Controle_de_livros
 
         public override bool Cadastrar()
         {
-            
+
             SqlConnection conexao = new SqlConnection(stringConn);
             string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = " + registro;
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             DataTable Tabela = new DataTable();
             adapter.SelectCommand.CommandText = _sql;
-          
+
             adapter.Fill(Tabela);
             if (Tabela.Rows.Count > 0)
             {
@@ -76,16 +76,50 @@ namespace Controle_de_livros
 
             }
         }
-        public override bool Alterar()
+        public override bool Atualizar()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _sql = "UPDATE Livro_Didatico SET N_Registro = @Registro, Disciplina = @Disciplina, Autor = @Autor, Ensino = @Ensino, Volume = @Volume WHERE N_Registro = @Registro";
+            string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = " + registro;
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.CommandText = _sql;
+            DataTable Tabela = new DataTable();
+
+            adapter.Fill(Tabela);
+            try
+            {
+                conexao.Open();
+                if (Tabela.Rows.Count > 0)
+                {
+                    _sql = "UPDATE Livro_Didatico SET N_Registro = @Registro, Disciplina = @Disciplina, Autor = @Autor, Ensino = @Ensino, Volume = @Volume WHERE N_Registro = @Registro";
+                    SqlCommand comando = new SqlCommand(_sql, conexao);
+                    comando.Parameters.AddWithValue("@Registro", registro);
+                    comando.Parameters.AddWithValue("@Disciplina", disciplina);
+                    comando.Parameters.AddWithValue("@Autor", autor);
+                    comando.Parameters.AddWithValue("@Ensino", ensino);
+                    comando.Parameters.AddWithValue("@Volume", volume);
+                    comando.CommandText = _sql;
+                    comando.ExecuteNonQuery();
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public override bool Deletar()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            string _sql = "DELETE FROM Livro_Didatico WHERE N_Registro = @Registro";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.Parameters.AddWithValue("@Registro", registro);
-            comando.Parameters.AddWithValue("@Disciplina", disciplina);
-            comando.Parameters.AddWithValue("@Autor", autor);
-            comando.Parameters.AddWithValue("@Ensino", ensino);
-            comando.Parameters.AddWithValue("@Volume", volume);
             comando.CommandText = _sql;
             try
             {
@@ -100,30 +134,26 @@ namespace Controle_de_livros
             finally
             {
                 conexao.Close();
-            }            
+            }
         }
-        public override bool Deletar()
-        {
 
+        public bool Buscar()
+        {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _sql = "DELETE FROM Livro_Didatico WHERE N_Registro = @Registro";
-            SqlCommand comando = new SqlCommand(_sql, conexao);
-            comando.Parameters.AddWithValue("@Registro", registro);
-            comando.CommandText = _sql;
-            try
+            string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = " + registro;
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            DataTable Tabela = new DataTable();
+            adapter.SelectCommand.CommandText = _sql;
+
+            adapter.Fill(Tabela);
+            if (Tabela.Rows.Count == 0)
             {
-                conexao.Open();
-                comando.ExecuteNonQuery();
+                return false;
             }
-            catch
+            else
             {
-                throw;
+                return true;
             }
-            finally
-            {
-                conexao.Close();
-            }
-            return true;
-        }       
+        }
     }
 }

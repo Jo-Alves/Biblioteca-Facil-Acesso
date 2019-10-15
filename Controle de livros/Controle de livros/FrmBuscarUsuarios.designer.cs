@@ -32,16 +32,16 @@
             this.cb_Opcao = new System.Windows.Forms.ComboBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.dgv_Busca = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.ColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTurma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColFone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColOcupacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,14 +90,14 @@
             this.dgv_Busca.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Busca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Busca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
+            this.ColCod,
+            this.ColNome,
+            this.ColAno,
+            this.ColTurma,
+            this.ColEndereco,
+            this.ColNumero,
+            this.ColFone,
+            this.ColOcupacao});
             this.dgv_Busca.Location = new System.Drawing.Point(25, 92);
             this.dgv_Busca.Name = "dgv_Busca";
             this.dgv_Busca.ReadOnly = true;
@@ -107,77 +107,6 @@
             this.dgv_Busca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellClick);
             this.dgv_Busca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellDoubleClick);
             this.dgv_Busca.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Busca_DataBindingComplete);
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.DataPropertyName = "Cod_Usuario";
-            this.Column4.HeaderText = "Cód";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 61;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Nome_Usuario";
-            this.Column1.HeaderText = "Nome";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 74;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.DataPropertyName = "Ano";
-            this.Column2.HeaderText = "Ano";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 61;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.DataPropertyName = "Turma";
-            this.Column3.HeaderText = "Turma";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 77;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.DataPropertyName = "Endereco";
-            this.Column5.HeaderText = "Endereço";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 97;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.DataPropertyName = "Numero";
-            this.Column6.HeaderText = "Número";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 88;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.DataPropertyName = "Telefone";
-            this.Column7.HeaderText = "Tel/Cel";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 82;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.DataPropertyName = "Ocupacao";
-            this.Column8.HeaderText = "Ocupação";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
             // 
             // btnOk
             // 
@@ -200,6 +129,77 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // ColCod
+            // 
+            this.ColCod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColCod.DataPropertyName = "Cod_Usuario";
+            this.ColCod.HeaderText = "Cód";
+            this.ColCod.Name = "ColCod";
+            this.ColCod.ReadOnly = true;
+            this.ColCod.Width = 61;
+            // 
+            // ColNome
+            // 
+            this.ColNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNome.DataPropertyName = "Nome_Usuario";
+            this.ColNome.HeaderText = "Nome";
+            this.ColNome.Name = "ColNome";
+            this.ColNome.ReadOnly = true;
+            this.ColNome.Width = 74;
+            // 
+            // ColAno
+            // 
+            this.ColAno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColAno.DataPropertyName = "Ano";
+            this.ColAno.HeaderText = "Ano";
+            this.ColAno.Name = "ColAno";
+            this.ColAno.ReadOnly = true;
+            this.ColAno.Width = 61;
+            // 
+            // ColTurma
+            // 
+            this.ColTurma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColTurma.DataPropertyName = "Turma";
+            this.ColTurma.HeaderText = "Turma";
+            this.ColTurma.Name = "ColTurma";
+            this.ColTurma.ReadOnly = true;
+            this.ColTurma.Width = 77;
+            // 
+            // ColEndereco
+            // 
+            this.ColEndereco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEndereco.DataPropertyName = "Endereco";
+            this.ColEndereco.HeaderText = "Endereço";
+            this.ColEndereco.Name = "ColEndereco";
+            this.ColEndereco.ReadOnly = true;
+            this.ColEndereco.Width = 97;
+            // 
+            // ColNumero
+            // 
+            this.ColNumero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColNumero.DataPropertyName = "Numero";
+            this.ColNumero.HeaderText = "Número";
+            this.ColNumero.Name = "ColNumero";
+            this.ColNumero.ReadOnly = true;
+            this.ColNumero.Width = 88;
+            // 
+            // ColFone
+            // 
+            this.ColFone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColFone.DataPropertyName = "Telefone";
+            this.ColFone.HeaderText = "Tel/Cel";
+            this.ColFone.Name = "ColFone";
+            this.ColFone.ReadOnly = true;
+            this.ColFone.Width = 82;
+            // 
+            // ColOcupacao
+            // 
+            this.ColOcupacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColOcupacao.DataPropertyName = "Ocupacao";
+            this.ColOcupacao.HeaderText = "Ocupação";
+            this.ColOcupacao.Name = "ColOcupacao";
+            this.ColOcupacao.ReadOnly = true;
             // 
             // FrmBuscarUsuario
             // 
@@ -235,13 +235,13 @@
         private System.Windows.Forms.DataGridView dgv_Busca;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCod;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTurma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEndereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColFone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColOcupacao;
     }
 }

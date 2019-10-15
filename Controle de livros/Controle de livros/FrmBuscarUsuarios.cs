@@ -84,18 +84,19 @@ namespace Controle_de_livros
 
          private void dgv_Busca_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex > -1)
             {
-                Codigo = int.Parse(dgv_Busca[0, e.RowIndex].Value.ToString());
-                nome = dgv_Busca[1, e.RowIndex].Value.ToString();
-                ano = dgv_Busca[2, e.RowIndex].Value.ToString();
-                turma = dgv_Busca[3, e.RowIndex].Value.ToString();
-                endereco = dgv_Busca[4, e.RowIndex].Value.ToString();
-                numero = dgv_Busca[5, e.RowIndex].Value.ToString();
-                fone = dgv_Busca[6, e.RowIndex].Value.ToString();
-                ocupacao = dgv_Busca[7, e.RowIndex].Value.ToString();
+                DataGridViewRow row = dgv_Busca.Rows[e.RowIndex];
+                Codigo = int.Parse(row.Cells["ColCod"].Value.ToString());
+                nome = row.Cells["ColNome"].Value.ToString();
+                ano = row.Cells["ColAno"].Value.ToString();
+                turma = row.Cells["ColTurma"].Value.ToString();
+                endereco = row.Cells["ColEndereco"].Value.ToString();
+                numero = row.Cells["ColNumero"].Value.ToString();
+                fone = row.Cells["ColFone"].Value.ToString();
+                ocupacao = row.Cells["ColOcupacao"].Value.ToString();
+                Close();
             }
-            Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace Controle_de_livros
 
         private void dgv_Busca_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= -1)
             {
                 Codigo = int.Parse(dgv_Busca[0, e.RowIndex].Value.ToString());
                 nome = dgv_Busca[1, e.RowIndex].Value.ToString();

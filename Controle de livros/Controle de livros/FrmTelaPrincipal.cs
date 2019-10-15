@@ -82,13 +82,13 @@ namespace Controle_de_livros
 
         private void menu_Buscar_Todos_Dados_Click(object sender, EventArgs e)
         {
-            Buscar_usuários_e_livros bul = new Buscar_usuários_e_livros();
+            BFrmBuscarUsuáriosLivros bul = new BFrmBuscarUsuáriosLivros();
             bul.ShowDialog();
         }
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            Buscar_usuários_e_livros bul = new Buscar_usuários_e_livros();
+            BFrmBuscarUsuáriosLivros bul = new BFrmBuscarUsuáriosLivros();
             bul.ShowDialog();
         }
 
@@ -96,24 +96,6 @@ namespace Controle_de_livros
         {
            FrmLivroDidatico CL = new FrmLivroDidatico();
             CL.ShowDialog();
-        }
-
-        private void menu_EmprestimoLivroLIterario_Click(object sender, EventArgs e)
-        {
-            Emprestimo_livro_literario EL = new Emprestimo_livro_literario();
-            EL.ShowDialog();
-        }
-
-        private void menu_AlterarExcluirLivroDidatico_Click(object sender, EventArgs e)
-        {
-            Editar_Excluir_livro_didatico ELD = new Editar_Excluir_livro_didatico();
-            ELD.ShowDialog();
-        }
-
-        private void menu_ExcluirLivroLiterario_Click(object sender, EventArgs e)
-        {
-            Editar_Excluir_livro_literario ELL = new Editar_Excluir_livro_literario();
-            ELL.ShowDialog();
         }
 
         private void menu_EmprestimoLivroDidatico_Click(object sender, EventArgs e)
@@ -178,13 +160,13 @@ namespace Controle_de_livros
 
         private void menu_VerificarAlunos_Click(object sender, EventArgs e)
         {
-            Buscar_Situacao_UsuarioAluno bsu = new Buscar_Situacao_UsuarioAluno();
+            FrmBuscarSituacaoUsuarioAluno bsu = new FrmBuscarSituacaoUsuarioAluno();
             bsu.ShowDialog();
         }
 
         private void menu_BuscarObrasEspecificas_Click(object sender, EventArgs e)
         {
-            Buscar_livros_Literarios bl = new Buscar_livros_Literarios();
+            FrmBuscarLivrosLiterarios bl = new FrmBuscarLivrosLiterarios();
             bl.ShowDialog();
         }
 
@@ -196,7 +178,7 @@ namespace Controle_de_livros
 
         private void Menu_BuscarObrasLiterarioAutor_Click(object sender, EventArgs e)
         {
-            Buscar_livros_por_autor BLA = new Buscar_livros_por_autor();
+            FrmBuscarLivrosAutor BLA = new FrmBuscarLivrosAutor();
             BLA.ShowDialog();
         }
 
@@ -214,7 +196,7 @@ namespace Controle_de_livros
 
         private void menu_VerificarSituacaoFT_Click(object sender, EventArgs e)
         {
-            Verificar_Situacao_Funcionarios_Terceiros vft = new Verificar_Situacao_Funcionarios_Terceiros();
+            FrmVerificarSituacaoFuncionariosTerceiros vft = new FrmVerificarSituacaoFuncionariosTerceiros();
             vft.ShowDialog();
         }
 
@@ -244,17 +226,11 @@ namespace Controle_de_livros
 
         private void Menu_BuscarObrasLiterarioGenero_Click(object sender, EventArgs e)
         {
-            Buscar_livros_por_Genero buscar_Livros_Por_Genero = new Buscar_livros_por_Genero();
+            FrmBuscarLivrosGenero buscar_Livros_Por_Genero = new FrmBuscarLivrosGenero();
             buscar_Livros_Por_Genero.ShowDialog();
         }
 
-        private void Menu_QuantidadeLivrosCadastrados_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-
-        private void Fomulario_Principal_Load(object sender, EventArgs e)
+       private void Fomulario_Principal_Load(object sender, EventArgs e)
         {
             lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
         }

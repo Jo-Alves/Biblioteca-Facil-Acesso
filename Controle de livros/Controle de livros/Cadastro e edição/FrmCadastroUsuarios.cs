@@ -102,20 +102,13 @@ namespace Controle_de_livros
             }
         }
 
-        private void BtnPesquisar_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FrmBuscarUsuario buscarUsuario = new FrmBuscarUsuario();
-            buscarUsuario.ShowDialog();
-            if (buscarUsuario.Codigo > 0)
+            FrmBuscarUsuario busca = new FrmBuscarUsuario();
+            busca.ShowDialog();
+            if(busca.Codigo > 0)
             {
-                lbl_Codigo.Text = buscarUsuario.Codigo.ToString();
-                txt_Nome.Text = buscarUsuario.nome;
-                cb_Ano.Text = buscarUsuario.ano;
-                cb_Turma.Text = buscarUsuario.turma;
-                txt_Endereco.Text = buscarUsuario.endereco;
-                txt_Numero.Text = buscarUsuario.numero;
-                txt_Tel_Cel.Text = buscarUsuario.fone;
-                switch (buscarUsuario.ocupacao)
+                switch (busca.ocupacao)
                 {
                     case "Aluno":
                         rb_Aluno.Checked = true;
@@ -127,6 +120,13 @@ namespace Controle_de_livros
                         rb_Outros.Checked = true;
                         break;
                 }
+                lbl_Codigo.Text = busca.Codigo.ToString();
+                txt_Nome.Text = busca.nome;
+                txt_Endereco.Text = busca.endereco;
+                cb_Ano.Text = busca.ano;
+                cb_Turma.Text = busca.turma;
+                txt_Numero.Text = busca.numero;
+                txt_Tel_Cel.Text = busca.fone;
             }
         }
 
@@ -199,42 +199,56 @@ namespace Controle_de_livros
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            if (lbl_Codigo.Text == "")
+            {
+                MessageBox.Show("Pesquise os dados que seráo alterados no botão pesquisar.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             validarCampos();
             if (valido)
             {
                 usuario.codigo = int.Parse(lbl_Codigo.Text);
-                usuario.nome = txt_Nome.Text;
-                usuario.ano = cb_Ano.Text;
-                usuario.turma = cb_Turma.Text;
-                usuario.endereco = txt_Endereco.Text;
-                usuario.numero = txt_Numero.Text;
-                usuario.telefone = txt_Tel_Cel.Text;
-                if (rb_Aluno.Checked)
-                {
-                    usuario.ocupacao = rb_Aluno.Text;
-                }
-                else if (rb_Outros.Checked)
-                {
-                    usuario.ocupacao = rb_Outros.Text;
-                }
-                else if (rb_Funcionario.Checked)
-                {
-                    usuario.ocupacao = rb_Funcionario.Text;
-                }
-                try
-                {
-                    usuario.atualizar();
-                    MessageBox.Show("Usuário atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    atualizar_cb_Turma();
 
-                    rb_Aluno.Checked = true;
-                    txt_Nome.Focus();
-                    LimparCampos();
-                }
-                catch (Exception ex)
+                if (usuario.Buscar() == true)
                 {
-                    MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    usuario.nome = txt_Nome.Text;
+                    usuario.ano = cb_Ano.Text;
+                    usuario.turma = cb_Turma.Text;
+                    usuario.endereco = txt_Endereco.Text;
+                    usuario.numero = txt_Numero.Text;
+                    usuario.telefone = txt_Tel_Cel.Text;
+                    if (rb_Aluno.Checked)
+                    {
+                        usuario.ocupacao = rb_Aluno.Text;
+                    }
+                    else if (rb_Outros.Checked)
+                    {
+                        usuario.ocupacao = rb_Outros.Text;
+                    }
+                    else if (rb_Funcionario.Checked)
+                    {
+                        usuario.ocupacao = rb_Funcionario.Text;
+                    }
+                    try
+                    {
+                        usuario.atualizar();
+                        MessageBox.Show("Usuário atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        atualizar_cb_Turma();
+
+                        rb_Aluno.Checked = true;
+                        txt_Nome.Focus();
+                        LimparCampos();
+                        btn_Salvar.Text = "Salvar";
+                        btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
+                else
+                    MessageBox.Show("Còdigo do usuário inválido!", "Bibliteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -247,35 +261,41 @@ namespace Controle_de_livros
                 {
                     error_Provider.SetError(txt_Nome, "Campo obrigatório!");
                     txt_Nome.Focus();
+                    valido = false;
                     return;
                 }
                 else if (txt_Endereco.Text == "")
                 {
                     error_Provider.SetError(txt_Endereco, "Campo obrigatório!");
                     txt_Endereco.Focus();
+                    valido = false;
                     return;
                 }
                 else if (txt_Numero.Text == "")
                 {
                     error_Provider.SetError(txt_Numero, "Campo obrigatório!");
                     txt_Numero.Focus();
+                    valido = false;
                     return;
                 }
                 else if (txt_Tel_Cel.Text == "")
                 {
                     error_Provider.SetError(txt_Tel_Cel, "Campo Obrigatório!");
                     txt_Tel_Cel.Focus();
+                    valido = false;
                     return;
                 }
                 else if ((txt_Tel_Cel.Text != "") && (txt_Tel_Cel.TextLength < 13))
                 {
                     error_Provider.SetError(txt_Tel_Cel, "Campo do telefone inválido!!");
                     txt_Tel_Cel.Focus();
+                    valido = false;
                     return;
                 }
                 else if (txt_Numero.Text == "")
                 {
                     MessageBox.Show("Valor do número inválido!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    valido = false;
                     return;
                 }
                 else
@@ -291,24 +311,28 @@ namespace Controle_de_livros
                 {
                     error_Provider.SetError(txt_Nome, "Campo obrigatório!");
                     txt_Nome.Focus();
+                    valido = false;
                     return;
                 }
                 else if ((cb_Ano.Text.Trim().Equals("")) && (rb_Aluno.Checked))
                 {
                     error_Provider.SetError(cb_Ano, "Campo obrigatório!");
                     cb_Ano.Focus();
+                    valido = false;
                     return;
                 }
                 else if ((cb_Turma.Text.Trim().Equals("")) && (rb_Aluno.Checked))
                 {
                     error_Provider.SetError(cb_Turma, "Campo obrigatório!");
                     cb_Turma.Focus();
+                    valido = false;
                     return;
                 }
                 else if ((txt_Tel_Cel.TextLength < 13) && (txt_Tel_Cel.Text != ""))
                 {
                     error_Provider.SetError(txt_Tel_Cel, "Campo do telefone inválido!!");
                     txt_Tel_Cel.Focus();
+                    valido = false;
                     return;
                 }
                 else
@@ -321,6 +345,13 @@ namespace Controle_de_livros
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
+
+            if (lbl_Codigo.Text == "")
+            {
+                MessageBox.Show("Pesquise os dados que será excluido no botão pesquisar.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
             SqlConnection conexao = new SqlConnection(stringConn);
             string _sql;
 
@@ -369,6 +400,8 @@ namespace Controle_de_livros
                             rb_Aluno.Checked = true;
                             txt_Nome.Focus();
                             LimparCampos();
+                            btn_Salvar.Text = "Salvar";
+                            btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
                         }
                     }
                 }
@@ -498,10 +531,6 @@ namespace Controle_de_livros
             cb_Turma.Enabled = false;
             cb_Ano.Enabled = false;
             cb_Turma.Text = "";
-            txt_Endereco.Clear();
-            txt_Numero.Clear();
-            
-            txt_Tel_Cel.Clear();
             cb_Ano.Text = "";
         }
 
@@ -513,9 +542,6 @@ namespace Controle_de_livros
             cb_Turma.Enabled = false;
             cb_Ano.Enabled = false;
             cb_Turma.Text = "";
-            txt_Endereco.Clear();
-            txt_Numero.Clear();
-            txt_Tel_Cel.Clear();
             cb_Ano.Text = "";
         }
 

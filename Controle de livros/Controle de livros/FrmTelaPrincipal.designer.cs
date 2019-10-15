@@ -356,7 +356,6 @@
             this.menu_EmprestimoLivroLIterario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
             this.menu_EmprestimoLivroLIterario.Size = new System.Drawing.Size(252, 22);
             this.menu_EmprestimoLivroLIterario.Text = "DE LIVRO LITERÁRIO";
-            this.menu_EmprestimoLivroLIterario.Click += new System.EventHandler(this.menu_EmprestimoLivroLIterario_Click);
             // 
             // menu_EmprestimoLivroDidatico
             // 

@@ -25,7 +25,7 @@ namespace Controle_de_livros
       
       
         public abstract bool Cadastrar();
-        public abstract bool Alterar();
+        public abstract bool Atualizar();
         public abstract bool Deletar();
     }
 }

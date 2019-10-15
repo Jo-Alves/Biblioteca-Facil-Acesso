@@ -130,6 +130,38 @@ namespace Controle_de_livros
                 conexao.Close();
             }            
             return true;            
-        }        
+        }
+
+        public bool Buscar()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            string _sql = "Select * from Usuario where Cod_Usuario = @Codigo";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@Codigo", Codigo);
+            
+            comando.CommandText = _sql;
+
+            try
+            {
+                conexao.Open();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

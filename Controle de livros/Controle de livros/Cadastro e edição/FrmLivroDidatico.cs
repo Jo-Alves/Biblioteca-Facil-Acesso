@@ -1,7 +1,9 @@
-﻿using System;
+﻿using ClassProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,14 +21,15 @@ namespace Controle_de_livros
         }
 
         Livro_Didatico didatico = new Livro_Didatico();
+        string stringConn = Security.Dry(System.Configuration.ConfigurationSettings.AppSettings["CadeiaConexao"]), _sql;
 
         public void LimparCampos()
         {
             txt_Registro.Clear();
-            cb_Disciplina.Text = "";
+            cb_Disciplina.SelectedIndex = -1;
             txt_Autor.Clear();
-            cb_Ensino.Text = "";
-            cb_Volume.Text = "";
+            cb_Ensino.SelectedIndex = -1;
+            cb_Volume.SelectedIndex = -1;
         }
         private void txt_Registro_KeyDown(object sender, KeyEventArgs e)
         {
@@ -83,6 +86,148 @@ namespace Controle_de_livros
                 MessageBox.Show("O número do registro já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             txt_Registro.Clear();
             txt_Registro.Focus();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            validarCampos();
+            if (valido)
+            {
+                didatico.registro = int.Parse(txt_Registro.Text);
+                didatico.disciplina = cb_Disciplina.Text;
+                didatico.autor = txt_Autor.Text;
+                didatico.ensino = cb_Ensino.Text.ToUpper();
+                didatico.volume = cb_Volume.Text.ToUpper();
+                if (didatico.Atualizar() == true)
+                {
+                    try
+                    {
+                        didatico.Atualizar();
+                        MessageBox.Show("Livro atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_Registro.Focus();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                    MessageBox.Show("Não encontramos livros com este registro! Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                LimparCampos();
+                txt_Registro.Clear();
+                txt_Registro.Focus();
+            }
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            if (txt_Registro.Text != "")
+            {
+                didatico.registro = int.Parse(txt_Registro.Text);
+                if (didatico.Buscar() == true)
+                {
+                    if (buscarEmprestimoLivroDidatico() == 1)
+                    {
+                        SqlConnection conexao = new SqlConnection(stringConn);
+                        _sql = "Delete from Emprestimo_Livro_Didatico where N_Registro = " + txt_Registro.Text + " and Data_Solicitacao <>'' and Data_Entrega <>''";
+                        SqlCommand comando = new SqlCommand(_sql, conexao);
+                        comando.CommandText = _sql;
+                        try
+                        {
+                            conexao.Open();
+                            comando.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, "Erro na conexão com banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        conexao.Close();
+
+                        Excluir();
+
+                    }
+                    else if (buscarEmprestimoLivroDidatico() == 2)
+                    {
+                        MessageBox.Show("É necessário quitar todos os livros emprestados para que você possa excluir o livro da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    else if (buscarEmprestimoLivroDidatico() == 0)
+                    {
+                        Excluir();
+                    }
+                }
+                else
+                    MessageBox.Show("Não há livros com este registro! Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                error_Provider.Clear();
+                error_Provider.SetError(txt_Registro, "Campo inválido!");
+                txt_Registro.Focus();
+                MessageBox.Show("Campo inválido!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
+        }
+        private void Excluir()
+        {
+
+            didatico.registro = int.Parse(txt_Registro.Text);
+            if (didatico.Deletar() == true)
+            {
+                didatico.Deletar();
+                try
+                {
+                    if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    {
+                        if (didatico.Deletar() == true)
+                        {
+                            didatico.Deletar();
+                            MessageBox.Show("Dados excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimparCampos();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erro na conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private int buscarEmprestimoLivroDidatico()
+        {
+            try
+            {
+                SqlConnection conexao = new SqlConnection(stringConn);
+                string _sql = "Select * from emprestimo_livro_Didatico where N_registro = " + txt_Registro.Text; SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+                adapter.SelectCommand.CommandText = _sql;
+                DataTable Tabela = new DataTable();
+                adapter.Fill(Tabela);
+                if (Tabela.Rows.Count > 0)
+                {
+
+                    string Solicitacao = Tabela.Rows[0]["Data_Solicitacao"].ToString();
+                    string Entrega = Tabela.Rows[0]["Data_Entrega"].ToString();
+
+                    if ((Solicitacao != "") && (Entrega != ""))
+                    {
+                        return 1;
+                    }
+                    else if ((Solicitacao != "") && (Entrega == ""))
+                    {
+                        return 2;
+                    }
+                    return 3;
+                }
+                else
+                    return 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return 0;
         }
 
         bool valido = false;

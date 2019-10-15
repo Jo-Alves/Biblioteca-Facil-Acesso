@@ -63,11 +63,13 @@ namespace Controle_de_livros
         private void CbDiretorio_SelectedIndexChanged(object sender, EventArgs e)
         {
             habilitarBotaoAplicar();
+            cbRedefinir.Checked = false;
         }
 
         private void CbQuantidadeLimite_SelectedIndexChanged(object sender, EventArgs e)
         {
             habilitarBotaoAplicar();
+            cbRedefinir.Checked = false;
         }
 
         private void cbRedefinir_CheckedChanged(object sender, EventArgs e)
@@ -83,6 +85,7 @@ namespace Controle_de_livros
         private void NdTempoLimite_ValueChanged(object sender, EventArgs e)
         {
             habilitarBotaoAplicar();
+            cbRedefinir.Checked = false;
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)

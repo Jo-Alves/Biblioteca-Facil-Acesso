@@ -150,7 +150,6 @@
             // 
             this.cb_Disciplina.FormattingEnabled = true;
             this.cb_Disciplina.Items.AddRange(new object[] {
-            "",
             "ARTES",
             "BIOLOGIA",
             "CIÊNCIAS",
@@ -182,7 +181,6 @@
             this.cb_Volume.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Volume.FormattingEnabled = true;
             this.cb_Volume.Items.AddRange(new object[] {
-            "",
             "Volume 1 - 1º Ano",
             "Volume 2 - 2º Ano",
             "Volume 3 - 3º Ano",
@@ -217,7 +215,6 @@
             this.cb_Ensino.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cb_Ensino.FormattingEnabled = true;
             this.cb_Ensino.Items.AddRange(new object[] {
-            "",
             "ENSINO FUNDAMENTAL",
             "ENSINO MÉDIO"});
             this.cb_Ensino.Location = new System.Drawing.Point(29, 159);
@@ -243,6 +240,7 @@
             this.btnExcluir.TabIndex = 16;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -256,6 +254,7 @@
             this.btnEditar.TabIndex = 15;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnPesquisar
             // 

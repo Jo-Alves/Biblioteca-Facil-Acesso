@@ -228,9 +228,9 @@ namespace Controle_de_livros
                     literario.autor = txt_Autor.Text;
                     literario.genero = txt_Genero.Text;
                     literario.estante = cb_Estante.Text;
-                    if (literario.Alterar() == true)
+                    if (literario.Atualizar() == true)
                     {
-                        literario.Alterar();
+                        literario.Atualizar();
                         MessageBox.Show("Dados atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cb_Estante.SelectedIndex = -1;
                         LimparCampos();
@@ -248,40 +248,51 @@ namespace Controle_de_livros
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (VerificarLivroEmprestado() == 1)
+            if (txt_Registro.Text != "")
             {
-                SqlConnection conexao = new SqlConnection(@"Data Source = LOCALHOST\SQLEXPRESS;Initial Catalog = Sistema_Controle_Livros; Integrated Security = True");
-                string _sql = "Delete from Emprestimo_Livro_Literario where N_Registro = " + txt_Registro.Text + " and Data_Solicitacao <> '' and Data_Entrega <> ''";
-                SqlCommand comando = new SqlCommand(_sql, conexao);
-                comando.CommandText = _sql;
-                conexao.Open();
-                comando.ExecuteNonQuery();
-                conexao.Close();
-                try
+                if (VerificarLivroEmprestado() == 1)
                 {
-                    Excluir();
+                    SqlConnection conexao = new SqlConnection(@"Data Source = LOCALHOST\SQLEXPRESS;Initial Catalog = Sistema_Controle_Livros; Integrated Security = True");
+                    string _sql = "Delete from Emprestimo_Livro_Literario where N_Registro = " + txt_Registro.Text + " and Data_Solicitacao <> '' and Data_Entrega <> ''";
+                    SqlCommand comando = new SqlCommand(_sql, conexao);
+                    comando.CommandText = _sql;
+                    conexao.Open();
+                    comando.ExecuteNonQuery();
+                    conexao.Close();
+                    try
+                    {
+                        Excluir();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erro na conexão!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch (Exception ex)
+                else if (VerificarLivroEmprestado() == 2)
                 {
-                    MessageBox.Show(ex.Message, "Erro na conexão!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("É necessário quitar todos os livros emprestados para que você possa excluir o livro da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-            else if (VerificarLivroEmprestado() == 2)
-            {
-                MessageBox.Show("É necessário quitar todos os livros emprestados para que você possa excluir o livro da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (VerificarLivroEmprestado() == 0)
-            {
-                literario.registro = Int32.Parse(txt_Registro.Text);
+                else if (VerificarLivroEmprestado() == 0)
+                {
+                    literario.registro = Int32.Parse(txt_Registro.Text);
 
-                try
-                {
-                    Excluir();
+                    try
+                    {
+                        Excluir();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Erro na conexão!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Erro na conexão!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            }
+            else
+            {
+                error_Provider.Clear();
+                error_Provider.SetError(txt_Registro, "Campo inválido!");
+                txt_Registro.Focus();
+                MessageBox.Show("Campo inválido!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
         }
 

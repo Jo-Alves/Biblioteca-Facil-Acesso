@@ -129,11 +129,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetAutenticacao.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Busca\Buscar livros por Genero.cs">
+    <Compile Include="Busca\FrmBuscarLivrosGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Buscar livros por Genero.Designer.cs">
-      <DependentUpon>Buscar livros por Genero.cs</DependentUpon>
+    <Compile Include="Busca\FrmBuscarLivrosGenero.Designer.cs">
+      <DependentUpon>FrmBuscarLivrosGenero.cs</DependentUpon>
     </Compile>
     <Compile Include="Cadastro e edição\FrmCadastroUsuarios.cs">
       <SubType>Form</SubType>
@@ -159,31 +159,31 @@
     <Compile Include="Backup.Designer.cs">
       <DependentUpon>Backup.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\Buscar livros por autor.cs">
+    <Compile Include="Busca\FrmBuscarLivrosAutor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Buscar livros por autor.Designer.cs">
-      <DependentUpon>Buscar livros por autor.cs</DependentUpon>
+    <Compile Include="Busca\FrmBuscarLivrosAutor.Designer.cs">
+      <DependentUpon>FrmBuscarLivrosAutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\Buscar livros Literarios.cs">
+    <Compile Include="Busca\FrmBuscarLivrosLiterarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Buscar livros Literarios.Designer.cs">
-      <DependentUpon>Buscar livros Literarios.cs</DependentUpon>
+    <Compile Include="Busca\FrmBuscarLivrosLiterarios.Designer.cs">
+      <DependentUpon>FrmBuscarLivrosLiterarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\Buscar_Situacao_UsuarioAluno.cs">
+    <Compile Include="Busca\FrmBuscarSituacaoUsuarioAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Buscar_Situacao_UsuarioAluno.Designer.cs">
-      <DependentUpon>Buscar_Situacao_UsuarioAluno.cs</DependentUpon>
+    <Compile Include="Busca\FrmBuscarSituacaoUsuarioAluno.Designer.cs">
+      <DependentUpon>FrmBuscarSituacaoUsuarioAluno.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\EmprestimoLivroDidatico.cs" />
     <Compile Include="Classes\Emprestimo_Livro_Literario.cs" />
-    <Compile Include="Busca\Buscar usuários e livros.cs">
+    <Compile Include="Busca\FrmBuscarUsuáriosLivros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Buscar usuários e livros.Designer.cs">
-      <DependentUpon>Buscar usuários e livros.cs</DependentUpon>
+    <Compile Include="Busca\FrmBuscarUsuáriosLivros.Designer.cs">
+      <DependentUpon>FrmBuscarUsuáriosLivros.cs</DependentUpon>
     </Compile>
     <Compile Include="Autenticação\Cadastrar login e senha.cs">
       <SubType>Form</SubType>
@@ -222,35 +222,17 @@
     <Compile Include="Emprestimo\Emprestimo Livro DidaticoTemporaria.Designer.cs">
       <DependentUpon>Emprestimo Livro DidaticoTemporaria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Emprestimo\Devolucao livro didatico.cs">
+    <Compile Include="Emprestimo\Devolucao_livro_didatico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Emprestimo\Devolucao livro didatico.Designer.cs">
-      <DependentUpon>Devolucao livro didatico.cs</DependentUpon>
+    <Compile Include="Emprestimo\Devolucao_livro_didatico.Designer.cs">
+      <DependentUpon>Devolucao_livro_didatico.cs</DependentUpon>
     </Compile>
     <Compile Include="Emprestimo\Devolucao livro literario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Emprestimo\Devolucao livro literario.Designer.cs">
       <DependentUpon>Devolucao livro literario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro e edição\Editar Excluir livro didatico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro e edição\Editar Excluir livro didatico.Designer.cs">
-      <DependentUpon>Editar Excluir livro didatico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro e edição\Editar Excluir livro literario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro e edição\Editar Excluir livro literario.Designer.cs">
-      <DependentUpon>Editar Excluir livro literario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Cadastro e edição\Editar_Excluir_Usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro e edição\Editar_Excluir_Usuario.Designer.cs">
-      <DependentUpon>Editar_Excluir_Usuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Emprestimo\Emprestimo livro literario.cs">
       <SubType>Form</SubType>
@@ -264,11 +246,11 @@
     <Compile Include="Autenticação\Excluir Usuario.Designer.cs">
       <DependentUpon>Excluir Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Carregando.cs">
+    <Compile Include="FrmCarregando.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Carregando.Designer.cs">
-      <DependentUpon>Carregando.cs</DependentUpon>
+    <Compile Include="FrmCarregando.Designer.cs">
+      <DependentUpon>FrmCarregando.cs</DependentUpon>
     </Compile>
     <Compile Include="Emprestimo\Emprestimo_livro_didatico.cs">
       <SubType>Form</SubType>
@@ -285,6 +267,24 @@
     <Compile Include="Classes\Livros.cs" />
     <Compile Include="Classes\Livro_Didatico.cs" />
     <Compile Include="Classes\Livro_Literario.cs" />
+    <Compile Include="Emprestimo\FrmEmprestimoLivroDidatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\FrmEmprestimoLivroDidatico.Designer.cs">
+      <DependentUpon>FrmEmprestimoLivroDidatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\FrmEmprestimoLivroLiterario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\FrmEmprestimoLivroLiterario.Designer.cs">
+      <DependentUpon>FrmEmprestimoLivroLiterario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\FrmFinalizarEmprestimoLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\FrmFinalizarEmprestimoLivro.Designer.cs">
+      <DependentUpon>FrmFinalizarEmprestimoLivro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAnaliseLivroMaisEmprestado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,10 +321,16 @@
     <Compile Include="FrmInstituicao.Designer.cs">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNovo.Designer.cs">
+      <DependentUpon>FrmNovo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSettings.Designer.cs">
+    <Compile Include="FrmSettings.designer.cs">
       <DependentUpon>FrmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTelaPrincipal.cs">
@@ -421,23 +427,23 @@
     <Compile Include="Emprestimo\Verificar.Designer.cs">
       <DependentUpon>Verificar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\Verificar_Livros_Didaticos_Emprestados.cs">
+    <Compile Include="Busca\FrmVerificarLivrosDidaticosEmprestados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Verificar_Livros_Didaticos_Emprestados.Designer.cs">
-      <DependentUpon>Verificar_Livros_Didaticos_Emprestados.cs</DependentUpon>
+    <Compile Include="Busca\FrmVerificarLivrosDidaticosEmprestados.Designer.cs">
+      <DependentUpon>FrmVerificarLivrosDidaticosEmprestados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\VerificarLivroLiterarioEmprestado.cs">
+    <Compile Include="Busca\FrmVerificarLivroLiterarioEmprestado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\VerificarLivroLiterarioEmprestado.Designer.cs">
-      <DependentUpon>VerificarLivroLiterarioEmprestado.cs</DependentUpon>
+    <Compile Include="Busca\FrmVerificarLivroLiterarioEmprestado.Designer.cs">
+      <DependentUpon>FrmVerificarLivroLiterarioEmprestado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busca\Verificar_Situacao_Funcionarios_Terceiros.cs">
+    <Compile Include="Busca\FrmVerificarSituacaoFuncionariosTerceiros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busca\Verificar_Situacao_Funcionarios_Terceiros.Designer.cs">
-      <DependentUpon>Verificar_Situacao_Funcionarios_Terceiros.cs</DependentUpon>
+    <Compile Include="Busca\FrmVerificarSituacaoFuncionariosTerceiros.Designer.cs">
+      <DependentUpon>FrmVerificarSituacaoFuncionariosTerceiros.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Autenticação\Alterar Senha.resx">
       <DependentUpon>Alterar Senha.cs</DependentUpon>
@@ -446,23 +452,23 @@
     <EmbeddedResource Include="Backup.resx">
       <DependentUpon>Backup.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Buscar livros por Genero.resx">
-      <DependentUpon>Buscar livros por Genero.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmBuscarLivrosGenero.resx">
+      <DependentUpon>FrmBuscarLivrosGenero.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Buscar livros por autor.resx">
-      <DependentUpon>Buscar livros por autor.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmBuscarLivrosAutor.resx">
+      <DependentUpon>FrmBuscarLivrosAutor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Buscar livros Literarios.resx">
-      <DependentUpon>Buscar livros Literarios.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmBuscarLivrosLiterarios.resx">
+      <DependentUpon>FrmBuscarLivrosLiterarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Buscar usuários e livros.resx">
-      <DependentUpon>Buscar usuários e livros.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmBuscarUsuáriosLivros.resx">
+      <DependentUpon>FrmBuscarUsuáriosLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticação\Cadastrar login e senha.resx">
       <DependentUpon>Cadastrar login e senha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Buscar_Situacao_UsuarioAluno.resx">
-      <DependentUpon>Buscar_Situacao_UsuarioAluno.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmBuscarSituacaoUsuarioAluno.resx">
+      <DependentUpon>FrmBuscarSituacaoUsuarioAluno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cadastro e edição\FrmLivroDidatico.resx">
       <DependentUpon>FrmLivroDidatico.cs</DependentUpon>
@@ -479,20 +485,11 @@
     <EmbeddedResource Include="Emprestimo\Emprestimo Livro DidaticoTemporaria.resx">
       <DependentUpon>Emprestimo Livro DidaticoTemporaria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Emprestimo\Devolucao livro didatico.resx">
-      <DependentUpon>Devolucao livro didatico.cs</DependentUpon>
+    <EmbeddedResource Include="Emprestimo\Devolucao_livro_didatico.resx">
+      <DependentUpon>Devolucao_livro_didatico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Emprestimo\Devolucao livro literario.resx">
       <DependentUpon>Devolucao livro literario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro e edição\Editar Excluir livro didatico.resx">
-      <DependentUpon>Editar Excluir livro didatico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro e edição\Editar Excluir livro literario.resx">
-      <DependentUpon>Editar Excluir livro literario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Cadastro e edição\Editar_Excluir_Usuario.resx">
-      <DependentUpon>Editar_Excluir_Usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Emprestimo\Emprestimo_livro_didatico.resx">
       <DependentUpon>Emprestimo_livro_didatico.cs</DependentUpon>
@@ -503,11 +500,20 @@
     <EmbeddedResource Include="Autenticação\Excluir Usuario.resx">
       <DependentUpon>Excluir Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Carregando.resx">
-      <DependentUpon>Carregando.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCarregando.resx">
+      <DependentUpon>FrmCarregando.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticação\FORMULARIO_AUTENTICACAO.resx">
       <DependentUpon>FORMULARIO_AUTENTICACAO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\FrmEmprestimoLivroDidatico.resx">
+      <DependentUpon>FrmEmprestimoLivroDidatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\FrmEmprestimoLivroLiterario.resx">
+      <DependentUpon>FrmEmprestimoLivroLiterario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\FrmFinalizarEmprestimoLivro.resx">
+      <DependentUpon>FrmFinalizarEmprestimoLivro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAnaliseLivroMaisEmprestado.resx">
       <DependentUpon>FrmAnaliseLivroMaisEmprestado.cs</DependentUpon>
@@ -526,6 +532,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInstituicao.resx">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNovo.resx">
+      <DependentUpon>FrmNovo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSettings.resx">
       <DependentUpon>FrmSettings.cs</DependentUpon>
@@ -581,17 +590,17 @@
     <EmbeddedResource Include="Emprestimo\Verificar.resx">
       <DependentUpon>Verificar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Verificar_Livros_Didaticos_Emprestados.resx">
-      <DependentUpon>Verificar_Livros_Didaticos_Emprestados.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmVerificarLivrosDidaticosEmprestados.resx">
+      <DependentUpon>FrmVerificarLivrosDidaticosEmprestados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\VerificarLivroLiterarioEmprestado.resx">
-      <DependentUpon>VerificarLivroLiterarioEmprestado.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmVerificarLivroLiterarioEmprestado.resx">
+      <DependentUpon>FrmVerificarLivroLiterarioEmprestado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestauracaoSistema.resx">
       <DependentUpon>RestauracaoSistema.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Busca\Verificar_Situacao_Funcionarios_Terceiros.resx">
-      <DependentUpon>Verificar_Situacao_Funcionarios_Terceiros.cs</DependentUpon>
+    <EmbeddedResource Include="Busca\FrmVerificarSituacaoFuncionariosTerceiros.resx">
+      <DependentUpon>FrmVerificarSituacaoFuncionariosTerceiros.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Autenticação\DataSetAutenticacao.xsc">
       <DependentUpon>DataSetAutenticacao.xsd</DependentUpon>
