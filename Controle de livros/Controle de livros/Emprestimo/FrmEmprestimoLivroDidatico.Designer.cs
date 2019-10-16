@@ -34,6 +34,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvLivro = new System.Windows.Forms.DataGridView();
+            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,11 +54,6 @@
             this.lblDataHora = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
@@ -115,6 +115,44 @@
             this.dgvLivro.ReadOnly = true;
             this.dgvLivro.Size = new System.Drawing.Size(679, 295);
             this.dgvLivro.TabIndex = 0;
+            // 
+            // ColRegistro
+            // 
+            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColRegistro.HeaderText = "Registro";
+            this.ColRegistro.Name = "ColRegistro";
+            this.ColRegistro.ReadOnly = true;
+            this.ColRegistro.Width = 84;
+            // 
+            // ColDisciplina
+            // 
+            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDisciplina.HeaderText = "Disciplina";
+            this.ColDisciplina.Name = "ColDisciplina";
+            this.ColDisciplina.ReadOnly = true;
+            // 
+            // ColEnsino
+            // 
+            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEnsino.HeaderText = "Ensino";
+            this.ColEnsino.Name = "ColEnsino";
+            this.ColEnsino.ReadOnly = true;
+            this.ColEnsino.Width = 74;
+            // 
+            // ColVolume
+            // 
+            this.ColVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColVolume.HeaderText = "Volume";
+            this.ColVolume.Name = "ColVolume";
+            this.ColVolume.ReadOnly = true;
+            this.ColVolume.Width = 79;
+            // 
+            // ColAutor
+            // 
+            this.ColAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColAutor.HeaderText = "Autor";
+            this.ColAutor.Name = "ColAutor";
+            this.ColAutor.ReadOnly = true;
             // 
             // btnRemover
             // 
@@ -266,44 +304,6 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // ColAutor
-            // 
-            this.ColAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColAutor.HeaderText = "Autor";
-            this.ColAutor.Name = "ColAutor";
-            this.ColAutor.ReadOnly = true;
-            // 
-            // ColVolume
-            // 
-            this.ColVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColVolume.HeaderText = "Volume";
-            this.ColVolume.Name = "ColVolume";
-            this.ColVolume.ReadOnly = true;
-            this.ColVolume.Width = 79;
-            // 
-            // ColEnsino
-            // 
-            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColEnsino.HeaderText = "Ensino";
-            this.ColEnsino.Name = "ColEnsino";
-            this.ColEnsino.ReadOnly = true;
-            this.ColEnsino.Width = 74;
-            // 
-            // ColDisciplina
-            // 
-            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDisciplina.HeaderText = "Disciplina";
-            this.ColDisciplina.Name = "ColDisciplina";
-            this.ColDisciplina.ReadOnly = true;
-            // 
-            // ColRegistro
-            // 
-            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColRegistro.HeaderText = "Registro";
-            this.ColRegistro.Name = "ColRegistro";
-            this.ColRegistro.ReadOnly = true;
-            this.ColRegistro.Width = 84;
-            // 
             // FrmEmprestimoLivroDidatico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -322,6 +322,7 @@
             this.Name = "FrmEmprestimoLivroDidatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Emprestimo de livros";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmEmprestimoLivroDidatico_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmEmprestimoLivroDidatico_KeyDown);
             this.groupBox1.ResumeLayout(false);

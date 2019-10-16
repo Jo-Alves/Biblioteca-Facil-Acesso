@@ -19,13 +19,7 @@ namespace Controle_de_livros
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FrmBuscarUsuario usuario = new FrmBuscarUsuario();
-            usuario.ShowDialog();
-            if(usuario.Codigo > 0)
-            {
-                lblCodigo.Text = usuario.Codigo.ToString();
-                txtNome.Text = usuario.nome;
-            }
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

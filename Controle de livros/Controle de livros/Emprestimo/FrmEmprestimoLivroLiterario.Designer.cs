@@ -53,11 +53,20 @@
             this.lblDataHora = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuRemover = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,9 +79,9 @@
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtRegistro);
-            this.groupBox1.Location = new System.Drawing.Point(22, 25);
+            this.groupBox1.Location = new System.Drawing.Point(16, 128);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(729, 422);
+            this.groupBox1.Size = new System.Drawing.Size(729, 397);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -84,7 +93,7 @@
             this.groupBox2.Controls.Add(this.dgvLivro);
             this.groupBox2.Location = new System.Drawing.Point(27, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(685, 320);
+            this.groupBox2.Size = new System.Drawing.Size(685, 295);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             // 
@@ -107,12 +116,16 @@
             this.ColTitulo,
             this.ColAutor,
             this.ColGenero});
+            this.dgvLivro.ContextMenuStrip = this.contextMenuStrip;
             this.dgvLivro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvLivro.Location = new System.Drawing.Point(3, 22);
+            this.dgvLivro.MultiSelect = false;
             this.dgvLivro.Name = "dgvLivro";
             this.dgvLivro.ReadOnly = true;
-            this.dgvLivro.Size = new System.Drawing.Size(679, 295);
+            this.dgvLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLivro.Size = new System.Drawing.Size(679, 270);
             this.dgvLivro.TabIndex = 0;
+            this.dgvLivro.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvLivro_DataBindingComplete);
             // 
             // ColRegistro
             // 
@@ -190,6 +203,8 @@
             this.txtRegistro.Size = new System.Drawing.Size(550, 46);
             this.txtRegistro.TabIndex = 4;
             this.txtRegistro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtRegistro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRegistro_KeyDown);
+            this.txtRegistro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRegistro_KeyPress);
             // 
             // groupBox3
             // 
@@ -199,9 +214,9 @@
             this.groupBox3.Controls.Add(this.btnSair);
             this.groupBox3.Controls.Add(this.btnEmprestar);
             this.groupBox3.Controls.Add(this.lblInstituicao);
-            this.groupBox3.Location = new System.Drawing.Point(757, 25);
+            this.groupBox3.Location = new System.Drawing.Point(751, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(290, 422);
+            this.groupBox3.Size = new System.Drawing.Size(290, 513);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
@@ -215,8 +230,9 @@
             // 
             // btnSair
             // 
+            this.btnSair.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSair.Location = new System.Drawing.Point(23, 232);
+            this.btnSair.Location = new System.Drawing.Point(23, 264);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(246, 46);
             this.btnSair.TabIndex = 11;
@@ -226,8 +242,9 @@
             // 
             // btnEmprestar
             // 
+            this.btnEmprestar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEmprestar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEmprestar.Location = new System.Drawing.Point(23, 180);
+            this.btnEmprestar.Location = new System.Drawing.Point(23, 212);
             this.btnEmprestar.Name = "btnEmprestar";
             this.btnEmprestar.Size = new System.Drawing.Size(246, 46);
             this.btnEmprestar.TabIndex = 10;
@@ -247,7 +264,7 @@
             // 
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNovo.Location = new System.Drawing.Point(158, 472);
+            this.btnNovo.Location = new System.Drawing.Point(158, 570);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(171, 46);
             this.btnNovo.TabIndex = 12;
@@ -259,7 +276,7 @@
             // 
             this.btnLivro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLivro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLivro.Location = new System.Drawing.Point(335, 472);
+            this.btnLivro.Location = new System.Drawing.Point(335, 570);
             this.btnLivro.Name = "btnLivro";
             this.btnLivro.Size = new System.Drawing.Size(184, 46);
             this.btnLivro.TabIndex = 13;
@@ -272,7 +289,7 @@
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.lblDataHora);
-            this.groupBox4.Location = new System.Drawing.Point(587, 447);
+            this.groupBox4.Location = new System.Drawing.Point(587, 545);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(460, 89);
             this.groupBox4.TabIndex = 14;
@@ -294,12 +311,81 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
+            this.groupBox5.Controls.Add(this.lblCodigo);
+            this.groupBox5.Controls.Add(this.btnPesquisar);
+            this.groupBox5.Controls.Add(this.txtNome);
+            this.groupBox5.Location = new System.Drawing.Point(16, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(729, 118);
+            this.groupBox5.TabIndex = 15;
+            this.groupBox5.TabStop = false;
+            // 
+            // lblQuantidadeLivrosEmprestados
+            // 
+            this.lblQuantidadeLivrosEmprestados.AutoSize = true;
+            this.lblQuantidadeLivrosEmprestados.Location = new System.Drawing.Point(99, 82);
+            this.lblQuantidadeLivrosEmprestados.Name = "lblQuantidadeLivrosEmprestados";
+            this.lblQuantidadeLivrosEmprestados.Size = new System.Drawing.Size(230, 19);
+            this.lblQuantidadeLivrosEmprestados.TabIndex = 6;
+            this.lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: 0";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.Location = new System.Drawing.Point(12, 36);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(80, 31);
+            this.lblCodigo.TabIndex = 5;
+            this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
+            this.btnPesquisar.Location = new System.Drawing.Point(636, 32);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.Location = new System.Drawing.Point(99, 39);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
+            this.txtNome.Size = new System.Drawing.Size(530, 26);
+            this.txtNome.TabIndex = 3;
+            // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuRemover});
+            this.contextMenuStrip.Name = "contextMenuStrip1";
+            this.contextMenuStrip.Size = new System.Drawing.Size(122, 26);
+            // 
+            // menuRemover
+            // 
+            this.menuRemover.Name = "menuRemover";
+            this.menuRemover.Size = new System.Drawing.Size(121, 22);
+            this.menuRemover.Text = "Remover";
+            this.menuRemover.Click += new System.EventHandler(this.MenuRemover_Click);
+            // 
             // FrmEmprestimoLivro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1068, 548);
+            this.ClientSize = new System.Drawing.Size(1068, 648);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.btnLivro);
             this.Controls.Add(this.btnNovo);
@@ -320,6 +406,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,5 +437,12 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.Label lblBiblioteca;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblQuantidadeLivrosEmprestados;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem menuRemover;
     }
 }

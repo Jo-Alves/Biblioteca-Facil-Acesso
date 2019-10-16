@@ -151,5 +151,36 @@ namespace Controle_de_livros
                 conexao.Close();
             }
         }
+
+        public bool buscar()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            string _sql = "SELECT * FROM Livro_Literario WHERE N_Registro = @N_Registro";
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.Parameters.AddWithValue("@N_Registro", registro);
+            try
+            {
+                conexao.Open();
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
+                {
+                    titulo = table.Rows[0]["Titulo"].ToString();
+                    genero = table.Rows[0]["Genero"].ToString();
+                    autor = table.Rows[0]["Autor"].ToString();
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }

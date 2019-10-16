@@ -35,11 +35,11 @@
     <Setting Name="disco" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\</Value>
     </Setting>
-    <Setting Name="qtdLimiteEmprestimo" Type="System.String" Scope="User">
-      <Value Profile="(Default)">1</Value>
-    </Setting>
     <Setting Name="qtdLimiteTempo" Type="System.String" Scope="User">
       <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="qtdLimiteEmprestimo" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
     </Setting>
   </Settings>
 </SettingsFile>

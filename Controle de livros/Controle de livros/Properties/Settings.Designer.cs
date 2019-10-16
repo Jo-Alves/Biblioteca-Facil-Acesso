@@ -94,18 +94,6 @@ namespace Controle_de_livros.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public string qtdLimiteEmprestimo {
-            get {
-                return ((string)(this["qtdLimiteEmprestimo"]));
-            }
-            set {
-                this["qtdLimiteEmprestimo"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public string qtdLimiteTempo {
             get {
@@ -113,6 +101,18 @@ namespace Controle_de_livros.Properties {
             }
             set {
                 this["qtdLimiteTempo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string qtdLimiteEmprestimo {
+            get {
+                return ((string)(this["qtdLimiteEmprestimo"]));
+            }
+            set {
+                this["qtdLimiteEmprestimo"] = value;
             }
         }
     }

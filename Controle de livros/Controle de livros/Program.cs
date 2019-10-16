@@ -16,7 +16,7 @@ namespace Controle_de_livros
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCarregando());
+            Application.Run(new FrmEmprestimoLivro());
         }
     }
 }
