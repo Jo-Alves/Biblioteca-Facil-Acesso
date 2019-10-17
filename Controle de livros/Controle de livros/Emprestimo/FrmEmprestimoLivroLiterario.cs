@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,10 @@ namespace Controle_de_livros
             lblInstituicao.Text = Settings.Default["Instituicao"].ToString();
         }
 
-        int registro, countLinhas;
+        int registro, countLinhas, qtdLivrosEmprestados;
         string titulo, autor, genero;
         Livro_Literario livroLiterario = new Livro_Literario();
+        Emprestimo_Livro_Literario Emprestimo_Livro_Literario = new Emprestimo_Livro_Literario();
 
         private void FrmEmprestimoLivro_Load(object sender, EventArgs e)
         {
@@ -55,30 +57,54 @@ namespace Controle_de_livros
 
         private void AdicionarItens()
         {
-            verificarDuplicidade();
-            if (duplicata == true)
+            if (!string.IsNullOrEmpty(lblCodigo.Text))
             {
-                MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                duplicata = false;
-            }
-            else
-            {
-                countLinhas = int.Parse(Settings.Default["qtdLimiteEmprestimo"].ToString());
-                if (dgvLivro.Rows.Count == countLinhas)
+                Emprestimo_Livro_Literario._Registro = registro;
+                if (Emprestimo_Livro_Literario.VerificarLivrosEmprestados() == false)
                 {
-                    MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + "!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    verificarDuplicidade();
+                    if (duplicata == true)
+                    {
+                        MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        duplicata = false;
+                    }
+                    else
+                    {
+                        countLinhas = int.Parse(Settings.Default["qtdLimiteEmprestimo"].ToString());
+                        if (dgvLivro.Rows.Count == (countLinhas - qtdLivrosEmprestados))
+                        {
+                            if (qtdLivrosEmprestados == 0)
+                                MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livros!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            else
+                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos, altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            txtRegistro.Clear();
+                        }
+                        else
+                        {
+                            dgvLivro.Rows.Add(registro, titulo, autor, genero);
+                            txtRegistro.Clear();
+                            txtRegistro.Focus();
+                            dgvLivro.ClearSelection();
+                        }
+                    }
                 }
                 else
                 {
-                    dgvLivro.Rows.Add(registro, titulo, autor, genero);
-                    txtRegistro.Clear();
-                    txtRegistro.Focus();
-                    dgvLivro.ClearSelection();
+                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou erro na busca de livro com o mesmo titulo.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+            }
+            else
+            {
+                MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                errorProvider.Clear();
+                errorProvider.SetError(txtNome, "Informe aqui");
+                txtNome.Focus();
+                return;
             }
         }
 
         bool duplicata = false;
+        ErrorProvider errorProvider = new ErrorProvider();
         private void verificarDuplicidade()
         {
             for(int i = 0; i < dgvLivro.Rows.Count; i++)
@@ -106,7 +132,7 @@ namespace Controle_de_livros
         {
             if (e.KeyCode == Keys.F1)
             {
-                BtnEmprestar_Click(sender, e);
+                btnFinalizarEmprestimo_Click(sender, e);
             }
             if (e.KeyCode == Keys.F2)
             {
@@ -131,6 +157,7 @@ namespace Controle_de_livros
                 DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if(dr == DialogResult.Yes)
                 {
+                    sair = false;
                     this.Close();
                 }
             }
@@ -151,13 +178,58 @@ namespace Controle_de_livros
             }
         }
 
-        private void BtnEmprestar_Click(object sender, EventArgs e)
+        private void btnFinalizarEmprestimo_Click(object sender, EventArgs e)
         {
-            FrmFinalizarEmprestimoLivro finalizarEmprestimoLivro = new FrmFinalizarEmprestimoLivro();
-            finalizarEmprestimoLivro.ShowDialog();
+            if (!string.IsNullOrEmpty(lblCodigo.Text))
+            {
+                if(dgvLivro.Rows.Count > 0)
+                {
+                    FinalizarEmprestimo();
+                    MessageBox.Show("Operação efetuado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limparCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Não há livros adicionados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                errorProvider.Clear();
+                errorProvider.SetError(txtNome, "Informe aqui");
+                txtNome.Focus();
+                return;
+            }
         }
 
-        private void BtnRemover_Click(object sender, EventArgs e)
+        private void limparCampos()
+        {
+            dgvLivro.Rows.Clear();
+            txtNome.Clear();
+            lblCodigo.Text = "";
+            lblQuantidadeLivrosEmprestados.Text = "";
+        }
+
+        private void FinalizarEmprestimo()
+        {
+            try
+            {
+                for (int i = 0; i < dgvLivro.Rows.Count; i++)
+                {
+                    Emprestimo_Livro_Literario._Registro = int.Parse(dgvLivro.Rows[i].Cells["ColRegistro"].Value.ToString());
+                    Emprestimo_Livro_Literario._Codigo = int.Parse(lblCodigo.Text);
+                    Emprestimo_Livro_Literario._Entrega = "";
+                    Emprestimo_Livro_Literario._Solicitacao = DateTime.Now.ToShortDateString();
+                    Emprestimo_Livro_Literario.efetuarEmprestino();
+                }
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
         {
             if (dgvLivro.Rows.Count > 0)
             {
@@ -188,8 +260,32 @@ namespace Controle_de_livros
 
         private void MenuRemover_Click(object sender, EventArgs e)
         {
-            BtnRemover_Click(sender, e);
+            btnRemover_Click(sender, e);
         }
+
+        bool sair = true;
+        private void FrmEmprestimoLivro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            if (sair)
+            {
+                if (dgvLivro.Rows.Count > 0)
+                {
+
+                    DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    if (dr == DialogResult.No)
+                    {
+                        e.Cancel = true;
+                    }
+                    else
+                    {
+
+                        sair = false;
+                    }
+                }
+            }
+        }
+
 
         private void DgvLivro_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -206,6 +302,10 @@ namespace Controle_de_livros
             {
                 lblCodigo.Text = usuario.Codigo.ToString();
                 txtNome.Text = usuario.nome;
+                Emprestimo_Livro_Literario._Codigo = usuario.Codigo;
+                lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: " + Emprestimo_Livro_Literario.VerificarQuantidadeLivrosEmprestados() + " livro(s)";
+                qtdLivrosEmprestados = Emprestimo_Livro_Literario.VerificarQuantidadeLivrosEmprestados();
+                errorProvider.Clear();
             }
         }
 

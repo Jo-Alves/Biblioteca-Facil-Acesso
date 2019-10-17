@@ -179,6 +179,7 @@
             this.Name = "FrmBuscaLivroLiterario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pequisar livro Literario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBuscaLivroLiterario_FormClosed);
             this.Load += new System.EventHandler(this.FrmBuscaLivroLiterario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).EndInit();
             this.ResumeLayout(false);

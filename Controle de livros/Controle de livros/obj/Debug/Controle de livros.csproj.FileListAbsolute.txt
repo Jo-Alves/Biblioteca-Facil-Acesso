@@ -372,7 +372,6 @@ C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle de livros.csproj.GenerateResource.cache
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\RdlCompile.cache
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\RdlCompile.compiled
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle de livros.csproj.CoreCompileInputs.cache
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle de livros.exe
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle de livros.pdb
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmLivroDidatico.resources
@@ -428,7 +427,6 @@ C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\Microsoft.VisualStudio.Debugger.Interop.11.0.dll
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\Microsoft.SqlServer.SqlTDiagM.dll
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\Newtonsoft.Json.dll
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\System.Threading.Tasks.Dataflow.dll
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\Microsoft.MSXML.dll
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\bin\Debug\Microsoft.Build.Utilities.Core.dll

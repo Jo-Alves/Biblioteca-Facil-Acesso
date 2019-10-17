@@ -9,7 +9,7 @@ namespace Controle_de_livros
 {
     class Emprestimo_Livro_Literario
     {
-        string stringConn = Security.Dry(System.Configuration.ConfigurationSettings.AppSettings["CadeiaConexao"]);
+        string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
         string _sql;
 
         private int Codigo;
@@ -77,6 +77,65 @@ namespace Controle_de_livros
                 conexao.Open();
                 comando.ExecuteNonQuery();
                 return true;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public int VerificarQuantidadeLivrosEmprestados()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            _sql = "select count(Cod_Usuario) from Emprestimo_Livro_Literario where Cod_Usuario = @Codigo and Data_Entrega = ''";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@Codigo", _Codigo);
+            comando.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                if (comando.ExecuteScalar() == DBNull.Value)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return int.Parse(comando.ExecuteScalar().ToString());
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public bool VerificarLivrosEmprestados()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            _sql = "select N_Registro from Emprestimo_Livro_Literario where N_Registro = @Registro and Data_Entrega = ''";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@Registro", _Registro);
+            comando.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch
             {

@@ -190,6 +190,7 @@
             this.Name = "FrmBuscarLivroDidatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Livro Didático";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBuscarLivroDidatico_FormClosed);
             this.Load += new System.EventHandler(this.FrmPesquisarLivroDidatico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).EndInit();
             this.ResumeLayout(false);

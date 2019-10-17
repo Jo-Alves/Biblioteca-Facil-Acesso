@@ -265,5 +265,11 @@ namespace Controle_de_livros
             QuantidadeLivrosCadastrados quantidadeLivros = new QuantidadeLivrosCadastrados();
             quantidadeLivros.ShowDialog();
         }
+
+        private void menu_EmprestimoLivroLIterario_Click(object sender, EventArgs e)
+        {
+            FrmEmprestimoLivro emprestimoLivro = new FrmEmprestimoLivro();
+            emprestimoLivro.ShowDialog();
+        }
     }
 }

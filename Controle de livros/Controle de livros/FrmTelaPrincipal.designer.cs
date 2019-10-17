@@ -37,17 +37,6 @@
             this.menu_Livro = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_LivroLiterario = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_LivroDidatico = new System.Windows.Forms.ToolStripMenuItem();
-            this.rELATÓRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_Relatorio_Livro_Literarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_LivrosLiterariosTurma = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_Relatorio_Livro_Didatico = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_LivroLiterarioDevolvido = new System.Windows.Forms.ToolStripMenuItem();
-            this.dELIVROLITERÁRIOEMPRESTADOAFUNCIONÁRIOEATERCEIROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_EmprestimoLivrosLiterarioTerceiros = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_RelatorioEmprestimoLivrosDidaticoFuncionario = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_RelatorioEmprestimoLivrosDidaticoTerceiros = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_AnaliseAlunosLetrados = new System.Windows.Forms.ToolStripMenuItem();
-            this.Menu_AnaliseLivrosMaisLidos = new System.Windows.Forms.ToolStripMenuItem();
             this.bUSCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Buscar_Todos_Dados = new System.Windows.Forms.ToolStripMenuItem();
             this.bUSCAROBRASLITERÁRIASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,6 +52,18 @@
             this.dEVOLUÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DevolucaoLivroLiterario = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_DevolucaoLivroDidatico = new System.Windows.Forms.ToolStripMenuItem();
+            this.rELATÓRIOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_Relatorio_Livro_Literarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_LivrosLiterariosTurma = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_Relatorio_Livro_Didatico = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_LivroLiterarioDevolvido = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELIVROLITERÁRIOEMPRESTADOAFUNCIONÁRIOEATERCEIROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_EmprestimoLivrosLiterarioTerceiros = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_RelatorioEmprestimoLivrosDidaticoFuncionario = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_RelatorioEmprestimoLivrosDidaticoTerceiros = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_AnaliseAlunosLetrados = new System.Windows.Forms.ToolStripMenuItem();
+            this.Menu_AnaliseLivrosMaisLidos = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuQuantidadeLivrosCadastrados = new System.Windows.Forms.ToolStripMenuItem();
             this.opçoesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Sair = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +79,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.menuQuantidadeLivrosCadastrados = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -118,8 +118,8 @@
             this.menu_Cadastrar.Image = global::Controle_de_livros.Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             this.menu_Cadastrar.Name = "menu_Cadastrar";
             this.menu_Cadastrar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.menu_Cadastrar.Size = new System.Drawing.Size(291, 22);
-            this.menu_Cadastrar.Text = "ALUNO/FUNCIONÁRIO/OUTROS";
+            this.menu_Cadastrar.Size = new System.Drawing.Size(252, 22);
+            this.menu_Cadastrar.Text = "Aluno/Funcionário/Outro";
             this.menu_Cadastrar.Click += new System.EventHandler(this.menu_CadastroAlunoFuncionarioOutros_Click);
             // 
             // menuCadastroInstituicao
@@ -127,7 +127,7 @@
             this.menuCadastroInstituicao.Image = global::Controle_de_livros.Properties.Resources.company_building_icon__128px_;
             this.menuCadastroInstituicao.Name = "menuCadastroInstituicao";
             this.menuCadastroInstituicao.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.menuCadastroInstituicao.Size = new System.Drawing.Size(291, 22);
+            this.menuCadastroInstituicao.Size = new System.Drawing.Size(252, 22);
             this.menuCadastroInstituicao.Text = "INSTITUIÇÃO";
             this.menuCadastroInstituicao.Click += new System.EventHandler(this.MenuCadastroInstituicao_Click);
             // 
@@ -140,7 +140,7 @@
             this.menu_Livro.Name = "menu_Livro";
             this.menu_Livro.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.menu_Livro.Size = new System.Drawing.Size(291, 22);
+            this.menu_Livro.Size = new System.Drawing.Size(252, 22);
             this.menu_Livro.Text = "LIVROS";
             // 
             // menu_LivroLiterario
@@ -158,6 +158,149 @@
             this.menu_LivroDidatico.Size = new System.Drawing.Size(173, 22);
             this.menu_LivroDidatico.Text = "DIDÁTICO";
             this.menu_LivroDidatico.Click += new System.EventHandler(this.Menu_LivroDidatico_Click);
+            // 
+            // bUSCAToolStripMenuItem
+            // 
+            this.bUSCAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_Buscar_Todos_Dados,
+            this.bUSCAROBRASLITERÁRIASToolStripMenuItem,
+            this.menu_VerificarAlunos,
+            this.menu_VerificarSituacaoFT});
+            this.bUSCAToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.lupa3;
+            this.bUSCAToolStripMenuItem.Name = "bUSCAToolStripMenuItem";
+            this.bUSCAToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.bUSCAToolStripMenuItem.Text = "BUSCA";
+            // 
+            // menu_Buscar_Todos_Dados
+            // 
+            this.menu_Buscar_Todos_Dados.Image = global::Controle_de_livros.Properties.Resources.lupa3;
+            this.menu_Buscar_Todos_Dados.Name = "menu_Buscar_Todos_Dados";
+            this.menu_Buscar_Todos_Dados.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.menu_Buscar_Todos_Dados.Size = new System.Drawing.Size(464, 22);
+            this.menu_Buscar_Todos_Dados.Text = "BUSCAR TODOS OS DADOS";
+            this.menu_Buscar_Todos_Dados.Click += new System.EventHandler(this.menu_Buscar_Todos_Dados_Click);
+            // 
+            // bUSCAROBRASLITERÁRIASToolStripMenuItem
+            // 
+            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_BuscarObrasEspecificas,
+            this.Menu_BuscarObrasLiterarioAutor,
+            this.Menu_BuscarObrasLiterarioGenero});
+            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.Name = "bUSCAROBRASLITERÁRIASToolStripMenuItem";
+            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.Size = new System.Drawing.Size(464, 22);
+            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.Text = "BUSCAR OBRAS LITERÁRIAS";
+            // 
+            // menu_BuscarObrasEspecificas
+            // 
+            this.menu_BuscarObrasEspecificas.Name = "menu_BuscarObrasEspecificas";
+            this.menu_BuscarObrasEspecificas.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.menu_BuscarObrasEspecificas.Size = new System.Drawing.Size(365, 22);
+            this.menu_BuscarObrasEspecificas.Text = "BUSCAR OBRAS LITERÁRIAS ESPECÍFICAS";
+            this.menu_BuscarObrasEspecificas.Click += new System.EventHandler(this.menu_BuscarObrasEspecificas_Click);
+            // 
+            // Menu_BuscarObrasLiterarioAutor
+            // 
+            this.Menu_BuscarObrasLiterarioAutor.Name = "Menu_BuscarObrasLiterarioAutor";
+            this.Menu_BuscarObrasLiterarioAutor.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
+            this.Menu_BuscarObrasLiterarioAutor.Size = new System.Drawing.Size(365, 22);
+            this.Menu_BuscarObrasLiterarioAutor.Text = "BUSCAR OBRAS LITERÁRIAS POR AUTOR";
+            this.Menu_BuscarObrasLiterarioAutor.Click += new System.EventHandler(this.Menu_BuscarObrasLiterarioAutor_Click);
+            // 
+            // Menu_BuscarObrasLiterarioGenero
+            // 
+            this.Menu_BuscarObrasLiterarioGenero.Name = "Menu_BuscarObrasLiterarioGenero";
+            this.Menu_BuscarObrasLiterarioGenero.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.Menu_BuscarObrasLiterarioGenero.Size = new System.Drawing.Size(365, 22);
+            this.Menu_BuscarObrasLiterarioGenero.Text = "BUSCAR OBRAS LITERÁRIAS POR GÊNERO";
+            this.Menu_BuscarObrasLiterarioGenero.Click += new System.EventHandler(this.Menu_BuscarObrasLiterarioGenero_Click);
+            // 
+            // menu_VerificarAlunos
+            // 
+            this.menu_VerificarAlunos.Name = "menu_VerificarAlunos";
+            this.menu_VerificarAlunos.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.B)));
+            this.menu_VerificarAlunos.Size = new System.Drawing.Size(464, 22);
+            this.menu_VerificarAlunos.Text = "VERIFICAR SITUAÇÃO DE ALUNOS";
+            this.menu_VerificarAlunos.Click += new System.EventHandler(this.menu_VerificarAlunos_Click);
+            // 
+            // menu_VerificarSituacaoFT
+            // 
+            this.menu_VerificarSituacaoFT.Name = "menu_VerificarSituacaoFT";
+            this.menu_VerificarSituacaoFT.ShortcutKeys = ((System.Windows.Forms.Keys)((((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.B)));
+            this.menu_VerificarSituacaoFT.Size = new System.Drawing.Size(464, 22);
+            this.menu_VerificarSituacaoFT.Text = "VERIFICAR  SITUAÇÃO DE FUNCIONÁRIOS E TERCEIROS";
+            this.menu_VerificarSituacaoFT.Click += new System.EventHandler(this.menu_VerificarSituacaoFT_Click);
+            // 
+            // eMPRÉSTIMOToolStripMenuItem
+            // 
+            this.eMPRÉSTIMOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_EmprestimoLivroLIterario,
+            this.menu_EmprestimoLivroDidatico,
+            this.menu_Temporario_LD});
+            this.eMPRÉSTIMOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.images;
+            this.eMPRÉSTIMOToolStripMenuItem.Name = "eMPRÉSTIMOToolStripMenuItem";
+            this.eMPRÉSTIMOToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.eMPRÉSTIMOToolStripMenuItem.Text = "EMPRÉSTIMO";
+            // 
+            // menu_EmprestimoLivroLIterario
+            // 
+            this.menu_EmprestimoLivroLIterario.Image = global::Controle_de_livros.Properties.Resources.images;
+            this.menu_EmprestimoLivroLIterario.Name = "menu_EmprestimoLivroLIterario";
+            this.menu_EmprestimoLivroLIterario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
+            this.menu_EmprestimoLivroLIterario.Size = new System.Drawing.Size(235, 22);
+            this.menu_EmprestimoLivroLIterario.Text = "LIVRO LITERÁRIO";
+            this.menu_EmprestimoLivroLIterario.Click += new System.EventHandler(this.menu_EmprestimoLivroLIterario_Click);
+            // 
+            // menu_EmprestimoLivroDidatico
+            // 
+            this.menu_EmprestimoLivroDidatico.Image = global::Controle_de_livros.Properties.Resources.images;
+            this.menu_EmprestimoLivroDidatico.Name = "menu_EmprestimoLivroDidatico";
+            this.menu_EmprestimoLivroDidatico.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.E)));
+            this.menu_EmprestimoLivroDidatico.Size = new System.Drawing.Size(235, 22);
+            this.menu_EmprestimoLivroDidatico.Text = "LIVRO DIDÁTICO";
+            this.menu_EmprestimoLivroDidatico.Click += new System.EventHandler(this.menu_EmprestimoLivroDidatico_Click);
+            // 
+            // menu_Temporario_LD
+            // 
+            this.menu_Temporario_LD.Name = "menu_Temporario_LD";
+            this.menu_Temporario_LD.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.E)));
+            this.menu_Temporario_LD.Size = new System.Drawing.Size(235, 22);
+            this.menu_Temporario_LD.Text = "TEMPORÁRIO LD";
+            this.menu_Temporario_LD.Click += new System.EventHandler(this.menu_Temporario_LD_Click);
+            // 
+            // dEVOLUÇÃOToolStripMenuItem
+            // 
+            this.dEVOLUÇÃOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_DevolucaoLivroLiterario,
+            this.menu_DevolucaoLivroDidatico});
+            this.dEVOLUÇÃOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.images;
+            this.dEVOLUÇÃOToolStripMenuItem.Name = "dEVOLUÇÃOToolStripMenuItem";
+            this.dEVOLUÇÃOToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
+            this.dEVOLUÇÃOToolStripMenuItem.Text = "DEVOLUÇÃO";
+            // 
+            // menu_DevolucaoLivroLiterario
+            // 
+            this.menu_DevolucaoLivroLiterario.Image = global::Controle_de_livros.Properties.Resources.images;
+            this.menu_DevolucaoLivroLiterario.Name = "menu_DevolucaoLivroLiterario";
+            this.menu_DevolucaoLivroLiterario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
+            this.menu_DevolucaoLivroLiterario.Size = new System.Drawing.Size(245, 22);
+            this.menu_DevolucaoLivroLiterario.Text = "DE LIVRO LITERÁRIO";
+            this.menu_DevolucaoLivroLiterario.Click += new System.EventHandler(this.menu_DevolucaoLivroLiterario_Click);
+            // 
+            // menu_DevolucaoLivroDidatico
+            // 
+            this.menu_DevolucaoLivroDidatico.Image = global::Controle_de_livros.Properties.Resources.images;
+            this.menu_DevolucaoLivroDidatico.Name = "menu_DevolucaoLivroDidatico";
+            this.menu_DevolucaoLivroDidatico.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.D)));
+            this.menu_DevolucaoLivroDidatico.Size = new System.Drawing.Size(245, 22);
+            this.menu_DevolucaoLivroDidatico.Text = "DE LIVRO DIDÁTICO";
+            this.menu_DevolucaoLivroDidatico.Click += new System.EventHandler(this.menu_DevolucaoLivroDidatico_Click);
             // 
             // rELATÓRIOToolStripMenuItem
             // 
@@ -263,147 +406,13 @@
             this.Menu_AnaliseLivrosMaisLidos.Text = "ANÁLISE DE LIVROS MAIS EMPRESTADO";
             this.Menu_AnaliseLivrosMaisLidos.Click += new System.EventHandler(this.Menu_AnaliseLivrosMaisLidos_Click);
             // 
-            // bUSCAToolStripMenuItem
+            // menuQuantidadeLivrosCadastrados
             // 
-            this.bUSCAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_Buscar_Todos_Dados,
-            this.bUSCAROBRASLITERÁRIASToolStripMenuItem,
-            this.menu_VerificarAlunos,
-            this.menu_VerificarSituacaoFT});
-            this.bUSCAToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.lupa3;
-            this.bUSCAToolStripMenuItem.Name = "bUSCAToolStripMenuItem";
-            this.bUSCAToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.bUSCAToolStripMenuItem.Text = "BUSCA";
-            // 
-            // menu_Buscar_Todos_Dados
-            // 
-            this.menu_Buscar_Todos_Dados.Image = global::Controle_de_livros.Properties.Resources.lupa3;
-            this.menu_Buscar_Todos_Dados.Name = "menu_Buscar_Todos_Dados";
-            this.menu_Buscar_Todos_Dados.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.menu_Buscar_Todos_Dados.Size = new System.Drawing.Size(464, 22);
-            this.menu_Buscar_Todos_Dados.Text = "BUSCAR TODOS OS DADOS";
-            this.menu_Buscar_Todos_Dados.Click += new System.EventHandler(this.menu_Buscar_Todos_Dados_Click);
-            // 
-            // bUSCAROBRASLITERÁRIASToolStripMenuItem
-            // 
-            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_BuscarObrasEspecificas,
-            this.Menu_BuscarObrasLiterarioAutor,
-            this.Menu_BuscarObrasLiterarioGenero});
-            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.Name = "bUSCAROBRASLITERÁRIASToolStripMenuItem";
-            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.Size = new System.Drawing.Size(464, 22);
-            this.bUSCAROBRASLITERÁRIASToolStripMenuItem.Text = "BUSCAR OBRAS LITERÁRIAS";
-            // 
-            // menu_BuscarObrasEspecificas
-            // 
-            this.menu_BuscarObrasEspecificas.Name = "menu_BuscarObrasEspecificas";
-            this.menu_BuscarObrasEspecificas.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.B)));
-            this.menu_BuscarObrasEspecificas.Size = new System.Drawing.Size(365, 22);
-            this.menu_BuscarObrasEspecificas.Text = "BUSCAR OBRAS LITERÁRIAS ESPECÍFICAS";
-            this.menu_BuscarObrasEspecificas.Click += new System.EventHandler(this.menu_BuscarObrasEspecificas_Click);
-            // 
-            // Menu_BuscarObrasLiterarioAutor
-            // 
-            this.Menu_BuscarObrasLiterarioAutor.Name = "Menu_BuscarObrasLiterarioAutor";
-            this.Menu_BuscarObrasLiterarioAutor.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.Menu_BuscarObrasLiterarioAutor.Size = new System.Drawing.Size(365, 22);
-            this.Menu_BuscarObrasLiterarioAutor.Text = "BUSCAR OBRAS LITERÁRIAS POR AUTOR";
-            this.Menu_BuscarObrasLiterarioAutor.Click += new System.EventHandler(this.Menu_BuscarObrasLiterarioAutor_Click);
-            // 
-            // Menu_BuscarObrasLiterarioGenero
-            // 
-            this.Menu_BuscarObrasLiterarioGenero.Name = "Menu_BuscarObrasLiterarioGenero";
-            this.Menu_BuscarObrasLiterarioGenero.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
-            this.Menu_BuscarObrasLiterarioGenero.Size = new System.Drawing.Size(365, 22);
-            this.Menu_BuscarObrasLiterarioGenero.Text = "BUSCAR OBRAS LITERÁRIAS POR GÊNERO";
-            this.Menu_BuscarObrasLiterarioGenero.Click += new System.EventHandler(this.Menu_BuscarObrasLiterarioGenero_Click);
-            // 
-            // menu_VerificarAlunos
-            // 
-            this.menu_VerificarAlunos.Name = "menu_VerificarAlunos";
-            this.menu_VerificarAlunos.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.B)));
-            this.menu_VerificarAlunos.Size = new System.Drawing.Size(464, 22);
-            this.menu_VerificarAlunos.Text = "VERIFICAR SITUAÇÃO DE ALUNOS";
-            this.menu_VerificarAlunos.Click += new System.EventHandler(this.menu_VerificarAlunos_Click);
-            // 
-            // menu_VerificarSituacaoFT
-            // 
-            this.menu_VerificarSituacaoFT.Name = "menu_VerificarSituacaoFT";
-            this.menu_VerificarSituacaoFT.ShortcutKeys = ((System.Windows.Forms.Keys)((((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.B)));
-            this.menu_VerificarSituacaoFT.Size = new System.Drawing.Size(464, 22);
-            this.menu_VerificarSituacaoFT.Text = "VERIFICAR  SITUAÇÃO DE FUNCIONÁRIOS E TERCEIROS";
-            this.menu_VerificarSituacaoFT.Click += new System.EventHandler(this.menu_VerificarSituacaoFT_Click);
-            // 
-            // eMPRÉSTIMOToolStripMenuItem
-            // 
-            this.eMPRÉSTIMOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_EmprestimoLivroLIterario,
-            this.menu_EmprestimoLivroDidatico,
-            this.menu_Temporario_LD});
-            this.eMPRÉSTIMOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.images;
-            this.eMPRÉSTIMOToolStripMenuItem.Name = "eMPRÉSTIMOToolStripMenuItem";
-            this.eMPRÉSTIMOToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
-            this.eMPRÉSTIMOToolStripMenuItem.Text = "EMPRÉSTIMO";
-            // 
-            // menu_EmprestimoLivroLIterario
-            // 
-            this.menu_EmprestimoLivroLIterario.Image = global::Controle_de_livros.Properties.Resources.images;
-            this.menu_EmprestimoLivroLIterario.Name = "menu_EmprestimoLivroLIterario";
-            this.menu_EmprestimoLivroLIterario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.menu_EmprestimoLivroLIterario.Size = new System.Drawing.Size(252, 22);
-            this.menu_EmprestimoLivroLIterario.Text = "DE LIVRO LITERÁRIO";
-            // 
-            // menu_EmprestimoLivroDidatico
-            // 
-            this.menu_EmprestimoLivroDidatico.Image = global::Controle_de_livros.Properties.Resources.images;
-            this.menu_EmprestimoLivroDidatico.Name = "menu_EmprestimoLivroDidatico";
-            this.menu_EmprestimoLivroDidatico.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.E)));
-            this.menu_EmprestimoLivroDidatico.Size = new System.Drawing.Size(252, 22);
-            this.menu_EmprestimoLivroDidatico.Text = "DE LIVRO DIDÁTICO";
-            this.menu_EmprestimoLivroDidatico.Click += new System.EventHandler(this.menu_EmprestimoLivroDidatico_Click);
-            // 
-            // menu_Temporario_LD
-            // 
-            this.menu_Temporario_LD.Name = "menu_Temporario_LD";
-            this.menu_Temporario_LD.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.E)));
-            this.menu_Temporario_LD.Size = new System.Drawing.Size(252, 22);
-            this.menu_Temporario_LD.Text = "TEMPORÁRIO LD";
-            this.menu_Temporario_LD.Click += new System.EventHandler(this.menu_Temporario_LD_Click);
-            // 
-            // dEVOLUÇÃOToolStripMenuItem
-            // 
-            this.dEVOLUÇÃOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_DevolucaoLivroLiterario,
-            this.menu_DevolucaoLivroDidatico});
-            this.dEVOLUÇÃOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.images;
-            this.dEVOLUÇÃOToolStripMenuItem.Name = "dEVOLUÇÃOToolStripMenuItem";
-            this.dEVOLUÇÃOToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.dEVOLUÇÃOToolStripMenuItem.Text = "DEVOLUÇÃO";
-            // 
-            // menu_DevolucaoLivroLiterario
-            // 
-            this.menu_DevolucaoLivroLiterario.Image = global::Controle_de_livros.Properties.Resources.images;
-            this.menu_DevolucaoLivroLiterario.Name = "menu_DevolucaoLivroLiterario";
-            this.menu_DevolucaoLivroLiterario.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D)));
-            this.menu_DevolucaoLivroLiterario.Size = new System.Drawing.Size(245, 22);
-            this.menu_DevolucaoLivroLiterario.Text = "DE LIVRO LITERÁRIO";
-            this.menu_DevolucaoLivroLiterario.Click += new System.EventHandler(this.menu_DevolucaoLivroLiterario_Click);
-            // 
-            // menu_DevolucaoLivroDidatico
-            // 
-            this.menu_DevolucaoLivroDidatico.Image = global::Controle_de_livros.Properties.Resources.images;
-            this.menu_DevolucaoLivroDidatico.Name = "menu_DevolucaoLivroDidatico";
-            this.menu_DevolucaoLivroDidatico.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.D)));
-            this.menu_DevolucaoLivroDidatico.Size = new System.Drawing.Size(245, 22);
-            this.menu_DevolucaoLivroDidatico.Text = "DE LIVRO DIDÁTICO";
-            this.menu_DevolucaoLivroDidatico.Click += new System.EventHandler(this.menu_DevolucaoLivroDidatico_Click);
+            this.menuQuantidadeLivrosCadastrados.Name = "menuQuantidadeLivrosCadastrados";
+            this.menuQuantidadeLivrosCadastrados.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.menuQuantidadeLivrosCadastrados.Size = new System.Drawing.Size(466, 22);
+            this.menuQuantidadeLivrosCadastrados.Text = "QUANTIDADE DE LIVROS CADASTRADOS";
+            this.menuQuantidadeLivrosCadastrados.Click += new System.EventHandler(this.MenuQuantidadeLivrosCadastrados_Click);
             // 
             // opçoesToolStripMenuItem
             // 
@@ -569,14 +578,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // menuQuantidadeLivrosCadastrados
-            // 
-            this.menuQuantidadeLivrosCadastrados.Name = "menuQuantidadeLivrosCadastrados";
-            this.menuQuantidadeLivrosCadastrados.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.menuQuantidadeLivrosCadastrados.Size = new System.Drawing.Size(466, 22);
-            this.menuQuantidadeLivrosCadastrados.Text = "QUANTIDADE DE LIVROS CADASTRADOS";
-            this.menuQuantidadeLivrosCadastrados.Click += new System.EventHandler(this.MenuQuantidadeLivrosCadastrados_Click);
             // 
             // FrmTelaPrincipal
             // 

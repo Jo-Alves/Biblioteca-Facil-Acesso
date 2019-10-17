@@ -14,7 +14,7 @@ namespace Controle_de_livros
 {
     public partial class FrmAnaliseLivroMaisEmprestado : Form
     {
-        string stringConn = Security.Dry(System.Configuration.ConfigurationSettings.AppSettings["CadeiaConexao"]), _sql, opcao;
+        string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), _sql, opcao;
 
         public FrmAnaliseLivroMaisEmprestado()
         {

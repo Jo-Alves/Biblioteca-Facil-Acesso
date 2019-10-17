@@ -15,6 +15,7 @@ namespace Controle_de_livros
     public partial class FrmBuscarLivroDidatico : Form
     {
         string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), _sql;
+        bool botãoBuscarAcionado = false;
 
         public int registro { get; set; }
         public string disciplina { get; set; }
@@ -61,7 +62,10 @@ namespace Controle_de_livros
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (registro >= 1)
+            {
+                botãoBuscarAcionado = true;
                 Close();
+            }
             else
                 MessageBox.Show("Selecione o dado a ser confirmado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
@@ -76,6 +80,7 @@ namespace Controle_de_livros
                 autor = linhas.Cells[2].Value.ToString();
                 ensino = linhas.Cells[3].Value.ToString();
                 volume = linhas.Cells[4].Value.ToString();
+                botãoBuscarAcionado = true;
                 Close();
             }
         }
@@ -105,6 +110,14 @@ namespace Controle_de_livros
             if (e.KeyCode == Keys.Enter)
             {
                 btn_Pesquisar_Click(sender, e);
+            }
+        }
+
+        private void FrmBuscarLivroDidatico_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!botãoBuscarAcionado)
+            {
+                registro = 0;
             }
         }
 

@@ -95,12 +95,15 @@ namespace Controle_de_livros
                 numero = row.Cells["ColNumero"].Value.ToString();
                 fone = row.Cells["ColFone"].Value.ToString();
                 ocupacao = row.Cells["ColOcupacao"].Value.ToString();
+                botãoBuscarAcionado = true;
                 Close();
             }
         }
 
+        bool botãoBuscarAcionado = false;
+
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
+        {  
             Codigo = 0;
             Close();
         }
@@ -108,14 +111,17 @@ namespace Controle_de_livros
         private void btnOk_Click(object sender, EventArgs e)
         {
             if (Codigo >= 1)
+            {
+                botãoBuscarAcionado = true;
                 Close();
+            }
             else
                 MessageBox.Show("Selecione o dado a ser confirmado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void dgv_Busca_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= -1)
+            if (e.RowIndex > -1)
             {
                 Codigo = int.Parse(dgv_Busca[0, e.RowIndex].Value.ToString());
                 nome = dgv_Busca[1, e.RowIndex].Value.ToString();
@@ -140,6 +146,14 @@ namespace Controle_de_livros
             if (e.KeyCode == Keys.Enter)
             {
                 btn_Pesquisar_Click(sender, e);
+            }
+        }
+
+        private void FrmBuscarUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!botãoBuscarAcionado)
+            {
+                Codigo = 0;
             }
         }
 

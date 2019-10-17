@@ -11,7 +11,7 @@ namespace Controle_de_livros
 {
     class Usuario
     {
-        string stringConn = Security.Dry(System.Configuration.ConfigurationSettings.AppSettings["CadeiaConexao"]);
+        string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
 
         private int Codigo;
         private string Nome;
@@ -65,7 +65,7 @@ namespace Controle_de_livros
 
         public bool Cadastrar()
         {
-            string stringConn = Security.Dry(System.Configuration.ConfigurationSettings.AppSettings["CadeiaConexao"]);
+            string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
             SqlConnection conexao = new SqlConnection(stringConn);
             string _SQl = "INSERT INTO Usuario VALUES (@Nome, @Ano, @Turma, @Endereco, @Numero, @Telefone, @Ocupacao)";
             SqlCommand comando = new SqlCommand(_SQl, conexao);
