@@ -13,9 +13,9 @@ using Controle_de_livros.Properties;
 
 namespace Controle_de_livros
 {
-    public partial class FORMULARIO_AUTENTICACAO : Form
+    public partial class FrmAutenticacao : Form
     {
-        public FORMULARIO_AUTENTICACAO()
+        public FrmAutenticacao()
         {
             InitializeComponent();
         }
@@ -209,7 +209,7 @@ namespace Controle_de_livros
 
         private void link_Cadastro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cadastrar_login_e_senha CLS = new Cadastrar_login_e_senha();
+            FrmCadastrarLogin CLS = new FrmCadastrarLogin();
             CLS.ShowDialog();
         }
 

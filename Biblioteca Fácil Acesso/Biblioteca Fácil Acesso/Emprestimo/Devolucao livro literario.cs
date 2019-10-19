@@ -193,7 +193,7 @@ namespace Controle_de_livros
             {
                 try
                 {
-                    Emprestimo_Livro_Literario Ell = new Emprestimo_Livro_Literario();
+                    EmprestimoLivroLiterario Ell = new EmprestimoLivroLiterario();
                     Ell._Codigo = int.Parse(txt_Buscar.Text);
                     Ell._Entrega = DataEntrega;
                     Ell._Solicitacao = lbl_DataSolicitacao.Text;

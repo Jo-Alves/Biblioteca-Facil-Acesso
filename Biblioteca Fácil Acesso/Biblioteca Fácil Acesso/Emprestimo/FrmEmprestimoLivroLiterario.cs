@@ -24,7 +24,7 @@ namespace Controle_de_livros
         int registro, countLinhas, qtdLivrosEmprestados;
         string titulo, autor, genero;
         Livro_Literario livroLiterario = new Livro_Literario();
-        Emprestimo_Livro_Literario Emprestimo_Livro_Literario = new Emprestimo_Livro_Literario();
+        EmprestimoLivroLiterario Emprestimo_Livro_Literario = new EmprestimoLivroLiterario();
 
         private void FrmEmprestimoLivro_Load(object sender, EventArgs e)
         {
@@ -76,7 +76,7 @@ namespace Controle_de_livros
                             if (qtdLivrosEmprestados == 0)
                                 MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livros!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             else
-                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos, altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             txtRegistro.Clear();
                         }
                         else

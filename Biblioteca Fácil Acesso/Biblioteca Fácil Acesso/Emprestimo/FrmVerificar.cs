@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace Controle_de_livros
 {
-    public partial class Verificar : Form
+    public partial class FrmVerificar : Form
     {
-        public Verificar()
+        public FrmVerificar()
         {
             InitializeComponent();
         }
-        public Verificar(int codigo)
+        public FrmVerificar(int codigo)
         {
             InitializeComponent();
             try

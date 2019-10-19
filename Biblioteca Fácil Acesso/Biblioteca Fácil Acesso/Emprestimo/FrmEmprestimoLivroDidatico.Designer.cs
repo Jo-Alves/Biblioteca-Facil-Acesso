@@ -34,6 +34,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvLivro = new System.Windows.Forms.DataGridView();
+            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuRemover = new System.Windows.Forms.ToolStripMenuItem();
             this.btnRemover = new System.Windows.Forms.Button();
@@ -58,11 +63,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
@@ -130,6 +130,44 @@
             this.dgvLivro.Size = new System.Drawing.Size(691, 270);
             this.dgvLivro.TabIndex = 0;
             this.dgvLivro.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvLivro_DataBindingComplete);
+            // 
+            // ColRegistro
+            // 
+            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColRegistro.HeaderText = "Registro";
+            this.ColRegistro.Name = "ColRegistro";
+            this.ColRegistro.ReadOnly = true;
+            this.ColRegistro.Width = 84;
+            // 
+            // ColDisciplina
+            // 
+            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDisciplina.HeaderText = "Disciplina";
+            this.ColDisciplina.Name = "ColDisciplina";
+            this.ColDisciplina.ReadOnly = true;
+            // 
+            // ColAutor
+            // 
+            this.ColAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColAutor.HeaderText = "Autor";
+            this.ColAutor.Name = "ColAutor";
+            this.ColAutor.ReadOnly = true;
+            // 
+            // ColEnsino
+            // 
+            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEnsino.HeaderText = "Ensino";
+            this.ColEnsino.Name = "ColEnsino";
+            this.ColEnsino.ReadOnly = true;
+            this.ColEnsino.Width = 74;
+            // 
+            // ColVolume
+            // 
+            this.ColVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColVolume.HeaderText = "Volume";
+            this.ColVolume.Name = "ColVolume";
+            this.ColVolume.ReadOnly = true;
+            this.ColVolume.Width = 79;
             // 
             // contextMenuStrip
             // 
@@ -376,44 +414,6 @@
             this.txtNome.Size = new System.Drawing.Size(437, 26);
             this.txtNome.TabIndex = 3;
             // 
-            // ColRegistro
-            // 
-            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColRegistro.HeaderText = "Registro";
-            this.ColRegistro.Name = "ColRegistro";
-            this.ColRegistro.ReadOnly = true;
-            this.ColRegistro.Width = 84;
-            // 
-            // ColDisciplina
-            // 
-            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDisciplina.HeaderText = "Disciplina";
-            this.ColDisciplina.Name = "ColDisciplina";
-            this.ColDisciplina.ReadOnly = true;
-            // 
-            // ColAutor
-            // 
-            this.ColAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColAutor.HeaderText = "Autor";
-            this.ColAutor.Name = "ColAutor";
-            this.ColAutor.ReadOnly = true;
-            // 
-            // ColEnsino
-            // 
-            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColEnsino.HeaderText = "Ensino";
-            this.ColEnsino.Name = "ColEnsino";
-            this.ColEnsino.ReadOnly = true;
-            this.ColEnsino.Width = 74;
-            // 
-            // ColVolume
-            // 
-            this.ColVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColVolume.HeaderText = "Volume";
-            this.ColVolume.Name = "ColVolume";
-            this.ColVolume.ReadOnly = true;
-            this.ColVolume.Width = 79;
-            // 
             // FrmEmprestimoLivroDidatico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -432,7 +432,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEmprestimoLivroDidatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Emprestimo de livros";
+            this.Text = "Emprestimo de livros Didáticos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEmprestimoLivro_FormClosing);
             this.Load += new System.EventHandler(this.FrmEmprestimoLivro_Load);

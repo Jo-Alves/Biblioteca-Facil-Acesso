@@ -82,7 +82,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou erro na busca do livro com a mesma disciplina.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("O Aluno/Funcionario/Outro já tem este livro. Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else

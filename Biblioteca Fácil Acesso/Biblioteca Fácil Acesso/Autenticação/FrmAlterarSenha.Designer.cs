@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_livros
 {
-    partial class Alterar_Senha
+    partial class FrmAlterarSenha
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alterar_Senha));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlterarSenha));
             this.label5 = new System.Windows.Forms.Label();
             this.txt_SenhaRedefinir = new System.Windows.Forms.TextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);

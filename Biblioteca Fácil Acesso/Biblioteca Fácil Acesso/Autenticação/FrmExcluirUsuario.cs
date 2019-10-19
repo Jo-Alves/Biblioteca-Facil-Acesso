@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Controle_de_livros
 {
-    public partial class Excluir_Usuario : Form
+    public partial class FrmExcluirUsuario : Form
     {
-        public Excluir_Usuario()
+        public FrmExcluirUsuario()
         {
             InitializeComponent();
         }

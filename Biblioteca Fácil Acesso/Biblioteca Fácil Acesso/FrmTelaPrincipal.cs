@@ -118,13 +118,13 @@ namespace Controle_de_livros
 
         private void menu_AlterarLogin_Click(object sender, EventArgs e)
         {
-            Alterar_Senha AS = new Alterar_Senha();
+            FrmAlterarSenha AS = new FrmAlterarSenha();
             AS.ShowDialog();
         }
 
         private void menu_ExcluirLogin_Click(object sender, EventArgs e)
         {
-            Excluir_Usuario EU = new Excluir_Usuario();
+            FrmExcluirUsuario EU = new FrmExcluirUsuario();
             EU.ShowDialog();
         }
 
@@ -142,13 +142,13 @@ namespace Controle_de_livros
 
         private void menu_CadastrarLogin_Click_1(object sender, EventArgs e)
         {
-            Cadastrar_login_e_senha cls = new Cadastrar_login_e_senha();
+            FrmCadastrarLogin cls = new FrmCadastrarLogin();
             cls.Show();
         }
 
         private void menu_Temporario_LD_Click(object sender, EventArgs e)
         {
-            Emprestimo_Livro_DidaticoTemporaria epdt = new Emprestimo_Livro_DidaticoTemporaria();
+            FrmEmprestimoLivroDidaticoTemporaria epdt = new FrmEmprestimoLivroDidaticoTemporaria();
             epdt.ShowDialog();
         }
 
@@ -270,6 +270,24 @@ namespace Controle_de_livros
         {
             FrmEmprestimoLivroLiterario emprestimoLivro = new FrmEmprestimoLivroLiterario();
             emprestimoLivro.ShowDialog();
+        }
+
+        private void menu_CadastrarLogin_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarLogin cadastrarLogin = new FrmCadastrarLogin();
+            cadastrarLogin.ShowDialog();
+        }
+
+        private void menuAlterarSenha_Click(object sender, EventArgs e)
+        {
+            FrmAlterarSenha alterarSenha = new FrmAlterarSenha();
+            alterarSenha.ShowDialog();
+        }
+
+        private void menuExcluirLogin_Click(object sender, EventArgs e)
+        {
+            FrmExcluirUsuario excluirUsuario = new FrmExcluirUsuario();
+            excluirUsuario.ShowDialog();
         }
     }
 }

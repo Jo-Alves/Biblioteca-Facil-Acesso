@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Controle_de_livros
 {
-    public partial class Emprestimo_Livro_DidaticoTemporaria : Form
+    public partial class FrmEmprestimoLivroDidaticoTemporaria : Form
     {
-        public Emprestimo_Livro_DidaticoTemporaria()
+        public FrmEmprestimoLivroDidaticoTemporaria()
         {
             InitializeComponent();
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using ClassProject;
 namespace Controle_de_livros
 {
-    class Emprestimo_Livro_Literario
+    class EmprestimoLivroLiterario
     {
         string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
         string _sql;

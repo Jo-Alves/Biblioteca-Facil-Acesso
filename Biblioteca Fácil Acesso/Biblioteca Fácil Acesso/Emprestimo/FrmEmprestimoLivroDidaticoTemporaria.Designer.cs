@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_livros
 {
-    partial class Emprestimo_Livro_DidaticoTemporaria
+    partial class FrmEmprestimoLivroDidaticoTemporaria
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Emprestimo_Livro_DidaticoTemporaria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEmprestimoLivroDidaticoTemporaria));
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_EfetuaEmprestimo = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();

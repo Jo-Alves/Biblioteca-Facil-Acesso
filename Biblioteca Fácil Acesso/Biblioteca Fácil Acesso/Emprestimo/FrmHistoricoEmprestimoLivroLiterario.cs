@@ -12,7 +12,7 @@ namespace Controle_de_livros
 {
     public partial class FrmHistoricoEmprestimoLiterario : Form
     {
-        Emprestimo_Livro_Literario emprestimo_Livro_Literario = new Emprestimo_Livro_Literario();
+        EmprestimoLivroLiterario emprestimo_Livro_Literario = new EmprestimoLivroLiterario();
         public FrmHistoricoEmprestimoLiterario(string id, int qtdLivros)
         {
             InitializeComponent();

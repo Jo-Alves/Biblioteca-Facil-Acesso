@@ -29,7 +29,7 @@ namespace Controle_de_livros
                 Tempo.Enabled = false;
                 if (!string.IsNullOrEmpty(Settings.Default["Instituicao"].ToString()))
                 {
-                    FORMULARIO_AUTENTICACAO FA = new FORMULARIO_AUTENTICACAO();
+                    FrmAutenticacao FA = new FrmAutenticacao();
                     FA.Show();
                     this.Visible = false;
                 }
@@ -39,7 +39,7 @@ namespace Controle_de_livros
                     instituicao.ShowDialog();
                     if (!string.IsNullOrEmpty(Settings.Default["Instituicao"].ToString()))
                     {
-                        FORMULARIO_AUTENTICACAO FA = new FORMULARIO_AUTENTICACAO();
+                        FrmAutenticacao FA = new FrmAutenticacao();
                         FA.Show();
                         this.Visible = false;
                     }

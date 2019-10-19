@@ -79,6 +79,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lOGINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_CadastrarLogin = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAlterarSenha = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExcluirLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -107,7 +111,8 @@
             this.uSUARIOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_Cadastrar,
             this.menuCadastroInstituicao,
-            this.menu_Livro});
+            this.menu_Livro,
+            this.lOGINToolStripMenuItem});
             this.uSUARIOToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.User_Group_icon1;
             this.uSUARIOToolStripMenuItem.Name = "uSUARIOToolStripMenuItem";
             this.uSUARIOToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
@@ -118,8 +123,8 @@
             this.menu_Cadastrar.Image = global::Controle_de_livros.Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             this.menu_Cadastrar.Name = "menu_Cadastrar";
             this.menu_Cadastrar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.menu_Cadastrar.Size = new System.Drawing.Size(252, 22);
-            this.menu_Cadastrar.Text = "Aluno/Funcionário/Outro";
+            this.menu_Cadastrar.Size = new System.Drawing.Size(285, 22);
+            this.menu_Cadastrar.Text = "ALUNO/FUNCIONÁRIO/OUTRO";
             this.menu_Cadastrar.Click += new System.EventHandler(this.menu_CadastroAlunoFuncionarioOutros_Click);
             // 
             // menuCadastroInstituicao
@@ -127,7 +132,7 @@
             this.menuCadastroInstituicao.Image = global::Controle_de_livros.Properties.Resources.company_building_icon__128px_;
             this.menuCadastroInstituicao.Name = "menuCadastroInstituicao";
             this.menuCadastroInstituicao.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.menuCadastroInstituicao.Size = new System.Drawing.Size(252, 22);
+            this.menuCadastroInstituicao.Size = new System.Drawing.Size(285, 22);
             this.menuCadastroInstituicao.Text = "INSTITUIÇÃO";
             this.menuCadastroInstituicao.Click += new System.EventHandler(this.MenuCadastroInstituicao_Click);
             // 
@@ -140,7 +145,7 @@
             this.menu_Livro.Name = "menu_Livro";
             this.menu_Livro.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.C)));
-            this.menu_Livro.Size = new System.Drawing.Size(252, 22);
+            this.menu_Livro.Size = new System.Drawing.Size(285, 22);
             this.menu_Livro.Text = "LIVROS";
             // 
             // menu_LivroLiterario
@@ -428,7 +433,7 @@
             this.settingsToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.Settings_icon;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
             this.settingsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.settingsToolStripMenuItem.Text = "Settings";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
@@ -579,6 +584,43 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lOGINToolStripMenuItem
+            // 
+            this.lOGINToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_CadastrarLogin,
+            this.menuAlterarSenha,
+            this.menuExcluirLogin});
+            this.lOGINToolStripMenuItem.Image = global::Controle_de_livros.Properties.Resources.save_key_icon;
+            this.lOGINToolStripMenuItem.Name = "lOGINToolStripMenuItem";
+            this.lOGINToolStripMenuItem.Size = new System.Drawing.Size(285, 22);
+            this.lOGINToolStripMenuItem.Text = "LOGIN";
+            // 
+            // menu_CadastrarLogin
+            // 
+            this.menu_CadastrarLogin.Name = "menu_CadastrarLogin";
+            this.menu_CadastrarLogin.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
+            this.menu_CadastrarLogin.Size = new System.Drawing.Size(237, 22);
+            this.menu_CadastrarLogin.Text = "CADASTRAR LOGIN";
+            this.menu_CadastrarLogin.Click += new System.EventHandler(this.menu_CadastrarLogin_Click);
+            // 
+            // menuAlterarSenha
+            // 
+            this.menuAlterarSenha.Name = "menuAlterarSenha";
+            this.menuAlterarSenha.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Y)));
+            this.menuAlterarSenha.Size = new System.Drawing.Size(237, 22);
+            this.menuAlterarSenha.Text = "ALTERAR SENHA";
+            this.menuAlterarSenha.Click += new System.EventHandler(this.menuAlterarSenha_Click);
+            // 
+            // menuExcluirLogin
+            // 
+            this.menuExcluirLogin.Name = "menuExcluirLogin";
+            this.menuExcluirLogin.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.Y)));
+            this.menuExcluirLogin.Size = new System.Drawing.Size(237, 22);
+            this.menuExcluirLogin.Text = "EXCLUIR LOGIN";
+            this.menuExcluirLogin.Click += new System.EventHandler(this.menuExcluirLogin_Click);
+            // 
             // FrmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,5 +701,9 @@
         private System.Windows.Forms.ToolStripMenuItem menu_LivroDidatico;
         private System.Windows.Forms.ToolStripMenuItem menuCadastroInstituicao;
         private System.Windows.Forms.ToolStripMenuItem menuQuantidadeLivrosCadastrados;
+        private System.Windows.Forms.ToolStripMenuItem lOGINToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menu_CadastrarLogin;
+        private System.Windows.Forms.ToolStripMenuItem menuAlterarSenha;
+        private System.Windows.Forms.ToolStripMenuItem menuExcluirLogin;
     }
 }

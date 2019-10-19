@@ -505,24 +505,19 @@ C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Controle de livros\Controle de livros\obj\Debug\Controle_de_livros.FrmCarregando.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.csprojAssemblyReference.cache
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.exe.config
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Alterar_Senha.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Backup.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmBuscarLivrosGenero.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmBuscarLivrosAutor.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmBuscarLivrosLiterarios.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.BFrmBuscarUsuáriosLivros.resources
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Cadastrar_login_e_senha.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmBuscarSituacaoUsuarioAluno.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmLivroDidatico.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmLivroLiterario.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmCadastroUsuarios.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.CadastroPrimeiroAcesso.resources
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Emprestimo_Livro_DidaticoTemporaria.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Devolucao_livro_didatico.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Devolucao_livro_literario.resources
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Excluir_Usuario.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmCarregando.resources
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FORMULARIO_AUTENTICACAO.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmAnaliseLivroMaisEmprestado.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmAnaliseUsuarioMaisLeu.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmBuscaLivroLiterario.resources
@@ -542,7 +537,6 @@ C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Bibli
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Relatorio_Livros_Didaticos_Nao_Entregues.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Relatório_Livros_Literários_Nao_Entregues.resources
-C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.Verificar.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmVerificarLivrosDidaticosEmprestados.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmVerificarLivroLiterarioEmprestado.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.RestauracaoSistema.resources
@@ -669,3 +663,9 @@ C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Bibli
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmEmprestimoLivroLiterario.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmHistoricoEmprestimoDidatico.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmHistoricoEmprestimoLiterario.resources
+C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmAlterarSenha.resources
+C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmCadastrarLogin.resources
+C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmEmprestimoLivroDidaticoTemporaria.resources
+C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmExcluirUsuario.resources
+C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmAutenticacao.resources
+C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmVerificar.resources

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Controle_de_livros
 {
-    public partial class Cadastrar_login_e_senha : Form
+    public partial class FrmCadastrarLogin : Form
     {
-        public Cadastrar_login_e_senha()
+        public FrmCadastrarLogin()
         {
             InitializeComponent();
         }

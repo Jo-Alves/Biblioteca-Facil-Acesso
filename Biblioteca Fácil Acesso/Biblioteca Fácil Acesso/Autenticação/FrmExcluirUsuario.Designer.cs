@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_livros
 {
-    partial class Excluir_Usuario
+    partial class FrmExcluirUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Excluir_Usuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExcluirUsuario));
             this.btn_Excluir = new System.Windows.Forms.Button();
             this.btn_Sair = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();

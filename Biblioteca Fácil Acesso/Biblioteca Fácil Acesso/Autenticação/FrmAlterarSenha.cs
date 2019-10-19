@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Controle_de_livros
 {
-    public partial class Alterar_Senha : Form
+    public partial class FrmAlterarSenha : Form
     {
-        public Alterar_Senha()
+        public FrmAlterarSenha()
         {
             InitializeComponent();
         }
