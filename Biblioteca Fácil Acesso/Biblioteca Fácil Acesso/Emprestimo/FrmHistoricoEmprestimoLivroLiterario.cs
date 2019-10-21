@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Controle_de_livros
@@ -13,12 +7,20 @@ namespace Controle_de_livros
     public partial class FrmHistoricoEmprestimoLiterario : Form
     {
         EmprestimoLivroLiterario emprestimo_Livro_Literario = new EmprestimoLivroLiterario();
-        public FrmHistoricoEmprestimoLiterario(string id, int qtdLivros)
+        public FrmHistoricoEmprestimoLiterario(string id, string nome, int qtdLivros)
         {
             InitializeComponent();
+            lblUsuario.Text = "Aluno/Funcionário/Outro: " + id + " - " + nome;
             emprestimo_Livro_Literario._Codigo = int.Parse(id);
             lblQuantidadeLivrosEmprestados.Text += qtdLivros + " livro(s)";
-            dgvHistorico.DataSource = emprestimo_Livro_Literario.BuscarLivrosLiterariosEmprestados();
+            foreach (DataRow dataRow in emprestimo_Livro_Literario.BuscarLivrosLiterariosEmprestados().Rows)
+            {
+                int newRow = dgvHistorico.Rows.Add();
+                dgvHistorico.Rows[newRow].Cells["ColRegistro"].Value = dataRow["N_Registro"].ToString();
+                dgvHistorico.Rows[newRow].Cells["ColTitulo"].Value = dataRow["Titulo"].ToString();
+                dgvHistorico.Rows[newRow].Cells["ColAutor"].Value = dataRow["Autor"].ToString();
+                dgvHistorico.Rows[newRow].Cells["ColGenero"].Value = dataRow["Genero"].ToString();
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)

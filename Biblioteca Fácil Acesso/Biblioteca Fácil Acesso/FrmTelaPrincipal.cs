@@ -106,14 +106,14 @@ namespace Controle_de_livros
 
         private void menu_DevolucaoLivroLiterario_Click(object sender, EventArgs e)
         {
-            Devolucao_livro_literario DL = new Devolucao_livro_literario();
-            DL.ShowDialog();
+            FrmDevolucaoLivrosLiterarios devolucaoLivros = new FrmDevolucaoLivrosLiterarios();
+            devolucaoLivros.ShowDialog();
         }
 
         private void menu_DevolucaoLivroDidatico_Click(object sender, EventArgs e)
         {
-            Devolucao_livro_didatico DD = new Devolucao_livro_didatico();
-            DD.ShowDialog();
+          FrmDevolucaoLivrosDidatico devolucaoLivrosDidatico = new FrmDevolucaoLivrosDidatico();
+            devolucaoLivrosDidatico.ShowDialog();
         }
 
         private void menu_AlterarLogin_Click(object sender, EventArgs e)

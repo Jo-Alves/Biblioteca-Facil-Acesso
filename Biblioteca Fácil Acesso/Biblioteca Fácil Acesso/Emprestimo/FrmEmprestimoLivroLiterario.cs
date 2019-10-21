@@ -26,11 +26,6 @@ namespace Controle_de_livros
         Livro_Literario livroLiterario = new Livro_Literario();
         EmprestimoLivroLiterario Emprestimo_Livro_Literario = new EmprestimoLivroLiterario();
 
-        private void FrmEmprestimoLivro_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtRegistro.Text))
@@ -268,7 +263,7 @@ namespace Controle_de_livros
 
         private void btnVerHistorico_Click(object sender, EventArgs e)
         {
-            FrmHistoricoEmprestimoLiterario historico = new FrmHistoricoEmprestimoLiterario(lblCodigo.Text, qtdLivrosEmprestados);
+            FrmHistoricoEmprestimoLiterario historico = new FrmHistoricoEmprestimoLiterario(lblCodigo.Text, txtNome.Text, qtdLivrosEmprestados);
             historico.ShowDialog();
         }
 
@@ -322,6 +317,7 @@ namespace Controle_de_livros
                 {
                     btnVerHistorico.Enabled = false;
                 }
+                dgvLivro.Rows.Clear();
             }
         }
 

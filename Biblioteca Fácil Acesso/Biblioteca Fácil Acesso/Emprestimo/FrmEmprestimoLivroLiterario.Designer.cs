@@ -425,7 +425,6 @@
             this.Text = "Emprestimo de livros literarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEmprestimoLivro_FormClosing);
-            this.Load += new System.EventHandler(this.FrmEmprestimoLivro_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmEmprestimoLivro_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

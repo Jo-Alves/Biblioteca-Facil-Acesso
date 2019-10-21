@@ -48,6 +48,30 @@ namespace Controle_de_livros
             set { Entrega = value; }
         }
 
+        public DataTable BuscarEmprestimo()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            _sql = "select * from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro  where Emprestimo.Cod_Usuario = @Codigo and Emprestimo.Data_Entrega = ''";
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.Parameters.AddWithValue("@Codigo", _Codigo);
+            adapter.SelectCommand.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                return table;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
         public bool EfetuarEmprestimo()
         {
             conexao = new SqlConnection(stringConn);
@@ -73,10 +97,10 @@ namespace Controle_de_livros
                 conexao.Close();
             }
         }
-        public bool DevolverEmprestimo()
+        public bool efetuarDevolucao()
         {
             conexao = new SqlConnection(stringConn);
-            _sql = "UPDATE Emprestimo_Livro_Didatico SET Data_Entrega = @Entrega WHERE Cod_Usuario = @Codigo OR N_Registro = @Registro";
+            _sql = "UPDATE Emprestimo_Livro_Didatico SET Data_Entrega = @Entrega WHERE N_Registro = @Registro";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.Parameters.AddWithValue("@Codigo", _Codigo);
             comando.Parameters.AddWithValue("@Registro", _Registro);
@@ -130,7 +154,7 @@ namespace Controle_de_livros
         public DataTable BuscarLivrosDidaticosEmprestados()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            _sql = "select Disciplina, Autor, Ensino, Volume from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro  where Emprestimo.Cod_Usuario = @Codigo and Emprestimo.Data_Entrega = ''";
+            _sql = "select * from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro  where Emprestimo.Cod_Usuario = @Codigo and Emprestimo.Data_Entrega = ''";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.Parameters.AddWithValue("@Codigo", _Codigo);
             adapter.SelectCommand.CommandText = _sql;
@@ -140,6 +164,36 @@ namespace Controle_de_livros
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 return table;
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public bool VerificarLivrosEmprestados()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            string _sql = "select * from Emprestimo_Livro_Didatico inner join Livro_Didatico on Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro where Livro_Didatico.N_Registro = @Registro and Emprestimo_Livro_Didatico.Data_Entrega = ''";
+            SqlCommand comando = new SqlCommand(_sql, conexao);            
+            comando.Parameters.AddWithValue("@Registro", _Registro);
+            comando.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch
             {

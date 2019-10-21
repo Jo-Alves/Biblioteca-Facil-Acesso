@@ -61,46 +61,52 @@ namespace Controle_de_livros
 
         private void AdicionarItens()
         {
-            if (!string.IsNullOrEmpty(lblCodigo.Text))
+            emprestimoLivroDidatico._Registro = registro;
+            if (!emprestimoLivroDidatico.VerificarLivrosEmprestados())
             {
-                emprestimoLivroDidatico._Registro = registro;
-                if (VerificarLivrosEmprestados() == false)
+                if (!string.IsNullOrEmpty(lblCodigo.Text))
                 {
-                    verificarDuplicidade();
-                    if (duplicata == true)
+                    if (VerificarLivrosEmprestados() == false)
                     {
-                        MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        duplicata = false;
+                        verificarDuplicidade();
+                        if (duplicata == true)
+                        {
+                            MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            duplicata = false;
+                        }
+                        else
+                        {
+                            dgvLivro.Rows.Add(registro, Disciplina, autor, ensino, volume);
+                            txtRegistro.Clear();
+                            txtRegistro.Focus();
+                            dgvLivro.ClearSelection();
+                        }
                     }
                     else
                     {
-                        dgvLivro.Rows.Add(registro, Disciplina, autor, ensino, volume);
-                        txtRegistro.Clear();
-                        txtRegistro.Focus();
-                        dgvLivro.ClearSelection();
+                        MessageBox.Show("O Aluno/Funcionario/Outro já tem este livro. Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("O Aluno/Funcionario/Outro já tem este livro. Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    errorProvider.Clear();
+                    errorProvider.SetError(txtNome, "Informe aqui");
+                    txtNome.Focus();
+                    return;
                 }
             }
             else
-            {
-                MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                errorProvider.Clear();
-                errorProvider.SetError(txtNome, "Informe aqui");
-                txtNome.Focus();
-                return;
-            }
+                MessageBox.Show("O livro com este registro já foi emprestado. Verifique se não houve erro de digitação ou erro na seleção da busca.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public bool VerificarLivrosEmprestados()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _sql = "select * from Emprestimo_Livro_Didatico inner join Livro_Didatico on Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro where Livro_Didatico.Disciplina = @Disciplina and Emprestimo_Livro_Didatico.Data_Entrega = ''";
+            string _sql = "select * from Emprestimo_Livro_Didatico inner join Livro_Didatico on Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro where Livro_Didatico.Disciplina = @Disciplina and Cod_Usuario = @Codigo and Emprestimo_Livro_Didatico.Data_Entrega = ''";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.Parameters.AddWithValue("@Disciplina", Disciplina);
+            comando.Parameters.AddWithValue("@Codigo", lblCodigo.Text);
             comando.CommandText = _sql;
             try
             {
@@ -131,7 +137,7 @@ namespace Controle_de_livros
         {
             for(int i = 0; i < dgvLivro.Rows.Count; i++)
             {
-                if(registro == int.Parse(dgvLivro.Rows[i].Cells["ColRegistro"].Value.ToString()))
+                if(Disciplina == dgvLivro.Rows[i].Cells["ColDisciplina"].Value.ToString())
                 {
                     duplicata =  true;
                     break;
@@ -240,7 +246,7 @@ namespace Controle_de_livros
             try
             {
                 for (int i = 0; i < dgvLivro.Rows.Count; i++)
-                {
+                {                   
                     emprestimoLivroDidatico._Registro = int.Parse(dgvLivro.Rows[i].Cells["ColRegistro"].Value.ToString());
                     emprestimoLivroDidatico._Codigo = int.Parse(lblCodigo.Text);
                     emprestimoLivroDidatico._Entrega = "";
@@ -291,7 +297,7 @@ namespace Controle_de_livros
 
         private void btnVerHistorico_Click(object sender, EventArgs e)
         {
-            FrmHistoricoEmprestimoDidatico historico = new FrmHistoricoEmprestimoDidatico(lblCodigo.Text, qtdLivrosEmprestados);
+            FrmHistoricoEmprestimoDidatico historico = new FrmHistoricoEmprestimoDidatico(lblCodigo.Text, txtNome.Text, qtdLivrosEmprestados);
             historico.ShowDialog();
         }
 
@@ -345,6 +351,7 @@ namespace Controle_de_livros
                 {
                     btnVerHistorico.Enabled = false;
                 }
+                dgvLivro.Rows.Clear();
             }
         }
 
