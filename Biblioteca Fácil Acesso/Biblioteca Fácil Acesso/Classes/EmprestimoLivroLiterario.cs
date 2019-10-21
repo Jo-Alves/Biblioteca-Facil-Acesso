@@ -17,6 +17,7 @@ namespace Controle_de_livros
         private int Registro;
         private string Solicitacao;
         private string Entrega;
+        private string PrazoEntrega;
 
         public int _Codigo
         {
@@ -33,22 +34,29 @@ namespace Controle_de_livros
             get { return Solicitacao; }
             set { Solicitacao = value; }
         }
+
+        public string _PrazoEntrega
+        {
+            get { return PrazoEntrega; }
+            set { PrazoEntrega = value; }
+        }
         public string _Entrega
         {
             get { return Entrega; }
             set { Entrega = value; }
         }
+        
 
         public void efetuarEmprestino()
         {
-
             SqlConnection conexao = new SqlConnection(stringConn);
-            _sql = "INSERT INTO Emprestimo_Livro_Literario (N_Registro, Cod_Usuario, Data_Solicitacao, Data_Entrega) VALUES (@Registro, @Codigo, @Solicitacao, @Entrega)";
+            _sql = "INSERT INTO Emprestimo_Livro_Literario (N_Registro, Cod_Usuario, Data_Solicitacao, Prazo_Entrega, Data_Entrega) VALUES (@Registro, @Codigo, @Solicitacao, @PrazoEntrega, @Entrega)";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.Parameters.AddWithValue("@Registro", _Registro);
             comando.Parameters.AddWithValue("@Codigo", _Codigo);
             comando.Parameters.AddWithValue("@Solicitacao", _Solicitacao);
             comando.Parameters.AddWithValue("@Entrega", _Entrega);
+            comando.Parameters.AddWithValue("@PrazoEntrega", _PrazoEntrega);
             comando.CommandText = _sql;
             try
             {

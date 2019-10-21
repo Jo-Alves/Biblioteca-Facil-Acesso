@@ -37,6 +37,7 @@
             this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -78,13 +79,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHistorico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorico.ColumnHeadersHeight = 30;
             this.dgvHistorico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColRegistro,
             this.ColDisciplina,
             this.ColAutor,
             this.ColEnsino,
-            this.ColVolume});
+            this.ColVolume,
+            this.ColSolicitacao});
             this.dgvHistorico.Location = new System.Drawing.Point(22, 37);
             this.dgvHistorico.MultiSelect = false;
             this.dgvHistorico.Name = "dgvHistorico";
@@ -136,6 +138,14 @@
             this.ColVolume.Name = "ColVolume";
             this.ColVolume.ReadOnly = true;
             this.ColVolume.Width = 79;
+            // 
+            // ColSolicitacao
+            // 
+            this.ColSolicitacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSolicitacao.HeaderText = "D. Solicitação";
+            this.ColSolicitacao.Name = "ColSolicitacao";
+            this.ColSolicitacao.ReadOnly = true;
+            this.ColSolicitacao.Width = 119;
             // 
             // btnSair
             // 
@@ -189,11 +199,12 @@
         private System.Windows.Forms.DataGridView dgvHistorico;
         private System.Windows.Forms.Label lblQuantidadeLivrosEmprestados;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDisciplina;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEnsino;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVolume;
-        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSolicitacao;
     }
 }

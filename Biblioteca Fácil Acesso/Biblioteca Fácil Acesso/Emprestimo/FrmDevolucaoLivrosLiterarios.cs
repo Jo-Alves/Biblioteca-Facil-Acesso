@@ -54,6 +54,7 @@ namespace Controle_de_livros
                 dgvDados.Rows[newRow].Cells[2].Value = item["Titulo"].ToString();
                 dgvDados.Rows[newRow].Cells[3].Value = item["Autor"].ToString();
                 dgvDados.Rows[newRow].Cells[4].Value = item["Data_Solicitacao"].ToString();
+                dgvDados.Rows[newRow].Cells[5].Value = item["Prazo_Entrega"].ToString();
             }
             dgvDados.ClearSelection();
             if (dgvDados.Rows.Count > 0)

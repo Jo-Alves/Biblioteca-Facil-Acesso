@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDevolucaoLivrosDidatico));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
-            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrazoEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
@@ -46,6 +40,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cbSelecionarTudo = new System.Windows.Forms.CheckBox();
             this.btnFinalizarDevolucao = new System.Windows.Forms.Button();
+            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -69,14 +68,14 @@
             this.dgvDados.AllowUserToDeleteRows = false;
             this.dgvDados.AllowUserToOrderColumns = true;
             this.dgvDados.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDados.ColumnHeadersHeight = 30;
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -84,8 +83,7 @@
             this.ColRegistro,
             this.ColDisciplina,
             this.ColEnsino,
-            this.ColDataSolicitacao,
-            this.ColPrazoEntrega});
+            this.ColDataSolicitacao});
             this.dgvDados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDados.Location = new System.Drawing.Point(3, 22);
             this.dgvDados.MultiSelect = false;
@@ -96,55 +94,6 @@
             this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellClick);
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             this.dgvDados.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDados_DataBindingComplete);
-            // 
-            // ColSelect
-            // 
-            this.ColSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColSelect.HeaderText = "";
-            this.ColSelect.Name = "ColSelect";
-            this.ColSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColSelect.Width = 19;
-            // 
-            // ColRegistro
-            // 
-            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColRegistro.HeaderText = "Registro";
-            this.ColRegistro.Name = "ColRegistro";
-            this.ColRegistro.ReadOnly = true;
-            this.ColRegistro.Width = 84;
-            // 
-            // ColDisciplina
-            // 
-            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDisciplina.HeaderText = "Disciplina";
-            this.ColDisciplina.Name = "ColDisciplina";
-            this.ColDisciplina.ReadOnly = true;
-            // 
-            // ColEnsino
-            // 
-            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColEnsino.HeaderText = "Ensino";
-            this.ColEnsino.Name = "ColEnsino";
-            this.ColEnsino.ReadOnly = true;
-            // 
-            // ColDataSolicitacao
-            // 
-            this.ColDataSolicitacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColDataSolicitacao.DataPropertyName = "Data_Solicitacao";
-            this.ColDataSolicitacao.HeaderText = "Data de Solicitação";
-            this.ColDataSolicitacao.Name = "ColDataSolicitacao";
-            this.ColDataSolicitacao.ReadOnly = true;
-            this.ColDataSolicitacao.Width = 152;
-            // 
-            // ColPrazoEntrega
-            // 
-            this.ColPrazoEntrega.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColPrazoEntrega.DataPropertyName = "PrazoEntrega";
-            this.ColPrazoEntrega.HeaderText = "Prazo de Entrega";
-            this.ColPrazoEntrega.Name = "ColPrazoEntrega";
-            this.ColPrazoEntrega.ReadOnly = true;
-            this.ColPrazoEntrega.Width = 138;
             // 
             // groupBox5
             // 
@@ -234,6 +183,46 @@
             this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
             this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
             // 
+            // ColSelect
+            // 
+            this.ColSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSelect.HeaderText = "";
+            this.ColSelect.Name = "ColSelect";
+            this.ColSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColSelect.Width = 19;
+            // 
+            // ColRegistro
+            // 
+            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColRegistro.HeaderText = "Registro";
+            this.ColRegistro.Name = "ColRegistro";
+            this.ColRegistro.ReadOnly = true;
+            this.ColRegistro.Width = 84;
+            // 
+            // ColDisciplina
+            // 
+            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDisciplina.HeaderText = "Disciplina";
+            this.ColDisciplina.Name = "ColDisciplina";
+            this.ColDisciplina.ReadOnly = true;
+            // 
+            // ColEnsino
+            // 
+            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColEnsino.HeaderText = "Ensino";
+            this.ColEnsino.Name = "ColEnsino";
+            this.ColEnsino.ReadOnly = true;
+            // 
+            // ColDataSolicitacao
+            // 
+            this.ColDataSolicitacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDataSolicitacao.DataPropertyName = "Data_Solicitacao";
+            this.ColDataSolicitacao.HeaderText = "Data de Solicitação";
+            this.ColDataSolicitacao.Name = "ColDataSolicitacao";
+            this.ColDataSolicitacao.ReadOnly = true;
+            this.ColDataSolicitacao.Width = 152;
+            // 
             // FrmDevolucaoLivrosDidatico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -278,6 +267,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDisciplina;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEnsino;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDataSolicitacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrazoEntrega;
     }
 }

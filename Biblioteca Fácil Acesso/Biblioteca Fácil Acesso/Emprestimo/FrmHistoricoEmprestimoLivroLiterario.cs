@@ -20,6 +20,8 @@ namespace Controle_de_livros
                 dgvHistorico.Rows[newRow].Cells["ColTitulo"].Value = dataRow["Titulo"].ToString();
                 dgvHistorico.Rows[newRow].Cells["ColAutor"].Value = dataRow["Autor"].ToString();
                 dgvHistorico.Rows[newRow].Cells["ColGenero"].Value = dataRow["Genero"].ToString();
+                dgvHistorico.Rows[newRow].Cells["ColPrazo"].Value = dataRow["Prazo_Entrega"].ToString();
+                dgvHistorico.Rows[newRow].Cells["ColSolicitacao"].Value = dataRow["Data_Solicitacao"].ToString();
             }
         }
 

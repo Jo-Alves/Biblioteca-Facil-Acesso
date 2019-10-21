@@ -186,7 +186,7 @@
             this.MaximizeBox = false;
             this.Name = "RelatorioLivrosLiterarioPorTurma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RelatorioLivrosLiterarioPorTurma";
+            this.Text = "RELATÓRIO DE LIVROS LITERÁRIO POR TURMA E ANO";
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivroLiterarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
             this.groupBox2.ResumeLayout(false);

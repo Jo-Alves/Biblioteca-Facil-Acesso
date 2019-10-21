@@ -32,12 +32,14 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
             this.dgvHistorico = new System.Windows.Forms.DataGridView();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSair = new System.Windows.Forms.Button();
-            this.lblUsuario = new System.Windows.Forms.Label();
+            this.ColSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             this.SuspendLayout();
@@ -77,12 +79,14 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvHistorico.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorico.ColumnHeadersHeight = 30;
             this.dgvHistorico.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColRegistro,
             this.ColTitulo,
             this.ColAutor,
-            this.ColGenero});
+            this.ColGenero,
+            this.ColSolicitacao,
+            this.ColPrazo});
             this.dgvHistorico.Location = new System.Drawing.Point(22, 37);
             this.dgvHistorico.MultiSelect = false;
             this.dgvHistorico.Name = "dgvHistorico";
@@ -93,6 +97,27 @@
             this.dgvHistorico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellClick);
             this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
             this.dgvHistorico.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvHistorico_DataBindingComplete);
+            // 
+            // btnSair
+            // 
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Location = new System.Drawing.Point(718, 439);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(118, 41);
+            this.btnSair.TabIndex = 1;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(40, 40);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(0, 19);
+            this.lblUsuario.TabIndex = 3;
             // 
             // ColRegistro
             // 
@@ -127,26 +152,17 @@
             this.ColGenero.ReadOnly = true;
             this.ColGenero.Width = 79;
             // 
-            // btnSair
+            // ColSolicitacao
             // 
-            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Location = new System.Drawing.Point(718, 439);
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(118, 41);
-            this.btnSair.TabIndex = 1;
-            this.btnSair.Text = "Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            this.ColSolicitacao.HeaderText = "D. Solicitação";
+            this.ColSolicitacao.Name = "ColSolicitacao";
+            this.ColSolicitacao.ReadOnly = true;
             // 
-            // lblUsuario
+            // ColPrazo
             // 
-            this.lblUsuario.AutoSize = true;
-            this.lblUsuario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuario.Location = new System.Drawing.Point(40, 40);
-            this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(0, 19);
-            this.lblUsuario.TabIndex = 3;
+            this.ColPrazo.HeaderText = "P. Entrega";
+            this.ColPrazo.Name = "ColPrazo";
+            this.ColPrazo.ReadOnly = true;
             // 
             // FrmHistoricoEmprestimoLiterario
             // 
@@ -179,10 +195,12 @@
         private System.Windows.Forms.DataGridView dgvHistorico;
         private System.Windows.Forms.Label lblQuantidadeLivrosEmprestados;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColGenero;
-        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSolicitacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrazo;
     }
 }

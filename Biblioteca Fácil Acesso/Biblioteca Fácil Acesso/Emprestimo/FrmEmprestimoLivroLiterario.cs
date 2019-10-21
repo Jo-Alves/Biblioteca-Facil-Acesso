@@ -179,8 +179,10 @@ namespace Controle_de_livros
             {
                 if(dgvLivro.Rows.Count > 0)
                 {
+                    GerarPrazoEmprestimo();
                     FinalizarEmprestimo();
                     MessageBox.Show("Operação efetuado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("A data limite de entrega é " + PrazoEntrega, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limparCampos();
                 }
                 else
@@ -196,6 +198,13 @@ namespace Controle_de_livros
                 txtNome.Focus();
                 return;
             }
+        }
+
+        string PrazoEntrega;
+        private void GerarPrazoEmprestimo()
+        {
+            DateTime dataAtual = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+            PrazoEntrega = dataAtual.AddDays(int.Parse(Settings.Default["qtdLimiteTempo"].ToString())).ToShortDateString();
         }
 
         private void limparCampos()
@@ -217,6 +226,7 @@ namespace Controle_de_livros
                     Emprestimo_Livro_Literario._Codigo = int.Parse(lblCodigo.Text);
                     Emprestimo_Livro_Literario._Entrega = "";
                     Emprestimo_Livro_Literario._Solicitacao = DateTime.Now.ToShortDateString();
+                    Emprestimo_Livro_Literario._PrazoEntrega = PrazoEntrega;
                     Emprestimo_Livro_Literario.efetuarEmprestino();
                 }
             } catch(Exception ex)
