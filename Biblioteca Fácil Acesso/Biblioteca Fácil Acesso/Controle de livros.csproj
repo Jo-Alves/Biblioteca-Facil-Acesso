@@ -216,23 +216,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Emprestimo\FrmDevolucaoLivrosDidatico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\FrmDevolucaoLivrosDidatico.Designer.cs">
+      <DependentUpon>FrmDevolucaoLivrosDidatico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emprestimo\FrmDevolucaoLivrosLiterarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Emprestimo\FrmDevolucaoLivrosLiterarios.Designer.cs">
+      <DependentUpon>FrmDevolucaoLivrosLiterarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Emprestimo\FrmEmprestimoLivroDidaticoTemporaria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Emprestimo\FrmEmprestimoLivroDidaticoTemporaria.Designer.cs">
       <DependentUpon>FrmEmprestimoLivroDidaticoTemporaria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Emprestimo\Devolucao_livro_didatico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Emprestimo\Devolucao_livro_didatico.Designer.cs">
-      <DependentUpon>Devolucao_livro_didatico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Emprestimo\Devolucao livro literario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Emprestimo\Devolucao livro literario.Designer.cs">
-      <DependentUpon>Devolucao livro literario.cs</DependentUpon>
     </Compile>
     <Compile Include="Autenticação\FrmExcluirUsuario.cs">
       <SubType>Form</SubType>
@@ -476,14 +476,14 @@
     <EmbeddedResource Include="CadastroPrimeiroAcesso.resx">
       <DependentUpon>CadastroPrimeiroAcesso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\FrmDevolucaoLivrosDidatico.resx">
+      <DependentUpon>FrmDevolucaoLivrosDidatico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Emprestimo\FrmDevolucaoLivrosLiterarios.resx">
+      <DependentUpon>FrmDevolucaoLivrosLiterarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Emprestimo\FrmEmprestimoLivroDidaticoTemporaria.resx">
       <DependentUpon>FrmEmprestimoLivroDidaticoTemporaria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Emprestimo\Devolucao_livro_didatico.resx">
-      <DependentUpon>Devolucao_livro_didatico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Emprestimo\Devolucao livro literario.resx">
-      <DependentUpon>Devolucao livro literario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Autenticação\FrmExcluirUsuario.resx">
       <DependentUpon>FrmExcluirUsuario.cs</DependentUpon>
