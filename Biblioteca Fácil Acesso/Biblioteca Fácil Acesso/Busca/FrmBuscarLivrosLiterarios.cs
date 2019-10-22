@@ -156,7 +156,7 @@ namespace Controle_de_livros
                     }
                 }
                 else
-                    MessageBox.Show("Livro não encontrado.Verifique se há algum erro na grafia!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Livro não encontrado.Verifique se há algum erro na grafia!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
                 MessageBox.Show("Preencha o campo Título!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

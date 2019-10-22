@@ -32,16 +32,20 @@
             this.cb_Opcao = new System.Windows.Forms.ComboBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.dgv_Busca = new System.Windows.Forms.DataGridView();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.ColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColTurma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColBairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColOcupacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,8 +98,12 @@
             this.ColNome,
             this.ColAno,
             this.ColTurma,
+            this.ColCep,
+            this.ColBairro,
             this.ColEndereco,
             this.ColNumero,
+            this.ColCidade,
+            this.ColEstado,
             this.ColFone,
             this.ColOcupacao});
             this.dgv_Busca.Location = new System.Drawing.Point(25, 92);
@@ -107,6 +115,28 @@
             this.dgv_Busca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellClick);
             this.dgv_Busca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellDoubleClick);
             this.dgv_Busca.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Busca_DataBindingComplete);
+            // 
+            // btnOk
+            // 
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOk.Location = new System.Drawing.Point(688, 340);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(99, 39);
+            this.btnOk.TabIndex = 4;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Location = new System.Drawing.Point(583, 340);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(99, 39);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ColCod
             // 
@@ -144,6 +174,24 @@
             this.ColTurma.ReadOnly = true;
             this.ColTurma.Width = 77;
             // 
+            // ColCep
+            // 
+            this.ColCep.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColCep.DataPropertyName = "Cep";
+            this.ColCep.HeaderText = "Cep";
+            this.ColCep.Name = "ColCep";
+            this.ColCep.ReadOnly = true;
+            this.ColCep.Width = 61;
+            // 
+            // ColBairro
+            // 
+            this.ColBairro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColBairro.DataPropertyName = "Bairro";
+            this.ColBairro.HeaderText = "Bairro";
+            this.ColBairro.Name = "ColBairro";
+            this.ColBairro.ReadOnly = true;
+            this.ColBairro.Width = 77;
+            // 
             // ColEndereco
             // 
             this.ColEndereco.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -162,6 +210,24 @@
             this.ColNumero.ReadOnly = true;
             this.ColNumero.Width = 88;
             // 
+            // ColCidade
+            // 
+            this.ColCidade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColCidade.DataPropertyName = "Cidade";
+            this.ColCidade.HeaderText = "Cidade";
+            this.ColCidade.Name = "ColCidade";
+            this.ColCidade.ReadOnly = true;
+            this.ColCidade.Width = 81;
+            // 
+            // ColEstado
+            // 
+            this.ColEstado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEstado.DataPropertyName = "Estado";
+            this.ColEstado.HeaderText = "Estado";
+            this.ColEstado.Name = "ColEstado";
+            this.ColEstado.ReadOnly = true;
+            this.ColEstado.Width = 80;
+            // 
             // ColFone
             // 
             this.ColFone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -178,28 +244,6 @@
             this.ColOcupacao.HeaderText = "Ocupação";
             this.ColOcupacao.Name = "ColOcupacao";
             this.ColOcupacao.ReadOnly = true;
-            // 
-            // btnOk
-            // 
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOk.Location = new System.Drawing.Point(688, 340);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(99, 39);
-            this.btnOk.TabIndex = 4;
-            this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Location = new System.Drawing.Point(583, 340);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 39);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // FrmBuscarUsuario
             // 
@@ -240,8 +284,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAno;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTurma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColBairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEndereco;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColFone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColOcupacao;
     }

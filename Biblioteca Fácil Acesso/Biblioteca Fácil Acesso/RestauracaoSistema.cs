@@ -44,7 +44,7 @@ namespace Controle_de_livros
                 {
                     conn.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Sistema Restaurado com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sistema Restaurado com sucesso", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cursor = Cursors.Default;
                     confirmacao = "Restaurado";
                     txt_ReceberFile.Clear();                   
@@ -66,7 +66,7 @@ namespace Controle_de_livros
         {
             if (confirmacao == "Restaurado")
             {
-                MessageBox.Show("È necessário reiniciar o programa.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("È necessário reiniciar o programa.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

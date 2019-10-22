@@ -33,7 +33,7 @@ namespace Controle_de_livros
 
             if (rb_Todos.Checked)
             {
-                _sql = "SELECT Cod_Usuario AS CÓDIGO, Nome_Usuario AS NOME, Ano AS ANO, Turma AS TURMA, Endereco AS ENDEREÇO, Numero AS NÚMERO, Telefone AS TELEFONE, Ocupacao AS OCUPAÇÃO FROM Usuario ORDER BY Nome_Usuario ASC";
+                _sql = "SELECT Cod_Usuario AS CÓDIGO, Nome_Usuario AS NOME, Ano AS ANO, Turma AS TURMA, Cep as CEP, Bairro AS BAIRRO, Endereco AS ENDEREÇO, Numero AS NÚMERO, Cidade as CIDADE, Estado AS ESTADO, Telefone AS TELEFONE, Ocupacao AS OCUPAÇÃO FROM Usuario ORDER BY Nome_Usuario ASC";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 try
@@ -55,7 +55,7 @@ namespace Controle_de_livros
             }
             if ((rb_Nome.Checked) && (txt_Nome.Text != ""))
             {
-                _sql = "SELECT Cod_Usuario AS CÓDIGO, Nome_Usuario AS NOME, Ano AS ANO, Turma AS TURMA, Endereco AS ENDEREÇO, Numero AS NÚMERO, Telefone AS TELEFONE, Ocupacao AS OCUPAÇÃO FROM Usuario WHERE Nome_Usuario LIKE '" + txt_Nome.Text + "%'";
+                _sql = "SELECT Cod_Usuario AS CÓDIGO, Nome_Usuario AS NOME, Ano AS ANO, Turma AS TURMA, Cep as CEP, Bairro AS BAIRRO, Endereco AS ENDEREÇO, Numero AS NÚMERO, Cidade as CIDADE, Estado AS ESTADO, Telefone AS TELEFONE, Ocupacao AS OCUPAÇÃO FROM Usuario  WHERE Nome_Usuario LIKE '" + txt_Nome.Text + "%'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 try
@@ -68,7 +68,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Usuário(a) não encontrado(a)!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Usuário(a) não encontrado(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
@@ -81,7 +81,7 @@ namespace Controle_de_livros
             }
             else if ((rb_Ocupacao.Checked) && (txt_Ocupacao.Text != ""))
             {
-                _sql = "SELECT Cod_Usuario AS CÓDIGO, Nome_Usuario AS NOME, Ano AS ANO, Turma AS TURMA, Endereco AS ENDEREÇO, Numero AS NÚMERO, Telefone AS TELEFONE, Ocupacao AS OCUPAÇÃO FROM Usuario WHERE Ocupacao LIKE '" + txt_Ocupacao.Text + "%'";
+                _sql = "SELECT Cod_Usuario AS CÓDIGO, Nome_Usuario AS NOME, Ano AS ANO, Turma AS TURMA, Cep as CEP, Bairro AS BAIRRO, Endereco AS ENDEREÇO, Numero AS NÚMERO, Cidade as CIDADE, Estado AS ESTADO, Telefone AS TELEFONE, Ocupacao AS OCUPAÇÃO FROM Usuario WHERE Ocupacao LIKE '" + txt_Ocupacao.Text + "%'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 try
@@ -115,7 +115,7 @@ namespace Controle_de_livros
                     {
                         dataGridView_Busca.DataSource = Tabela;
                     }else
-                        MessageBox.Show("Livro não encontrado!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -142,7 +142,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Turma não encontrada!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -169,7 +169,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livros didáticos não encontrado!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros didáticos não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -196,7 +196,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -222,7 +222,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livro não encontrado!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -248,7 +248,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livro não encontrado!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -274,7 +274,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livro não encontrado!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -300,7 +300,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Turma não encontrada!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -326,7 +326,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Livros literários não encontrado!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros literários não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -352,7 +352,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = Tabela;
                     }
                     else
-                        MessageBox.Show("Os livros literários pendentes não foi encontrado no banco de dados!)", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Os livros literários pendentes não foi encontrado no banco de dados!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch

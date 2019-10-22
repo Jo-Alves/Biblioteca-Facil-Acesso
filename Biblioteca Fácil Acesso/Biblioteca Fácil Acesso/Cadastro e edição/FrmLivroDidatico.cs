@@ -148,7 +148,7 @@ namespace Controle_de_livros
                     }
                     else if (buscarEmprestimoLivroDidatico() == 2)
                     {
-                        MessageBox.Show("É necessário quitar todos os livros emprestados para que você possa excluir o livro da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("É necessário quitar todos os livros emprestados para que seja feita a exclusão da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     else if (buscarEmprestimoLivroDidatico() == 0)
@@ -173,25 +173,18 @@ namespace Controle_de_livros
         {
 
             didatico.registro = int.Parse(txt_Registro.Text);
-            if (didatico.Deletar() == true)
+            try
             {
-                didatico.Deletar();
-                try
+                if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
-                    if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                    {
-                        if (didatico.Deletar() == true)
-                        {
-                            didatico.Deletar();
-                            MessageBox.Show("Dados excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LimparCampos();
-                        }
-                    }
+                    didatico.Deletar();
+                    MessageBox.Show("Dados excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCampos();
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Erro na conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro na conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

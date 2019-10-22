@@ -20,8 +20,12 @@ namespace Controle_de_livros
         public string nome { get; set; }
         public string ano { get; set; }
         public string turma { get; set; }
+        public string cep { get; set; }
+        public string bairro { get; set; }
         public string endereco { get; set; }
         public string numero { get; set; }
+        public string cidade { get; set; }
+        public string estado { get; set; }
         public string fone { get; set; }
         public string ocupacao { get; set; }
 
@@ -91,8 +95,12 @@ namespace Controle_de_livros
                 nome = row.Cells["ColNome"].Value.ToString();
                 ano = row.Cells["ColAno"].Value.ToString();
                 turma = row.Cells["ColTurma"].Value.ToString();
+                cep = row.Cells["ColCep"].Value.ToString();
+                bairro = row.Cells["ColBairro"].Value.ToString();
                 endereco = row.Cells["ColEndereco"].Value.ToString();
                 numero = row.Cells["ColNumero"].Value.ToString();
+                cidade = row.Cells["ColCidade"].Value.ToString();
+                estado = row.Cells["ColEstado"].Value.ToString();
                 fone = row.Cells["ColFone"].Value.ToString();
                 ocupacao = row.Cells["ColOcupacao"].Value.ToString();
                 botãoBuscarAcionado = true;

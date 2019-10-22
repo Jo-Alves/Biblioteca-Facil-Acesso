@@ -96,7 +96,6 @@
             this.dgvHistorico.TabIndex = 0;
             this.dgvHistorico.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellClick);
             this.dgvHistorico.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorico_CellDoubleClick);
-            this.dgvHistorico.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvHistorico_DataBindingComplete);
             // 
             // ColRegistro
             // 

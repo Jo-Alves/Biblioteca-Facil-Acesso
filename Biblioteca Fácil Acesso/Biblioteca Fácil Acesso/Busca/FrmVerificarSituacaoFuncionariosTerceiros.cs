@@ -55,7 +55,7 @@ namespace Controle_de_livros
         private void atualizar_Grid()
         {
             conexao = new SqlConnection(stringConn);
-            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Endereco AS Endereço, Numero AS Número, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' ORDER BY Nome_Usuario";
+            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
             Tabela = new DataTable();
@@ -219,7 +219,7 @@ namespace Controle_de_livros
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
             conexao = new SqlConnection(stringConn);
-            _sql = "SELECT  Cod_Usuario AS Código, Nome_Usuario AS Nome, Endereco AS Endereço, Numero AS  Número, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' AND Nome_Usuario LIKE '" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
+            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' AND Nome_Usuario LIKE '" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
             Tabela = new DataTable();

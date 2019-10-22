@@ -21,14 +21,17 @@ namespace Controle_de_livros
         }
         string x;
         public void LimparCampos()
-        {
-            cb_Turma.Text = "";            
+        {   
             txt_Endereco.Clear();
             txt_Nome.Clear();
             txt_Numero.Clear();
             txt_Tel_Cel.Clear();
-            cb_Ano.Text = "";
+            cb_Ano.SelectedIndex = -1;
+            cb_Turma.SelectedIndex = -1;
             lbl_Codigo.Text = "";
+            txtBairro.Clear();
+            mkCep.Clear();
+            cbEstado.SelectedIndex = -1;
         }
 
         private void btn_Sair_Click(object sender, EventArgs e)
@@ -50,8 +53,7 @@ namespace Controle_de_livros
                 conexao.Open();
                 if (comando.ExecuteScalar() != DBNull.Value)
                 {
-                    Codigo = int.Parse(comando.ExecuteScalar().ToString()) + 1;
-                    lbl_Codigo.Text = Codigo.ToString();
+                    lbl_Codigo.Text = comando.ExecuteScalar().ToString();
                 }
             }
             catch (Exception ex)
@@ -122,6 +124,10 @@ namespace Controle_de_livros
                 }
                 lbl_Codigo.Text = busca.Codigo.ToString();
                 txt_Nome.Text = busca.nome;
+                mkCep.Text = busca.cep;
+                txtBairro.Text = busca.bairro;
+                txtCidade.Text = busca.cidade;
+                cbEstado.Text = busca.estado;
                 txt_Endereco.Text = busca.endereco;
                 cb_Ano.Text = busca.ano;
                 cb_Turma.Text = busca.turma;
@@ -156,11 +162,15 @@ namespace Controle_de_livros
 
         private void SalvarUsuario()
         {
-            usuario.nome = txt_Nome.Text;
-            usuario.ano = cb_Ano.Text;
-            usuario.turma = cb_Turma.Text;
-            usuario.endereco = txt_Endereco.Text;
-            usuario.numero = txt_Numero.Text;
+            usuario.nome = txt_Nome.Text.Trim();
+            usuario.ano = cb_Ano.Text.Trim();
+            usuario.turma = cb_Turma.Text.Trim();
+            usuario.cep = mkCep.Text;
+            usuario.bairro = txtBairro.Text.Trim();
+            usuario.endereco = txt_Endereco.Text.Trim();
+            usuario.numero = txt_Numero.Text.Trim();
+            usuario.cidade = txtCidade.Text.Trim();
+            usuario.estado = cbEstado.Text;
             usuario.telefone = txt_Tel_Cel.Text;
             if (rb_Aluno.Checked)
             {
@@ -212,11 +222,15 @@ namespace Controle_de_livros
 
                 if (usuario.Buscar() == true)
                 {
-                    usuario.nome = txt_Nome.Text;
-                    usuario.ano = cb_Ano.Text;
-                    usuario.turma = cb_Turma.Text;
-                    usuario.endereco = txt_Endereco.Text;
-                    usuario.numero = txt_Numero.Text;
+                    usuario.nome = txt_Nome.Text.Trim();
+                    usuario.ano = cb_Ano.Text.Trim();
+                    usuario.turma = cb_Turma.Text.Trim();
+                    usuario.cep = mkCep.Text;
+                    usuario.bairro = txtBairro.Text.Trim();
+                    usuario.endereco = txt_Endereco.Text.Trim();
+                    usuario.numero = txt_Numero.Text.Trim();
+                    usuario.cidade = txtCidade.Text.Trim();
+                    usuario.estado = cbEstado.Text;
                     usuario.telefone = txt_Tel_Cel.Text;
                     if (rb_Aluno.Checked)
                     {
@@ -264,6 +278,20 @@ namespace Controle_de_livros
                     valido = false;
                     return;
                 }
+                else if (!mkCep.MaskCompleted)
+                {
+                    error_Provider.SetError(mkCep, "Campo obrigatório!");
+                    mkCep.Focus();
+                    valido = false;
+                    return;
+                }
+                else if (txtBairro.Text == "")
+                {
+                    error_Provider.SetError(txtBairro, "Campo obrigatório!");
+                    txtBairro.Focus();
+                    valido = false;
+                    return;
+                }
                 else if (txt_Endereco.Text == "")
                 {
                     error_Provider.SetError(txt_Endereco, "Campo obrigatório!");
@@ -275,6 +303,20 @@ namespace Controle_de_livros
                 {
                     error_Provider.SetError(txt_Numero, "Campo obrigatório!");
                     txt_Numero.Focus();
+                    valido = false;
+                    return;
+                }
+                else if (txtCidade.Text == "")
+                {
+                    error_Provider.SetError(txtCidade, "Campo obrigatório!");
+                    txtCidade.Focus();
+                    valido = false;
+                    return;
+                }
+                else if (cbEstado.SelectedIndex == -1)
+                {
+                    error_Provider.SetError(cbEstado, "Campo obrigatório!");
+                    cbEstado.Focus();
                     valido = false;
                     return;
                 }
@@ -300,7 +342,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    valido = true; 
+                    valido = true;
                 }
             }
             else if ((rb_Aluno.Checked) || (rb_Funcionario.Checked))
@@ -384,7 +426,7 @@ namespace Controle_de_livros
             }
             else if ((ExcluirUsuarioEPL() == 2) || (ExcluirUsuarioEPD() == 2))
             {
-                MessageBox.Show("É necessário quitar todos os livros emprestados para que você possa excluir o livro da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(txt_Nome.Text.ToUpper() + " está devendo livro(s). É necessário quitar todos os livros emprestados para que seja feita a exclusão da base de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if ((ExcluirUsuarioEPL() == 0) || (ExcluirUsuarioEPD() == 0))
             {
@@ -530,8 +572,8 @@ namespace Controle_de_livros
             txt_Nome.Focus();
             cb_Turma.Enabled = false;
             cb_Ano.Enabled = false;
-            cb_Turma.Text = "";
-            cb_Ano.Text = "";
+            cb_Ano.SelectedIndex = -1;
+            cb_Turma.SelectedIndex = -1;
         }
 
         private void rb_Funcionario_CheckedChanged(object sender, EventArgs e)
@@ -541,8 +583,8 @@ namespace Controle_de_livros
             cb_Ano.Enabled = false;
             cb_Turma.Enabled = false;
             cb_Ano.Enabled = false;
-            cb_Turma.Text = "";
-            cb_Ano.Text = "";
+            cb_Ano.SelectedIndex = -1;
+            cb_Turma.SelectedIndex = -1;
         }
 
         private void txt_Nome_KeyPress(object sender, KeyPressEventArgs e)
@@ -643,10 +685,10 @@ namespace Controle_de_livros
         }
 
         private void FrmCadastroUsuarios_Load(object sender, EventArgs e)
-        {
-            cb_Ano.Text = "";
-            cb_Turma.SelectedIndex = 0;
-            this.usuarioTableAdapter.Fill(this.dataSet_Usuario.Usuario);
+        {           
+            this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
+            cb_Ano.SelectedIndex = -1;
+            cb_Turma.SelectedIndex = -1;
         }
 
        private void atualizar_cb_Turma()
@@ -659,6 +701,25 @@ namespace Controle_de_livros
             adapter.Fill(Tabela);
             cb_Turma.DataSource = Tabela;
             cb_Turma.DisplayMember = "Turma";
+        }
+
+        private void btnBuscarCep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(var ws = new ClienteServices.AtendeClienteClient())
+                {
+                    var consultaCep = ws.consultaCEP(mkCep.Text);
+                    txtBairro.Text = consultaCep.bairro;
+                    txt_Endereco.Text = consultaCep.end;
+                    txtCidade.Text = consultaCep.cidade;
+                    cbEstado.Text = consultaCep.uf;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

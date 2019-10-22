@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace Controle_de_livros
@@ -22,6 +23,16 @@ namespace Controle_de_livros
                 dgvHistorico.Rows[newRow].Cells["ColGenero"].Value = dataRow["Genero"].ToString();
                 dgvHistorico.Rows[newRow].Cells["ColPrazo"].Value = dataRow["Prazo_Entrega"].ToString();
                 dgvHistorico.Rows[newRow].Cells["ColSolicitacao"].Value = dataRow["Data_Solicitacao"].ToString();
+
+                DateTime DataPrazo = Convert.ToDateTime(dataRow["Prazo_entrega"].ToString());
+                DateTime DataAtual = Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                if (DataAtual > DataPrazo)
+                {
+                    dgvHistorico.Rows[newRow].DefaultCellStyle.BackColor = Color.Red;
+                    dgvHistorico.Rows[newRow].DefaultCellStyle.ForeColor = Color.White;
+                    lblObservação.Visible = true;
+                }
+                dgvHistorico.Rows[newRow].Selected = false;
             }
         }
 
@@ -37,13 +48,6 @@ namespace Controle_de_livros
             {
                 btnSair_Click(sender, e);
             }
-        }
-
-        private void dgvHistorico_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            DataGridView dgv;
-            dgv = (DataGridView)sender;
-            dgv.ClearSelection();
         }
 
         private void dgvHistorico_CellClick(object sender, DataGridViewCellEventArgs e)

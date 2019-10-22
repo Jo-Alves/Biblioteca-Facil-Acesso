@@ -17,10 +17,14 @@ namespace Controle_de_livros
         private string Nome;
         private string Ano;
         private string Turma;
+        private string Cep;
+        private string Bairro;
         private string Endereco;
         private string Numero;
+        private string Estado;
         private string Telefone;
         private string Ocupacao;
+        private string Cidade;
 
         public int codigo
         {
@@ -42,6 +46,16 @@ namespace Controle_de_livros
             get { return Turma; }
             set { Turma = value; }
         }
+        public string cep
+        {
+            get { return Cep; }
+            set { Cep = value; }
+        }
+        public string bairro
+        {
+            get { return Bairro; }
+            set { Bairro = value; }
+        }
         public string endereco
         {
             get { return Endereco; }
@@ -51,6 +65,16 @@ namespace Controle_de_livros
         {
             get { return Numero; }
             set { Numero = value; }
+        }
+        public string cidade
+        {
+            get { return Cidade; }
+            set { Cidade = value; }
+        }
+        public string estado
+        {
+            get { return Estado; }
+            set { Estado = value; }
         }
         public string telefone
         {
@@ -67,14 +91,18 @@ namespace Controle_de_livros
         {
             string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQl = "INSERT INTO Usuario VALUES (@Nome, @Ano, @Turma, @Endereco, @Numero, @Telefone, @Ocupacao)";
+            string _SQl = "INSERT INTO Usuario VALUES (@Nome, @Ano, @Turma, @Cep, @Bairro, @Endereco, @Numero, @Cidade, @Estado, @Telefone, @Ocupacao)";
             SqlCommand comando = new SqlCommand(_SQl, conexao);
                     
             comando.Parameters.AddWithValue("@Nome", nome);
             comando.Parameters.AddWithValue("@Ano", ano);
             comando.Parameters.AddWithValue("@Turma", turma);
+            comando.Parameters.AddWithValue("@Cep", cep);
+            comando.Parameters.AddWithValue("@Bairro", bairro);
             comando.Parameters.AddWithValue("@Endereco", endereco);
             comando.Parameters.AddWithValue("@Numero", numero);
+            comando.Parameters.AddWithValue("@Cidade", cidade); 
+            comando.Parameters.AddWithValue("@Estado", estado);
             comando.Parameters.AddWithValue("@Telefone", telefone);
             comando.Parameters.AddWithValue("@Ocupacao", ocupacao);
 
@@ -88,14 +116,18 @@ namespace Controle_de_livros
         public bool atualizar()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQl = "UPDATE Usuario SET Nome_Usuario = @Nome, Ano = @Ano, Turma = @Turma, Endereco = @Endereco, Numero = @Numero, Telefone = @Telefone, Ocupacao = @Ocupacao WHERE Cod_Usuario = @Codigo";
+            string _SQl = "UPDATE Usuario SET Nome_Usuario = @Nome, Ano = @Ano, Turma = @Turma, Cep = @Cep, Bairro = @Bairro, Endereco = @Endereco, Numero = @Numero, Cidade = @Cidade, Estado = @Estado, Telefone = @Telefone, Ocupacao = @Ocupacao WHERE Cod_Usuario = @Codigo";
             SqlCommand comando = new SqlCommand(_SQl, conexao);
-            comando.Parameters.AddWithValue("@Codigo", Codigo);
+            comando.Parameters.AddWithValue("@Codigo", codigo);
             comando.Parameters.AddWithValue("@Nome", nome);
             comando.Parameters.AddWithValue("@Ano", ano);
             comando.Parameters.AddWithValue("@Turma", turma);
+            comando.Parameters.AddWithValue("@Cep", cep);
+            comando.Parameters.AddWithValue("@Bairro", bairro);
             comando.Parameters.AddWithValue("@Endereco", endereco);
             comando.Parameters.AddWithValue("@Numero", numero);
+            comando.Parameters.AddWithValue("@Cidade", cidade); 
+            comando.Parameters.AddWithValue("@Estado", estado);
             comando.Parameters.AddWithValue("@Telefone", telefone);
             comando.Parameters.AddWithValue("@Ocupacao", ocupacao);
 

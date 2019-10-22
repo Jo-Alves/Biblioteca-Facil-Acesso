@@ -28,6 +28,7 @@ namespace Controle_de_livros
                 dgvHistorico.Rows[newRow].Cells["ColEnsino"].Value = dataRow["Ensino"].ToString();
                 dgvHistorico.Rows[newRow].Cells["ColVolume"].Value = dataRow["Volume"].ToString();
                 dgvHistorico.Rows[newRow].Cells["ColSolicitacao"].Value = dataRow["Data_Solicitacao"].ToString();
+                dgvHistorico.Rows[newRow].Selected = false;
             }
         }
 
@@ -47,14 +48,6 @@ namespace Controle_de_livros
 
         private void dgvHistorico_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            dgvHistorico.ClearSelection();
-        }
-
-        private void dgvHistorico_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {
-            DataGridView dgv;
-            dgv = (DataGridView)sender;
-            dgv.ClearSelection();
             dgvHistorico.ClearSelection();
         }
 

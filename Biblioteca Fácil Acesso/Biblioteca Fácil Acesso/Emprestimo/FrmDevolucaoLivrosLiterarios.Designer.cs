@@ -32,6 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDevolucaoLivrosLiterarios));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
@@ -40,12 +46,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cbSelecionarTudo = new System.Windows.Forms.CheckBox();
             this.btnFinalizarDevolucao = new System.Windows.Forms.Button();
-            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -97,94 +97,6 @@
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             this.dgvDados.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDados_DataBindingComplete);
             // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
-            this.groupBox5.Controls.Add(this.lblCodigo);
-            this.groupBox5.Controls.Add(this.btnPesquisar);
-            this.groupBox5.Controls.Add(this.txtNome);
-            this.groupBox5.Location = new System.Drawing.Point(12, 12);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(797, 118);
-            this.groupBox5.TabIndex = 17;
-            this.groupBox5.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Aluno/Funcionário/Outro";
-            // 
-            // lblQuantidadeLivrosEmprestados
-            // 
-            this.lblQuantidadeLivrosEmprestados.AutoSize = true;
-            this.lblQuantidadeLivrosEmprestados.Location = new System.Drawing.Point(99, 88);
-            this.lblQuantidadeLivrosEmprestados.Name = "lblQuantidadeLivrosEmprestados";
-            this.lblQuantidadeLivrosEmprestados.Size = new System.Drawing.Size(0, 19);
-            this.lblQuantidadeLivrosEmprestados.TabIndex = 6;
-            // 
-            // lblCodigo
-            // 
-            this.lblCodigo.Location = new System.Drawing.Point(12, 42);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(80, 31);
-            this.lblCodigo.TabIndex = 5;
-            this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
-            this.btnPesquisar.Location = new System.Drawing.Point(707, 42);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
-            this.btnPesquisar.TabIndex = 4;
-            this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Location = new System.Drawing.Point(99, 45);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.ReadOnly = true;
-            this.txtNome.Size = new System.Drawing.Size(601, 26);
-            this.txtNome.TabIndex = 3;
-            // 
-            // cbSelecionarTudo
-            // 
-            this.cbSelecionarTudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cbSelecionarTudo.AutoSize = true;
-            this.cbSelecionarTudo.Location = new System.Drawing.Point(15, 438);
-            this.cbSelecionarTudo.Name = "cbSelecionarTudo";
-            this.cbSelecionarTudo.Size = new System.Drawing.Size(126, 23);
-            this.cbSelecionarTudo.TabIndex = 18;
-            this.cbSelecionarTudo.Text = "Selecionar Tudo";
-            this.cbSelecionarTudo.UseVisualStyleBackColor = true;
-            this.cbSelecionarTudo.Visible = false;
-            this.cbSelecionarTudo.CheckedChanged += new System.EventHandler(this.cbSelecionarTudo_CheckedChanged);
-            // 
-            // btnFinalizarDevolucao
-            // 
-            this.btnFinalizarDevolucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFinalizarDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFinalizarDevolucao.Location = new System.Drawing.Point(563, 448);
-            this.btnFinalizarDevolucao.Name = "btnFinalizarDevolucao";
-            this.btnFinalizarDevolucao.Size = new System.Drawing.Size(246, 46);
-            this.btnFinalizarDevolucao.TabIndex = 19;
-            this.btnFinalizarDevolucao.Text = "Finalizar Devolução";
-            this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
-            this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
-            // 
             // ColSelect
             // 
             this.ColSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -235,6 +147,94 @@
             this.ColPrazo.Name = "ColPrazo";
             this.ColPrazo.ReadOnly = true;
             this.ColPrazo.Width = 138;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
+            this.groupBox5.Controls.Add(this.lblCodigo);
+            this.groupBox5.Controls.Add(this.btnPesquisar);
+            this.groupBox5.Controls.Add(this.txtNome);
+            this.groupBox5.Location = new System.Drawing.Point(12, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(797, 118);
+            this.groupBox5.TabIndex = 17;
+            this.groupBox5.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(95, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 19);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Aluno/Funcionário/Outro";
+            // 
+            // lblQuantidadeLivrosEmprestados
+            // 
+            this.lblQuantidadeLivrosEmprestados.AutoSize = true;
+            this.lblQuantidadeLivrosEmprestados.Location = new System.Drawing.Point(99, 88);
+            this.lblQuantidadeLivrosEmprestados.Name = "lblQuantidadeLivrosEmprestados";
+            this.lblQuantidadeLivrosEmprestados.Size = new System.Drawing.Size(0, 19);
+            this.lblQuantidadeLivrosEmprestados.TabIndex = 6;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.Location = new System.Drawing.Point(12, 42);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(80, 31);
+            this.lblCodigo.TabIndex = 5;
+            this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
+            this.btnPesquisar.Location = new System.Drawing.Point(707, 38);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
+            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.Location = new System.Drawing.Point(99, 45);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
+            this.txtNome.Size = new System.Drawing.Size(601, 26);
+            this.txtNome.TabIndex = 3;
+            // 
+            // cbSelecionarTudo
+            // 
+            this.cbSelecionarTudo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbSelecionarTudo.AutoSize = true;
+            this.cbSelecionarTudo.Location = new System.Drawing.Point(15, 438);
+            this.cbSelecionarTudo.Name = "cbSelecionarTudo";
+            this.cbSelecionarTudo.Size = new System.Drawing.Size(126, 23);
+            this.cbSelecionarTudo.TabIndex = 18;
+            this.cbSelecionarTudo.Text = "Selecionar Tudo";
+            this.cbSelecionarTudo.UseVisualStyleBackColor = true;
+            this.cbSelecionarTudo.Visible = false;
+            this.cbSelecionarTudo.CheckedChanged += new System.EventHandler(this.cbSelecionarTudo_CheckedChanged);
+            // 
+            // btnFinalizarDevolucao
+            // 
+            this.btnFinalizarDevolucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFinalizarDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFinalizarDevolucao.Location = new System.Drawing.Point(563, 448);
+            this.btnFinalizarDevolucao.Name = "btnFinalizarDevolucao";
+            this.btnFinalizarDevolucao.Size = new System.Drawing.Size(246, 46);
+            this.btnFinalizarDevolucao.TabIndex = 19;
+            this.btnFinalizarDevolucao.Text = "Finalizar Devolução";
+            this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
+            this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
             // 
             // FrmDevolucaoLivrosLiterarios
             // 

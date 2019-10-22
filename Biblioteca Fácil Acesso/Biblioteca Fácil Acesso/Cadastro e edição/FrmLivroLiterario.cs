@@ -270,7 +270,7 @@ namespace Controle_de_livros
                 }
                 else if (VerificarLivroEmprestado() == 2)
                 {
-                    MessageBox.Show("É necessário quitar todos os livros emprestados para que você possa excluir o livro da base de dados!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("É necessário quitar todos os livros emprestados para que seja feita a exclusão da base de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (VerificarLivroEmprestado() == 0)
                 {

@@ -98,15 +98,20 @@ namespace Controle_de_livros
                 "[Usuario] VARCHAR(50) NULL," +
                 "[Senha] VARCHAR(10) NULL," +
                 "PRIMARY KEY CLUSTERED([Id] ASC));" +
-                "CREATE TABLE[dbo].[Usuario]" +
-                "([Cod_Usuario] INT IDENTITY(1, 1) NOT NULL," +
-                "[Nome_Usuario] VARCHAR(100) NOT NULL," +
-                "[Ano] VARCHAR(25) NULL," +
-                "[Turma] VARCHAR(14) NULL," +
-                "[Endereco] VARCHAR(30) NULL," +
-                "[Numero] VARCHAR(MAX)NULL," +
-                "[Telefone] VARCHAR(14) NULL," +
-                "[Ocupacao] VARCHAR(11) NOT NULL," +
+                "" +
+                "CREATE TABLE [dbo].[Usuario] (" +
+                "[Cod_Usuario]  INT IDENTITY(1, 1) NOT NULL," +
+                "[Nome_Usuario] VARCHAR(100) NOT NULL, " +
+                "[Ano]          VARCHAR(25)  NULL," +
+                "[Turma] VARCHAR(14)  NULL," +
+                "[Cep] VARCHAR(10)  NULL," +
+                "[Bairro] VARCHAR(100)  NULL," +
+                "[Endereco] VARCHAR(100)  NULL," +
+                "[Numero] VARCHAR(MAX) NULL," +
+                "[Cidade] VARCHAR(100) NULL," +
+                "[Estado] Varchar(2) null," +
+                "[Telefone] VARCHAR(14)  NULL," +
+                "[Ocupacao] VARCHAR(11)  NOT NULL," +
                 "PRIMARY KEY CLUSTERED([Cod_Usuario] ASC));" +
                 "" +
                 "CREATE TABLE[dbo].[Livro_Literario]" +
@@ -131,6 +136,7 @@ namespace Controle_de_livros
                 "[Data_Entrega] VARCHAR(11) NULL," +
                 "[Cod_Usuario]INT NULL," +
                 "[N_Registro]                    INT NULL," +
+                "[Prazo_Entrega]              VARCHAR(11) NULL," +
                 "PRIMARY KEY CLUSTERED([Cod_Empretimo_Livro_Literario] ASC)," +
                 "FOREIGN KEY([Cod_Usuario]) REFERENCES[dbo].[Usuario] ([Cod_Usuario])," +
                 "FOREIGN KEY([N_Registro]) REFERENCES[dbo].[Livro_Literario] ([N_Registro]));" +

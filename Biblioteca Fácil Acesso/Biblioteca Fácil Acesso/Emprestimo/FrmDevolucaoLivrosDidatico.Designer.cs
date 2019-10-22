@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDevolucaoLivrosDidatico));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
+            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
@@ -40,11 +45,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.cbSelecionarTudo = new System.Windows.Forms.CheckBox();
             this.btnFinalizarDevolucao = new System.Windows.Forms.Button();
-            this.ColSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDisciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColEnsino = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -95,6 +95,46 @@
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
             this.dgvDados.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDados_DataBindingComplete);
             // 
+            // ColSelect
+            // 
+            this.ColSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColSelect.HeaderText = "";
+            this.ColSelect.Name = "ColSelect";
+            this.ColSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ColSelect.Width = 19;
+            // 
+            // ColRegistro
+            // 
+            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColRegistro.HeaderText = "Registro";
+            this.ColRegistro.Name = "ColRegistro";
+            this.ColRegistro.ReadOnly = true;
+            this.ColRegistro.Width = 84;
+            // 
+            // ColDisciplina
+            // 
+            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDisciplina.HeaderText = "Disciplina";
+            this.ColDisciplina.Name = "ColDisciplina";
+            this.ColDisciplina.ReadOnly = true;
+            // 
+            // ColEnsino
+            // 
+            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColEnsino.HeaderText = "Ensino";
+            this.ColEnsino.Name = "ColEnsino";
+            this.ColEnsino.ReadOnly = true;
+            // 
+            // ColDataSolicitacao
+            // 
+            this.ColDataSolicitacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDataSolicitacao.DataPropertyName = "Data_Solicitacao";
+            this.ColDataSolicitacao.HeaderText = "Data de Solicitação";
+            this.ColDataSolicitacao.Name = "ColDataSolicitacao";
+            this.ColDataSolicitacao.ReadOnly = true;
+            this.ColDataSolicitacao.Width = 152;
+            // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -140,7 +180,7 @@
             this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
-            this.btnPesquisar.Location = new System.Drawing.Point(707, 42);
+            this.btnPesquisar.Location = new System.Drawing.Point(707, 38);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
             this.btnPesquisar.TabIndex = 4;
@@ -182,46 +222,6 @@
             this.btnFinalizarDevolucao.Text = "Finalizar Devolução";
             this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
             this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
-            // 
-            // ColSelect
-            // 
-            this.ColSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColSelect.HeaderText = "";
-            this.ColSelect.Name = "ColSelect";
-            this.ColSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColSelect.Width = 19;
-            // 
-            // ColRegistro
-            // 
-            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColRegistro.HeaderText = "Registro";
-            this.ColRegistro.Name = "ColRegistro";
-            this.ColRegistro.ReadOnly = true;
-            this.ColRegistro.Width = 84;
-            // 
-            // ColDisciplina
-            // 
-            this.ColDisciplina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDisciplina.HeaderText = "Disciplina";
-            this.ColDisciplina.Name = "ColDisciplina";
-            this.ColDisciplina.ReadOnly = true;
-            // 
-            // ColEnsino
-            // 
-            this.ColEnsino.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColEnsino.HeaderText = "Ensino";
-            this.ColEnsino.Name = "ColEnsino";
-            this.ColEnsino.ReadOnly = true;
-            // 
-            // ColDataSolicitacao
-            // 
-            this.ColDataSolicitacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ColDataSolicitacao.DataPropertyName = "Data_Solicitacao";
-            this.ColDataSolicitacao.HeaderText = "Data de Solicitação";
-            this.ColDataSolicitacao.Name = "ColDataSolicitacao";
-            this.ColDataSolicitacao.ReadOnly = true;
-            this.ColDataSolicitacao.Width = 152;
             // 
             // FrmDevolucaoLivrosDidatico
             // 
