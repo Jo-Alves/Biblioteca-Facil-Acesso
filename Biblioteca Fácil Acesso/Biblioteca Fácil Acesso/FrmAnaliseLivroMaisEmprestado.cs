@@ -45,11 +45,11 @@ namespace Controle_de_livros
             _sql = "select Livro_Literario.Titulo, Livro_Literario.Autor, count(Livro_Literario.Titulo) as Quantidade from Livro_Literario inner join Emprestimo_Livro_Literario on Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro  where " + opcao + " like '" + txt_Titulo.Text + "%' and Emprestimo_Livro_Literario.Data_Entrega <> '' and Emprestimo_Livro_Literario.Data_Solicitacao <> '' group by Livro_Literario.Titulo, Livro_Literario.Autor order by Quantidade desc";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                dgvBusca.DataSource = Tabela;
+                dgvBusca.DataSource = table;
             }
             else
             {
@@ -70,9 +70,9 @@ namespace Controle_de_livros
             _sql = "select Livro_Literario.Titulo, Livro_Literario.Autor, count(Livro_Literario.Titulo) as Quantidade from Livro_Literario inner join Emprestimo_Livro_Literario on Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro  where Emprestimo_Livro_Literario.Data_Entrega <> '' and Emprestimo_Livro_Literario.Data_Solicitacao <> '' group by Livro_Literario.Titulo, Livro_Literario.Autor order by Quantidade desc";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            dgvBusca.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgvBusca.DataSource = table;
         }
 
         private void btn_Pesquisar_Click(object sender, EventArgs e)
@@ -83,11 +83,11 @@ namespace Controle_de_livros
             adapter.SelectCommand.CommandText = _sql;
             adapter.SelectCommand.Parameters.AddWithValue("@DataInicial", dt_DataInicial.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@DataFinal", dt_dataFinal.Text);
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                dgvBusca.DataSource = Tabela;
+                dgvBusca.DataSource = table;
             }
             else
             {

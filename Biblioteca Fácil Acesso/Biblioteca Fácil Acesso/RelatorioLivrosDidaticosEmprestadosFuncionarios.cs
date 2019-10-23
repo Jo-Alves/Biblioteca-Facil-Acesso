@@ -25,7 +25,7 @@ namespace Controle_de_livros
 
         private void RelatorioLivrosDidaticosEmprestadosFuncionariosTerceiros_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dataSet_Emprestimos.TableEmprestimoLivroDidaticoFuncionario'. Você pode movê-la ou removê-la conforme necessário.
+            // TODO: esta linha de código carrega dados na table 'dataSet_Emprestimos.TableEmprestimoLivroDidaticoFuncionario'. Você pode movê-la ou removê-la conforme necessário.
             this.tableEmprestimoLivroDidaticoFuncionarioTableAdapter.Fill(this.dataSet_Emprestimos.TableEmprestimoLivroDidaticoFuncionario);
 
             this.reportViewer1.RefreshReport();

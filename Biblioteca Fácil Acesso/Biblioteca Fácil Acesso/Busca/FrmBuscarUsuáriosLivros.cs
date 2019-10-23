@@ -39,9 +39,9 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela);
-                    dataGridView_Busca.DataSource = Tabela;
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridView_Busca.DataSource = table;
 
                 }
                 catch (Exception ex)
@@ -61,11 +61,11 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela);
-                    if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Usuário(a) não encontrado(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,9 +87,9 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela);
-                    dataGridView_Busca.DataSource = Tabela;
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dataGridView_Busca.DataSource = table;
 
                 }
                 catch
@@ -109,11 +109,11 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela);
-                    if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }else
                         MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -135,11 +135,11 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela);
-                    if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -162,11 +162,11 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela);
-                    if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Livros didáticos não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -190,10 +190,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -216,10 +216,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -242,10 +242,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -268,10 +268,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -294,10 +294,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -320,10 +320,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Livros literários não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -346,10 +346,10 @@ namespace Controle_de_livros
                 try
                 {
                     conexao.Open();
-                    DataTable Tabela = new DataTable();
-                    adapter.Fill(Tabela); if (Tabela.Rows.Count > 0)
+                    DataTable table = new DataTable();
+                    adapter.Fill(table); if (table.Rows.Count > 0)
                     {
-                        dataGridView_Busca.DataSource = Tabela;
+                        dataGridView_Busca.DataSource = table;
                     }
                     else
                         MessageBox.Show("Os livros literários pendentes não foi encontrado no banco de dados!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

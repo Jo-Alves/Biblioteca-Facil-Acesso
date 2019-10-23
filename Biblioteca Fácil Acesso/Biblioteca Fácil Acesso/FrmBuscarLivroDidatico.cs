@@ -42,9 +42,9 @@ namespace Controle_de_livros
             _sql = "Select * from Livro_Didatico";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            dgv_Busca.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgv_Busca.DataSource = table;
         }
 
         private void FrmPesquisarLivroDidatico_Load(object sender, EventArgs e)
@@ -129,11 +129,11 @@ namespace Controle_de_livros
                 _sql = "Select * from Livro_Didatico where " + cb_Opcao.Text + " like '" + txt_Dados.Text.Trim() + "%'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
-                    dgv_Busca.DataSource = Tabela;
+                    dgv_Busca.DataSource = table;
                 }
                 else
                 {

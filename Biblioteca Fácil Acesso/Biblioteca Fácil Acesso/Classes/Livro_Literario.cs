@@ -44,9 +44,9 @@ namespace Controle_de_livros
             adaptador.SelectCommand.CommandText = _sql;
             adaptador.SelectCommand.Parameters.AddWithValue("@N_Registro", registro);
 
-            DataTable Tabela = new DataTable();
-            adaptador.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adaptador.Fill(table);
+            if (table.Rows.Count > 0)
             {
                 return false;
             }

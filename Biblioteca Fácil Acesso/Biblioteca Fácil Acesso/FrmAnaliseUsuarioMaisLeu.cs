@@ -48,11 +48,11 @@ namespace Controle_de_livros
             _sql = "select Usuario.Cod_Usuario, Usuario.Nome_Usuario, Usuario.Turma, count(Usuario.Cod_Usuario) as Quantidade, Usuario.Ano from Usuario inner join Emprestimo_Livro_Literario on Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario  where " + opcao + " like '" + txt_Aluno.Text + "%' and Emprestimo_Livro_Literario.Data_Entrega <> '' and Emprestimo_Livro_Literario.Data_Solicitacao <> '' and Usuario.Ocupacao = 'Aluno' group by Usuario.Nome_Usuario, Usuario.Turma,Usuario.Ano, Usuario.Cod_Usuario order by Quantidade desc";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                dgvBusca.DataSource = Tabela;
+                dgvBusca.DataSource = table;
             }
             else
             {
@@ -96,11 +96,11 @@ namespace Controle_de_livros
             adapter.SelectCommand.CommandText = _sql;
             adapter.SelectCommand.Parameters.AddWithValue("@DataInicial", dt_DataInicial.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@DataFinal", dt_dataFinal.Text);
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                dgvBusca.DataSource = Tabela;
+                dgvBusca.DataSource = table;
             }
             else
             {
@@ -127,9 +127,9 @@ namespace Controle_de_livros
             _sql = "select Usuario.Cod_Usuario, Usuario.Nome_Usuario, Usuario.Turma, count(Usuario.Cod_Usuario) as Quantidade, Usuario.Ano from Usuario inner join Emprestimo_Livro_Literario on Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario  where Emprestimo_Livro_Literario.Data_Entrega <> '' and Emprestimo_Livro_Literario.Data_Solicitacao <> '' and Usuario.Ocupacao = 'Aluno' group by Usuario.Nome_Usuario, Usuario.Turma,Usuario.Ano, Usuario.Cod_Usuario order by quantidade desc";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            dgvBusca.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgvBusca.DataSource = table;
         }
     }
 }

@@ -30,12 +30,12 @@ namespace Controle_de_livros
                 _sql = "SELECT * FROM Livro_Literario WHERE Titulo = '" + cb_Titulo.Text + "'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
-                    txt_Autor.Text = Tabela.Rows[0]["Autor"].ToString();
-                    txt_Estante.Text = Tabela.Rows[0]["Estante"].ToString();
+                    txt_Autor.Text = table.Rows[0]["Autor"].ToString();
+                    txt_Estante.Text = table.Rows[0]["Estante"].ToString();
                     return 1;
                 }
                 else
@@ -64,9 +64,9 @@ namespace Controle_de_livros
                 _sql = "SELECT COUNT(*) FROM Livro_Literario WHERE Titulo = '" + cb_Titulo.Text + "'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
+                DataTable table = new DataTable();
                 DataSet ds = new DataSet();
-                adapter.Fill(Tabela);
+                adapter.Fill(table);
 
               num_QuantidadeTotalCadastrado.Text = adapter.SelectCommand.ExecuteScalar().ToString();
                 
@@ -90,9 +90,9 @@ namespace Controle_de_livros
                 _sql = "SELECT COUNT(lt.Titulo) FROM Emprestimo_Livro_Literario epl JOIN Livro_Literario lt ON  epl.N_Registro = lt.N_Registro WHERE lt.Titulo = '" + cb_Titulo.Text + "' and epl.Data_Solicitacao <> ''  AND epl.Data_Entrega <> ''";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
+                DataTable table = new DataTable();
                 DataSet ds = new DataSet();
-                adapter.Fill(Tabela);
+                adapter.Fill(table);
 
                 num_QuantidadeDisponivel.Text = adapter.SelectCommand.ExecuteScalar().ToString();
 
@@ -116,9 +116,9 @@ namespace Controle_de_livros
                 _sql = "SELECT COUNT(lt.Titulo) FROM Emprestimo_Livro_Literario epl JOIN Livro_Literario lt ON  epl.N_Registro = lt.N_Registro WHERE lt.Titulo = '" + cb_Titulo.Text + "' and epl.Data_Solicitacao <> ''  AND epl.Data_Entrega = ''";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
+                DataTable table = new DataTable();
                 DataSet ds = new DataSet();
-                adapter.Fill(Tabela);
+                adapter.Fill(table);
 
                 num_QuantidadeEmprestadas.Text = adapter.SelectCommand.ExecuteScalar().ToString();
 
@@ -191,9 +191,9 @@ namespace Controle_de_livros
                 _sql = "SELECT DISTINCT Titulo FROM Livro_Literario ORDER BY Titulo";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                cb_Titulo.DataSource = Tabela;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                cb_Titulo.DataSource = table;
                 cb_Titulo.DisplayMember = "Titulo";
             }
             catch (Exception ex)

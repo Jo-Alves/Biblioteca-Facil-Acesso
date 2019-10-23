@@ -557,7 +557,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableLivro_Didatico.DisciplinaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Disciplina\' na tabela \'Livro_Didatico\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Disciplina\' na table \'Livro_Didatico\' é DBNull.", e);
                     }
                 }
                 set {
@@ -573,7 +573,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableLivro_Didatico.EnsinoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Ensino\' na tabela \'Livro_Didatico\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Ensino\' na table \'Livro_Didatico\' é DBNull.", e);
                     }
                 }
                 set {

@@ -61,9 +61,9 @@ namespace Controle_de_livros
             _sql = "Select Professora from EmprestimoTemporario";
             SqlDataAdapter comando = new SqlDataAdapter(_sql, conexao);
             comando.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            comando.Fill(Tabela);
-            cb_Professora.DataSource = Tabela;
+            DataTable table = new DataTable();
+            comando.Fill(table);
+            cb_Professora.DataSource = table;
             cb_Professora.DisplayMember = "Professora";
         }
         private void btn_EfetuaEmprestimo_Click(object sender, EventArgs e)
@@ -136,9 +136,9 @@ namespace Controle_de_livros
                 adapter.SelectCommand.Parameters.AddWithValue("@Professora", cb_Professora.Text);
                 adapter.SelectCommand.Parameters.AddWithValue("@Quantidade", num_Quantidade.Value);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
                     _sql = "DELETE FROM EmprestimoTemporario WHERE Livro = @Livro and Turma =  @Turma and Professora = @Professora";
                     SqlCommand comando = new SqlCommand(_sql, conexao);
@@ -195,13 +195,13 @@ namespace Controle_de_livros
             _sql = "SELECT * FROM EmprestimoTemporario WHERE Professora = '" + cb_Professora.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                txt_Turma.Text = Tabela.Rows[0]["Turma"].ToString();
-                cb_Livros.Text = Tabela.Rows[0]["Livro"].ToString();
-                num_Quantidade.Value = int.Parse(Tabela.Rows[0]["Quantidade"].ToString());
+                txt_Turma.Text = table.Rows[0]["Turma"].ToString();
+                cb_Livros.Text = table.Rows[0]["Livro"].ToString();
+                num_Quantidade.Value = int.Parse(table.Rows[0]["Quantidade"].ToString());
             }           
         }
 

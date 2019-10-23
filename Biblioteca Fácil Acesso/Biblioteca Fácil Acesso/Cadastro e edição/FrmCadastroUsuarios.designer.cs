@@ -442,11 +442,13 @@
             // 
             // mkCep
             // 
+            this.mkCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mkCep.Location = new System.Drawing.Point(55, 55);
             this.mkCep.Mask = "00,000-000";
             this.mkCep.Name = "mkCep";
             this.mkCep.Size = new System.Drawing.Size(100, 26);
             this.mkCep.TabIndex = 4;
+            this.mkCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 

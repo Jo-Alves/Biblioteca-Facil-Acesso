@@ -25,7 +25,7 @@ namespace Controle_de_livros
 
         private void RELATORIO_DE_LIVROS_LITERARIOS_EMPRESTADOS_A_TERCEIROS_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dataSet_Emprestimos.TableEmprestimoLivroDidaticoTerceiro'. Você pode movê-la ou removê-la conforme necessário.
+            // TODO: esta linha de código carrega dados na table 'dataSet_Emprestimos.TableEmprestimoLivroDidaticoTerceiro'. Você pode movê-la ou removê-la conforme necessário.
             this.tableEmprestimoLivroDidaticoTerceiroTableAdapter.Fill(this.dataSet_Emprestimos.TableEmprestimoLivroDidaticoTerceiro);
 
             this.reportViewer1.RefreshReport();

@@ -40,11 +40,11 @@ namespace Controle_de_livros
             SqlConnection conexao = new SqlConnection(stringConn);
             string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = " + registro;
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
-            DataTable Tabela = new DataTable();
+            DataTable table = new DataTable();
             adapter.SelectCommand.CommandText = _sql;
 
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
                 return false;
             }
@@ -88,13 +88,13 @@ namespace Controle_de_livros
             string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = " + registro;
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
+            DataTable table = new DataTable();
 
-            adapter.Fill(Tabela);
+            adapter.Fill(table);
             try
             {
                 conexao.Open();
-                if (Tabela.Rows.Count > 0)
+                if (table.Rows.Count > 0)
                 {
                     _sql = "UPDATE Livro_Didatico SET N_Registro = @Registro, Disciplina = @Disciplina, Autor = @Autor, Ensino = @Ensino, Volume = @Volume WHERE N_Registro = @Registro";
                     SqlCommand comando = new SqlCommand(_sql, conexao);
@@ -148,11 +148,11 @@ namespace Controle_de_livros
             SqlConnection conexao = new SqlConnection(stringConn);
             string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = " + registro;
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
-            DataTable Tabela = new DataTable();
+            DataTable table = new DataTable();
             adapter.SelectCommand.CommandText = _sql;
 
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count == 0)
+            adapter.Fill(table);
+            if (table.Rows.Count == 0)
             {
                 return false;
             }

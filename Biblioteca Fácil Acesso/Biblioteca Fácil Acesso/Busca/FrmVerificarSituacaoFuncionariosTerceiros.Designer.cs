@@ -36,6 +36,14 @@
             this.btn_Buscar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtCep = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -51,22 +59,15 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txt_Quantidade = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btn_Verificar = new System.Windows.Forms.Button();
+            this.btn_VerificarLivrosDidaticosEmprestados = new System.Windows.Forms.Button();
             this.txt_decisaoLivroDidatico = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txt_Titulo = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_status = new System.Windows.Forms.TextBox();
+            this.btn_VerificarLivrosLiterariosEmprestados = new System.Windows.Forms.Button();
+            this.txtSituacao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txt_DataEntrega = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_DataSolicitacao = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_Tempo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_decisaoLivroLiterario = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.txt_QuantidadeLivroLiterarioEmprestado = new System.Windows.Forms.TextBox();
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_Limpar = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
@@ -150,6 +151,14 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtUF);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txtCidade);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtBairro);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtCep);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txt_Nome);
             this.groupBox1.Controls.Add(this.label12);
@@ -165,10 +174,91 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.groupBox1.Location = new System.Drawing.Point(515, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(434, 228);
+            this.groupBox1.Size = new System.Drawing.Size(434, 263);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Usuário:";
+            // 
+            // txtUF
+            // 
+            this.txtUF.BackColor = System.Drawing.Color.White;
+            this.txtUF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUF.Location = new System.Drawing.Point(363, 187);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.ReadOnly = true;
+            this.txtUF.Size = new System.Drawing.Size(65, 26);
+            this.txtUF.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(323, 189);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 19);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "UF:";
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.BackColor = System.Drawing.Color.White;
+            this.txtCidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCidade.Location = new System.Drawing.Point(94, 187);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.ReadOnly = true;
+            this.txtCidade.Size = new System.Drawing.Size(223, 26);
+            this.txtCidade.TabIndex = 54;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(27, 189);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(61, 19);
+            this.label6.TabIndex = 53;
+            this.label6.Text = "Cidade:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(31, 126);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(57, 19);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Bairro:";
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.BackColor = System.Drawing.Color.White;
+            this.txtBairro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBairro.Location = new System.Drawing.Point(94, 123);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.ReadOnly = true;
+            this.txtBairro.Size = new System.Drawing.Size(334, 26);
+            this.txtBairro.TabIndex = 52;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(44, 93);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 19);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "CEP:";
+            // 
+            // txtCep
+            // 
+            this.txtCep.BackColor = System.Drawing.Color.White;
+            this.txtCep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCep.Location = new System.Drawing.Point(94, 91);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.ReadOnly = true;
+            this.txtCep.Size = new System.Drawing.Size(87, 26);
+            this.txtCep.TabIndex = 50;
+            this.txtCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
@@ -187,14 +277,14 @@
             this.txt_Nome.Location = new System.Drawing.Point(94, 58);
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.ReadOnly = true;
-            this.txt_Nome.Size = new System.Drawing.Size(315, 26);
+            this.txt_Nome.Size = new System.Drawing.Size(334, 26);
             this.txt_Nome.TabIndex = 48;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(8, 189);
+            this.label12.Location = new System.Drawing.Point(215, 222);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 19);
             this.label12.TabIndex = 45;
@@ -204,17 +294,17 @@
             // 
             this.txt_Ocupacao.BackColor = System.Drawing.Color.White;
             this.txt_Ocupacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Ocupacao.Location = new System.Drawing.Point(94, 186);
+            this.txt_Ocupacao.Location = new System.Drawing.Point(300, 219);
             this.txt_Ocupacao.Name = "txt_Ocupacao";
             this.txt_Ocupacao.ReadOnly = true;
-            this.txt_Ocupacao.Size = new System.Drawing.Size(115, 26);
+            this.txt_Ocupacao.Size = new System.Drawing.Size(128, 26);
             this.txt_Ocupacao.TabIndex = 46;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(16, 157);
+            this.label11.Location = new System.Drawing.Point(16, 222);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 19);
             this.label11.TabIndex = 43;
@@ -224,7 +314,7 @@
             // 
             this.txt_Telefone.BackColor = System.Drawing.Color.White;
             this.txt_Telefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Telefone.Location = new System.Drawing.Point(94, 154);
+            this.txt_Telefone.Location = new System.Drawing.Point(94, 219);
             this.txt_Telefone.Name = "txt_Telefone";
             this.txt_Telefone.ReadOnly = true;
             this.txt_Telefone.Size = new System.Drawing.Size(115, 26);
@@ -254,17 +344,17 @@
             // 
             this.txt_Numero.BackColor = System.Drawing.Color.White;
             this.txt_Numero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Numero.Location = new System.Drawing.Point(94, 122);
+            this.txt_Numero.Location = new System.Drawing.Point(363, 155);
             this.txt_Numero.Name = "txt_Numero";
             this.txt_Numero.ReadOnly = true;
-            this.txt_Numero.Size = new System.Drawing.Size(87, 26);
+            this.txt_Numero.Size = new System.Drawing.Size(65, 26);
             this.txt_Numero.TabIndex = 38;
             // 
             // lbl_Turma
             // 
             this.lbl_Turma.AutoSize = true;
             this.lbl_Turma.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Turma.Location = new System.Drawing.Point(20, 125);
+            this.lbl_Turma.Location = new System.Drawing.Point(289, 157);
             this.lbl_Turma.Name = "lbl_Turma";
             this.lbl_Turma.Size = new System.Drawing.Size(68, 19);
             this.lbl_Turma.TabIndex = 30;
@@ -274,7 +364,7 @@
             // 
             this.lbl_Ano.AutoSize = true;
             this.lbl_Ano.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.lbl_Ano.Location = new System.Drawing.Point(12, 93);
+            this.lbl_Ano.Location = new System.Drawing.Point(12, 158);
             this.lbl_Ano.Name = "lbl_Ano";
             this.lbl_Ano.Size = new System.Drawing.Size(77, 19);
             this.lbl_Ano.TabIndex = 36;
@@ -284,17 +374,17 @@
             // 
             this.txt_Endereco.BackColor = System.Drawing.Color.White;
             this.txt_Endereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Endereco.Location = new System.Drawing.Point(94, 90);
+            this.txt_Endereco.Location = new System.Drawing.Point(94, 155);
             this.txt_Endereco.Name = "txt_Endereco";
             this.txt_Endereco.ReadOnly = true;
-            this.txt_Endereco.Size = new System.Drawing.Size(315, 26);
+            this.txt_Endereco.Size = new System.Drawing.Size(189, 26);
             this.txt_Endereco.TabIndex = 37;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txt_Quantidade);
             this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.btn_Verificar);
+            this.groupBox4.Controls.Add(this.btn_VerificarLivrosDidaticosEmprestados);
             this.groupBox4.Controls.Add(this.txt_decisaoLivroDidatico);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 12F);
@@ -326,18 +416,18 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Quantidade:";
             // 
-            // btn_Verificar
+            // btn_VerificarLivrosDidaticosEmprestados
             // 
-            this.btn_Verificar.Enabled = false;
-            this.btn_Verificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Verificar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Verificar.Location = new System.Drawing.Point(274, 25);
-            this.btn_Verificar.Name = "btn_Verificar";
-            this.btn_Verificar.Size = new System.Drawing.Size(118, 41);
-            this.btn_Verificar.TabIndex = 20;
-            this.btn_Verificar.Text = "Verificar";
-            this.btn_Verificar.UseVisualStyleBackColor = true;
-            this.btn_Verificar.Click += new System.EventHandler(this.btn_Verificar_Click);
+            this.btn_VerificarLivrosDidaticosEmprestados.Enabled = false;
+            this.btn_VerificarLivrosDidaticosEmprestados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_VerificarLivrosDidaticosEmprestados.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_VerificarLivrosDidaticosEmprestados.Location = new System.Drawing.Point(274, 25);
+            this.btn_VerificarLivrosDidaticosEmprestados.Name = "btn_VerificarLivrosDidaticosEmprestados";
+            this.btn_VerificarLivrosDidaticosEmprestados.Size = new System.Drawing.Size(118, 41);
+            this.btn_VerificarLivrosDidaticosEmprestados.TabIndex = 20;
+            this.btn_VerificarLivrosDidaticosEmprestados.Text = "Verificar";
+            this.btn_VerificarLivrosDidaticosEmprestados.UseVisualStyleBackColor = true;
+            this.btn_VerificarLivrosDidaticosEmprestados.Click += new System.EventHandler(this.Btn_VerificarLivrosDidaticosEmprestados);
             // 
             // txt_decisaoLivroDidatico
             // 
@@ -362,151 +452,73 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txt_Titulo);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txt_status);
+            this.groupBox3.Controls.Add(this.btn_VerificarLivrosLiterariosEmprestados);
+            this.groupBox3.Controls.Add(this.txtSituacao);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.txt_DataEntrega);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.txt_DataSolicitacao);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.txt_Tempo);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.txt_decisaoLivroLiterario);
             this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.txt_QuantidadeLivroLiterarioEmprestado);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.groupBox3.Location = new System.Drawing.Point(515, 242);
+            this.groupBox3.Location = new System.Drawing.Point(515, 277);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(574, 169);
+            this.groupBox3.Size = new System.Drawing.Size(574, 134);
             this.groupBox3.TabIndex = 37;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Obras literárias:";
             // 
-            // txt_Titulo
+            // btn_VerificarLivrosLiterariosEmprestados
             // 
-            this.txt_Titulo.BackColor = System.Drawing.Color.White;
-            this.txt_Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Titulo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Titulo.Location = new System.Drawing.Point(124, 60);
-            this.txt_Titulo.Name = "txt_Titulo";
-            this.txt_Titulo.ReadOnly = true;
-            this.txt_Titulo.Size = new System.Drawing.Size(382, 26);
-            this.txt_Titulo.TabIndex = 25;
+            this.btn_VerificarLivrosLiterariosEmprestados.Enabled = false;
+            this.btn_VerificarLivrosLiterariosEmprestados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_VerificarLivrosLiterariosEmprestados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_VerificarLivrosLiterariosEmprestados.Location = new System.Drawing.Point(20, 66);
+            this.btn_VerificarLivrosLiterariosEmprestados.Name = "btn_VerificarLivrosLiterariosEmprestados";
+            this.btn_VerificarLivrosLiterariosEmprestados.Size = new System.Drawing.Size(543, 47);
+            this.btn_VerificarLivrosLiterariosEmprestados.TabIndex = 45;
+            this.btn_VerificarLivrosLiterariosEmprestados.Text = "Verificar";
+            this.btn_VerificarLivrosLiterariosEmprestados.UseVisualStyleBackColor = true;
+            this.btn_VerificarLivrosLiterariosEmprestados.Click += new System.EventHandler(this.btn_VerificarLivrosLiterariosEmprestados_Click);
             // 
-            // label8
+            // txtSituacao
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(11, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 19);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Título do livro:";
-            // 
-            // txt_status
-            // 
-            this.txt_status.BackColor = System.Drawing.Color.White;
-            this.txt_status.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_status.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_status.Location = new System.Drawing.Point(283, 131);
-            this.txt_status.Name = "txt_status";
-            this.txt_status.ReadOnly = true;
-            this.txt_status.Size = new System.Drawing.Size(88, 26);
-            this.txt_status.TabIndex = 23;
+            this.txtSituacao.BackColor = System.Drawing.Color.White;
+            this.txtSituacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSituacao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSituacao.Location = new System.Drawing.Point(387, 25);
+            this.txtSituacao.Name = "txtSituacao";
+            this.txtSituacao.ReadOnly = true;
+            this.txtSituacao.Size = new System.Drawing.Size(176, 26);
+            this.txtSituacao.TabIndex = 44;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(224, 134);
+            this.label5.Location = new System.Drawing.Point(310, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 19);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Status:";
-            // 
-            // txt_DataEntrega
-            // 
-            this.txt_DataEntrega.BackColor = System.Drawing.Color.White;
-            this.txt_DataEntrega.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_DataEntrega.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DataEntrega.Location = new System.Drawing.Point(138, 130);
-            this.txt_DataEntrega.Name = "txt_DataEntrega";
-            this.txt_DataEntrega.ReadOnly = true;
-            this.txt_DataEntrega.Size = new System.Drawing.Size(80, 26);
-            this.txt_DataEntrega.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 134);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 19);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Data de Entrega:";
-            // 
-            // txt_DataSolicitacao
-            // 
-            this.txt_DataSolicitacao.BackColor = System.Drawing.Color.White;
-            this.txt_DataSolicitacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_DataSolicitacao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DataSolicitacao.Location = new System.Drawing.Point(155, 94);
-            this.txt_DataSolicitacao.Name = "txt_DataSolicitacao";
-            this.txt_DataSolicitacao.ReadOnly = true;
-            this.txt_DataSolicitacao.Size = new System.Drawing.Size(80, 26);
-            this.txt_DataSolicitacao.TabIndex = 19;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 19);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Data da Solicitação:";
-            // 
-            // txt_Tempo
-            // 
-            this.txt_Tempo.BackColor = System.Drawing.Color.White;
-            this.txt_Tempo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Tempo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Tempo.Location = new System.Drawing.Point(415, 95);
-            this.txt_Tempo.Name = "txt_Tempo";
-            this.txt_Tempo.ReadOnly = true;
-            this.txt_Tempo.Size = new System.Drawing.Size(148, 26);
-            this.txt_Tempo.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(248, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 19);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Tempo de empréstimo:";
-            // 
-            // txt_decisaoLivroLiterario
-            // 
-            this.txt_decisaoLivroLiterario.BackColor = System.Drawing.Color.White;
-            this.txt_decisaoLivroLiterario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_decisaoLivroLiterario.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_decisaoLivroLiterario.Location = new System.Drawing.Point(206, 19);
-            this.txt_decisaoLivroLiterario.Name = "txt_decisaoLivroLiterario";
-            this.txt_decisaoLivroLiterario.ReadOnly = true;
-            this.txt_decisaoLivroLiterario.Size = new System.Drawing.Size(51, 26);
-            this.txt_decisaoLivroLiterario.TabIndex = 13;
+            this.label5.Size = new System.Drawing.Size(71, 19);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Situação:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(11, 22);
+            this.label7.Location = new System.Drawing.Point(9, 27);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(189, 19);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Livro literário emprestado:";
+            this.label7.Size = new System.Drawing.Size(241, 19);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Quantidade de livros emprestados:";
+            // 
+            // txt_QuantidadeLivroLiterarioEmprestado
+            // 
+            this.txt_QuantidadeLivroLiterarioEmprestado.BackColor = System.Drawing.Color.White;
+            this.txt_QuantidadeLivroLiterarioEmprestado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_QuantidadeLivroLiterarioEmprestado.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_QuantidadeLivroLiterarioEmprestado.Location = new System.Drawing.Point(253, 25);
+            this.txt_QuantidadeLivroLiterarioEmprestado.Name = "txt_QuantidadeLivroLiterarioEmprestado";
+            this.txt_QuantidadeLivroLiterarioEmprestado.ReadOnly = true;
+            this.txt_QuantidadeLivroLiterarioEmprestado.Size = new System.Drawing.Size(51, 26);
+            this.txt_QuantidadeLivroLiterarioEmprestado.TabIndex = 41;
             // 
             // btn_Sair
             // 
@@ -534,7 +546,7 @@
             this.btn_Limpar.UseVisualStyleBackColor = true;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
-            // Verificar_Situacao_Funcionarios_Terceiros
+            // FrmVerificarSituacaoFuncionariosTerceiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -551,7 +563,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "Verificar_Situacao_Funcionarios_Terceiros";
+            this.Name = "FrmVerificarSituacaoFuncionariosTerceiros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VERIFICAR SIUAÇÃO DOS FUNCIONÁRIOS E TERCEIROS";
             this.Load += new System.EventHandler(this.Verificar_Situacao_Funcionarios_Terceiros_Load);
@@ -584,22 +596,10 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txt_Quantidade;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btn_Verificar;
+        private System.Windows.Forms.Button btn_VerificarLivrosDidaticosEmprestados;
         private System.Windows.Forms.TextBox txt_decisaoLivroDidatico;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txt_Titulo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_status;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_DataEntrega;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_DataSolicitacao;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_Tempo;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txt_decisaoLivroLiterario;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btn_Sair;
         private System.Windows.Forms.Button btn_Limpar;
         private System.Windows.Forms.Label label11;
@@ -609,5 +609,18 @@
         private System.Windows.Forms.TextBox txt_Ocupacao;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txt_Nome;
+        private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.Button btn_VerificarLivrosLiterariosEmprestados;
+        private System.Windows.Forms.TextBox txtSituacao;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_QuantidadeLivroLiterarioEmprestado;
     }
 }

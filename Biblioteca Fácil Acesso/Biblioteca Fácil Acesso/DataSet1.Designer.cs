@@ -1031,7 +1031,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableDataTable1.Data_SolicitaçãoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Solicitação\' na tabela \'DataTable1\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Solicitação\' na table \'DataTable1\' é DBNull.", e);
                     }
                 }
                 set {
@@ -1047,7 +1047,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableDataTable1.Data_EntregaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Entrega\' na tabela \'DataTable1\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Entrega\' na table \'DataTable1\' é DBNull.", e);
                     }
                 }
                 set {
@@ -1113,7 +1113,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableDataTable2.DisciplinaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Disciplina\' na tabela \'DataTable2\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Disciplina\' na table \'DataTable2\' é DBNull.", e);
                     }
                 }
                 set {
@@ -1151,7 +1151,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableDataTable2.Data_SolicitacaoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Solicitacao\' na tabela \'DataTable2\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Solicitacao\' na table \'DataTable2\' é DBNull.", e);
                     }
                 }
                 set {

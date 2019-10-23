@@ -270,7 +270,7 @@ namespace Controle_de_livros
                 }
                 else if (VerificarLivroEmprestado() == 2)
                 {
-                    MessageBox.Show("É necessário quitar todos os livros emprestados para que seja feita a exclusão da base de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("É necessário quitar todos os livros emprestados para que seja feita a exclusão do livro na base de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (VerificarLivroEmprestado() == 0)
                 {
@@ -319,13 +319,13 @@ namespace Controle_de_livros
                 SqlConnection conexao = new SqlConnection(@"Data Source = LOCALHOST\SQLEXPRESS;Initial Catalog = Sistema_Controle_Livros; Integrated Security = True");
                 string _sql = "Select * from emprestimo_livro_Literario where N_registro = " + txt_Registro.Text; SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
 
-                    string Solicitacao = Tabela.Rows[0]["Data_Solicitacao"].ToString();
-                    string Entrega = Tabela.Rows[0]["Data_Entrega"].ToString();
+                    string Solicitacao = table.Rows[0]["Data_Solicitacao"].ToString();
+                    string Entrega = table.Rows[0]["Data_Entrega"].ToString();
 
                     if ((Solicitacao != "") && (Entrega != ""))
                     {

@@ -67,11 +67,11 @@ namespace Controle_de_livros
                 _sql = "Select * from Usuario where " + opcao + " like '" + txt_Dados.Text.Trim() + "%'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
-                    dgv_Busca.DataSource = Tabela;
+                    dgv_Busca.DataSource = table;
                 }
                 else
                 {
@@ -171,9 +171,9 @@ namespace Controle_de_livros
             _sql = "Select * from Usuario";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            dgv_Busca.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            dgv_Busca.DataSource = table;
         }
     }
 }

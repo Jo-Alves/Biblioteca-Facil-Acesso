@@ -45,10 +45,10 @@ namespace Controle_de_livros
             string _sql = "SELECT Usuario FROM Login";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
             cb_Usuario.DisplayMember = "Usuario";
-            cb_Usuario.DataSource = Tabela;
+            cb_Usuario.DataSource = table;
                 
         }
         private void Btn_Alterar_Click_1(object sender, EventArgs e)
@@ -157,7 +157,7 @@ namespace Controle_de_livros
 
         private void Alterar_Senha_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'sistema_Controle_LivrosDataSet1.Login'. Você pode movê-la ou removê-la conforme necessário.
+            // TODO: esta linha de código carrega dados na table 'sistema_Controle_LivrosDataSet1.Login'. Você pode movê-la ou removê-la conforme necessário.
             this.loginTableAdapter.Fill(this.sistema_Controle_LivrosDataSet1.Login);
 
         }

@@ -43,8 +43,7 @@ namespace Controle_de_livros
 
         private void IdentificacaoUsuario()
         {
-            int Codigo;           
-            SqlConnection conexao = new SqlConnection(stringConn);
+           SqlConnection conexao = new SqlConnection(stringConn);
             string _sql = "SELECT MAX(Cod_Usuario) FROM Usuario";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.CommandText = _sql;
@@ -92,9 +91,9 @@ namespace Controle_de_livros
             adapter.SelectCommand.Parameters.AddWithValue("@Numero", txt_Numero.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Telefone", txt_Tel_Cel.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Ocupacao", Ocupacao);
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
                 return true;
             }
@@ -462,13 +461,13 @@ namespace Controle_de_livros
                 string _sql = "Select * from emprestimo_livro_Literario WHERE Cod_Usuario = " + lbl_Codigo.Text;
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
 
-                    string Solicitacao = Tabela.Rows[0]["Data_solicitacao"].ToString();
-                    string Entrega = Tabela.Rows[0]["Data_Entrega"].ToString();
+                    string Solicitacao = table.Rows[0]["Data_solicitacao"].ToString();
+                    string Entrega = table.Rows[0]["Data_Entrega"].ToString();
                     if ((Solicitacao != "") && (Entrega != ""))
                     {
                         return 1;
@@ -697,9 +696,9 @@ namespace Controle_de_livros
             string _sql = "SELECT DISTINCT Turma FROM Usuario WHERE Turma <> '' ORDER BY Turma";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            cb_Turma.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            cb_Turma.DataSource = table;
             cb_Turma.DisplayMember = "Turma";
         }
 

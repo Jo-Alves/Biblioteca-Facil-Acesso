@@ -103,6 +103,16 @@ namespace Controle_de_livros.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Apps_Notifications_icon {
+            get {
+                object obj = ResourceManager.GetObject("Apps_Notifications_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Avosoft_Warm_Toolbar_Print {
             get {
                 object obj = ResourceManager.GetObject("Avosoft-Warm-Toolbar-Print", resourceCulture);
@@ -503,6 +513,16 @@ namespace Controle_de_livros.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images11 {
+            get {
+                object obj = ResourceManager.GetObject("images11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jommans_Briefness_Search__1_ {
             get {
                 object obj = ResourceManager.GetObject("Jommans-Briefness-Search (1)", resourceCulture);
@@ -603,6 +623,16 @@ namespace Controle_de_livros.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PrazoEmprestimo {
+            get {
+                object obj = ResourceManager.GetObject("PrazoEmprestimo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap regulamento_da_biblioteca_colegio_salesiano_dom_bosco_cidade_alta {
             get {
                 object obj = ResourceManager.GetObject("regulamento-da-biblioteca-colegio-salesiano-dom-bosco-cidade-alta", resourceCulture);
@@ -657,6 +687,15 @@ namespace Controle_de_livros.Properties {
             get {
                 object obj = ResourceManager.GetObject("TMI-smiley1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.IO.UnmanagedMemoryStream semelhante a System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Toque {
+            get {
+                return ResourceManager.GetStream("Toque", resourceCulture);
             }
         }
         

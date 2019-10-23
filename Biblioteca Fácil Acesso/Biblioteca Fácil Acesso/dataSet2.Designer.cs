@@ -542,7 +542,7 @@ namespace Controle_de_livros {
                         return ((string)(this[this.tableUsuario.TurmaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Turma\' na tabela \'Usuario\' é DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Turma\' na table \'Usuario\' é DBNull.", e);
                     }
                 }
                 set {

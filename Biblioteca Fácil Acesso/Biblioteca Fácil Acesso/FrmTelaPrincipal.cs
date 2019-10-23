@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.Data.SqlClient;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassProject;
 using Controle_de_livros.Properties;
+using Tulpep.NotificationWindow;
 
 namespace Controle_de_livros
 {
@@ -19,6 +23,39 @@ namespace Controle_de_livros
             InitializeComponent();
             this.Text = "Bibloteca Fácil Acesso - SISTEMA PARA CONTROLE DE LIVROS (Escola Estadual Felício dos Santos) === Usuário(a): " + Usuario.ToUpper();
             this.Usuario = Usuario;
+            NotifcarPrazoVencido();
+        }
+
+        private void NotifcarPrazoVencido()
+        {
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
+            string _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = ''  and Convert(date, Prazo_Entrega, 103) = Convert(date, @DataAtual, 103)";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@DataAtual", DateTime.Now.ToShortDateString());
+            try
+            {
+                conexao.Open();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    SoundPlayer sound = new SoundPlayer(Resources.Toque);
+                    sound.Play();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.Apps_Notifications_icon;
+                    popup.TitleText = "Biblioteca Fácil Acesso - Notification";
+                    popup.ContentText = "O sistema notifica que existe prazos de empréstimos de livros que vencem hoje";
+                    popup.Popup();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            
         }
 
         private void menu_Sair_Click(object sender, EventArgs e)
@@ -288,6 +325,12 @@ namespace Controle_de_livros
         {
             FrmExcluirUsuario excluirUsuario = new FrmExcluirUsuario();
             excluirUsuario.ShowDialog();
+        }
+
+        private void prazoDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOpcaoPrazoEmprestimo opcaoPrazoEmprestimo = new FrmOpcaoPrazoEmprestimo();
+            opcaoPrazoEmprestimo.ShowDialog();
         }
     }
 }

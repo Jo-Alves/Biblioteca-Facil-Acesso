@@ -23,7 +23,7 @@ namespace Controle_de_livros
         string _sql;
         SqlConnection conexao;
         SqlDataAdapter adapter;
-        DataTable Tabela;
+        DataTable table;
         private void btn_Sair_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -35,21 +35,22 @@ namespace Controle_de_livros
             txt_Endereco.Clear();
             txt_Codigo.Clear();
             txt_Nome.Clear();
-            txt_decisaoLivroLiterario.Clear();
-            txt_decisaoLivroDidatico.Clear();
-            txt_Tempo.Clear();
+            txt_QuantidadeLivroLiterarioEmprestado.Clear();
+            txt_decisaoLivroDidatico.Clear();          
             txt_Telefone.Clear();
             txt_Ocupacao.Clear();
-            txt_Titulo.Clear();
             txt_Numero.Clear();
             cb_Nome.Text = "";
             txt_Codigo.Clear();
             txt_Quantidade.Clear();
-            txt_DataEntrega.Clear();
-            txt_DataSolicitacao.Clear();
-            txt_status.Clear();
-            txt_status.BackColor = Color.White;
-            btn_Verificar.Enabled = false;
+            txtSituacao.Clear();
+            txtCep.Clear();
+            txtBairro.Clear();
+            txtCidade.Clear();
+            txtUF.Clear();
+            txtSituacao.BackColor = Color.White;
+            btn_VerificarLivrosDidaticosEmprestados.Enabled = false;
+            btn_VerificarLivrosLiterariosEmprestados.Enabled = false;
         }
 
         private void atualizar_Grid()
@@ -58,9 +59,9 @@ namespace Controle_de_livros
             _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            dataGridView_Nome.DataSource = Tabela;
+            table = new DataTable();
+            adapter.Fill(table);
+            dataGridView_Nome.DataSource = table;
         }
 
         private void Verificar_Situacao_Funcionarios_Terceiros_Load(object sender, EventArgs e)
@@ -76,9 +77,9 @@ namespace Controle_de_livros
             _sql = "SELECT DISTINCT Nome_Usuario FROM Usuario WHERE Ocupacao <> 'Aluno' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            cb_Nome.DataSource = Tabela;
+            table = new DataTable();
+            adapter.Fill(table);
+            cb_Nome.DataSource = table;
             cb_Nome.DisplayMember = "Nome_Usuario";
         }
 
@@ -88,73 +89,18 @@ namespace Controle_de_livros
             _sql = "SELECT * FROM Usuario WHERE Cod_Usuario = " + txt_Codigo.Text;
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                txt_Codigo.Text = Tabela.Rows[0]["Cod_Usuario"].ToString();
-                txt_Endereco.Text = Tabela.Rows[0]["Endereco"].ToString();
-                txt_Numero.Text = Tabela.Rows[0]["Numero"].ToString();
-                txt_Telefone.Text = Tabela.Rows[0]["Telefone"].ToString();
-                txt_Ocupacao.Text = Tabela.Rows[0]["Ocupacao"].ToString();
+                txt_Codigo.Text = table.Rows[0]["Cod_Usuario"].ToString();
+                txt_Endereco.Text = table.Rows[0]["Endereco"].ToString();
+                txt_Numero.Text = table.Rows[0]["Numero"].ToString();
+                txt_Telefone.Text = table.Rows[0]["Telefone"].ToString();
+                txt_Ocupacao.Text = table.Rows[0]["Ocupacao"].ToString();
             }
         }
-        private void verificarEmprestimoLivroLiterario()
-        {
-            conexao = new SqlConnection(stringConn);
-            _sql = "SELECT * FROM Emprestimo_Livro_Literario epl JOIN Livro_Literario lt ON epl.N_Registro = lt.N_Registro JOIN Usuario us ON us.Cod_Usuario = epl.Cod_Usuario  where us.Cod_Usuario = @Codigo AND epl.Data_Solicitacao <> '' AND epl.Data_Entrega = '' ";
-            adapter = new SqlDataAdapter(_sql, conexao);
-            adapter.SelectCommand.Parameters.AddWithValue("@Codigo", txt_Codigo.Text);
-            adapter.SelectCommand.CommandText = _sql;
-            Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
-            {
-                txt_DataSolicitacao.Text = Tabela.Rows[0]["Data_Solicitacao"].ToString();
-                txt_decisaoLivroLiterario.Text = "SIM";
-
-
-                string DataSolicitada = Tabela.Rows[0]["Data_Solicitacao"].ToString();
-                string DataAtual = DateTime.Now.ToShortDateString();
-                DateTime ds = Convert.ToDateTime(DataSolicitada);
-                DateTime da = Convert.ToDateTime(DataAtual);
-                TimeSpan resultado = da.Subtract(ds);
-                txt_Tempo.Text = resultado.Days.ToString() + " Dia(s)";
-                txt_Titulo.Text = Tabela.Rows[0]["Titulo"].ToString();
-
-
-                string tempo = resultado.Days.ToString();
-
-                int tempo1 = int.Parse(tempo);
-                if (tempo1 <= 10)
-                {
-                    txt_status.Text = "Emprestado";
-                    txt_status.ForeColor = Color.White;
-                    txt_status.BackColor = Color.Green;
-                }
-                else
-                {
-                    txt_status.Text = "Atrasado";
-                    txt_status.ForeColor = Color.White;
-                    txt_status.BackColor = Color.Red;
-                }
-
-                DateTime De = Convert.ToDateTime(DataSolicitada);
-                int dias = 10;
-                DateTime Dias = De.AddDays(dias);
-                txt_DataEntrega.Text = Dias.ToShortDateString();
-            }
-            else
-            {
-                txt_decisaoLivroLiterario.Text = "NÃO";
-                txt_DataEntrega.Clear();
-                txt_DataSolicitacao.Clear();
-                txt_status.Clear();
-                txt_status.BackColor = Color.White;
-                txt_Titulo.Clear();
-                txt_Tempo.Clear();
-            }
-        }
+        
         private void verificarEmprestimoLivroDidatico()
         {
             conexao = new SqlConnection(stringConn);
@@ -162,9 +108,9 @@ namespace Controle_de_livros
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.Parameters.AddWithValue("@Codigo", txt_Codigo.Text);
             adapter.SelectCommand.CommandText = _sql;
-            Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
                 txt_decisaoLivroDidatico.Text = "SIM";
             }
@@ -184,9 +130,9 @@ namespace Controle_de_livros
                 adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.Parameters.AddWithValue("@Codigo", txt_Codigo.Text);
                 adapter.SelectCommand.CommandText = _sql;
-                Tabela = new DataTable();
+                table = new DataTable();
                 DataSet ds = new DataSet();
-                adapter.Fill(Tabela);
+                adapter.Fill(table);
                 txt_Quantidade.Text = adapter.SelectCommand.ExecuteScalar().ToString();
             }
             catch (Exception ex)
@@ -196,15 +142,6 @@ namespace Controle_de_livros
             finally
             {
                 conexao.Close();
-            }
-        }
-
-        private void btn_Verificar_Click(object sender, EventArgs e)
-        {
-            if (txt_Codigo.Text != "")
-            {
-                FrmVerificarLivrosDidaticosEmprestados VLDE = new FrmVerificarLivrosDidaticosEmprestados(int.Parse(txt_Codigo.Text.Trim()));
-                VLDE.ShowDialog();
             }
         }
 
@@ -222,11 +159,11 @@ namespace Controle_de_livros
             _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' AND Nome_Usuario LIKE '" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            if (Tabela.Rows.Count > 0)
+            table = new DataTable();
+            adapter.Fill(table);
+            if (table.Rows.Count > 0)
             {
-                dataGridView_Nome.DataSource = Tabela;
+                dataGridView_Nome.DataSource = table;
             }
             else
                 MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -249,23 +186,47 @@ namespace Controle_de_livros
                 DataGridViewRow Linha = dataGridView_Nome.Rows[e.RowIndex];
                 txt_Codigo.Text = Linha.Cells[0].Value.ToString();
                 txt_Nome.Text = Linha.Cells[1].Value.ToString();
-                txt_Endereco.Text = Linha.Cells[2].Value.ToString();
-                txt_Numero.Text = Linha.Cells[3].Value.ToString();
-                txt_Telefone.Text = Linha.Cells[4].Value.ToString();
-                txt_Ocupacao.Text = Linha.Cells[5].Value.ToString();
+                txtCep.Text = Linha.Cells[2].Value.ToString();
+                txtBairro.Text = Linha.Cells[3].Value.ToString();
+                txt_Endereco.Text = Linha.Cells[4].Value.ToString();
+                txt_Numero.Text = Linha.Cells[5].Value.ToString();
+                txtCidade.Text = Linha.Cells[6].Value.ToString();
+                txtUF.Text = Linha.Cells[7].Value.ToString();
+                txt_Telefone.Text = Linha.Cells[8].Value.ToString();
+                txt_Ocupacao.Text = Linha.Cells[9].Value.ToString();
                 if (txt_Codigo.Text != "")
                 {
-                    verificarEmprestimoLivroLiterario();
+                    if (VerificarSituacaoLivrosLiterariosEmprestados() == 0)
+                    {
+                        txtSituacao.Text = VerificarSituacaoLivrosLiterariosEmprestados() + " livro(s) Pendente(s)";
+                        txtSituacao.ForeColor = Color.White;
+                        txtSituacao.BackColor = Color.Green;                        
+                    }
+                    else
+                    {
+                        txtSituacao.Text = VerificarSituacaoLivrosLiterariosEmprestados() + " livro(s) Pendente(s)";
+                        txtSituacao.ForeColor = Color.White;
+                        txtSituacao.BackColor = Color.Red;
+                    }
+
                     verificarEmprestimoLivroDidatico();
                     quantidade();
-
+                    if (ContarQuantidadeLivrosLiterariosEmprestados() > 0)
+                    {
+                        btn_VerificarLivrosLiterariosEmprestados.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_VerificarLivrosLiterariosEmprestados.Enabled = false;
+                    }
+                    txt_QuantidadeLivroLiterarioEmprestado.Text = ContarQuantidadeLivrosLiterariosEmprestados().ToString();
 
                     if (txt_decisaoLivroDidatico.Text == "SIM")
                     {
-                        btn_Verificar.Enabled = true;
+                        btn_VerificarLivrosDidaticosEmprestados.Enabled = true;
                     }
                     else
-                        btn_Verificar.Enabled = false;
+                        btn_VerificarLivrosDidaticosEmprestados.Enabled = false;
                 }
             }
         }
@@ -275,6 +236,78 @@ namespace Controle_de_livros
             DataGridView dgv;
             dgv = (DataGridView)sender;
             dataGridView_Nome.ClearSelection();
+        }
+
+        private void btn_VerificarLivrosLiterariosEmprestados_Click(object sender, EventArgs e)
+        {
+            FrmHistoricoEmprestimoLiterario emprestimoLiterario = new FrmHistoricoEmprestimoLiterario(txt_Codigo.Text, txt_Nome.Text, int.Parse(txt_QuantidadeLivroLiterarioEmprestado.Text));
+            emprestimoLiterario.ShowDialog();
+        }
+
+        private int ContarQuantidadeLivrosLiterariosEmprestados()
+        {
+            conexao = new SqlConnection(stringConn);
+            _sql = "select count(N_Registro) from Emprestimo_Livro_Literario where Cod_Usuario =  @Codigo and Data_Entrega = ''";
+            var comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@Codigo", txt_Codigo.Text);
+            comando.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                if (comando.ExecuteScalar() == DBNull.Value)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return int.Parse(comando.ExecuteScalar().ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private int VerificarSituacaoLivrosLiterariosEmprestados()
+        {
+            conexao = new SqlConnection(stringConn);
+            _sql = "select count(N_Registro) as count from Emprestimo_Livro_Literario where Cod_Usuario =  @Codigo and Data_Entrega = '' and Convert(Date, Prazo_Entrega, 103) <=  Convert(Date, @DataAtual, 103)";
+            var comando = new SqlDataAdapter(_sql, conexao);
+            comando.SelectCommand.Parameters.AddWithValue("@Codigo", txt_Codigo.Text);
+            comando.SelectCommand.Parameters.AddWithValue("@DataAtual", DateTime.Now.ToShortDateString());
+            comando.SelectCommand.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                DataTable table = new DataTable();
+                comando.Fill(table);
+                return int.Parse(table.Rows[0]["count"].ToString());
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        private void Btn_VerificarLivrosDidaticosEmprestados(object sender, EventArgs e)
+        {
+            if (txt_Codigo.Text != "")
+            {
+                FrmHistoricoEmprestimoDidatico emprestimoDidatico = new FrmHistoricoEmprestimoDidatico(txt_Codigo.Text, txt_Nome.Text, int.Parse(txt_Quantidade.Text));
+                emprestimoDidatico.ShowDialog();
+            }
         }
     }
 }

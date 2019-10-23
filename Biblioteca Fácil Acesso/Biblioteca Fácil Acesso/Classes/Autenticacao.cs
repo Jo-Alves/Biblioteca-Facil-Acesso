@@ -40,10 +40,10 @@ namespace Controle_de_livros
             adapter.SelectCommand.CommandText = _sql;
             adapter.SelectCommand.Parameters.AddWithValue("@Usuario", _Usuario);
             adapter.SelectCommand.Parameters.AddWithValue("@Senha", _Senha);
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);            
+            DataTable table = new DataTable();
+            adapter.Fill(table);            
 
-            if (Tabela.Rows.Count>0)
+            if (table.Rows.Count>0)
             {
                 return false;
             }
@@ -81,9 +81,9 @@ namespace Controle_de_livros
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
 
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                if (Tabela.Rows.Count > 0)
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                if (table.Rows.Count > 0)
                 {
                     return true;
                 }

@@ -37,9 +37,9 @@ namespace Controle_de_livros
             _sql = "SELECT DISTINCT Turma FROM Usuario WHERE Ocupacao = 'Aluno'";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            cb_Turma.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            cb_Turma.DataSource = table;
             cb_Turma.DisplayMember = "Turma";
         }
 
@@ -65,9 +65,9 @@ namespace Controle_de_livros
             _sql = "SELECT DISTINCT Ano FROM Usuario WHERE Ocupacao = 'Aluno'";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
-            DataTable Tabela = new DataTable();
-            adapter.Fill(Tabela);
-            cb_Turma.DataSource = Tabela;
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            cb_Turma.DataSource = table;
             cb_Turma.DisplayMember = "Ano";
         }
 

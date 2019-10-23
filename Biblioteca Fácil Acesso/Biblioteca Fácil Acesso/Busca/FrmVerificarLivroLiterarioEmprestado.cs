@@ -28,9 +28,9 @@ namespace Controle_de_livros
                 string _sql = "SELECT us.Cod_Usuario, us.Nome_Usuario, epL.Data_Solicitacao FROM Emprestimo_Livro_literario epl JOIN Usuario us ON epl.Cod_Usuario = us.Cod_Usuario JOIN Livro_Literario lt ON lt.N_Registro = epl.N_Registro WHERE lt.Titulo = '" + Titulo + "' AND epl.Data_Solicitacao <> '' AND Data_Entrega = '' ORDER BY us.Cod_Usuario";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
-                DataTable Tabela = new DataTable();
-                adapter.Fill(Tabela);
-                dataGridView1.DataSource = Tabela;
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+                dataGridView1.DataSource = table;
             }
             catch (Exception ex)
             {
@@ -40,7 +40,7 @@ namespace Controle_de_livros
 
         private void VerificarLivroLiterarioEmprestado_Load(object sender, EventArgs e)
         {
-            // TODO: esta linha de código carrega dados na tabela 'dataSet_Usuario.VERIFICAR_EMPRESTIMO'. Você pode movê-la ou removê-la conforme necessário.
+            // TODO: esta linha de código carrega dados na table 'dataSet_Usuario.VERIFICAR_EMPRESTIMO'. Você pode movê-la ou removê-la conforme necessário.
         }
     }
 }

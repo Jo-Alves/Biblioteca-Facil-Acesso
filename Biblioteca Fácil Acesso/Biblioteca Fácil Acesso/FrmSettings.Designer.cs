@@ -136,7 +136,12 @@
             "12",
             "13",
             "14",
-            "15"});
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "45"});
             this.cbQuantidadeLimite.Location = new System.Drawing.Point(19, 55);
             this.cbQuantidadeLimite.Margin = new System.Windows.Forms.Padding(4);
             this.cbQuantidadeLimite.Name = "cbQuantidadeLimite";

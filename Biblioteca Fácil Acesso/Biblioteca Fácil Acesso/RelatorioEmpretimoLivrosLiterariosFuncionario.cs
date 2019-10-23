@@ -24,8 +24,8 @@ namespace Controle_de_livros
         }
 
         private void RelatorioEmpretimoLivrosLiterariosFO_Load(object sender, EventArgs e)
-        {            
-            this.tableEmprestimoLivrosLiterariosFuncionarioTableAdapter.Fill(this.dataSet_Emprestimos.TableEmprestimoLivrosLiterariosFuncionario);
+        {           
+            this.emprestimoLivrosLiterariosFuncionarioAdapter.Fill(this.dataSet_Emprestimos.EmprestimoLivrosLiterariosFuncionario);
            
             this.reportViewer2.RefreshReport();
         }
