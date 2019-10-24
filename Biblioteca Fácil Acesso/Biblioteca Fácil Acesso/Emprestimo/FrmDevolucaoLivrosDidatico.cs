@@ -58,6 +58,7 @@ namespace Controle_de_livros
             else
             {
                 cbSelecionarTudo.Visible = false;
+                cbSelecionarTudo.Checked = false;
             }
         }
 

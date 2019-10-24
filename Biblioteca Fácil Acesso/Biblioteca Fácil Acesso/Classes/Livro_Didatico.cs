@@ -77,9 +77,39 @@ namespace Controle_de_livros
             }
         }
 
-        internal bool buscar()
+        public bool buscar()
         {
-            throw new NotImplementedException();
+            SqlConnection conexao = new SqlConnection(stringConn);
+            string _sql = "SELECT * FROM Livro_Didatico WHERE N_Registro = @Registro";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@Registro", registro);
+            comando.CommandText = _sql;
+            try
+            {
+                conexao.Open();
+                SqlDataReader dr = comando.ExecuteReader();
+                if (dr.Read())
+                {
+                    registro = int.Parse(dr["N_Registro"].ToString());
+                    disciplina = dr["Disciplina"].ToString();
+                    autor = dr["Autor"].ToString();
+                    ensino = dr["Ensino"].ToString();
+                    volume = dr["Volume"].ToString();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                conexao.Close();
+            }
         }
 
         public override bool Atualizar()

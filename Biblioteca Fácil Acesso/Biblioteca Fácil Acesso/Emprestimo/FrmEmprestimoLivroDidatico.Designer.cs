@@ -63,6 +63,7 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.cbProfessor = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
@@ -341,6 +342,7 @@
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.cbProfessor);
             this.groupBox5.Controls.Add(this.btnVerHistorico);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
@@ -414,6 +416,18 @@
             this.txtNome.Size = new System.Drawing.Size(437, 26);
             this.txtNome.TabIndex = 3;
             // 
+            // cbProfessor
+            // 
+            this.cbProfessor.AutoSize = true;
+            this.cbProfessor.Location = new System.Drawing.Point(283, 18);
+            this.cbProfessor.Name = "cbProfessor";
+            this.cbProfessor.Size = new System.Drawing.Size(103, 23);
+            this.cbProfessor.TabIndex = 9;
+            this.cbProfessor.Text = "Professor(a)";
+            this.cbProfessor.UseVisualStyleBackColor = true;
+            this.cbProfessor.Visible = false;
+            this.cbProfessor.CheckedChanged += new System.EventHandler(this.cbProfessor_CheckedChanged);
+            // 
             // FrmEmprestimoLivroDidatico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -484,5 +498,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEnsino;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVolume;
+        private System.Windows.Forms.CheckBox cbProfessor;
     }
 }

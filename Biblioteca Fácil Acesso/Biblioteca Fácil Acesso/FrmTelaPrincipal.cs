@@ -207,13 +207,7 @@ namespace Controle_de_livros
             bl.ShowDialog();
         }
 
-        private void menu_LivrosLiterariosTurma_Click(object sender, EventArgs e)
-        {
-            RelatorioLivrosLiterarioPorTurma rlt = new RelatorioLivrosLiterarioPorTurma();
-            rlt.ShowDialog();
-        }
-
-        private void Menu_BuscarObrasLiterarioAutor_Click(object sender, EventArgs e)
+       private void Menu_BuscarObrasLiterarioAutor_Click(object sender, EventArgs e)
         {
             FrmBuscarLivrosAutor BLA = new FrmBuscarLivrosAutor();
             BLA.ShowDialog();
@@ -331,6 +325,12 @@ namespace Controle_de_livros
         {
             FrmOpcaoPrazoEmprestimo opcaoPrazoEmprestimo = new FrmOpcaoPrazoEmprestimo();
             opcaoPrazoEmprestimo.ShowDialog();
+        }
+
+        private void tODOSOSLIVROSEMPRESTADOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioListaLivrosLiteráriosEmprestados listaLivrosLiteráriosEmprestados = new FrmRelatorioListaLivrosLiteráriosEmprestados();
+            listaLivrosLiteráriosEmprestados.ShowDialog();
         }
     }
 }

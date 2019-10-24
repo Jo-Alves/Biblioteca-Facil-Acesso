@@ -21,16 +21,16 @@
           <DataField>Titulo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Autor">
-          <DataField>Autor</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Nome_Usuario">
           <DataField>Nome_Usuario</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Data_Solicitacao">
           <DataField>Data_Solicitacao</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Prazo_Entrega">
+          <DataField>Prazo_Entrega</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -52,16 +52,16 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>6.59575cm</Width>
-                </TablixColumn>
-                <TablixColumn>
-                  <Width>6.00286cm</Width>
+                  <Width>6.09304cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>6.33116cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.73408cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.5cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -77,10 +77,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Título</Value>
+                                  <Value>Funcionário(a)</Value>
                                   <Style>
                                     <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -125,61 +124,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox27">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>Autor</Value>
-                                  <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Textbox27</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Textbox29">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -187,10 +131,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Funcionário(a)</Value>
+                                  <Value>Titulo</Value>
                                   <Style>
                                     <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -242,10 +185,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Data da Solicitação</Value>
+                                  <Value>D. Solicitação</Value>
                                   <Style>
                                     <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -256,6 +198,60 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>P. Entrega</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -302,10 +298,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Titulo.Value</Value>
+                                  <Value>=Fields!Nome_Usuario.Value</Value>
                                   <Style>
                                     <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -349,60 +344,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Autor2">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!Autor.Value</Value>
-                                  <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <rd:DefaultName>Autor</rd:DefaultName>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <TopBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </TopBorder>
-                            <BottomBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </BottomBorder>
-                            <LeftBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </LeftBorder>
-                            <RightBorder>
-                              <Color>Black</Color>
-                              <Style>Solid</Style>
-                              <Width>1pt</Width>
-                            </RightBorder>
-                            <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="Nome_Usuario2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -410,10 +351,9 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Nome_Usuario.Value</Value>
+                                  <Value>=Fields!Titulo.Value</Value>
                                   <Style>
                                     <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -467,7 +407,6 @@
                                   <Value>=Fields!Data_Solicitacao.Value</Value>
                                   <Style>
                                     <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -477,6 +416,59 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Data_Solicitacao</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                            <TopBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </TopBorder>
+                            <BottomBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </BottomBorder>
+                            <LeftBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </LeftBorder>
+                            <RightBorder>
+                              <Color>Black</Color>
+                              <Style>Solid</Style>
+                              <Width>1pt</Width>
+                            </RightBorder>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Prazo_Entrega">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!Prazo_Entrega.Value</Value>
+                                  <Style>
+                                    <FontFamily>times New Roman</FontFamily>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Prazo_Entrega</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -532,9 +524,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.94cm</Top>
+            <Top>0.17639cm</Top>
+            <Left>0.76729cm</Left>
             <Height>1.2cm</Height>
-            <Width>21.66385cm</Width>
+            <Width>17.65828cm</Width>
             <Style>
               <Border>
                 <Style>Solid</Style>
@@ -565,10 +558,10 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>9.76124in</Width>
+      <Width>7.52166in</Width>
       <Page>
         <PageHeader>
-          <Height>2.54cm</Height>
+          <Height>1.39802cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -579,30 +572,12 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Relações de funcionários com livros literários que não foram </Value>
+                      <Value>Lista de funcionários com livros literários emprestados</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
                         <FontFamily>TIMES New Roman</FontFamily>
-                        <FontSize>18pt</FontSize>
+                        <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <Color>Blue</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>entregues</Value>
-                      <Style>
-                        <FontStyle>Italic</FontStyle>
-                        <FontFamily>TIMES New Roman</FontFamily>
-                        <FontSize>18pt</FontSize>
-                        <FontWeight>Bold</FontWeight>
-                        <Color>Blue</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -612,10 +587,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.48052cm</Top>
-              <Left>0.18657cm</Left>
-              <Height>1.57896cm</Height>
-              <Width>24.42042cm</Width>
+              <Height>0.9175cm</Height>
+              <Width>18.42557cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -634,7 +607,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.54cm</Height>
+          <Height>2cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -648,7 +621,7 @@
                       <Value>BIBLIOTECA </Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
-                        <FontFamily>TIMEs New Roman</FontFamily>
+                        <FontFamily>arial</FontFamily>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -657,7 +630,7 @@
                       <Value>=Parameters!biblioteca.Value</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
-                        <FontFamily>TIMEs New Roman</FontFamily>
+                        <FontFamily>arial</FontFamily>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -673,7 +646,7 @@
                       <Value>=Parameters!instituicao.Value</Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
-                        <FontFamily>TIMEs New Roman</FontFamily>
+                        <FontFamily>arial</FontFamily>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -685,10 +658,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <Top>0.61281cm</Top>
-              <Left>4.51897cm</Left>
+              <Top>0.29531cm</Top>
+              <Left>0.76729cm</Left>
               <Height>1.31438cm</Height>
-              <Width>15.75563cm</Width>
+              <Width>17.65828cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -708,10 +681,10 @@
         </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
-        <LeftMargin>2cm</LeftMargin>
-        <RightMargin>2cm</RightMargin>
-        <TopMargin>2cm</TopMargin>
-        <BottomMargin>2cm</BottomMargin>
+        <LeftMargin>1cm</LeftMargin>
+        <RightMargin>1cm</RightMargin>
+        <TopMargin>1cm</TopMargin>
+        <BottomMargin>1cm</BottomMargin>
         <ColumnSpacing>0.13cm</ColumnSpacing>
         <Style />
       </Page>

@@ -348,6 +348,12 @@
     <Compile Include="FrmPrazoEmprestimos.designer.cs">
       <DependentUpon>FrmPrazoEmprestimos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorioListaLivrosLiteráriosEmprestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioListaLivrosLiteráriosEmprestados.Designer.cs">
+      <DependentUpon>FrmRelatorioListaLivrosLiteráriosEmprestados.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -391,12 +397,6 @@
     </Compile>
     <Compile Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.Designer.cs">
       <DependentUpon>RelatorioLivrosDidaticosEmprestadosFuncionarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RelatorioLivrosLiterarioPorTurma.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RelatorioLivrosLiterarioPorTurma.Designer.cs">
-      <DependentUpon>RelatorioLivrosLiterarioPorTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="RELATÓRIOS\DataSet_Emprestimos.cs">
       <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
@@ -554,6 +554,9 @@
     <EmbeddedResource Include="FrmPrazoEmprestimos.resx">
       <DependentUpon>FrmPrazoEmprestimos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioListaLivrosLiteráriosEmprestados.resx">
+      <DependentUpon>FrmRelatorioListaLivrosLiteráriosEmprestados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSettings.resx">
       <DependentUpon>FrmSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -576,10 +579,6 @@
     <EmbeddedResource Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.resx">
       <DependentUpon>RelatorioLivrosDidaticosEmprestadosFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RelatorioLivrosLiterarioPorTurma.resx">
-      <DependentUpon>RelatorioLivrosLiterarioPorTurma.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RELATÓRIOS\GerarRelatorioPorTurma.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -590,7 +589,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosFO.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosOutros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.resx">
       <DependentUpon>RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs</DependentUpon>
@@ -604,7 +602,6 @@
     <EmbeddedResource Include="RELATÓRIOS\Relatório Livros Literários Nao Entregues.resx">
       <DependentUpon>Relatório Livros Literários Nao Entregues.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RELATÓRIOS\RELATORIO RELACAO DE ALUNOS COM LIVROS DIDÁTICOS EMPRESTADOS QUE NAO FORAM DEVOLVIDOS.rdlc" />
     <EmbeddedResource Include="Emprestimo\FrmVerificar.resx">
       <DependentUpon>FrmVerificar.cs</DependentUpon>
     </EmbeddedResource>
@@ -617,6 +614,8 @@
     <EmbeddedResource Include="Busca\FrmVerificarSituacaoFuncionariosTerceiros.resx">
       <DependentUpon>FrmVerificarSituacaoFuncionariosTerceiros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rwEmprestimoLivroDidaticoAluno.rdlc" />
+    <EmbeddedResource Include="rwTodosEmprestimoLivroLiterario.rdlc" />
     <EmbeddedResource Include="rw_RelatorioEmpretimoLivrosLiterariosFuncionario.rdlc" />
     <None Include="Autenticação\DataSetAutenticacao.xsc">
       <DependentUpon>DataSetAutenticacao.xsd</DependentUpon>

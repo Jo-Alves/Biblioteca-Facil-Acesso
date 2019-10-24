@@ -31,41 +31,40 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Relatorio_Livros_Didaticos_Nao_Entregues));
-            this.tabelaEmprestimoLivroDidaticoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tabelaEmprestimoLivroDidaticoTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_EmprestimosTableAdapters.TabelaEmprestimoLivroDidaticoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaEmprestimoLivroDidaticoBindingSource)).BeginInit();
+            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
+            this.emprestimoLivroDidaticoAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emprestimoLivroDidaticoAlunoTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_EmprestimosTableAdapters.EmprestimoLivroDidaticoAlunoTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emprestimoLivroDidaticoAlunoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabelaEmprestimoLivroDidaticoBindingSource
+            // reportViewer1
             // 
-            this.tabelaEmprestimoLivroDidaticoBindingSource.DataMember = "TabelaEmprestimoLivroDidatico";
-            this.tabelaEmprestimoLivroDidaticoBindingSource.DataSource = this.dataSet_Emprestimos;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetEmprestimoLivroDidaticoAluno";
+            reportDataSource1.Value = this.emprestimoLivroDidaticoAlunoBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Controle_de_livros.rwEmprestimoLivroDidaticoAluno.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(789, 559);
+            this.reportViewer1.TabIndex = 0;
             // 
             // dataSet_Emprestimos
             // 
             this.dataSet_Emprestimos.DataSetName = "DataSet_Emprestimos";
             this.dataSet_Emprestimos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // emprestimoLivroDidaticoAlunoBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet_TabelaEmprestimoLivrodidatico";
-            reportDataSource1.Value = this.tabelaEmprestimoLivroDidaticoBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Controle_de_livros.RELATÓRIOS.RELATORIO RELACAO DE ALUNOS COM LIVROS DIDÁTICOS EM" +
-    "PRESTADOS QUE NAO FORAM DEVOLVIDOS.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(789, 559);
-            this.reportViewer1.TabIndex = 11;
+            this.emprestimoLivroDidaticoAlunoBindingSource.DataMember = "EmprestimoLivroDidaticoAluno";
+            this.emprestimoLivroDidaticoAlunoBindingSource.DataSource = this.dataSet_Emprestimos;
             // 
-            // tabelaEmprestimoLivroDidaticoTableAdapter
+            // emprestimoLivroDidaticoAlunoTableAdapter
             // 
-            this.tabelaEmprestimoLivroDidaticoTableAdapter.ClearBeforeFill = true;
+            this.emprestimoLivroDidaticoAlunoTableAdapter.ClearBeforeFill = true;
             // 
             // Relatorio_Livros_Didaticos_Nao_Entregues
             // 
@@ -82,16 +81,17 @@
             this.Text = "RELATÓRIO DE LIVROS DIDÁTICOS NÃO ENTREGUES";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Relatorio_Livros_Didaticos_Nao_Entregues_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaEmprestimoLivroDidaticoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emprestimoLivroDidaticoAlunoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private RELATÓRIOS.DataSet_Emprestimos dataSet_Emprestimos;
-        private System.Windows.Forms.BindingSource tabelaEmprestimoLivroDidaticoBindingSource;
-        private RELATÓRIOS.DataSet_EmprestimosTableAdapters.TabelaEmprestimoLivroDidaticoTableAdapter tabelaEmprestimoLivroDidaticoTableAdapter;
+        private System.Windows.Forms.BindingSource emprestimoLivroDidaticoAlunoBindingSource;
+        private RELATÓRIOS.DataSet_EmprestimosTableAdapters.EmprestimoLivroDidaticoAlunoTableAdapter emprestimoLivroDidaticoAlunoTableAdapter;
     }
 }

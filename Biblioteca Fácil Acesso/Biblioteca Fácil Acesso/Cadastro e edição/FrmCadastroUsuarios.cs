@@ -190,7 +190,7 @@ namespace Controle_de_livros
                     usuario.Cadastrar();
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     IdentificacaoUsuario();
-                    atualizar_cb_Turma();
+                    this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
 
                     rb_Aluno.Checked = true;
                     txt_Nome.Focus();
@@ -247,7 +247,7 @@ namespace Controle_de_livros
                     {
                         usuario.atualizar();
                         MessageBox.Show("Usuário atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        atualizar_cb_Turma();
+                        this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
 
                         rb_Aluno.Checked = true;
                         txt_Nome.Focus();
@@ -443,6 +443,7 @@ namespace Controle_de_livros
                             LimparCampos();
                             btn_Salvar.Text = "Salvar";
                             btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+                            this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
                         }
                     }
                 }
@@ -688,18 +689,6 @@ namespace Controle_de_livros
             this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
             cb_Ano.SelectedIndex = -1;
             cb_Turma.SelectedIndex = -1;
-        }
-
-       private void atualizar_cb_Turma()
-        {
-            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
-            string _sql = "SELECT DISTINCT Turma FROM Usuario WHERE Turma <> '' ORDER BY Turma";
-            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
-            adapter.SelectCommand.CommandText = _sql;
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            cb_Turma.DataSource = table;
-            cb_Turma.DisplayMember = "Turma";
         }
 
         private void btnBuscarCep_Click(object sender, EventArgs e)

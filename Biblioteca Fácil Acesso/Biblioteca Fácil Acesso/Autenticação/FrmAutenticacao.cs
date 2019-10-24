@@ -89,7 +89,7 @@ namespace Controle_de_livros
             }
         }
 
-        private void createtables()
+        private void createTables()
         {
             SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
             SqlCommand comando = new SqlCommand("", conexao);
@@ -254,7 +254,7 @@ namespace Controle_de_livros
                 if (dr == DialogResult.Yes)
                 {
                     createDataBase();
-                    createtables();
+                    createTables();
                 }
                 else
                 {

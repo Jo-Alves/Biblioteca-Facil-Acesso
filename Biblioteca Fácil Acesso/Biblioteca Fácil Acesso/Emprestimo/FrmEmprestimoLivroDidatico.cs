@@ -23,7 +23,7 @@ namespace Controle_de_livros
         }
 
         int registro, countLinhas, qtdLivrosEmprestados;
-        string Disciplina, autor, volume, ensino, stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
+        string Disciplina, autor, volume, ensino, stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), ocupacao;
 
 
         Livro_Didatico livroDidatico = new Livro_Didatico();
@@ -66,10 +66,10 @@ namespace Controle_de_livros
             {
                 if (!string.IsNullOrEmpty(lblCodigo.Text))
                 {
-                    if (VerificarLivrosEmprestados() == false)
+                    if (VerificarLivrosEmprestados() == false || cbProfessor.Checked == true)
                     {
                         verificarDuplicidade();
-                        if (duplicata == true)
+                        if (duplicata == true && cbProfessor.Checked == false)
                         {
                             MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             duplicata = false;
@@ -210,7 +210,7 @@ namespace Controle_de_livros
         private void btnFinalizarEmprestimo_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(lblCodigo.Text))
-            {
+            {                
                 if(dgvLivro.Rows.Count > 0)
                 {
                     FinalizarEmprestimo();
@@ -239,6 +239,8 @@ namespace Controle_de_livros
             lblCodigo.Text = "";
             lblQuantidadeLivrosEmprestados.Text = "";
             btnVerHistorico.Enabled = false;
+            cbProfessor.Visible = false;
+            cbProfessor.Checked = false;            
         }
 
         private void FinalizarEmprestimo()
@@ -293,6 +295,16 @@ namespace Controle_de_livros
             btnRemover_Click(sender, e);
         }
 
+        private void cbProfessor_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!cbProfessor.Checked && ocupacao == "Funcionário" &&dgvLivro.Rows.Count > 0)
+            {
+                MessageBox.Show("Para não haver duplicidade os itens adicionados serão removidos. Refaça tudo novamente.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvLivro.Rows.Clear();
+                duplicata = false;
+            }
+        }
+
         bool sair = true;
 
         private void btnVerHistorico_Click(object sender, EventArgs e)
@@ -316,7 +328,6 @@ namespace Controle_de_livros
                     }
                     else
                     {
-
                         sair = false;
                     }
                 }
@@ -343,6 +354,17 @@ namespace Controle_de_livros
                 lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: " + emprestimoLivroDidatico.VerificarQuantidadeLivrosEmprestados() + " livro(s)";
                 qtdLivrosEmprestados = emprestimoLivroDidatico.VerificarQuantidadeLivrosEmprestados();
                 errorProvider.Clear();
+                ocupacao = usuario.ocupacao;
+                if (ocupacao == "Funcionário")
+                {
+                    cbProfessor.Visible = true;
+                    cbProfessor.Checked = false;
+                }
+                else
+                {
+                    cbProfessor.Checked = false;
+                    cbProfessor.Visible = false;
+                }
                 if (qtdLivrosEmprestados > 0)
                 {
                     btnVerHistorico.Enabled = true;

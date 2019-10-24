@@ -100,8 +100,7 @@
                                 <TextRun>
                                   <Value>Registro</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -136,8 +135,7 @@
                                 <TextRun>
                                   <Value>Título</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -172,8 +170,7 @@
                                 <TextRun>
                                   <Value>Código</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -208,8 +205,7 @@
                                 <TextRun>
                                   <Value>Aluno(a)</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -244,8 +240,7 @@
                                 <TextRun>
                                   <Value>Turma</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -280,8 +275,7 @@
                                 <TextRun>
                                   <Value>Data da solicitação</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -316,8 +310,7 @@
                                 <TextRun>
                                   <Value>Data da entrega</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -357,8 +350,7 @@
                                 <TextRun>
                                   <Value>=Fields!N_Registro.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -393,8 +385,7 @@
                                 <TextRun>
                                   <Value>=Fields!Titulo.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -429,8 +420,7 @@
                                 <TextRun>
                                   <Value>=Fields!Cod_Usuario.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -465,8 +455,7 @@
                                 <TextRun>
                                   <Value>=Fields!Nome_Usuario.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -501,8 +490,7 @@
                                 <TextRun>
                                   <Value>=Fields!Turma.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -537,8 +525,7 @@
                                 <TextRun>
                                   <Value>=Fields!Data_Solicitacao.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -582,8 +569,7 @@
                                 <TextRun>
                                   <Value>=Fields!Data_Entrega.Value</Value>
                                   <Style>
-                                    <FontFamily>times New Roman</FontFamily>
-                                    <FontSize>12pt</FontSize>
+                                    <FontFamily>arial</FontFamily>
                                     <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -634,7 +620,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet_Livros_Literarios_Devolvidos</DataSetName>
             <Top>0.42333cm</Top>
-            <Left>2.40771cm</Left>
+            <Left>0.58208cm</Left>
             <Height>1.30583cm</Height>
             <Width>23.21504cm</Width>
             <Style>
@@ -647,10 +633,10 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>10.0877in</Width>
+      <Width>9.54603in</Width>
       <Page>
         <PageHeader>
-          <Height>2.54cm</Height>
+          <Height>1.69333cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -661,12 +647,11 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Relação de livros literários devolvidos</Value>
+                      <Value>Lista de livros literários devolvidos</Value>
                       <Style>
-                        <FontFamily>times New Roman</FontFamily>
-                        <FontSize>20pt</FontSize>
+                        <FontFamily>arial</FontFamily>
+                        <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
-                        <Color>Blue</Color>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -676,10 +661,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox15</rd:DefaultName>
-              <Top>0.68474cm</Top>
-              <Left>6.3478cm</Left>
-              <Height>1.02333cm</Height>
-              <Width>16.65521cm</Width>
+              <Top>0.42016cm</Top>
+              <Left>0.58208cm</Left>
+              <Height>0.7852cm</Height>
+              <Width>23.21504cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -698,7 +683,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2.54cm</Height>
+          <Height>2cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -749,10 +734,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <Top>0.61281cm</Top>
-              <Left>5.82117cm</Left>
+              <Top>0.29531cm</Top>
+              <Left>0.26492cm</Left>
               <Height>1.31438cm</Height>
-              <Width>15.75563cm</Width>
+              <Width>23.5322cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>

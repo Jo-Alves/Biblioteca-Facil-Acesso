@@ -24,8 +24,7 @@ namespace Controle_de_livros
         }
 
         private void RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'dataSet_Emprestimos.DataTableLivrosLiterariosDevolvidos'. Você pode movê-la ou removê-la conforme necessário.
+        {           
             this.dataTableLivrosLiterariosDevolvidosTableAdapter.Fill(this.dataSet_Emprestimos.DataTableLivrosLiterariosDevolvidos);
 
             this.reportViewer1.RefreshReport();

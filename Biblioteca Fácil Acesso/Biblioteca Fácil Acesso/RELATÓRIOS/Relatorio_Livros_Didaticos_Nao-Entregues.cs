@@ -24,10 +24,8 @@ namespace Controle_de_livros
         }
 
         private void Relatorio_Livros_Didaticos_Nao_Entregues_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'dataSet_Emprestimos.TabelaEmprestimoLivroDidatico'. Você pode movê-la ou removê-la conforme necessário.
-            this.tabelaEmprestimoLivroDidaticoTableAdapter.Fill(this.dataSet_Emprestimos.TabelaEmprestimoLivroDidatico);
-
+        {           
+            this.emprestimoLivroDidaticoAlunoTableAdapter.Fill(this.dataSet_Emprestimos.EmprestimoLivroDidaticoAluno);
             this.reportViewer1.RefreshReport();
         }
     }

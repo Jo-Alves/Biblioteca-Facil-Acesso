@@ -25,7 +25,7 @@ namespace Controle_de_livros
 
         private void Relatório_Livros_Literários_Nao_Entregues_Load(object sender, EventArgs e)
         {
-            this.tableEmprestimoLivro_LiterarioTableAdapter.Fill(this.dataSet_Emprestimos.TableEmprestimoLivro_Literario);
+            this.tableEmprestimoLivro_LiterarioTableAdapter.Fill(this.dataSet_Emprestimos.TableEmprestimoLivro_Literario, DateTime.Now.ToShortDateString());
             this.reportViewer2.RefreshReport();
         }
     }
