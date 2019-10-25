@@ -9,7 +9,7 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassProject;
+ 
 using Controle_de_livros.Properties;
 using Tulpep.NotificationWindow;
 
@@ -17,13 +17,34 @@ namespace Controle_de_livros
 {
     public partial class FrmTelaPrincipal : Form
     {
-        string Usuario;
+        string Usuario, _sql;
         public FrmTelaPrincipal(string Usuario)
         {
             InitializeComponent();
             this.Text = "Bibloteca Fácil Acesso - SISTEMA PARA CONTROLE DE LIVROS (Escola Estadual Felício dos Santos) === Usuário(a): " + Usuario.ToUpper();
             this.Usuario = Usuario;
             NotifcarPrazoVencido();
+        }
+
+        private bool VerificarEmprestimos()
+        {
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
+            
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.Parameters.AddWithValue("@DataAtual", DateTime.Now.ToShortDateString());
+
+            conexao.Open();
+            SqlDataReader dr = comando.ExecuteReader();
+            if (dr.Read())
+            {
+                conexao.Close();
+                return true;
+            }
+            else
+            {
+                conexao.Close();
+                return false;
+            }
         }
 
         private void NotifcarPrazoVencido()
@@ -54,8 +75,7 @@ namespace Controle_de_livros
             finally
             {
                 conexao.Close();
-            }
-            
+            }            
         }
 
         private void menu_Sair_Click(object sender, EventArgs e)
@@ -167,14 +187,30 @@ namespace Controle_de_livros
 
         private void menu_Relatorio_Livro_Literarios_Click(object sender, EventArgs e)
         {
-            Relatório_Livros_Literários_Nao_Entregues RL = new Relatório_Livros_Literários_Nao_Entregues();
-            RL.ShowDialog();
+            _sql = "SELECT Livro_Literario.Titulo, Usuario.Nome_Usuario, Usuario.Turma, Emprestimo_Livro_Literario.Data_Solicitacao, Emprestimo_Livro_Literario.Prazo_Entrega, Usuario.Ano FROM            Emprestimo_Livro_Literario INNER JOIN Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario WHERE(Usuario.Ocupacao = 'ALUNO') AND(Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND(Emprestimo_Livro_Literario.Data_Entrega = '') AND(CONVERT(date, Emprestimo_Livro_Literario.Prazo_Entrega, 103) < CONVERT(date, @DataAtual, 103)) ORDER BY Usuario.Turma, Usuario.Ano, Usuario.Nome_Usuario";
+            if (VerificarEmprestimos())
+            {
+                Relatório_Livros_Literários_Nao_Entregues RL = new Relatório_Livros_Literários_Nao_Entregues();
+                RL.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void menu_Relatorio_Livro_Didatico_Click(object sender, EventArgs e)
         {
-            Relatorio_Livros_Didaticos_Nao_Entregues rld = new Relatorio_Livros_Didaticos_Nao_Entregues();
-            rld.ShowDialog();
+            _sql = "SELECT  Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Usuario.Turma, Emprestimo_Livro_Didatico.Data_Solicitacao, Usuario.Ano FROM Emprestimo_Livro_Didatico INNER JOIN Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro INNER JOIN Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario WHERE(Usuario.Ocupacao = 'aluno') AND(Emprestimo_Livro_Didatico.Data_Solicitacao <> '') AND(Emprestimo_Livro_Didatico.Data_Entrega = '') ORDER BY Usuario.Ano, Usuario.Turma, Usuario.Nome_Usuario";
+            if (VerificarEmprestimos())
+            {
+                Relatorio_Livros_Didaticos_Nao_Entregues rld = new Relatorio_Livros_Didaticos_Nao_Entregues();
+                rld.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }            
         }
 
         private void menu_CadastrarLogin_Click_1(object sender, EventArgs e)
@@ -191,8 +227,16 @@ namespace Controle_de_livros
 
         private void menu_LivroLiterarioDevolvido_Click(object sender, EventArgs e)
         {
-            RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS RLD = new RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS();
-            RLD.ShowDialog();
+            _sql = "SELECT Livro_Literario.N_Registro, Livro_Literario.Titulo, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Usuario.Turma, Emprestimo_Livro_Literario.Data_Solicitacao, Emprestimo_Livro_Literario.Data_Entrega FROM            Emprestimo_Livro_Literario INNER JOIN Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario WHERE (Usuario.Ocupacao = 'Aluno') AND(Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND(Emprestimo_Livro_Literario.Data_Entrega <> '')";
+            if (VerificarEmprestimos())
+            {
+                RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS RLD = new RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS();
+                RLD.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Não há registro de livros devolvidos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }           
         }
 
         private void menu_VerificarAlunos_Click(object sender, EventArgs e)
@@ -215,14 +259,31 @@ namespace Controle_de_livros
 
         private void dELIVROLITERÁRIOEMPRESTADOAFUNCIONÁRIOEATERCEIROSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RelatorioEmpretimoLivrosLiterariosFuncionario rfo = new RelatorioEmpretimoLivrosLiterariosFuncionario();
-            rfo.ShowDialog();
+            _sql = "SELECT  Livro_Literario.Titulo, Usuario.Nome_Usuario, Emprestimo_Livro_Literario.Data_Solicitacao, Emprestimo_Livro_Literario.Prazo_Entrega FROM Emprestimo_Livro_Literario INNER JOIN  Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario WHERE (Usuario.Ocupacao = 'Funcionário') AND(Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND(Emprestimo_Livro_Literario.Data_Entrega = '') AND (CONVERT(date, Emprestimo_Livro_Literario.Prazo_Entrega, 103) < CONVERT(date, @DataAtual, 103))";
+            if (VerificarEmprestimos())
+            {
+                RelatorioEmpretimoLivrosLiterariosFuncionario rfo = new RelatorioEmpretimoLivrosLiterariosFuncionario();
+                rfo.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }           
         }
 
         private void menu_EmprestimoLivrosLiterarioTerceiros_Click(object sender, EventArgs e)
         {
-            RelatorioEmpretimoLivrosLiterariosTerceiroscs rlt = new RelatorioEmpretimoLivrosLiterariosTerceiroscs();
-            rlt.ShowDialog();
+            _sql = "SELECT Livro_Literario.Titulo, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Emprestimo_Livro_Literario.Data_Solicitacao,  Emprestimo_Livro_Literario.Prazo_Entrega FROM            Emprestimo_Livro_Literario INNER JOIN Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario WHERE(Usuario.Ocupacao = 'Outros') AND(Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND(Emprestimo_Livro_Literario.Data_Entrega = '') AND(CONVERT(date, Emprestimo_Livro_Literario.Prazo_Entrega, 103) < CONVERT(date, @DataAtual, 103))";
+            if (VerificarEmprestimos())
+            {
+                RelatorioEmpretimoLivrosLiterariosTerceiroscs rlt = new RelatorioEmpretimoLivrosLiterariosTerceiroscs();
+                rlt.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void menu_VerificarSituacaoFT_Click(object sender, EventArgs e)
@@ -233,14 +294,33 @@ namespace Controle_de_livros
 
         private void menu_RelatorioEmprestimoLivrosDidaticoFuncionario_Click(object sender, EventArgs e)
         {
-            RelatorioLivrosDidaticosEmprestadosFuncionarios rf = new RelatorioLivrosDidaticosEmprestadosFuncionarios();
-            rf.ShowDialog();
+            _sql = "SELECT Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Emprestimo_Livro_Didatico.Data_Solicitacao FROM Emprestimo_Livro_Didatico INNER JOIN Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario INNER JOIN Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro WHERE(Usuario.Ocupacao = 'Funcionário') AND(Emprestimo_Livro_Didatico.Data_Solicitacao <> '') AND(Emprestimo_Livro_Didatico.Data_Entrega = '')";
+            if (VerificarEmprestimos())
+            {
+                RelatorioLivrosDidaticosEmprestadosFuncionarios rf = new RelatorioLivrosDidaticosEmprestadosFuncionarios();
+                rf.ShowDialog();
+
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void menu_RelatorioEmprestimoLivrosDidaticoTerceiros_Click(object sender, EventArgs e)
         {
-            RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS rt = new RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS();
-            rt.ShowDialog();
+            _sql = "SELECT Livro_Didatico.Disciplina, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Emprestimo_Livro_Didatico.Data_Solicitacao FROM Emprestimo_Livro_Didatico INNER JOIN Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario INNER JOIN Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro WHERE(Usuario.Ocupacao = 'Outros') AND(Emprestimo_Livro_Didatico.Data_Solicitacao <> '') AND(Emprestimo_Livro_Didatico.Data_Entrega = '')";
+            if (VerificarEmprestimos())
+            {
+                RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS rt = new RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS();
+                rt.ShowDialog();
+
+
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }    
         }
 
         private void Menu_AnaliseAlunosLetrados_Click(object sender, EventArgs e)
@@ -329,8 +409,22 @@ namespace Controle_de_livros
 
         private void tODOSOSLIVROSEMPRESTADOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmRelatorioListaLivrosLiteráriosEmprestados listaLivrosLiteráriosEmprestados = new FrmRelatorioListaLivrosLiteráriosEmprestados();
-            listaLivrosLiteráriosEmprestados.ShowDialog();
+            _sql = "SELECT Livro_Literario.Titulo, Usuario.Nome_Usuario,  Usuario.Ano, Emprestimo_Livro_Literario.Data_Solicitacao, " +
+                "Emprestimo_Livro_Literario.Prazo_Entrega, Usuario.Turma FROM            Emprestimo_Livro_Literario INNER JOIN Livro_Literario ON " +
+                "Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro " +
+                "INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = " +
+                "Usuario.Cod_Usuario WHERE(Emprestimo_Livro_Literario.Data_Solicitacao <> '') " +
+                "AND (Emprestimo_Livro_Literario.Data_Entrega = '') ORDER BY " +
+                "Usuario.Ocupacao, Usuario.Turma, Usuario.Ano, Usuario.Nome_Usuario";
+            if (VerificarEmprestimos())
+            {
+                FrmRelatorioListaLivrosLiteráriosEmprestados listaLivrosLiteráriosEmprestados = new FrmRelatorioListaLivrosLiteráriosEmprestados();
+                listaLivrosLiteráriosEmprestados.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

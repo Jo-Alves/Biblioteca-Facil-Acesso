@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Controle_de_livros
 {
     public partial class FrmOpcaoPrazoEmprestimo : Form
     {
+        string _sql, stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), message;
+
         public FrmOpcaoPrazoEmprestimo()
         {
             InitializeComponent();
@@ -24,8 +27,61 @@ namespace Controle_de_livros
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FrmPrazoEmprestimos prazoEmprestimos = new FrmPrazoEmprestimos(cbOpcao.Text);
-            prazoEmprestimos.ShowDialog();
+            if (cbOpcao.Text == "Todos as datas")
+            {
+                _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' ";
+                this.Text = "Toda os prazos de Empréstimos de livros";
+                message = "Não há registros de livros emprestados.";
+            }
+            else if (cbOpcao.Text == "A vencer")
+            {
+                _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' and Convert(date, Prazo_Entrega, 103) >= Convert(date, @DataAtual, 103)";
+                this.Text = "Toda os prazos de Empréstimos de livros a vencer";
+                message = "Não há registros de livros emprestados com o prazo a vencer.";
+            }
+            else if (cbOpcao.Text == "Data atual")
+            {
+                _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' and Convert(date, Prazo_Entrega, 103) = Convert(date, @DataAtual, 103) ";
+                this.Text = "Toda os prazos de Empréstimos de livros na data atual";
+                message = "Não há registros de livros emprestados com o prazo que vencem hoje.";
+            }
+            else
+            {
+                _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = ''  and Convert(date, Prazo_Entrega, 103) < Convert(date, @DataAtual, 103)";
+                this.Text = "Toda os prazos de Empréstimos de livros vencidos";
+                message = "Não há registros de livros emprestados com o prazo Vencido.";
+            }
+
+            if (MostrarPrazosEmprestimos() == true)
+            {
+                FrmPrazoEmprestimos prazoEmprestimos = new FrmPrazoEmprestimos(cbOpcao.Text);
+                prazoEmprestimos.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show(message + " Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private bool MostrarPrazosEmprestimos()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+
+            SqlCommand comando = new SqlCommand(_sql, conexao);
+            comando.CommandText = _sql;
+            comando.Parameters.AddWithValue("@DataAtual", DateTime.Now.ToShortDateString());
+            conexao.Open();
+            SqlDataReader dr = comando.ExecuteReader();
+            if (dr.Read())
+            {
+                conexao.Close();
+                return true;
+            }
+            else
+            {
+                conexao.Close();
+                return false;
+            }
         }
     }
 }

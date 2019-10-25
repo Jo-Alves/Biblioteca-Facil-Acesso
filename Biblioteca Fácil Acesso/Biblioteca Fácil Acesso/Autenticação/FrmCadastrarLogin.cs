@@ -41,7 +41,7 @@ namespace Controle_de_livros
 
                 Autenticacao CadastrarLogin = new Autenticacao();
                 CadastrarLogin._Usuario = txt_Usuario.Text;
-                CadastrarLogin._Senha = txt_Senha.Text;
+                CadastrarLogin._Senha = ClassSecurityPassword.Pass(txt_Senha.Text);
                 if (CadastrarLogin.Cadastrar() == true)
                 {
                     try

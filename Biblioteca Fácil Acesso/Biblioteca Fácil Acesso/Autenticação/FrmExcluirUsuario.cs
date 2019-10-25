@@ -1,4 +1,4 @@
-﻿using ClassProject;
+﻿ 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -68,7 +68,7 @@ namespace Controle_de_livros
                         try
                         {
                             autenticacao._Usuario = cb_Usuario.Text;
-                            autenticacao._Senha = txt_SenhaAtual.Text;
+                            autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaAtual.Text);
                             autenticacao.Excluir();
                             MessageBox.Show("Dados excluido com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txt_Senha.Clear();
@@ -100,7 +100,7 @@ namespace Controle_de_livros
                 try
                 {
                     autenticacao._Usuario = cb_Usuario.Text;
-                    autenticacao._Senha = txt_SenhaAtual.Text;
+                    autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaAtual.Text);
                     if (autenticacao.Consultar() == true)
                     {
                         autenticacao.Consultar();

@@ -524,8 +524,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>0.17639cm</Top>
-            <Left>0.76729cm</Left>
+            <Top>0.14111cm</Top>
+            <Left>0.3175cm</Left>
             <Height>1.2cm</Height>
             <Width>17.65828cm</Width>
             <Style>
@@ -558,7 +558,7 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>7.52166in</Width>
+      <Width>7.25416in</Width>
       <Page>
         <PageHeader>
           <Height>1.39802cm</Height>
@@ -618,10 +618,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>BIBLIOTECA </Value>
+                      <Value>Biblioteca </Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
-                        <FontFamily>arial</FontFamily>
+                        <FontFamily>ARIAL</FontFamily>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -659,9 +659,8 @@
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
               <Top>0.29531cm</Top>
-              <Left>0.76729cm</Left>
               <Height>1.31438cm</Height>
-              <Width>17.65828cm</Width>
+              <Width>18.42557cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>

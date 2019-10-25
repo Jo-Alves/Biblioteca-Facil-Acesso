@@ -74,9 +74,6 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ClassProject">
-      <HintPath>..\..\..\Dll\ClassProject\ClassProject\bin\Debug\ClassProject.dll</HintPath>
-    </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
@@ -152,6 +149,8 @@
     <Compile Include="CadastroPrimeiroAcesso.Designer.cs">
       <DependentUpon>CadastroPrimeiroAcesso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\ClassSecurityPassword.cs" />
+    <Compile Include="Classes\Security.cs" />
     <Compile Include="Connected Services\ClienteServices\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

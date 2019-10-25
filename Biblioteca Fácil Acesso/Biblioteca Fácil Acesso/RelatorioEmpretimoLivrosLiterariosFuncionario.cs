@@ -29,10 +29,5 @@ namespace Controle_de_livros
            
             this.reportViewer2.RefreshReport();
         }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

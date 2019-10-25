@@ -1,4 +1,4 @@
-﻿using ClassProject;
+﻿ 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +39,7 @@ namespace Controle_de_livros
                 {
                     Autenticacao autenticacao = new Autenticacao();
                     autenticacao._Usuario = cb_Usuario.Text;
-                    autenticacao._Senha = txt_Senha.Text;
+                    autenticacao._Senha = ClassSecurityPassword.Pass(txt_Senha.Text);
                     if (autenticacao.Consultar() == true)
                     {
                         FrmTelaPrincipal telaPrincipal = new FrmTelaPrincipal(cb_Usuario.Text);
@@ -48,13 +48,13 @@ namespace Controle_de_livros
                     }
                     else
                     {
-                        MessageBox.Show("Senha Incorreta!", "Erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Senha Incorreta!", "Erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txt_Senha.Clear();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Campo da Senha vazio. Preencha o campo para entrar no sistema!", "Erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Campo da Senha vazio. Preencha o campo para entrar no sistema!", "Erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -96,7 +96,7 @@ namespace Controle_de_livros
             comando.CommandText = "CREATE TABLE [dbo].[Login] (" +
                 "[Id]      INT IDENTITY(1, 1) NOT NULL," +
                 "[Usuario] VARCHAR(50) NULL," +
-                "[Senha] VARCHAR(10) NULL," +
+                "[Senha] VARCHAR(MAX) NULL," +
                 "PRIMARY KEY CLUSTERED([Id] ASC));" +
                 "" +
                 "CREATE TABLE [dbo].[Usuario] (" +
@@ -158,7 +158,7 @@ namespace Controle_de_livros
                 "[Quantidade] INT NOT NULL," +
                 "PRIMARY KEY CLUSTERED([Id] ASC));" +
                 "" +
-                "INSERT INTO Login VALUES('Biblioteca','Educação')";
+                "INSERT INTO Login VALUES('Biblioteca','851379419017420510887122921451602019412922446194121184')";
 
             try
             {

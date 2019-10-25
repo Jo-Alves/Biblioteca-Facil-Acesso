@@ -246,7 +246,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Data  da Solicitacao</Value>
+                                  <Value>D. Solicitação</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -300,7 +300,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Prazo Entrega</Value>
+                                  <Value>P. Entrega</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -645,7 +645,7 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.17639cm</Top>
-            <Left>0.30396cm</Left>
+            <Left>1.78563cm</Left>
             <Height>1.4734cm</Height>
             <Width>22.35359cm</Width>
             <Style>
@@ -678,7 +678,7 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>9.17684in</Width>
+      <Width>9.50363in</Width>
       <Page>
         <PageHeader>
           <Height>1.37583cm</Height>
@@ -709,7 +709,7 @@
               <rd:DefaultName>Textbox7</rd:DefaultName>
               <Top>0.16302cm</Top>
               <Height>0.89104cm</Height>
-              <Width>22.65755cm</Width>
+              <Width>24.13922cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -728,7 +728,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>2cm</Height>
+          <Height>1.92719cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -739,7 +739,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>BIBLIOTECA </Value>
+                      <Value>Biblioteca </Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
                         <FontFamily>arial</FontFamily>
@@ -780,9 +780,8 @@
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
               <Top>0.32177cm</Top>
-              <Left>0.30396cm</Left>
-              <Height>1.60542cm</Height>
-              <Width>22.68125cm</Width>
+              <Height>1.26146cm</Height>
+              <Width>24.13922cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>

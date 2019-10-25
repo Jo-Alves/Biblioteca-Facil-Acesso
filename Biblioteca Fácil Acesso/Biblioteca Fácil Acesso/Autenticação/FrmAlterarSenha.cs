@@ -1,4 +1,4 @@
-﻿using ClassProject;
+﻿ 
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -80,7 +80,7 @@ namespace Controle_de_livros
                     try
                     {
                         autenticacao._Usuario = cb_Usuario.Text;
-                        autenticacao._Senha = txt_SenhaRedefinir.Text;
+                        autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaRedefinir.Text);
                         autenticacao.alterarSenha();
                         MessageBox.Show("Senha alterado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         atualizar_cb_Usuario();
@@ -111,7 +111,7 @@ namespace Controle_de_livros
             if (txt_SenhaAtual.Text != "")
             {
                 autenticacao._Usuario = cb_Usuario.Text;
-                autenticacao._Senha = txt_SenhaAtual.Text;
+                autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaAtual.Text);
                 if (autenticacao.Consultar() == true)
                 {
                     autenticacao.Consultar();

@@ -725,7 +725,6 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca F�
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Controle de livros.exe.config
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Controle de livros.exe
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Controle de livros.pdb
-D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\ClassProject.dll
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\itextsharp.dll
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
@@ -775,8 +774,6 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca F�
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.10.0.dll
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Microsoft.Build.Framework.dll
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\VSLangProj2.dll
-D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\ClassProject.pdb
-D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\ClassProject.dll.config
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\itextsharp.xml
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
@@ -1005,5 +1002,3 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca F�
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmPrazoEmprestimos.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\Tulpep.NotificationWindow.dll
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmRelatorioListaLivrosLiteráriosEmprestados.resources
-D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\System.Threading.Tasks.Dataflow.dll
-D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.csproj.CoreCompileInputs.cache

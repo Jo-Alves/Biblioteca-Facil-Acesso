@@ -832,10 +832,10 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>BIBLIOTECA </Value>
+                      <Value>Biblioteca </Value>
                       <Style>
                         <FontStyle>Italic</FontStyle>
-                        <FontFamily>arial</FontFamily>
+                        <FontFamily>ARIAL</FontFamily>
                         <FontSize>14pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
