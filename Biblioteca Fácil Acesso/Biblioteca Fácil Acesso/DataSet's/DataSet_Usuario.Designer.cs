@@ -1169,7 +1169,7 @@ namespace Controle_de_livros.DataSet_s.DataSet_UsuarioTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DISTINCT Turma\r\nFROM            Usuario\r\nWHERE        (Turma <> \'\')\r\nORDER" +
+            this._commandCollection[0].CommandText = "SELECT DISTINCT Turma \n FROM            Usuario\nWHERE        (Turma <> \'\') \nORDER" +
                 " BY Turma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -1339,8 +1339,8 @@ namespace Controle_de_livros.DataSet_s.DataSet_UsuarioTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT DISTINCT Titulo AS TÍTULO, Genero AS GÊNERO, Estante AS ESTANTE\r\nFROM     " +
-                "       Livro_Literario";
+            this._commandCollection[0].CommandText = "SELECT DISTINCT Titulo AS TÍTULO, Genero AS GÊNERO, Estante AS ESTANTE\nFROM      " +
+                "      Livro_Literario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

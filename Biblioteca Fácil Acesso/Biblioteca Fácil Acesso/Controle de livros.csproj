@@ -364,6 +364,18 @@
     <Compile Include="FrmPrazoEmprestimos.designer.cs">
       <DependentUpon>FrmPrazoEmprestimos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano .Designer.cs">
+      <DependentUpon>FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano .cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano.Designer.cs">
+      <DependentUpon>FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRelatorioListaLivrosLiteráriosEmprestados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -576,6 +588,12 @@
     <EmbeddedResource Include="FrmPrazoEmprestimos.resx">
       <DependentUpon>FrmPrazoEmprestimos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano .resx">
+      <DependentUpon>FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano.resx">
+      <DependentUpon>FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRelatorioListaLivrosLiteráriosEmprestados.resx">
       <DependentUpon>FrmRelatorioListaLivrosLiteráriosEmprestados.cs</DependentUpon>
     </EmbeddedResource>
@@ -637,6 +655,8 @@
       <DependentUpon>FrmVerificarSituacaoFuncionariosTerceiros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rwEmprestimoLivroDidaticoAluno.rdlc" />
+    <EmbeddedResource Include="rwEmprestimoLivroDidaticoPorAnoTurma.rdlc" />
+    <EmbeddedResource Include="rwEmprestimoLivroLiterarioPorAnoTurma.rdlc" />
     <EmbeddedResource Include="rwListaLivrosDidáticos.rdlc" />
     <EmbeddedResource Include="rwListaLivrosLiterários.rdlc" />
     <EmbeddedResource Include="rwTodosEmprestimoLivroLiterario.rdlc" />

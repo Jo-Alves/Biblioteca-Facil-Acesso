@@ -13,9 +13,9 @@
               <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectName="Sistema_Controle_Livros.dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT DISTINCT Turma
-FROM            Usuario
-WHERE        (Turma &lt;&gt; '')
+                    <CommandText>SELECT DISTINCT Turma 
+ FROM            Usuario
+WHERE        (Turma &lt;&gt; '') 
 ORDER BY Turma</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -54,7 +54,7 @@ FROM            Livro_Literario</CommandText>
   <xs:element name="DataSet_Usuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Usuario" msprop:Generator_UserDSName="DataSet_Usuario">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_RowClassName="UsuarioRow" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent">
+        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
@@ -67,7 +67,7 @@ FROM            Livro_Literario</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Livro_Literario" msprop:Generator_TableClassName="Livro_LiterarioDataTable" msprop:Generator_TableVarName="tableLivro_Literario" msprop:Generator_TablePropName="Livro_Literario" msprop:Generator_RowDeletingName="Livro_LiterarioRowDeleting" msprop:Generator_RowChangingName="Livro_LiterarioRowChanging" msprop:Generator_RowEvHandlerName="Livro_LiterarioRowChangeEventHandler" msprop:Generator_RowDeletedName="Livro_LiterarioRowDeleted" msprop:Generator_UserTableName="Livro_Literario" msprop:Generator_RowChangedName="Livro_LiterarioRowChanged" msprop:Generator_RowEvArgName="Livro_LiterarioRowChangeEvent" msprop:Generator_RowClassName="Livro_LiterarioRow">
+        <xs:element name="Livro_Literario" msprop:Generator_TableClassName="Livro_LiterarioDataTable" msprop:Generator_TableVarName="tableLivro_Literario" msprop:Generator_RowChangedName="Livro_LiterarioRowChanged" msprop:Generator_TablePropName="Livro_Literario" msprop:Generator_RowDeletingName="Livro_LiterarioRowDeleting" msprop:Generator_RowChangingName="Livro_LiterarioRowChanging" msprop:Generator_RowEvHandlerName="Livro_LiterarioRowChangeEventHandler" msprop:Generator_RowDeletedName="Livro_LiterarioRowDeleted" msprop:Generator_RowClassName="Livro_LiterarioRow" msprop:Generator_UserTableName="Livro_Literario" msprop:Generator_RowEvArgName="Livro_LiterarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TÍTULO" msprop:Generator_ColumnVarNameInTable="columnTÍTULO" msprop:Generator_ColumnPropNameInRow="TÍTULO" msprop:Generator_ColumnPropNameInTable="TÍTULOColumn" msprop:Generator_UserColumnName="TÍTULO">

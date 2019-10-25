@@ -1004,3 +1004,5 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca F�
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmRelatorioListaLivrosLiteráriosEmprestados.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmListaRegistroLivroDidático.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmListaRegistroLivroLiterário.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano.resources

@@ -419,6 +419,18 @@ namespace Controle_de_livros
             listaRegistroLivroDidático.Show();
         }
 
+        private void dELIVROSLITERÁRIOSEMPRESTADOSAALUNOSPORTURMAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano emprestimoLivroLiterarioPorTurma_E_Ano = new FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano();
+            emprestimoLivroLiterarioPorTurma_E_Ano.Show();
+        }
+
+        private void dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano emprestimoLivroDidaticoPorTurma_E_Ano = new FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano();
+            emprestimoLivroDidaticoPorTurma_E_Ano.Show();
+        }
+
         private void tODOSOSLIVROSEMPRESTADOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _sql = "SELECT Livro_Literario.Titulo, Usuario.Nome_Usuario,  Usuario.Ano, Emprestimo_Livro_Literario.Data_Solicitacao, " +
