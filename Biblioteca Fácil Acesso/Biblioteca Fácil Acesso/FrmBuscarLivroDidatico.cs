@@ -22,6 +22,7 @@ namespace Controle_de_livros
         public string autor { get; set; }
         public string ensino { get; set; }
         public string volume { get; set; }
+        public string DataRegistro { get; set; }
 
         public FrmBuscarLivroDidatico()
         {
@@ -75,11 +76,12 @@ namespace Controle_de_livros
             if (e.RowIndex > -1)
             {
                 DataGridViewRow linhas = dgv_Busca.Rows[e.RowIndex];
-                registro = int.Parse(linhas.Cells[0].Value.ToString());
-                disciplina = linhas.Cells[1].Value.ToString();
-                autor = linhas.Cells[2].Value.ToString();
-                ensino = linhas.Cells[3].Value.ToString();
-                volume = linhas.Cells[4].Value.ToString();
+                registro = int.Parse(linhas.Cells["ColRegistro"].Value.ToString());
+                disciplina = linhas.Cells["ColDisciplina"].Value.ToString();
+                autor = linhas.Cells["ColAutor"].Value.ToString();
+                ensino = linhas.Cells["ColEnsino"].Value.ToString();
+                volume = linhas.Cells["ColVolume"].Value.ToString();
+                DataRegistro = dgv_Busca["ColDataRegistro", e.RowIndex].Value.ToString();
                 botãoBuscarAcionado = true;
                 Close();
             }
@@ -90,11 +92,12 @@ namespace Controle_de_livros
             if (e.RowIndex > -1)
             {
                 DataGridViewRow linhas = dgv_Busca.Rows[e.RowIndex];
-                registro = int.Parse(linhas.Cells[0].Value.ToString());
-                disciplina = linhas.Cells[1].Value.ToString();
-                autor = linhas.Cells[2].Value.ToString();
-                ensino = linhas.Cells[3].Value.ToString();
-                volume = linhas.Cells[4].Value.ToString();
+                registro = int.Parse(linhas.Cells["ColRegistro"].Value.ToString());
+                disciplina = linhas.Cells["ColDisciplina"].Value.ToString();
+                autor = linhas.Cells["ColAutor"].Value.ToString();
+                ensino = linhas.Cells["ColEnsino"].Value.ToString();
+                volume = linhas.Cells["ColVolume"].Value.ToString();
+                DataRegistro = dgv_Busca["ColDataRegistro", e.RowIndex].Value.ToString();
             }
         }
 

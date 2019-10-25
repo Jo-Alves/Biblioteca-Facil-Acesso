@@ -11,7 +11,7 @@ namespace Controle_de_livros
         //atributos da classe
         private int Registro;
         private string Autor;
-
+        private string DataRegistro;
         public int registro
         {
             get { return Registro; }
@@ -23,6 +23,11 @@ namespace Controle_de_livros
             set { Autor = value; }
         }
       
+        public string dataRegistro
+        {
+            get { return DataRegistro; }
+            set { DataRegistro = value; }
+        }
       
         public abstract bool Cadastrar();
         public abstract bool Atualizar();

@@ -46,6 +46,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.dtDataRegistro = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_Provider)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             // txt_Genero
             // 
             this.txt_Genero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Genero.Location = new System.Drawing.Point(29, 199);
+            this.txt_Genero.Location = new System.Drawing.Point(29, 204);
             this.txt_Genero.Name = "txt_Genero";
             this.txt_Genero.Size = new System.Drawing.Size(188, 26);
             this.txt_Genero.TabIndex = 7;
@@ -94,6 +96,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtDataRegistro);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.cb_Estante);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txt_Genero);
@@ -261,6 +265,24 @@
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
             // 
+            // dtDataRegistro
+            // 
+            this.dtDataRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDataRegistro.Location = new System.Drawing.Point(370, 200);
+            this.dtDataRegistro.Name = "dtDataRegistro";
+            this.dtDataRegistro.Size = new System.Drawing.Size(111, 26);
+            this.dtDataRegistro.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(366, 181);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 19);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Data de Registro:";
+            // 
             // FrmLivroLiterario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -304,5 +326,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.DateTimePicker dtDataRegistro;
+        private System.Windows.Forms.Label label5;
     }
 }

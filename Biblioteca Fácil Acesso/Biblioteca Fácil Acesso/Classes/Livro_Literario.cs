@@ -52,14 +52,15 @@ namespace Controle_de_livros
             }
             else
             {
-                string _SQL = "INSERT INTO Livro_Literario VALUES (@Registro, @Titulo, @Autor, @Genero, @Estante)";
+                string _SQL = "INSERT INTO Livro_Literario VALUES (@Registro, @Titulo, @Autor, @Genero, @Estante, @DataRegistro)";
                 SqlCommand comando = new SqlCommand(_SQL, conexao);
                 comando.CommandText = _SQL;
                 comando.Parameters.AddWithValue("@Registro", registro);
                 comando.Parameters.AddWithValue("@Titulo", titulo);
                 comando.Parameters.AddWithValue("@Autor", autor);
                 comando.Parameters.AddWithValue("@Genero", genero);
-                comando.Parameters.AddWithValue("Estante", estante);
+                comando.Parameters.AddWithValue("@Estante", estante);
+                comando.Parameters.AddWithValue("@DataRegistro", dataRegistro);
                 try
                 {
                     conexao.Open();
@@ -90,14 +91,15 @@ namespace Controle_de_livros
                 adapter.Fill(table);
                 if (table.Rows.Count >= 1)
                 {
-                    _sql = "UPDATE Livro_Literario SET N_Registro = @Registro, Titulo = @Titulo, Genero = @Genero, Autor = @Autor, Estante = @Estante WHERE  N_Registro =  @Registro";
+                    _sql = "UPDATE Livro_Literario SET N_Registro = @Registro, Titulo = @Titulo, Genero = @Genero, Autor = @Autor, Estante = @Estante, Data_Registro = @DataRegistro WHERE  N_Registro =  @Registro";
                     SqlCommand comando = new SqlCommand(_sql, conexao);
                     comando.CommandText = _sql;
                     comando.Parameters.AddWithValue("@Registro", registro);
                     comando.Parameters.AddWithValue("@Titulo", titulo);
                     comando.Parameters.AddWithValue("@Genero", genero);
                     comando.Parameters.AddWithValue("@Autor", autor);
-                    comando.Parameters.AddWithValue("Estante", estante);
+                    comando.Parameters.AddWithValue("@Estante", estante);
+                    comando.Parameters.AddWithValue("@DataRegistro", dataRegistro);
                     comando.ExecuteNonQuery();
                     return true;
                 }

@@ -407,6 +407,18 @@ namespace Controle_de_livros
             opcaoPrazoEmprestimo.ShowDialog();
         }
 
+        private void lIVROSLITERÁRIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaRegistroLivroLiterário listaRegistroLivroLiterário = new FrmListaRegistroLivroLiterário();
+            listaRegistroLivroLiterário.Show();
+        }
+
+        private void lIVROSDIDÁTICOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmListaRegistroLivroDidático listaRegistroLivroDidático = new FrmListaRegistroLivroDidático();
+            listaRegistroLivroDidático.Show();
+        }
+
         private void tODOSOSLIVROSEMPRESTADOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _sql = "SELECT Livro_Literario.Titulo, Usuario.Nome_Usuario,  Usuario.Ano, Emprestimo_Livro_Literario.Data_Solicitacao, " +

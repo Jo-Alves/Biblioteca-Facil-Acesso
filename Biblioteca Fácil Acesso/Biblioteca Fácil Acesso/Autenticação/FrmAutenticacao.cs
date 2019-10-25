@@ -120,6 +120,7 @@ namespace Controle_de_livros
                 "[Autor]      VARCHAR(MAX) NULL," +
                 "[Genero] VARCHAR(MAX) NULL," +
                 "[Estante] VARCHAR(3) NULL," +
+                "[Data_Registro] VARCHAR(10) NULL," +
                 "PRIMARY KEY CLUSTERED([N_Registro] ASC));" +
                 "" +
                 "CREATE TABLE[dbo].[Livro_Didatico]" +
@@ -127,7 +128,8 @@ namespace Controle_de_livros
                 "[Disciplina] VARCHAR(300) NULL," +
                 "[Autor] VARCHAR(100) NULL," +
                 "[Ensino] VARCHAR(30)  NULL," +
-                "[Volume] VARCHAR(30)  NULL,   " +
+                "[Volume] VARCHAR(30)  NULL," +
+                "[Data_Registro] VARCHAR(10) NULL," +
                 "PRIMARY KEY CLUSTERED([N_Registro] ASC));" +
                 "" +
                 "CREATE TABLE[dbo].[Emprestimo_Livro_Literario](" +
@@ -150,6 +152,7 @@ namespace Controle_de_livros
                 "PRIMARY KEY CLUSTERED([Cod_Emprestimo_Didatico] ASC)," +
                 "FOREIGN KEY([N_Registro]) REFERENCES[dbo].[Livro_Didatico] ([N_Registro])," +
                 "FOREIGN KEY([Cod_Usuario]) REFERENCES[dbo].[Usuario] ([Cod_Usuario]));" +
+                "" +
                 "CREATE TABLE[dbo].[EmprestimoTemporario](" +
                 "[Id] INT          IDENTITY(1, 1) NOT NULL," +
                 "[Livro] VARCHAR(300) NOT NULL," +

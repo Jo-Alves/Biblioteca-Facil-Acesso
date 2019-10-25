@@ -94,6 +94,7 @@ namespace Controle_de_livros
                     literario.autor = txt_Autor.Text;
                     literario.genero = txt_Genero.Text;
                     literario.estante = cb_Estante.Text;
+                    literario.dataRegistro = dtDataRegistro.Text;
                     if (literario.Cadastrar() == true)
                     {
                         try
@@ -213,6 +214,8 @@ namespace Controle_de_livros
                 txt_Titulo.Text = buscaLivroLiterario.titulo;
                 txt_Autor.Text = buscaLivroLiterario.autor;
                 txt_Genero.Text = buscaLivroLiterario.genero;
+                if (!string.IsNullOrEmpty(buscaLivroLiterario.DataRegistro))
+                    dtDataRegistro.Text = buscaLivroLiterario.DataRegistro;
             }
         }
 
@@ -228,6 +231,7 @@ namespace Controle_de_livros
                     literario.autor = txt_Autor.Text;
                     literario.genero = txt_Genero.Text;
                     literario.estante = cb_Estante.Text;
+                    literario.dataRegistro = dtDataRegistro.Text;
                     if (literario.Atualizar() == true)
                     {
                         literario.Atualizar();

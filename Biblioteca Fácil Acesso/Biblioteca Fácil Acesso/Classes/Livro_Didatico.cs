@@ -50,7 +50,7 @@ namespace Controle_de_livros
             }
             else
             {
-                string _SQl = "INSERT INTO Livro_Didatico VALUES (@Registro, @Disciplina, @Autor, @Ensino, @Volume)";
+                string _SQl = "INSERT INTO Livro_Didatico VALUES (@Registro, @Disciplina, @Autor, @Ensino, @Volume, @DataRegistro)";
                 SqlCommand comando = new SqlCommand(_SQl, conexao);
 
                 comando.Parameters.AddWithValue("@Registro", registro);
@@ -58,6 +58,7 @@ namespace Controle_de_livros
                 comando.Parameters.AddWithValue("@Autor", autor);
                 comando.Parameters.AddWithValue("@Ensino", ensino);
                 comando.Parameters.AddWithValue("@Volume", volume);
+                comando.Parameters.AddWithValue("@DataRegistro", dataRegistro);
                 comando.CommandText = _SQl;
                 try
                 {
@@ -126,13 +127,14 @@ namespace Controle_de_livros
                 conexao.Open();
                 if (table.Rows.Count > 0)
                 {
-                    _sql = "UPDATE Livro_Didatico SET N_Registro = @Registro, Disciplina = @Disciplina, Autor = @Autor, Ensino = @Ensino, Volume = @Volume WHERE N_Registro = @Registro";
+                    _sql = "UPDATE Livro_Didatico SET N_Registro = @Registro, Disciplina = @Disciplina, Autor = @Autor, Ensino = @Ensino, Volume = @Volume, Data_Registro = @DataRegistro WHERE N_Registro = @Registro";
                     SqlCommand comando = new SqlCommand(_sql, conexao);
                     comando.Parameters.AddWithValue("@Registro", registro);
                     comando.Parameters.AddWithValue("@Disciplina", disciplina);
                     comando.Parameters.AddWithValue("@Autor", autor);
                     comando.Parameters.AddWithValue("@Ensino", ensino);
                     comando.Parameters.AddWithValue("@Volume", volume);
+                    comando.Parameters.AddWithValue("@DataRegistro", dataRegistro);
                     comando.CommandText = _sql;
                     comando.ExecuteNonQuery();
                     return true;

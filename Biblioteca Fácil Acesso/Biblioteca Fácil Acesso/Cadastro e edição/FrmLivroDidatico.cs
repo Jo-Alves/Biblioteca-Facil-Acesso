@@ -69,6 +69,7 @@ namespace Controle_de_livros
             didatico.autor = txt_Autor.Text;
             didatico.ensino = cb_Ensino.Text.ToUpper();
             didatico.volume = cb_Volume.Text.ToUpper();
+            didatico.dataRegistro = dtDataRegistro.Text;
             if (didatico.Cadastrar() == true)
             {
                 try
@@ -98,6 +99,7 @@ namespace Controle_de_livros
                 didatico.autor = txt_Autor.Text;
                 didatico.ensino = cb_Ensino.Text.ToUpper();
                 didatico.volume = cb_Volume.Text.ToUpper();
+                didatico.dataRegistro = dtDataRegistro.Text;
                 if (didatico.Atualizar() == true)
                 {
                     try
@@ -361,6 +363,8 @@ namespace Controle_de_livros
                 cb_Ensino.Text = buscarLivroDidatico.ensino;
                 cb_Volume.Text = buscarLivroDidatico.volume;
                 txt_Autor.Text = buscarLivroDidatico.autor;
+                if (!string.IsNullOrEmpty(buscarLivroDidatico.DataRegistro))
+                    dtDataRegistro.Text = buscarLivroDidatico.DataRegistro;
             }
         }
     }

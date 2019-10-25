@@ -230,6 +230,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet%27s\DataSetListaLivros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetListaLivros.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Emprestimo\FrmDevolucaoLivrosDidatico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +333,18 @@
     </Compile>
     <Compile Include="FrmInstituicao.Designer.cs">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaRegistroLivroDidático.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaRegistroLivroDidático.Designer.cs">
+      <DependentUpon>FrmListaRegistroLivroDidático.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaRegistroLivroLiterário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaRegistroLivroLiterário.Designer.cs">
+      <DependentUpon>FrmListaRegistroLivroLiterário.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNovo.cs">
       <SubType>Form</SubType>
@@ -544,6 +561,12 @@
     <EmbeddedResource Include="FrmInstituicao.resx">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaRegistroLivroDidático.resx">
+      <DependentUpon>FrmListaRegistroLivroDidático.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaRegistroLivroLiterário.resx">
+      <DependentUpon>FrmListaRegistroLivroLiterário.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmNovo.resx">
       <DependentUpon>FrmNovo.cs</DependentUpon>
     </EmbeddedResource>
@@ -614,6 +637,8 @@
       <DependentUpon>FrmVerificarSituacaoFuncionariosTerceiros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rwEmprestimoLivroDidaticoAluno.rdlc" />
+    <EmbeddedResource Include="rwListaLivrosDidáticos.rdlc" />
+    <EmbeddedResource Include="rwListaLivrosLiterários.rdlc" />
     <EmbeddedResource Include="rwTodosEmprestimoLivroLiterario.rdlc" />
     <EmbeddedResource Include="rw_RelatorioEmpretimoLivrosLiterariosFuncionario.rdlc" />
     <None Include="Autenticação\DataSetAutenticacao.xsc">
@@ -836,6 +861,17 @@
     </None>
     <None Include="dataSet2.xss">
       <DependentUpon>dataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet%27s\DataSetListaLivros.xsc">
+      <DependentUpon>DataSetListaLivros.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet%27s\DataSetListaLivros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetListaLivros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet%27s\DataSetListaLivros.xss">
+      <DependentUpon>DataSetListaLivros.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

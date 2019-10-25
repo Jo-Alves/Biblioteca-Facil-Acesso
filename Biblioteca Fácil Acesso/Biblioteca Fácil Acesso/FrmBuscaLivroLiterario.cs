@@ -21,6 +21,7 @@ namespace Controle_de_livros
         public string titulo { get; set; }
         public string genero { get; set; }
         public string autor { get; set; }
+        public string DataRegistro { get; set; }
 
         public FrmBuscaLivroLiterario()
         {
@@ -73,10 +74,11 @@ namespace Controle_de_livros
         {
             if (e.RowIndex > -1)
             {
-                registro = int.Parse(dgv_Busca[0, e.RowIndex].Value.ToString());
-                titulo = dgv_Busca[1, e.RowIndex].Value.ToString();
-                autor = dgv_Busca[2, e.RowIndex].Value.ToString();
-                genero = dgv_Busca[3, e.RowIndex].Value.ToString();
+                registro = int.Parse(dgv_Busca["ColRegistro", e.RowIndex].Value.ToString());
+                titulo = dgv_Busca["ColTitulo", e.RowIndex].Value.ToString();
+                autor = dgv_Busca["ColAutor", e.RowIndex].Value.ToString();
+                genero = dgv_Busca["ColGenero", e.RowIndex].Value.ToString();
+                DataRegistro = dgv_Busca["ColDataRegistro", e.RowIndex].Value.ToString();
                 botãoBuscarAcionado = true;
                 Close();
             }
@@ -86,10 +88,11 @@ namespace Controle_de_livros
         {
             if (e.RowIndex > -1)
             {
-                registro = int.Parse(dgv_Busca[0, e.RowIndex].Value.ToString());
-                titulo = dgv_Busca[1, e.RowIndex].Value.ToString();
-                autor = dgv_Busca[2, e.RowIndex].Value.ToString();
-                genero = dgv_Busca[3, e.RowIndex].Value.ToString();
+                registro = int.Parse(dgv_Busca["ColRegistro", e.RowIndex].Value.ToString());
+                titulo = dgv_Busca["ColTitulo", e.RowIndex].Value.ToString();
+                autor = dgv_Busca["ColAutor", e.RowIndex].Value.ToString();
+                genero = dgv_Busca["ColGenero", e.RowIndex].Value.ToString();
+                DataRegistro = dgv_Busca["ColDataRegistro", e.RowIndex].Value.ToString();
             }
         }
 

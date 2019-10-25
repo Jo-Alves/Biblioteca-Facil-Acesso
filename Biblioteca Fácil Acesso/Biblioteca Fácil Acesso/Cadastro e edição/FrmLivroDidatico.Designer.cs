@@ -46,6 +46,8 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtDataRegistro = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_Provider)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +61,7 @@
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
             this.btn_Salvar.Size = new System.Drawing.Size(132, 41);
-            this.btn_Salvar.TabIndex = 5;
+            this.btn_Salvar.TabIndex = 6;
             this.btn_Salvar.Text = "Salvar";
             this.btn_Salvar.UseVisualStyleBackColor = true;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
@@ -128,6 +130,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtDataRegistro);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.cb_Disciplina);
             this.groupBox1.Controls.Add(this.cb_Volume);
             this.groupBox1.Controls.Add(this.label5);
@@ -237,7 +241,7 @@
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(132, 41);
-            this.btnExcluir.TabIndex = 16;
+            this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
@@ -251,7 +255,7 @@
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(132, 41);
-            this.btnEditar.TabIndex = 15;
+            this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -265,10 +269,28 @@
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(129, 41);
-            this.btnPesquisar.TabIndex = 14;
+            this.btnPesquisar.TabIndex = 7;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(449, 137);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(129, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Data de Registro:";
+            // 
+            // dtDataRegistro
+            // 
+            this.dtDataRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDataRegistro.Location = new System.Drawing.Point(453, 165);
+            this.dtDataRegistro.Name = "dtDataRegistro";
+            this.dtDataRegistro.Size = new System.Drawing.Size(111, 26);
+            this.dtDataRegistro.TabIndex = 5;
             // 
             // FrmLivroDidatico
             // 
@@ -313,5 +335,7 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.DateTimePicker dtDataRegistro;
+        private System.Windows.Forms.Label label6;
     }
 }

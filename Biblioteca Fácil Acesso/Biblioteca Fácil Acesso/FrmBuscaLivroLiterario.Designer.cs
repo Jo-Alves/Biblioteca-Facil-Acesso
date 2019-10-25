@@ -28,16 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBuscaLivroLiterario));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.dgv_Busca = new System.Windows.Forms.DataGridView();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.cb_Opcao = new System.Windows.Forms.ComboBox();
             this.txt_Dados = new System.Windows.Forms.TextBox();
+            this.ColRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,12 +72,14 @@
             this.dgv_Busca.AllowUserToAddRows = false;
             this.dgv_Busca.AllowUserToDeleteRows = false;
             this.dgv_Busca.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Busca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Busca.ColumnHeadersHeight = 30;
+            this.dgv_Busca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgv_Busca.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column4,
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.ColRegistro,
+            this.ColTitulo,
+            this.ColAutor,
+            this.ColGenero,
+            this.ColDataRegistro});
             this.dgv_Busca.Location = new System.Drawing.Point(13, 76);
             this.dgv_Busca.Name = "dgv_Busca";
             this.dgv_Busca.ReadOnly = true;
@@ -85,42 +89,6 @@
             this.dgv_Busca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellClick);
             this.dgv_Busca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellDoubleClick);
             this.dgv_Busca.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Busca_DataBindingComplete);
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.DataPropertyName = "N_Registro";
-            this.Column4.HeaderText = "Nº Registro";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 113;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.DataPropertyName = "Titulo";
-            this.Column1.HeaderText = "Título";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 73;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.DataPropertyName = "Autor";
-            this.Column2.HeaderText = "Autor";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 72;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.DataPropertyName = "Genero";
-            this.Column3.HeaderText = "Gênero";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 84;
             // 
             // btn_Pesquisar
             // 
@@ -160,6 +128,51 @@
             this.txt_Dados.TextChanged += new System.EventHandler(this.txt_Dados_TextChanged);
             this.txt_Dados.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Dados_KeyDown);
             // 
+            // ColRegistro
+            // 
+            this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColRegistro.DataPropertyName = "N_Registro";
+            this.ColRegistro.HeaderText = "Nº Registro";
+            this.ColRegistro.Name = "ColRegistro";
+            this.ColRegistro.ReadOnly = true;
+            this.ColRegistro.Width = 113;
+            // 
+            // ColTitulo
+            // 
+            this.ColTitulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColTitulo.DataPropertyName = "Titulo";
+            this.ColTitulo.HeaderText = "Título";
+            this.ColTitulo.Name = "ColTitulo";
+            this.ColTitulo.ReadOnly = true;
+            this.ColTitulo.Width = 73;
+            // 
+            // ColAutor
+            // 
+            this.ColAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColAutor.DataPropertyName = "Autor";
+            this.ColAutor.HeaderText = "Autor";
+            this.ColAutor.Name = "ColAutor";
+            this.ColAutor.ReadOnly = true;
+            this.ColAutor.Width = 72;
+            // 
+            // ColGenero
+            // 
+            this.ColGenero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColGenero.DataPropertyName = "Genero";
+            this.ColGenero.HeaderText = "Gênero";
+            this.ColGenero.Name = "ColGenero";
+            this.ColGenero.ReadOnly = true;
+            this.ColGenero.Width = 84;
+            // 
+            // ColDataRegistro
+            // 
+            this.ColDataRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColDataRegistro.DataPropertyName = "Data_Registro";
+            this.ColDataRegistro.HeaderText = "Data do Registro";
+            this.ColDataRegistro.Name = "ColDataRegistro";
+            this.ColDataRegistro.ReadOnly = true;
+            this.ColDataRegistro.Width = 149;
+            // 
             // FrmBuscaLivroLiterario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -174,6 +187,7 @@
             this.Controls.Add(this.txt_Dados);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmBuscaLivroLiterario";
@@ -195,9 +209,10 @@
         private System.Windows.Forms.Button btn_Pesquisar;
         private System.Windows.Forms.ComboBox cb_Opcao;
         private System.Windows.Forms.TextBox txt_Dados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColGenero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDataRegistro;
     }
 }
