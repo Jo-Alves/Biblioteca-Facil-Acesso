@@ -60,9 +60,9 @@
             this.tODOSOSLIVROSEMPRESTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lISTADELIVROSLITERÁRIOSPENDENTESToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.dELIVROSDIDÁTICOSEMPRESTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lIVROSDIDÁTICOSEMPRESTADOAFUNCIONÁRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELIVROSDIDÁTICOSEMPRESTADOATERCEIROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lISTADELIVROSDIDÁTICOSEMPRESTADOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lIVROSLITERÁRIOSEMPRESTADOSAALUNOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lIVROSLITERÁRIOSEMPRESTADOAFUNCIONÁRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,7 +84,6 @@
             this.menuPrazoEmprestimo = new System.Windows.Forms.ToolStripMenuItem();
             this.opçoesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_Sair = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNomeBiblioteca = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -97,6 +96,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.menu_Sair = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -267,7 +267,7 @@
             // Menu_BuscarObrasLiterarioGenero
             // 
             this.Menu_BuscarObrasLiterarioGenero.Name = "Menu_BuscarObrasLiterarioGenero";
-            this.Menu_BuscarObrasLiterarioGenero.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.Menu_BuscarObrasLiterarioGenero.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F2)));
             this.Menu_BuscarObrasLiterarioGenero.Size = new System.Drawing.Size(365, 22);
             this.Menu_BuscarObrasLiterarioGenero.Text = "BUSCAR OBRAS LITERÁRIAS POR GÊNERO";
             this.Menu_BuscarObrasLiterarioGenero.Click += new System.EventHandler(this.Menu_BuscarObrasLiterarioGenero_Click);
@@ -404,15 +404,6 @@
             this.dELIVROSDIDÁTICOSEMPRESTADOSToolStripMenuItem.Text = "LIVROS DIDÁTICOS EMPRESTADOS A ALUNOS";
             this.dELIVROSDIDÁTICOSEMPRESTADOSToolStripMenuItem.Click += new System.EventHandler(this.dELIVROSDIDÁTICOSEMPRESTADOSToolStripMenuItem_Click);
             // 
-            // dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1
-            // 
-            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Name = "dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1";
-            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
-            | System.Windows.Forms.Keys.W)));
-            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Size = new System.Drawing.Size(504, 22);
-            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Text = "LIVROS DIDÁTICOS EMPRESTADOS A ALUNOS POR TURMA E ANO";
-            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Click += new System.EventHandler(this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1_Click);
-            // 
             // lIVROSDIDÁTICOSEMPRESTADOAFUNCIONÁRIOSToolStripMenuItem
             // 
             this.lIVROSDIDÁTICOSEMPRESTADOAFUNCIONÁRIOSToolStripMenuItem.Name = "lIVROSDIDÁTICOSEMPRESTADOAFUNCIONÁRIOSToolStripMenuItem";
@@ -428,6 +419,15 @@
             this.dELIVROSDIDÁTICOSEMPRESTADOATERCEIROSToolStripMenuItem.Size = new System.Drawing.Size(504, 22);
             this.dELIVROSDIDÁTICOSEMPRESTADOATERCEIROSToolStripMenuItem.Text = "LIVROS DIDÁTICOS EMPRESTADO A TERCEIROS";
             this.dELIVROSDIDÁTICOSEMPRESTADOATERCEIROSToolStripMenuItem.Click += new System.EventHandler(this.dELIVROSDIDÁTICOSEMPRESTADOATERCEIROSToolStripMenuItem_Click);
+            // 
+            // dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1
+            // 
+            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Name = "dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1";
+            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.W)));
+            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Size = new System.Drawing.Size(504, 22);
+            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Text = "LIVROS DIDÁTICOS EMPRESTADOS A ALUNOS POR TURMA E ANO";
+            this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1.Click += new System.EventHandler(this.dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1_Click);
             // 
             // lISTADELIVROSDIDÁTICOSEMPRESTADOSToolStripMenuItem
             // 
@@ -611,15 +611,6 @@
             this.settingsToolStripMenuItem.Text = "SETTING";
             this.settingsToolStripMenuItem.Click += new System.EventHandler(this.SettingsToolStripMenuItem_Click);
             // 
-            // menu_Sair
-            // 
-            this.menu_Sair.Image = global::Controle_de_livros.Properties.Resources.Saki_Snowish_Button_exit;
-            this.menu_Sair.Name = "menu_Sair";
-            this.menu_Sair.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.menu_Sair.Size = new System.Drawing.Size(59, 20);
-            this.menu_Sair.Text = "SAIR";
-            this.menu_Sair.Click += new System.EventHandler(this.menu_Sair_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lblNomeBiblioteca);
@@ -758,6 +749,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // menu_Sair
+            // 
+            this.menu_Sair.Image = global::Controle_de_livros.Properties.Resources.Saki_Snowish_Button_exit;
+            this.menu_Sair.Name = "menu_Sair";
+            this.menu_Sair.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.menu_Sair.Size = new System.Drawing.Size(59, 20);
+            this.menu_Sair.Text = "SAIR";
+            this.menu_Sair.Click += new System.EventHandler(this.menu_Sair_Click);
+            // 
             // FrmTelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -801,7 +801,6 @@
         private System.Windows.Forms.ToolStripMenuItem dEVOLUÇÃOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menu_DevolucaoLivroLiterario;
         private System.Windows.Forms.ToolStripMenuItem menu_DevolucaoLivroDidatico;
-        private System.Windows.Forms.ToolStripMenuItem menu_Sair;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -856,5 +855,6 @@
         private System.Windows.Forms.ToolStripMenuItem lIVROSLITERÁRIOSEMPRESTADOAFUNCIONÁRIOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lIVROSLITERÁRIOSEMPRESTADOATERCEIROSToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem lIVROSLITERÁRIOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem menu_Sair;
     }
 }

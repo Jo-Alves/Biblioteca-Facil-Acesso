@@ -84,6 +84,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.dataGridView_Busca);
             this.groupBox1.Controls.Add(this.numQuantidadeLivroAutor);
             this.groupBox1.Controls.Add(this.label3);
@@ -102,6 +105,9 @@
             // 
             this.dataGridView_Busca.AllowUserToAddRows = false;
             this.dataGridView_Busca.AllowUserToDeleteRows = false;
+            this.dataGridView_Busca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView_Busca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView_Busca.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -124,6 +130,7 @@
             // 
             // numQuantidadeLivroAutor
             // 
+            this.numQuantidadeLivroAutor.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.numQuantidadeLivroAutor.Enabled = false;
             this.numQuantidadeLivroAutor.Location = new System.Drawing.Point(310, 537);
             this.numQuantidadeLivroAutor.Margin = new System.Windows.Forms.Padding(4);
@@ -133,6 +140,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 540);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -153,6 +161,8 @@
             // 
             // txt_Autor
             // 
+            this.txt_Autor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Autor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Autor.Location = new System.Drawing.Point(42, 50);
             this.txt_Autor.Margin = new System.Windows.Forms.Padding(4);
@@ -165,6 +175,7 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Image = global::Controle_de_livros.Properties.Resources.lupa3;
             this.btn_Buscar.Location = new System.Drawing.Point(409, 41);
@@ -177,6 +188,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(565, 48);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -187,6 +199,7 @@
             // 
             // txt_Titulo
             // 
+            this.txt_Titulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Titulo.BackColor = System.Drawing.Color.White;
             this.txt_Titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Titulo.Location = new System.Drawing.Point(568, 71);
@@ -199,6 +212,7 @@
             // 
             // txtGenero
             // 
+            this.txtGenero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtGenero.BackColor = System.Drawing.Color.White;
             this.txtGenero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGenero.Location = new System.Drawing.Point(570, 177);
@@ -210,6 +224,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(566, 154);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -220,6 +235,7 @@
             // 
             // txt_Estante
             // 
+            this.txt_Estante.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Estante.BackColor = System.Drawing.Color.White;
             this.txt_Estante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Estante.Location = new System.Drawing.Point(570, 230);
@@ -231,6 +247,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(566, 207);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -241,6 +258,7 @@
             // 
             // btn_Verificar
             // 
+            this.btn_Verificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Verificar.Enabled = false;
             this.btn_Verificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Verificar.Location = new System.Drawing.Point(570, 423);
@@ -254,6 +272,7 @@
             // 
             // num_QuantidadeEmprestadas
             // 
+            this.num_QuantidadeEmprestadas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.num_QuantidadeEmprestadas.BackColor = System.Drawing.Color.White;
             this.num_QuantidadeEmprestadas.Location = new System.Drawing.Point(570, 389);
             this.num_QuantidadeEmprestadas.Margin = new System.Windows.Forms.Padding(4);
@@ -264,6 +283,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(566, 366);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -274,6 +294,7 @@
             // 
             // num_QuantidadeDisponivel
             // 
+            this.num_QuantidadeDisponivel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.num_QuantidadeDisponivel.BackColor = System.Drawing.Color.White;
             this.num_QuantidadeDisponivel.Location = new System.Drawing.Point(570, 336);
             this.num_QuantidadeDisponivel.Margin = new System.Windows.Forms.Padding(4);
@@ -284,6 +305,7 @@
             // 
             // num_QuantidadeTotalCadastrado
             // 
+            this.num_QuantidadeTotalCadastrado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.num_QuantidadeTotalCadastrado.BackColor = System.Drawing.Color.White;
             this.num_QuantidadeTotalCadastrado.Location = new System.Drawing.Point(570, 283);
             this.num_QuantidadeTotalCadastrado.Margin = new System.Windows.Forms.Padding(4);
@@ -294,6 +316,7 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(566, 313);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -304,6 +327,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(566, 260);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -314,6 +338,7 @@
             // 
             // btn_Limpar
             // 
+            this.btn_Limpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Limpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Limpar.Image = global::Controle_de_livros.Properties.Resources.CleanMyMac_1_icon;
             this.btn_Limpar.Location = new System.Drawing.Point(570, 489);
@@ -326,6 +351,7 @@
             // 
             // btn_Sair
             // 
+            this.btn_Sair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Sair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Sair.Image = global::Controle_de_livros.Properties.Resources.logout_icon2;
             this.btn_Sair.Location = new System.Drawing.Point(570, 555);
@@ -387,6 +413,7 @@
             // 
             // txtAutor
             // 
+            this.txtAutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAutor.BackColor = System.Drawing.Color.White;
             this.txtAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAutor.Location = new System.Drawing.Point(570, 124);
@@ -398,6 +425,7 @@
             // 
             // label9
             // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(566, 101);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -406,7 +434,7 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Autor:";
             // 
-            // Buscar_livros_por_autor
+            // FrmBuscarLivrosAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -431,13 +459,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
-            this.Name = "Buscar_livros_por_autor";
+            this.Name = "FrmBuscarLivrosAutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BUSCAR LIVRO POR AUTOR";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Buscar_livros_por_autor_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

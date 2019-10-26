@@ -1,6 +1,6 @@
 ﻿namespace Controle_de_livros
 {
-    partial class QuantidadeLivrosCadastrados
+    partial class FrmInformarQuantidadeLivrosCadastrados
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuantidadeLivrosCadastrados));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInformarQuantidadeLivrosCadastrados));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblQuantidadeLivroLiterario = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();

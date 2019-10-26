@@ -162,12 +162,6 @@
       <DependentUpon>DataSetTabelaUsuarioNome.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classes\Autenticacao.cs" />
-    <Compile Include="Backup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Backup.Designer.cs">
-      <DependentUpon>Backup.cs</DependentUpon>
-    </Compile>
     <Compile Include="Busca\FrmBuscarLivrosAutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,11 +390,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuantidadeLivrosCadastrados.cs">
+    <Compile Include="FrmInformarQuantidadeLivrosCadastrados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuantidadeLivrosCadastrados.Designer.cs">
-      <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
+    <Compile Include="FrmInformarQuantidadeLivrosCadastrados.Designer.cs">
+      <DependentUpon>FrmInformarQuantidadeLivrosCadastrados.cs</DependentUpon>
     </Compile>
     <Compile Include="RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.cs">
       <SubType>Form</SubType>
@@ -521,9 +515,6 @@
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Backup.resx">
-      <DependentUpon>Backup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Busca\FrmBuscarLivrosGenero.resx">
       <DependentUpon>FrmBuscarLivrosGenero.cs</DependentUpon>
     </EmbeddedResource>
@@ -632,8 +623,8 @@
     <EmbeddedResource Include="FrmTelaPrincipal.resx">
       <DependentUpon>FrmTelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuantidadeLivrosCadastrados.resx">
-      <DependentUpon>QuantidadeLivrosCadastrados.cs</DependentUpon>
+    <EmbeddedResource Include="FrmInformarQuantidadeLivrosCadastrados.resx">
+      <DependentUpon>FrmInformarQuantidadeLivrosCadastrados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.resx">
       <DependentUpon>RELATORIO DE LIVROS DIDATICOS EMPRESTADOS A TERCEIROS.cs</DependentUpon>

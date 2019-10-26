@@ -24,35 +24,7 @@ namespace Controle_de_livros
         SqlConnection conexao;
         SqlDataAdapter adapter;
         DataTable table;
-        private void btn_Sair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btn_Limpar_Click(object sender, EventArgs e)
-        {
-            atualizar_Grid();
-            txt_Endereco.Clear();
-            txt_Codigo.Clear();
-            txt_Nome.Clear();
-            txt_QuantidadeLivroLiterarioEmprestado.Clear();
-            txt_decisaoLivroDidatico.Clear();          
-            txt_Telefone.Clear();
-            txt_Ocupacao.Clear();
-            txt_Numero.Clear();
-            cb_Nome.Text = "";
-            txt_Codigo.Clear();
-            txt_Quantidade.Clear();
-            txtSituacao.Clear();
-            txtCep.Clear();
-            txtBairro.Clear();
-            txtCidade.Clear();
-            txtUF.Clear();
-            txtSituacao.BackColor = Color.White;
-            btn_VerificarLivrosDidaticosEmprestados.Enabled = false;
-            btn_VerificarLivrosLiterariosEmprestados.Enabled = false;
-        }
-
+      
         private void atualizar_Grid()
         {
             conexao = new SqlConnection(stringConn);
@@ -308,6 +280,34 @@ namespace Controle_de_livros
                 FrmHistoricoEmprestimoDidatico emprestimoDidatico = new FrmHistoricoEmprestimoDidatico(txt_Codigo.Text, txt_Nome.Text, int.Parse(txt_Quantidade.Text));
                 emprestimoDidatico.ShowDialog();
             }
+        }
+        private void btn_Sair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Limpar_Click(object sender, EventArgs e)
+        {
+            atualizar_Grid();
+            txt_Endereco.Clear();
+            txt_Codigo.Clear();
+            txt_Nome.Clear();
+            txt_QuantidadeLivroLiterarioEmprestado.Clear();
+            txt_decisaoLivroDidatico.Clear();
+            txt_Telefone.Clear();
+            txt_Ocupacao.Clear();
+            txt_Numero.Clear();
+            cb_Nome.Text = "";
+            txt_Codigo.Clear();
+            txt_Quantidade.Clear();
+            txtSituacao.Clear();
+            txtCep.Clear();
+            txtBairro.Clear();
+            txtCidade.Clear();
+            txtUF.Clear();
+            txtSituacao.BackColor = Color.White;
+            btn_VerificarLivrosDidaticosEmprestados.Enabled = false;
+            btn_VerificarLivrosLiterariosEmprestados.Enabled = false;
         }
     }
 }

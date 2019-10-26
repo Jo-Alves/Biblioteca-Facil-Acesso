@@ -55,6 +55,9 @@
             // 
             this.dgvBusca.AllowUserToAddRows = false;
             this.dgvBusca.AllowUserToDeleteRows = false;
+            this.dgvBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBusca.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -127,6 +130,7 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Buscar.Location = new System.Drawing.Point(870, 41);
@@ -157,6 +161,8 @@
             // 
             // txt_Aluno
             // 
+            this.txt_Aluno.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Aluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Aluno.Location = new System.Drawing.Point(547, 46);
             this.txt_Aluno.Name = "txt_Aluno";
@@ -253,13 +259,12 @@
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.dgvBusca);
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "FrmAnaliseUsuarioMaisLeu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de Alunos letrados";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAnaliseUsuarioMaisLeu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusca)).EndInit();
             this.groupBox1.ResumeLayout(false);

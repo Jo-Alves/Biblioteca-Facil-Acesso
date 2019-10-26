@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Text;
@@ -17,7 +18,8 @@ namespace Controle_de_livros
 {
     public partial class FrmTelaPrincipal : Form
     {
-        string Usuario, _sql;
+        string Usuario, _sql, stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHJjGrOXTsH7b9NW1qcCpVJxD4wsfhTDR6OXOUSfCqDynZ+0PYEaREWQ==");
+
         public FrmTelaPrincipal(string Usuario)
         {
             InitializeComponent();
@@ -78,111 +80,163 @@ namespace Controle_de_livros
             }            
         }
 
-        private void menu_Sair_Click(object sender, EventArgs e)
+       private void Fomulario_Principal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Close();
-        }
-
-        private void menu_CadastroAlunoFuncionarioOutros_Click(object sender, EventArgs e)
-        {
-            FrmCadastroUsuarios cadastroUsuarios = new FrmCadastroUsuarios();
-            cadastroUsuarios.ShowDialog();
-        }
-
-        private void btn_Cadastrar_Usuario_Click(object sender, EventArgs e)
-        {
-            FrmCadastroUsuarios Ca_Us = new FrmCadastroUsuarios();
-            Ca_Us.ShowDialog();
-        }
-
-        private void btn_Cadastrar_Livro_Click(object sender, EventArgs e)
-        {
-            FrmLivroLiterario CL = new FrmLivroLiterario();
-            CL.ShowDialog();
-        }
-
-        Backup gerarBackup = new Backup();
-        string Confirmacao;
-        private void Fomulario_Principal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (Confirmacao == null)
+            if (!mostrouMessagemUmaVez)
             {
                 DialogResult dr = MessageBox.Show("Deseja gerar o backup de segurança agora?", "Mensagem do sistema 'Gerenciamento de Caixa Fácil'", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (dr == DialogResult.Yes)
                 {
-                    gerarBackup.ShowDialog();
-                    if (gerarBackup.confirmacao == null)
-                    {
-                        e.Cancel = true;
-                    }
-                    else
-                    {
-                        Confirmacao = "ok";
-                        Application.Exit();
-                    }
+                    GerarBackup();
+                    mostrouMessagemUmaVez = true;
+                    Application.Exit();
                 }
                 else if (dr == DialogResult.Cancel)
                 {
                     e.Cancel = true;
                 }
-                else if (dr == DialogResult.No)
+                else
                 {
-                    Confirmacao = "ok";
+                    mostrouMessagemUmaVez = true;
                     Application.Exit();
                 }
             }
-            else
+        }
+
+        bool mostrouMessagemUmaVez;
+
+        private void menu_Sair_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Deseja gerar o backup de segurança agora?", "Mensagem do sistema 'Gerenciamento de Caixa Fácil'", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
             {
+                GerarBackup();
+                mostrouMessagemUmaVez = true;
                 Application.Exit();
             }
+            else if (dr == DialogResult.No)
+            {
+                mostrouMessagemUmaVez = true;
+                Application.Exit();
+            }
+        }
+
+        private void GerarBackup()
+        {
+            DataHora();
+
+            this.Cursor = Cursors.WaitCursor;
+            CriarPasta();
+            SqlConnection conexao = new SqlConnection(stringConn);
+            SqlCommand comando = new SqlCommand("", conexao);
+            comando.CommandText = "Backup Database Sistema_Controle_Livros to disk = '" + Pasta + "Backup de Segurança - " + Data + ".bak'";
+            try
+            {
+                conexao.Open();
+                comando.ExecuteNonQuery();
+                MessageBox.Show("Backup de segurança realizada com sucesso! O arquivo se encontra em " + Pasta + "Backup de Segurança - " + Data + ".bak", "Mensagem de segurança do sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Cursor = System.Windows.Forms.Cursors.Default;
+                this.Visible = false;
+                this.Visible = false;               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        string Data;
+        private void DataHora()
+        {
+            int ano, mes, dia, hora, minuto, segundo;
+            DateTime dt = DateTime.Now;
+            ano = dt.Year;
+            mes = dt.Month;
+            dia = dt.Day;
+            hora = dt.Hour;
+            minuto = dt.Minute;
+            segundo = dt.Second;
+
+            Data = dia.ToString("00") + "_" + mes.ToString("00") + "_" + ano.ToString("00") + " - " + hora.ToString("00") + "_" + minuto.ToString("00") + "_" + segundo.ToString("00");
+        }
+
+        string Pasta;
+        private void CriarPasta()
+        {
+            Pasta = Settings.Default["Disco"].ToString() + @"Biblioteca Fácil Acesso\Sistema de Segurança\";
+            if (!Directory.Exists(Pasta))
+            {
+                Directory.CreateDirectory(Pasta);
+            }
+        }
+
+        private void menu_CadastroAlunoFuncionarioOutros_Click(object sender, EventArgs e)
+        {
+            FrmCadastroUsuarios cadastroUsuarios = new FrmCadastroUsuarios();
+            cadastroUsuarios.Show();
+        }
+
+        private void btn_Cadastrar_Usuario_Click(object sender, EventArgs e)
+        {
+            FrmCadastroUsuarios Ca_Us = new FrmCadastroUsuarios();
+            Ca_Us.Show();
+        }
+
+        private void btn_Cadastrar_Livro_Click(object sender, EventArgs e)
+        {
+            FrmLivroLiterario CL = new FrmLivroLiterario();
+            CL.Show();
         }
 
         private void menu_Buscar_Todos_Dados_Click(object sender, EventArgs e)
         {
             BFrmBuscarUsuáriosLivros bul = new BFrmBuscarUsuáriosLivros();
-            bul.ShowDialog();
+            bul.Show();
         }
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
             BFrmBuscarUsuáriosLivros bul = new BFrmBuscarUsuáriosLivros();
-            bul.ShowDialog();
+            bul.Show();
         }
 
         private void btn_CadastrarLivroDidatico_Click(object sender, EventArgs e)
         {
            FrmLivroDidatico CL = new FrmLivroDidatico();
-            CL.ShowDialog();
+            CL.Show();
         }
 
         private void menu_EmprestimoLivroDidatico_Click(object sender, EventArgs e)
         {
             FrmEmprestimoLivroDidatico emprestimolivrodidatico = new FrmEmprestimoLivroDidatico();
-            emprestimolivrodidatico.ShowDialog();
+            emprestimolivrodidatico.Show();
         }
 
         private void menu_DevolucaoLivroLiterario_Click(object sender, EventArgs e)
         {
             FrmDevolucaoLivrosLiterarios devolucaoLivros = new FrmDevolucaoLivrosLiterarios();
-            devolucaoLivros.ShowDialog();
+            devolucaoLivros.Show();
         }
 
         private void menu_DevolucaoLivroDidatico_Click(object sender, EventArgs e)
         {
           FrmDevolucaoLivrosDidatico devolucaoLivrosDidatico = new FrmDevolucaoLivrosDidatico();
-            devolucaoLivrosDidatico.ShowDialog();
+            devolucaoLivrosDidatico.Show();
         }
 
         private void menu_AlterarLogin_Click(object sender, EventArgs e)
         {
             FrmAlterarSenha AS = new FrmAlterarSenha();
-            AS.ShowDialog();
+            AS.Show();
         }
 
         private void menu_ExcluirLogin_Click(object sender, EventArgs e)
         {
             FrmExcluirUsuario EU = new FrmExcluirUsuario();
-            EU.ShowDialog();
+            EU.Show();
         }
 
         private void menu_CadastrarLogin_Click_1(object sender, EventArgs e)
@@ -194,7 +248,7 @@ namespace Controle_de_livros
         private void menu_Temporario_LD_Click(object sender, EventArgs e)
         {
             FrmEmprestimoLivroDidaticoTemporaria epdt = new FrmEmprestimoLivroDidaticoTemporaria();
-            epdt.ShowDialog();
+            epdt.Show();
         }
 
         private void menu_LivroLiterarioDevolvido_Click(object sender, EventArgs e)
@@ -203,7 +257,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS RLD = new RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS();
-                RLD.ShowDialog();
+                RLD.Show();
             }
             else
             {
@@ -214,43 +268,43 @@ namespace Controle_de_livros
         private void menu_VerificarAlunos_Click(object sender, EventArgs e)
         {
             FrmBuscarSituacaoUsuarioAluno bsu = new FrmBuscarSituacaoUsuarioAluno();
-            bsu.ShowDialog();
+            bsu.Show();
         }
 
         private void menu_BuscarObrasEspecificas_Click(object sender, EventArgs e)
         {
             FrmBuscarLivrosLiterarios bl = new FrmBuscarLivrosLiterarios();
-            bl.ShowDialog();
+            bl.Show();
         }
 
        private void Menu_BuscarObrasLiterarioAutor_Click(object sender, EventArgs e)
         {
             FrmBuscarLivrosAutor BLA = new FrmBuscarLivrosAutor();
-            BLA.ShowDialog();
+            BLA.Show();
         }
 
         private void menu_VerificarSituacaoFT_Click(object sender, EventArgs e)
         {
             FrmVerificarSituacaoFuncionariosTerceiros vft = new FrmVerificarSituacaoFuncionariosTerceiros();
-            vft.ShowDialog();
+            vft.Show();
         }
 
         private void Menu_AnaliseAlunosLetrados_Click(object sender, EventArgs e)
         {
             FrmAnaliseUsuarioMaisLeu AlunosLetrados = new FrmAnaliseUsuarioMaisLeu();
-            AlunosLetrados.ShowDialog();
+            AlunosLetrados.Show();
         }
 
         private void Menu_AnaliseLivrosMaisLidos_Click(object sender, EventArgs e)
         {
             FrmAnaliseLivroMaisEmprestado Al = new FrmAnaliseLivroMaisEmprestado();
-            Al.ShowDialog();
+            Al.Show();
         }
 
         private void Menu_BuscarObrasLiterarioGenero_Click(object sender, EventArgs e)
         {
             FrmBuscarLivrosGenero buscar_Livros_Por_Genero = new FrmBuscarLivrosGenero();
-            buscar_Livros_Por_Genero.ShowDialog();
+            buscar_Livros_Por_Genero.Show();
         }
 
        private void Fomulario_Principal_Load(object sender, EventArgs e)
@@ -261,56 +315,56 @@ namespace Controle_de_livros
         private void SettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmSettings settings = new FrmSettings();
-            settings.ShowDialog();
+            settings.Show();
         }
 
         private void Menu_LivroLiterario_Click(object sender, EventArgs e)
         {
             FrmLivroLiterario livroLiterario = new FrmLivroLiterario();
-            livroLiterario.ShowDialog();
+            livroLiterario.Show();
         }
 
         private void Menu_LivroDidatico_Click(object sender, EventArgs e)
         {
             FrmLivroDidatico LivroDidatico = new FrmLivroDidatico();
-            LivroDidatico.ShowDialog();
+            LivroDidatico.Show();
         }
 
         private void MenuCadastroInstituicao_Click(object sender, EventArgs e)
         {
             FrmInstituicao instituicao = new FrmInstituicao();
-            instituicao.ShowDialog();
+            instituicao.Show();
             lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
         }
 
         private void MenuQuantidadeLivrosCadastrados_Click(object sender, EventArgs e)
         {
-            QuantidadeLivrosCadastrados quantidadeLivros = new QuantidadeLivrosCadastrados();
-            quantidadeLivros.ShowDialog();
+            FrmInformarQuantidadeLivrosCadastrados quantidadeLivros = new FrmInformarQuantidadeLivrosCadastrados();
+            quantidadeLivros.Show();
         }
 
         private void menu_EmprestimoLivroLiterario_Click(object sender, EventArgs e)
         {
             FrmEmprestimoLivroLiterario emprestimoLivro = new FrmEmprestimoLivroLiterario();
-            emprestimoLivro.ShowDialog();
+            emprestimoLivro.Show();
         }
 
         private void menu_CadastrarLogin_Click(object sender, EventArgs e)
         {
             FrmCadastrarLogin cadastrarLogin = new FrmCadastrarLogin();
-            cadastrarLogin.ShowDialog();
+            cadastrarLogin.Show();
         }
 
         private void menuAlterarSenha_Click(object sender, EventArgs e)
         {
             FrmAlterarSenha alterarSenha = new FrmAlterarSenha();
-            alterarSenha.ShowDialog();
+            alterarSenha.Show();
         }
 
         private void menuExcluirLogin_Click(object sender, EventArgs e)
         {
             FrmExcluirUsuario excluirUsuario = new FrmExcluirUsuario();
-            excluirUsuario.ShowDialog();
+            excluirUsuario.Show();
         }
 
         private void prazoDeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -337,7 +391,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 Relatório_Livros_Literários_Nao_Entregues RL = new Relatório_Livros_Literários_Nao_Entregues();
-                RL.ShowDialog();
+                RL.Show();
             }
             else
             {
@@ -351,7 +405,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 RelatorioEmpretimoLivrosLiterariosFuncionario rfo = new RelatorioEmpretimoLivrosLiterariosFuncionario();
-                rfo.ShowDialog();
+                rfo.Show();
             }
             else
             {
@@ -365,7 +419,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 RelatorioEmpretimoLivrosLiterariosTerceiroscs rlt = new RelatorioEmpretimoLivrosLiterariosTerceiroscs();
-                rlt.ShowDialog();
+                rlt.Show();
 
             }
             else
@@ -401,7 +455,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 Relatorio_Livros_Didaticos_Nao_Entregues rld = new Relatorio_Livros_Didaticos_Nao_Entregues();
-                rld.ShowDialog();
+                rld.Show();
             }
             else
             {
@@ -429,7 +483,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 RelatorioLivrosDidaticosEmprestadosFuncionarios rf = new RelatorioLivrosDidaticosEmprestadosFuncionarios();
-                rf.ShowDialog();
+                rf.Show();
 
             }
             else
@@ -444,7 +498,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS rt = new RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS();
-                rt.ShowDialog();
+                rt.Show();
 
 
             }
@@ -460,7 +514,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 FrmRelatorioLivrosLiterariosEmprestadosAlunos relatorioLivrosLiterariosEmprestados = new FrmRelatorioLivrosLiterariosEmprestadosAlunos();
-                relatorioLivrosLiterariosEmprestados.ShowDialog();
+                relatorioLivrosLiterariosEmprestados.Show();
             }
             else
             {
@@ -474,7 +528,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 FrmRelatorioLivrosLiterariosEmprestadosFuncionarios literariosEmprestadosFuncionarios = new FrmRelatorioLivrosLiterariosEmprestadosFuncionarios();
-                literariosEmprestadosFuncionarios.ShowDialog();
+                literariosEmprestadosFuncionarios.Show();
             }
             else
             {
@@ -489,7 +543,7 @@ namespace Controle_de_livros
             {
 
                 FrmRelatorioLivrosLiterariosEmprestadosTerceiros livrosLiterariosEmprestadosTerceiros = new FrmRelatorioLivrosLiterariosEmprestadosTerceiros();
-                livrosLiterariosEmprestadosTerceiros.ShowDialog();
+                livrosLiterariosEmprestadosTerceiros.Show();
             }
             else
             {
@@ -509,7 +563,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano livroEmprestadoLiterarioPorTurma_E_Ano = new FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano();
-                livroEmprestadoLiterarioPorTurma_E_Ano.ShowDialog();
+                livroEmprestadoLiterarioPorTurma_E_Ano.Show();
             }
             else
             {
@@ -544,7 +598,7 @@ namespace Controle_de_livros
             if (VerificarEmprestimos())
             {
                 FrmRelatorioListaLivrosLiteráriosEmprestados listaLivrosLiteráriosEmprestados = new FrmRelatorioListaLivrosLiteráriosEmprestados();
-                listaLivrosLiteráriosEmprestados.ShowDialog();
+                listaLivrosLiteráriosEmprestados.Show();
             }
             else
             {

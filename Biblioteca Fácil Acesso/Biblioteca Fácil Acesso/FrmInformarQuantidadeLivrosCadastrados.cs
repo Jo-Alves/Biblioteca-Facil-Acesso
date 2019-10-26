@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Controle_de_livros
 {
-    public partial class QuantidadeLivrosCadastrados : Form
+    public partial class FrmInformarQuantidadeLivrosCadastrados : Form
     {
-        public QuantidadeLivrosCadastrados()
+        public FrmInformarQuantidadeLivrosCadastrados()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace Controle_de_livros
         string _sql, stringConn;
         private void ContarLivrosLiterariosCadastrados()
         {
-            SqlConnection conexao = new SqlConnection(Security.Dry(ConfigurationSettings.AppSettings["CadeiaConexao"]));
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
             _sql = "Select Count(N_Registro) From Livro_Literario";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.CommandText = _sql;
@@ -53,7 +53,7 @@ namespace Controle_de_livros
 
         private void ContarLivrosDidaticosCadastrados()
         {
-            SqlConnection conexao = new SqlConnection(Security.Dry(ConfigurationSettings.AppSettings["CadeiaConexao"]));
+            SqlConnection conexao = new SqlConnection(Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="));
             _sql = "Select Count(N_Registro) From Livro_Didatico";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.CommandText = _sql;

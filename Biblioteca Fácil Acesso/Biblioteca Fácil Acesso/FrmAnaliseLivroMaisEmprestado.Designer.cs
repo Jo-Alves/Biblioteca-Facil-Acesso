@@ -53,6 +53,9 @@
             // 
             this.dgvBusca.AllowUserToAddRows = false;
             this.dgvBusca.AllowUserToDeleteRows = false;
+            this.dgvBusca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvBusca.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -136,6 +139,8 @@
             // 
             // txt_Titulo
             // 
+            this.txt_Titulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Titulo.Location = new System.Drawing.Point(561, 69);
             this.txt_Titulo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -147,6 +152,7 @@
             // 
             // btn_Buscar
             // 
+            this.btn_Buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Buscar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.btn_Buscar.Location = new System.Drawing.Point(1024, 61);
@@ -166,9 +172,9 @@
             this.groupBox2.Controls.Add(this.dt_dataFinal);
             this.groupBox2.Controls.Add(this.dt_DataInicial);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox2.Location = new System.Drawing.Point(12, 19);
+            this.groupBox2.Location = new System.Drawing.Point(12, 23);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(357, 100);
+            this.groupBox2.Size = new System.Drawing.Size(357, 113);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar por período:";
@@ -235,13 +241,12 @@
             this.Controls.Add(this.btn_Buscar);
             this.Controls.Add(this.dgvBusca);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.MaximizeBox = false;
             this.Name = "FrmAnaliseLivroMaisEmprestado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Relatório de livros mais emprestados";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAnaliseLivroMaisEmprestado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBusca)).EndInit();
             this.groupBox1.ResumeLayout(false);
