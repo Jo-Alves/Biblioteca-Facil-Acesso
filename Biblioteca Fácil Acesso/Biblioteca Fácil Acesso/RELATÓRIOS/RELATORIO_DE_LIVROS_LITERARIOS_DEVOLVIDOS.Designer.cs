@@ -94,7 +94,7 @@
             this.MaximizeBox = false;
             this.Name = "RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RELATORIO DE LIVROS LITERARIOS DEVOLVIDOS";
+            this.Text = "LISTA DE LIVROS LITERÁRIOS DEVOLVIDOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataTableLivrosLiterariosDevolvidosBindingSource2)).EndInit();

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano));
+            this.emprestimoLivroLiterarioTurmaEAnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnOK = new System.Windows.Forms.Button();
@@ -38,13 +40,21 @@
             this.cbTurma = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
-            this.emprestimoLivroLiterarioTurmaEAnoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emprestimoLivroLiterarioTurmaEAnoTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_EmprestimosTableAdapters.EmprestimoLivroLiterarioTurmaEAnoTableAdapter();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emprestimoLivroLiterarioTurmaEAnoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // emprestimoLivroLiterarioTurmaEAnoBindingSource
+            // 
+            this.emprestimoLivroLiterarioTurmaEAnoBindingSource.DataMember = "EmprestimoLivroLiterarioTurmaEAno";
+            this.emprestimoLivroLiterarioTurmaEAnoBindingSource.DataSource = this.dataSet_Emprestimos;
+            // 
+            // dataSet_Emprestimos
+            // 
+            this.dataSet_Emprestimos.DataSetName = "DataSet_Emprestimos";
+            this.dataSet_Emprestimos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -137,16 +147,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Turma:";
             // 
-            // dataSet_Emprestimos
-            // 
-            this.dataSet_Emprestimos.DataSetName = "DataSet_Emprestimos";
-            this.dataSet_Emprestimos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // emprestimoLivroLiterarioTurmaEAnoBindingSource
-            // 
-            this.emprestimoLivroLiterarioTurmaEAnoBindingSource.DataMember = "EmprestimoLivroLiterarioTurmaEAno";
-            this.emprestimoLivroLiterarioTurmaEAnoBindingSource.DataSource = this.dataSet_Emprestimos;
-            // 
             // emprestimoLivroLiterarioTurmaEAnoTableAdapter
             // 
             this.emprestimoLivroLiterarioTurmaEAnoTableAdapter.ClearBeforeFill = true;
@@ -168,12 +168,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Relatório";
+            this.Text = "LISTA DE ALUNOS COM LIVROS LITERÁRIOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano_Load);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emprestimoLivroLiterarioTurmaEAnoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

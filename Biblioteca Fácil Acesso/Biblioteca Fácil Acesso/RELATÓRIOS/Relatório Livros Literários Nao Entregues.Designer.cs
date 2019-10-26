@@ -79,7 +79,7 @@
             this.MaximizeBox = false;
             this.Name = "Relatório_Livros_Literários_Nao_Entregues";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RELATÓRIO DE LIVROS LITERÁRIO NÃO ENTREGUES";
+            this.Text = "LISTA DE ALUNOS COM LIVROS LITERÁRIOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Relatório_Livros_Literários_Nao_Entregues_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivroLiterarioBindingSource)).EndInit();

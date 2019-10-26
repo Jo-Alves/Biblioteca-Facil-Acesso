@@ -79,7 +79,7 @@
             this.MaximizeBox = false;
             this.Name = "RelatorioEmpretimoLivrosLiterariosTerceiroscs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RELATÓRIO DE LIVROS EMPRESTADOS PARA TERCEIROS";
+            this.Text = "LISTA DE EX-ALUNOS E OUTROS COM LIVROS LITERÁRIOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RelatorioEmpretimoLivrosLiterariosTerceiroscs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivroLiterarioOutrosBindingSource)).EndInit();

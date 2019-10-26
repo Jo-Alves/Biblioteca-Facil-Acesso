@@ -31,13 +31,18 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorioListaLivrosLiteráriosEmprestados));
+            this.TableTodosEmprestimoLivroLiterarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
             this.tableTodosEmprestimoLivroLiterarioTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_EmprestimosTableAdapters.TableTodosEmprestimoLivroLiterarioTableAdapter();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.TableTodosEmprestimoLivroLiterarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableTodosEmprestimoLivroLiterarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
             this.SuspendLayout();
+            // 
+            // TableTodosEmprestimoLivroLiterarioBindingSource
+            // 
+            this.TableTodosEmprestimoLivroLiterarioBindingSource.DataMember = "TableTodosEmprestimoLivroLiterario";
+            this.TableTodosEmprestimoLivroLiterarioBindingSource.DataSource = this.dataSet_Emprestimos;
             // 
             // dataSet_Emprestimos
             // 
@@ -61,11 +66,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // TableTodosEmprestimoLivroLiterarioBindingSource
-            // 
-            this.TableTodosEmprestimoLivroLiterarioBindingSource.DataMember = "TableTodosEmprestimoLivroLiterario";
-            this.TableTodosEmprestimoLivroLiterarioBindingSource.DataSource = this.dataSet_Emprestimos;
-            // 
             // FrmRelatorioListaLivrosLiteráriosEmprestados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,10 +78,11 @@
             this.MinimizeBox = false;
             this.Name = "FrmRelatorioListaLivrosLiteráriosEmprestados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "LISTA DE TODOS OS LIVROS LITERÁRIOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRelatorioListadeLivrosLiteráriosEmprestados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TableTodosEmprestimoLivroLiterarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
             this.ResumeLayout(false);
 
         }

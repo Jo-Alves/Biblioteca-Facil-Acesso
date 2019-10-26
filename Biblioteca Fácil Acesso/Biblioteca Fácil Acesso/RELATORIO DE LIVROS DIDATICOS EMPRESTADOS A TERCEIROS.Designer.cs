@@ -79,7 +79,7 @@
             this.MaximizeBox = false;
             this.Name = "RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RELATÓRIO DE LIVROS DIDÁTICOS EMPRESTADOS A TERCEIROS";
+            this.Text = "LISTA DE EX-ALUNOS E OUTROS COM LIVROS DIDÁTICOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RELATORIO_DE_LIVROS_LITERARIOS_EMPRESTADOS_A_TERCEIROS_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivroDidaticoTerceiroBindingSource)).EndInit();

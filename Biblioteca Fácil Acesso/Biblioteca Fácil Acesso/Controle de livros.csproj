@@ -426,8 +426,37 @@
     <Compile Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.Designer.cs">
       <DependentUpon>RelatorioLivrosDidaticosEmprestadosFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="RELATÓRIOS\DataSet_Emprestimo2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Emprestimo2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RELATÓRIOS\DataSet_Emprestimos.cs">
       <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.Designer.cs">
+      <DependentUpon>FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosTerceiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosTerceiros.Designer.cs">
+      <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosTerceiros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosFuncionarios.Designer.cs">
+      <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosAlunos.Designer.cs">
+      <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs</DependentUpon>
     </Compile>
     <Compile Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs">
       <SubType>Form</SubType>
@@ -629,6 +658,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.resx">
+      <DependentUpon>FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosTerceiros.resx">
+      <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosTerceiros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosFuncionarios.resx">
+      <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosAlunos.resx">
+      <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos filtrados por ano e turma.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a funcionarios.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a terceiros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosOutros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.resx">
       <DependentUpon>RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs</DependentUpon>
@@ -903,6 +948,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RELATÓRIOS\DataSet_Emprestimo2.xsc">
+      <DependentUpon>DataSet_Emprestimo2.xsd</DependentUpon>
+    </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimo2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Emprestimo2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimo2.xss">
+      <DependentUpon>DataSet_Emprestimo2.xsd</DependentUpon>
+    </None>
     <None Include="RELATÓRIOS\DataSet_Emprestimos.xsc">
       <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
     </None>

@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
- 
-using System.Data;
 
 namespace Controle_de_livros
 {
@@ -88,7 +86,7 @@ namespace Controle_de_livros
                 comando.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception ex)
+            catch 
             {
                 throw;
             }
@@ -112,7 +110,7 @@ namespace Controle_de_livros
                 comando.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception ex)
+            catch 
             {
                 throw;
             }

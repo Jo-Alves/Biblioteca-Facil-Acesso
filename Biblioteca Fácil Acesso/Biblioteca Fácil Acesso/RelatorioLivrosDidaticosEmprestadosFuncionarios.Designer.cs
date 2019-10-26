@@ -80,7 +80,7 @@
             this.MaximizeBox = false;
             this.Name = "RelatorioLivrosDidaticosEmprestadosFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RELATÓRIO DE LIVROS LITERÁRIOS EMPRESTADOS A FUNCIONÁRIOS";
+            this.Text = "LISTA DE FUNCIONÁRIOS COM LIVROS DIDÁTICOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RelatorioLivrosDidaticosEmprestadosFuncionariosTerceiros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tableEmprestimoLivroDidaticoFuncionarioBindingSource)).EndInit();

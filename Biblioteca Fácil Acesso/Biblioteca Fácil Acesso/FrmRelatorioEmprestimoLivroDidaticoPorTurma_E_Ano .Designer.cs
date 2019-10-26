@@ -168,7 +168,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Relatório";
+            this.Text = "LISTA DE ALUNOS COM LIVROS DIDÁTICOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRelatorioEmprestimoLivroLiterarioPorTurma_E_Ano_Load);
             ((System.ComponentModel.ISupportInitialize)(this.emprestimoLivroDidaticoTurmaEAnoBindingSource)).EndInit();
