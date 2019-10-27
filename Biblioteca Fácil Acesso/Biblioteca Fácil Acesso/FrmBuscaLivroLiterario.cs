@@ -16,11 +16,12 @@ namespace Controle_de_livros
     {
         string stringConn =Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), _sql;
         bool botãoBuscarAcionado = false;
-
+        
         public int registro { get; set; }
         public string titulo { get; set; }
         public string genero { get; set; }
         public string autor { get; set; }
+        public string estate { get; set; }
         public string DataRegistro { get; set; }
 
         public FrmBuscaLivroLiterario()
@@ -79,6 +80,7 @@ namespace Controle_de_livros
                 autor = dgv_Busca["ColAutor", e.RowIndex].Value.ToString();
                 genero = dgv_Busca["ColGenero", e.RowIndex].Value.ToString();
                 DataRegistro = dgv_Busca["ColDataRegistro", e.RowIndex].Value.ToString();
+                estate = dgv_Busca["ColEstante", e.RowIndex].Value.ToString();
                 botãoBuscarAcionado = true;
                 Close();
             }
@@ -93,6 +95,7 @@ namespace Controle_de_livros
                 autor = dgv_Busca["ColAutor", e.RowIndex].Value.ToString();
                 genero = dgv_Busca["ColGenero", e.RowIndex].Value.ToString();
                 DataRegistro = dgv_Busca["ColDataRegistro", e.RowIndex].Value.ToString();
+                estate = dgv_Busca["ColEstante", e.RowIndex].Value.ToString();
             }
         }
 

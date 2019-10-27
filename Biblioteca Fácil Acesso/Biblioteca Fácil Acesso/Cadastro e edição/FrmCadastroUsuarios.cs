@@ -21,11 +21,12 @@ namespace Controle_de_livros
         }
         string x;
         public void LimparCampos()
-        {   
+        {
+            txtCidade.Clear();
             txt_Endereco.Clear();
             txt_Nome.Clear();
             txt_Numero.Clear();
-            txt_Tel_Cel.Clear();
+            mkCelular.Clear();
             cb_Ano.SelectedIndex = -1;
             cb_Turma.SelectedIndex = -1;
             lbl_Codigo.Text = "";
@@ -89,7 +90,7 @@ namespace Controle_de_livros
             adapter.SelectCommand.Parameters.AddWithValue("@Turma", cb_Turma.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Endereco", txt_Endereco.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Numero", txt_Numero.Text);
-            adapter.SelectCommand.Parameters.AddWithValue("@Telefone", txt_Tel_Cel.Text);
+            adapter.SelectCommand.Parameters.AddWithValue("@Telefone", mkCelular.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Ocupacao", Ocupacao);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -131,7 +132,7 @@ namespace Controle_de_livros
                 cb_Ano.Text = busca.ano;
                 cb_Turma.Text = busca.turma;
                 txt_Numero.Text = busca.numero;
-                txt_Tel_Cel.Text = busca.fone;
+                mkCelular.Text = busca.fone;
             }
         }
 
@@ -145,21 +146,19 @@ namespace Controle_de_livros
                     validarCampos();
                     if (valido)
                     {
-                        SalvarUsuario();
+                        if (!SalvarUsuario())
+                            return;
                         btn_Salvar.Text = "Incluir";
                         btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
                     }
                     break;
                 case "Incluir":
-                    LimparCampos();
-                    btn_Salvar.Text = "Salvar";
-                    btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
-                    txt_Nome.Focus();
+                    recarrecagarTelaFormatoPradao();
                     break;
             }
         }
 
-        private void SalvarUsuario()
+        private bool SalvarUsuario()
         {
             usuario.nome = txt_Nome.Text.Trim();
             usuario.ano = cb_Ano.Text.Trim();
@@ -170,7 +169,7 @@ namespace Controle_de_livros
             usuario.numero = txt_Numero.Text.Trim();
             usuario.cidade = txtCidade.Text.Trim();
             usuario.estado = cbEstado.Text;
-            usuario.telefone = txt_Tel_Cel.Text;
+            usuario.telefone = mkCelular.Text;
             if (rb_Aluno.Checked)
             {
                 usuario.ocupacao = rb_Aluno.Text;
@@ -185,24 +184,35 @@ namespace Controle_de_livros
             }
             try
             {
-                if (VerificarCadastro() == false)
+                if (VerificarCadastro() == false || lbl_Codigo.Text != "")
                 {
-                    usuario.Cadastrar();
-                    MessageBox.Show("Usuário cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    IdentificacaoUsuario();
-                    this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
-
-                    rb_Aluno.Checked = true;
-                    txt_Nome.Focus();
+                    if (string.IsNullOrEmpty(lbl_Codigo.Text))
+                    {
+                        usuario.Cadastrar();
+                        MessageBox.Show("Usuário cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        IdentificacaoUsuario();
+                        return true;
+                    }
+                    else
+                    {
+                        usuario.codigo = int.Parse(lbl_Codigo.Text);
+                        usuario.Atualizar();
+                        MessageBox.Show("Dados do usuário atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        recarrecagarTelaFormatoPradao();
+                        return false;
+                    }
+                   
                 }
                 else
                 {
                     MessageBox.Show("Usuario já cadastrado!", "Mensagem do sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    return false;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
@@ -230,7 +240,7 @@ namespace Controle_de_livros
                     usuario.numero = txt_Numero.Text.Trim();
                     usuario.cidade = txtCidade.Text.Trim();
                     usuario.estado = cbEstado.Text;
-                    usuario.telefone = txt_Tel_Cel.Text;
+                    usuario.telefone = mkCelular.Text;
                     if (rb_Aluno.Checked)
                     {
                         usuario.ocupacao = rb_Aluno.Text;
@@ -245,15 +255,9 @@ namespace Controle_de_livros
                     }
                     try
                     {
-                        usuario.atualizar();
+                        usuario.Atualizar();
                         MessageBox.Show("Usuário atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
-
-                        rb_Aluno.Checked = true;
-                        txt_Nome.Focus();
-                        LimparCampos();
-                        btn_Salvar.Text = "Salvar";
-                        btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+                        recarrecagarTelaFormatoPradao();
                     }
                     catch (Exception ex)
                     {
@@ -263,6 +267,17 @@ namespace Controle_de_livros
                 else
                     MessageBox.Show("Còdigo do usuário inválido!", "Bibliteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
+        }
+
+        private void recarrecagarTelaFormatoPradao()
+        {
+            this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
+
+            rb_Aluno.Checked = true;
+            txt_Nome.Focus();
+            LimparCampos();
+            btn_Salvar.Text = "Salvar";
+            btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
         }
 
         bool valido = false;
@@ -319,20 +334,13 @@ namespace Controle_de_livros
                     valido = false;
                     return;
                 }
-                else if (txt_Tel_Cel.Text == "")
+                else if (!mkCelular.MaskCompleted)
                 {
-                    error_Provider.SetError(txt_Tel_Cel, "Campo Obrigatório!");
-                    txt_Tel_Cel.Focus();
+                    error_Provider.SetError(mkCelular, "Campo Obrigatório!");
+                    mkCelular.Focus();
                     valido = false;
                     return;
-                }
-                else if ((txt_Tel_Cel.Text != "") && (txt_Tel_Cel.TextLength < 13))
-                {
-                    error_Provider.SetError(txt_Tel_Cel, "Campo do telefone inválido!!");
-                    txt_Tel_Cel.Focus();
-                    valido = false;
-                    return;
-                }
+                }                
                 else if (txt_Numero.Text == "")
                 {
                     MessageBox.Show("Valor do número inválido!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -369,10 +377,10 @@ namespace Controle_de_livros
                     valido = false;
                     return;
                 }
-                else if ((txt_Tel_Cel.TextLength < 13) && (txt_Tel_Cel.Text != ""))
+                else if ((mkCelular.TextLength < 15) && (mkCelular.Text != ""))
                 {
-                    error_Provider.SetError(txt_Tel_Cel, "Campo do telefone inválido!!");
-                    txt_Tel_Cel.Focus();
+                    error_Provider.SetError(mkCelular, "Campo do telefone inválido!!");
+                    mkCelular.Focus();
                     valido = false;
                     return;
                 }
@@ -382,7 +390,6 @@ namespace Controle_de_livros
                 }
             }
         }
-
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
@@ -438,12 +445,7 @@ namespace Controle_de_livros
                         {
                             usuario.Deletar();
                             MessageBox.Show("Dados excluido com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            rb_Aluno.Checked = true;
-                            txt_Nome.Focus();
-                            LimparCampos();
-                            btn_Salvar.Text = "Salvar";
-                            btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
-                            this.usuarioTableAdapter.Fill(this.dataSet2.Usuario);
+                            recarrecagarTelaFormatoPradao();
                         }
                     }
                 }
@@ -536,20 +538,20 @@ namespace Controle_de_livros
             {
                 if (System.Text.RegularExpressions.Regex.IsMatch(o, "[0-9]{1}"))
                 {
-                    if (txt_Tel_Cel.Text.Length == 1)
+                    if (mkCelular.Text.Length == 1)
                     {
-                        txt_Tel_Cel.Text = "(" + txt_Tel_Cel.Text;
-                        txt_Tel_Cel.SelectionStart = txt_Tel_Cel.Text.Length;
+                        mkCelular.Text = "(" + mkCelular.Text;
+                        mkCelular.SelectionStart = mkCelular.Text.Length;
                     }
-                    else if (txt_Tel_Cel.Text.Length == 3)
+                    else if (mkCelular.Text.Length == 3)
                     {
-                        txt_Tel_Cel.Text = txt_Tel_Cel.Text + ")";
-                        txt_Tel_Cel.SelectionStart = txt_Tel_Cel.Text.Length;
+                        mkCelular.Text = mkCelular.Text + ")";
+                        mkCelular.SelectionStart = mkCelular.Text.Length;
                     }
-                    else if (txt_Tel_Cel.Text.Length == 9)
+                    else if (mkCelular.Text.Length == 9)
                     {
-                        txt_Tel_Cel.Text = txt_Tel_Cel.Text + "-";
-                        txt_Tel_Cel.SelectionStart = txt_Tel_Cel.Text.Length;
+                        mkCelular.Text = mkCelular.Text + "-";
+                        mkCelular.SelectionStart = mkCelular.Text.Length;
                     }
                 }
             }

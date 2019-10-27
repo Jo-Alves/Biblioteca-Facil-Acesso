@@ -110,7 +110,7 @@ namespace Controle_de_livros
                 "[Numero] VARCHAR(MAX) NULL," +
                 "[Cidade] VARCHAR(100) NULL," +
                 "[Estado] Varchar(2) null," +
-                "[Telefone] VARCHAR(14)  NULL," +
+                "[Telefone] VARCHAR(15)  NULL," +
                 "[Ocupacao] VARCHAR(11)  NOT NULL," +
                 "PRIMARY KEY CLUSTERED([Cod_Usuario] ASC));" +
                 "" +

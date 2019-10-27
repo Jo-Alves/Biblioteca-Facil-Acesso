@@ -27,6 +27,7 @@ namespace Controle_de_livros
             txt_Registro.Clear();
             cb_Estante.SelectedIndex = -1;
             txt_Titulo.Clear();
+            dtDataRegistro.Text = DateTime.Now.ToShortDateString();
         }
 
         private void txt_Registro_KeyPress(object sender, KeyPressEventArgs e)
@@ -64,21 +65,38 @@ namespace Controle_de_livros
                     validarCampos();
                     if (valido)
                     {
-                        SalvarLivroLiterario();
+                        if (!SalvarLivroLiterario())
+                            return;
                         btn_Salvar.Text = "Incluir";
                         btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
                     }
                     break;
                 case "Incluir":
-                    LimparCampos();
-                    btn_Salvar.Text = "Salvar";
-                    btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
-                    txt_Registro.Focus();
+                    
+                    DialogResult dr = MessageBox.Show("Incluir novo registro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    
+                    if (dr == DialogResult.No)
+                    {
+                        btn_Salvar.Text = "Salvar";
+                        btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+                        txt_Registro.Focus();
+                        return;
+                    }
+
+                    recarregarFormatoPadrao();
                     break;
             }
         }
 
-        private void SalvarLivroLiterario()
+        private void recarregarFormatoPadrao()
+        {
+            LimparCampos();
+            btn_Salvar.Text = "Salvar";
+            btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+            txt_Registro.Focus();
+        }
+
+        private bool SalvarLivroLiterario()
         {
             if (txt_Registro.Text != "")
             {
@@ -86,6 +104,7 @@ namespace Controle_de_livros
                 if (x == 0)
                 {
                     MessageBox.Show("Valor do Registro Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
                 else
                 {
@@ -97,22 +116,21 @@ namespace Controle_de_livros
                     literario.dataRegistro = dtDataRegistro.Text;
                     if (literario.Cadastrar() == true)
                     {
-                        try
-                        {
-                            literario.Cadastrar();
-                            MessageBox.Show("Livro cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txt_Registro.Focus();
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+
+                        literario.Cadastrar();
+                        MessageBox.Show("Livro cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_Registro.Focus();
+                        return true;
                     }
                     else
+                    {
                         MessageBox.Show("O número do registro já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    txt_Registro.Focus();
+                        return false;
+                    }
                 }
             }
+            else
+                return false;
         }
 
         bool valido = false;
@@ -214,8 +232,11 @@ namespace Controle_de_livros
                 txt_Titulo.Text = buscaLivroLiterario.titulo;
                 txt_Autor.Text = buscaLivroLiterario.autor;
                 txt_Genero.Text = buscaLivroLiterario.genero;
+                cb_Estante.Text = buscaLivroLiterario.estate;
                 if (!string.IsNullOrEmpty(buscaLivroLiterario.DataRegistro))
                     dtDataRegistro.Text = buscaLivroLiterario.DataRegistro;
+                else
+                    dtDataRegistro.Text = DateTime.Now.ToShortDateString();
             }
         }
 
@@ -237,7 +258,7 @@ namespace Controle_de_livros
                         literario.Atualizar();
                         MessageBox.Show("Dados atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cb_Estante.SelectedIndex = -1;
-                        LimparCampos();
+                        recarregarFormatoPadrao();
                         txt_Registro.Focus();
                     }
                     else
@@ -309,7 +330,7 @@ namespace Controle_de_livros
                     literario.registro = int.Parse(txt_Registro.Text);
                     literario.Deletar();
                     MessageBox.Show("Dados excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimparCampos();
+                    recarregarFormatoPadrao();
                 }
                 else
                     MessageBox.Show("Não existe dados com este registro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

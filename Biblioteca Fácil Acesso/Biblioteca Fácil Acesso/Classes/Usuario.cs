@@ -113,7 +113,7 @@ namespace Controle_de_livros
             return true;
 
         }
-        public bool atualizar()
+        public bool Atualizar()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
             string _SQl = "UPDATE Usuario SET Nome_Usuario = @Nome, Ano = @Ano, Turma = @Turma, Cep = @Cep, Bairro = @Bairro, Endereco = @Endereco, Numero = @Numero, Cidade = @Cidade, Estado = @Estado, Telefone = @Telefone, Ocupacao = @Ocupacao WHERE Cod_Usuario = @Codigo";

@@ -46,11 +46,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.mkCelular = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.cbEstado = new System.Windows.Forms.ComboBox();
-            this.txt_Tel_Cel = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Numero = new System.Windows.Forms.TextBox();
@@ -269,11 +269,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.mkCelular);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txtCidade);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.cbEstado);
-            this.groupBox3.Controls.Add(this.txt_Tel_Cel);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.txt_Numero);
@@ -293,6 +293,15 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Localização:";
+            // 
+            // mkCelular
+            // 
+            this.mkCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mkCelular.Location = new System.Drawing.Point(134, 162);
+            this.mkCelular.Mask = "(00) 00000-0000";
+            this.mkCelular.Name = "mkCelular";
+            this.mkCelular.Size = new System.Drawing.Size(115, 26);
+            this.mkCelular.TabIndex = 22;
             // 
             // label11
             // 
@@ -329,6 +338,9 @@
             // 
             // cbEstado
             // 
+            this.cbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbEstado.FormattingEnabled = true;
             this.cbEstado.Items.AddRange(new object[] {
             "AC",
@@ -360,28 +372,19 @@
             "TO"});
             this.cbEstado.Location = new System.Drawing.Point(59, 162);
             this.cbEstado.Name = "cbEstado";
-            this.cbEstado.Size = new System.Drawing.Size(121, 27);
+            this.cbEstado.Size = new System.Drawing.Size(69, 27);
             this.cbEstado.TabIndex = 10;
-            // 
-            // txt_Tel_Cel
-            // 
-            this.txt_Tel_Cel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_Tel_Cel.Location = new System.Drawing.Point(186, 162);
-            this.txt_Tel_Cel.MaxLength = 14;
-            this.txt_Tel_Cel.Name = "txt_Tel_Cel";
-            this.txt_Tel_Cel.Size = new System.Drawing.Size(115, 26);
-            this.txt_Tel_Cel.TabIndex = 11;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(182, 139);
+            this.label6.Location = new System.Drawing.Point(130, 140);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 19);
+            this.label6.Size = new System.Drawing.Size(63, 19);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Tel/Cel:";
+            this.label6.Text = "Celular:";
             // 
             // label4
             // 
@@ -612,7 +615,6 @@
         private dataSet2TableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cbEstado;
-        private System.Windows.Forms.TextBox txt_Tel_Cel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_Numero;
@@ -623,5 +625,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.MaskedTextBox mkCelular;
     }
 }

@@ -39,6 +39,7 @@
             this.ColTitulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColGenero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEstante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColDataRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).BeginInit();
             this.SuspendLayout();
@@ -79,6 +80,7 @@
             this.ColTitulo,
             this.ColAutor,
             this.ColGenero,
+            this.ColEstante,
             this.ColDataRegistro});
             this.dgv_Busca.Location = new System.Drawing.Point(13, 76);
             this.dgv_Busca.Name = "dgv_Busca";
@@ -164,6 +166,15 @@
             this.ColGenero.ReadOnly = true;
             this.ColGenero.Width = 84;
             // 
+            // ColEstante
+            // 
+            this.ColEstante.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ColEstante.DataPropertyName = "Estante";
+            this.ColEstante.HeaderText = "Estante";
+            this.ColEstante.Name = "ColEstante";
+            this.ColEstante.ReadOnly = true;
+            this.ColEstante.Width = 85;
+            // 
             // ColDataRegistro
             // 
             this.ColDataRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -213,6 +224,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColGenero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEstante;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDataRegistro;
     }
 }

@@ -30,7 +30,11 @@ namespace Controle_de_livros
             txt_Autor.Clear();
             cb_Ensino.SelectedIndex = -1;
             cb_Volume.SelectedIndex = -1;
+            dtDataRegistro.Text = DateTime.Now.ToShortDateString();
+            btn_Salvar.Text = "Salvar";
+            btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
         }
+
         private void txt_Registro_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -47,22 +51,38 @@ namespace Controle_de_livros
                     validarCampos();
                     if (valido)
                     {
-                        SalvarLivroDidatico();
+                        if (!SalvarLivroDidatico())
+                            return;
                         btn_Salvar.Text = "Incluir";
                         btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
                     }
                     break;
                 case "Incluir":
-                    LimparCampos();
-                    btn_Salvar.Text = "Salvar";
-                    btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
-                    txt_Registro.Focus();
+                    DialogResult dr = MessageBox.Show("Incluir novo registro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                    if (dr == DialogResult.No)
+                    {
+                        btn_Salvar.Text = "Salvar";
+                        btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+                        txt_Registro.Focus();
+                        return;
+                    }
+
+                    recarregarFormatoPadrao();                    
                     break;
             }
 
         }
 
-        private void SalvarLivroDidatico()
+        private void recarregarFormatoPadrao()
+        {
+            LimparCampos();
+            btn_Salvar.Text = "Salvar";
+            btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
+            txt_Registro.Focus();            
+        }
+
+        private bool SalvarLivroDidatico()
         {
             didatico.registro = int.Parse(txt_Registro.Text);
             didatico.disciplina = cb_Disciplina.Text;
@@ -77,16 +97,21 @@ namespace Controle_de_livros
                     didatico.Cadastrar();
                     MessageBox.Show("Livro cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_Registro.Focus();
+                    return true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
             }
             else
+            {
                 MessageBox.Show("O número do registro já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            txt_Registro.Clear();
-            txt_Registro.Focus();
+                txt_Registro.Clear();
+                txt_Registro.Focus();
+                return false;
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -115,9 +140,7 @@ namespace Controle_de_livros
                 }
                 else
                     MessageBox.Show("Não encontramos livros com este registro! Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                LimparCampos();
-                txt_Registro.Clear();
-                txt_Registro.Focus();
+                recarregarFormatoPadrao();
             }
         }
 
@@ -181,7 +204,7 @@ namespace Controle_de_livros
                 {
                     didatico.Deletar();
                     MessageBox.Show("Dados excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimparCampos();
+                    recarregarFormatoPadrao();
                 }
             }
             catch (Exception ex)
@@ -365,6 +388,8 @@ namespace Controle_de_livros
                 txt_Autor.Text = buscarLivroDidatico.autor;
                 if (!string.IsNullOrEmpty(buscarLivroDidatico.DataRegistro))
                     dtDataRegistro.Text = buscarLivroDidatico.DataRegistro;
+                else
+                    dtDataRegistro.Text = DateTime.Now.ToShortDateString();
             }
         }
     }
