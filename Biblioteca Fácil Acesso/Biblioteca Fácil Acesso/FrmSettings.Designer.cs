@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSettings));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbDiretorio = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbDiretorio = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbQuantidadeLimite = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ndTempoLimite = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnAplicar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.cbRedefinir = new System.Windows.Forms.CheckBox();
+            this.cbBloquear = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -54,13 +55,24 @@
             this.groupBox1.Controls.Add(this.cbDiretorio);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.groupBox1.Location = new System.Drawing.Point(18, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(434, 87);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Local do disco para backup padrão:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 19);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Local do disco ";
             // 
             // cbDiretorio
             // 
@@ -79,17 +91,6 @@
             this.cbDiretorio.Size = new System.Drawing.Size(181, 27);
             this.cbDiretorio.TabIndex = 2;
             this.cbDiretorio.SelectedIndexChanged += new System.EventHandler(this.CbDiretorio_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 24);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 19);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Local do disco ";
             // 
             // groupBox2
             // 
@@ -161,17 +162,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Informe o tempo limite do empréstimo:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 32);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Tempo Limite (dias)";
-            // 
             // ndTempoLimite
             // 
             this.ndTempoLimite.Location = new System.Drawing.Point(19, 65);
@@ -190,22 +180,33 @@
             0});
             this.ndTempoLimite.ValueChanged += new System.EventHandler(this.NdTempoLimite_ValueChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(15, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Tempo Limite (dias)";
+            // 
             // btnAplicar
             // 
             this.btnAplicar.Enabled = false;
             this.btnAplicar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAplicar.Location = new System.Drawing.Point(324, 366);
+            this.btnAplicar.Location = new System.Drawing.Point(292, 402);
             this.btnAplicar.Name = "btnAplicar";
             this.btnAplicar.Size = new System.Drawing.Size(121, 42);
             this.btnAplicar.TabIndex = 7;
             this.btnAplicar.Text = "Aplicar";
             this.btnAplicar.UseVisualStyleBackColor = true;
-            this.btnAplicar.Click += new System.EventHandler(this.BtnAplicar_Click);
+            this.btnAplicar.Click += new System.EventHandler(this.btnAplicar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Location = new System.Drawing.Point(197, 366);
+            this.btnCancelar.Location = new System.Drawing.Point(165, 402);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(121, 42);
             this.btnCancelar.TabIndex = 8;
@@ -216,7 +217,7 @@
             // btnOK
             // 
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOK.Location = new System.Drawing.Point(70, 366);
+            this.btnOK.Location = new System.Drawing.Point(38, 402);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(121, 42);
             this.btnOK.TabIndex = 9;
@@ -227,7 +228,7 @@
             // cbRedefinir
             // 
             this.cbRedefinir.AutoSize = true;
-            this.cbRedefinir.Location = new System.Drawing.Point(12, 337);
+            this.cbRedefinir.Location = new System.Drawing.Point(7, 373);
             this.cbRedefinir.Name = "cbRedefinir";
             this.cbRedefinir.Size = new System.Drawing.Size(210, 23);
             this.cbRedefinir.TabIndex = 10;
@@ -235,12 +236,25 @@
             this.cbRedefinir.UseVisualStyleBackColor = true;
             this.cbRedefinir.CheckedChanged += new System.EventHandler(this.cbRedefinir_CheckedChanged);
             // 
+            // cbBloquear
+            // 
+            this.cbBloquear.AutoSize = true;
+            this.cbBloquear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.cbBloquear.Location = new System.Drawing.Point(9, 334);
+            this.cbBloquear.Name = "cbBloquear";
+            this.cbBloquear.Size = new System.Drawing.Size(321, 23);
+            this.cbBloquear.TabIndex = 11;
+            this.cbBloquear.Text = "Bloquear Aluno/Funcionario/Outro pendente";
+            this.cbBloquear.UseVisualStyleBackColor = true;
+            this.cbBloquear.CheckedChanged += new System.EventHandler(this.cbBloquear_CheckedChanged);
+            // 
             // FrmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(465, 420);
+            this.ClientSize = new System.Drawing.Size(465, 456);
+            this.Controls.Add(this.cbBloquear);
             this.Controls.Add(this.cbRedefinir);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancelar);
@@ -251,7 +265,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmSettings";
@@ -285,5 +299,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.CheckBox cbRedefinir;
+        private System.Windows.Forms.CheckBox cbBloquear;
     }
 }

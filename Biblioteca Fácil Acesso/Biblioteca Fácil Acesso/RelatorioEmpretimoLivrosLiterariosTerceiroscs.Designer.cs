@@ -73,10 +73,8 @@
             this.ClientSize = new System.Drawing.Size(1065, 706);
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "RelatorioEmpretimoLivrosLiterariosTerceiroscs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LISTA DE EX-ALUNOS E OUTROS COM LIVROS LITERÁRIOS EMPRESTADOS";

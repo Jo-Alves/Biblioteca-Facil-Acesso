@@ -8,796 +8,861 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Controle_de_livros.ClienteServices {
-    
-    
+namespace Controle_de_livros.ClienteServices
+{
+
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class SQLException : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class SQLException : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private int errorCodeField;
-        
+
         private bool errorCodeFieldSpecified;
-        
+
         private string sQLStateField;
-        
+
         private string messageField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int errorCode {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public int errorCode
+        {
+            get
+            {
                 return this.errorCodeField;
             }
-            set {
+            set
+            {
                 this.errorCodeField = value;
                 this.RaisePropertyChanged("errorCode");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool errorCodeSpecified {
-            get {
+        public bool errorCodeSpecified
+        {
+            get
+            {
                 return this.errorCodeFieldSpecified;
             }
-            set {
+            set
+            {
                 this.errorCodeFieldSpecified = value;
                 this.RaisePropertyChanged("errorCodeSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string sQLState {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string sQLState
+        {
+            get
+            {
                 return this.sQLStateField;
             }
-            set {
+            set
+            {
                 this.sQLStateField = value;
                 this.RaisePropertyChanged("sQLState");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string message {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string message
+        {
+            get
+            {
                 return this.messageField;
             }
-            set {
+            set
+            {
                 this.messageField = value;
                 this.RaisePropertyChanged("message");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class servicoAdicionalXML : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class servicoAdicionalXML : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string categoriaField;
-        
+
         private string codigoField;
-        
+
         private string descricaoField;
-        
+
         private double maximoValorDeclaradoField;
-        
+
         private bool maximoValorDeclaradoFieldSpecified;
-        
+
         private double minimoValorDeclaradoField;
-        
+
         private bool minimoValorDeclaradoFieldSpecified;
-        
+
         private string siglaField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string categoria {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string categoria
+        {
+            get
+            {
                 return this.categoriaField;
             }
-            set {
+            set
+            {
                 this.categoriaField = value;
                 this.RaisePropertyChanged("categoria");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string codigo
+        {
+            get
+            {
                 return this.codigoField;
             }
-            set {
+            set
+            {
                 this.codigoField = value;
                 this.RaisePropertyChanged("codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string descricao
+        {
+            get
+            {
                 return this.descricaoField;
             }
-            set {
+            set
+            {
                 this.descricaoField = value;
                 this.RaisePropertyChanged("descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double maximoValorDeclarado {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public double maximoValorDeclarado
+        {
+            get
+            {
                 return this.maximoValorDeclaradoField;
             }
-            set {
+            set
+            {
                 this.maximoValorDeclaradoField = value;
                 this.RaisePropertyChanged("maximoValorDeclarado");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool maximoValorDeclaradoSpecified {
-            get {
+        public bool maximoValorDeclaradoSpecified
+        {
+            get
+            {
                 return this.maximoValorDeclaradoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.maximoValorDeclaradoFieldSpecified = value;
                 this.RaisePropertyChanged("maximoValorDeclaradoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public double minimoValorDeclarado {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public double minimoValorDeclarado
+        {
+            get
+            {
                 return this.minimoValorDeclaradoField;
             }
-            set {
+            set
+            {
                 this.minimoValorDeclaradoField = value;
                 this.RaisePropertyChanged("minimoValorDeclarado");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool minimoValorDeclaradoSpecified {
-            get {
+        public bool minimoValorDeclaradoSpecified
+        {
+            get
+            {
                 return this.minimoValorDeclaradoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.minimoValorDeclaradoFieldSpecified = value;
                 this.RaisePropertyChanged("minimoValorDeclaradoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string sigla {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string sigla
+        {
+            get
+            {
                 return this.siglaField;
             }
-            set {
+            set
+            {
                 this.siglaField = value;
                 this.RaisePropertyChanged("sigla");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class Exception : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class Exception : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string messageField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string message {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string message
+        {
+            get
+            {
                 return this.messageField;
             }
-            set {
+            set
+            {
                 this.messageField = value;
                 this.RaisePropertyChanged("message");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class ErroMontagemRelatorio : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class ErroMontagemRelatorio : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string messageField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string message {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string message
+        {
+            get
+            {
                 return this.messageField;
             }
-            set {
+            set
+            {
                 this.messageField = value;
                 this.RaisePropertyChanged("message");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", ConfigurationName="ClienteServices.AtendeCliente")]
-    public interface AtendeCliente {
-        
+    [System.ServiceModel.ServiceContractAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", ConfigurationName = "ClienteServices.AtendeCliente")]
+    public interface AtendeCliente
+    {
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action="", Name="SQLException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action = "", Name = "SQLException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse buscaServicosAdicionaisAtivos(Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse> buscaServicosAdicionaisAtivosAsync(Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.fechaPlpResponse fechaPlp(Controle_de_livros.ClienteServices.fechaPlp request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpResponse> fechaPlpAsync(Controle_de_livros.ClienteServices.fechaPlp request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.Exception), Action="", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.Exception), Action = "", Name = "Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.calculaTarifaServicoResponse calculaTarifaServico(Controle_de_livros.ClienteServices.calculaTarifaServico request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.calculaTarifaServicoResponse> calculaTarifaServicoAsync(Controle_de_livros.ClienteServices.calculaTarifaServico request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.validaPlpResponse validaPlp(Controle_de_livros.ClienteServices.validaPlp request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaPlpResponse> validaPlpAsync(Controle_de_livros.ClienteServices.validaPlp request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse> VerificaSeTodosObjetosCanceladosAsync(Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.Exception), Action="", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.Exception), Action = "", Name = "Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.cancelarObjetoResponse cancelarObjeto(Controle_de_livros.ClienteServices.cancelarObjeto request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarObjetoResponse> cancelarObjetoAsync(Controle_de_livros.ClienteServices.cancelarObjeto request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse pesquisarParametrosPorDescricao(Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse> pesquisarParametrosPorDescricaoAsync(Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action="", Name="SQLException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action = "", Name = "SQLException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse atualizaPagamentoNaEntrega(Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse> atualizaPagamentoNaEntregaAsync(Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse obterClienteAtualizacao(Controle_de_livros.ClienteServices.obterClienteAtualizacao request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse> obterClienteAtualizacaoAsync(Controle_de_livros.ClienteServices.obterClienteAtualizacao request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse verificaDisponibilidadeServico(Controle_de_livros.ClienteServices.verificaDisponibilidadeServico request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse> verificaDisponibilidadeServicoAsync(Controle_de_livros.ClienteServices.verificaDisponibilidadeServico request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse fechaPlpVariosServicos(Controle_de_livros.ClienteServices.fechaPlpVariosServicos request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse> fechaPlpVariosServicosAsync(Controle_de_livros.ClienteServices.fechaPlpVariosServicos request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse geraDigitoVerificadorEtiquetas(Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse> geraDigitoVerificadorEtiquetasAsync(Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse obterEmbalagemLRS(Controle_de_livros.ClienteServices.obterEmbalagemLRS request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse> obterEmbalagemLRSAsync(Controle_de_livros.ClienteServices.obterEmbalagemLRS request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse validaEtiquetaPLP(Controle_de_livros.ClienteServices.validaEtiquetaPLP request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse> validaEtiquetaPLPAsync(Controle_de_livros.ClienteServices.validaEtiquetaPLP request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action="", Name="SQLException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action = "", Name = "SQLException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse buscaServicosValorDeclarado(Controle_de_livros.ClienteServices.buscaServicosValorDeclarado request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse> buscaServicosValorDeclaradoAsync(Controle_de_livros.ClienteServices.buscaServicosValorDeclarado request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action="", Name="SQLException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action = "", Name = "SQLException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.consultaCEPResponse consultaCEP(Controle_de_livros.ClienteServices.consultaCEP request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.consultaCEPResponse> consultaCEPAsync(Controle_de_livros.ClienteServices.consultaCEP request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.integrarUsuarioScolResponse integrarUsuarioScol(Controle_de_livros.ClienteServices.integrarUsuarioScol request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.integrarUsuarioScolResponse> integrarUsuarioScolAsync(Controle_de_livros.ClienteServices.integrarUsuarioScol request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse pesquisarDimensoesServico(Controle_de_livros.ClienteServices.pesquisarDimensoesServico request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse> pesquisarDimensoesServicoAsync(Controle_de_livros.ClienteServices.pesquisarDimensoesServico request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse pesquisarEmbalagensPorServico(Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse> pesquisarEmbalagensPorServicoAsync(Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action="", Name="SQLException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action = "", Name = "SQLException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse atualizaRemessaAgrupada(Controle_de_livros.ClienteServices.atualizaRemessaAgrupada request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse> atualizaRemessaAgrupadaAsync(Controle_de_livros.ClienteServices.atualizaRemessaAgrupada request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.solicitaPLPResponse solicitaPLP(Controle_de_livros.ClienteServices.solicitaPLP request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaPLPResponse> solicitaPLPAsync(Controle_de_livros.ClienteServices.solicitaPLP request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse getStatusCartaoPostagem(Controle_de_livros.ClienteServices.getStatusCartaoPostagem request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse> getStatusCartaoPostagemAsync(Controle_de_livros.ClienteServices.getStatusCartaoPostagem request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.verificaModalTransporteResponse verificaModalTransporte(Controle_de_livros.ClienteServices.verificaModalTransporte request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaModalTransporteResponse> verificaModalTransporteAsync(Controle_de_livros.ClienteServices.verificaModalTransporte request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaDataAtualResponse buscaDataAtual(Controle_de_livros.ClienteServices.buscaDataAtual request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaDataAtualResponse> buscaDataAtualAsync(Controle_de_livros.ClienteServices.buscaDataAtual request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.Exception), Action="", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.Exception), Action = "", Name = "Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaTarifaValeResponse buscaTarifaVale(Controle_de_livros.ClienteServices.buscaTarifaVale request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaTarifaValeResponse> buscaTarifaValeAsync(Controle_de_livros.ClienteServices.buscaTarifaVale request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse validarPostagemSimultanea(Controle_de_livros.ClienteServices.validarPostagemSimultanea request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse> validarPostagemSimultaneaAsync(Controle_de_livros.ClienteServices.validarPostagemSimultanea request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.getStatusPLPResponse getStatusPLP(Controle_de_livros.ClienteServices.getStatusPLP request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusPLPResponse> getStatusPLPAsync(Controle_de_livros.ClienteServices.getStatusPLP request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse pesquisarServicosAdicionais(Controle_de_livros.ClienteServices.pesquisarServicosAdicionais request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse> pesquisarServicosAdicionaisAsync(Controle_de_livros.ClienteServices.pesquisarServicosAdicionais request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action="", Name="SQLException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.SQLException), Action = "", Name = "SQLException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse buscaServicosXServicosAdicionais(Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse> buscaServicosXServicosAdicionaisAsync(Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.cancelarPedidoScolResponse cancelarPedidoScol(Controle_de_livros.ClienteServices.cancelarPedidoScol request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarPedidoScolResponse> cancelarPedidoScolAsync(Controle_de_livros.ClienteServices.cancelarPedidoScol request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.bloquearObjetoResponse bloquearObjeto(Controle_de_livros.ClienteServices.bloquearObjeto request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.bloquearObjetoResponse> bloquearObjetoAsync(Controle_de_livros.ClienteServices.bloquearObjeto request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaContratoResponse buscaContrato(Controle_de_livros.ClienteServices.buscaContrato request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaContratoResponse> buscaContratoAsync(Controle_de_livros.ClienteServices.buscaContrato request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.solicitaEtiquetasResponse solicitaEtiquetas(Controle_de_livros.ClienteServices.solicitaEtiquetas request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaEtiquetasResponse> solicitaEtiquetasAsync(Controle_de_livros.ClienteServices.solicitaEtiquetas request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.solicitaXmlPlpResponse solicitaXmlPlp(Controle_de_livros.ClienteServices.solicitaXmlPlp request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaXmlPlpResponse> solicitaXmlPlpAsync(Controle_de_livros.ClienteServices.solicitaXmlPlp request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.validarPostagemReversaResponse validarPostagemReversa(Controle_de_livros.ClienteServices.validarPostagemReversa request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemReversaResponse> validarPostagemReversaAsync(Controle_de_livros.ClienteServices.validarPostagemReversa request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaClienteResponse buscaCliente(Controle_de_livros.ClienteServices.buscaCliente request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaClienteResponse> buscaClienteAsync(Controle_de_livros.ClienteServices.buscaCliente request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.ErroMontagemRelatorio), Action="", Name="ErroMontagemRelatorio")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Controle_de_livros.ClienteServices.ErroMontagemRelatorio), Action = "", Name = "ErroMontagemRelatorio")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse buscaPagamentoEntrega(Controle_de_livros.ClienteServices.buscaPagamentoEntrega request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse> buscaPagamentoEntregaAsync(Controle_de_livros.ClienteServices.buscaPagamentoEntrega request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.solicitarPostagemScolResponse solicitarPostagemScol(Controle_de_livros.ClienteServices.solicitarPostagemScol request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitarPostagemScolResponse> solicitarPostagemScolAsync(Controle_de_livros.ClienteServices.solicitarPostagemScol request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="AutenticacaoException")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "AutenticacaoException")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaServicosResponse buscaServicos(Controle_de_livros.ClienteServices.buscaServicos request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosResponse> buscaServicosAsync(Controle_de_livros.ClienteServices.buscaServicos request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse obterMensagemParametrizada(Controle_de_livros.ClienteServices.obterMensagemParametrizada request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse> obterMensagemParametrizadaAsync(Controle_de_livros.ClienteServices.obterMensagemParametrizada request);
-        
+
         // CODEGEN: O parâmetro 'return' requer informações adicionais de esquema que não podem ser capturadas usando o modo do parâmetro. O atributo específico é 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
-        [System.ServiceModel.FaultContractAttribute(typeof(string), Action="", Name="SigepClienteException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
+        [System.ServiceModel.FaultContractAttribute(typeof(string), Action = "", Name = "SigepClienteException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults = true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name = "return")]
         Controle_de_livros.ClienteServices.buscaOpcoesResponse buscaOpcoes(Controle_de_livros.ClienteServices.buscaOpcoes request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "", ReplyAction = "*")]
         System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaOpcoesResponse> buscaOpcoesAsync(Controle_de_livros.ClienteServices.buscaOpcoes request);
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosAdicionaisAtivos", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosAdicionaisAtivos {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosAdicionaisAtivos", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosAdicionaisAtivos
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaServicosAdicionaisAtivos() {
+
+        public buscaServicosAdicionaisAtivos()
+        {
         }
-        
-        public buscaServicosAdicionaisAtivos(string usuario, string senha) {
+
+        public buscaServicosAdicionaisAtivos(string usuario, string senha)
+        {
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosAdicionaisAtivosResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosAdicionaisAtivosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosAdicionaisAtivosResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosAdicionaisAtivosResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.servicoAdicionalXML[] @return;
-        
-        public buscaServicosAdicionaisAtivosResponse() {
+
+        public buscaServicosAdicionaisAtivosResponse()
+        {
         }
-        
-        public buscaServicosAdicionaisAtivosResponse(Controle_de_livros.ClienteServices.servicoAdicionalXML[] @return) {
+
+        public buscaServicosAdicionaisAtivosResponse(Controle_de_livros.ClienteServices.servicoAdicionalXML[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="fechaPlp", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class fechaPlp {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "fechaPlp", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class fechaPlp
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string xml;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlpCliente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string faixaEtiquetas;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public fechaPlp() {
+
+        public fechaPlp()
+        {
         }
-        
-        public fechaPlp(string xml, long idPlpCliente, string cartaoPostagem, string faixaEtiquetas, string usuario, string senha) {
+
+        public fechaPlp(string xml, long idPlpCliente, string cartaoPostagem, string faixaEtiquetas, string usuario, string senha)
+        {
             this.xml = xml;
             this.idPlpCliente = idPlpCliente;
             this.cartaoPostagem = cartaoPostagem;
@@ -806,95 +871,101 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="fechaPlpResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class fechaPlpResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "fechaPlpResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class fechaPlpResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long @return;
-        
-        public fechaPlpResponse() {
+
+        public fechaPlpResponse()
+        {
         }
-        
-        public fechaPlpResponse(long @return) {
+
+        public fechaPlpResponse(long @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calculaTarifaServico", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class calculaTarifaServico {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "calculaTarifaServico", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class calculaTarifaServico
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepOrigem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepDestino;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string peso;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codFormato;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double comprimento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double altura;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=10)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double largura;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=11)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double diametro;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=12)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codMaoPropria;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=13)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 13)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double valorDeclarado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=14)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 14)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codAvisoRecebimento;
-        
-        public calculaTarifaServico() {
+
+        public calculaTarifaServico()
+        {
         }
-        
-        public calculaTarifaServico(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double diametro, string codMaoPropria, double valorDeclarado, string codAvisoRecebimento) {
+
+        public calculaTarifaServico(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double diametro, string codMaoPropria, double valorDeclarado, string codAvisoRecebimento)
+        {
             this.codAdministrativo = codAdministrativo;
             this.usuario = usuario;
             this.senha = senha;
@@ -912,71 +983,77 @@ namespace Controle_de_livros.ClienteServices {
             this.codAvisoRecebimento = codAvisoRecebimento;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calculaTarifaServicoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class calculaTarifaServicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "calculaTarifaServicoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class calculaTarifaServicoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public calculaTarifaServicoResponse() {
+
+        public calculaTarifaServicoResponse()
+        {
         }
-        
-        public calculaTarifaServicoResponse(string @return) {
+
+        public calculaTarifaServicoResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validaPlp", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validaPlp {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validaPlp", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validaPlp
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long cliente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numero;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long diretoria;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cartao;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string unidadePostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long servico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute("servicosAdicionais", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute("servicosAdicionais", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string[] servicosAdicionais;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public validaPlp() {
+
+        public validaPlp()
+        {
         }
-        
-        public validaPlp(long cliente, string numero, long diretoria, string cartao, string unidadePostagem, long servico, string[] servicosAdicionais, string usuario, string senha) {
+
+        public validaPlp(long cliente, string numero, long diretoria, string cartao, string unidadePostagem, long servico, string[] servicosAdicionais, string usuario, string senha)
+        {
             this.cliente = cliente;
             this.numero = numero;
             this.diretoria = diretoria;
@@ -988,4003 +1065,4805 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validaPlpResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validaPlpResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validaPlpResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validaPlpResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public validaPlpResponse() {
+
+        public validaPlpResponse()
+        {
         }
-        
-        public validaPlpResponse(bool @return) {
+
+        public validaPlpResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class objetoPostal : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class objetoPostal : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string codigoEtiquetaField;
-        
+
         private System.DateTime dataAtualizacaoClienteField;
-        
+
         private bool dataAtualizacaoClienteFieldSpecified;
-        
+
         private System.DateTime dataBloqueioObjetoField;
-        
+
         private bool dataBloqueioObjetoFieldSpecified;
-        
+
         private System.DateTime dataCancelamentoEtiquetaField;
-        
+
         private bool dataCancelamentoEtiquetaFieldSpecified;
-        
+
         private System.DateTime dataInclusaoField;
-        
+
         private bool dataInclusaoFieldSpecified;
-        
+
         private objetoPostalPK objetoPostalPKField;
-        
+
         private long plpNuField;
-        
+
         private bool plpNuFieldSpecified;
-        
+
         private preListaPostagem preListaPostagemField;
-        
+
         private simNao restricaoAereaField;
-        
+
         private bool restricaoAereaFieldSpecified;
-        
+
         private string statusBloqueioField;
-        
+
         private statusObjetoPostal statusEtiquetaField;
-        
+
         private bool statusEtiquetaFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigoEtiqueta {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string codigoEtiqueta
+        {
+            get
+            {
                 return this.codigoEtiquetaField;
             }
-            set {
+            set
+            {
                 this.codigoEtiquetaField = value;
                 this.RaisePropertyChanged("codigoEtiqueta");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime dataAtualizacaoCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public System.DateTime dataAtualizacaoCliente
+        {
+            get
+            {
                 return this.dataAtualizacaoClienteField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoClienteField = value;
                 this.RaisePropertyChanged("dataAtualizacaoCliente");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoClienteSpecified {
-            get {
+        public bool dataAtualizacaoClienteSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoClienteFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoClienteFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoClienteSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataBloqueioObjeto {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataBloqueioObjeto
+        {
+            get
+            {
                 return this.dataBloqueioObjetoField;
             }
-            set {
+            set
+            {
                 this.dataBloqueioObjetoField = value;
                 this.RaisePropertyChanged("dataBloqueioObjeto");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataBloqueioObjetoSpecified {
-            get {
+        public bool dataBloqueioObjetoSpecified
+        {
+            get
+            {
                 return this.dataBloqueioObjetoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataBloqueioObjetoFieldSpecified = value;
                 this.RaisePropertyChanged("dataBloqueioObjetoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime dataCancelamentoEtiqueta {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public System.DateTime dataCancelamentoEtiqueta
+        {
+            get
+            {
                 return this.dataCancelamentoEtiquetaField;
             }
-            set {
+            set
+            {
                 this.dataCancelamentoEtiquetaField = value;
                 this.RaisePropertyChanged("dataCancelamentoEtiqueta");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataCancelamentoEtiquetaSpecified {
-            get {
+        public bool dataCancelamentoEtiquetaSpecified
+        {
+            get
+            {
                 return this.dataCancelamentoEtiquetaFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataCancelamentoEtiquetaFieldSpecified = value;
                 this.RaisePropertyChanged("dataCancelamentoEtiquetaSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public System.DateTime dataInclusao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public System.DateTime dataInclusao
+        {
+            get
+            {
                 return this.dataInclusaoField;
             }
-            set {
+            set
+            {
                 this.dataInclusaoField = value;
                 this.RaisePropertyChanged("dataInclusao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataInclusaoSpecified {
-            get {
+        public bool dataInclusaoSpecified
+        {
+            get
+            {
                 return this.dataInclusaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataInclusaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataInclusaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public objetoPostalPK objetoPostalPK {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public objetoPostalPK objetoPostalPK
+        {
+            get
+            {
                 return this.objetoPostalPKField;
             }
-            set {
+            set
+            {
                 this.objetoPostalPKField = value;
                 this.RaisePropertyChanged("objetoPostalPK");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public long plpNu {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public long plpNu
+        {
+            get
+            {
                 return this.plpNuField;
             }
-            set {
+            set
+            {
                 this.plpNuField = value;
                 this.RaisePropertyChanged("plpNu");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool plpNuSpecified {
-            get {
+        public bool plpNuSpecified
+        {
+            get
+            {
                 return this.plpNuFieldSpecified;
             }
-            set {
+            set
+            {
                 this.plpNuFieldSpecified = value;
                 this.RaisePropertyChanged("plpNuSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public preListaPostagem preListaPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public preListaPostagem preListaPostagem
+        {
+            get
+            {
                 return this.preListaPostagemField;
             }
-            set {
+            set
+            {
                 this.preListaPostagemField = value;
                 this.RaisePropertyChanged("preListaPostagem");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public simNao restricaoAerea {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public simNao restricaoAerea
+        {
+            get
+            {
                 return this.restricaoAereaField;
             }
-            set {
+            set
+            {
                 this.restricaoAereaField = value;
                 this.RaisePropertyChanged("restricaoAerea");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool restricaoAereaSpecified {
-            get {
+        public bool restricaoAereaSpecified
+        {
+            get
+            {
                 return this.restricaoAereaFieldSpecified;
             }
-            set {
+            set
+            {
                 this.restricaoAereaFieldSpecified = value;
                 this.RaisePropertyChanged("restricaoAereaSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string statusBloqueio {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public string statusBloqueio
+        {
+            get
+            {
                 return this.statusBloqueioField;
             }
-            set {
+            set
+            {
                 this.statusBloqueioField = value;
                 this.RaisePropertyChanged("statusBloqueio");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public statusObjetoPostal statusEtiqueta {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public statusObjetoPostal statusEtiqueta
+        {
+            get
+            {
                 return this.statusEtiquetaField;
             }
-            set {
+            set
+            {
                 this.statusEtiquetaField = value;
                 this.RaisePropertyChanged("statusEtiqueta");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusEtiquetaSpecified {
-            get {
+        public bool statusEtiquetaSpecified
+        {
+            get
+            {
                 return this.statusEtiquetaFieldSpecified;
             }
-            set {
+            set
+            {
                 this.statusEtiquetaFieldSpecified = value;
                 this.RaisePropertyChanged("statusEtiquetaSpecified");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class objetoPostalPK : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class objetoPostalPK : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string codigoEtiquetaField;
-        
+
         private long plpNuField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigoEtiqueta {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string codigoEtiqueta
+        {
+            get
+            {
                 return this.codigoEtiquetaField;
             }
-            set {
+            set
+            {
                 this.codigoEtiquetaField = value;
                 this.RaisePropertyChanged("codigoEtiqueta");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public long plpNu {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public long plpNu
+        {
+            get
+            {
                 return this.plpNuField;
             }
-            set {
+            set
+            {
                 this.plpNuField = value;
                 this.RaisePropertyChanged("plpNu");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class preListaPostagem : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class preListaPostagem : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private cartaoPostagemERP cartaoPostagemField;
-        
+
         private simNao conteudoProibidoField;
-        
+
         private bool conteudoProibidoFieldSpecified;
-        
+
         private System.DateTime dataAtualizacaoClienteField;
-        
+
         private bool dataAtualizacaoClienteFieldSpecified;
-        
+
         private System.DateTime dataAtualizacaoSaraField;
-        
+
         private bool dataAtualizacaoSaraFieldSpecified;
-        
+
         private System.DateTime dataFechamentoField;
-        
+
         private bool dataFechamentoFieldSpecified;
-        
+
         private System.DateTime dataPostagemField;
-        
+
         private bool dataPostagemFieldSpecified;
-        
+
         private System.DateTime dataPostagemSaraField;
-        
+
         private bool dataPostagemSaraFieldSpecified;
-        
+
         private objetoPostal[] objetosPostaisField;
-        
+
         private long plpClienteField;
-        
+
         private long plpNuField;
-        
+
         private System.Nullable<ushort>[] plpXmlField;
-        
+
         private System.Nullable<ushort>[] plpXmlRetornoField;
-        
+
         private statusPlp statusField;
-        
+
         private bool statusFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public cartaoPostagemERP cartaoPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public cartaoPostagemERP cartaoPostagem
+        {
+            get
+            {
                 return this.cartaoPostagemField;
             }
-            set {
+            set
+            {
                 this.cartaoPostagemField = value;
                 this.RaisePropertyChanged("cartaoPostagem");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public simNao conteudoProibido {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public simNao conteudoProibido
+        {
+            get
+            {
                 return this.conteudoProibidoField;
             }
-            set {
+            set
+            {
                 this.conteudoProibidoField = value;
                 this.RaisePropertyChanged("conteudoProibido");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool conteudoProibidoSpecified {
-            get {
+        public bool conteudoProibidoSpecified
+        {
+            get
+            {
                 return this.conteudoProibidoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.conteudoProibidoFieldSpecified = value;
                 this.RaisePropertyChanged("conteudoProibidoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataAtualizacaoCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataAtualizacaoCliente
+        {
+            get
+            {
                 return this.dataAtualizacaoClienteField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoClienteField = value;
                 this.RaisePropertyChanged("dataAtualizacaoCliente");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoClienteSpecified {
-            get {
+        public bool dataAtualizacaoClienteSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoClienteFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoClienteFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoClienteSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime dataAtualizacaoSara {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public System.DateTime dataAtualizacaoSara
+        {
+            get
+            {
                 return this.dataAtualizacaoSaraField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoSaraField = value;
                 this.RaisePropertyChanged("dataAtualizacaoSara");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSaraSpecified {
-            get {
+        public bool dataAtualizacaoSaraSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoSaraFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoSaraFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSaraSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public System.DateTime dataFechamento {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public System.DateTime dataFechamento
+        {
+            get
+            {
                 return this.dataFechamentoField;
             }
-            set {
+            set
+            {
                 this.dataFechamentoField = value;
                 this.RaisePropertyChanged("dataFechamento");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataFechamentoSpecified {
-            get {
+        public bool dataFechamentoSpecified
+        {
+            get
+            {
                 return this.dataFechamentoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataFechamentoFieldSpecified = value;
                 this.RaisePropertyChanged("dataFechamentoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime dataPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public System.DateTime dataPostagem
+        {
+            get
+            {
                 return this.dataPostagemField;
             }
-            set {
+            set
+            {
                 this.dataPostagemField = value;
                 this.RaisePropertyChanged("dataPostagem");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataPostagemSpecified {
-            get {
+        public bool dataPostagemSpecified
+        {
+            get
+            {
                 return this.dataPostagemFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataPostagemFieldSpecified = value;
                 this.RaisePropertyChanged("dataPostagemSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public System.DateTime dataPostagemSara {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public System.DateTime dataPostagemSara
+        {
+            get
+            {
                 return this.dataPostagemSaraField;
             }
-            set {
+            set
+            {
                 this.dataPostagemSaraField = value;
                 this.RaisePropertyChanged("dataPostagemSara");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataPostagemSaraSpecified {
-            get {
+        public bool dataPostagemSaraSpecified
+        {
+            get
+            {
                 return this.dataPostagemSaraFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataPostagemSaraFieldSpecified = value;
                 this.RaisePropertyChanged("dataPostagemSaraSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("objetosPostais", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
-        public objetoPostal[] objetosPostais {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("objetosPostais", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 7)]
+        public objetoPostal[] objetosPostais
+        {
+            get
+            {
                 return this.objetosPostaisField;
             }
-            set {
+            set
+            {
                 this.objetosPostaisField = value;
                 this.RaisePropertyChanged("objetosPostais");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public long plpCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public long plpCliente
+        {
+            get
+            {
                 return this.plpClienteField;
             }
-            set {
+            set
+            {
                 this.plpClienteField = value;
                 this.RaisePropertyChanged("plpCliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public long plpNu {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public long plpNu
+        {
+            get
+            {
                 return this.plpNuField;
             }
-            set {
+            set
+            {
                 this.plpNuField = value;
                 this.RaisePropertyChanged("plpNu");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("plpXml", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
-        public System.Nullable<ushort>[] plpXml {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("plpXml", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 10)]
+        public System.Nullable<ushort>[] plpXml
+        {
+            get
+            {
                 return this.plpXmlField;
             }
-            set {
+            set
+            {
                 this.plpXmlField = value;
                 this.RaisePropertyChanged("plpXml");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("plpXmlRetorno", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=11)]
-        public System.Nullable<ushort>[] plpXmlRetorno {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("plpXmlRetorno", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 11)]
+        public System.Nullable<ushort>[] plpXmlRetorno
+        {
+            get
+            {
                 return this.plpXmlRetornoField;
             }
-            set {
+            set
+            {
                 this.plpXmlRetornoField = value;
                 this.RaisePropertyChanged("plpXmlRetorno");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public statusPlp status {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 12)]
+        public statusPlp status
+        {
+            get
+            {
                 return this.statusField;
             }
-            set {
+            set
+            {
                 this.statusField = value;
                 this.RaisePropertyChanged("status");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusSpecified {
-            get {
+        public bool statusSpecified
+        {
+            get
+            {
                 return this.statusFieldSpecified;
             }
-            set {
+            set
+            {
                 this.statusFieldSpecified = value;
                 this.RaisePropertyChanged("statusSpecified");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class cartaoPostagemERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class cartaoPostagemERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string codigoAdministrativoField;
-        
+
         private contratoERP[] contratosField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private System.DateTime dataVigenciaFimField;
-        
+
         private bool dataVigenciaFimFieldSpecified;
-        
+
         private System.DateTime dataVigenciaInicioField;
-        
+
         private bool dataVigenciaInicioFieldSpecified;
-        
+
         private int datajAtualizacaoField;
-        
+
         private bool datajAtualizacaoFieldSpecified;
-        
+
         private int datajVigenciaFimField;
-        
+
         private bool datajVigenciaFimFieldSpecified;
-        
+
         private int datajVigenciaInicioField;
-        
+
         private bool datajVigenciaInicioFieldSpecified;
-        
+
         private string descricaoStatusCartaoField;
-        
+
         private string descricaoUnidadePostagemGenericaField;
-        
+
         private int horajAtualizacaoField;
-        
+
         private bool horajAtualizacaoFieldSpecified;
-        
+
         private string numeroField;
-        
+
         private servicoERP[] servicosField;
-        
+
         private string statusCartaoPostagemField;
-        
+
         private string statusCodigoField;
-        
+
         private string unidadeGenericaField;
-        
+
         private unidadePostagemERP[] unidadesPostagemField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigoAdministrativo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string codigoAdministrativo
+        {
+            get
+            {
                 return this.codigoAdministrativoField;
             }
-            set {
+            set
+            {
                 this.codigoAdministrativoField = value;
                 this.RaisePropertyChanged("codigoAdministrativo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("contratos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public contratoERP[] contratos {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("contratos", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 1)]
+        public contratoERP[] contratos
+        {
+            get
+            {
                 return this.contratosField;
             }
-            set {
+            set
+            {
                 this.contratosField = value;
                 this.RaisePropertyChanged("contratos");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime dataVigenciaFim {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public System.DateTime dataVigenciaFim
+        {
+            get
+            {
                 return this.dataVigenciaFimField;
             }
-            set {
+            set
+            {
                 this.dataVigenciaFimField = value;
                 this.RaisePropertyChanged("dataVigenciaFim");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataVigenciaFimSpecified {
-            get {
+        public bool dataVigenciaFimSpecified
+        {
+            get
+            {
                 return this.dataVigenciaFimFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataVigenciaFimFieldSpecified = value;
                 this.RaisePropertyChanged("dataVigenciaFimSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public System.DateTime dataVigenciaInicio {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public System.DateTime dataVigenciaInicio
+        {
+            get
+            {
                 return this.dataVigenciaInicioField;
             }
-            set {
+            set
+            {
                 this.dataVigenciaInicioField = value;
                 this.RaisePropertyChanged("dataVigenciaInicio");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataVigenciaInicioSpecified {
-            get {
+        public bool dataVigenciaInicioSpecified
+        {
+            get
+            {
                 return this.dataVigenciaInicioFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataVigenciaInicioFieldSpecified = value;
                 this.RaisePropertyChanged("dataVigenciaInicioSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int datajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public int datajAtualizacao
+        {
+            get
+            {
                 return this.datajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoField = value;
                 this.RaisePropertyChanged("datajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajAtualizacaoSpecified {
-            get {
+        public bool datajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.datajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("datajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int datajVigenciaFim {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public int datajVigenciaFim
+        {
+            get
+            {
                 return this.datajVigenciaFimField;
             }
-            set {
+            set
+            {
                 this.datajVigenciaFimField = value;
                 this.RaisePropertyChanged("datajVigenciaFim");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajVigenciaFimSpecified {
-            get {
+        public bool datajVigenciaFimSpecified
+        {
+            get
+            {
                 return this.datajVigenciaFimFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajVigenciaFimFieldSpecified = value;
                 this.RaisePropertyChanged("datajVigenciaFimSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public int datajVigenciaInicio {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public int datajVigenciaInicio
+        {
+            get
+            {
                 return this.datajVigenciaInicioField;
             }
-            set {
+            set
+            {
                 this.datajVigenciaInicioField = value;
                 this.RaisePropertyChanged("datajVigenciaInicio");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajVigenciaInicioSpecified {
-            get {
+        public bool datajVigenciaInicioSpecified
+        {
+            get
+            {
                 return this.datajVigenciaInicioFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajVigenciaInicioFieldSpecified = value;
                 this.RaisePropertyChanged("datajVigenciaInicioSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string descricaoStatusCartao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public string descricaoStatusCartao
+        {
+            get
+            {
                 return this.descricaoStatusCartaoField;
             }
-            set {
+            set
+            {
                 this.descricaoStatusCartaoField = value;
                 this.RaisePropertyChanged("descricaoStatusCartao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string descricaoUnidadePostagemGenerica {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public string descricaoUnidadePostagemGenerica
+        {
+            get
+            {
                 return this.descricaoUnidadePostagemGenericaField;
             }
-            set {
+            set
+            {
                 this.descricaoUnidadePostagemGenericaField = value;
                 this.RaisePropertyChanged("descricaoUnidadePostagemGenerica");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public int horajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public int horajAtualizacao
+        {
+            get
+            {
                 return this.horajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoField = value;
                 this.RaisePropertyChanged("horajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool horajAtualizacaoSpecified {
-            get {
+        public bool horajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.horajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("horajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string numero {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public string numero
+        {
+            get
+            {
                 return this.numeroField;
             }
-            set {
+            set
+            {
                 this.numeroField = value;
                 this.RaisePropertyChanged("numero");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("servicos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=12)]
-        public servicoERP[] servicos {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("servicos", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 12)]
+        public servicoERP[] servicos
+        {
+            get
+            {
                 return this.servicosField;
             }
-            set {
+            set
+            {
                 this.servicosField = value;
                 this.RaisePropertyChanged("servicos");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public string statusCartaoPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 13)]
+        public string statusCartaoPostagem
+        {
+            get
+            {
                 return this.statusCartaoPostagemField;
             }
-            set {
+            set
+            {
                 this.statusCartaoPostagemField = value;
                 this.RaisePropertyChanged("statusCartaoPostagem");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public string statusCodigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 14)]
+        public string statusCodigo
+        {
+            get
+            {
                 return this.statusCodigoField;
             }
-            set {
+            set
+            {
                 this.statusCodigoField = value;
                 this.RaisePropertyChanged("statusCodigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
-        public string unidadeGenerica {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 15)]
+        public string unidadeGenerica
+        {
+            get
+            {
                 return this.unidadeGenericaField;
             }
-            set {
+            set
+            {
                 this.unidadeGenericaField = value;
                 this.RaisePropertyChanged("unidadeGenerica");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("unidadesPostagem", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=16)]
-        public unidadePostagemERP[] unidadesPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("unidadesPostagem", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 16)]
+        public unidadePostagemERP[] unidadesPostagem
+        {
+            get
+            {
                 return this.unidadesPostagemField;
             }
-            set {
+            set
+            {
                 this.unidadesPostagemField = value;
                 this.RaisePropertyChanged("unidadesPostagem");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class contratoERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class contratoERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private cartaoPostagemERP[] cartoesPostagemField;
-        
+
         private clienteERP clienteField;
-        
+
         private long codigoClienteField;
-        
+
         private string codigoDiretoriaField;
-        
+
         private contratoERPPK contratoPKField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private string dataAtualizacaoDDMMYYYYField;
-        
+
         private System.DateTime dataVigenciaFimField;
-        
+
         private bool dataVigenciaFimFieldSpecified;
-        
+
         private string dataVigenciaFimDDMMYYYYField;
-        
+
         private System.DateTime dataVigenciaInicioField;
-        
+
         private bool dataVigenciaInicioFieldSpecified;
-        
+
         private string dataVigenciaInicioDDMMYYYYField;
-        
+
         private int datajAtualizacaoField;
-        
+
         private bool datajAtualizacaoFieldSpecified;
-        
+
         private int datajVigenciaFimField;
-        
+
         private bool datajVigenciaFimFieldSpecified;
-        
+
         private int datajVigenciaInicioField;
-        
+
         private bool datajVigenciaInicioFieldSpecified;
-        
+
         private string descricaoDiretoriaRegionalField;
-        
+
         private string descricaoStatusField;
-        
+
         private unidadePostagemERP diretoriaRegionalField;
-        
+
         private int horajAtualizacaoField;
-        
+
         private bool horajAtualizacaoFieldSpecified;
-        
+
         private string statusCodigoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("cartoesPostagem", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public cartaoPostagemERP[] cartoesPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("cartoesPostagem", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 0)]
+        public cartaoPostagemERP[] cartoesPostagem
+        {
+            get
+            {
                 return this.cartoesPostagemField;
             }
-            set {
+            set
+            {
                 this.cartoesPostagemField = value;
                 this.RaisePropertyChanged("cartoesPostagem");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public clienteERP cliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public clienteERP cliente
+        {
+            get
+            {
                 return this.clienteField;
             }
-            set {
+            set
+            {
                 this.clienteField = value;
                 this.RaisePropertyChanged("cliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public long codigoCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public long codigoCliente
+        {
+            get
+            {
                 return this.codigoClienteField;
             }
-            set {
+            set
+            {
                 this.codigoClienteField = value;
                 this.RaisePropertyChanged("codigoCliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string codigoDiretoria {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string codigoDiretoria
+        {
+            get
+            {
                 return this.codigoDiretoriaField;
             }
-            set {
+            set
+            {
                 this.codigoDiretoriaField = value;
                 this.RaisePropertyChanged("codigoDiretoria");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public contratoERPPK contratoPK {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public contratoERPPK contratoPK
+        {
+            get
+            {
                 return this.contratoPKField;
             }
-            set {
+            set
+            {
                 this.contratoPKField = value;
                 this.RaisePropertyChanged("contratoPK");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string dataAtualizacaoDDMMYYYY {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string dataAtualizacaoDDMMYYYY
+        {
+            get
+            {
                 return this.dataAtualizacaoDDMMYYYYField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoDDMMYYYYField = value;
                 this.RaisePropertyChanged("dataAtualizacaoDDMMYYYY");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public System.DateTime dataVigenciaFim {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public System.DateTime dataVigenciaFim
+        {
+            get
+            {
                 return this.dataVigenciaFimField;
             }
-            set {
+            set
+            {
                 this.dataVigenciaFimField = value;
                 this.RaisePropertyChanged("dataVigenciaFim");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataVigenciaFimSpecified {
-            get {
+        public bool dataVigenciaFimSpecified
+        {
+            get
+            {
                 return this.dataVigenciaFimFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataVigenciaFimFieldSpecified = value;
                 this.RaisePropertyChanged("dataVigenciaFimSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string dataVigenciaFimDDMMYYYY {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public string dataVigenciaFimDDMMYYYY
+        {
+            get
+            {
                 return this.dataVigenciaFimDDMMYYYYField;
             }
-            set {
+            set
+            {
                 this.dataVigenciaFimDDMMYYYYField = value;
                 this.RaisePropertyChanged("dataVigenciaFimDDMMYYYY");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public System.DateTime dataVigenciaInicio {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public System.DateTime dataVigenciaInicio
+        {
+            get
+            {
                 return this.dataVigenciaInicioField;
             }
-            set {
+            set
+            {
                 this.dataVigenciaInicioField = value;
                 this.RaisePropertyChanged("dataVigenciaInicio");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataVigenciaInicioSpecified {
-            get {
+        public bool dataVigenciaInicioSpecified
+        {
+            get
+            {
                 return this.dataVigenciaInicioFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataVigenciaInicioFieldSpecified = value;
                 this.RaisePropertyChanged("dataVigenciaInicioSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string dataVigenciaInicioDDMMYYYY {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public string dataVigenciaInicioDDMMYYYY
+        {
+            get
+            {
                 return this.dataVigenciaInicioDDMMYYYYField;
             }
-            set {
+            set
+            {
                 this.dataVigenciaInicioDDMMYYYYField = value;
                 this.RaisePropertyChanged("dataVigenciaInicioDDMMYYYY");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public int datajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public int datajAtualizacao
+        {
+            get
+            {
                 return this.datajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoField = value;
                 this.RaisePropertyChanged("datajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajAtualizacaoSpecified {
-            get {
+        public bool datajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.datajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("datajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public int datajVigenciaFim {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 12)]
+        public int datajVigenciaFim
+        {
+            get
+            {
                 return this.datajVigenciaFimField;
             }
-            set {
+            set
+            {
                 this.datajVigenciaFimField = value;
                 this.RaisePropertyChanged("datajVigenciaFim");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajVigenciaFimSpecified {
-            get {
+        public bool datajVigenciaFimSpecified
+        {
+            get
+            {
                 return this.datajVigenciaFimFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajVigenciaFimFieldSpecified = value;
                 this.RaisePropertyChanged("datajVigenciaFimSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public int datajVigenciaInicio {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 13)]
+        public int datajVigenciaInicio
+        {
+            get
+            {
                 return this.datajVigenciaInicioField;
             }
-            set {
+            set
+            {
                 this.datajVigenciaInicioField = value;
                 this.RaisePropertyChanged("datajVigenciaInicio");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajVigenciaInicioSpecified {
-            get {
+        public bool datajVigenciaInicioSpecified
+        {
+            get
+            {
                 return this.datajVigenciaInicioFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajVigenciaInicioFieldSpecified = value;
                 this.RaisePropertyChanged("datajVigenciaInicioSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public string descricaoDiretoriaRegional {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 14)]
+        public string descricaoDiretoriaRegional
+        {
+            get
+            {
                 return this.descricaoDiretoriaRegionalField;
             }
-            set {
+            set
+            {
                 this.descricaoDiretoriaRegionalField = value;
                 this.RaisePropertyChanged("descricaoDiretoriaRegional");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
-        public string descricaoStatus {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 15)]
+        public string descricaoStatus
+        {
+            get
+            {
                 return this.descricaoStatusField;
             }
-            set {
+            set
+            {
                 this.descricaoStatusField = value;
                 this.RaisePropertyChanged("descricaoStatus");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
-        public unidadePostagemERP diretoriaRegional {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 16)]
+        public unidadePostagemERP diretoriaRegional
+        {
+            get
+            {
                 return this.diretoriaRegionalField;
             }
-            set {
+            set
+            {
                 this.diretoriaRegionalField = value;
                 this.RaisePropertyChanged("diretoriaRegional");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
-        public int horajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 17)]
+        public int horajAtualizacao
+        {
+            get
+            {
                 return this.horajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoField = value;
                 this.RaisePropertyChanged("horajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool horajAtualizacaoSpecified {
-            get {
+        public bool horajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.horajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("horajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
-        public string statusCodigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 18)]
+        public string statusCodigo
+        {
+            get
+            {
                 return this.statusCodigoField;
             }
-            set {
+            set
+            {
                 this.statusCodigoField = value;
                 this.RaisePropertyChanged("statusCodigo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class clienteERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class clienteERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string cnpjField;
-        
+
         private contratoERP[] contratosField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private int datajAtualizacaoField;
-        
+
         private bool datajAtualizacaoFieldSpecified;
-        
+
         private string descricaoStatusClienteField;
-        
+
         private gerenteConta[] gerenteContaField;
-        
+
         private long horajAtualizacaoField;
-        
+
         private bool horajAtualizacaoFieldSpecified;
-        
+
         private long idField;
-        
+
         private string inscricaoEstadualField;
-        
+
         private string nomeField;
-        
+
         private string statusCodigoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string cnpj {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string cnpj
+        {
+            get
+            {
                 return this.cnpjField;
             }
-            set {
+            set
+            {
                 this.cnpjField = value;
                 this.RaisePropertyChanged("cnpj");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("contratos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public contratoERP[] contratos {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("contratos", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 1)]
+        public contratoERP[] contratos
+        {
+            get
+            {
                 return this.contratosField;
             }
-            set {
+            set
+            {
                 this.contratosField = value;
                 this.RaisePropertyChanged("contratos");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int datajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public int datajAtualizacao
+        {
+            get
+            {
                 return this.datajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoField = value;
                 this.RaisePropertyChanged("datajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajAtualizacaoSpecified {
-            get {
+        public bool datajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.datajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("datajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string descricaoStatusCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string descricaoStatusCliente
+        {
+            get
+            {
                 return this.descricaoStatusClienteField;
             }
-            set {
+            set
+            {
                 this.descricaoStatusClienteField = value;
                 this.RaisePropertyChanged("descricaoStatusCliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("gerenteConta", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public gerenteConta[] gerenteConta {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("gerenteConta", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 5)]
+        public gerenteConta[] gerenteConta
+        {
+            get
+            {
                 return this.gerenteContaField;
             }
-            set {
+            set
+            {
                 this.gerenteContaField = value;
                 this.RaisePropertyChanged("gerenteConta");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public long horajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public long horajAtualizacao
+        {
+            get
+            {
                 return this.horajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoField = value;
                 this.RaisePropertyChanged("horajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool horajAtualizacaoSpecified {
-            get {
+        public bool horajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.horajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("horajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public long id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public long id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string inscricaoEstadual {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public string inscricaoEstadual
+        {
+            get
+            {
                 return this.inscricaoEstadualField;
             }
-            set {
+            set
+            {
                 this.inscricaoEstadualField = value;
                 this.RaisePropertyChanged("inscricaoEstadual");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string nome {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public string nome
+        {
+            get
+            {
                 return this.nomeField;
             }
-            set {
+            set
+            {
                 this.nomeField = value;
                 this.RaisePropertyChanged("nome");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string statusCodigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public string statusCodigo
+        {
+            get
+            {
                 return this.statusCodigoField;
             }
-            set {
+            set
+            {
                 this.statusCodigoField = value;
                 this.RaisePropertyChanged("statusCodigo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class gerenteConta : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class gerenteConta : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private clienteERP[] clientesVisiveisField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private System.DateTime dataInclusaoField;
-        
+
         private bool dataInclusaoFieldSpecified;
-        
+
         private System.DateTime dataSenhaField;
-        
+
         private bool dataSenhaFieldSpecified;
-        
+
         private string loginField;
-        
+
         private string matriculaField;
-        
+
         private string senhaField;
-        
+
         private statusGerente statusField;
-        
+
         private bool statusFieldSpecified;
-        
+
         private tipoGerente tipoGerenteField;
-        
+
         private bool tipoGerenteFieldSpecified;
-        
+
         private usuarioInstalacao[] usuariosInstalacaoField;
-        
+
         private string validadeField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("clientesVisiveis", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public clienteERP[] clientesVisiveis {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("clientesVisiveis", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 0)]
+        public clienteERP[] clientesVisiveis
+        {
+            get
+            {
                 return this.clientesVisiveisField;
             }
-            set {
+            set
+            {
                 this.clientesVisiveisField = value;
                 this.RaisePropertyChanged("clientesVisiveis");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataInclusao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataInclusao
+        {
+            get
+            {
                 return this.dataInclusaoField;
             }
-            set {
+            set
+            {
                 this.dataInclusaoField = value;
                 this.RaisePropertyChanged("dataInclusao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataInclusaoSpecified {
-            get {
+        public bool dataInclusaoSpecified
+        {
+            get
+            {
                 return this.dataInclusaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataInclusaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataInclusaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime dataSenha {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public System.DateTime dataSenha
+        {
+            get
+            {
                 return this.dataSenhaField;
             }
-            set {
+            set
+            {
                 this.dataSenhaField = value;
                 this.RaisePropertyChanged("dataSenha");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataSenhaSpecified {
-            get {
+        public bool dataSenhaSpecified
+        {
+            get
+            {
                 return this.dataSenhaFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataSenhaFieldSpecified = value;
                 this.RaisePropertyChanged("dataSenhaSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string login {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string login
+        {
+            get
+            {
                 return this.loginField;
             }
-            set {
+            set
+            {
                 this.loginField = value;
                 this.RaisePropertyChanged("login");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string matricula {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string matricula
+        {
+            get
+            {
                 return this.matriculaField;
             }
-            set {
+            set
+            {
                 this.matriculaField = value;
                 this.RaisePropertyChanged("matricula");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string senha {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string senha
+        {
+            get
+            {
                 return this.senhaField;
             }
-            set {
+            set
+            {
                 this.senhaField = value;
                 this.RaisePropertyChanged("senha");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public statusGerente status {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public statusGerente status
+        {
+            get
+            {
                 return this.statusField;
             }
-            set {
+            set
+            {
                 this.statusField = value;
                 this.RaisePropertyChanged("status");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusSpecified {
-            get {
+        public bool statusSpecified
+        {
+            get
+            {
                 return this.statusFieldSpecified;
             }
-            set {
+            set
+            {
                 this.statusFieldSpecified = value;
                 this.RaisePropertyChanged("statusSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public tipoGerente tipoGerente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public tipoGerente tipoGerente
+        {
+            get
+            {
                 return this.tipoGerenteField;
             }
-            set {
+            set
+            {
                 this.tipoGerenteField = value;
                 this.RaisePropertyChanged("tipoGerente");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool tipoGerenteSpecified {
-            get {
+        public bool tipoGerenteSpecified
+        {
+            get
+            {
                 return this.tipoGerenteFieldSpecified;
             }
-            set {
+            set
+            {
                 this.tipoGerenteFieldSpecified = value;
                 this.RaisePropertyChanged("tipoGerenteSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("usuariosInstalacao", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
-        public usuarioInstalacao[] usuariosInstalacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("usuariosInstalacao", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 9)]
+        public usuarioInstalacao[] usuariosInstalacao
+        {
+            get
+            {
                 return this.usuariosInstalacaoField;
             }
-            set {
+            set
+            {
                 this.usuariosInstalacaoField = value;
                 this.RaisePropertyChanged("usuariosInstalacao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string validade {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public string validade
+        {
+            get
+            {
                 return this.validadeField;
             }
-            set {
+            set
+            {
                 this.validadeField = value;
                 this.RaisePropertyChanged("validade");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum statusGerente {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum statusGerente
+    {
+
         /// <remarks/>
         Ativo,
-        
+
         /// <remarks/>
         Inativo,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum tipoGerente {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum tipoGerente
+    {
+
         /// <remarks/>
         GerenteConta,
-        
+
         /// <remarks/>
         GerenteContaMaster,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class usuarioInstalacao : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class usuarioInstalacao : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private System.DateTime dataInclusaoField;
-        
+
         private bool dataInclusaoFieldSpecified;
-        
+
         private System.DateTime dataSenhaField;
-        
+
         private bool dataSenhaFieldSpecified;
-        
+
         private gerenteConta gerenteMasterField;
-        
+
         private string hashSenhaField;
-        
+
         private long idField;
-        
+
         private bool idFieldSpecified;
-        
+
         private string loginField;
-        
+
         private string nomeField;
-        
+
         private parametroMaster[] parametrosField;
-        
+
         private string senhaField;
-        
+
         private statusUsuario statusField;
-        
+
         private bool statusFieldSpecified;
-        
+
         private string validadeField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime dataInclusao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public System.DateTime dataInclusao
+        {
+            get
+            {
                 return this.dataInclusaoField;
             }
-            set {
+            set
+            {
                 this.dataInclusaoField = value;
                 this.RaisePropertyChanged("dataInclusao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataInclusaoSpecified {
-            get {
+        public bool dataInclusaoSpecified
+        {
+            get
+            {
                 return this.dataInclusaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataInclusaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataInclusaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataSenha {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataSenha
+        {
+            get
+            {
                 return this.dataSenhaField;
             }
-            set {
+            set
+            {
                 this.dataSenhaField = value;
                 this.RaisePropertyChanged("dataSenha");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataSenhaSpecified {
-            get {
+        public bool dataSenhaSpecified
+        {
+            get
+            {
                 return this.dataSenhaFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataSenhaFieldSpecified = value;
                 this.RaisePropertyChanged("dataSenhaSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public gerenteConta gerenteMaster {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public gerenteConta gerenteMaster
+        {
+            get
+            {
                 return this.gerenteMasterField;
             }
-            set {
+            set
+            {
                 this.gerenteMasterField = value;
                 this.RaisePropertyChanged("gerenteMaster");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string hashSenha {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string hashSenha
+        {
+            get
+            {
                 return this.hashSenhaField;
             }
-            set {
+            set
+            {
                 this.hashSenhaField = value;
                 this.RaisePropertyChanged("hashSenha");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public long id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public long id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified {
-            get {
+        public bool idSpecified
+        {
+            get
+            {
                 return this.idFieldSpecified;
             }
-            set {
+            set
+            {
                 this.idFieldSpecified = value;
                 this.RaisePropertyChanged("idSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string login {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string login
+        {
+            get
+            {
                 return this.loginField;
             }
-            set {
+            set
+            {
                 this.loginField = value;
                 this.RaisePropertyChanged("login");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string nome {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public string nome
+        {
+            get
+            {
                 return this.nomeField;
             }
-            set {
+            set
+            {
                 this.nomeField = value;
                 this.RaisePropertyChanged("nome");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("parametros", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
-        public parametroMaster[] parametros {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("parametros", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 8)]
+        public parametroMaster[] parametros
+        {
+            get
+            {
                 return this.parametrosField;
             }
-            set {
+            set
+            {
                 this.parametrosField = value;
                 this.RaisePropertyChanged("parametros");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string senha {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public string senha
+        {
+            get
+            {
                 return this.senhaField;
             }
-            set {
+            set
+            {
                 this.senhaField = value;
                 this.RaisePropertyChanged("senha");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public statusUsuario status {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public statusUsuario status
+        {
+            get
+            {
                 return this.statusField;
             }
-            set {
+            set
+            {
                 this.statusField = value;
                 this.RaisePropertyChanged("status");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool statusSpecified {
-            get {
+        public bool statusSpecified
+        {
+            get
+            {
                 return this.statusFieldSpecified;
             }
-            set {
+            set
+            {
                 this.statusFieldSpecified = value;
                 this.RaisePropertyChanged("statusSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string validade {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public string validade
+        {
+            get
+            {
                 return this.validadeField;
             }
-            set {
+            set
+            {
                 this.validadeField = value;
                 this.RaisePropertyChanged("validade");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class parametroMaster : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class parametroMaster : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private long prmCoParametroField;
-        
+
         private string prmTxParametroField;
-        
+
         private string prmTxValorField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long prmCoParametro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public long prmCoParametro
+        {
+            get
+            {
                 return this.prmCoParametroField;
             }
-            set {
+            set
+            {
                 this.prmCoParametroField = value;
                 this.RaisePropertyChanged("prmCoParametro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string prmTxParametro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string prmTxParametro
+        {
+            get
+            {
                 return this.prmTxParametroField;
             }
-            set {
+            set
+            {
                 this.prmTxParametroField = value;
                 this.RaisePropertyChanged("prmTxParametro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string prmTxValor {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string prmTxValor
+        {
+            get
+            {
                 return this.prmTxValorField;
             }
-            set {
+            set
+            {
                 this.prmTxValorField = value;
                 this.RaisePropertyChanged("prmTxValor");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum statusUsuario {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum statusUsuario
+    {
+
         /// <remarks/>
         Ativo,
-        
+
         /// <remarks/>
         Inativo,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class contratoERPPK : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class contratoERPPK : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private long diretoriaField;
-        
+
         private string numeroField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public long diretoria {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public long diretoria
+        {
+            get
+            {
                 return this.diretoriaField;
             }
-            set {
+            set
+            {
                 this.diretoriaField = value;
                 this.RaisePropertyChanged("diretoria");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string numero {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string numero
+        {
+            get
+            {
                 return this.numeroField;
             }
-            set {
+            set
+            {
                 this.numeroField = value;
                 this.RaisePropertyChanged("numero");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class unidadePostagemERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class unidadePostagemERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string diretoriaRegionalField;
-        
+
         private enderecoERP enderecoField;
-        
+
         private string idField;
-        
+
         private string nomeField;
-        
+
         private string statusField;
-        
+
         private string tipoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string diretoriaRegional {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string diretoriaRegional
+        {
+            get
+            {
                 return this.diretoriaRegionalField;
             }
-            set {
+            set
+            {
                 this.diretoriaRegionalField = value;
                 this.RaisePropertyChanged("diretoriaRegional");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public enderecoERP endereco {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public enderecoERP endereco
+        {
+            get
+            {
                 return this.enderecoField;
             }
-            set {
+            set
+            {
                 this.enderecoField = value;
                 this.RaisePropertyChanged("endereco");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nome {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string nome
+        {
+            get
+            {
                 return this.nomeField;
             }
-            set {
+            set
+            {
                 this.nomeField = value;
                 this.RaisePropertyChanged("nome");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string status {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string status
+        {
+            get
+            {
                 return this.statusField;
             }
-            set {
+            set
+            {
                 this.statusField = value;
                 this.RaisePropertyChanged("status");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string tipo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string tipo
+        {
+            get
+            {
                 return this.tipoField;
             }
-            set {
+            set
+            {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class enderecoERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class enderecoERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string bairroField;
-        
+
         private string cepField;
-        
+
         private string cidadeField;
-        
+
         private string complemento2Field;
-        
+
         private string endField;
-        
+
         private string ufField;
-        
+
         private unidadePostagemERP[] unidadesPostagemField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string bairro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string bairro
+        {
+            get
+            {
                 return this.bairroField;
             }
-            set {
+            set
+            {
                 this.bairroField = value;
                 this.RaisePropertyChanged("bairro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string cep {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string cep
+        {
+            get
+            {
                 return this.cepField;
             }
-            set {
+            set
+            {
                 this.cepField = value;
                 this.RaisePropertyChanged("cep");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string cidade {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string cidade
+        {
+            get
+            {
                 return this.cidadeField;
             }
-            set {
+            set
+            {
                 this.cidadeField = value;
                 this.RaisePropertyChanged("cidade");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string complemento2 {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string complemento2
+        {
+            get
+            {
                 return this.complemento2Field;
             }
-            set {
+            set
+            {
                 this.complemento2Field = value;
                 this.RaisePropertyChanged("complemento2");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string end {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string end
+        {
+            get
+            {
                 return this.endField;
             }
-            set {
+            set
+            {
                 this.endField = value;
                 this.RaisePropertyChanged("end");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string uf {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string uf
+        {
+            get
+            {
                 return this.ufField;
             }
-            set {
+            set
+            {
                 this.ufField = value;
                 this.RaisePropertyChanged("uf");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("unidadesPostagem", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=6)]
-        public unidadePostagemERP[] unidadesPostagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("unidadesPostagem", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 6)]
+        public unidadePostagemERP[] unidadesPostagem
+        {
+            get
+            {
                 return this.unidadesPostagemField;
             }
-            set {
+            set
+            {
                 this.unidadesPostagemField = value;
                 this.RaisePropertyChanged("unidadesPostagem");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class servicoERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class servicoERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string codigoField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private int datajAtualizacaoField;
-        
+
         private bool datajAtualizacaoFieldSpecified;
-        
+
         private string descricaoField;
-        
+
         private int horajAtualizacaoField;
-        
+
         private bool horajAtualizacaoFieldSpecified;
-        
+
         private long idField;
-        
+
         private servicoSigep servicoSigepField;
-        
+
         private servicoAdicionalERP[] servicosAdicionaisField;
-        
+
         private string tipo1CodigoField;
-        
+
         private string tipo1DescricaoField;
-        
+
         private string tipo2CodigoField;
-        
+
         private string tipo2DescricaoField;
-        
+
         private vigenciaERP vigenciaField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string codigo
+        {
+            get
+            {
                 return this.codigoField;
             }
-            set {
+            set
+            {
                 this.codigoField = value;
                 this.RaisePropertyChanged("codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int datajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public int datajAtualizacao
+        {
+            get
+            {
                 return this.datajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoField = value;
                 this.RaisePropertyChanged("datajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajAtualizacaoSpecified {
-            get {
+        public bool datajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.datajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("datajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string descricao
+        {
+            get
+            {
                 return this.descricaoField;
             }
-            set {
+            set
+            {
                 this.descricaoField = value;
                 this.RaisePropertyChanged("descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int horajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public int horajAtualizacao
+        {
+            get
+            {
                 return this.horajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoField = value;
                 this.RaisePropertyChanged("horajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool horajAtualizacaoSpecified {
-            get {
+        public bool horajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.horajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("horajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public long id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public long id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public servicoSigep servicoSigep {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public servicoSigep servicoSigep
+        {
+            get
+            {
                 return this.servicoSigepField;
             }
-            set {
+            set
+            {
                 this.servicoSigepField = value;
                 this.RaisePropertyChanged("servicoSigep");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("servicosAdicionais", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=7)]
-        public servicoAdicionalERP[] servicosAdicionais {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("servicosAdicionais", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 7)]
+        public servicoAdicionalERP[] servicosAdicionais
+        {
+            get
+            {
                 return this.servicosAdicionaisField;
             }
-            set {
+            set
+            {
                 this.servicosAdicionaisField = value;
                 this.RaisePropertyChanged("servicosAdicionais");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string tipo1Codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public string tipo1Codigo
+        {
+            get
+            {
                 return this.tipo1CodigoField;
             }
-            set {
+            set
+            {
                 this.tipo1CodigoField = value;
                 this.RaisePropertyChanged("tipo1Codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string tipo1Descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public string tipo1Descricao
+        {
+            get
+            {
                 return this.tipo1DescricaoField;
             }
-            set {
+            set
+            {
                 this.tipo1DescricaoField = value;
                 this.RaisePropertyChanged("tipo1Descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string tipo2Codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public string tipo2Codigo
+        {
+            get
+            {
                 return this.tipo2CodigoField;
             }
-            set {
+            set
+            {
                 this.tipo2CodigoField = value;
                 this.RaisePropertyChanged("tipo2Codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string tipo2Descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public string tipo2Descricao
+        {
+            get
+            {
                 return this.tipo2DescricaoField;
             }
-            set {
+            set
+            {
                 this.tipo2DescricaoField = value;
                 this.RaisePropertyChanged("tipo2Descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public vigenciaERP vigencia {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 12)]
+        public vigenciaERP vigencia
+        {
+            get
+            {
                 return this.vigenciaField;
             }
-            set {
+            set
+            {
                 this.vigenciaField = value;
                 this.RaisePropertyChanged("vigencia");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class servicoSigep : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class servicoSigep : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private categoriaServico categoriaServicoField;
-        
+
         private bool categoriaServicoFieldSpecified;
-        
+
         private chancelaMaster chancelaField;
-        
+
         private string descricaoField;
-        
+
         private bool exigeDimensoesField;
-        
+
         private bool exigeDimensoesFieldSpecified;
-        
+
         private bool exigeValorCobrarField;
-        
+
         private bool exigeValorCobrarFieldSpecified;
-        
+
         private long imitmField;
-        
+
         private string pagamentoEntregaField;
-        
+
         private string remessaAgrupadaField;
-        
+
         private simNao restricaoField;
-        
+
         private bool restricaoFieldSpecified;
-        
+
         private long servicoField;
-        
+
         private servicoERP servicoERPField;
-        
+
         private string ssiCoCodigoPostalField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public categoriaServico categoriaServico {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public categoriaServico categoriaServico
+        {
+            get
+            {
                 return this.categoriaServicoField;
             }
-            set {
+            set
+            {
                 this.categoriaServicoField = value;
                 this.RaisePropertyChanged("categoriaServico");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool categoriaServicoSpecified {
-            get {
+        public bool categoriaServicoSpecified
+        {
+            get
+            {
                 return this.categoriaServicoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.categoriaServicoFieldSpecified = value;
                 this.RaisePropertyChanged("categoriaServicoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public chancelaMaster chancela {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public chancelaMaster chancela
+        {
+            get
+            {
                 return this.chancelaField;
             }
-            set {
+            set
+            {
                 this.chancelaField = value;
                 this.RaisePropertyChanged("chancela");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string descricao
+        {
+            get
+            {
                 return this.descricaoField;
             }
-            set {
+            set
+            {
                 this.descricaoField = value;
                 this.RaisePropertyChanged("descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public bool exigeDimensoes {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public bool exigeDimensoes
+        {
+            get
+            {
                 return this.exigeDimensoesField;
             }
-            set {
+            set
+            {
                 this.exigeDimensoesField = value;
                 this.RaisePropertyChanged("exigeDimensoes");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool exigeDimensoesSpecified {
-            get {
+        public bool exigeDimensoesSpecified
+        {
+            get
+            {
                 return this.exigeDimensoesFieldSpecified;
             }
-            set {
+            set
+            {
                 this.exigeDimensoesFieldSpecified = value;
                 this.RaisePropertyChanged("exigeDimensoesSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public bool exigeValorCobrar {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public bool exigeValorCobrar
+        {
+            get
+            {
                 return this.exigeValorCobrarField;
             }
-            set {
+            set
+            {
                 this.exigeValorCobrarField = value;
                 this.RaisePropertyChanged("exigeValorCobrar");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool exigeValorCobrarSpecified {
-            get {
+        public bool exigeValorCobrarSpecified
+        {
+            get
+            {
                 return this.exigeValorCobrarFieldSpecified;
             }
-            set {
+            set
+            {
                 this.exigeValorCobrarFieldSpecified = value;
                 this.RaisePropertyChanged("exigeValorCobrarSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public long imitm {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public long imitm
+        {
+            get
+            {
                 return this.imitmField;
             }
-            set {
+            set
+            {
                 this.imitmField = value;
                 this.RaisePropertyChanged("imitm");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string pagamentoEntrega {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string pagamentoEntrega
+        {
+            get
+            {
                 return this.pagamentoEntregaField;
             }
-            set {
+            set
+            {
                 this.pagamentoEntregaField = value;
                 this.RaisePropertyChanged("pagamentoEntrega");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string remessaAgrupada {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public string remessaAgrupada
+        {
+            get
+            {
                 return this.remessaAgrupadaField;
             }
-            set {
+            set
+            {
                 this.remessaAgrupadaField = value;
                 this.RaisePropertyChanged("remessaAgrupada");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public simNao restricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public simNao restricao
+        {
+            get
+            {
                 return this.restricaoField;
             }
-            set {
+            set
+            {
                 this.restricaoField = value;
                 this.RaisePropertyChanged("restricao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool restricaoSpecified {
-            get {
+        public bool restricaoSpecified
+        {
+            get
+            {
                 return this.restricaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.restricaoFieldSpecified = value;
                 this.RaisePropertyChanged("restricaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public long servico {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public long servico
+        {
+            get
+            {
                 return this.servicoField;
             }
-            set {
+            set
+            {
                 this.servicoField = value;
                 this.RaisePropertyChanged("servico");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public servicoERP servicoERP {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public servicoERP servicoERP
+        {
+            get
+            {
                 return this.servicoERPField;
             }
-            set {
+            set
+            {
                 this.servicoERPField = value;
                 this.RaisePropertyChanged("servicoERP");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string ssiCoCodigoPostal {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public string ssiCoCodigoPostal
+        {
+            get
+            {
                 return this.ssiCoCodigoPostalField;
             }
-            set {
+            set
+            {
                 this.ssiCoCodigoPostalField = value;
                 this.RaisePropertyChanged("ssiCoCodigoPostal");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum categoriaServico {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum categoriaServico
+    {
+
         /// <remarks/>
         SEM_CATEGORIA,
-        
+
         /// <remarks/>
         PAC,
-        
+
         /// <remarks/>
         SEDEX,
-        
+
         /// <remarks/>
         CARTA,
-        
+
         /// <remarks/>
         GRANDES_FORMATOS,
-        
+
         /// <remarks/>
         REVERSO,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class chancelaMaster : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class chancelaMaster : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private simNao ativoField;
-        
+
         private bool ativoFieldSpecified;
-        
+
         private byte[] chancelaField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private string descricaoField;
-        
+
         private long idField;
-        
+
         private bool idFieldSpecified;
-        
+
         private servicoSigep[] servicosSigepField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public simNao ativo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public simNao ativo
+        {
+            get
+            {
                 return this.ativoField;
             }
-            set {
+            set
+            {
                 this.ativoField = value;
                 this.RaisePropertyChanged("ativo");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ativoSpecified {
-            get {
+        public bool ativoSpecified
+        {
+            get
+            {
                 return this.ativoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.ativoFieldSpecified = value;
                 this.RaisePropertyChanged("ativoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=1)]
-        public byte[] chancela {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, DataType = "base64Binary", Order = 1)]
+        public byte[] chancela
+        {
+            get
+            {
                 return this.chancelaField;
             }
-            set {
+            set
+            {
                 this.chancelaField = value;
                 this.RaisePropertyChanged("chancela");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string descricao
+        {
+            get
+            {
                 return this.descricaoField;
             }
-            set {
+            set
+            {
                 this.descricaoField = value;
                 this.RaisePropertyChanged("descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public long id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public long id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified {
-            get {
+        public bool idSpecified
+        {
+            get
+            {
                 return this.idFieldSpecified;
             }
-            set {
+            set
+            {
                 this.idFieldSpecified = value;
                 this.RaisePropertyChanged("idSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("servicosSigep", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public servicoSigep[] servicosSigep {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("servicosSigep", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 5)]
+        public servicoSigep[] servicosSigep
+        {
+            get
+            {
                 return this.servicosSigepField;
             }
-            set {
+            set
+            {
                 this.servicosSigepField = value;
                 this.RaisePropertyChanged("servicosSigep");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum simNao {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum simNao
+    {
+
         /// <remarks/>
         S,
-        
+
         /// <remarks/>
         N,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class servicoAdicionalERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class servicoAdicionalERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string categoriaField;
-        
+
         private string codigoField;
-        
+
         private System.DateTime dataAtualizacaoField;
-        
+
         private bool dataAtualizacaoFieldSpecified;
-        
+
         private int datajAtualizacaoField;
-        
+
         private bool datajAtualizacaoFieldSpecified;
-        
+
         private string descricaoField;
-        
+
         private int horajAtualizacaoField;
-        
+
         private bool horajAtualizacaoFieldSpecified;
-        
+
         private int idField;
-        
+
         private bool idFieldSpecified;
-        
+
         private string siglaField;
-        
+
         private valorDeclarado valorDeclaradoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string categoria {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string categoria
+        {
+            get
+            {
                 return this.categoriaField;
             }
-            set {
+            set
+            {
                 this.categoriaField = value;
                 this.RaisePropertyChanged("categoria");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string codigo
+        {
+            get
+            {
                 return this.codigoField;
             }
-            set {
+            set
+            {
                 this.codigoField = value;
                 this.RaisePropertyChanged("codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime dataAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public System.DateTime dataAtualizacao
+        {
+            get
+            {
                 return this.dataAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoField = value;
                 this.RaisePropertyChanged("dataAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataAtualizacaoSpecified {
-            get {
+        public bool dataAtualizacaoSpecified
+        {
+            get
+            {
                 return this.dataAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("dataAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int datajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public int datajAtualizacao
+        {
+            get
+            {
                 return this.datajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoField = value;
                 this.RaisePropertyChanged("datajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajAtualizacaoSpecified {
-            get {
+        public bool datajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.datajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("datajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string descricao
+        {
+            get
+            {
                 return this.descricaoField;
             }
-            set {
+            set
+            {
                 this.descricaoField = value;
                 this.RaisePropertyChanged("descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int horajAtualizacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public int horajAtualizacao
+        {
+            get
+            {
                 return this.horajAtualizacaoField;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoField = value;
                 this.RaisePropertyChanged("horajAtualizacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool horajAtualizacaoSpecified {
-            get {
+        public bool horajAtualizacaoSpecified
+        {
+            get
+            {
                 return this.horajAtualizacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.horajAtualizacaoFieldSpecified = value;
                 this.RaisePropertyChanged("horajAtualizacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public int id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public int id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified {
-            get {
+        public bool idSpecified
+        {
+            get
+            {
                 return this.idFieldSpecified;
             }
-            set {
+            set
+            {
                 this.idFieldSpecified = value;
                 this.RaisePropertyChanged("idSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string sigla {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public string sigla
+        {
+            get
+            {
                 return this.siglaField;
             }
-            set {
+            set
+            {
                 this.siglaField = value;
                 this.RaisePropertyChanged("sigla");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public valorDeclarado valorDeclarado {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public valorDeclarado valorDeclarado
+        {
+            get
+            {
                 return this.valorDeclaradoField;
             }
-            set {
+            set
+            {
                 this.valorDeclaradoField = value;
                 this.RaisePropertyChanged("valorDeclarado");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class valorDeclarado : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class valorDeclarado : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private double maximoField;
-        
+
         private bool maximoFieldSpecified;
-        
+
         private double minimoField;
-        
+
         private bool minimoFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double maximo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public double maximo
+        {
+            get
+            {
                 return this.maximoField;
             }
-            set {
+            set
+            {
                 this.maximoField = value;
                 this.RaisePropertyChanged("maximo");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool maximoSpecified {
-            get {
+        public bool maximoSpecified
+        {
+            get
+            {
                 return this.maximoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.maximoFieldSpecified = value;
                 this.RaisePropertyChanged("maximoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public double minimo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public double minimo
+        {
+            get
+            {
                 return this.minimoField;
             }
-            set {
+            set
+            {
                 this.minimoField = value;
                 this.RaisePropertyChanged("minimo");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool minimoSpecified {
-            get {
+        public bool minimoSpecified
+        {
+            get
+            {
                 return this.minimoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.minimoFieldSpecified = value;
                 this.RaisePropertyChanged("minimoSpecified");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class vigenciaERP : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class vigenciaERP : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private System.DateTime dataFinalField;
-        
+
         private bool dataFinalFieldSpecified;
-        
+
         private System.DateTime dataInicialField;
-        
+
         private bool dataInicialFieldSpecified;
-        
+
         private int datajFimField;
-        
+
         private bool datajFimFieldSpecified;
-        
+
         private int datajIniField;
-        
+
         private bool datajIniFieldSpecified;
-        
+
         private long idField;
-        
+
         private bool idFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public System.DateTime dataFinal {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public System.DateTime dataFinal
+        {
+            get
+            {
                 return this.dataFinalField;
             }
-            set {
+            set
+            {
                 this.dataFinalField = value;
                 this.RaisePropertyChanged("dataFinal");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataFinalSpecified {
-            get {
+        public bool dataFinalSpecified
+        {
+            get
+            {
                 return this.dataFinalFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataFinalFieldSpecified = value;
                 this.RaisePropertyChanged("dataFinalSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime dataInicial {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public System.DateTime dataInicial
+        {
+            get
+            {
                 return this.dataInicialField;
             }
-            set {
+            set
+            {
                 this.dataInicialField = value;
                 this.RaisePropertyChanged("dataInicial");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool dataInicialSpecified {
-            get {
+        public bool dataInicialSpecified
+        {
+            get
+            {
                 return this.dataInicialFieldSpecified;
             }
-            set {
+            set
+            {
                 this.dataInicialFieldSpecified = value;
                 this.RaisePropertyChanged("dataInicialSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int datajFim {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public int datajFim
+        {
+            get
+            {
                 return this.datajFimField;
             }
-            set {
+            set
+            {
                 this.datajFimField = value;
                 this.RaisePropertyChanged("datajFim");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajFimSpecified {
-            get {
+        public bool datajFimSpecified
+        {
+            get
+            {
                 return this.datajFimFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajFimFieldSpecified = value;
                 this.RaisePropertyChanged("datajFimSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int datajIni {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public int datajIni
+        {
+            get
+            {
                 return this.datajIniField;
             }
-            set {
+            set
+            {
                 this.datajIniField = value;
                 this.RaisePropertyChanged("datajIni");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool datajIniSpecified {
-            get {
+        public bool datajIniSpecified
+        {
+            get
+            {
                 return this.datajIniFieldSpecified;
             }
-            set {
+            set
+            {
                 this.datajIniFieldSpecified = value;
                 this.RaisePropertyChanged("datajIniSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public long id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public long id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idSpecified {
-            get {
+        public bool idSpecified
+        {
+            get
+            {
                 return this.idFieldSpecified;
             }
-            set {
+            set
+            {
                 this.idFieldSpecified = value;
                 this.RaisePropertyChanged("idSpecified");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum statusPlp {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum statusPlp
+    {
+
         /// <remarks/>
         Aberta,
-        
+
         /// <remarks/>
         Fechada,
-        
+
         /// <remarks/>
         Postada,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum statusObjetoPostal {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum statusObjetoPostal
+    {
+
         /// <remarks/>
         EmBranco,
-        
+
         /// <remarks/>
         Postado,
-        
+
         /// <remarks/>
         Cancelado,
-        
+
         /// <remarks/>
         Estorno,
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="VerificaSeTodosObjetosCancelados", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class VerificaSeTodosObjetosCancelados {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "VerificaSeTodosObjetosCancelados", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class VerificaSeTodosObjetosCancelados
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("arg0", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.objetoPostal[] arg0;
-        
-        public VerificaSeTodosObjetosCancelados() {
+
+        public VerificaSeTodosObjetosCancelados()
+        {
         }
-        
-        public VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.objetoPostal[] arg0) {
+
+        public VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.objetoPostal[] arg0)
+        {
             this.arg0 = arg0;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="VerificaSeTodosObjetosCanceladosResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class VerificaSeTodosObjetosCanceladosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "VerificaSeTodosObjetosCanceladosResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class VerificaSeTodosObjetosCanceladosResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public VerificaSeTodosObjetosCanceladosResponse() {
+
+        public VerificaSeTodosObjetosCanceladosResponse()
+        {
         }
-        
-        public VerificaSeTodosObjetosCanceladosResponse(bool @return) {
+
+        public VerificaSeTodosObjetosCanceladosResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelarObjeto", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class cancelarObjeto {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "cancelarObjeto", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class cancelarObjeto
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlp;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numeroEtiqueta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public cancelarObjeto() {
+
+        public cancelarObjeto()
+        {
         }
-        
-        public cancelarObjeto(long idPlp, string numeroEtiqueta, string usuario, string senha) {
+
+        public cancelarObjeto(long idPlp, string numeroEtiqueta, string usuario, string senha)
+        {
             this.idPlp = idPlp;
             this.numeroEtiqueta = numeroEtiqueta;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelarObjetoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class cancelarObjetoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "cancelarObjetoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class cancelarObjetoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public cancelarObjetoResponse() {
+
+        public cancelarObjetoResponse()
+        {
         }
-        
-        public cancelarObjetoResponse(bool @return) {
+
+        public cancelarObjetoResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class dimensaoTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class dimensaoTO : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private medidaTO alturaField;
-        
+
         private medidaTO comprimentoField;
-        
+
         private medidaTO diametroField;
-        
+
         private medidaTO larguraField;
-        
+
         private medidaTO pesoField;
-        
+
         private medidaTO somaField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public medidaTO altura {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public medidaTO altura
+        {
+            get
+            {
                 return this.alturaField;
             }
-            set {
+            set
+            {
                 this.alturaField = value;
                 this.RaisePropertyChanged("altura");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public medidaTO comprimento {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public medidaTO comprimento
+        {
+            get
+            {
                 return this.comprimentoField;
             }
-            set {
+            set
+            {
                 this.comprimentoField = value;
                 this.RaisePropertyChanged("comprimento");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public medidaTO diametro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public medidaTO diametro
+        {
+            get
+            {
                 return this.diametroField;
             }
-            set {
+            set
+            {
                 this.diametroField = value;
                 this.RaisePropertyChanged("diametro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public medidaTO largura {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public medidaTO largura
+        {
+            get
+            {
                 return this.larguraField;
             }
-            set {
+            set
+            {
                 this.larguraField = value;
                 this.RaisePropertyChanged("largura");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public medidaTO peso {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public medidaTO peso
+        {
+            get
+            {
                 return this.pesoField;
             }
-            set {
+            set
+            {
                 this.pesoField = value;
                 this.RaisePropertyChanged("peso");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public medidaTO soma {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public medidaTO soma
+        {
+            get
+            {
                 return this.somaField;
             }
-            set {
+            set
+            {
                 this.somaField = value;
                 this.RaisePropertyChanged("soma");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class medidaTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class medidaTO : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private decimal maximoField;
-        
+
         private bool maximoFieldSpecified;
-        
+
         private decimal minimoField;
-        
+
         private bool minimoFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public decimal maximo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public decimal maximo
+        {
+            get
+            {
                 return this.maximoField;
             }
-            set {
+            set
+            {
                 this.maximoField = value;
                 this.RaisePropertyChanged("maximo");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool maximoSpecified {
-            get {
+        public bool maximoSpecified
+        {
+            get
+            {
                 return this.maximoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.maximoFieldSpecified = value;
                 this.RaisePropertyChanged("maximoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public decimal minimo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public decimal minimo
+        {
+            get
+            {
                 return this.minimoField;
             }
-            set {
+            set
+            {
                 this.minimoField = value;
                 this.RaisePropertyChanged("minimo");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool minimoSpecified {
-            get {
+        public bool minimoSpecified
+        {
+            get
+            {
                 return this.minimoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.minimoFieldSpecified = value;
                 this.RaisePropertyChanged("minimoSpecified");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarParametrosPorDescricao", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarParametrosPorDescricao {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarParametrosPorDescricao", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarParametrosPorDescricao
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string prefix;
-        
-        public pesquisarParametrosPorDescricao() {
+
+        public pesquisarParametrosPorDescricao()
+        {
         }
-        
-        public pesquisarParametrosPorDescricao(string prefix) {
+
+        public pesquisarParametrosPorDescricao(string prefix)
+        {
             this.prefix = prefix;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarParametrosPorDescricaoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarParametrosPorDescricaoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarParametrosPorDescricaoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarParametrosPorDescricaoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.dimensaoTO @return;
-        
-        public pesquisarParametrosPorDescricaoResponse() {
+
+        public pesquisarParametrosPorDescricaoResponse()
+        {
         }
-        
-        public pesquisarParametrosPorDescricaoResponse(Controle_de_livros.ClienteServices.dimensaoTO @return) {
+
+        public pesquisarParametrosPorDescricaoResponse(Controle_de_livros.ClienteServices.dimensaoTO @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="atualizaPagamentoNaEntrega", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class atualizaPagamentoNaEntrega {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "atualizaPagamentoNaEntrega", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class atualizaPagamentoNaEntrega
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public atualizaPagamentoNaEntrega() {
+
+        public atualizaPagamentoNaEntrega()
+        {
         }
-        
-        public atualizaPagamentoNaEntrega(string usuario, string senha) {
+
+        public atualizaPagamentoNaEntrega(string usuario, string senha)
+        {
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="atualizaPagamentoNaEntregaResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class atualizaPagamentoNaEntregaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "atualizaPagamentoNaEntregaResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class atualizaPagamentoNaEntregaResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public atualizaPagamentoNaEntregaResponse() {
+
+        public atualizaPagamentoNaEntregaResponse()
+        {
         }
-        
-        public atualizaPagamentoNaEntregaResponse(string @return) {
+
+        public atualizaPagamentoNaEntregaResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterClienteAtualizacao", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class obterClienteAtualizacao {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "obterClienteAtualizacao", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class obterClienteAtualizacao
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cnpjCliente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public obterClienteAtualizacao() {
+
+        public obterClienteAtualizacao()
+        {
         }
-        
-        public obterClienteAtualizacao(string cnpjCliente, string usuario, string senha) {
+
+        public obterClienteAtualizacao(string cnpjCliente, string usuario, string senha)
+        {
             this.cnpjCliente = cnpjCliente;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterClienteAtualizacaoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class obterClienteAtualizacaoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "obterClienteAtualizacaoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class obterClienteAtualizacaoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public System.DateTime @return;
-        
-        public obterClienteAtualizacaoResponse() {
+
+        public obterClienteAtualizacaoResponse()
+        {
         }
-        
-        public obterClienteAtualizacaoResponse(System.DateTime @return) {
+
+        public obterClienteAtualizacaoResponse(System.DateTime @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificaDisponibilidadeServico", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class verificaDisponibilidadeServico {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "verificaDisponibilidadeServico", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class verificaDisponibilidadeServico
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numeroServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepOrigem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepDestino;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public verificaDisponibilidadeServico() {
+
+        public verificaDisponibilidadeServico()
+        {
         }
-        
-        public verificaDisponibilidadeServico(int codAdministrativo, string numeroServico, string cepOrigem, string cepDestino, string usuario, string senha) {
+
+        public verificaDisponibilidadeServico(int codAdministrativo, string numeroServico, string cepOrigem, string cepDestino, string usuario, string senha)
+        {
             this.codAdministrativo = codAdministrativo;
             this.numeroServico = numeroServico;
             this.cepOrigem = cepOrigem;
@@ -4993,59 +5872,65 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificaDisponibilidadeServicoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class verificaDisponibilidadeServicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "verificaDisponibilidadeServicoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class verificaDisponibilidadeServicoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public verificaDisponibilidadeServicoResponse() {
+
+        public verificaDisponibilidadeServicoResponse()
+        {
         }
-        
-        public verificaDisponibilidadeServicoResponse(string @return) {
+
+        public verificaDisponibilidadeServicoResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="fechaPlpVariosServicos", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class fechaPlpVariosServicos {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "fechaPlpVariosServicos", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class fechaPlpVariosServicos
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string xml;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlpCliente;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute("listaEtiquetas", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute("listaEtiquetas", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string[] listaEtiquetas;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public fechaPlpVariosServicos() {
+
+        public fechaPlpVariosServicos()
+        {
         }
-        
-        public fechaPlpVariosServicos(string xml, long idPlpCliente, string cartaoPostagem, string[] listaEtiquetas, string usuario, string senha) {
+
+        public fechaPlpVariosServicos(string xml, long idPlpCliente, string cartaoPostagem, string[] listaEtiquetas, string usuario, string senha)
+        {
             this.xml = xml;
             this.idPlpCliente = idPlpCliente;
             this.cartaoPostagem = cartaoPostagem;
@@ -5054,616 +5939,701 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="fechaPlpVariosServicosResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class fechaPlpVariosServicosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "fechaPlpVariosServicosResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class fechaPlpVariosServicosResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long @return;
-        
-        public fechaPlpVariosServicosResponse() {
+
+        public fechaPlpVariosServicosResponse()
+        {
         }
-        
-        public fechaPlpVariosServicosResponse(long @return) {
+
+        public fechaPlpVariosServicosResponse(long @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="geraDigitoVerificadorEtiquetas", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class geraDigitoVerificadorEtiquetas {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("etiquetas", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "geraDigitoVerificadorEtiquetas", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class geraDigitoVerificadorEtiquetas
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("etiquetas", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string[] etiquetas;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public geraDigitoVerificadorEtiquetas() {
+
+        public geraDigitoVerificadorEtiquetas()
+        {
         }
-        
-        public geraDigitoVerificadorEtiquetas(string[] etiquetas, string usuario, string senha) {
+
+        public geraDigitoVerificadorEtiquetas(string[] etiquetas, string usuario, string senha)
+        {
             this.etiquetas = etiquetas;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="geraDigitoVerificadorEtiquetasResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class geraDigitoVerificadorEtiquetasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "geraDigitoVerificadorEtiquetasResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class geraDigitoVerificadorEtiquetasResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int[] @return;
-        
-        public geraDigitoVerificadorEtiquetasResponse() {
+
+        public geraDigitoVerificadorEtiquetasResponse()
+        {
         }
-        
-        public geraDigitoVerificadorEtiquetasResponse(int[] @return) {
+
+        public geraDigitoVerificadorEtiquetasResponse(int[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class embalagemLRSMaster : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class embalagemLRSMaster : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string codigoField;
-        
+
         private string nomeField;
-        
+
         private string tipoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string codigo
+        {
+            get
+            {
                 return this.codigoField;
             }
-            set {
+            set
+            {
                 this.codigoField = value;
                 this.RaisePropertyChanged("codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nome {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string nome
+        {
+            get
+            {
                 return this.nomeField;
             }
-            set {
+            set
+            {
                 this.nomeField = value;
                 this.RaisePropertyChanged("nome");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string tipo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string tipo
+        {
+            get
+            {
                 return this.tipoField;
             }
-            set {
+            set
+            {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterEmbalagemLRS", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class obterEmbalagemLRS {
-        
-        public obterEmbalagemLRS() {
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "obterEmbalagemLRS", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class obterEmbalagemLRS
+    {
+
+        public obterEmbalagemLRS()
+        {
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterEmbalagemLRSResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class obterEmbalagemLRSResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "obterEmbalagemLRSResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class obterEmbalagemLRSResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.embalagemLRSMaster[] @return;
-        
-        public obterEmbalagemLRSResponse() {
+
+        public obterEmbalagemLRSResponse()
+        {
         }
-        
-        public obterEmbalagemLRSResponse(Controle_de_livros.ClienteServices.embalagemLRSMaster[] @return) {
+
+        public obterEmbalagemLRSResponse(Controle_de_livros.ClienteServices.embalagemLRSMaster[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validaEtiquetaPLP", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validaEtiquetaPLP {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validaEtiquetaPLP", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validaEtiquetaPLP
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numeroEtiqueta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlp;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public validaEtiquetaPLP() {
+
+        public validaEtiquetaPLP()
+        {
         }
-        
-        public validaEtiquetaPLP(string numeroEtiqueta, long idPlp, string usuario, string senha) {
+
+        public validaEtiquetaPLP(string numeroEtiqueta, long idPlp, string usuario, string senha)
+        {
             this.numeroEtiqueta = numeroEtiqueta;
             this.idPlp = idPlp;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validaEtiquetaPLPResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validaEtiquetaPLPResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validaEtiquetaPLPResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validaEtiquetaPLPResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public validaEtiquetaPLPResponse() {
+
+        public validaEtiquetaPLPResponse()
+        {
         }
-        
-        public validaEtiquetaPLPResponse(bool @return) {
+
+        public validaEtiquetaPLPResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosValorDeclarado", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosValorDeclarado {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosValorDeclarado", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosValorDeclarado
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaServicosValorDeclarado() {
+
+        public buscaServicosValorDeclarado()
+        {
         }
-        
-        public buscaServicosValorDeclarado(string usuario, string senha) {
+
+        public buscaServicosValorDeclarado(string usuario, string senha)
+        {
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosValorDeclaradoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosValorDeclaradoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosValorDeclaradoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosValorDeclaradoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string[] @return;
-        
-        public buscaServicosValorDeclaradoResponse() {
+
+        public buscaServicosValorDeclaradoResponse()
+        {
         }
-        
-        public buscaServicosValorDeclaradoResponse(string[] @return) {
+
+        public buscaServicosValorDeclaradoResponse(string[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaCEP", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class consultaCEP {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "consultaCEP", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class consultaCEP
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cep;
-        
-        public consultaCEP() {
+
+        public consultaCEP()
+        {
         }
-        
-        public consultaCEP(string cep) {
+
+        public consultaCEP(string cep)
+        {
             this.cep = cep;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="consultaCEPResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class consultaCEPResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "consultaCEPResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class consultaCEPResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.enderecoERP @return;
-        
-        public consultaCEPResponse() {
+
+        public consultaCEPResponse()
+        {
         }
-        
-        public consultaCEPResponse(Controle_de_livros.ClienteServices.enderecoERP @return) {
+
+        public consultaCEPResponse(Controle_de_livros.ClienteServices.enderecoERP @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="integrarUsuarioScol", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class integrarUsuarioScol {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "integrarUsuarioScol", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class integrarUsuarioScol
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public integrarUsuarioScol() {
+
+        public integrarUsuarioScol()
+        {
         }
-        
-        public integrarUsuarioScol(int codAdministrativo, string usuario, string senha) {
+
+        public integrarUsuarioScol(int codAdministrativo, string usuario, string senha)
+        {
             this.codAdministrativo = codAdministrativo;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="integrarUsuarioScolResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class integrarUsuarioScolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "integrarUsuarioScolResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class integrarUsuarioScolResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public integrarUsuarioScolResponse() {
+
+        public integrarUsuarioScolResponse()
+        {
         }
-        
-        public integrarUsuarioScolResponse(bool @return) {
+
+        public integrarUsuarioScolResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarDimensoesServico", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarDimensoesServico {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarDimensoesServico", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarDimensoesServico
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codigo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string embalagem;
-        
-        public pesquisarDimensoesServico() {
+
+        public pesquisarDimensoesServico()
+        {
         }
-        
-        public pesquisarDimensoesServico(string codigo, string embalagem) {
+
+        public pesquisarDimensoesServico(string codigo, string embalagem)
+        {
             this.codigo = codigo;
             this.embalagem = embalagem;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarDimensoesServicoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarDimensoesServicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarDimensoesServicoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarDimensoesServicoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.dimensaoTO @return;
-        
-        public pesquisarDimensoesServicoResponse() {
+
+        public pesquisarDimensoesServicoResponse()
+        {
         }
-        
-        public pesquisarDimensoesServicoResponse(Controle_de_livros.ClienteServices.dimensaoTO @return) {
+
+        public pesquisarDimensoesServicoResponse(Controle_de_livros.ClienteServices.dimensaoTO @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum tipoEmbalagem {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum tipoEmbalagem
+    {
+
         /// <remarks/>
         DE,
-        
+
         /// <remarks/>
         PD,
-        
+
         /// <remarks/>
         RL,
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarEmbalagensPorServico", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarEmbalagensPorServico {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarEmbalagensPorServico", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarEmbalagensPorServico
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codigo;
-        
-        public pesquisarEmbalagensPorServico() {
+
+        public pesquisarEmbalagensPorServico()
+        {
         }
-        
-        public pesquisarEmbalagensPorServico(string codigo) {
+
+        public pesquisarEmbalagensPorServico(string codigo)
+        {
             this.codigo = codigo;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarEmbalagensPorServicoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarEmbalagensPorServicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarEmbalagensPorServicoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarEmbalagensPorServicoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.tipoEmbalagem[] @return;
-        
-        public pesquisarEmbalagensPorServicoResponse() {
+
+        public pesquisarEmbalagensPorServicoResponse()
+        {
         }
-        
-        public pesquisarEmbalagensPorServicoResponse(Controle_de_livros.ClienteServices.tipoEmbalagem[] @return) {
+
+        public pesquisarEmbalagensPorServicoResponse(Controle_de_livros.ClienteServices.tipoEmbalagem[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="atualizaRemessaAgrupada", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class atualizaRemessaAgrupada {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "atualizaRemessaAgrupada", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class atualizaRemessaAgrupada
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public atualizaRemessaAgrupada() {
+
+        public atualizaRemessaAgrupada()
+        {
         }
-        
-        public atualizaRemessaAgrupada(string usuario, string senha) {
+
+        public atualizaRemessaAgrupada(string usuario, string senha)
+        {
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="atualizaRemessaAgrupadaResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class atualizaRemessaAgrupadaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "atualizaRemessaAgrupadaResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class atualizaRemessaAgrupadaResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public atualizaRemessaAgrupadaResponse() {
+
+        public atualizaRemessaAgrupadaResponse()
+        {
         }
-        
-        public atualizaRemessaAgrupadaResponse(string @return) {
+
+        public atualizaRemessaAgrupadaResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitaPLP", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitaPLP {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitaPLP", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitaPLP
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlpMaster;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numEtiqueta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public solicitaPLP() {
+
+        public solicitaPLP()
+        {
         }
-        
-        public solicitaPLP(long idPlpMaster, string numEtiqueta, string usuario, string senha) {
+
+        public solicitaPLP(long idPlpMaster, string numEtiqueta, string usuario, string senha)
+        {
             this.idPlpMaster = idPlpMaster;
             this.numEtiqueta = numEtiqueta;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitaPLPResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitaPLPResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitaPLPResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitaPLPResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public solicitaPLPResponse() {
+
+        public solicitaPLPResponse()
+        {
         }
-        
-        public solicitaPLPResponse(string @return) {
+
+        public solicitaPLPResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum statusCartao {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum statusCartao
+    {
+
         /// <remarks/>
         Desconhecido,
-        
+
         /// <remarks/>
         Normal,
-        
+
         /// <remarks/>
         Suspenso,
-        
+
         /// <remarks/>
         Cancelado,
-        
+
         /// <remarks/>
         Irregular,
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStatusCartaoPostagem", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class getStatusCartaoPostagem {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "getStatusCartaoPostagem", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class getStatusCartaoPostagem
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numeroCartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public getStatusCartaoPostagem() {
+
+        public getStatusCartaoPostagem()
+        {
         }
-        
-        public getStatusCartaoPostagem(string numeroCartaoPostagem, string usuario, string senha) {
+
+        public getStatusCartaoPostagem(string numeroCartaoPostagem, string usuario, string senha)
+        {
             this.numeroCartaoPostagem = numeroCartaoPostagem;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStatusCartaoPostagemResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class getStatusCartaoPostagemResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "getStatusCartaoPostagemResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class getStatusCartaoPostagemResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.statusCartao @return;
-        
-        public getStatusCartaoPostagemResponse() {
+
+        public getStatusCartaoPostagemResponse()
+        {
         }
-        
-        public getStatusCartaoPostagemResponse(Controle_de_livros.ClienteServices.statusCartao @return) {
+
+        public getStatusCartaoPostagemResponse(Controle_de_livros.ClienteServices.statusCartao @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificaModalTransporte", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class verificaModalTransporte {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "verificaModalTransporte", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class verificaModalTransporte
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codigoServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepOrigem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepDestino;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public verificaModalTransporte() {
+
+        public verificaModalTransporte()
+        {
         }
-        
-        public verificaModalTransporte(string codigoServico, string cepOrigem, string cepDestino, string usuario, string senha) {
+
+        public verificaModalTransporte(string codigoServico, string cepOrigem, string cepDestino, string usuario, string senha)
+        {
             this.codigoServico = codigoServico;
             this.cepOrigem = cepOrigem;
             this.cepDestino = cepDestino;
@@ -5671,679 +6641,810 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificaModalTransporteResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class verificaModalTransporteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "verificaModalTransporteResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class verificaModalTransporteResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public verificaModalTransporteResponse() {
+
+        public verificaModalTransporteResponse()
+        {
         }
-        
-        public verificaModalTransporteResponse(string @return) {
+
+        public verificaModalTransporteResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaDataAtual", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaDataAtual {
-        
-        public buscaDataAtual() {
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaDataAtual", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaDataAtual
+    {
+
+        public buscaDataAtual()
+        {
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaDataAtualResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaDataAtualResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaDataAtualResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaDataAtualResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public System.DateTime @return;
-        
-        public buscaDataAtualResponse() {
+
+        public buscaDataAtualResponse()
+        {
         }
-        
-        public buscaDataAtualResponse(System.DateTime @return) {
+
+        public buscaDataAtualResponse(System.DateTime @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class valePostal : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class valePostal : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string cidNoCidadeField;
-        
+
         private string ctcCoAadministrativoField;
-        
+
         private long ctcNuContratoField;
-        
+
         private bool ctcNuContratoFieldSpecified;
-        
+
         private long ctcNuContratoEctField;
-        
+
         private bool ctcNuContratoEctFieldSpecified;
-        
+
         private string cvpEdBairroField;
-        
+
         private string cvpEdClienteField;
-        
+
         private string cvpEdComplementoField;
-        
+
         private string cvpEdNumeroField;
-        
+
         private string cvpNoClienteField;
-        
+
         private long cvpNuCepField;
-        
+
         private bool cvpNuCepFieldSpecified;
-        
+
         private string descricaoErroField;
-        
+
         private string estSgEstadoField;
-        
+
         private int monVarTarifaAdicionalField;
-        
+
         private int monVarTarifaServicoField;
-        
+
         private int monVarValorDescontosField;
-        
+
         private int monVarValorImpostoField;
-        
+
         private long prsCoProdutoServicoField;
-        
+
         private bool prsCoProdutoServicoFieldSpecified;
-        
+
         private long pveNuField;
-        
+
         private bool pveNuFieldSpecified;
-        
+
         private long pveOrgNuAgenciaField;
-        
+
         private bool pveOrgNuAgenciaFieldSpecified;
-        
+
         private long pveOrgNuAgenciaDesField;
-        
+
         private bool pveOrgNuAgenciaDesFieldSpecified;
-        
+
         private long pveOrgNuAgenciaOriField;
-        
+
         private bool pveOrgNuAgenciaOriFieldSpecified;
-        
+
         private int retornaCodErroField;
-        
+
         private string sitNoSituacaoField;
-        
+
         private string tlgTxDescricaoField;
-        
+
         private System.DateTime vapDhTransacaoField;
-        
+
         private bool vapDhTransacaoFieldSpecified;
-        
+
         private string vapNuEtiquetaEncomendaField;
-        
+
         private double vapVrCobradoEctField;
-        
+
         private bool vapVrCobradoEctFieldSpecified;
-        
+
         private double vapVrNominalField;
-        
+
         private bool vapVrNominalFieldSpecified;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string cidNoCidade {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string cidNoCidade
+        {
+            get
+            {
                 return this.cidNoCidadeField;
             }
-            set {
+            set
+            {
                 this.cidNoCidadeField = value;
                 this.RaisePropertyChanged("cidNoCidade");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ctcCoAadministrativo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string ctcCoAadministrativo
+        {
+            get
+            {
                 return this.ctcCoAadministrativoField;
             }
-            set {
+            set
+            {
                 this.ctcCoAadministrativoField = value;
                 this.RaisePropertyChanged("ctcCoAadministrativo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public long ctcNuContrato {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public long ctcNuContrato
+        {
+            get
+            {
                 return this.ctcNuContratoField;
             }
-            set {
+            set
+            {
                 this.ctcNuContratoField = value;
                 this.RaisePropertyChanged("ctcNuContrato");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ctcNuContratoSpecified {
-            get {
+        public bool ctcNuContratoSpecified
+        {
+            get
+            {
                 return this.ctcNuContratoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.ctcNuContratoFieldSpecified = value;
                 this.RaisePropertyChanged("ctcNuContratoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public long ctcNuContratoEct {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public long ctcNuContratoEct
+        {
+            get
+            {
                 return this.ctcNuContratoEctField;
             }
-            set {
+            set
+            {
                 this.ctcNuContratoEctField = value;
                 this.RaisePropertyChanged("ctcNuContratoEct");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool ctcNuContratoEctSpecified {
-            get {
+        public bool ctcNuContratoEctSpecified
+        {
+            get
+            {
                 return this.ctcNuContratoEctFieldSpecified;
             }
-            set {
+            set
+            {
                 this.ctcNuContratoEctFieldSpecified = value;
                 this.RaisePropertyChanged("ctcNuContratoEctSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string cvpEdBairro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string cvpEdBairro
+        {
+            get
+            {
                 return this.cvpEdBairroField;
             }
-            set {
+            set
+            {
                 this.cvpEdBairroField = value;
                 this.RaisePropertyChanged("cvpEdBairro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string cvpEdCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string cvpEdCliente
+        {
+            get
+            {
                 return this.cvpEdClienteField;
             }
-            set {
+            set
+            {
                 this.cvpEdClienteField = value;
                 this.RaisePropertyChanged("cvpEdCliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string cvpEdComplemento {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string cvpEdComplemento
+        {
+            get
+            {
                 return this.cvpEdComplementoField;
             }
-            set {
+            set
+            {
                 this.cvpEdComplementoField = value;
                 this.RaisePropertyChanged("cvpEdComplemento");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string cvpEdNumero {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public string cvpEdNumero
+        {
+            get
+            {
                 return this.cvpEdNumeroField;
             }
-            set {
+            set
+            {
                 this.cvpEdNumeroField = value;
                 this.RaisePropertyChanged("cvpEdNumero");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string cvpNoCliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public string cvpNoCliente
+        {
+            get
+            {
                 return this.cvpNoClienteField;
             }
-            set {
+            set
+            {
                 this.cvpNoClienteField = value;
                 this.RaisePropertyChanged("cvpNoCliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public long cvpNuCep {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public long cvpNuCep
+        {
+            get
+            {
                 return this.cvpNuCepField;
             }
-            set {
+            set
+            {
                 this.cvpNuCepField = value;
                 this.RaisePropertyChanged("cvpNuCep");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool cvpNuCepSpecified {
-            get {
+        public bool cvpNuCepSpecified
+        {
+            get
+            {
                 return this.cvpNuCepFieldSpecified;
             }
-            set {
+            set
+            {
                 this.cvpNuCepFieldSpecified = value;
                 this.RaisePropertyChanged("cvpNuCepSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string descricaoErro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public string descricaoErro
+        {
+            get
+            {
                 return this.descricaoErroField;
             }
-            set {
+            set
+            {
                 this.descricaoErroField = value;
                 this.RaisePropertyChanged("descricaoErro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string estSgEstado {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public string estSgEstado
+        {
+            get
+            {
                 return this.estSgEstadoField;
             }
-            set {
+            set
+            {
                 this.estSgEstadoField = value;
                 this.RaisePropertyChanged("estSgEstado");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public int monVarTarifaAdicional {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 12)]
+        public int monVarTarifaAdicional
+        {
+            get
+            {
                 return this.monVarTarifaAdicionalField;
             }
-            set {
+            set
+            {
                 this.monVarTarifaAdicionalField = value;
                 this.RaisePropertyChanged("monVarTarifaAdicional");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=13)]
-        public int monVarTarifaServico {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 13)]
+        public int monVarTarifaServico
+        {
+            get
+            {
                 return this.monVarTarifaServicoField;
             }
-            set {
+            set
+            {
                 this.monVarTarifaServicoField = value;
                 this.RaisePropertyChanged("monVarTarifaServico");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=14)]
-        public int monVarValorDescontos {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 14)]
+        public int monVarValorDescontos
+        {
+            get
+            {
                 return this.monVarValorDescontosField;
             }
-            set {
+            set
+            {
                 this.monVarValorDescontosField = value;
                 this.RaisePropertyChanged("monVarValorDescontos");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=15)]
-        public int monVarValorImposto {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 15)]
+        public int monVarValorImposto
+        {
+            get
+            {
                 return this.monVarValorImpostoField;
             }
-            set {
+            set
+            {
                 this.monVarValorImpostoField = value;
                 this.RaisePropertyChanged("monVarValorImposto");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=16)]
-        public long prsCoProdutoServico {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 16)]
+        public long prsCoProdutoServico
+        {
+            get
+            {
                 return this.prsCoProdutoServicoField;
             }
-            set {
+            set
+            {
                 this.prsCoProdutoServicoField = value;
                 this.RaisePropertyChanged("prsCoProdutoServico");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool prsCoProdutoServicoSpecified {
-            get {
+        public bool prsCoProdutoServicoSpecified
+        {
+            get
+            {
                 return this.prsCoProdutoServicoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.prsCoProdutoServicoFieldSpecified = value;
                 this.RaisePropertyChanged("prsCoProdutoServicoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=17)]
-        public long pveNu {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 17)]
+        public long pveNu
+        {
+            get
+            {
                 return this.pveNuField;
             }
-            set {
+            set
+            {
                 this.pveNuField = value;
                 this.RaisePropertyChanged("pveNu");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pveNuSpecified {
-            get {
+        public bool pveNuSpecified
+        {
+            get
+            {
                 return this.pveNuFieldSpecified;
             }
-            set {
+            set
+            {
                 this.pveNuFieldSpecified = value;
                 this.RaisePropertyChanged("pveNuSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=18)]
-        public long pveOrgNuAgencia {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 18)]
+        public long pveOrgNuAgencia
+        {
+            get
+            {
                 return this.pveOrgNuAgenciaField;
             }
-            set {
+            set
+            {
                 this.pveOrgNuAgenciaField = value;
                 this.RaisePropertyChanged("pveOrgNuAgencia");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pveOrgNuAgenciaSpecified {
-            get {
+        public bool pveOrgNuAgenciaSpecified
+        {
+            get
+            {
                 return this.pveOrgNuAgenciaFieldSpecified;
             }
-            set {
+            set
+            {
                 this.pveOrgNuAgenciaFieldSpecified = value;
                 this.RaisePropertyChanged("pveOrgNuAgenciaSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=19)]
-        public long pveOrgNuAgenciaDes {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 19)]
+        public long pveOrgNuAgenciaDes
+        {
+            get
+            {
                 return this.pveOrgNuAgenciaDesField;
             }
-            set {
+            set
+            {
                 this.pveOrgNuAgenciaDesField = value;
                 this.RaisePropertyChanged("pveOrgNuAgenciaDes");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pveOrgNuAgenciaDesSpecified {
-            get {
+        public bool pveOrgNuAgenciaDesSpecified
+        {
+            get
+            {
                 return this.pveOrgNuAgenciaDesFieldSpecified;
             }
-            set {
+            set
+            {
                 this.pveOrgNuAgenciaDesFieldSpecified = value;
                 this.RaisePropertyChanged("pveOrgNuAgenciaDesSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=20)]
-        public long pveOrgNuAgenciaOri {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 20)]
+        public long pveOrgNuAgenciaOri
+        {
+            get
+            {
                 return this.pveOrgNuAgenciaOriField;
             }
-            set {
+            set
+            {
                 this.pveOrgNuAgenciaOriField = value;
                 this.RaisePropertyChanged("pveOrgNuAgenciaOri");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool pveOrgNuAgenciaOriSpecified {
-            get {
+        public bool pveOrgNuAgenciaOriSpecified
+        {
+            get
+            {
                 return this.pveOrgNuAgenciaOriFieldSpecified;
             }
-            set {
+            set
+            {
                 this.pveOrgNuAgenciaOriFieldSpecified = value;
                 this.RaisePropertyChanged("pveOrgNuAgenciaOriSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=21)]
-        public int retornaCodErro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 21)]
+        public int retornaCodErro
+        {
+            get
+            {
                 return this.retornaCodErroField;
             }
-            set {
+            set
+            {
                 this.retornaCodErroField = value;
                 this.RaisePropertyChanged("retornaCodErro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=22)]
-        public string sitNoSituacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 22)]
+        public string sitNoSituacao
+        {
+            get
+            {
                 return this.sitNoSituacaoField;
             }
-            set {
+            set
+            {
                 this.sitNoSituacaoField = value;
                 this.RaisePropertyChanged("sitNoSituacao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=23)]
-        public string tlgTxDescricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 23)]
+        public string tlgTxDescricao
+        {
+            get
+            {
                 return this.tlgTxDescricaoField;
             }
-            set {
+            set
+            {
                 this.tlgTxDescricaoField = value;
                 this.RaisePropertyChanged("tlgTxDescricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=24)]
-        public System.DateTime vapDhTransacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 24)]
+        public System.DateTime vapDhTransacao
+        {
+            get
+            {
                 return this.vapDhTransacaoField;
             }
-            set {
+            set
+            {
                 this.vapDhTransacaoField = value;
                 this.RaisePropertyChanged("vapDhTransacao");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool vapDhTransacaoSpecified {
-            get {
+        public bool vapDhTransacaoSpecified
+        {
+            get
+            {
                 return this.vapDhTransacaoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.vapDhTransacaoFieldSpecified = value;
                 this.RaisePropertyChanged("vapDhTransacaoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=25)]
-        public string vapNuEtiquetaEncomenda {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 25)]
+        public string vapNuEtiquetaEncomenda
+        {
+            get
+            {
                 return this.vapNuEtiquetaEncomendaField;
             }
-            set {
+            set
+            {
                 this.vapNuEtiquetaEncomendaField = value;
                 this.RaisePropertyChanged("vapNuEtiquetaEncomenda");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=26)]
-        public double vapVrCobradoEct {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 26)]
+        public double vapVrCobradoEct
+        {
+            get
+            {
                 return this.vapVrCobradoEctField;
             }
-            set {
+            set
+            {
                 this.vapVrCobradoEctField = value;
                 this.RaisePropertyChanged("vapVrCobradoEct");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool vapVrCobradoEctSpecified {
-            get {
+        public bool vapVrCobradoEctSpecified
+        {
+            get
+            {
                 return this.vapVrCobradoEctFieldSpecified;
             }
-            set {
+            set
+            {
                 this.vapVrCobradoEctFieldSpecified = value;
                 this.RaisePropertyChanged("vapVrCobradoEctSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=27)]
-        public double vapVrNominal {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 27)]
+        public double vapVrNominal
+        {
+            get
+            {
                 return this.vapVrNominalField;
             }
-            set {
+            set
+            {
                 this.vapVrNominalField = value;
                 this.RaisePropertyChanged("vapVrNominal");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool vapVrNominalSpecified {
-            get {
+        public bool vapVrNominalSpecified
+        {
+            get
+            {
                 return this.vapVrNominalFieldSpecified;
             }
-            set {
+            set
+            {
                 this.vapVrNominalFieldSpecified = value;
                 this.RaisePropertyChanged("vapVrNominalSpecified");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaTarifaVale", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaTarifaVale {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaTarifaVale", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaTarifaVale
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepOrigem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepDestino;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string peso;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codFormato;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double comprimento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=9)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 9)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double altura;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=10)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 10)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double largura;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=11)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 11)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double valorDeclarado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=12)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 12)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string servicoAdicional;
-        
-        public buscaTarifaVale() {
+
+        public buscaTarifaVale()
+        {
         }
-        
-        public buscaTarifaVale(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double valorDeclarado, string servicoAdicional) {
+
+        public buscaTarifaVale(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double valorDeclarado, string servicoAdicional)
+        {
             this.codAdministrativo = codAdministrativo;
             this.usuario = usuario;
             this.senha = senha;
@@ -6359,62 +7460,72 @@ namespace Controle_de_livros.ClienteServices {
             this.servicoAdicional = servicoAdicional;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaTarifaValeResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaTarifaValeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaTarifaValeResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaTarifaValeResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.valePostal @return;
-        
-        public buscaTarifaValeResponse() {
+
+        public buscaTarifaValeResponse()
+        {
         }
-        
-        public buscaTarifaValeResponse(Controle_de_livros.ClienteServices.valePostal @return) {
+
+        public buscaTarifaValeResponse(Controle_de_livros.ClienteServices.valePostal @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class coletaSimultanea : coleta {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class coletaSimultanea : coleta
+    {
+
         private string objField;
-        
+
         private string obsField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string obj {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string obj
+        {
+            get
+            {
                 return this.objField;
             }
-            set {
+            set
+            {
                 this.objField = value;
                 this.RaisePropertyChanged("obj");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string obs {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string obs
+        {
+            get
+            {
                 return this.obsField;
             }
-            set {
+            set
+            {
                 this.obsField = value;
                 this.RaisePropertyChanged("obs");
             }
         }
     }
-    
+
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(coletaReversa))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(coletaSimultanea))]
@@ -6422,690 +7533,827 @@ namespace Controle_de_livros.ClienteServices {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class coleta : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class coleta : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string cklistField;
-        
+
         private string descricaoField;
-        
+
         private string[] documentoField;
-        
+
         private string id_clienteField;
-        
+
         private produto[] produtoField;
-        
+
         private remetente remetenteField;
-        
+
         private string tipoField;
-        
+
         private string valor_declaradoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string cklist {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string cklist
+        {
+            get
+            {
                 return this.cklistField;
             }
-            set {
+            set
+            {
                 this.cklistField = value;
                 this.RaisePropertyChanged("cklist");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string descricao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string descricao
+        {
+            get
+            {
                 return this.descricaoField;
             }
-            set {
+            set
+            {
                 this.descricaoField = value;
                 this.RaisePropertyChanged("descricao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("documento", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public string[] documento {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("documento", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 2)]
+        public string[] documento
+        {
+            get
+            {
                 return this.documentoField;
             }
-            set {
+            set
+            {
                 this.documentoField = value;
                 this.RaisePropertyChanged("documento");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string id_cliente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string id_cliente
+        {
+            get
+            {
                 return this.id_clienteField;
             }
-            set {
+            set
+            {
                 this.id_clienteField = value;
                 this.RaisePropertyChanged("id_cliente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("produto", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public produto[] produto {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("produto", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 4)]
+        public produto[] produto
+        {
+            get
+            {
                 return this.produtoField;
             }
-            set {
+            set
+            {
                 this.produtoField = value;
                 this.RaisePropertyChanged("produto");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public remetente remetente {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public remetente remetente
+        {
+            get
+            {
                 return this.remetenteField;
             }
-            set {
+            set
+            {
                 this.remetenteField = value;
                 this.RaisePropertyChanged("remetente");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string tipo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string tipo
+        {
+            get
+            {
                 return this.tipoField;
             }
-            set {
+            set
+            {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string valor_declarado {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public string valor_declarado
+        {
+            get
+            {
                 return this.valor_declaradoField;
             }
-            set {
+            set
+            {
                 this.valor_declaradoField = value;
                 this.RaisePropertyChanged("valor_declarado");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class produto : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class produto : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string codigoField;
-        
+
         private string qtdField;
-        
+
         private string tipoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string codigo
+        {
+            get
+            {
                 return this.codigoField;
             }
-            set {
+            set
+            {
                 this.codigoField = value;
                 this.RaisePropertyChanged("codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string qtd {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string qtd
+        {
+            get
+            {
                 return this.qtdField;
             }
-            set {
+            set
+            {
                 this.qtdField = value;
                 this.RaisePropertyChanged("qtd");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string tipo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string tipo
+        {
+            get
+            {
                 return this.tipoField;
             }
-            set {
+            set
+            {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class remetente : pessoa {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class remetente : pessoa
+    {
+
         private string celularField;
-        
+
         private string ddd_celularField;
-        
+
         private string identificacaoField;
-        
+
         private string smsField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string celular {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string celular
+        {
+            get
+            {
                 return this.celularField;
             }
-            set {
+            set
+            {
                 this.celularField = value;
                 this.RaisePropertyChanged("celular");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string ddd_celular {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string ddd_celular
+        {
+            get
+            {
                 return this.ddd_celularField;
             }
-            set {
+            set
+            {
                 this.ddd_celularField = value;
                 this.RaisePropertyChanged("ddd_celular");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string identificacao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string identificacao
+        {
+            get
+            {
                 return this.identificacaoField;
             }
-            set {
+            set
+            {
                 this.identificacaoField = value;
                 this.RaisePropertyChanged("identificacao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string sms {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string sms
+        {
+            get
+            {
                 return this.smsField;
             }
-            set {
+            set
+            {
                 this.smsField = value;
                 this.RaisePropertyChanged("sms");
             }
         }
     }
-    
+
     /// <remarks/>
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(remetente))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class pessoa : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class pessoa : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string bairroField;
-        
+
         private string cepField;
-        
+
         private string cidadeField;
-        
+
         private string complementoField;
-        
+
         private string dddField;
-        
+
         private string emailField;
-        
+
         private string logradouroField;
-        
+
         private string nomeField;
-        
+
         private string numeroField;
-        
+
         private string referenciaField;
-        
+
         private string telefoneField;
-        
+
         private string ufField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string bairro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string bairro
+        {
+            get
+            {
                 return this.bairroField;
             }
-            set {
+            set
+            {
                 this.bairroField = value;
                 this.RaisePropertyChanged("bairro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string cep {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string cep
+        {
+            get
+            {
                 return this.cepField;
             }
-            set {
+            set
+            {
                 this.cepField = value;
                 this.RaisePropertyChanged("cep");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string cidade {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string cidade
+        {
+            get
+            {
                 return this.cidadeField;
             }
-            set {
+            set
+            {
                 this.cidadeField = value;
                 this.RaisePropertyChanged("cidade");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string complemento {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string complemento
+        {
+            get
+            {
                 return this.complementoField;
             }
-            set {
+            set
+            {
                 this.complementoField = value;
                 this.RaisePropertyChanged("complemento");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string ddd {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string ddd
+        {
+            get
+            {
                 return this.dddField;
             }
-            set {
+            set
+            {
                 this.dddField = value;
                 this.RaisePropertyChanged("ddd");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string email {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string email
+        {
+            get
+            {
                 return this.emailField;
             }
-            set {
+            set
+            {
                 this.emailField = value;
                 this.RaisePropertyChanged("email");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string logradouro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 6)]
+        public string logradouro
+        {
+            get
+            {
                 return this.logradouroField;
             }
-            set {
+            set
+            {
                 this.logradouroField = value;
                 this.RaisePropertyChanged("logradouro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string nome {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 7)]
+        public string nome
+        {
+            get
+            {
                 return this.nomeField;
             }
-            set {
+            set
+            {
                 this.nomeField = value;
                 this.RaisePropertyChanged("nome");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string numero {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 8)]
+        public string numero
+        {
+            get
+            {
                 return this.numeroField;
             }
-            set {
+            set
+            {
                 this.numeroField = value;
                 this.RaisePropertyChanged("numero");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string referencia {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 9)]
+        public string referencia
+        {
+            get
+            {
                 return this.referenciaField;
             }
-            set {
+            set
+            {
                 this.referenciaField = value;
                 this.RaisePropertyChanged("referencia");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=10)]
-        public string telefone {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 10)]
+        public string telefone
+        {
+            get
+            {
                 return this.telefoneField;
             }
-            set {
+            set
+            {
                 this.telefoneField = value;
                 this.RaisePropertyChanged("telefone");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public string uf {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 11)]
+        public string uf
+        {
+            get
+            {
                 return this.ufField;
             }
-            set {
+            set
+            {
                 this.ufField = value;
                 this.RaisePropertyChanged("uf");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class coletaReversa : coleta {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class coletaReversa : coleta
+    {
+
         private string agField;
-        
+
         private int arField;
-        
+
         private bool arFieldSpecified;
-        
+
         private string cartaoField;
-        
+
         private int numeroField;
-        
+
         private bool numeroFieldSpecified;
-        
+
         private objeto[] obj_colField;
-        
+
         private string servico_adicionalField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string ag {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string ag
+        {
+            get
+            {
                 return this.agField;
             }
-            set {
+            set
+            {
                 this.agField = value;
                 this.RaisePropertyChanged("ag");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int ar {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public int ar
+        {
+            get
+            {
                 return this.arField;
             }
-            set {
+            set
+            {
                 this.arField = value;
                 this.RaisePropertyChanged("ar");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool arSpecified {
-            get {
+        public bool arSpecified
+        {
+            get
+            {
                 return this.arFieldSpecified;
             }
-            set {
+            set
+            {
                 this.arFieldSpecified = value;
                 this.RaisePropertyChanged("arSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string cartao {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string cartao
+        {
+            get
+            {
                 return this.cartaoField;
             }
-            set {
+            set
+            {
                 this.cartaoField = value;
                 this.RaisePropertyChanged("cartao");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int numero {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public int numero
+        {
+            get
+            {
                 return this.numeroField;
             }
-            set {
+            set
+            {
                 this.numeroField = value;
                 this.RaisePropertyChanged("numero");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numeroSpecified {
-            get {
+        public bool numeroSpecified
+        {
+            get
+            {
                 return this.numeroFieldSpecified;
             }
-            set {
+            set
+            {
                 this.numeroFieldSpecified = value;
                 this.RaisePropertyChanged("numeroSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("obj_col", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public objeto[] obj_col {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute("obj_col", Form = System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable = true, Order = 4)]
+        public objeto[] obj_col
+        {
+            get
+            {
                 return this.obj_colField;
             }
-            set {
+            set
+            {
                 this.obj_colField = value;
                 this.RaisePropertyChanged("obj_col");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string servico_adicional {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public string servico_adicional
+        {
+            get
+            {
                 return this.servico_adicionalField;
             }
-            set {
+            set
+            {
                 this.servico_adicionalField = value;
                 this.RaisePropertyChanged("servico_adicional");
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class objeto : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class objeto : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string descField;
-        
+
         private string entregaField;
-        
+
         private string idField;
-        
+
         private string itemField;
-        
+
         private string numField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string desc {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string desc
+        {
+            get
+            {
                 return this.descField;
             }
-            set {
+            set
+            {
                 this.descField = value;
                 this.RaisePropertyChanged("desc");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string entrega {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string entrega
+        {
+            get
+            {
                 return this.entregaField;
             }
-            set {
+            set
+            {
                 this.entregaField = value;
                 this.RaisePropertyChanged("entrega");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string id {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string id
+        {
+            get
+            {
                 return this.idField;
             }
-            set {
+            set
+            {
                 this.idField = value;
                 this.RaisePropertyChanged("id");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string item {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string item
+        {
+            get
+            {
                 return this.itemField;
             }
-            set {
+            set
+            {
                 this.itemField = value;
                 this.RaisePropertyChanged("item");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string num {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string num
+        {
+            get
+            {
                 return this.numField;
             }
-            set {
+            set
+            {
                 this.numField = value;
                 this.RaisePropertyChanged("num");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarPostagemSimultanea", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validarPostagemSimultanea {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validarPostagemSimultanea", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validarPostagemSimultanea
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codigoServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idCartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepDestinatario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.coletaSimultanea coleta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public validarPostagemSimultanea() {
+
+        public validarPostagemSimultanea()
+        {
         }
-        
-        public validarPostagemSimultanea(int codAdministrativo, int codigoServico, string idCartaoPostagem, string cepDestinatario, Controle_de_livros.ClienteServices.coletaSimultanea coleta, string usuario, string senha) {
+
+        public validarPostagemSimultanea(int codAdministrativo, int codigoServico, string idCartaoPostagem, string cepDestinatario, Controle_de_livros.ClienteServices.coletaSimultanea coleta, string usuario, string senha)
+        {
             this.codAdministrativo = codAdministrativo;
             this.codigoServico = codigoServico;
             this.idCartaoPostagem = idCartaoPostagem;
@@ -7115,423 +8363,498 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarPostagemSimultaneaResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validarPostagemSimultaneaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validarPostagemSimultaneaResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validarPostagemSimultaneaResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public validarPostagemSimultaneaResponse() {
+
+        public validarPostagemSimultaneaResponse()
+        {
         }
-        
-        public validarPostagemSimultaneaResponse(bool @return) {
+
+        public validarPostagemSimultaneaResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStatusPLP", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class getStatusPLP {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("arg0", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "getStatusPLP", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class getStatusPLP
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("arg0", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.objetoPostal[] arg0;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string arg1;
-        
-        public getStatusPLP() {
+
+        public getStatusPLP()
+        {
         }
-        
-        public getStatusPLP(Controle_de_livros.ClienteServices.objetoPostal[] arg0, string arg1) {
+
+        public getStatusPLP(Controle_de_livros.ClienteServices.objetoPostal[] arg0, string arg1)
+        {
             this.arg0 = arg0;
             this.arg1 = arg1;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStatusPLPResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class getStatusPLPResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "getStatusPLPResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class getStatusPLPResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.statusPlp @return;
-        
-        public getStatusPLPResponse() {
+
+        public getStatusPLPResponse()
+        {
         }
-        
-        public getStatusPLPResponse(Controle_de_livros.ClienteServices.statusPlp @return) {
+
+        public getStatusPLPResponse(Controle_de_livros.ClienteServices.statusPlp @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class servicoAdicionalTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class servicoAdicionalTO : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string categoriaField;
-        
+
         private string codigoField;
-        
+
         private string siglaField;
-        
+
         private string tipoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string categoria {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string categoria
+        {
+            get
+            {
                 return this.categoriaField;
             }
-            set {
+            set
+            {
                 this.categoriaField = value;
                 this.RaisePropertyChanged("categoria");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string codigo
+        {
+            get
+            {
                 return this.codigoField;
             }
-            set {
+            set
+            {
                 this.codigoField = value;
                 this.RaisePropertyChanged("codigo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string sigla {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string sigla
+        {
+            get
+            {
                 return this.siglaField;
             }
-            set {
+            set
+            {
                 this.siglaField = value;
                 this.RaisePropertyChanged("sigla");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string tipo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string tipo
+        {
+            get
+            {
                 return this.tipoField;
             }
-            set {
+            set
+            {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarServicosAdicionais", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarServicosAdicionais {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarServicosAdicionais", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarServicosAdicionais
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codigo;
-        
-        public pesquisarServicosAdicionais() {
+
+        public pesquisarServicosAdicionais()
+        {
         }
-        
-        public pesquisarServicosAdicionais(string codigo) {
+
+        public pesquisarServicosAdicionais(string codigo)
+        {
             this.codigo = codigo;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="pesquisarServicosAdicionaisResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class pesquisarServicosAdicionaisResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "pesquisarServicosAdicionaisResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class pesquisarServicosAdicionaisResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.servicoAdicionalTO[] @return;
-        
-        public pesquisarServicosAdicionaisResponse() {
+
+        public pesquisarServicosAdicionaisResponse()
+        {
         }
-        
-        public pesquisarServicosAdicionaisResponse(Controle_de_livros.ClienteServices.servicoAdicionalTO[] @return) {
+
+        public pesquisarServicosAdicionaisResponse(Controle_de_livros.ClienteServices.servicoAdicionalTO[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosXServicosAdicionais", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosXServicosAdicionais {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosXServicosAdicionais", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosXServicosAdicionais
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaServicosXServicosAdicionais() {
+
+        public buscaServicosXServicosAdicionais()
+        {
         }
-        
-        public buscaServicosXServicosAdicionais(string usuario, string senha) {
+
+        public buscaServicosXServicosAdicionais(string usuario, string senha)
+        {
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosXServicosAdicionaisResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosXServicosAdicionaisResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosXServicosAdicionaisResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosXServicosAdicionaisResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string[] @return;
-        
-        public buscaServicosXServicosAdicionaisResponse() {
+
+        public buscaServicosXServicosAdicionaisResponse()
+        {
         }
-        
-        public buscaServicosXServicosAdicionaisResponse(string[] @return) {
+
+        public buscaServicosXServicosAdicionaisResponse(string[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class retornoCancelamento : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class retornoCancelamento : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string cod_erroField;
-        
+
         private string codigo_administrativoField;
-        
+
         private string dataField;
-        
+
         private string horaField;
-        
+
         private string msg_erroField;
-        
+
         private objetoSimplificado objeto_postalField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string cod_erro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string cod_erro
+        {
+            get
+            {
                 return this.cod_erroField;
             }
-            set {
+            set
+            {
                 this.cod_erroField = value;
                 this.RaisePropertyChanged("cod_erro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string codigo_administrativo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public string codigo_administrativo
+        {
+            get
+            {
                 return this.codigo_administrativoField;
             }
-            set {
+            set
+            {
                 this.codigo_administrativoField = value;
                 this.RaisePropertyChanged("codigo_administrativo");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string data {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string data
+        {
+            get
+            {
                 return this.dataField;
             }
-            set {
+            set
+            {
                 this.dataField = value;
                 this.RaisePropertyChanged("data");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string hora {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 3)]
+        public string hora
+        {
+            get
+            {
                 return this.horaField;
             }
-            set {
+            set
+            {
                 this.horaField = value;
                 this.RaisePropertyChanged("hora");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string msg_erro {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 4)]
+        public string msg_erro
+        {
+            get
+            {
                 return this.msg_erroField;
             }
-            set {
+            set
+            {
                 this.msg_erroField = value;
                 this.RaisePropertyChanged("msg_erro");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public objetoSimplificado objeto_postal {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 5)]
+        public objetoSimplificado objeto_postal
+        {
+            get
+            {
                 return this.objeto_postalField;
             }
-            set {
+            set
+            {
                 this.objeto_postalField = value;
                 this.RaisePropertyChanged("objeto_postal");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class objetoSimplificado : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class objetoSimplificado : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string datahora_cancelamentoField;
-        
+
         private int numero_pedidoField;
-        
+
         private bool numero_pedidoFieldSpecified;
-        
+
         private string status_pedidoField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string datahora_cancelamento {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string datahora_cancelamento
+        {
+            get
+            {
                 return this.datahora_cancelamentoField;
             }
-            set {
+            set
+            {
                 this.datahora_cancelamentoField = value;
                 this.RaisePropertyChanged("datahora_cancelamento");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int numero_pedido {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public int numero_pedido
+        {
+            get
+            {
                 return this.numero_pedidoField;
             }
-            set {
+            set
+            {
                 this.numero_pedidoField = value;
                 this.RaisePropertyChanged("numero_pedido");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numero_pedidoSpecified {
-            get {
+        public bool numero_pedidoSpecified
+        {
+            get
+            {
                 return this.numero_pedidoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.numero_pedidoFieldSpecified = value;
                 this.RaisePropertyChanged("numero_pedidoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string status_pedido {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string status_pedido
+        {
+            get
+            {
                 return this.status_pedidoField;
             }
-            set {
+            set
+            {
                 this.status_pedidoField = value;
                 this.RaisePropertyChanged("status_pedido");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelarPedidoScol", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class cancelarPedidoScol {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "cancelarPedidoScol", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class cancelarPedidoScol
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string tipo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public cancelarPedidoScol() {
+
+        public cancelarPedidoScol()
+        {
         }
-        
-        public cancelarPedidoScol(string codAdministrativo, string idPostagem, string tipo, string usuario, string senha) {
+
+        public cancelarPedidoScol(string codAdministrativo, string idPostagem, string tipo, string usuario, string senha)
+        {
             this.codAdministrativo = codAdministrativo;
             this.idPostagem = idPostagem;
             this.tipo = tipo;
@@ -7539,100 +8862,108 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cancelarPedidoScolResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class cancelarPedidoScolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "cancelarPedidoScolResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class cancelarPedidoScolResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.retornoCancelamento @return;
-        
-        public cancelarPedidoScolResponse() {
+
+        public cancelarPedidoScolResponse()
+        {
         }
-        
-        public cancelarPedidoScolResponse(Controle_de_livros.ClienteServices.retornoCancelamento @return) {
+
+        public cancelarPedidoScolResponse(Controle_de_livros.ClienteServices.retornoCancelamento @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum tipoBloqueio {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum tipoBloqueio
+    {
+
         /// <remarks/>
         FRAUDE_BLOQUEIO,
-        
+
         /// <remarks/>
         EXTRAVIO_VAREJO_PRE_INDENIZADO,
-        
+
         /// <remarks/>
         EXTRAVIO_VAREJO_POS_INDENIZADO,
-        
+
         /// <remarks/>
         EXTRAVIO_CORPORATIVO,
-        
+
         /// <remarks/>
         INTERNACIONAL_LDI,
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum acao {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum acao
+    {
+
         /// <remarks/>
         DEVOLVIDO_AO_REMETENTE,
-        
+
         /// <remarks/>
         ENCAMINHADO_PARA_REFUGO,
-        
+
         /// <remarks/>
         REINTEGRADO_E_DEVOLVIDO_AO_REMETENTE,
-        
+
         /// <remarks/>
         DESBLOQUEADO,
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="bloquearObjeto", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class bloquearObjeto {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "bloquearObjeto", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class bloquearObjeto
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numeroEtiqueta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlp;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.acao acao;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public bloquearObjeto() {
+
+        public bloquearObjeto()
+        {
         }
-        
-        public bloquearObjeto(string numeroEtiqueta, long idPlp, Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio, Controle_de_livros.ClienteServices.acao acao, string usuario, string senha) {
+
+        public bloquearObjeto(string numeroEtiqueta, long idPlp, Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio, Controle_de_livros.ClienteServices.acao acao, string usuario, string senha)
+        {
             this.numeroEtiqueta = numeroEtiqueta;
             this.idPlp = idPlp;
             this.tipoBloqueio = tipoBloqueio;
@@ -7641,110 +8972,122 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="bloquearObjetoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class bloquearObjetoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "bloquearObjetoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class bloquearObjetoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public bloquearObjetoResponse() {
+
+        public bloquearObjetoResponse()
+        {
         }
-        
-        public bloquearObjetoResponse(string @return) {
+
+        public bloquearObjetoResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaContrato", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaContrato {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaContrato", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaContrato
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string numero;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long diretoria;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaContrato() {
+
+        public buscaContrato()
+        {
         }
-        
-        public buscaContrato(string numero, long diretoria, string usuario, string senha) {
+
+        public buscaContrato(string numero, long diretoria, string usuario, string senha)
+        {
             this.numero = numero;
             this.diretoria = diretoria;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaContratoResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaContratoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaContratoResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaContratoResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.contratoERP @return;
-        
-        public buscaContratoResponse() {
+
+        public buscaContratoResponse()
+        {
         }
-        
-        public buscaContratoResponse(Controle_de_livros.ClienteServices.contratoERP @return) {
+
+        public buscaContratoResponse(Controle_de_livros.ClienteServices.contratoERP @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitaEtiquetas", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitaEtiquetas {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitaEtiquetas", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitaEtiquetas
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string tipoDestinatario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string identificador;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int qtdEtiquetas;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public solicitaEtiquetas() {
+
+        public solicitaEtiquetas()
+        {
         }
-        
-        public solicitaEtiquetas(string tipoDestinatario, string identificador, long idServico, int qtdEtiquetas, string usuario, string senha) {
+
+        public solicitaEtiquetas(string tipoDestinatario, string identificador, long idServico, int qtdEtiquetas, string usuario, string senha)
+        {
             this.tipoDestinatario = tipoDestinatario;
             this.identificador = identificador;
             this.idServico = idServico;
@@ -7753,109 +9096,121 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitaEtiquetasResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitaEtiquetasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitaEtiquetasResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitaEtiquetasResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public solicitaEtiquetasResponse() {
+
+        public solicitaEtiquetasResponse()
+        {
         }
-        
-        public solicitaEtiquetasResponse(string @return) {
+
+        public solicitaEtiquetasResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitaXmlPlp", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitaXmlPlp {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitaXmlPlp", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitaXmlPlp
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public long idPlpMaster;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public solicitaXmlPlp() {
+
+        public solicitaXmlPlp()
+        {
         }
-        
-        public solicitaXmlPlp(long idPlpMaster, string usuario, string senha) {
+
+        public solicitaXmlPlp(long idPlpMaster, string usuario, string senha)
+        {
             this.idPlpMaster = idPlpMaster;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitaXmlPlpResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitaXmlPlpResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitaXmlPlpResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitaXmlPlpResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public solicitaXmlPlpResponse() {
+
+        public solicitaXmlPlpResponse()
+        {
         }
-        
-        public solicitaXmlPlpResponse(string @return) {
+
+        public solicitaXmlPlpResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarPostagemReversa", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validarPostagemReversa {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validarPostagemReversa", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validarPostagemReversa
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string codigoServico;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string cepDestinatario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idCartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.coletaReversa coleta;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public validarPostagemReversa() {
+
+        public validarPostagemReversa()
+        {
         }
-        
-        public validarPostagemReversa(string codAdministrativo, string codigoServico, string cepDestinatario, string idCartaoPostagem, Controle_de_livros.ClienteServices.coletaReversa coleta, string usuario, string senha) {
+
+        public validarPostagemReversa(string codAdministrativo, string codigoServico, string cepDestinatario, string idCartaoPostagem, Controle_de_livros.ClienteServices.coletaReversa coleta, string usuario, string senha)
+        {
             this.codAdministrativo = codAdministrativo;
             this.codigoServico = codigoServico;
             this.cepDestinatario = cepDestinatario;
@@ -7865,110 +9220,122 @@ namespace Controle_de_livros.ClienteServices {
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validarPostagemReversaResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class validarPostagemReversaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "validarPostagemReversaResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class validarPostagemReversaResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public bool @return;
-        
-        public validarPostagemReversaResponse() {
+
+        public validarPostagemReversaResponse()
+        {
         }
-        
-        public validarPostagemReversaResponse(bool @return) {
+
+        public validarPostagemReversaResponse(bool @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaCliente", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaCliente {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaCliente", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaCliente
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idContrato;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idCartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaCliente() {
+
+        public buscaCliente()
+        {
         }
-        
-        public buscaCliente(string idContrato, string idCartaoPostagem, string usuario, string senha) {
+
+        public buscaCliente(string idContrato, string idCartaoPostagem, string usuario, string senha)
+        {
             this.idContrato = idContrato;
             this.idCartaoPostagem = idCartaoPostagem;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaClienteResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaClienteResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaClienteResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaClienteResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.clienteERP @return;
-        
-        public buscaClienteResponse() {
+
+        public buscaClienteResponse()
+        {
         }
-        
-        public buscaClienteResponse(Controle_de_livros.ClienteServices.clienteERP @return) {
+
+        public buscaClienteResponse(Controle_de_livros.ClienteServices.clienteERP @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaPagamentoEntrega", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaPagamentoEntrega {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaPagamentoEntrega", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaPagamentoEntrega
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string contrato;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string dataInicio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string dataFim;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string etiqueta;
-        
-        public buscaPagamentoEntrega() {
+
+        public buscaPagamentoEntrega()
+        {
         }
-        
-        public buscaPagamentoEntrega(string usuario, string senha, string contrato, string dataInicio, string dataFim, string etiqueta) {
+
+        public buscaPagamentoEntrega(string usuario, string senha, string contrato, string dataInicio, string dataFim, string etiqueta)
+        {
             this.usuario = usuario;
             this.senha = senha;
             this.contrato = contrato;
@@ -7977,362 +9344,418 @@ namespace Controle_de_livros.ClienteServices {
             this.etiqueta = etiqueta;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaPagamentoEntregaResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaPagamentoEntregaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaPagamentoEntregaResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaPagamentoEntregaResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public buscaPagamentoEntregaResponse() {
+
+        public buscaPagamentoEntregaResponse()
+        {
         }
-        
-        public buscaPagamentoEntregaResponse(string @return) {
+
+        public buscaPagamentoEntregaResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitarPostagemScol", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitarPostagemScol {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitarPostagemScol", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitarPostagemScol
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int codAdministrativo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string xml;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public solicitarPostagemScol() {
+
+        public solicitarPostagemScol()
+        {
         }
-        
-        public solicitarPostagemScol(int codAdministrativo, string xml, string usuario, string senha) {
+
+        public solicitarPostagemScol(int codAdministrativo, string xml, string usuario, string senha)
+        {
             this.codAdministrativo = codAdministrativo;
             this.xml = xml;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="solicitarPostagemScolResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class solicitarPostagemScolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "solicitarPostagemScolResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class solicitarPostagemScolResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public solicitarPostagemScolResponse() {
+
+        public solicitarPostagemScolResponse()
+        {
         }
-        
-        public solicitarPostagemScolResponse(string @return) {
+
+        public solicitarPostagemScolResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicos", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicos {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicos", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicos
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idContrato;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idCartaoPostagem;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaServicos() {
+
+        public buscaServicos()
+        {
         }
-        
-        public buscaServicos(string idContrato, string idCartaoPostagem, string usuario, string senha) {
+
+        public buscaServicos(string idContrato, string idCartaoPostagem, string usuario, string senha)
+        {
             this.idContrato = idContrato;
             this.idCartaoPostagem = idCartaoPostagem;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaServicosResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaServicosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaServicosResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaServicosResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.servicoERP[] @return;
-        
-        public buscaServicosResponse() {
+
+        public buscaServicosResponse()
+        {
         }
-        
-        public buscaServicosResponse(Controle_de_livros.ClienteServices.servicoERP[] @return) {
+
+        public buscaServicosResponse(Controle_de_livros.ClienteServices.servicoERP[] @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public partial class mensagemParametrizadaTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public partial class mensagemParametrizadaTO : object, System.ComponentModel.INotifyPropertyChanged
+    {
+
         private string mensagemField;
-        
+
         private tipoMensagem tipoField;
-        
+
         private bool tipoFieldSpecified;
-        
+
         private string tituloField;
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string mensagem {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 0)]
+        public string mensagem
+        {
+            get
+            {
                 return this.mensagemField;
             }
-            set {
+            set
+            {
                 this.mensagemField = value;
                 this.RaisePropertyChanged("mensagem");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public tipoMensagem tipo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 1)]
+        public tipoMensagem tipo
+        {
+            get
+            {
                 return this.tipoField;
             }
-            set {
+            set
+            {
                 this.tipoField = value;
                 this.RaisePropertyChanged("tipo");
             }
         }
-        
+
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool tipoSpecified {
-            get {
+        public bool tipoSpecified
+        {
+            get
+            {
                 return this.tipoFieldSpecified;
             }
-            set {
+            set
+            {
                 this.tipoFieldSpecified = value;
                 this.RaisePropertyChanged("tipoSpecified");
             }
         }
-        
+
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string titulo {
-            get {
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified, Order = 2)]
+        public string titulo
+        {
+            get
+            {
                 return this.tituloField;
             }
-            set {
+            set
+            {
                 this.tituloField = value;
                 this.RaisePropertyChanged("titulo");
             }
         }
-        
+
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
             System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
+            if ((propertyChanged != null))
+            {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
     }
-    
+
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.3761.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/")]
-    public enum tipoMensagem {
-        
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/")]
+    public enum tipoMensagem
+    {
+
         /// <remarks/>
         A,
-        
+
         /// <remarks/>
         E,
-        
+
         /// <remarks/>
         S,
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterMensagemParametrizada", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class obterMensagemParametrizada {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "obterMensagemParametrizada", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class obterMensagemParametrizada
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public short id;
-        
-        public obterMensagemParametrizada() {
+
+        public obterMensagemParametrizada()
+        {
         }
-        
-        public obterMensagemParametrizada(short id) {
+
+        public obterMensagemParametrizada(short id)
+        {
             this.id = id;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obterMensagemParametrizadaResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class obterMensagemParametrizadaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "obterMensagemParametrizadaResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class obterMensagemParametrizadaResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public Controle_de_livros.ClienteServices.mensagemParametrizadaTO @return;
-        
-        public obterMensagemParametrizadaResponse() {
+
+        public obterMensagemParametrizadaResponse()
+        {
         }
-        
-        public obterMensagemParametrizadaResponse(Controle_de_livros.ClienteServices.mensagemParametrizadaTO @return) {
+
+        public obterMensagemParametrizadaResponse(Controle_de_livros.ClienteServices.mensagemParametrizadaTO @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaOpcoes", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaOpcoes {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("listaObjetos", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaOpcoes", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaOpcoes
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute("listaObjetos", Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string[] listaObjetos;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string tipoResultado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string usuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string senha;
-        
-        public buscaOpcoes() {
+
+        public buscaOpcoes()
+        {
         }
-        
-        public buscaOpcoes(string[] listaObjetos, string tipoResultado, string usuario, string senha) {
+
+        public buscaOpcoes(string[] listaObjetos, string tipoResultado, string usuario, string senha)
+        {
             this.listaObjetos = listaObjetos;
             this.tipoResultado = tipoResultado;
             this.usuario = usuario;
             this.senha = senha;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscaOpcoesResponse", WrapperNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped=true)]
-    public partial class buscaOpcoesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://cliente.bean.master.sigep.bsb.correios.com.br/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName = "buscaOpcoesResponse", WrapperNamespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", IsWrapped = true)]
+    public partial class buscaOpcoesResponse
+    {
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace = "http://cliente.bean.master.sigep.bsb.correios.com.br/", Order = 0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form = System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string @return;
-        
-        public buscaOpcoesResponse() {
+
+        public buscaOpcoesResponse()
+        {
         }
-        
-        public buscaOpcoesResponse(string @return) {
+
+        public buscaOpcoesResponse(string @return)
+        {
             this.@return = @return;
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface AtendeClienteChannel : Controle_de_livros.ClienteServices.AtendeCliente, System.ServiceModel.IClientChannel {
+    public interface AtendeClienteChannel : Controle_de_livros.ClienteServices.AtendeCliente, System.ServiceModel.IClientChannel
+    {
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class AtendeClienteClient : System.ServiceModel.ClientBase<Controle_de_livros.ClienteServices.AtendeCliente>, Controle_de_livros.ClienteServices.AtendeCliente {
-        
-        public AtendeClienteClient() {
+    public partial class AtendeClienteClient : System.ServiceModel.ClientBase<Controle_de_livros.ClienteServices.AtendeCliente>, Controle_de_livros.ClienteServices.AtendeCliente
+    {
+
+        public AtendeClienteClient()
+        {
         }
-        
-        public AtendeClienteClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
+
+        public AtendeClienteClient(string endpointConfigurationName) :
+                base(endpointConfigurationName)
+        {
         }
-        
-        public AtendeClienteClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public AtendeClienteClient(string endpointConfigurationName, string remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public AtendeClienteClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
+
+        public AtendeClienteClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(endpointConfigurationName, remoteAddress)
+        {
         }
-        
-        public AtendeClienteClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
+
+        public AtendeClienteClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+                base(binding, remoteAddress)
+        {
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosAdicionaisAtivos(Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos request) {
+        Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosAdicionaisAtivos(Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos request)
+        {
             return base.Channel.buscaServicosAdicionaisAtivos(request);
         }
-        
-        public Controle_de_livros.ClienteServices.servicoAdicionalXML[] buscaServicosAdicionaisAtivos(string usuario, string senha) {
+
+        public Controle_de_livros.ClienteServices.servicoAdicionalXML[] buscaServicosAdicionaisAtivos(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos inValue = new Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos();
             inValue.usuario = usuario;
             inValue.senha = senha;
             Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosAdicionaisAtivos(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosAdicionaisAtivosAsync(Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosAdicionaisAtivosAsync(Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos request)
+        {
             return base.Channel.buscaServicosAdicionaisAtivosAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse> buscaServicosAdicionaisAtivosAsync(string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivosResponse> buscaServicosAdicionaisAtivosAsync(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos inValue = new Controle_de_livros.ClienteServices.buscaServicosAdicionaisAtivos();
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosAdicionaisAtivosAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.fechaPlpResponse Controle_de_livros.ClienteServices.AtendeCliente.fechaPlp(Controle_de_livros.ClienteServices.fechaPlp request) {
+        Controle_de_livros.ClienteServices.fechaPlpResponse Controle_de_livros.ClienteServices.AtendeCliente.fechaPlp(Controle_de_livros.ClienteServices.fechaPlp request)
+        {
             return base.Channel.fechaPlp(request);
         }
-        
-        public long fechaPlp(string xml, long idPlpCliente, string cartaoPostagem, string faixaEtiquetas, string usuario, string senha) {
+
+        public long fechaPlp(string xml, long idPlpCliente, string cartaoPostagem, string faixaEtiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.fechaPlp inValue = new Controle_de_livros.ClienteServices.fechaPlp();
             inValue.xml = xml;
             inValue.idPlpCliente = idPlpCliente;
@@ -8343,13 +9766,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.fechaPlpResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).fechaPlp(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpResponse> Controle_de_livros.ClienteServices.AtendeCliente.fechaPlpAsync(Controle_de_livros.ClienteServices.fechaPlp request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpResponse> Controle_de_livros.ClienteServices.AtendeCliente.fechaPlpAsync(Controle_de_livros.ClienteServices.fechaPlp request)
+        {
             return base.Channel.fechaPlpAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpResponse> fechaPlpAsync(string xml, long idPlpCliente, string cartaoPostagem, string faixaEtiquetas, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpResponse> fechaPlpAsync(string xml, long idPlpCliente, string cartaoPostagem, string faixaEtiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.fechaPlp inValue = new Controle_de_livros.ClienteServices.fechaPlp();
             inValue.xml = xml;
             inValue.idPlpCliente = idPlpCliente;
@@ -8359,13 +9784,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).fechaPlpAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.calculaTarifaServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.calculaTarifaServico(Controle_de_livros.ClienteServices.calculaTarifaServico request) {
+        Controle_de_livros.ClienteServices.calculaTarifaServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.calculaTarifaServico(Controle_de_livros.ClienteServices.calculaTarifaServico request)
+        {
             return base.Channel.calculaTarifaServico(request);
         }
-        
-        public string calculaTarifaServico(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double diametro, string codMaoPropria, double valorDeclarado, string codAvisoRecebimento) {
+
+        public string calculaTarifaServico(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double diametro, string codMaoPropria, double valorDeclarado, string codAvisoRecebimento)
+        {
             Controle_de_livros.ClienteServices.calculaTarifaServico inValue = new Controle_de_livros.ClienteServices.calculaTarifaServico();
             inValue.codAdministrativo = codAdministrativo;
             inValue.usuario = usuario;
@@ -8385,13 +9812,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.calculaTarifaServicoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).calculaTarifaServico(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.calculaTarifaServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.calculaTarifaServicoAsync(Controle_de_livros.ClienteServices.calculaTarifaServico request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.calculaTarifaServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.calculaTarifaServicoAsync(Controle_de_livros.ClienteServices.calculaTarifaServico request)
+        {
             return base.Channel.calculaTarifaServicoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.calculaTarifaServicoResponse> calculaTarifaServicoAsync(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double diametro, string codMaoPropria, double valorDeclarado, string codAvisoRecebimento) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.calculaTarifaServicoResponse> calculaTarifaServicoAsync(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double diametro, string codMaoPropria, double valorDeclarado, string codAvisoRecebimento)
+        {
             Controle_de_livros.ClienteServices.calculaTarifaServico inValue = new Controle_de_livros.ClienteServices.calculaTarifaServico();
             inValue.codAdministrativo = codAdministrativo;
             inValue.usuario = usuario;
@@ -8410,13 +9839,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.codAvisoRecebimento = codAvisoRecebimento;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).calculaTarifaServicoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.validaPlpResponse Controle_de_livros.ClienteServices.AtendeCliente.validaPlp(Controle_de_livros.ClienteServices.validaPlp request) {
+        Controle_de_livros.ClienteServices.validaPlpResponse Controle_de_livros.ClienteServices.AtendeCliente.validaPlp(Controle_de_livros.ClienteServices.validaPlp request)
+        {
             return base.Channel.validaPlp(request);
         }
-        
-        public bool validaPlp(long cliente, string numero, long diretoria, string cartao, string unidadePostagem, long servico, string[] servicosAdicionais, string usuario, string senha) {
+
+        public bool validaPlp(long cliente, string numero, long diretoria, string cartao, string unidadePostagem, long servico, string[] servicosAdicionais, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validaPlp inValue = new Controle_de_livros.ClienteServices.validaPlp();
             inValue.cliente = cliente;
             inValue.numero = numero;
@@ -8430,13 +9861,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.validaPlpResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validaPlp(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaPlpResponse> Controle_de_livros.ClienteServices.AtendeCliente.validaPlpAsync(Controle_de_livros.ClienteServices.validaPlp request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaPlpResponse> Controle_de_livros.ClienteServices.AtendeCliente.validaPlpAsync(Controle_de_livros.ClienteServices.validaPlp request)
+        {
             return base.Channel.validaPlpAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaPlpResponse> validaPlpAsync(long cliente, string numero, long diretoria, string cartao, string unidadePostagem, long servico, string[] servicosAdicionais, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaPlpResponse> validaPlpAsync(long cliente, string numero, long diretoria, string cartao, string unidadePostagem, long servico, string[] servicosAdicionais, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validaPlp inValue = new Controle_de_livros.ClienteServices.validaPlp();
             inValue.cliente = cliente;
             inValue.numero = numero;
@@ -8449,36 +9882,42 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validaPlpAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse Controle_de_livros.ClienteServices.AtendeCliente.VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados request) {
+        Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse Controle_de_livros.ClienteServices.AtendeCliente.VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados request)
+        {
             return base.Channel.VerificaSeTodosObjetosCancelados(request);
         }
-        
-        public bool VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.objetoPostal[] arg0) {
+
+        public bool VerificaSeTodosObjetosCancelados(Controle_de_livros.ClienteServices.objetoPostal[] arg0)
+        {
             Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados inValue = new Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados();
             inValue.arg0 = arg0;
             Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).VerificaSeTodosObjetosCancelados(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse> Controle_de_livros.ClienteServices.AtendeCliente.VerificaSeTodosObjetosCanceladosAsync(Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse> Controle_de_livros.ClienteServices.AtendeCliente.VerificaSeTodosObjetosCanceladosAsync(Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados request)
+        {
             return base.Channel.VerificaSeTodosObjetosCanceladosAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse> VerificaSeTodosObjetosCanceladosAsync(Controle_de_livros.ClienteServices.objetoPostal[] arg0) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCanceladosResponse> VerificaSeTodosObjetosCanceladosAsync(Controle_de_livros.ClienteServices.objetoPostal[] arg0)
+        {
             Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados inValue = new Controle_de_livros.ClienteServices.VerificaSeTodosObjetosCancelados();
             inValue.arg0 = arg0;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).VerificaSeTodosObjetosCanceladosAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.cancelarObjetoResponse Controle_de_livros.ClienteServices.AtendeCliente.cancelarObjeto(Controle_de_livros.ClienteServices.cancelarObjeto request) {
+        Controle_de_livros.ClienteServices.cancelarObjetoResponse Controle_de_livros.ClienteServices.AtendeCliente.cancelarObjeto(Controle_de_livros.ClienteServices.cancelarObjeto request)
+        {
             return base.Channel.cancelarObjeto(request);
         }
-        
-        public bool cancelarObjeto(long idPlp, string numeroEtiqueta, string usuario, string senha) {
+
+        public bool cancelarObjeto(long idPlp, string numeroEtiqueta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.cancelarObjeto inValue = new Controle_de_livros.ClienteServices.cancelarObjeto();
             inValue.idPlp = idPlp;
             inValue.numeroEtiqueta = numeroEtiqueta;
@@ -8487,13 +9926,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.cancelarObjetoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).cancelarObjeto(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarObjetoResponse> Controle_de_livros.ClienteServices.AtendeCliente.cancelarObjetoAsync(Controle_de_livros.ClienteServices.cancelarObjeto request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarObjetoResponse> Controle_de_livros.ClienteServices.AtendeCliente.cancelarObjetoAsync(Controle_de_livros.ClienteServices.cancelarObjeto request)
+        {
             return base.Channel.cancelarObjetoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarObjetoResponse> cancelarObjetoAsync(long idPlp, string numeroEtiqueta, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarObjetoResponse> cancelarObjetoAsync(long idPlp, string numeroEtiqueta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.cancelarObjeto inValue = new Controle_de_livros.ClienteServices.cancelarObjeto();
             inValue.idPlp = idPlp;
             inValue.numeroEtiqueta = numeroEtiqueta;
@@ -8501,61 +9942,71 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).cancelarObjetoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarParametrosPorDescricao(Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao request) {
+        Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarParametrosPorDescricao(Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao request)
+        {
             return base.Channel.pesquisarParametrosPorDescricao(request);
         }
-        
-        public Controle_de_livros.ClienteServices.dimensaoTO pesquisarParametrosPorDescricao(string prefix) {
+
+        public Controle_de_livros.ClienteServices.dimensaoTO pesquisarParametrosPorDescricao(string prefix)
+        {
             Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao inValue = new Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao();
             inValue.prefix = prefix;
             Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarParametrosPorDescricao(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarParametrosPorDescricaoAsync(Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarParametrosPorDescricaoAsync(Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao request)
+        {
             return base.Channel.pesquisarParametrosPorDescricaoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse> pesquisarParametrosPorDescricaoAsync(string prefix) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricaoResponse> pesquisarParametrosPorDescricaoAsync(string prefix)
+        {
             Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao inValue = new Controle_de_livros.ClienteServices.pesquisarParametrosPorDescricao();
             inValue.prefix = prefix;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarParametrosPorDescricaoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse Controle_de_livros.ClienteServices.AtendeCliente.atualizaPagamentoNaEntrega(Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega request) {
+        Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse Controle_de_livros.ClienteServices.AtendeCliente.atualizaPagamentoNaEntrega(Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega request)
+        {
             return base.Channel.atualizaPagamentoNaEntrega(request);
         }
-        
-        public string atualizaPagamentoNaEntrega(string usuario, string senha) {
+
+        public string atualizaPagamentoNaEntrega(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega inValue = new Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega();
             inValue.usuario = usuario;
             inValue.senha = senha;
             Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).atualizaPagamentoNaEntrega(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse> Controle_de_livros.ClienteServices.AtendeCliente.atualizaPagamentoNaEntregaAsync(Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse> Controle_de_livros.ClienteServices.AtendeCliente.atualizaPagamentoNaEntregaAsync(Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega request)
+        {
             return base.Channel.atualizaPagamentoNaEntregaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse> atualizaPagamentoNaEntregaAsync(string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaPagamentoNaEntregaResponse> atualizaPagamentoNaEntregaAsync(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega inValue = new Controle_de_livros.ClienteServices.atualizaPagamentoNaEntrega();
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).atualizaPagamentoNaEntregaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse Controle_de_livros.ClienteServices.AtendeCliente.obterClienteAtualizacao(Controle_de_livros.ClienteServices.obterClienteAtualizacao request) {
+        Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse Controle_de_livros.ClienteServices.AtendeCliente.obterClienteAtualizacao(Controle_de_livros.ClienteServices.obterClienteAtualizacao request)
+        {
             return base.Channel.obterClienteAtualizacao(request);
         }
-        
-        public System.DateTime obterClienteAtualizacao(string cnpjCliente, string usuario, string senha) {
+
+        public System.DateTime obterClienteAtualizacao(string cnpjCliente, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.obterClienteAtualizacao inValue = new Controle_de_livros.ClienteServices.obterClienteAtualizacao();
             inValue.cnpjCliente = cnpjCliente;
             inValue.usuario = usuario;
@@ -8563,26 +10014,30 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).obterClienteAtualizacao(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse> Controle_de_livros.ClienteServices.AtendeCliente.obterClienteAtualizacaoAsync(Controle_de_livros.ClienteServices.obterClienteAtualizacao request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse> Controle_de_livros.ClienteServices.AtendeCliente.obterClienteAtualizacaoAsync(Controle_de_livros.ClienteServices.obterClienteAtualizacao request)
+        {
             return base.Channel.obterClienteAtualizacaoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse> obterClienteAtualizacaoAsync(string cnpjCliente, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterClienteAtualizacaoResponse> obterClienteAtualizacaoAsync(string cnpjCliente, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.obterClienteAtualizacao inValue = new Controle_de_livros.ClienteServices.obterClienteAtualizacao();
             inValue.cnpjCliente = cnpjCliente;
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).obterClienteAtualizacaoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.verificaDisponibilidadeServico(Controle_de_livros.ClienteServices.verificaDisponibilidadeServico request) {
+        Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.verificaDisponibilidadeServico(Controle_de_livros.ClienteServices.verificaDisponibilidadeServico request)
+        {
             return base.Channel.verificaDisponibilidadeServico(request);
         }
-        
-        public string verificaDisponibilidadeServico(int codAdministrativo, string numeroServico, string cepOrigem, string cepDestino, string usuario, string senha) {
+
+        public string verificaDisponibilidadeServico(int codAdministrativo, string numeroServico, string cepOrigem, string cepDestino, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.verificaDisponibilidadeServico inValue = new Controle_de_livros.ClienteServices.verificaDisponibilidadeServico();
             inValue.codAdministrativo = codAdministrativo;
             inValue.numeroServico = numeroServico;
@@ -8593,13 +10048,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).verificaDisponibilidadeServico(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.verificaDisponibilidadeServicoAsync(Controle_de_livros.ClienteServices.verificaDisponibilidadeServico request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.verificaDisponibilidadeServicoAsync(Controle_de_livros.ClienteServices.verificaDisponibilidadeServico request)
+        {
             return base.Channel.verificaDisponibilidadeServicoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse> verificaDisponibilidadeServicoAsync(int codAdministrativo, string numeroServico, string cepOrigem, string cepDestino, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaDisponibilidadeServicoResponse> verificaDisponibilidadeServicoAsync(int codAdministrativo, string numeroServico, string cepOrigem, string cepDestino, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.verificaDisponibilidadeServico inValue = new Controle_de_livros.ClienteServices.verificaDisponibilidadeServico();
             inValue.codAdministrativo = codAdministrativo;
             inValue.numeroServico = numeroServico;
@@ -8609,13 +10066,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).verificaDisponibilidadeServicoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse Controle_de_livros.ClienteServices.AtendeCliente.fechaPlpVariosServicos(Controle_de_livros.ClienteServices.fechaPlpVariosServicos request) {
+        Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse Controle_de_livros.ClienteServices.AtendeCliente.fechaPlpVariosServicos(Controle_de_livros.ClienteServices.fechaPlpVariosServicos request)
+        {
             return base.Channel.fechaPlpVariosServicos(request);
         }
-        
-        public long fechaPlpVariosServicos(string xml, long idPlpCliente, string cartaoPostagem, string[] listaEtiquetas, string usuario, string senha) {
+
+        public long fechaPlpVariosServicos(string xml, long idPlpCliente, string cartaoPostagem, string[] listaEtiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.fechaPlpVariosServicos inValue = new Controle_de_livros.ClienteServices.fechaPlpVariosServicos();
             inValue.xml = xml;
             inValue.idPlpCliente = idPlpCliente;
@@ -8626,13 +10085,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).fechaPlpVariosServicos(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse> Controle_de_livros.ClienteServices.AtendeCliente.fechaPlpVariosServicosAsync(Controle_de_livros.ClienteServices.fechaPlpVariosServicos request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse> Controle_de_livros.ClienteServices.AtendeCliente.fechaPlpVariosServicosAsync(Controle_de_livros.ClienteServices.fechaPlpVariosServicos request)
+        {
             return base.Channel.fechaPlpVariosServicosAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse> fechaPlpVariosServicosAsync(string xml, long idPlpCliente, string cartaoPostagem, string[] listaEtiquetas, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.fechaPlpVariosServicosResponse> fechaPlpVariosServicosAsync(string xml, long idPlpCliente, string cartaoPostagem, string[] listaEtiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.fechaPlpVariosServicos inValue = new Controle_de_livros.ClienteServices.fechaPlpVariosServicos();
             inValue.xml = xml;
             inValue.idPlpCliente = idPlpCliente;
@@ -8642,13 +10103,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).fechaPlpVariosServicosAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse Controle_de_livros.ClienteServices.AtendeCliente.geraDigitoVerificadorEtiquetas(Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas request) {
+        Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse Controle_de_livros.ClienteServices.AtendeCliente.geraDigitoVerificadorEtiquetas(Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas request)
+        {
             return base.Channel.geraDigitoVerificadorEtiquetas(request);
         }
-        
-        public int[] geraDigitoVerificadorEtiquetas(string[] etiquetas, string usuario, string senha) {
+
+        public int[] geraDigitoVerificadorEtiquetas(string[] etiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas inValue = new Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas();
             inValue.etiquetas = etiquetas;
             inValue.usuario = usuario;
@@ -8656,47 +10119,55 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).geraDigitoVerificadorEtiquetas(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse> Controle_de_livros.ClienteServices.AtendeCliente.geraDigitoVerificadorEtiquetasAsync(Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse> Controle_de_livros.ClienteServices.AtendeCliente.geraDigitoVerificadorEtiquetasAsync(Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas request)
+        {
             return base.Channel.geraDigitoVerificadorEtiquetasAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse> geraDigitoVerificadorEtiquetasAsync(string[] etiquetas, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetasResponse> geraDigitoVerificadorEtiquetasAsync(string[] etiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas inValue = new Controle_de_livros.ClienteServices.geraDigitoVerificadorEtiquetas();
             inValue.etiquetas = etiquetas;
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).geraDigitoVerificadorEtiquetasAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse Controle_de_livros.ClienteServices.AtendeCliente.obterEmbalagemLRS(Controle_de_livros.ClienteServices.obterEmbalagemLRS request) {
+        Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse Controle_de_livros.ClienteServices.AtendeCliente.obterEmbalagemLRS(Controle_de_livros.ClienteServices.obterEmbalagemLRS request)
+        {
             return base.Channel.obterEmbalagemLRS(request);
         }
-        
-        public Controle_de_livros.ClienteServices.embalagemLRSMaster[] obterEmbalagemLRS() {
+
+        public Controle_de_livros.ClienteServices.embalagemLRSMaster[] obterEmbalagemLRS()
+        {
             Controle_de_livros.ClienteServices.obterEmbalagemLRS inValue = new Controle_de_livros.ClienteServices.obterEmbalagemLRS();
             Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).obterEmbalagemLRS(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse> Controle_de_livros.ClienteServices.AtendeCliente.obterEmbalagemLRSAsync(Controle_de_livros.ClienteServices.obterEmbalagemLRS request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse> Controle_de_livros.ClienteServices.AtendeCliente.obterEmbalagemLRSAsync(Controle_de_livros.ClienteServices.obterEmbalagemLRS request)
+        {
             return base.Channel.obterEmbalagemLRSAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse> obterEmbalagemLRSAsync() {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterEmbalagemLRSResponse> obterEmbalagemLRSAsync()
+        {
             Controle_de_livros.ClienteServices.obterEmbalagemLRS inValue = new Controle_de_livros.ClienteServices.obterEmbalagemLRS();
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).obterEmbalagemLRSAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse Controle_de_livros.ClienteServices.AtendeCliente.validaEtiquetaPLP(Controle_de_livros.ClienteServices.validaEtiquetaPLP request) {
+        Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse Controle_de_livros.ClienteServices.AtendeCliente.validaEtiquetaPLP(Controle_de_livros.ClienteServices.validaEtiquetaPLP request)
+        {
             return base.Channel.validaEtiquetaPLP(request);
         }
-        
-        public bool validaEtiquetaPLP(string numeroEtiqueta, long idPlp, string usuario, string senha) {
+
+        public bool validaEtiquetaPLP(string numeroEtiqueta, long idPlp, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validaEtiquetaPLP inValue = new Controle_de_livros.ClienteServices.validaEtiquetaPLP();
             inValue.numeroEtiqueta = numeroEtiqueta;
             inValue.idPlp = idPlp;
@@ -8705,13 +10176,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validaEtiquetaPLP(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse> Controle_de_livros.ClienteServices.AtendeCliente.validaEtiquetaPLPAsync(Controle_de_livros.ClienteServices.validaEtiquetaPLP request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse> Controle_de_livros.ClienteServices.AtendeCliente.validaEtiquetaPLPAsync(Controle_de_livros.ClienteServices.validaEtiquetaPLP request)
+        {
             return base.Channel.validaEtiquetaPLPAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse> validaEtiquetaPLPAsync(string numeroEtiqueta, long idPlp, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validaEtiquetaPLPResponse> validaEtiquetaPLPAsync(string numeroEtiqueta, long idPlp, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validaEtiquetaPLP inValue = new Controle_de_livros.ClienteServices.validaEtiquetaPLP();
             inValue.numeroEtiqueta = numeroEtiqueta;
             inValue.idPlp = idPlp;
@@ -8719,61 +10192,71 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validaEtiquetaPLPAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosValorDeclarado(Controle_de_livros.ClienteServices.buscaServicosValorDeclarado request) {
+        Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosValorDeclarado(Controle_de_livros.ClienteServices.buscaServicosValorDeclarado request)
+        {
             return base.Channel.buscaServicosValorDeclarado(request);
         }
-        
-        public string[] buscaServicosValorDeclarado(string usuario, string senha) {
+
+        public string[] buscaServicosValorDeclarado(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicosValorDeclarado inValue = new Controle_de_livros.ClienteServices.buscaServicosValorDeclarado();
             inValue.usuario = usuario;
             inValue.senha = senha;
             Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosValorDeclarado(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosValorDeclaradoAsync(Controle_de_livros.ClienteServices.buscaServicosValorDeclarado request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosValorDeclaradoAsync(Controle_de_livros.ClienteServices.buscaServicosValorDeclarado request)
+        {
             return base.Channel.buscaServicosValorDeclaradoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse> buscaServicosValorDeclaradoAsync(string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosValorDeclaradoResponse> buscaServicosValorDeclaradoAsync(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicosValorDeclarado inValue = new Controle_de_livros.ClienteServices.buscaServicosValorDeclarado();
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosValorDeclaradoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.consultaCEPResponse Controle_de_livros.ClienteServices.AtendeCliente.consultaCEP(Controle_de_livros.ClienteServices.consultaCEP request) {
+        Controle_de_livros.ClienteServices.consultaCEPResponse Controle_de_livros.ClienteServices.AtendeCliente.consultaCEP(Controle_de_livros.ClienteServices.consultaCEP request)
+        {
             return base.Channel.consultaCEP(request);
         }
-        
-        public Controle_de_livros.ClienteServices.enderecoERP consultaCEP(string cep) {
+
+        public Controle_de_livros.ClienteServices.enderecoERP consultaCEP(string cep)
+        {
             Controle_de_livros.ClienteServices.consultaCEP inValue = new Controle_de_livros.ClienteServices.consultaCEP();
             inValue.cep = cep;
             Controle_de_livros.ClienteServices.consultaCEPResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).consultaCEP(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.consultaCEPResponse> Controle_de_livros.ClienteServices.AtendeCliente.consultaCEPAsync(Controle_de_livros.ClienteServices.consultaCEP request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.consultaCEPResponse> Controle_de_livros.ClienteServices.AtendeCliente.consultaCEPAsync(Controle_de_livros.ClienteServices.consultaCEP request)
+        {
             return base.Channel.consultaCEPAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.consultaCEPResponse> consultaCEPAsync(string cep) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.consultaCEPResponse> consultaCEPAsync(string cep)
+        {
             Controle_de_livros.ClienteServices.consultaCEP inValue = new Controle_de_livros.ClienteServices.consultaCEP();
             inValue.cep = cep;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).consultaCEPAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.integrarUsuarioScolResponse Controle_de_livros.ClienteServices.AtendeCliente.integrarUsuarioScol(Controle_de_livros.ClienteServices.integrarUsuarioScol request) {
+        Controle_de_livros.ClienteServices.integrarUsuarioScolResponse Controle_de_livros.ClienteServices.AtendeCliente.integrarUsuarioScol(Controle_de_livros.ClienteServices.integrarUsuarioScol request)
+        {
             return base.Channel.integrarUsuarioScol(request);
         }
-        
-        public bool integrarUsuarioScol(int codAdministrativo, string usuario, string senha) {
+
+        public bool integrarUsuarioScol(int codAdministrativo, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.integrarUsuarioScol inValue = new Controle_de_livros.ClienteServices.integrarUsuarioScol();
             inValue.codAdministrativo = codAdministrativo;
             inValue.usuario = usuario;
@@ -8781,99 +10264,115 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.integrarUsuarioScolResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).integrarUsuarioScol(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.integrarUsuarioScolResponse> Controle_de_livros.ClienteServices.AtendeCliente.integrarUsuarioScolAsync(Controle_de_livros.ClienteServices.integrarUsuarioScol request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.integrarUsuarioScolResponse> Controle_de_livros.ClienteServices.AtendeCliente.integrarUsuarioScolAsync(Controle_de_livros.ClienteServices.integrarUsuarioScol request)
+        {
             return base.Channel.integrarUsuarioScolAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.integrarUsuarioScolResponse> integrarUsuarioScolAsync(int codAdministrativo, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.integrarUsuarioScolResponse> integrarUsuarioScolAsync(int codAdministrativo, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.integrarUsuarioScol inValue = new Controle_de_livros.ClienteServices.integrarUsuarioScol();
             inValue.codAdministrativo = codAdministrativo;
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).integrarUsuarioScolAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarDimensoesServico(Controle_de_livros.ClienteServices.pesquisarDimensoesServico request) {
+        Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarDimensoesServico(Controle_de_livros.ClienteServices.pesquisarDimensoesServico request)
+        {
             return base.Channel.pesquisarDimensoesServico(request);
         }
-        
-        public Controle_de_livros.ClienteServices.dimensaoTO pesquisarDimensoesServico(string codigo, string embalagem) {
+
+        public Controle_de_livros.ClienteServices.dimensaoTO pesquisarDimensoesServico(string codigo, string embalagem)
+        {
             Controle_de_livros.ClienteServices.pesquisarDimensoesServico inValue = new Controle_de_livros.ClienteServices.pesquisarDimensoesServico();
             inValue.codigo = codigo;
             inValue.embalagem = embalagem;
             Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarDimensoesServico(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarDimensoesServicoAsync(Controle_de_livros.ClienteServices.pesquisarDimensoesServico request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarDimensoesServicoAsync(Controle_de_livros.ClienteServices.pesquisarDimensoesServico request)
+        {
             return base.Channel.pesquisarDimensoesServicoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse> pesquisarDimensoesServicoAsync(string codigo, string embalagem) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarDimensoesServicoResponse> pesquisarDimensoesServicoAsync(string codigo, string embalagem)
+        {
             Controle_de_livros.ClienteServices.pesquisarDimensoesServico inValue = new Controle_de_livros.ClienteServices.pesquisarDimensoesServico();
             inValue.codigo = codigo;
             inValue.embalagem = embalagem;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarDimensoesServicoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarEmbalagensPorServico(Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico request) {
+        Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarEmbalagensPorServico(Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico request)
+        {
             return base.Channel.pesquisarEmbalagensPorServico(request);
         }
-        
-        public Controle_de_livros.ClienteServices.tipoEmbalagem[] pesquisarEmbalagensPorServico(string codigo) {
+
+        public Controle_de_livros.ClienteServices.tipoEmbalagem[] pesquisarEmbalagensPorServico(string codigo)
+        {
             Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico inValue = new Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico();
             inValue.codigo = codigo;
             Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarEmbalagensPorServico(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarEmbalagensPorServicoAsync(Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarEmbalagensPorServicoAsync(Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico request)
+        {
             return base.Channel.pesquisarEmbalagensPorServicoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse> pesquisarEmbalagensPorServicoAsync(string codigo) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServicoResponse> pesquisarEmbalagensPorServicoAsync(string codigo)
+        {
             Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico inValue = new Controle_de_livros.ClienteServices.pesquisarEmbalagensPorServico();
             inValue.codigo = codigo;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarEmbalagensPorServicoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse Controle_de_livros.ClienteServices.AtendeCliente.atualizaRemessaAgrupada(Controle_de_livros.ClienteServices.atualizaRemessaAgrupada request) {
+        Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse Controle_de_livros.ClienteServices.AtendeCliente.atualizaRemessaAgrupada(Controle_de_livros.ClienteServices.atualizaRemessaAgrupada request)
+        {
             return base.Channel.atualizaRemessaAgrupada(request);
         }
-        
-        public string atualizaRemessaAgrupada(string usuario, string senha) {
+
+        public string atualizaRemessaAgrupada(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.atualizaRemessaAgrupada inValue = new Controle_de_livros.ClienteServices.atualizaRemessaAgrupada();
             inValue.usuario = usuario;
             inValue.senha = senha;
             Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).atualizaRemessaAgrupada(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse> Controle_de_livros.ClienteServices.AtendeCliente.atualizaRemessaAgrupadaAsync(Controle_de_livros.ClienteServices.atualizaRemessaAgrupada request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse> Controle_de_livros.ClienteServices.AtendeCliente.atualizaRemessaAgrupadaAsync(Controle_de_livros.ClienteServices.atualizaRemessaAgrupada request)
+        {
             return base.Channel.atualizaRemessaAgrupadaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse> atualizaRemessaAgrupadaAsync(string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.atualizaRemessaAgrupadaResponse> atualizaRemessaAgrupadaAsync(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.atualizaRemessaAgrupada inValue = new Controle_de_livros.ClienteServices.atualizaRemessaAgrupada();
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).atualizaRemessaAgrupadaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.solicitaPLPResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitaPLP(Controle_de_livros.ClienteServices.solicitaPLP request) {
+        Controle_de_livros.ClienteServices.solicitaPLPResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitaPLP(Controle_de_livros.ClienteServices.solicitaPLP request)
+        {
             return base.Channel.solicitaPLP(request);
         }
-        
-        public string solicitaPLP(long idPlpMaster, string numEtiqueta, string usuario, string senha) {
+
+        public string solicitaPLP(long idPlpMaster, string numEtiqueta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitaPLP inValue = new Controle_de_livros.ClienteServices.solicitaPLP();
             inValue.idPlpMaster = idPlpMaster;
             inValue.numEtiqueta = numEtiqueta;
@@ -8882,13 +10381,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.solicitaPLPResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitaPLP(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaPLPResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitaPLPAsync(Controle_de_livros.ClienteServices.solicitaPLP request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaPLPResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitaPLPAsync(Controle_de_livros.ClienteServices.solicitaPLP request)
+        {
             return base.Channel.solicitaPLPAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaPLPResponse> solicitaPLPAsync(long idPlpMaster, string numEtiqueta, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaPLPResponse> solicitaPLPAsync(long idPlpMaster, string numEtiqueta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitaPLP inValue = new Controle_de_livros.ClienteServices.solicitaPLP();
             inValue.idPlpMaster = idPlpMaster;
             inValue.numEtiqueta = numEtiqueta;
@@ -8896,13 +10397,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitaPLPAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse Controle_de_livros.ClienteServices.AtendeCliente.getStatusCartaoPostagem(Controle_de_livros.ClienteServices.getStatusCartaoPostagem request) {
+        Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse Controle_de_livros.ClienteServices.AtendeCliente.getStatusCartaoPostagem(Controle_de_livros.ClienteServices.getStatusCartaoPostagem request)
+        {
             return base.Channel.getStatusCartaoPostagem(request);
         }
-        
-        public Controle_de_livros.ClienteServices.statusCartao getStatusCartaoPostagem(string numeroCartaoPostagem, string usuario, string senha) {
+
+        public Controle_de_livros.ClienteServices.statusCartao getStatusCartaoPostagem(string numeroCartaoPostagem, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.getStatusCartaoPostagem inValue = new Controle_de_livros.ClienteServices.getStatusCartaoPostagem();
             inValue.numeroCartaoPostagem = numeroCartaoPostagem;
             inValue.usuario = usuario;
@@ -8910,26 +10413,30 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).getStatusCartaoPostagem(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse> Controle_de_livros.ClienteServices.AtendeCliente.getStatusCartaoPostagemAsync(Controle_de_livros.ClienteServices.getStatusCartaoPostagem request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse> Controle_de_livros.ClienteServices.AtendeCliente.getStatusCartaoPostagemAsync(Controle_de_livros.ClienteServices.getStatusCartaoPostagem request)
+        {
             return base.Channel.getStatusCartaoPostagemAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse> getStatusCartaoPostagemAsync(string numeroCartaoPostagem, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusCartaoPostagemResponse> getStatusCartaoPostagemAsync(string numeroCartaoPostagem, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.getStatusCartaoPostagem inValue = new Controle_de_livros.ClienteServices.getStatusCartaoPostagem();
             inValue.numeroCartaoPostagem = numeroCartaoPostagem;
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).getStatusCartaoPostagemAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.verificaModalTransporteResponse Controle_de_livros.ClienteServices.AtendeCliente.verificaModalTransporte(Controle_de_livros.ClienteServices.verificaModalTransporte request) {
+        Controle_de_livros.ClienteServices.verificaModalTransporteResponse Controle_de_livros.ClienteServices.AtendeCliente.verificaModalTransporte(Controle_de_livros.ClienteServices.verificaModalTransporte request)
+        {
             return base.Channel.verificaModalTransporte(request);
         }
-        
-        public string verificaModalTransporte(string codigoServico, string cepOrigem, string cepDestino, string usuario, string senha) {
+
+        public string verificaModalTransporte(string codigoServico, string cepOrigem, string cepDestino, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.verificaModalTransporte inValue = new Controle_de_livros.ClienteServices.verificaModalTransporte();
             inValue.codigoServico = codigoServico;
             inValue.cepOrigem = cepOrigem;
@@ -8939,13 +10446,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.verificaModalTransporteResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).verificaModalTransporte(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaModalTransporteResponse> Controle_de_livros.ClienteServices.AtendeCliente.verificaModalTransporteAsync(Controle_de_livros.ClienteServices.verificaModalTransporte request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaModalTransporteResponse> Controle_de_livros.ClienteServices.AtendeCliente.verificaModalTransporteAsync(Controle_de_livros.ClienteServices.verificaModalTransporte request)
+        {
             return base.Channel.verificaModalTransporteAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaModalTransporteResponse> verificaModalTransporteAsync(string codigoServico, string cepOrigem, string cepDestino, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.verificaModalTransporteResponse> verificaModalTransporteAsync(string codigoServico, string cepOrigem, string cepDestino, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.verificaModalTransporte inValue = new Controle_de_livros.ClienteServices.verificaModalTransporte();
             inValue.codigoServico = codigoServico;
             inValue.cepOrigem = cepOrigem;
@@ -8954,34 +10463,40 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).verificaModalTransporteAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaDataAtualResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaDataAtual(Controle_de_livros.ClienteServices.buscaDataAtual request) {
+        Controle_de_livros.ClienteServices.buscaDataAtualResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaDataAtual(Controle_de_livros.ClienteServices.buscaDataAtual request)
+        {
             return base.Channel.buscaDataAtual(request);
         }
-        
-        public System.DateTime buscaDataAtual() {
+
+        public System.DateTime buscaDataAtual()
+        {
             Controle_de_livros.ClienteServices.buscaDataAtual inValue = new Controle_de_livros.ClienteServices.buscaDataAtual();
             Controle_de_livros.ClienteServices.buscaDataAtualResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaDataAtual(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaDataAtualResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaDataAtualAsync(Controle_de_livros.ClienteServices.buscaDataAtual request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaDataAtualResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaDataAtualAsync(Controle_de_livros.ClienteServices.buscaDataAtual request)
+        {
             return base.Channel.buscaDataAtualAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaDataAtualResponse> buscaDataAtualAsync() {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaDataAtualResponse> buscaDataAtualAsync()
+        {
             Controle_de_livros.ClienteServices.buscaDataAtual inValue = new Controle_de_livros.ClienteServices.buscaDataAtual();
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaDataAtualAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaTarifaValeResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaTarifaVale(Controle_de_livros.ClienteServices.buscaTarifaVale request) {
+        Controle_de_livros.ClienteServices.buscaTarifaValeResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaTarifaVale(Controle_de_livros.ClienteServices.buscaTarifaVale request)
+        {
             return base.Channel.buscaTarifaVale(request);
         }
-        
-        public Controle_de_livros.ClienteServices.valePostal buscaTarifaVale(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double valorDeclarado, string servicoAdicional) {
+
+        public Controle_de_livros.ClienteServices.valePostal buscaTarifaVale(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double valorDeclarado, string servicoAdicional)
+        {
             Controle_de_livros.ClienteServices.buscaTarifaVale inValue = new Controle_de_livros.ClienteServices.buscaTarifaVale();
             inValue.codAdministrativo = codAdministrativo;
             inValue.usuario = usuario;
@@ -8999,13 +10514,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.buscaTarifaValeResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaTarifaVale(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaTarifaValeResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaTarifaValeAsync(Controle_de_livros.ClienteServices.buscaTarifaVale request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaTarifaValeResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaTarifaValeAsync(Controle_de_livros.ClienteServices.buscaTarifaVale request)
+        {
             return base.Channel.buscaTarifaValeAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaTarifaValeResponse> buscaTarifaValeAsync(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double valorDeclarado, string servicoAdicional) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaTarifaValeResponse> buscaTarifaValeAsync(string codAdministrativo, string usuario, string senha, string codServico, string cepOrigem, string cepDestino, string peso, int codFormato, double comprimento, double altura, double largura, double valorDeclarado, string servicoAdicional)
+        {
             Controle_de_livros.ClienteServices.buscaTarifaVale inValue = new Controle_de_livros.ClienteServices.buscaTarifaVale();
             inValue.codAdministrativo = codAdministrativo;
             inValue.usuario = usuario;
@@ -9022,13 +10539,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.servicoAdicional = servicoAdicional;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaTarifaValeAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemSimultanea(Controle_de_livros.ClienteServices.validarPostagemSimultanea request) {
+        Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemSimultanea(Controle_de_livros.ClienteServices.validarPostagemSimultanea request)
+        {
             return base.Channel.validarPostagemSimultanea(request);
         }
-        
-        public bool validarPostagemSimultanea(int codAdministrativo, int codigoServico, string idCartaoPostagem, string cepDestinatario, Controle_de_livros.ClienteServices.coletaSimultanea coleta, string usuario, string senha) {
+
+        public bool validarPostagemSimultanea(int codAdministrativo, int codigoServico, string idCartaoPostagem, string cepDestinatario, Controle_de_livros.ClienteServices.coletaSimultanea coleta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validarPostagemSimultanea inValue = new Controle_de_livros.ClienteServices.validarPostagemSimultanea();
             inValue.codAdministrativo = codAdministrativo;
             inValue.codigoServico = codigoServico;
@@ -9040,13 +10559,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validarPostagemSimultanea(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse> Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemSimultaneaAsync(Controle_de_livros.ClienteServices.validarPostagemSimultanea request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse> Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemSimultaneaAsync(Controle_de_livros.ClienteServices.validarPostagemSimultanea request)
+        {
             return base.Channel.validarPostagemSimultaneaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse> validarPostagemSimultaneaAsync(int codAdministrativo, int codigoServico, string idCartaoPostagem, string cepDestinatario, Controle_de_livros.ClienteServices.coletaSimultanea coleta, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemSimultaneaResponse> validarPostagemSimultaneaAsync(int codAdministrativo, int codigoServico, string idCartaoPostagem, string cepDestinatario, Controle_de_livros.ClienteServices.coletaSimultanea coleta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validarPostagemSimultanea inValue = new Controle_de_livros.ClienteServices.validarPostagemSimultanea();
             inValue.codAdministrativo = codAdministrativo;
             inValue.codigoServico = codigoServico;
@@ -9057,86 +10578,100 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validarPostagemSimultaneaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.getStatusPLPResponse Controle_de_livros.ClienteServices.AtendeCliente.getStatusPLP(Controle_de_livros.ClienteServices.getStatusPLP request) {
+        Controle_de_livros.ClienteServices.getStatusPLPResponse Controle_de_livros.ClienteServices.AtendeCliente.getStatusPLP(Controle_de_livros.ClienteServices.getStatusPLP request)
+        {
             return base.Channel.getStatusPLP(request);
         }
-        
-        public Controle_de_livros.ClienteServices.statusPlp getStatusPLP(Controle_de_livros.ClienteServices.objetoPostal[] arg0, string arg1) {
+
+        public Controle_de_livros.ClienteServices.statusPlp getStatusPLP(Controle_de_livros.ClienteServices.objetoPostal[] arg0, string arg1)
+        {
             Controle_de_livros.ClienteServices.getStatusPLP inValue = new Controle_de_livros.ClienteServices.getStatusPLP();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
             Controle_de_livros.ClienteServices.getStatusPLPResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).getStatusPLP(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusPLPResponse> Controle_de_livros.ClienteServices.AtendeCliente.getStatusPLPAsync(Controle_de_livros.ClienteServices.getStatusPLP request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusPLPResponse> Controle_de_livros.ClienteServices.AtendeCliente.getStatusPLPAsync(Controle_de_livros.ClienteServices.getStatusPLP request)
+        {
             return base.Channel.getStatusPLPAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusPLPResponse> getStatusPLPAsync(Controle_de_livros.ClienteServices.objetoPostal[] arg0, string arg1) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.getStatusPLPResponse> getStatusPLPAsync(Controle_de_livros.ClienteServices.objetoPostal[] arg0, string arg1)
+        {
             Controle_de_livros.ClienteServices.getStatusPLP inValue = new Controle_de_livros.ClienteServices.getStatusPLP();
             inValue.arg0 = arg0;
             inValue.arg1 = arg1;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).getStatusPLPAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarServicosAdicionais(Controle_de_livros.ClienteServices.pesquisarServicosAdicionais request) {
+        Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse Controle_de_livros.ClienteServices.AtendeCliente.pesquisarServicosAdicionais(Controle_de_livros.ClienteServices.pesquisarServicosAdicionais request)
+        {
             return base.Channel.pesquisarServicosAdicionais(request);
         }
-        
-        public Controle_de_livros.ClienteServices.servicoAdicionalTO[] pesquisarServicosAdicionais(string codigo) {
+
+        public Controle_de_livros.ClienteServices.servicoAdicionalTO[] pesquisarServicosAdicionais(string codigo)
+        {
             Controle_de_livros.ClienteServices.pesquisarServicosAdicionais inValue = new Controle_de_livros.ClienteServices.pesquisarServicosAdicionais();
             inValue.codigo = codigo;
             Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarServicosAdicionais(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarServicosAdicionaisAsync(Controle_de_livros.ClienteServices.pesquisarServicosAdicionais request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse> Controle_de_livros.ClienteServices.AtendeCliente.pesquisarServicosAdicionaisAsync(Controle_de_livros.ClienteServices.pesquisarServicosAdicionais request)
+        {
             return base.Channel.pesquisarServicosAdicionaisAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse> pesquisarServicosAdicionaisAsync(string codigo) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.pesquisarServicosAdicionaisResponse> pesquisarServicosAdicionaisAsync(string codigo)
+        {
             Controle_de_livros.ClienteServices.pesquisarServicosAdicionais inValue = new Controle_de_livros.ClienteServices.pesquisarServicosAdicionais();
             inValue.codigo = codigo;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).pesquisarServicosAdicionaisAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosXServicosAdicionais(Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais request) {
+        Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosXServicosAdicionais(Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais request)
+        {
             return base.Channel.buscaServicosXServicosAdicionais(request);
         }
-        
-        public string[] buscaServicosXServicosAdicionais(string usuario, string senha) {
+
+        public string[] buscaServicosXServicosAdicionais(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais inValue = new Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais();
             inValue.usuario = usuario;
             inValue.senha = senha;
             Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosXServicosAdicionais(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosXServicosAdicionaisAsync(Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosXServicosAdicionaisAsync(Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais request)
+        {
             return base.Channel.buscaServicosXServicosAdicionaisAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse> buscaServicosXServicosAdicionaisAsync(string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionaisResponse> buscaServicosXServicosAdicionaisAsync(string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais inValue = new Controle_de_livros.ClienteServices.buscaServicosXServicosAdicionais();
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosXServicosAdicionaisAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.cancelarPedidoScolResponse Controle_de_livros.ClienteServices.AtendeCliente.cancelarPedidoScol(Controle_de_livros.ClienteServices.cancelarPedidoScol request) {
+        Controle_de_livros.ClienteServices.cancelarPedidoScolResponse Controle_de_livros.ClienteServices.AtendeCliente.cancelarPedidoScol(Controle_de_livros.ClienteServices.cancelarPedidoScol request)
+        {
             return base.Channel.cancelarPedidoScol(request);
         }
-        
-        public Controle_de_livros.ClienteServices.retornoCancelamento cancelarPedidoScol(string codAdministrativo, string idPostagem, string tipo, string usuario, string senha) {
+
+        public Controle_de_livros.ClienteServices.retornoCancelamento cancelarPedidoScol(string codAdministrativo, string idPostagem, string tipo, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.cancelarPedidoScol inValue = new Controle_de_livros.ClienteServices.cancelarPedidoScol();
             inValue.codAdministrativo = codAdministrativo;
             inValue.idPostagem = idPostagem;
@@ -9146,13 +10681,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.cancelarPedidoScolResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).cancelarPedidoScol(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarPedidoScolResponse> Controle_de_livros.ClienteServices.AtendeCliente.cancelarPedidoScolAsync(Controle_de_livros.ClienteServices.cancelarPedidoScol request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarPedidoScolResponse> Controle_de_livros.ClienteServices.AtendeCliente.cancelarPedidoScolAsync(Controle_de_livros.ClienteServices.cancelarPedidoScol request)
+        {
             return base.Channel.cancelarPedidoScolAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarPedidoScolResponse> cancelarPedidoScolAsync(string codAdministrativo, string idPostagem, string tipo, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.cancelarPedidoScolResponse> cancelarPedidoScolAsync(string codAdministrativo, string idPostagem, string tipo, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.cancelarPedidoScol inValue = new Controle_de_livros.ClienteServices.cancelarPedidoScol();
             inValue.codAdministrativo = codAdministrativo;
             inValue.idPostagem = idPostagem;
@@ -9161,13 +10698,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).cancelarPedidoScolAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.bloquearObjetoResponse Controle_de_livros.ClienteServices.AtendeCliente.bloquearObjeto(Controle_de_livros.ClienteServices.bloquearObjeto request) {
+        Controle_de_livros.ClienteServices.bloquearObjetoResponse Controle_de_livros.ClienteServices.AtendeCliente.bloquearObjeto(Controle_de_livros.ClienteServices.bloquearObjeto request)
+        {
             return base.Channel.bloquearObjeto(request);
         }
-        
-        public string bloquearObjeto(string numeroEtiqueta, long idPlp, Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio, Controle_de_livros.ClienteServices.acao acao, string usuario, string senha) {
+
+        public string bloquearObjeto(string numeroEtiqueta, long idPlp, Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio, Controle_de_livros.ClienteServices.acao acao, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.bloquearObjeto inValue = new Controle_de_livros.ClienteServices.bloquearObjeto();
             inValue.numeroEtiqueta = numeroEtiqueta;
             inValue.idPlp = idPlp;
@@ -9178,13 +10717,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.bloquearObjetoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).bloquearObjeto(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.bloquearObjetoResponse> Controle_de_livros.ClienteServices.AtendeCliente.bloquearObjetoAsync(Controle_de_livros.ClienteServices.bloquearObjeto request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.bloquearObjetoResponse> Controle_de_livros.ClienteServices.AtendeCliente.bloquearObjetoAsync(Controle_de_livros.ClienteServices.bloquearObjeto request)
+        {
             return base.Channel.bloquearObjetoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.bloquearObjetoResponse> bloquearObjetoAsync(string numeroEtiqueta, long idPlp, Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio, Controle_de_livros.ClienteServices.acao acao, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.bloquearObjetoResponse> bloquearObjetoAsync(string numeroEtiqueta, long idPlp, Controle_de_livros.ClienteServices.tipoBloqueio tipoBloqueio, Controle_de_livros.ClienteServices.acao acao, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.bloquearObjeto inValue = new Controle_de_livros.ClienteServices.bloquearObjeto();
             inValue.numeroEtiqueta = numeroEtiqueta;
             inValue.idPlp = idPlp;
@@ -9194,13 +10735,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).bloquearObjetoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaContratoResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaContrato(Controle_de_livros.ClienteServices.buscaContrato request) {
+        Controle_de_livros.ClienteServices.buscaContratoResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaContrato(Controle_de_livros.ClienteServices.buscaContrato request)
+        {
             return base.Channel.buscaContrato(request);
         }
-        
-        public Controle_de_livros.ClienteServices.contratoERP buscaContrato(string numero, long diretoria, string usuario, string senha) {
+
+        public Controle_de_livros.ClienteServices.contratoERP buscaContrato(string numero, long diretoria, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaContrato inValue = new Controle_de_livros.ClienteServices.buscaContrato();
             inValue.numero = numero;
             inValue.diretoria = diretoria;
@@ -9209,13 +10752,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.buscaContratoResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaContrato(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaContratoResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaContratoAsync(Controle_de_livros.ClienteServices.buscaContrato request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaContratoResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaContratoAsync(Controle_de_livros.ClienteServices.buscaContrato request)
+        {
             return base.Channel.buscaContratoAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaContratoResponse> buscaContratoAsync(string numero, long diretoria, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaContratoResponse> buscaContratoAsync(string numero, long diretoria, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaContrato inValue = new Controle_de_livros.ClienteServices.buscaContrato();
             inValue.numero = numero;
             inValue.diretoria = diretoria;
@@ -9223,13 +10768,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaContratoAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.solicitaEtiquetasResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitaEtiquetas(Controle_de_livros.ClienteServices.solicitaEtiquetas request) {
+        Controle_de_livros.ClienteServices.solicitaEtiquetasResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitaEtiquetas(Controle_de_livros.ClienteServices.solicitaEtiquetas request)
+        {
             return base.Channel.solicitaEtiquetas(request);
         }
-        
-        public string solicitaEtiquetas(string tipoDestinatario, string identificador, long idServico, int qtdEtiquetas, string usuario, string senha) {
+
+        public string solicitaEtiquetas(string tipoDestinatario, string identificador, long idServico, int qtdEtiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitaEtiquetas inValue = new Controle_de_livros.ClienteServices.solicitaEtiquetas();
             inValue.tipoDestinatario = tipoDestinatario;
             inValue.identificador = identificador;
@@ -9240,13 +10787,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.solicitaEtiquetasResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitaEtiquetas(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaEtiquetasResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitaEtiquetasAsync(Controle_de_livros.ClienteServices.solicitaEtiquetas request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaEtiquetasResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitaEtiquetasAsync(Controle_de_livros.ClienteServices.solicitaEtiquetas request)
+        {
             return base.Channel.solicitaEtiquetasAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaEtiquetasResponse> solicitaEtiquetasAsync(string tipoDestinatario, string identificador, long idServico, int qtdEtiquetas, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaEtiquetasResponse> solicitaEtiquetasAsync(string tipoDestinatario, string identificador, long idServico, int qtdEtiquetas, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitaEtiquetas inValue = new Controle_de_livros.ClienteServices.solicitaEtiquetas();
             inValue.tipoDestinatario = tipoDestinatario;
             inValue.identificador = identificador;
@@ -9256,13 +10805,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitaEtiquetasAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.solicitaXmlPlpResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitaXmlPlp(Controle_de_livros.ClienteServices.solicitaXmlPlp request) {
+        Controle_de_livros.ClienteServices.solicitaXmlPlpResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitaXmlPlp(Controle_de_livros.ClienteServices.solicitaXmlPlp request)
+        {
             return base.Channel.solicitaXmlPlp(request);
         }
-        
-        public string solicitaXmlPlp(long idPlpMaster, string usuario, string senha) {
+
+        public string solicitaXmlPlp(long idPlpMaster, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitaXmlPlp inValue = new Controle_de_livros.ClienteServices.solicitaXmlPlp();
             inValue.idPlpMaster = idPlpMaster;
             inValue.usuario = usuario;
@@ -9270,26 +10821,30 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.solicitaXmlPlpResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitaXmlPlp(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaXmlPlpResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitaXmlPlpAsync(Controle_de_livros.ClienteServices.solicitaXmlPlp request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaXmlPlpResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitaXmlPlpAsync(Controle_de_livros.ClienteServices.solicitaXmlPlp request)
+        {
             return base.Channel.solicitaXmlPlpAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaXmlPlpResponse> solicitaXmlPlpAsync(long idPlpMaster, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitaXmlPlpResponse> solicitaXmlPlpAsync(long idPlpMaster, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitaXmlPlp inValue = new Controle_de_livros.ClienteServices.solicitaXmlPlp();
             inValue.idPlpMaster = idPlpMaster;
             inValue.usuario = usuario;
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitaXmlPlpAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.validarPostagemReversaResponse Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemReversa(Controle_de_livros.ClienteServices.validarPostagemReversa request) {
+        Controle_de_livros.ClienteServices.validarPostagemReversaResponse Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemReversa(Controle_de_livros.ClienteServices.validarPostagemReversa request)
+        {
             return base.Channel.validarPostagemReversa(request);
         }
-        
-        public bool validarPostagemReversa(string codAdministrativo, string codigoServico, string cepDestinatario, string idCartaoPostagem, Controle_de_livros.ClienteServices.coletaReversa coleta, string usuario, string senha) {
+
+        public bool validarPostagemReversa(string codAdministrativo, string codigoServico, string cepDestinatario, string idCartaoPostagem, Controle_de_livros.ClienteServices.coletaReversa coleta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validarPostagemReversa inValue = new Controle_de_livros.ClienteServices.validarPostagemReversa();
             inValue.codAdministrativo = codAdministrativo;
             inValue.codigoServico = codigoServico;
@@ -9301,13 +10856,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.validarPostagemReversaResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validarPostagemReversa(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemReversaResponse> Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemReversaAsync(Controle_de_livros.ClienteServices.validarPostagemReversa request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemReversaResponse> Controle_de_livros.ClienteServices.AtendeCliente.validarPostagemReversaAsync(Controle_de_livros.ClienteServices.validarPostagemReversa request)
+        {
             return base.Channel.validarPostagemReversaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemReversaResponse> validarPostagemReversaAsync(string codAdministrativo, string codigoServico, string cepDestinatario, string idCartaoPostagem, Controle_de_livros.ClienteServices.coletaReversa coleta, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.validarPostagemReversaResponse> validarPostagemReversaAsync(string codAdministrativo, string codigoServico, string cepDestinatario, string idCartaoPostagem, Controle_de_livros.ClienteServices.coletaReversa coleta, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.validarPostagemReversa inValue = new Controle_de_livros.ClienteServices.validarPostagemReversa();
             inValue.codAdministrativo = codAdministrativo;
             inValue.codigoServico = codigoServico;
@@ -9318,13 +10875,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).validarPostagemReversaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaClienteResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaCliente(Controle_de_livros.ClienteServices.buscaCliente request) {
+        Controle_de_livros.ClienteServices.buscaClienteResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaCliente(Controle_de_livros.ClienteServices.buscaCliente request)
+        {
             return base.Channel.buscaCliente(request);
         }
-        
-        public Controle_de_livros.ClienteServices.clienteERP buscaCliente(string idContrato, string idCartaoPostagem, string usuario, string senha) {
+
+        public Controle_de_livros.ClienteServices.clienteERP buscaCliente(string idContrato, string idCartaoPostagem, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaCliente inValue = new Controle_de_livros.ClienteServices.buscaCliente();
             inValue.idContrato = idContrato;
             inValue.idCartaoPostagem = idCartaoPostagem;
@@ -9333,13 +10892,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.buscaClienteResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaCliente(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaClienteResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaClienteAsync(Controle_de_livros.ClienteServices.buscaCliente request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaClienteResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaClienteAsync(Controle_de_livros.ClienteServices.buscaCliente request)
+        {
             return base.Channel.buscaClienteAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaClienteResponse> buscaClienteAsync(string idContrato, string idCartaoPostagem, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaClienteResponse> buscaClienteAsync(string idContrato, string idCartaoPostagem, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaCliente inValue = new Controle_de_livros.ClienteServices.buscaCliente();
             inValue.idContrato = idContrato;
             inValue.idCartaoPostagem = idCartaoPostagem;
@@ -9347,13 +10908,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaClienteAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaPagamentoEntrega(Controle_de_livros.ClienteServices.buscaPagamentoEntrega request) {
+        Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaPagamentoEntrega(Controle_de_livros.ClienteServices.buscaPagamentoEntrega request)
+        {
             return base.Channel.buscaPagamentoEntrega(request);
         }
-        
-        public string buscaPagamentoEntrega(string usuario, string senha, string contrato, string dataInicio, string dataFim, string etiqueta) {
+
+        public string buscaPagamentoEntrega(string usuario, string senha, string contrato, string dataInicio, string dataFim, string etiqueta)
+        {
             Controle_de_livros.ClienteServices.buscaPagamentoEntrega inValue = new Controle_de_livros.ClienteServices.buscaPagamentoEntrega();
             inValue.usuario = usuario;
             inValue.senha = senha;
@@ -9364,13 +10927,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaPagamentoEntrega(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaPagamentoEntregaAsync(Controle_de_livros.ClienteServices.buscaPagamentoEntrega request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaPagamentoEntregaAsync(Controle_de_livros.ClienteServices.buscaPagamentoEntrega request)
+        {
             return base.Channel.buscaPagamentoEntregaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse> buscaPagamentoEntregaAsync(string usuario, string senha, string contrato, string dataInicio, string dataFim, string etiqueta) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaPagamentoEntregaResponse> buscaPagamentoEntregaAsync(string usuario, string senha, string contrato, string dataInicio, string dataFim, string etiqueta)
+        {
             Controle_de_livros.ClienteServices.buscaPagamentoEntrega inValue = new Controle_de_livros.ClienteServices.buscaPagamentoEntrega();
             inValue.usuario = usuario;
             inValue.senha = senha;
@@ -9380,13 +10945,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.etiqueta = etiqueta;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaPagamentoEntregaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.solicitarPostagemScolResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitarPostagemScol(Controle_de_livros.ClienteServices.solicitarPostagemScol request) {
+        Controle_de_livros.ClienteServices.solicitarPostagemScolResponse Controle_de_livros.ClienteServices.AtendeCliente.solicitarPostagemScol(Controle_de_livros.ClienteServices.solicitarPostagemScol request)
+        {
             return base.Channel.solicitarPostagemScol(request);
         }
-        
-        public string solicitarPostagemScol(int codAdministrativo, string xml, string usuario, string senha) {
+
+        public string solicitarPostagemScol(int codAdministrativo, string xml, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitarPostagemScol inValue = new Controle_de_livros.ClienteServices.solicitarPostagemScol();
             inValue.codAdministrativo = codAdministrativo;
             inValue.xml = xml;
@@ -9395,13 +10962,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.solicitarPostagemScolResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitarPostagemScol(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitarPostagemScolResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitarPostagemScolAsync(Controle_de_livros.ClienteServices.solicitarPostagemScol request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitarPostagemScolResponse> Controle_de_livros.ClienteServices.AtendeCliente.solicitarPostagemScolAsync(Controle_de_livros.ClienteServices.solicitarPostagemScol request)
+        {
             return base.Channel.solicitarPostagemScolAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitarPostagemScolResponse> solicitarPostagemScolAsync(int codAdministrativo, string xml, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.solicitarPostagemScolResponse> solicitarPostagemScolAsync(int codAdministrativo, string xml, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.solicitarPostagemScol inValue = new Controle_de_livros.ClienteServices.solicitarPostagemScol();
             inValue.codAdministrativo = codAdministrativo;
             inValue.xml = xml;
@@ -9409,13 +10978,15 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).solicitarPostagemScolAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaServicosResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicos(Controle_de_livros.ClienteServices.buscaServicos request) {
+        Controle_de_livros.ClienteServices.buscaServicosResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaServicos(Controle_de_livros.ClienteServices.buscaServicos request)
+        {
             return base.Channel.buscaServicos(request);
         }
-        
-        public Controle_de_livros.ClienteServices.servicoERP[] buscaServicos(string idContrato, string idCartaoPostagem, string usuario, string senha) {
+
+        public Controle_de_livros.ClienteServices.servicoERP[] buscaServicos(string idContrato, string idCartaoPostagem, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicos inValue = new Controle_de_livros.ClienteServices.buscaServicos();
             inValue.idContrato = idContrato;
             inValue.idCartaoPostagem = idCartaoPostagem;
@@ -9424,13 +10995,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.buscaServicosResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicos(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosAsync(Controle_de_livros.ClienteServices.buscaServicos request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaServicosAsync(Controle_de_livros.ClienteServices.buscaServicos request)
+        {
             return base.Channel.buscaServicosAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosResponse> buscaServicosAsync(string idContrato, string idCartaoPostagem, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaServicosResponse> buscaServicosAsync(string idContrato, string idCartaoPostagem, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaServicos inValue = new Controle_de_livros.ClienteServices.buscaServicos();
             inValue.idContrato = idContrato;
             inValue.idCartaoPostagem = idCartaoPostagem;
@@ -9438,36 +11011,42 @@ namespace Controle_de_livros.ClienteServices {
             inValue.senha = senha;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaServicosAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse Controle_de_livros.ClienteServices.AtendeCliente.obterMensagemParametrizada(Controle_de_livros.ClienteServices.obterMensagemParametrizada request) {
+        Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse Controle_de_livros.ClienteServices.AtendeCliente.obterMensagemParametrizada(Controle_de_livros.ClienteServices.obterMensagemParametrizada request)
+        {
             return base.Channel.obterMensagemParametrizada(request);
         }
-        
-        public Controle_de_livros.ClienteServices.mensagemParametrizadaTO obterMensagemParametrizada(short id) {
+
+        public Controle_de_livros.ClienteServices.mensagemParametrizadaTO obterMensagemParametrizada(short id)
+        {
             Controle_de_livros.ClienteServices.obterMensagemParametrizada inValue = new Controle_de_livros.ClienteServices.obterMensagemParametrizada();
             inValue.id = id;
             Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).obterMensagemParametrizada(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse> Controle_de_livros.ClienteServices.AtendeCliente.obterMensagemParametrizadaAsync(Controle_de_livros.ClienteServices.obterMensagemParametrizada request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse> Controle_de_livros.ClienteServices.AtendeCliente.obterMensagemParametrizadaAsync(Controle_de_livros.ClienteServices.obterMensagemParametrizada request)
+        {
             return base.Channel.obterMensagemParametrizadaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse> obterMensagemParametrizadaAsync(short id) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.obterMensagemParametrizadaResponse> obterMensagemParametrizadaAsync(short id)
+        {
             Controle_de_livros.ClienteServices.obterMensagemParametrizada inValue = new Controle_de_livros.ClienteServices.obterMensagemParametrizada();
             inValue.id = id;
             return ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).obterMensagemParametrizadaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        Controle_de_livros.ClienteServices.buscaOpcoesResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaOpcoes(Controle_de_livros.ClienteServices.buscaOpcoes request) {
+        Controle_de_livros.ClienteServices.buscaOpcoesResponse Controle_de_livros.ClienteServices.AtendeCliente.buscaOpcoes(Controle_de_livros.ClienteServices.buscaOpcoes request)
+        {
             return base.Channel.buscaOpcoes(request);
         }
-        
-        public string buscaOpcoes(string[] listaObjetos, string tipoResultado, string usuario, string senha) {
+
+        public string buscaOpcoes(string[] listaObjetos, string tipoResultado, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaOpcoes inValue = new Controle_de_livros.ClienteServices.buscaOpcoes();
             inValue.listaObjetos = listaObjetos;
             inValue.tipoResultado = tipoResultado;
@@ -9476,13 +11055,15 @@ namespace Controle_de_livros.ClienteServices {
             Controle_de_livros.ClienteServices.buscaOpcoesResponse retVal = ((Controle_de_livros.ClienteServices.AtendeCliente)(this)).buscaOpcoes(inValue);
             return retVal.@return;
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaOpcoesResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaOpcoesAsync(Controle_de_livros.ClienteServices.buscaOpcoes request) {
+        System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaOpcoesResponse> Controle_de_livros.ClienteServices.AtendeCliente.buscaOpcoesAsync(Controle_de_livros.ClienteServices.buscaOpcoes request)
+        {
             return base.Channel.buscaOpcoesAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaOpcoesResponse> buscaOpcoesAsync(string[] listaObjetos, string tipoResultado, string usuario, string senha) {
+
+        public System.Threading.Tasks.Task<Controle_de_livros.ClienteServices.buscaOpcoesResponse> buscaOpcoesAsync(string[] listaObjetos, string tipoResultado, string usuario, string senha)
+        {
             Controle_de_livros.ClienteServices.buscaOpcoes inValue = new Controle_de_livros.ClienteServices.buscaOpcoes();
             inValue.listaObjetos = listaObjetos;
             inValue.tipoResultado = tipoResultado;

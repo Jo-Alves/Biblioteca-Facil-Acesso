@@ -19,11 +19,13 @@ namespace Controle_de_livros
         }
 
         string Disco = Settings.Default["Disco"].ToString(),
-            TempoLimite = Settings.Default["qtdLimiteTempo"].ToString(), QuantidadeLimite = Settings.Default["qtdLimiteEmprestimo"].ToString();
+            TempoLimite = Settings.Default["qtdLimiteTempo"].ToString(), QuantidadeLimite = Settings.Default["qtdLimiteEmprestimo"].ToString(); 
+        bool isBloqueado = bool.Parse(Settings.Default["isBloqueado"].ToString());
+        
 
         private void habilitarBotaoAplicar()
         {
-            if (Disco == cbDiretorio.Text && TempoLimite == ndTempoLimite.Value.ToString() && QuantidadeLimite == cbQuantidadeLimite.Text)
+            if (Disco == cbDiretorio.Text && TempoLimite == ndTempoLimite.Value.ToString() && QuantidadeLimite == cbQuantidadeLimite.Text && cbBloquear.Checked == isBloqueado)
             {
                 btnAplicar.Enabled = false;
             }
@@ -38,6 +40,12 @@ namespace Controle_de_livros
             Settings.Default["Disco"] = cbDiretorio.Text;
             Settings.Default["qtdLimiteEmprestimo"] = cbQuantidadeLimite.Text;
             Settings.Default["qtdLimiteTempo"] = ndTempoLimite.Value.ToString();
+            if (cbBloquear.Checked)
+                Settings.Default["isBloqueado"] = true;
+            else
+            {
+                Settings.Default["isBloqueado"] = false;
+            }
             Settings.Default.Save();
         }
 
@@ -52,9 +60,18 @@ namespace Controle_de_livros
             cbDiretorio.Text =  Settings.Default["Disco"].ToString();
             cbQuantidadeLimite.Text = Settings.Default["qtdLimiteEmprestimo"].ToString();
             ndTempoLimite.Value = decimal.Parse(Settings.Default["qtdLimiteTempo"].ToString());
+            if (isBloqueado)
+            {
+                cbBloquear.Checked = true;
+            }
+            else
+            {
+                cbBloquear.Checked = false;
+            }
+            
         }
 
-        private void BtnAplicar_Click(object sender, EventArgs e)
+        private void btnAplicar_Click(object sender, EventArgs e)
         {
             AplicarConfiguracao();
             btnAplicar.Enabled = false;
@@ -79,7 +96,14 @@ namespace Controle_de_livros
                 cbDiretorio.Text = @"C:\";
                 cbQuantidadeLimite.Text = "1";
                 ndTempoLimite.Value = 10;
+                cbBloquear.Checked = false;
             }
+        }
+
+        private void cbBloquear_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarBotaoAplicar();
+            cbRedefinir.Checked = false;
         }
 
         private void NdTempoLimite_ValueChanged(object sender, EventArgs e)

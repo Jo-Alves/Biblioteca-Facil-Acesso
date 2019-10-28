@@ -44,14 +44,14 @@ namespace Controle_de_livros
                     try
                     {
                         CadastrarLogin.Cadastrar();
-                        MessageBox.Show("Login cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Login cadastrado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         confirmacao = "Cadastrado com sucesso";
                         txt_Senha.Clear();
                         txt_Usuario.Clear();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else

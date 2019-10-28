@@ -136,7 +136,7 @@
           <xs:element minOccurs="0" name="diametro" type="xs:double" />
           <xs:element minOccurs="0" name="codMaoPropria" type="xs:string" />
           <xs:element minOccurs="0" name="valorDeclarado" type="xs:double" />
-          <xs:element minOccurs="0" name="codAvisoRecebimento" type="xs:string" />
+          <xs:element minOccurs="0" name="codBiblioteca Fácil AcessoRecebimento" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="calculaTarifaServicoResponse">

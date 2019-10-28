@@ -33,7 +33,7 @@ namespace Controle_de_livros
             {   
                 SqlConnection conexao = new SqlConnection(stringConn);
                 conexao.Open();
-                _sql = "SELECT DISTINCT Titulo, Autor, Genero, ESTANTE FROM Livro_Literario where Genero like '" + txt_Genero.Text.Trim() + "%' ORDER BY Titulo";
+                _sql = "SELECT DISTINCT Titulo, Autor, Genero, ESTANTE FROM Livro_Literario where Genero like '%" + txt_Genero.Text.Trim() + "%' ORDER BY Titulo";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 DataTable table = new DataTable();
@@ -44,7 +44,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Gênero não encontrado(a)!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Gênero não encontrado(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 conexao.Close();
             }
@@ -133,7 +133,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -158,7 +158,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -260,7 +260,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

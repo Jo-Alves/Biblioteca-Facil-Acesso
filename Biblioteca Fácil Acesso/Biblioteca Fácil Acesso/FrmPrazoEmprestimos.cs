@@ -52,12 +52,16 @@ namespace Controle_de_livros
                 dgvPrazosEmprestimos.Rows[countLinhas].Cells[6].Value = dataRow["Turma"].ToString();
                 dgvPrazosEmprestimos.Rows[countLinhas].Cells[7].Value = dataRow["Ocupacao"].ToString();
                 dgvPrazosEmprestimos.Rows[countLinhas].Selected = false;
-              
+
                 //if(opcao == "Todas as datas" || opcao == "Vencidas")
-                if(DateTime.Parse(dataRow["Prazo_Entrega"].ToString()) < DateTime.Parse(DateTime.Now.ToShortDateString()))
+                if (DateTime.Parse(dataRow["Prazo_Entrega"].ToString()) < DateTime.Parse(DateTime.Now.ToShortDateString()))
                 {
                     dgvPrazosEmprestimos.Rows[countLinhas].DefaultCellStyle.BackColor = Color.Red;
                     dgvPrazosEmprestimos.Rows[countLinhas].DefaultCellStyle.ForeColor = Color.White;
+                }
+                else if (DateTime.Parse(dataRow["Prazo_Entrega"].ToString()) == DateTime.Parse(DateTime.Now.ToShortDateString()))
+                {
+                    dgvPrazosEmprestimos.Rows[countLinhas].DefaultCellStyle.BackColor = Color.Yellow;
                 }
             }
         }

@@ -59,7 +59,7 @@ namespace Controle_de_livros
                 }
             }
             else
-                MessageBox.Show("É necessário buscar o diretório onde encontra o arquivo de backup para a restaraução do sistema!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("É necessário buscar o diretório onde encontra o arquivo de backup para a restaraução do sistema!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void RestauracaoSistema_FormClosed(object sender, FormClosedEventArgs e)

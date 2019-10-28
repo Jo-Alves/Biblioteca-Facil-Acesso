@@ -31,7 +31,7 @@ namespace Controle_de_livros
         private void atualizar_Grid()
         {
             conexao = new SqlConnection(stringConn);
-            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Ano, Turma FROM Usuario WHERE Ocupacao = 'Aluno' ORDER BY Nome_Usuario";
+            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Ano, Turma, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone FROM Usuario WHERE Ocupacao = 'Aluno' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
             table = new DataTable();
@@ -44,23 +44,6 @@ namespace Controle_de_livros
         SqlConnection conexao;
         SqlDataAdapter adapter;
         DataTable table;
-       
-        private void DadosUsuario()
-        {
-            conexao = new SqlConnection(stringConn);
-            _sql = "SELECT * FROM Usuario WHERE Cod_Usuario = " + txt_Codigo.Text;
-            adapter = new SqlDataAdapter(_sql, conexao);
-            adapter.SelectCommand.CommandText = _sql;
-            table = new DataTable();
-            adapter.Fill(table);
-            if (table.Rows.Count > 0)
-            {
-                txt_Codigo.Text = table.Rows[0]["Cod_Usuario"].ToString();
-                txt_Turma.Text = table.Rows[0]["Turma"].ToString();
-                txt_Ano.Text = table.Rows[0]["Ano"].ToString();
-            }
-
-        }
 
         private void verificarEmprestimoLivroDidatico()
         {
@@ -98,7 +81,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -109,8 +92,16 @@ namespace Controle_de_livros
 
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
+
             atualizar_Grid();
             txt_Ano.Clear();
+            txtBairro.Clear();
+            txtCep.Clear();
+            txtCidade.Clear();
+            txtUF.Clear();
+            txt_Endereco.Clear();
+            txt_Numero.Clear();
+            txt_Telefone.Clear();
             txt_Codigo.Clear();
             txt_QuantidadeLivroLiterarioEmprestado.Clear();
             txt_decisaoLivroDidatico.Clear();
@@ -146,7 +137,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Realize a busca para verificar quais livros estão em mãos do usuário!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Realize a busca para verificar quais livros estão em mãos do usuário!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -159,14 +150,14 @@ namespace Controle_de_livros
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_Buscar_Click_1(sender, e);
+                btn_Buscar_Click(sender, e);
             }
         }
 
-        private void btn_Buscar_Click_1(object sender, EventArgs e)
+        private void btn_Buscar_Click(object sender, EventArgs e)
         {
             conexao = new SqlConnection(stringConn);
-            _sql = "SELECT  Cod_Usuario AS Código, Nome_Usuario AS Nome, Ano, Turma FROM Usuario WHERE Ocupacao = 'Aluno' AND Nome_Usuario LIKE '" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
+            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Ano, Turma, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone FROM Usuario WHERE Ocupacao = 'Aluno' AND Nome_Usuario LIKE '%" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
             table = new DataTable();
@@ -176,15 +167,15 @@ namespace Controle_de_livros
                 dataGridView_Nome.DataSource = table;
             }
             else
-                MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Aluno não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
-        private void cb_Nome_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void cb_Nome_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
                 conexao = new SqlConnection(stringConn);
-                _sql = "SELECT  Cod_Usuario AS Código, Nome_Usuario AS Nome, Ano, Turma FROM Usuario WHERE Ocupacao = 'Aluno' AND Nome_Usuario LIKE '" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
+                _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Ano, Turma, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone from Usuario WHERE Ocupacao = 'Aluno' AND Nome_Usuario LIKE '%" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
                 adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 table = new DataTable();
@@ -196,16 +187,11 @@ namespace Controle_de_livros
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void txt_Codigo_TextChanged_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cb_Nome_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void cb_Nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             //aceita só letras
             if (Char.IsDigit(e.KeyChar) && e.KeyChar != (Char)8)
@@ -214,30 +200,31 @@ namespace Controle_de_livros
             }
         }
 
-        private void cb_Nome_KeyDown_1(object sender, KeyEventArgs e)
+        private void cb_Nome_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_Buscar_Click_1(sender, e);
+                btn_Buscar_Click(sender, e);
             }
-        }
-
-        private void btn_Sair_Click_1(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void dataGridView_Nome_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int Cont = e.RowIndex;
             if (Cont >= 0)
-            {
+            {               
                 DataGridViewRow Linha = dataGridView_Nome.Rows[e.RowIndex];
                 txt_Codigo.Text = Linha.Cells[0].Value.ToString();
                 nome = Linha.Cells[1].Value.ToString();
-                txt_Ano.Text = Linha.Cells[1].Value.ToString();
-                txt_Turma.Text = Linha.Cells[2].Value.ToString();
-
+                txt_Ano.Text = Linha.Cells[2].Value.ToString();
+                txt_Turma.Text = Linha.Cells[3].Value.ToString();
+                txtCep.Text = Linha.Cells[4].Value.ToString();
+                txtBairro.Text = Linha.Cells[5].Value.ToString();
+                txt_Endereco.Text = Linha.Cells[6].Value.ToString();
+                txt_Numero.Text = Linha.Cells[7].Value.ToString();
+                txtCidade.Text = Linha.Cells[8].Value.ToString();
+                txtUF.Text = Linha.Cells[9].Value.ToString();
+                txt_Telefone.Text = Linha.Cells[10].Value.ToString();              
                 if (txt_Codigo.Text != "")
                 {
                     if(VerificarSituacaoLivrosLiterariosEmprestados() == 0)

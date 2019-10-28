@@ -163,6 +163,11 @@
             this.num_QuantidadeTotalCadastrado.BackColor = System.Drawing.Color.White;
             this.num_QuantidadeTotalCadastrado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.num_QuantidadeTotalCadastrado.Location = new System.Drawing.Point(410, 138);
+            this.num_QuantidadeTotalCadastrado.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.num_QuantidadeTotalCadastrado.Name = "num_QuantidadeTotalCadastrado";
             this.num_QuantidadeTotalCadastrado.ReadOnly = true;
             this.num_QuantidadeTotalCadastrado.Size = new System.Drawing.Size(120, 26);
@@ -173,6 +178,11 @@
             this.num_QuantidadeDisponivel.BackColor = System.Drawing.Color.White;
             this.num_QuantidadeDisponivel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.num_QuantidadeDisponivel.Location = new System.Drawing.Point(410, 170);
+            this.num_QuantidadeDisponivel.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.num_QuantidadeDisponivel.Name = "num_QuantidadeDisponivel";
             this.num_QuantidadeDisponivel.ReadOnly = true;
             this.num_QuantidadeDisponivel.Size = new System.Drawing.Size(120, 26);
@@ -183,6 +193,11 @@
             this.num_QuantidadeEmprestadas.BackColor = System.Drawing.Color.White;
             this.num_QuantidadeEmprestadas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.num_QuantidadeEmprestadas.Location = new System.Drawing.Point(410, 204);
+            this.num_QuantidadeEmprestadas.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
             this.num_QuantidadeEmprestadas.Name = "num_QuantidadeEmprestadas";
             this.num_QuantidadeEmprestadas.ReadOnly = true;
             this.num_QuantidadeEmprestadas.Size = new System.Drawing.Size(120, 26);
@@ -221,7 +236,7 @@
             this.btn_Limpar.UseVisualStyleBackColor = true;
             this.btn_Limpar.Click += new System.EventHandler(this.btn_Limpar_Click);
             // 
-            // Buscar_livros_Literarios
+            // FrmBuscarLivrosLiterarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,7 +261,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "Buscar_livros_Literarios";
+            this.Name = "FrmBuscarLivrosLiterarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BUSCAR LÍVROS LITERÁRIOS";
             this.Load += new System.EventHandler(this.Buscar_livros_Literarios_Load);

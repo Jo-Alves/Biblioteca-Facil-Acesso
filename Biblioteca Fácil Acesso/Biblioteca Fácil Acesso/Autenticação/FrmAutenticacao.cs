@@ -48,13 +48,13 @@ namespace Controle_de_livros
                     }
                     else
                     {
-                        MessageBox.Show("Senha Incorreta!", "Erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Senha Incorreta!", "Biblioteca Fácil Acesso de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         txt_Senha.Clear();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Campo da Senha vazio. Preencha o campo para entrar no sistema!", "Erro de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Campo da Senha vazio. Preencha o campo para entrar no sistema!", "Biblioteca Fácil Acesso de autenticação", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -253,7 +253,7 @@ namespace Controle_de_livros
             }
             else
             {
-                DialogResult dr = MessageBox.Show("É a primeira instalação?", "Aviso do sistema", MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                DialogResult dr = MessageBox.Show("É a primeira instalação?", "Biblioteca Fácil Acesso do sistema", MessageBoxButtons.YesNo,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
                 if (dr == DialogResult.Yes)
                 {
                     createDataBase();

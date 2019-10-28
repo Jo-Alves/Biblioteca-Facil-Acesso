@@ -9,11 +9,11 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TabelaEmprestimoLivroLiterarioOutroTableAdapter" GeneratorDataComponentClassName="TabelaEmprestimoLivroLiterarioOutroTableAdapter" Name="TabelaEmprestimoLivroLiterarioOutro" UserDataComponentName="TabelaEmprestimoLivroLiterarioOutroTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT        Livro_Literario.Titulo, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Emprestimo_Livro_Literario.Data_Solicitacao, 
-                         Emprestimo_Livro_Literario.Prazo_Entrega
+                    <CommandText>SELECT        Livro_Literario.Titulo, Usuario.Nome_Usuario, Emprestimo_Livro_Literario.Data_Solicitacao, Emprestimo_Livro_Literario.Prazo_Entrega, 
+                         Emprestimo_Livro_Literario.Cod_Usuario, Usuario.Bairro, Usuario.Endereco, Usuario.Numero, Usuario.Cidade, Usuario.Estado, Usuario.Telefone
 FROM            Emprestimo_Livro_Literario INNER JOIN
                          Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN
                          Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario
@@ -25,10 +25,16 @@ WHERE        (Usuario.Ocupacao = 'Outros') AND (Emprestimo_Livro_Literario.Data_
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="Titulo" DataSetColumn="Titulo" />
-              <Mapping SourceColumn="Cod_Usuario" DataSetColumn="Cod_Usuario" />
               <Mapping SourceColumn="Nome_Usuario" DataSetColumn="Nome_Usuario" />
               <Mapping SourceColumn="Data_Solicitacao" DataSetColumn="Data_Solicitacao" />
               <Mapping SourceColumn="Prazo_Entrega" DataSetColumn="Prazo_Entrega" />
+              <Mapping SourceColumn="Cod_Usuario" DataSetColumn="Cod_Usuario" />
+              <Mapping SourceColumn="Bairro" DataSetColumn="Bairro" />
+              <Mapping SourceColumn="Endereco" DataSetColumn="Endereco" />
+              <Mapping SourceColumn="Numero" DataSetColumn="Numero" />
+              <Mapping SourceColumn="Cidade" DataSetColumn="Cidade" />
+              <Mapping SourceColumn="Estado" DataSetColumn="Estado" />
+              <Mapping SourceColumn="Telefone" DataSetColumn="Telefone" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -112,6 +118,58 @@ WHERE        (Usuario.Ocupacao = 'Funcionário') AND (Emprestimo_Livro_Literario
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TabelaEmprestimoLivroDidaticoTableAdapter" GeneratorDataComponentClassName="TabelaEmprestimoLivroDidaticoTableAdapter" Name="TabelaEmprestimoLivroDidatico" UserDataComponentName="TabelaEmprestimoLivroDidaticoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Usuario.Ano, Usuario.Turma, Emprestimo_Livro_Didatico.Data_Solicitacao
+FROM            Emprestimo_Livro_Didatico INNER JOIN
+                         Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro INNER JOIN
+                         Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario
+WHERE        (Emprestimo_Livro_Didatico.Data_Entrega = '')
+ORDER BY Livro_Didatico.Disciplina, Usuario.Nome_Usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Disciplina" DataSetColumn="Disciplina" />
+              <Mapping SourceColumn="Nome_Usuario" DataSetColumn="Nome_Usuario" />
+              <Mapping SourceColumn="Ano" DataSetColumn="Ano" />
+              <Mapping SourceColumn="Turma" DataSetColumn="Turma" />
+              <Mapping SourceColumn="Data_Solicitacao" DataSetColumn="Data_Solicitacao" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TabelaEmprestimoLivroDidaticoDevolvidoTableAdapter" GeneratorDataComponentClassName="TabelaEmprestimoLivroDidaticoDevolvidoTableAdapter" Name="TabelaEmprestimoLivroDidaticoDevolvido" UserDataComponentName="TabelaEmprestimoLivroDidaticoDevolvidoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Usuario.Ano, Usuario.Turma, Emprestimo_Livro_Didatico.Data_Solicitacao, 
+                         Emprestimo_Livro_Didatico.Data_Entrega
+FROM            Emprestimo_Livro_Didatico INNER JOIN
+                         Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro INNER JOIN
+                         Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario
+WHERE        (Emprestimo_Livro_Didatico.Data_Entrega &lt;&gt; '')
+ORDER BY Livro_Didatico.Disciplina, Usuario.Nome_Usuario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Disciplina" DataSetColumn="Disciplina" />
+              <Mapping SourceColumn="Nome_Usuario" DataSetColumn="Nome_Usuario" />
+              <Mapping SourceColumn="Ano" DataSetColumn="Ano" />
+              <Mapping SourceColumn="Turma" DataSetColumn="Turma" />
+              <Mapping SourceColumn="Data_Solicitacao" DataSetColumn="Data_Solicitacao" />
+              <Mapping SourceColumn="Data_Entrega" DataSetColumn="Data_Entrega" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -130,7 +188,6 @@ WHERE        (Usuario.Ocupacao = 'Funcionário') AND (Emprestimo_Livro_Literario
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Cod_Usuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCod_Usuario" msprop:Generator_ColumnPropNameInRow="Cod_Usuario" msprop:Generator_ColumnPropNameInTable="Cod_UsuarioColumn" msprop:Generator_UserColumnName="Cod_Usuario" type="xs:int" />
               <xs:element name="Nome_Usuario" msprop:Generator_ColumnVarNameInTable="columnNome_Usuario" msprop:Generator_ColumnPropNameInRow="Nome_Usuario" msprop:Generator_ColumnPropNameInTable="Nome_UsuarioColumn" msprop:Generator_UserColumnName="Nome_Usuario">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -149,6 +206,49 @@ WHERE        (Usuario.Ocupacao = 'Funcionário') AND (Emprestimo_Livro_Literario
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cod_Usuario" msprop:Generator_ColumnVarNameInTable="columnCod_Usuario" msprop:Generator_ColumnPropNameInRow="Cod_Usuario" msprop:Generator_ColumnPropNameInTable="Cod_UsuarioColumn" msprop:Generator_UserColumnName="Cod_Usuario" type="xs:int" minOccurs="0" />
+              <xs:element name="Bairro" msprop:Generator_ColumnVarNameInTable="columnBairro" msprop:Generator_ColumnPropNameInRow="Bairro" msprop:Generator_ColumnPropNameInTable="BairroColumn" msprop:Generator_UserColumnName="Bairro" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Endereco" msprop:Generator_ColumnVarNameInTable="columnEndereco" msprop:Generator_ColumnPropNameInRow="Endereco" msprop:Generator_ColumnPropNameInTable="EnderecoColumn" msprop:Generator_UserColumnName="Endereco" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Numero" msprop:Generator_ColumnVarNameInTable="columnNumero" msprop:Generator_ColumnPropNameInRow="Numero" msprop:Generator_ColumnPropNameInTable="NumeroColumn" msprop:Generator_UserColumnName="Numero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cidade" msprop:Generator_ColumnVarNameInTable="columnCidade" msprop:Generator_ColumnPropNameInRow="Cidade" msprop:Generator_ColumnPropNameInTable="CidadeColumn" msprop:Generator_UserColumnName="Cidade" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Estado" msprop:Generator_ColumnVarNameInTable="columnEstado" msprop:Generator_ColumnPropNameInRow="Estado" msprop:Generator_ColumnPropNameInTable="EstadoColumn" msprop:Generator_UserColumnName="Estado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telefone" msprop:Generator_ColumnVarNameInTable="columnTelefone" msprop:Generator_ColumnPropNameInRow="Telefone" msprop:Generator_ColumnPropNameInTable="TelefoneColumn" msprop:Generator_UserColumnName="Telefone" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -285,11 +385,96 @@ WHERE        (Usuario.Ocupacao = 'Funcionário') AND (Emprestimo_Livro_Literario
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TabelaEmprestimoLivroDidatico" msprop:Generator_TableClassName="TabelaEmprestimoLivroDidaticoDataTable" msprop:Generator_TableVarName="tableTabelaEmprestimoLivroDidatico" msprop:Generator_RowChangedName="TabelaEmprestimoLivroDidaticoRowChanged" msprop:Generator_TablePropName="TabelaEmprestimoLivroDidatico" msprop:Generator_RowDeletingName="TabelaEmprestimoLivroDidaticoRowDeleting" msprop:Generator_RowChangingName="TabelaEmprestimoLivroDidaticoRowChanging" msprop:Generator_RowEvHandlerName="TabelaEmprestimoLivroDidaticoRowChangeEventHandler" msprop:Generator_RowDeletedName="TabelaEmprestimoLivroDidaticoRowDeleted" msprop:Generator_RowClassName="TabelaEmprestimoLivroDidaticoRow" msprop:Generator_UserTableName="TabelaEmprestimoLivroDidatico" msprop:Generator_RowEvArgName="TabelaEmprestimoLivroDidaticoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Disciplina" msprop:Generator_ColumnVarNameInTable="columnDisciplina" msprop:Generator_ColumnPropNameInRow="Disciplina" msprop:Generator_ColumnPropNameInTable="DisciplinaColumn" msprop:Generator_UserColumnName="Disciplina" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nome_Usuario" msprop:Generator_ColumnVarNameInTable="columnNome_Usuario" msprop:Generator_ColumnPropNameInRow="Nome_Usuario" msprop:Generator_ColumnPropNameInTable="Nome_UsuarioColumn" msprop:Generator_UserColumnName="Nome_Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ano" msprop:Generator_ColumnVarNameInTable="columnAno" msprop:Generator_ColumnPropNameInRow="Ano" msprop:Generator_ColumnPropNameInTable="AnoColumn" msprop:Generator_UserColumnName="Ano" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_Solicitacao" msprop:Generator_ColumnVarNameInTable="columnData_Solicitacao" msprop:Generator_ColumnPropNameInRow="Data_Solicitacao" msprop:Generator_ColumnPropNameInTable="Data_SolicitacaoColumn" msprop:Generator_UserColumnName="Data_Solicitacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TabelaEmprestimoLivroDidaticoDevolvido" msprop:Generator_TableClassName="TabelaEmprestimoLivroDidaticoDevolvidoDataTable" msprop:Generator_TableVarName="tableTabelaEmprestimoLivroDidaticoDevolvido" msprop:Generator_RowChangedName="TabelaEmprestimoLivroDidaticoDevolvidoRowChanged" msprop:Generator_TablePropName="TabelaEmprestimoLivroDidaticoDevolvido" msprop:Generator_RowDeletingName="TabelaEmprestimoLivroDidaticoDevolvidoRowDeleting" msprop:Generator_RowChangingName="TabelaEmprestimoLivroDidaticoDevolvidoRowChanging" msprop:Generator_RowEvHandlerName="TabelaEmprestimoLivroDidaticoDevolvidoRowChangeEventHandler" msprop:Generator_RowDeletedName="TabelaEmprestimoLivroDidaticoDevolvidoRowDeleted" msprop:Generator_RowClassName="TabelaEmprestimoLivroDidaticoDevolvidoRow" msprop:Generator_UserTableName="TabelaEmprestimoLivroDidaticoDevolvido" msprop:Generator_RowEvArgName="TabelaEmprestimoLivroDidaticoDevolvidoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Disciplina" msprop:Generator_ColumnVarNameInTable="columnDisciplina" msprop:Generator_ColumnPropNameInRow="Disciplina" msprop:Generator_ColumnPropNameInTable="DisciplinaColumn" msprop:Generator_UserColumnName="Disciplina" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Nome_Usuario" msprop:Generator_ColumnVarNameInTable="columnNome_Usuario" msprop:Generator_ColumnPropNameInRow="Nome_Usuario" msprop:Generator_ColumnPropNameInTable="Nome_UsuarioColumn" msprop:Generator_UserColumnName="Nome_Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ano" msprop:Generator_ColumnVarNameInTable="columnAno" msprop:Generator_ColumnPropNameInRow="Ano" msprop:Generator_ColumnPropNameInTable="AnoColumn" msprop:Generator_UserColumnName="Ano" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_Solicitacao" msprop:Generator_ColumnVarNameInTable="columnData_Solicitacao" msprop:Generator_ColumnPropNameInRow="Data_Solicitacao" msprop:Generator_ColumnPropNameInTable="Data_SolicitacaoColumn" msprop:Generator_UserColumnName="Data_Solicitacao" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Data_Entrega" msprop:Generator_ColumnVarNameInTable="columnData_Entrega" msprop:Generator_ColumnPropNameInRow="Data_Entrega" msprop:Generator_ColumnPropNameInTable="Data_EntregaColumn" msprop:Generator_UserColumnName="Data_Entrega">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:TabelaEmprestimoLivroLiterarioOutro" />
-      <xs:field xpath="mstns:Cod_Usuario" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

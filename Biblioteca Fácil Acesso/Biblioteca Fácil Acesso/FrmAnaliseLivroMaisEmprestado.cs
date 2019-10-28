@@ -42,7 +42,7 @@ namespace Controle_de_livros
         private void AnalisarOpcao()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            _sql = "select Livro_Literario.Titulo, Livro_Literario.Autor, count(Livro_Literario.Titulo) as Quantidade from Livro_Literario inner join Emprestimo_Livro_Literario on Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro  where " + opcao + " like '" + txt_Titulo.Text + "%' and Emprestimo_Livro_Literario.Data_Entrega <> '' and Emprestimo_Livro_Literario.Data_Solicitacao <> '' group by Livro_Literario.Titulo, Livro_Literario.Autor order by Quantidade desc";
+            _sql = "select Livro_Literario.Titulo, Livro_Literario.Autor, count(Livro_Literario.Titulo) as Quantidade from Livro_Literario inner join Emprestimo_Livro_Literario on Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro  where " + opcao + " like '%" + txt_Titulo.Text + "%' and Emprestimo_Livro_Literario.Data_Entrega <> '' and Emprestimo_Livro_Literario.Data_Solicitacao <> '' group by Livro_Literario.Titulo, Livro_Literario.Autor order by Quantidade desc";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
             DataTable table = new DataTable();
@@ -53,7 +53,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Dados não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Dados não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Titulo.Focus();
             }
         }
@@ -91,7 +91,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Dados não encontrado! Verifique outra opção!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Dados não encontrado! Verifique outra opção!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

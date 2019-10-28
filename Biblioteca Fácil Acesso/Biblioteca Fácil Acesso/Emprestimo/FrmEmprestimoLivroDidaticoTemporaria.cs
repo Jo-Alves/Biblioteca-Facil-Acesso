@@ -94,7 +94,7 @@ namespace Controle_de_livros
             {
                 error_Provider.Clear();
                 error_Provider.SetError(num_Quantidade, "Valor inválido!");
-                MessageBox.Show("Valor do campo quantidade inválida", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Valor do campo quantidade inválida", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 num_Quantidade.Focus();
                 return;
             }
@@ -112,13 +112,13 @@ namespace Controle_de_livros
                 {
                     conexao.Open();
                     comando.ExecuteNonQuery();
-                    MessageBox.Show("Empréstimo efetuado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Empréstimo efetuado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cb_Professora.Focus();
                     Limpar();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -150,12 +150,12 @@ namespace Controle_de_livros
                     {
                         conexao.Open();
                         comando.ExecuteNonQuery();
-                        MessageBox.Show("Devolução do(s) livro(s) efetuado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Devolução do(s) livro(s) efetuado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpar();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {
@@ -164,7 +164,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Dados não compatíveis com os dados de entrada. Verifique os dados, principalmente a quantidade de livros emprestados!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados não compatíveis com os dados de entrada. Verifique os dados, principalmente a quantidade de livros emprestados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

@@ -134,7 +134,7 @@
             this.btn_Sair.Size = new System.Drawing.Size(110, 39);
             this.btn_Sair.TabIndex = 4;
             this.btn_Sair.Text = "Sair";
-            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click_1);
+            this.btn_Sair.Click += new System.EventHandler(this.btn_Sair_Click);
             // 
             // Btn_Alterar
             // 
@@ -147,7 +147,7 @@
             this.Btn_Alterar.Size = new System.Drawing.Size(120, 39);
             this.Btn_Alterar.TabIndex = 3;
             this.Btn_Alterar.Text = "Alterar";
-            this.Btn_Alterar.Click += new System.EventHandler(this.Btn_Alterar_Click_1);
+            this.Btn_Alterar.Click += new System.EventHandler(this.Btn_Alterar_Click);
             // 
             // cb_Usuario
             // 

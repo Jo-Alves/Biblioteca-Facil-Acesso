@@ -36,7 +36,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btn_Excluir_Click(object sender, EventArgs e)
@@ -70,21 +70,21 @@ namespace Controle_de_livros
                             autenticacao._Usuario = cb_Usuario.Text;
                             autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaAtual.Text);
                             autenticacao.Excluir();
-                            MessageBox.Show("Dados excluido com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Dados excluido com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             txt_Senha.Clear();
                             txt_SenhaAtual.Clear();
                             atualizar_cb_Usuario();
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message, "Erro na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
-                        MessageBox.Show("A senha não confere!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("A senha não confere!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
-                    MessageBox.Show("Este usuário não existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Este usuário não existe!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }     
 
@@ -116,7 +116,7 @@ namespace Controle_de_livros
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

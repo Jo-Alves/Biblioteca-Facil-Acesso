@@ -109,7 +109,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -128,7 +128,7 @@ namespace Controle_de_livros
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
             conexao = new SqlConnection(stringConn);
-            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' AND Nome_Usuario LIKE '" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
+            _sql = "SELECT Cod_Usuario AS Código, Nome_Usuario AS Nome, Cep, Bairro, Endereco AS Endereço, Numero AS Número, Cidade, Estado, Telefone, Ocupacao AS Ocupação FROM Usuario WHERE Ocupacao <> 'Aluno' AND Nome_Usuario LIKE '%" + cb_Nome.Text + "%' ORDER BY Nome_Usuario";
             adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.CommandText = _sql;
             table = new DataTable();
@@ -138,7 +138,7 @@ namespace Controle_de_livros
                 dataGridView_Nome.DataSource = table;
             }
             else
-                MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Aluno não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void cb_Nome_KeyPress(object sender, KeyPressEventArgs e)

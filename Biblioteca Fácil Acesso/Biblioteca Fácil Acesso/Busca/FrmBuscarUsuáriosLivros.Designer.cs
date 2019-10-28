@@ -84,7 +84,8 @@
             // 
             // dataGridView_Busca
             // 
-            this.dataGridView_Busca.AllowUserToOrderColumns = true;
+            this.dataGridView_Busca.AllowUserToAddRows = false;
+            this.dataGridView_Busca.AllowUserToDeleteRows = false;
             this.dataGridView_Busca.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView_Busca.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -100,6 +101,7 @@
             this.dataGridView_Busca.Location = new System.Drawing.Point(4, 23);
             this.dataGridView_Busca.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView_Busca.Name = "dataGridView_Busca";
+            this.dataGridView_Busca.ReadOnly = true;
             this.dataGridView_Busca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Busca.Size = new System.Drawing.Size(526, 563);
             this.dataGridView_Busca.TabIndex = 0;

@@ -64,7 +64,7 @@ namespace Controle_de_livros
                     opcao = "Ocupacao";
                 }
                 SqlConnection conexao = new SqlConnection(stringConn);
-                _sql = "Select * from Usuario where " + opcao + " like '" + txt_Dados.Text.Trim() + "%'";
+                _sql = "Select * from Usuario where " + opcao + " like '%" + txt_Dados.Text.Trim() + "%'";
                 SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
                 adapter.SelectCommand.CommandText = _sql;
                 DataTable table = new DataTable();
@@ -75,13 +75,13 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Dados não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Dados não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txt_Dados.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Campo de busca vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Campo de busca vazio!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Dados.Focus();
             }
         }
@@ -124,7 +124,7 @@ namespace Controle_de_livros
                 Close();
             }
             else
-                MessageBox.Show("Selecione o dado a ser confirmado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Selecione o dado a ser confirmado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void dgv_Busca_CellClick(object sender, DataGridViewCellEventArgs e)

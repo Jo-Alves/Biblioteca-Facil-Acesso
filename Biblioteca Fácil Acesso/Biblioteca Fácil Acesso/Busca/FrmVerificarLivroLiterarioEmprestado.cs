@@ -47,19 +47,18 @@ namespace Controle_de_livros
                         dgv.Rows[addLinhasDgv].DefaultCellStyle.ForeColor = Color.White;
                         lblObservação.Visible = true;
                     }
-
+                    else if (DateTime.Parse(dataRow["Prazo_Entrega"].ToString()) == DateTime.Parse(DateTime.Now.ToShortDateString()))
+                    {
+                        dgv.Rows[addLinhasDgv].DefaultCellStyle.BackColor = Color.Yellow;                       
+                        lblObservação2.Visible = true;
+                    }
                     dgv.ClearSelection();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-        }
-
-        private void VerificarLivroLiterarioEmprestado_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na table 'dataSet_Usuario.VERIFICAR_EMPRESTIMO'. Você pode movê-la ou removê-la conforme necessário.
         }
     }
 }

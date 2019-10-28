@@ -85,7 +85,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou erro na busca do livro com o mesmo titulo.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou Biblioteca Fácil Acesso na busca do livro com o mesmo titulo.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
@@ -179,6 +179,16 @@ namespace Controle_de_livros
             {
                 if(dgvLivro.Rows.Count > 0)
                 {
+                    if (bool.Parse(Settings.Default["isBloqueado"].ToString()))
+                    {
+                        VerificarEmprestimo();
+                        if (prazoUltrapassado)
+                        {
+                            MessageBox.Show("Empréstimo a " + txtNome.Text.ToUpper() + " negado! O Aluno/Funcionário/Outro obtém " + QuantidadeLivrosPendente + " livro(s) que não foram entregues no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            prazoUltrapassado = false;
+                            return;
+                        }
+                    }
                     GerarPrazoEmprestimo();
                     FinalizarEmprestimo();
                     MessageBox.Show("Operação efetuado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -197,6 +207,21 @@ namespace Controle_de_livros
                 errorProvider.SetError(txtNome, "Informe aqui");
                 txtNome.Focus();
                 return;
+            }
+        }
+
+        bool prazoUltrapassado = false; int QuantidadeLivrosPendente;
+        private void VerificarEmprestimo()
+        {
+            EmprestimoLivroLiterario emprestimo = new EmprestimoLivroLiterario();
+            emprestimo._Codigo = int.Parse(lblCodigo.Text);
+            foreach (DataRow dataRow in emprestimo.BuscarLivrosLiterariosEmprestados().Rows)
+            {
+                if (DateTime.Parse(dataRow["Prazo_Entrega"].ToString()) < DateTime.Parse(DateTime.Now.ToShortDateString()))
+                {
+                    QuantidadeLivrosPendente += 1;
+                    prazoUltrapassado = true;
+                }
             }
         }
 

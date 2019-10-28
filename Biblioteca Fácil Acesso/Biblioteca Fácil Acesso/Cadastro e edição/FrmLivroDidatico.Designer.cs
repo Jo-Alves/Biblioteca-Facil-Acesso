@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtDataRegistro = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.cb_Disciplina = new System.Windows.Forms.ComboBox();
             this.cb_Volume = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnPesquisar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtDataRegistro = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_Provider)).BeginInit();
             this.SuspendLayout();
@@ -57,12 +57,12 @@
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Salvar.Image = global::Controle_de_livros.Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Salvar.Location = new System.Drawing.Point(61, 224);
+            this.btn_Salvar.Location = new System.Drawing.Point(9, 224);
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(132, 41);
+            this.btn_Salvar.Size = new System.Drawing.Size(152, 41);
             this.btn_Salvar.TabIndex = 6;
-            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.Text = "Salvar - F1";
             this.btn_Salvar.UseVisualStyleBackColor = true;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
@@ -149,6 +149,24 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Livro:";
+            // 
+            // dtDataRegistro
+            // 
+            this.dtDataRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtDataRegistro.Location = new System.Drawing.Point(453, 165);
+            this.dtDataRegistro.Name = "dtDataRegistro";
+            this.dtDataRegistro.Size = new System.Drawing.Size(111, 26);
+            this.dtDataRegistro.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(449, 137);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(129, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Data de Registro:";
             // 
             // cb_Disciplina
             // 
@@ -237,12 +255,12 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcluir.Image = global::Controle_de_livros.Properties.Resources.Button_Delete_icon_32x32;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(477, 224);
+            this.btnExcluir.Location = new System.Drawing.Point(489, 222);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(132, 41);
+            this.btnExcluir.Size = new System.Drawing.Size(155, 41);
             this.btnExcluir.TabIndex = 9;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "Excluir - F4";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
@@ -251,12 +269,12 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Image = global::Controle_de_livros.Properties.Resources.Edit_Document_icon_32x32;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(337, 224);
+            this.btnEditar.Location = new System.Drawing.Point(334, 224);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(132, 41);
+            this.btnEditar.Size = new System.Drawing.Size(147, 41);
             this.btnEditar.TabIndex = 8;
-            this.btnEditar.Text = "Editar";
+            this.btnEditar.Text = "Editar - F3";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -265,32 +283,14 @@
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(200, 224);
+            this.btnPesquisar.Location = new System.Drawing.Point(168, 224);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(129, 41);
+            this.btnPesquisar.Size = new System.Drawing.Size(158, 41);
             this.btnPesquisar.TabIndex = 7;
-            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.Text = "Pesquisar - F2";
             this.btnPesquisar.UseVisualStyleBackColor = true;
-            this.btnPesquisar.Click += new System.EventHandler(this.BtnPesquisar_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(449, 137);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 19);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Data de Registro:";
-            // 
-            // dtDataRegistro
-            // 
-            this.dtDataRegistro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtDataRegistro.Location = new System.Drawing.Point(453, 165);
-            this.dtDataRegistro.Name = "dtDataRegistro";
-            this.dtDataRegistro.Size = new System.Drawing.Size(111, 26);
-            this.dtDataRegistro.TabIndex = 5;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // FrmLivroDidatico
             // 
@@ -306,11 +306,13 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmLivroDidatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADATRO LIVRO DIDÁTICO";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLivroDidatico_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error_Provider)).EndInit();

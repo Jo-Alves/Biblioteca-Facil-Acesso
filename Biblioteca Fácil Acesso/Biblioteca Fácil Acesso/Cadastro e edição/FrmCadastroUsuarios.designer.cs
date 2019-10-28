@@ -46,7 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.mkCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -183,6 +183,7 @@
             this.cb_Turma.Size = new System.Drawing.Size(121, 27);
             this.cb_Turma.TabIndex = 3;
             this.cb_Turma.ValueMember = "Turma";
+            this.cb_Turma.SelectedIndexChanged += new System.EventHandler(this.cb_Turma_SelectedIndexChanged);
             // 
             // usuarioBindingSource
             // 
@@ -228,8 +229,7 @@
             this.cb_Ano.Name = "cb_Ano";
             this.cb_Ano.Size = new System.Drawing.Size(274, 27);
             this.cb_Ano.TabIndex = 2;
-            this.cb_Ano.SelectedIndexChanged += new System.EventHandler(this.cb_Ano_SelectedIndexChanged);
-            this.cb_Ano.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cb_Ano_KeyDown);
+            this.cb_Ano.SelectedIndexChanged += new System.EventHandler(this.Cb_Ano_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -263,13 +263,12 @@
             this.txt_Nome.Name = "txt_Nome";
             this.txt_Nome.Size = new System.Drawing.Size(565, 26);
             this.txt_Nome.TabIndex = 1;
-            this.txt_Nome.TextChanged += new System.EventHandler(this.txt_Nome_TextChanged);
-            this.txt_Nome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Nome_KeyDown);
-            this.txt_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Nome_KeyPress);
+            this.txt_Nome.TextChanged += new System.EventHandler(this.Txt_Nome_TextChanged);
+            this.txt_Nome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_Nome_KeyPress);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.mkCelular);
+            this.groupBox3.Controls.Add(this.txtCelular);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txtCidade);
             this.groupBox3.Controls.Add(this.label10);
@@ -294,14 +293,17 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Localização:";
             // 
-            // mkCelular
+            // txtCelular
             // 
-            this.mkCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mkCelular.Location = new System.Drawing.Point(134, 162);
-            this.mkCelular.Mask = "(00) 00000-0000";
-            this.mkCelular.Name = "mkCelular";
-            this.mkCelular.Size = new System.Drawing.Size(115, 26);
-            this.mkCelular.TabIndex = 22;
+            this.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCelular.Location = new System.Drawing.Point(134, 163);
+            this.txtCelular.MaxLength = 15;
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(156, 26);
+            this.txtCelular.TabIndex = 23;
+            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
+            this.txtCelular.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTelefone_KeyDown);
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // label11
             // 
@@ -324,6 +326,7 @@
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(267, 26);
             this.txtCidade.TabIndex = 9;
+            this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // label10
             // 
@@ -374,6 +377,7 @@
             this.cbEstado.Name = "cbEstado";
             this.cbEstado.Size = new System.Drawing.Size(69, 27);
             this.cbEstado.TabIndex = 10;
+            this.cbEstado.SelectedIndexChanged += new System.EventHandler(this.cbEstado_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -406,7 +410,8 @@
             this.txt_Numero.Name = "txt_Numero";
             this.txt_Numero.Size = new System.Drawing.Size(92, 26);
             this.txt_Numero.TabIndex = 8;
-            this.txt_Numero.TextChanged += new System.EventHandler(this.txt_Numero_TextChanged);
+            this.txt_Numero.TextChanged += new System.EventHandler(this.Txt_Numero_TextChanged);
+            this.txt_Numero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Numero_KeyPress);
             // 
             // label9
             // 
@@ -429,6 +434,7 @@
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(441, 26);
             this.txtBairro.TabIndex = 6;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // btnBuscarCep
             // 
@@ -452,6 +458,8 @@
             this.mkCep.Size = new System.Drawing.Size(100, 26);
             this.mkCep.TabIndex = 4;
             this.mkCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkCep.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkCep_MaskInputRejected);
+            this.mkCep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mkCep_KeyDown);
             // 
             // label7
             // 
@@ -485,8 +493,7 @@
             this.txt_Endereco.Name = "txt_Endereco";
             this.txt_Endereco.Size = new System.Drawing.Size(283, 26);
             this.txt_Endereco.TabIndex = 7;
-            this.txt_Endereco.TextChanged += new System.EventHandler(this.txt_Endereco_TextChanged);
-            this.txt_Endereco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_Endereco_KeyDown);
+            this.txt_Endereco.TextChanged += new System.EventHandler(this.Txt_Endereco_TextChanged);
             // 
             // error_Provider
             // 
@@ -497,12 +504,12 @@
             this.btn_Salvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_Salvar.Image = global::Controle_de_livros.Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             this.btn_Salvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Salvar.Location = new System.Drawing.Point(77, 496);
+            this.btn_Salvar.Location = new System.Drawing.Point(51, 496);
             this.btn_Salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Salvar.Name = "btn_Salvar";
-            this.btn_Salvar.Size = new System.Drawing.Size(132, 41);
+            this.btn_Salvar.Size = new System.Drawing.Size(158, 41);
             this.btn_Salvar.TabIndex = 12;
-            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.Text = "Salvar - F1";
             this.btn_Salvar.UseVisualStyleBackColor = true;
             this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
@@ -514,9 +521,9 @@
             this.btnPesquisar.Location = new System.Drawing.Point(217, 496);
             this.btnPesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(136, 41);
+            this.btnPesquisar.Size = new System.Drawing.Size(169, 41);
             this.btnPesquisar.TabIndex = 13;
-            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.Text = "Pesquisar - F2";
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
@@ -525,12 +532,12 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Image = global::Controle_de_livros.Properties.Resources.Hopstarter_Soft_Scraps_Edit_Document;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(361, 496);
+            this.btnEditar.Location = new System.Drawing.Point(394, 496);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(132, 41);
+            this.btnEditar.Size = new System.Drawing.Size(158, 41);
             this.btnEditar.TabIndex = 14;
-            this.btnEditar.Text = "Editar";
+            this.btnEditar.Text = "Editar - F3";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -539,12 +546,12 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcluir.Image = global::Controle_de_livros.Properties.Resources.Button_Delete_icon_32x32;
             this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluir.Location = new System.Drawing.Point(501, 496);
+            this.btnExcluir.Location = new System.Drawing.Point(560, 496);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(4);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(132, 41);
+            this.btnExcluir.Size = new System.Drawing.Size(171, 41);
             this.btnExcluir.TabIndex = 15;
-            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Text = "Excluir - F4";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
@@ -568,12 +575,14 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmCadastroUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CADASTRO USUÁRIO";
             this.Load += new System.EventHandler(this.FrmCadastroUsuarios_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastroUsuarios_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -625,6 +634,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.MaskedTextBox mkCelular;
+        private System.Windows.Forms.TextBox txtCelular;
     }
 }

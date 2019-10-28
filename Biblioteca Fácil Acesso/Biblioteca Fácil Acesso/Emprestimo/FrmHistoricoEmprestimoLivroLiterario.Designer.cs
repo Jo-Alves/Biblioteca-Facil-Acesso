@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHistoricoEmprestimoLiterario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
             this.dgvHistorico = new System.Windows.Forms.DataGridView();
@@ -40,7 +41,8 @@
             this.ColPrazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.lblObservação = new System.Windows.Forms.Label();
+            this.lblObservação1 = new System.Windows.Forms.Label();
+            this.lblObservação2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorico)).BeginInit();
             this.SuspendLayout();
@@ -164,17 +166,30 @@
             this.lblUsuario.Size = new System.Drawing.Size(0, 19);
             this.lblUsuario.TabIndex = 3;
             // 
-            // lblObservação
+            // lblObservação1
             // 
-            this.lblObservação.AutoSize = true;
-            this.lblObservação.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservação.ForeColor = System.Drawing.Color.White;
-            this.lblObservação.Location = new System.Drawing.Point(40, 439);
-            this.lblObservação.Name = "lblObservação";
-            this.lblObservação.Size = new System.Drawing.Size(421, 16);
-            this.lblObservação.TabIndex = 2;
-            this.lblObservação.Text = "*Obs: A linha vermelha destacada significa que o prazo do livro já venceu";
-            this.lblObservação.Visible = false;
+            this.lblObservação1.AutoSize = true;
+            this.lblObservação1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservação1.ForeColor = System.Drawing.Color.White;
+            this.lblObservação1.Location = new System.Drawing.Point(40, 439);
+            this.lblObservação1.Name = "lblObservação1";
+            this.lblObservação1.Size = new System.Drawing.Size(421, 16);
+            this.lblObservação1.TabIndex = 2;
+            this.lblObservação1.Text = "*Obs: A linha vermelha destacada significa que o prazo do livro já venceu";
+            this.lblObservação1.Visible = false;
+            // 
+            // lblObservação2
+            // 
+            this.lblObservação2.AutoSize = true;
+            this.lblObservação2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservação2.ForeColor = System.Drawing.Color.White;
+            this.lblObservação2.Location = new System.Drawing.Point(41, 464);
+            this.lblObservação2.Name = "lblObservação2";
+            this.lblObservação2.Size = new System.Drawing.Size(467, 16);
+            this.lblObservação2.TabIndex = 4;
+            this.lblObservação2.Text = "*Obs: A linha amarela destacada significa que o prazo do livro está vencendo hoje" +
+    "";
+            this.lblObservação2.Visible = false;
             // 
             // FrmHistoricoEmprestimoLiterario
             // 
@@ -182,12 +197,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.ClientSize = new System.Drawing.Size(848, 492);
-            this.Controls.Add(this.lblObservação);
+            this.Controls.Add(this.lblObservação2);
+            this.Controls.Add(this.lblObservação1);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmHistoricoEmprestimoLiterario";
@@ -215,6 +232,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColGenero;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColSolicitacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrazo;
-        private System.Windows.Forms.Label lblObservação;
+        private System.Windows.Forms.Label lblObservação1;
+        private System.Windows.Forms.Label lblObservação2;
     }
 }

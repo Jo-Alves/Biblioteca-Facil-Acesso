@@ -31,7 +31,7 @@ namespace Controle_de_livros
             cb_Ensino.SelectedIndex = -1;
             cb_Volume.SelectedIndex = -1;
             dtDataRegistro.Text = DateTime.Now.ToShortDateString();
-            btn_Salvar.Text = "Salvar";
+            btn_Salvar.Text = "Salvar - F1";
             btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
         }
 
@@ -47,22 +47,22 @@ namespace Controle_de_livros
         {
             switch (btn_Salvar.Text)
             {
-                case "Salvar":
+                case "Salvar - F1":
                     validarCampos();
                     if (valido)
                     {
                         if (!SalvarLivroDidatico())
                             return;
-                        btn_Salvar.Text = "Incluir";
+                        btn_Salvar.Text = "Incluir - F1";
                         btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
                     }
                     break;
-                case "Incluir":
+                case "Incluir - F1":
                     DialogResult dr = MessageBox.Show("Incluir novo registro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     if (dr == DialogResult.No)
                     {
-                        btn_Salvar.Text = "Salvar";
+                        btn_Salvar.Text = "Salvar - F1";
                         btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
                         txt_Registro.Focus();
                         return;
@@ -77,7 +77,7 @@ namespace Controle_de_livros
         private void recarregarFormatoPadrao()
         {
             LimparCampos();
-            btn_Salvar.Text = "Salvar";
+            btn_Salvar.Text = "Salvar - F1";
             btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
             txt_Registro.Focus();            
         }
@@ -95,19 +95,19 @@ namespace Controle_de_livros
                 try
                 {
                     didatico.Cadastrar();
-                    MessageBox.Show("Livro cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Livro cadastrado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_Registro.Focus();
                     return true;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("O número do registro já existe!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("O número do registro já existe!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Registro.Clear();
                 txt_Registro.Focus();
                 return false;
@@ -130,12 +130,12 @@ namespace Controle_de_livros
                     try
                     {
                         didatico.Atualizar();
-                        MessageBox.Show("Livro atualizado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro atualizado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txt_Registro.Focus();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -164,7 +164,7 @@ namespace Controle_de_livros
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message, "Erro na conexão com banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão com banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         conexao.Close();
 
@@ -189,7 +189,7 @@ namespace Controle_de_livros
                 error_Provider.Clear();
                 error_Provider.SetError(txt_Registro, "Campo inválido!");
                 txt_Registro.Focus();
-                MessageBox.Show("Campo inválido!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Campo vazio! Informe o registro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             
@@ -203,13 +203,13 @@ namespace Controle_de_livros
                 if (MessageBox.Show("Tem certeza que deseja excluir este registro?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     didatico.Deletar();
-                    MessageBox.Show("Dados excluido com sucesso", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados excluido com sucesso", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     recarregarFormatoPadrao();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro na conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -243,7 +243,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return 0;
         }
@@ -287,7 +287,7 @@ namespace Controle_de_livros
             }
             else if (n_registro == 0)
             {
-                MessageBox.Show("Valor do Registro Inválido!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Valor do Registro Inválido!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 valido = false;
                 return;
             }
@@ -375,7 +375,27 @@ namespace Controle_de_livros
             error_Provider.Clear();
         }
 
-        private void BtnPesquisar_Click(object sender, EventArgs e)
+        private void FrmLivroDidatico_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                btn_Salvar_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F2)
+            {
+                btnPesquisar_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F3)
+            {
+                btnEditar_Click(sender, e);
+            }
+            if (e.KeyCode == Keys.F4)
+            {
+                BtnExcluir_Click(sender, e);
+            }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             FrmBuscarLivroDidatico buscarLivroDidatico = new FrmBuscarLivroDidatico();
             buscarLivroDidatico.ShowDialog();

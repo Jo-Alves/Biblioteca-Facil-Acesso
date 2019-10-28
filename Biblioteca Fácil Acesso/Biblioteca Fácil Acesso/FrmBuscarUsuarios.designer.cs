@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBuscarUsuario));
             this.txt_Dados = new System.Windows.Forms.TextBox();
             this.cb_Opcao = new System.Windows.Forms.ComboBox();
             this.btn_Pesquisar = new System.Windows.Forms.Button();
             this.dgv_Busca = new System.Windows.Forms.DataGridView();
-            this.btnOk = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.ColCod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +45,8 @@
             this.ColEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColFone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColOcupacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Busca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,28 +116,6 @@
             this.dgv_Busca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellClick);
             this.dgv_Busca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Busca_CellDoubleClick);
             this.dgv_Busca.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv_Busca_DataBindingComplete);
-            // 
-            // btnOk
-            // 
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOk.Location = new System.Drawing.Point(688, 340);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(99, 39);
-            this.btnOk.TabIndex = 4;
-            this.btnOk.Text = "OK";
-            this.btnOk.UseVisualStyleBackColor = true;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancelar.Location = new System.Drawing.Point(583, 340);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(99, 39);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // ColCod
             // 
@@ -245,6 +224,28 @@
             this.ColOcupacao.Name = "ColOcupacao";
             this.ColOcupacao.ReadOnly = true;
             // 
+            // btnOk
+            // 
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOk.Location = new System.Drawing.Point(688, 340);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(99, 39);
+            this.btnOk.TabIndex = 4;
+            this.btnOk.Text = "OK";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Location = new System.Drawing.Point(583, 340);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(99, 39);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FrmBuscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -259,6 +260,7 @@
             this.Controls.Add(this.txt_Dados);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmBuscarUsuario";

@@ -938,6 +938,8 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             private global::System.Data.DataColumn columnData_Entrega;
             
+            private global::System.Data.DataColumn columnAno;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DataTableLivrosLiterariosDevolvidosDataTable() {
@@ -1029,6 +1031,14 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AnoColumn {
+                get {
+                    return this.columnAno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1064,7 +1074,7 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTableLivrosLiterariosDevolvidosRow AddDataTableLivrosLiterariosDevolvidosRow(int N_Registro, string Titulo, string Nome_Usuario, string Turma, string Data_Solicitacao, string Data_Entrega) {
+            public DataTableLivrosLiterariosDevolvidosRow AddDataTableLivrosLiterariosDevolvidosRow(int N_Registro, string Titulo, string Nome_Usuario, string Turma, string Data_Solicitacao, string Data_Entrega, string Ano) {
                 DataTableLivrosLiterariosDevolvidosRow rowDataTableLivrosLiterariosDevolvidosRow = ((DataTableLivrosLiterariosDevolvidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         N_Registro,
@@ -1073,7 +1083,8 @@ namespace Controle_de_livros.RELATÓRIOS {
                         Nome_Usuario,
                         Turma,
                         Data_Solicitacao,
-                        Data_Entrega};
+                        Data_Entrega,
+                        Ano};
                 rowDataTableLivrosLiterariosDevolvidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableLivrosLiterariosDevolvidosRow);
                 return rowDataTableLivrosLiterariosDevolvidosRow;
@@ -1103,6 +1114,7 @@ namespace Controle_de_livros.RELATÓRIOS {
                 this.columnTurma = base.Columns["Turma"];
                 this.columnData_Solicitacao = base.Columns["Data_Solicitacao"];
                 this.columnData_Entrega = base.Columns["Data_Entrega"];
+                this.columnAno = base.Columns["Ano"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1122,6 +1134,8 @@ namespace Controle_de_livros.RELATÓRIOS {
                 base.Columns.Add(this.columnData_Solicitacao);
                 this.columnData_Entrega = new global::System.Data.DataColumn("Data_Entrega", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Entrega);
+                this.columnAno = new global::System.Data.DataColumn("Ano", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAno);
                 this.columnN_Registro.AllowDBNull = false;
                 this.columnTitulo.AllowDBNull = false;
                 this.columnTitulo.MaxLength = 2147483647;
@@ -1135,6 +1149,7 @@ namespace Controle_de_livros.RELATÓRIOS {
                 this.columnTurma.MaxLength = 14;
                 this.columnData_Solicitacao.MaxLength = 11;
                 this.columnData_Entrega.MaxLength = 11;
+                this.columnAno.MaxLength = 25;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1272,11 +1287,23 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             private global::System.Data.DataColumn columnNome_Usuario;
             
-            private global::System.Data.DataColumn columnCod_Usuario;
-            
             private global::System.Data.DataColumn columnData_Solicitacao;
             
             private global::System.Data.DataColumn columnPrazo_Entrega;
+            
+            private global::System.Data.DataColumn columnBairro;
+            
+            private global::System.Data.DataColumn columnEndereco;
+            
+            private global::System.Data.DataColumn columnNumero;
+            
+            private global::System.Data.DataColumn columnCidade;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columnTelefone;
+            
+            private global::System.Data.DataColumn columnCod_Usuario;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1329,14 +1356,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cod_UsuarioColumn {
-                get {
-                    return this.columnCod_Usuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Data_SolicitacaoColumn {
                 get {
                     return this.columnData_Solicitacao;
@@ -1348,6 +1367,62 @@ namespace Controle_de_livros.RELATÓRIOS {
             public global::System.Data.DataColumn Prazo_EntregaColumn {
                 get {
                     return this.columnPrazo_Entrega;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BairroColumn {
+                get {
+                    return this.columnBairro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EnderecoColumn {
+                get {
+                    return this.columnEndereco;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NumeroColumn {
+                get {
+                    return this.columnNumero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CidadeColumn {
+                get {
+                    return this.columnCidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TelefoneColumn {
+                get {
+                    return this.columnTelefone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Cod_UsuarioColumn {
+                get {
+                    return this.columnCod_Usuario;
                 }
             }
             
@@ -1388,24 +1463,23 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableEmprestimoLivroLiterarioOutrosRow AddTableEmprestimoLivroLiterarioOutrosRow(string Titulo, string Nome_Usuario, string Data_Solicitacao, string Prazo_Entrega) {
+            public TableEmprestimoLivroLiterarioOutrosRow AddTableEmprestimoLivroLiterarioOutrosRow(string Titulo, string Nome_Usuario, string Data_Solicitacao, string Prazo_Entrega, string Bairro, string Endereco, string Numero, string Cidade, string Estado, string Telefone, int Cod_Usuario) {
                 TableEmprestimoLivroLiterarioOutrosRow rowTableEmprestimoLivroLiterarioOutrosRow = ((TableEmprestimoLivroLiterarioOutrosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Titulo,
                         Nome_Usuario,
-                        null,
                         Data_Solicitacao,
-                        Prazo_Entrega};
+                        Prazo_Entrega,
+                        Bairro,
+                        Endereco,
+                        Numero,
+                        Cidade,
+                        Estado,
+                        Telefone,
+                        Cod_Usuario};
                 rowTableEmprestimoLivroLiterarioOutrosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTableEmprestimoLivroLiterarioOutrosRow);
                 return rowTableEmprestimoLivroLiterarioOutrosRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableEmprestimoLivroLiterarioOutrosRow FindByCod_Usuario(int Cod_Usuario) {
-                return ((TableEmprestimoLivroLiterarioOutrosRow)(this.Rows.Find(new object[] {
-                            Cod_Usuario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1427,9 +1501,15 @@ namespace Controle_de_livros.RELATÓRIOS {
             internal void InitVars() {
                 this.columnTitulo = base.Columns["Titulo"];
                 this.columnNome_Usuario = base.Columns["Nome_Usuario"];
-                this.columnCod_Usuario = base.Columns["Cod_Usuario"];
                 this.columnData_Solicitacao = base.Columns["Data_Solicitacao"];
                 this.columnPrazo_Entrega = base.Columns["Prazo_Entrega"];
+                this.columnBairro = base.Columns["Bairro"];
+                this.columnEndereco = base.Columns["Endereco"];
+                this.columnNumero = base.Columns["Numero"];
+                this.columnCidade = base.Columns["Cidade"];
+                this.columnEstado = base.Columns["Estado"];
+                this.columnTelefone = base.Columns["Telefone"];
+                this.columnCod_Usuario = base.Columns["Cod_Usuario"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1439,26 +1519,36 @@ namespace Controle_de_livros.RELATÓRIOS {
                 base.Columns.Add(this.columnTitulo);
                 this.columnNome_Usuario = new global::System.Data.DataColumn("Nome_Usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome_Usuario);
-                this.columnCod_Usuario = new global::System.Data.DataColumn("Cod_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Usuario);
                 this.columnData_Solicitacao = new global::System.Data.DataColumn("Data_Solicitacao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Solicitacao);
                 this.columnPrazo_Entrega = new global::System.Data.DataColumn("Prazo_Entrega", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrazo_Entrega);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCod_Usuario}, true));
+                this.columnBairro = new global::System.Data.DataColumn("Bairro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBairro);
+                this.columnEndereco = new global::System.Data.DataColumn("Endereco", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEndereco);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
+                this.columnCidade = new global::System.Data.DataColumn("Cidade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCidade);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
+                this.columnTelefone = new global::System.Data.DataColumn("Telefone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefone);
+                this.columnCod_Usuario = new global::System.Data.DataColumn("Cod_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Usuario);
                 this.columnTitulo.AllowDBNull = false;
                 this.columnTitulo.MaxLength = 2147483647;
                 this.columnNome_Usuario.AllowDBNull = false;
                 this.columnNome_Usuario.MaxLength = 30;
-                this.columnCod_Usuario.AutoIncrement = true;
-                this.columnCod_Usuario.AutoIncrementSeed = -1;
-                this.columnCod_Usuario.AutoIncrementStep = -1;
-                this.columnCod_Usuario.AllowDBNull = false;
-                this.columnCod_Usuario.ReadOnly = true;
-                this.columnCod_Usuario.Unique = true;
                 this.columnData_Solicitacao.MaxLength = 11;
                 this.columnPrazo_Entrega.MaxLength = 10;
+                this.columnBairro.MaxLength = 100;
+                this.columnEndereco.MaxLength = 100;
+                this.columnNumero.MaxLength = 2147483647;
+                this.columnCidade.MaxLength = 100;
+                this.columnEstado.MaxLength = 2;
+                this.columnTelefone.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1873,11 +1963,27 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             private global::System.Data.DataColumn columnDisciplina;
             
-            private global::System.Data.DataColumn columnCod_Usuario;
-            
             private global::System.Data.DataColumn columnNome_Usuario;
             
             private global::System.Data.DataColumn columnData_Solicitacao;
+            
+            private global::System.Data.DataColumn columnCod_Usuario;
+            
+            private global::System.Data.DataColumn columnTurma;
+            
+            private global::System.Data.DataColumn columnBairro;
+            
+            private global::System.Data.DataColumn columnEndereco;
+            
+            private global::System.Data.DataColumn columnNumero;
+            
+            private global::System.Data.DataColumn columnCidade;
+            
+            private global::System.Data.DataColumn columnEstado;
+            
+            private global::System.Data.DataColumn columnTelefone;
+            
+            private global::System.Data.DataColumn columnEnsino;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1922,14 +2028,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cod_UsuarioColumn {
-                get {
-                    return this.columnCod_Usuario;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Nome_UsuarioColumn {
                 get {
                     return this.columnNome_Usuario;
@@ -1941,6 +2039,78 @@ namespace Controle_de_livros.RELATÓRIOS {
             public global::System.Data.DataColumn Data_SolicitacaoColumn {
                 get {
                     return this.columnData_Solicitacao;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn Cod_UsuarioColumn {
+                get {
+                    return this.columnCod_Usuario;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TurmaColumn {
+                get {
+                    return this.columnTurma;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn BairroColumn {
+                get {
+                    return this.columnBairro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EnderecoColumn {
+                get {
+                    return this.columnEndereco;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NumeroColumn {
+                get {
+                    return this.columnNumero;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn CidadeColumn {
+                get {
+                    return this.columnCidade;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EstadoColumn {
+                get {
+                    return this.columnEstado;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TelefoneColumn {
+                get {
+                    return this.columnTelefone;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn EnsinoColumn {
+                get {
+                    return this.columnEnsino;
                 }
             }
             
@@ -1981,23 +2151,24 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableEmprestimoLivroDidaticoTerceiroRow AddTableEmprestimoLivroDidaticoTerceiroRow(string Disciplina, string Nome_Usuario, string Data_Solicitacao) {
+            public TableEmprestimoLivroDidaticoTerceiroRow AddTableEmprestimoLivroDidaticoTerceiroRow(string Disciplina, string Nome_Usuario, string Data_Solicitacao, int Cod_Usuario, string Turma, string Bairro, string Endereco, string Numero, string Cidade, string Estado, string Telefone, string Ensino) {
                 TableEmprestimoLivroDidaticoTerceiroRow rowTableEmprestimoLivroDidaticoTerceiroRow = ((TableEmprestimoLivroDidaticoTerceiroRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Disciplina,
-                        null,
                         Nome_Usuario,
-                        Data_Solicitacao};
+                        Data_Solicitacao,
+                        Cod_Usuario,
+                        Turma,
+                        Bairro,
+                        Endereco,
+                        Numero,
+                        Cidade,
+                        Estado,
+                        Telefone,
+                        Ensino};
                 rowTableEmprestimoLivroDidaticoTerceiroRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTableEmprestimoLivroDidaticoTerceiroRow);
                 return rowTableEmprestimoLivroDidaticoTerceiroRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public TableEmprestimoLivroDidaticoTerceiroRow FindByCod_Usuario(int Cod_Usuario) {
-                return ((TableEmprestimoLivroDidaticoTerceiroRow)(this.Rows.Find(new object[] {
-                            Cod_Usuario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2018,9 +2189,17 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnDisciplina = base.Columns["Disciplina"];
-                this.columnCod_Usuario = base.Columns["Cod_Usuario"];
                 this.columnNome_Usuario = base.Columns["Nome_Usuario"];
                 this.columnData_Solicitacao = base.Columns["Data_Solicitacao"];
+                this.columnCod_Usuario = base.Columns["Cod_Usuario"];
+                this.columnTurma = base.Columns["Turma"];
+                this.columnBairro = base.Columns["Bairro"];
+                this.columnEndereco = base.Columns["Endereco"];
+                this.columnNumero = base.Columns["Numero"];
+                this.columnCidade = base.Columns["Cidade"];
+                this.columnEstado = base.Columns["Estado"];
+                this.columnTelefone = base.Columns["Telefone"];
+                this.columnEnsino = base.Columns["Ensino"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2028,24 +2207,40 @@ namespace Controle_de_livros.RELATÓRIOS {
             private void InitClass() {
                 this.columnDisciplina = new global::System.Data.DataColumn("Disciplina", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDisciplina);
-                this.columnCod_Usuario = new global::System.Data.DataColumn("Cod_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Usuario);
                 this.columnNome_Usuario = new global::System.Data.DataColumn("Nome_Usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome_Usuario);
                 this.columnData_Solicitacao = new global::System.Data.DataColumn("Data_Solicitacao", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnData_Solicitacao);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCod_Usuario}, true));
+                this.columnCod_Usuario = new global::System.Data.DataColumn("Cod_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCod_Usuario);
+                this.columnTurma = new global::System.Data.DataColumn("Turma", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTurma);
+                this.columnBairro = new global::System.Data.DataColumn("Bairro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBairro);
+                this.columnEndereco = new global::System.Data.DataColumn("Endereco", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEndereco);
+                this.columnNumero = new global::System.Data.DataColumn("Numero", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumero);
+                this.columnCidade = new global::System.Data.DataColumn("Cidade", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCidade);
+                this.columnEstado = new global::System.Data.DataColumn("Estado", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEstado);
+                this.columnTelefone = new global::System.Data.DataColumn("Telefone", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTelefone);
+                this.columnEnsino = new global::System.Data.DataColumn("Ensino", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnsino);
                 this.columnDisciplina.MaxLength = 300;
-                this.columnCod_Usuario.AutoIncrement = true;
-                this.columnCod_Usuario.AutoIncrementSeed = -1;
-                this.columnCod_Usuario.AutoIncrementStep = -1;
-                this.columnCod_Usuario.AllowDBNull = false;
-                this.columnCod_Usuario.ReadOnly = true;
-                this.columnCod_Usuario.Unique = true;
                 this.columnNome_Usuario.AllowDBNull = false;
                 this.columnNome_Usuario.MaxLength = 100;
                 this.columnData_Solicitacao.MaxLength = 11;
+                this.columnTurma.MaxLength = 14;
+                this.columnBairro.MaxLength = 100;
+                this.columnEndereco.MaxLength = 100;
+                this.columnNumero.MaxLength = 2147483647;
+                this.columnCidade.MaxLength = 100;
+                this.columnEstado.MaxLength = 2;
+                this.columnTelefone.MaxLength = 15;
+                this.columnEnsino.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4265,6 +4460,23 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ano {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Ano\' na tabela \'DataTableLivrosLiterariosDevolvidos\' é DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTurmaNull() {
                 return this.IsNull(this.tableDataTableLivrosLiterariosDevolvidos.TurmaColumn);
             }
@@ -4297,6 +4509,18 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetData_EntregaNull() {
                 this[this.tableDataTableLivrosLiterariosDevolvidos.Data_EntregaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAnoNull() {
+                return this.IsNull(this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAnoNull() {
+                this[this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4338,17 +4562,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Cod_Usuario {
-                get {
-                    return ((int)(this[this.tableTableEmprestimoLivroLiterarioOutros.Cod_UsuarioColumn]));
-                }
-                set {
-                    this[this.tableTableEmprestimoLivroLiterarioOutros.Cod_UsuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Data_Solicitacao {
                 get {
                     try {
@@ -4383,6 +4596,125 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Bairro {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroLiterarioOutros.BairroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Bairro\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.BairroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Endereco {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroLiterarioOutros.EnderecoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Endereco\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.EnderecoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Numero {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroLiterarioOutros.NumeroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Numero\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.NumeroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Cidade {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroLiterarioOutros.CidadeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Cidade\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.CidadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Estado {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroLiterarioOutros.EstadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Estado\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Telefone {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroLiterarioOutros.TelefoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Telefone\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.TelefoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Cod_Usuario {
+                get {
+                    try {
+                        return ((int)(this[this.tableTableEmprestimoLivroLiterarioOutros.Cod_UsuarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Cod_Usuario\' na tabela \'TableEmprestimoLivroLiterarioOutros\' é" +
+                                " DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroLiterarioOutros.Cod_UsuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsData_SolicitacaoNull() {
                 return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.Data_SolicitacaoColumn);
             }
@@ -4403,6 +4735,90 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPrazo_EntregaNull() {
                 this[this.tableTableEmprestimoLivroLiterarioOutros.Prazo_EntregaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBairroNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.BairroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBairroNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.BairroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEnderecoNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.EnderecoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEnderecoNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.EnderecoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNumeroNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.NumeroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNumeroNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.NumeroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCidadeNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.CidadeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCidadeNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.CidadeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEstadoNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.EstadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEstadoNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.EstadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTelefoneNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.TelefoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTelefoneNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.TelefoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCod_UsuarioNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroLiterarioOutros.Cod_UsuarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCod_UsuarioNull() {
+                this[this.tableTableEmprestimoLivroLiterarioOutros.Cod_UsuarioColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4523,17 +4939,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Cod_Usuario {
-                get {
-                    return ((int)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.Cod_UsuarioColumn]));
-                }
-                set {
-                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.Cod_UsuarioColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Nome_Usuario {
                 get {
                     return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.Nome_UsuarioColumn]));
@@ -4562,6 +4967,159 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int Cod_Usuario {
+                get {
+                    try {
+                        return ((int)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.Cod_UsuarioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Cod_Usuario\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' " +
+                                "é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.Cod_UsuarioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Turma {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.TurmaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Turma\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.TurmaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Bairro {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.BairroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Bairro\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.BairroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Endereco {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.EnderecoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Endereco\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.EnderecoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Numero {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.NumeroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Numero\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.NumeroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Cidade {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.CidadeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Cidade\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.CidadeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Estado {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.EstadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Estado\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.EstadoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Telefone {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.TelefoneColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Telefone\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.TelefoneColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Ensino {
+                get {
+                    try {
+                        return ((string)(this[this.tableTableEmprestimoLivroDidaticoTerceiro.EnsinoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Ensino\' na tabela \'TableEmprestimoLivroDidaticoTerceiro\' é DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableTableEmprestimoLivroDidaticoTerceiro.EnsinoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDisciplinaNull() {
                 return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.DisciplinaColumn);
             }
@@ -4582,6 +5140,114 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetData_SolicitacaoNull() {
                 this[this.tableTableEmprestimoLivroDidaticoTerceiro.Data_SolicitacaoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCod_UsuarioNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.Cod_UsuarioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCod_UsuarioNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.Cod_UsuarioColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTurmaNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.TurmaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTurmaNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.TurmaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsBairroNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.BairroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetBairroNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.BairroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEnderecoNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.EnderecoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEnderecoNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.EnderecoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNumeroNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.NumeroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNumeroNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.NumeroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsCidadeNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.CidadeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetCidadeNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.CidadeColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEstadoNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.EstadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEstadoNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.EstadoColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTelefoneNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.TelefoneColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTelefoneNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.TelefoneColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsEnsinoNull() {
+                return this.IsNull(this.tableTableEmprestimoLivroDidaticoTerceiro.EnsinoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetEnsinoNull() {
+                this[this.tableTableEmprestimoLivroDidaticoTerceiro.EnsinoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6096,6 +6762,7 @@ ORDER BY Usuario.Turma";
             tableMapping.ColumnMappings.Add("Turma", "Turma");
             tableMapping.ColumnMappings.Add("Data_Solicitacao", "Data_Solicitacao");
             tableMapping.ColumnMappings.Add("Data_Entrega", "Data_Entrega");
+            tableMapping.ColumnMappings.Add("Ano", "Ano");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6113,11 +6780,11 @@ ORDER BY Usuario.Turma";
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.N_Registro, Livro_Literario.Titulo, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Usuario.Turma, Emprestimo_Livro_Literario.Data_Solicitacao, 
-                         Emprestimo_Livro_Literario.Data_Entrega
+                         Emprestimo_Livro_Literario.Data_Entrega, Usuario.Ano
 FROM            Emprestimo_Livro_Literario INNER JOIN
                          Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN
                          Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario
-WHERE        (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND (Emprestimo_Livro_Literario.Data_Entrega <> '')";
+WHERE        (Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND (Emprestimo_Livro_Literario.Data_Entrega <> '')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6269,9 +6936,15 @@ WHERE        (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Literario.Data_S
             tableMapping.DataSetTable = "TableEmprestimoLivroLiterarioOutros";
             tableMapping.ColumnMappings.Add("Titulo", "Titulo");
             tableMapping.ColumnMappings.Add("Nome_Usuario", "Nome_Usuario");
-            tableMapping.ColumnMappings.Add("Cod_Usuario", "Cod_Usuario");
             tableMapping.ColumnMappings.Add("Data_Solicitacao", "Data_Solicitacao");
             tableMapping.ColumnMappings.Add("Prazo_Entrega", "Prazo_Entrega");
+            tableMapping.ColumnMappings.Add("Bairro", "Bairro");
+            tableMapping.ColumnMappings.Add("Endereco", "Endereco");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
+            tableMapping.ColumnMappings.Add("Cidade", "Cidade");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("Telefone", "Telefone");
+            tableMapping.ColumnMappings.Add("Cod_Usuario", "Cod_Usuario");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6288,8 +6961,8 @@ WHERE        (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Literario.Data_S
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.Titulo, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Emprestimo_Livro_Literario.Data_Solicitacao, 
-                         Emprestimo_Livro_Literario.Prazo_Entrega
+            this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.Titulo, Usuario.Nome_Usuario, Emprestimo_Livro_Literario.Data_Solicitacao, Emprestimo_Livro_Literario.Prazo_Entrega, Usuario.Bairro, 
+                         Usuario.Endereco, Usuario.Numero, Usuario.Cidade, Usuario.Estado, Usuario.Telefone, Emprestimo_Livro_Literario.Cod_Usuario
 FROM            Emprestimo_Livro_Literario INNER JOIN
                          Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN
                          Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario
@@ -6631,9 +7304,17 @@ WHERE        (Usuario.Ocupacao = 'Funcionário') AND (Emprestimo_Livro_Didatico.
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "TableEmprestimoLivroDidaticoTerceiro";
             tableMapping.ColumnMappings.Add("Disciplina", "Disciplina");
-            tableMapping.ColumnMappings.Add("Cod_Usuario", "Cod_Usuario");
             tableMapping.ColumnMappings.Add("Nome_Usuario", "Nome_Usuario");
             tableMapping.ColumnMappings.Add("Data_Solicitacao", "Data_Solicitacao");
+            tableMapping.ColumnMappings.Add("Cod_Usuario", "Cod_Usuario");
+            tableMapping.ColumnMappings.Add("Turma", "Turma");
+            tableMapping.ColumnMappings.Add("Bairro", "Bairro");
+            tableMapping.ColumnMappings.Add("Endereco", "Endereco");
+            tableMapping.ColumnMappings.Add("Numero", "Numero");
+            tableMapping.ColumnMappings.Add("Cidade", "Cidade");
+            tableMapping.ColumnMappings.Add("Estado", "Estado");
+            tableMapping.ColumnMappings.Add("Telefone", "Telefone");
+            tableMapping.ColumnMappings.Add("Ensino", "Ensino");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6650,7 +7331,8 @@ WHERE        (Usuario.Ocupacao = 'Funcionário') AND (Emprestimo_Livro_Didatico.
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Livro_Didatico.Disciplina, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Emprestimo_Livro_Didatico.Data_Solicitacao
+            this._commandCollection[0].CommandText = @"SELECT        Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Emprestimo_Livro_Didatico.Data_Solicitacao, Emprestimo_Livro_Didatico.Cod_Usuario, Usuario.Turma, 
+                         Usuario.Bairro, Usuario.Endereco, Usuario.Numero, Usuario.Cidade, Usuario.Estado, Usuario.Telefone, Livro_Didatico.Ensino
 FROM            Emprestimo_Livro_Didatico INNER JOIN
                          Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario INNER JOIN
                          Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro
@@ -7780,7 +8462,7 @@ WHERE        (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Literario.Data_E
 FROM            Emprestimo_Livro_Didatico INNER JOIN
                          Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario INNER JOIN
                          Livro_Didatico ON Livro_Didatico.N_Registro = Emprestimo_Livro_Didatico.N_Registro
-WHERE        (Usuario.Ocupacao = 'Aluno') AND (Usuario.Ano = @Ano) AND (Usuario.Turma = @Turma)
+WHERE        (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Didatico.Data_Entrega = '') AND (Usuario.Ano = @Ano) AND (Usuario.Turma = @Turma)
 ORDER BY Usuario.Nome_Usuario";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ano", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "Ano", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));

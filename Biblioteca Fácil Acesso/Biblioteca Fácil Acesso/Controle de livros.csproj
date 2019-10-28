@@ -428,6 +428,18 @@
     <Compile Include="RELATÓRIOS\DataSet_Emprestimos.cs">
       <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
     </Compile>
+    <Compile Include="RELATÓRIOS\frmListaTodosLivrosDidaticosDevolvidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\frmListaTodosLivrosDidaticosDevolvidos.Designer.cs">
+      <DependentUpon>frmListaTodosLivrosDidaticosDevolvidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\frmListaTodosLivrosDidaticosEmprestados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RELATÓRIOS\frmListaTodosLivrosDidaticosEmprestados.Designer.cs">
+      <DependentUpon>frmListaTodosLivrosDidaticosEmprestados.cs</DependentUpon>
+    </Compile>
     <Compile Include="RELATÓRIOS\FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -649,6 +661,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RELATÓRIOS\frmListaTodosLivrosDidaticosDevolvidos.resx">
+      <DependentUpon>frmListaTodosLivrosDidaticosDevolvidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\frmListaTodosLivrosDidaticosEmprestados.resx">
+      <DependentUpon>frmListaTodosLivrosDidaticosEmprestados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.resx">
       <DependentUpon>FrmRelatorioLivroEmprestadoLiterarioPorTurma_E_Ano.cs</DependentUpon>
     </EmbeddedResource>
@@ -661,10 +679,12 @@
     <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosAlunos.resx">
       <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\Lista de livros literários devolvidos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos filtrados por ano e turma.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a funcionarios.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a terceiros.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Todos os Livros Didaticos Devovolvidos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosOutros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.resx">
       <DependentUpon>RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs</DependentUpon>
@@ -684,6 +704,7 @@
     <EmbeddedResource Include="Busca\FrmVerificarLivroLiterarioEmprestado.resx">
       <DependentUpon>FrmVerificarLivroLiterarioEmprestado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Todos os Livros Didaticos Emprestados.rdlc" />
     <EmbeddedResource Include="RestauracaoSistema.resx">
       <DependentUpon>RestauracaoSistema.cs</DependentUpon>
     </EmbeddedResource>

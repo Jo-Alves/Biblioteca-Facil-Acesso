@@ -21,16 +21,16 @@ namespace Controle_de_livros
 
         Autenticacao autenticacao = new Autenticacao();
 
-        private void btn_Sair_Click_1(object sender, EventArgs e)
+        private void btn_Sair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void txt_Usuario_TextChanged_1(object sender, EventArgs e)
+        private void txt_Usuario_TextChanged(object sender, EventArgs e)
         {
             errorProvider.Clear();
         }
 
-        private void txt_SenhaAtual_TextChanged_1(object sender, EventArgs e)
+        private void txt_SenhaAtual_TextChanged(object sender, EventArgs e)
         {
             errorProvider.Clear();
         }
@@ -51,7 +51,7 @@ namespace Controle_de_livros
             cb_Usuario.DataSource = table;
                 
         }
-        private void Btn_Alterar_Click_1(object sender, EventArgs e)
+        private void Btn_Alterar_Click(object sender, EventArgs e)
         {
             errorProvider.Clear();
             if (cb_Usuario.Text == "")
@@ -82,14 +82,14 @@ namespace Controle_de_livros
                         autenticacao._Usuario = cb_Usuario.Text;
                         autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaRedefinir.Text);
                         autenticacao.alterarSenha();
-                        MessageBox.Show("Senha alterado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Senha alterado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         atualizar_cb_Usuario();
                         txt_SenhaAtual.Clear();
                         txt_SenhaRedefinir.Clear();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Erro na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
@@ -135,7 +135,7 @@ namespace Controle_de_livros
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Btn_Alterar_Click_1(sender, e);
+                Btn_Alterar_Click(sender, e);
             }
         }
 
@@ -143,7 +143,7 @@ namespace Controle_de_livros
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Btn_Alterar_Click_1(sender, e);
+                Btn_Alterar_Click(sender, e);
             }
         }
 
@@ -151,7 +151,7 @@ namespace Controle_de_livros
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Btn_Alterar_Click_1(sender, e);
+                Btn_Alterar_Click(sender, e);
             }
         }
 

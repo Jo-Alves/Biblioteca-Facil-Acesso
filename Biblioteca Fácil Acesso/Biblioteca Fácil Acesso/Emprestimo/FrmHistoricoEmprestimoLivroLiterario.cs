@@ -30,9 +30,14 @@ namespace Controle_de_livros
                 {
                     dgvHistorico.Rows[newRow].DefaultCellStyle.BackColor = Color.Red;
                     dgvHistorico.Rows[newRow].DefaultCellStyle.ForeColor = Color.White;
-                    lblObservação.Visible = true;
+                    lblObservação1.Visible = true;
                 }
-                dgvHistorico.Rows[newRow].Selected = false;
+                else if (DataAtual == DataPrazo)
+                {
+                    dgvHistorico.Rows[newRow].DefaultCellStyle.BackColor = Color.Yellow;                 
+                    lblObservação2.Visible = true;
+                }
+                    dgvHistorico.Rows[newRow].Selected = false;
             }
         }
 

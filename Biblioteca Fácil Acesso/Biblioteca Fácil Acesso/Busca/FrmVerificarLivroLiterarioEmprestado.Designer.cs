@@ -39,6 +39,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblObservação = new System.Windows.Forms.Label();
+            this.lblObservação2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.dgv.Margin = new System.Windows.Forms.Padding(4);
             this.dgv.Name = "dgv";
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(667, 343);
+            this.dgv.Size = new System.Drawing.Size(667, 314);
             this.dgv.TabIndex = 0;
             // 
             // Column1
@@ -139,12 +140,26 @@
             this.lblObservação.AutoSize = true;
             this.lblObservação.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblObservação.ForeColor = System.Drawing.Color.Black;
-            this.lblObservação.Location = new System.Drawing.Point(14, 410);
+            this.lblObservação.Location = new System.Drawing.Point(14, 388);
             this.lblObservação.Name = "lblObservação";
             this.lblObservação.Size = new System.Drawing.Size(421, 16);
             this.lblObservação.TabIndex = 3;
             this.lblObservação.Text = "*Obs: A linha vermelha destacada significa que o prazo do livro já venceu";
             this.lblObservação.Visible = false;
+            // 
+            // lblObservação2
+            // 
+            this.lblObservação2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblObservação2.AutoSize = true;
+            this.lblObservação2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblObservação2.ForeColor = System.Drawing.Color.Black;
+            this.lblObservação2.Location = new System.Drawing.Point(14, 410);
+            this.lblObservação2.Name = "lblObservação2";
+            this.lblObservação2.Size = new System.Drawing.Size(467, 16);
+            this.lblObservação2.TabIndex = 5;
+            this.lblObservação2.Text = "*Obs: A linha amarela destacada significa que o prazo do livro está vencendo hoje" +
+    "";
+            this.lblObservação2.Visible = false;
             // 
             // FrmVerificarLivroLiterarioEmprestado
             // 
@@ -152,17 +167,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(673, 435);
+            this.Controls.Add(this.lblObservação2);
             this.Controls.Add(this.lblObservação);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgv);
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmVerificarLivroLiterarioEmprestado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.VerificarLivroLiterarioEmprestado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,5 +195,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblObservação;
+        private System.Windows.Forms.Label lblObservação2;
     }
 }

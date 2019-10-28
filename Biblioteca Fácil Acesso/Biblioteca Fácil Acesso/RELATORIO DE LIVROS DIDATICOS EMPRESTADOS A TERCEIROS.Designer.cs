@@ -76,7 +76,6 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LISTA DE EX-ALUNOS E OUTROS COM LIVROS DIDÁTICOS EMPRESTADOS";
