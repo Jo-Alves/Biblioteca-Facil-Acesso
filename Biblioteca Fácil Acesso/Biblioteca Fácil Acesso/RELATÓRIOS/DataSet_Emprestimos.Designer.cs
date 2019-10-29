@@ -924,11 +924,7 @@ namespace Controle_de_livros.RELATÓRIOS {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTableLivrosLiterariosDevolvidosDataTable : global::System.Data.TypedTableBase<DataTableLivrosLiterariosDevolvidosRow> {
             
-            private global::System.Data.DataColumn columnN_Registro;
-            
             private global::System.Data.DataColumn columnTitulo;
-            
-            private global::System.Data.DataColumn columnCod_Usuario;
             
             private global::System.Data.DataColumn columnNome_Usuario;
             
@@ -975,25 +971,9 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn N_RegistroColumn {
-                get {
-                    return this.columnN_Registro;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn TituloColumn {
                 get {
                     return this.columnTitulo;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Cod_UsuarioColumn {
-                get {
-                    return this.columnCod_Usuario;
                 }
             }
             
@@ -1074,12 +1054,10 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTableLivrosLiterariosDevolvidosRow AddDataTableLivrosLiterariosDevolvidosRow(int N_Registro, string Titulo, string Nome_Usuario, string Turma, string Data_Solicitacao, string Data_Entrega, string Ano) {
+            public DataTableLivrosLiterariosDevolvidosRow AddDataTableLivrosLiterariosDevolvidosRow(string Titulo, string Nome_Usuario, string Turma, string Data_Solicitacao, string Data_Entrega, string Ano) {
                 DataTableLivrosLiterariosDevolvidosRow rowDataTableLivrosLiterariosDevolvidosRow = ((DataTableLivrosLiterariosDevolvidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        N_Registro,
                         Titulo,
-                        null,
                         Nome_Usuario,
                         Turma,
                         Data_Solicitacao,
@@ -1107,9 +1085,7 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnN_Registro = base.Columns["N_Registro"];
                 this.columnTitulo = base.Columns["Titulo"];
-                this.columnCod_Usuario = base.Columns["Cod_Usuario"];
                 this.columnNome_Usuario = base.Columns["Nome_Usuario"];
                 this.columnTurma = base.Columns["Turma"];
                 this.columnData_Solicitacao = base.Columns["Data_Solicitacao"];
@@ -1120,12 +1096,8 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnN_Registro = new global::System.Data.DataColumn("N_Registro", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnN_Registro);
                 this.columnTitulo = new global::System.Data.DataColumn("Titulo", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTitulo);
-                this.columnCod_Usuario = new global::System.Data.DataColumn("Cod_Usuario", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCod_Usuario);
                 this.columnNome_Usuario = new global::System.Data.DataColumn("Nome_Usuario", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome_Usuario);
                 this.columnTurma = new global::System.Data.DataColumn("Turma", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1136,14 +1108,8 @@ namespace Controle_de_livros.RELATÓRIOS {
                 base.Columns.Add(this.columnData_Entrega);
                 this.columnAno = new global::System.Data.DataColumn("Ano", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAno);
-                this.columnN_Registro.AllowDBNull = false;
                 this.columnTitulo.AllowDBNull = false;
                 this.columnTitulo.MaxLength = 2147483647;
-                this.columnCod_Usuario.AutoIncrement = true;
-                this.columnCod_Usuario.AutoIncrementSeed = -1;
-                this.columnCod_Usuario.AutoIncrementStep = -1;
-                this.columnCod_Usuario.AllowDBNull = false;
-                this.columnCod_Usuario.ReadOnly = true;
                 this.columnNome_Usuario.AllowDBNull = false;
                 this.columnNome_Usuario.MaxLength = 30;
                 this.columnTurma.MaxLength = 14;
@@ -4365,34 +4331,12 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int N_Registro {
-                get {
-                    return ((int)(this[this.tableDataTableLivrosLiterariosDevolvidos.N_RegistroColumn]));
-                }
-                set {
-                    this[this.tableDataTableLivrosLiterariosDevolvidos.N_RegistroColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Titulo {
                 get {
                     return ((string)(this[this.tableDataTableLivrosLiterariosDevolvidos.TituloColumn]));
                 }
                 set {
                     this[this.tableDataTableLivrosLiterariosDevolvidos.TituloColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Cod_Usuario {
-                get {
-                    return ((int)(this[this.tableDataTableLivrosLiterariosDevolvidos.Cod_UsuarioColumn]));
-                }
-                set {
-                    this[this.tableDataTableLivrosLiterariosDevolvidos.Cod_UsuarioColumn] = value;
                 }
             }
             
@@ -6755,9 +6699,7 @@ ORDER BY Usuario.Turma";
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "DataTableLivrosLiterariosDevolvidos";
-            tableMapping.ColumnMappings.Add("N_Registro", "N_Registro");
             tableMapping.ColumnMappings.Add("Titulo", "Titulo");
-            tableMapping.ColumnMappings.Add("Cod_Usuario", "Cod_Usuario");
             tableMapping.ColumnMappings.Add("Nome_Usuario", "Nome_Usuario");
             tableMapping.ColumnMappings.Add("Turma", "Turma");
             tableMapping.ColumnMappings.Add("Data_Solicitacao", "Data_Solicitacao");
@@ -6779,8 +6721,8 @@ ORDER BY Usuario.Turma";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.N_Registro, Livro_Literario.Titulo, Usuario.Cod_Usuario, Usuario.Nome_Usuario, Usuario.Turma, Emprestimo_Livro_Literario.Data_Solicitacao, 
-                         Emprestimo_Livro_Literario.Data_Entrega, Usuario.Ano
+            this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.Titulo, Usuario.Nome_Usuario, Usuario.Ano, Usuario.Turma, Emprestimo_Livro_Literario.Data_Solicitacao, 
+                         Emprestimo_Livro_Literario.Data_Entrega
 FROM            Emprestimo_Livro_Literario INNER JOIN
                          Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN
                          Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario

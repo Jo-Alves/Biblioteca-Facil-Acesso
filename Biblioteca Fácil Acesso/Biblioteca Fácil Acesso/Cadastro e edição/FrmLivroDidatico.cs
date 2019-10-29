@@ -49,12 +49,19 @@ namespace Controle_de_livros
             {
                 case "Salvar - F1":
                     validarCampos();
-                    if (valido)
+                    try
                     {
-                        if (!SalvarLivroDidatico())
-                            return;
-                        btn_Salvar.Text = "Incluir - F1";
-                        btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
+                        if (valido)
+                        {
+                            if (!SalvarLivroDidatico())
+                                return;
+                            btn_Salvar.Text = "Incluir - F1";
+                            btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
                 case "Incluir - F1":

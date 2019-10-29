@@ -19,6 +19,7 @@ namespace Controle_de_livros
             InitializeComponent();
             lblBiblioteca.Text = "Bibloteca " + Settings.Default["Biblioteca"].ToString();
             lblInstituicao.Text = Settings.Default["Instituicao"].ToString();
+            txtNome.Focus();
         }
 
         int registro, countLinhas, qtdLivrosEmprestados;
@@ -90,7 +91,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe aqui");
                 txtNome.Focus();
@@ -184,7 +185,7 @@ namespace Controle_de_livros
                         VerificarEmprestimo();
                         if (prazoUltrapassado)
                         {
-                            MessageBox.Show("Empréstimo a " + txtNome.Text.ToUpper() + " negado! O Aluno/Funcionário/Outro obtém " + QuantidadeLivrosPendente + " livro(s) que não foram entregues no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Empréstimo a " + txtNome.Text.ToUpper() + " negado! O(A) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) obtém " + QuantidadeLivrosPendente + " livro(s) que não foi entregue no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             prazoUltrapassado = false;
                             return;
                         }
@@ -202,7 +203,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe aqui");
                 txtNome.Focus();
@@ -302,6 +303,18 @@ namespace Controle_de_livros
             historico.ShowDialog();
         }
 
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                //aceita só números
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (Char)8)
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
         private void FrmEmprestimoLivro_FormClosing(object sender, FormClosingEventArgs e)
         {
 
@@ -332,28 +345,109 @@ namespace Controle_de_livros
             dgvLivro.ClearSelection();
         }
 
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPesquisar_Click(sender, e);
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.Clear();
+                lblCodigo.Text = "";
+                lblQuantidadeLivrosEmprestados.Text = "";
+                btnVerHistorico.Enabled = false;
+            }
+        }
+
+        private void cbProcurarPorCodigo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                txtNome.ReadOnly = false;
+                txtNome.BackColor = Color.White;
+                lblCodigo.Text = "";
+                txtNome.Clear();
+                lblQuantidadeLivrosEmprestados.Text = "";
+                txtNome.Focus();
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.MaxLength = 9;
+            }
+            else
+            {
+                txtNome.ReadOnly = true;
+                txtNome.BackColor = SystemColors.Control;
+                txtNome.TextAlign = HorizontalAlignment.Left;
+                txtNome.MaxLength = 32767;
+            }
+        }
+
+        Usuario usuario = new Usuario();
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FrmBuscarUsuario usuario = new FrmBuscarUsuario();
-            usuario.ShowDialog();
-            if (usuario.Codigo > 0)
+            if (!cbProcurarPorCodigo.Checked)
             {
-                lblCodigo.Text = usuario.Codigo.ToString();
-                txtNome.Text = usuario.nome;
-                Emprestimo_Livro_Literario._Codigo = usuario.Codigo;
-                lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: " + Emprestimo_Livro_Literario.VerificarQuantidadeLivrosEmprestados() + " livro(s)";
-                qtdLivrosEmprestados = Emprestimo_Livro_Literario.VerificarQuantidadeLivrosEmprestados();
-                errorProvider.Clear();
-                if (qtdLivrosEmprestados > 0)
+                FrmBuscarUsuario usuario = new FrmBuscarUsuario();
+                usuario.ShowDialog();
+                if (usuario.Codigo > 0)
                 {
-                    btnVerHistorico.Enabled = true;
+                    lblCodigo.Text = usuario.Codigo.ToString();
+                    txtNome.Text = usuario.nome;
+                    VerificarQuantidadeLivroEmprestado(usuario.Codigo);
+                    txtNome.TextAlign = HorizontalAlignment.Left;
+                    txtRegistro.Focus();
+                    txtNome.MaxLength = 32767;
+                }
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(txtNome.Text))
+                {
+                    usuario.codigo = int.Parse(txtNome.Text);
+                    if (usuario.Buscar())
+                    {
+                        txtNome.Text = usuario.nome;
+                        lblCodigo.Text = usuario.codigo.ToString();
+                        VerificarQuantidadeLivroEmprestado(int.Parse(lblCodigo.Text));
+                        txtNome.TextAlign = HorizontalAlignment.Left;
+                        txtRegistro.Focus();
+                        txtNome.MaxLength = 32767;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        lblCodigo.Text = string.Empty;
+                        txtNome.Clear();
+                        txtNome.Focus();
+                        btnVerHistorico.Enabled = false;
+                    }
                 }
                 else
                 {
-                    btnVerHistorico.Enabled = false;
+                    MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-                dgvLivro.Rows.Clear();
             }
+        }
+
+        private void VerificarQuantidadeLivroEmprestado(int codigo)
+        {
+           Emprestimo_Livro_Literario._Codigo = codigo;
+            lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: " + Emprestimo_Livro_Literario.VerificarQuantidadeLivrosEmprestados() + " livro(s)";
+            qtdLivrosEmprestados = Emprestimo_Livro_Literario.VerificarQuantidadeLivrosEmprestados();
+            errorProvider.Clear();
+            if (qtdLivrosEmprestados > 0)
+            {
+                btnVerHistorico.Enabled = true;
+            }
+            else
+            {
+                btnVerHistorico.Enabled = false;
+            }
+            dgvLivro.Rows.Clear();
+
         }
 
         private void TxtRegistro_KeyPress(object sender, KeyPressEventArgs e)

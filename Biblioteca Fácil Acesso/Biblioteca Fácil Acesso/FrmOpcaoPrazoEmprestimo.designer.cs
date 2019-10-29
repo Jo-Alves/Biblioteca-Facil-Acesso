@@ -39,7 +39,7 @@
             this.cbOpcao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cbOpcao.FormattingEnabled = true;
             this.cbOpcao.Items.AddRange(new object[] {
-            "Todos as datas",
+            "Todas as datas",
             "A vencer",
             "Data atual",
             "Vencidas"});
@@ -47,6 +47,7 @@
             this.cbOpcao.Name = "cbOpcao";
             this.cbOpcao.Size = new System.Drawing.Size(207, 27);
             this.cbOpcao.TabIndex = 0;
+            this.cbOpcao.SelectedIndexChanged += new System.EventHandler(this.cbOpcao_SelectedIndexChanged);
             // 
             // btnPesquisar
             // 

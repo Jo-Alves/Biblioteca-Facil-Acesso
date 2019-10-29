@@ -429,7 +429,7 @@ namespace Controle_de_livros
               "Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro " +
               "INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = " +
               "Usuario.Cod_Usuario WHERE(Emprestimo_Livro_Literario.Data_Solicitacao <> '') " +
-              "AND (Emprestimo_Livro_Literario.Data_Entrega = '') AND (CONVERT(date, Emprestimo_Livro_Literario.Prazo_Entrega, 103) < CONVERT(date, @DataAtual, 103)) ORDER BY " +
+              "AND (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Literario.Data_Entrega = '') AND (CONVERT(date, Emprestimo_Livro_Literario.Prazo_Entrega, 103) < CONVERT(date, @DataAtual, 103)) ORDER BY " +
               "Usuario.Ocupacao, Usuario.Turma, Usuario.Ano, Usuario.Nome_Usuario";
             if (VerificarEmprestimos())
             {
@@ -459,7 +459,7 @@ namespace Controle_de_livros
 
         private void dELIVROSDIDÁTICOSEMPRESTADOSAALUNOSPORTURMAEANOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            _sql = "SELECT Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Emprestimo_Livro_Didatico.Data_Solicitacao FROM Emprestimo_Livro_Didatico INNER JOIN Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario INNER JOIN Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro WHERE(Usuario.Ocupacao = 'Funcionário') AND(Emprestimo_Livro_Didatico.Data_Solicitacao <> '') AND(Emprestimo_Livro_Didatico.Data_Entrega = '')";
+            _sql = "SELECT Livro_Didatico.Disciplina, Usuario.Nome_Usuario, Emprestimo_Livro_Didatico.Data_Solicitacao FROM Emprestimo_Livro_Didatico INNER JOIN Usuario ON Emprestimo_Livro_Didatico.Cod_Usuario = Usuario.Cod_Usuario INNER JOIN Livro_Didatico ON Emprestimo_Livro_Didatico.N_Registro = Livro_Didatico.N_Registro WHERE(Emprestimo_Livro_Didatico.Data_Solicitacao <> '') AND (Usuario.Ocupacao = 'Aluno') AND (Emprestimo_Livro_Didatico.Data_Entrega = '')";
             if (VerificarEmprestimos())
             {
                 FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano emprestimoLivroDidaticoPorTurma_E_Ano = new FrmRelatorioEmprestimoLivroDidaticoPorTurma_E_Ano();
@@ -587,7 +587,7 @@ namespace Controle_de_livros
                  "Emprestimo_Livro_Literario.Prazo_Entrega, Usuario.Turma FROM            Emprestimo_Livro_Literario INNER JOIN Livro_Literario ON " +
                  "Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro " +
                  "INNER JOIN Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = " +
-                 "Usuario.Cod_Usuario WHERE(Emprestimo_Livro_Literario.Data_Solicitacao <> '') " +
+                 "Usuario.Cod_Usuario WHERE (Usuario.Ocupacao = 'Aluno') AND(Emprestimo_Livro_Literario.Data_Solicitacao <> '') " +
                  "AND (Emprestimo_Livro_Literario.Data_Entrega = '') ORDER BY " +
                  "Usuario.Ocupacao, Usuario.Turma, Usuario.Ano, Usuario.Nome_Usuario";
             if (VerificarEmprestimos())

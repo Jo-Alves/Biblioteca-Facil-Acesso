@@ -18,37 +18,95 @@ namespace Controle_de_livros
         }
 
         EmprestimoLivroLiterario emprestimoLivroLiterario = new EmprestimoLivroLiterario();
-
-        private void FrmDevolucaoLivros_Load(object sender, EventArgs e)
-        {
-
-        }
+        Usuario usuario = new Usuario();
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FrmBuscarUsuario buscarUsuario = new FrmBuscarUsuario();
-            buscarUsuario.ShowDialog();
-            if (buscarUsuario.Codigo > 0)
+            if (!cbProcurarPorCodigo.Checked)
             {
-                errorProvider.Clear();
-                lblCodigo.Text = buscarUsuario.Codigo.ToString();
-                txtNome.Text = buscarUsuario.nome;
-                loadDgv();
-                if (dgvDados.Rows.Count == 0)
+                FrmBuscarUsuario buscarUsuario = new FrmBuscarUsuario();
+                buscarUsuario.ShowDialog();
+                if (buscarUsuario.Codigo > 0)
                 {
-                    MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    errorProvider.Clear();
+                    lblCodigo.Text = buscarUsuario.Codigo.ToString();
+                    txtNome.Text = buscarUsuario.nome;
+                    loadDgv();
+                    if (dgvDados.Rows.Count == 0)
+                    {
+                        MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(txtNome.Text.Trim()))
+                {
+                    if (rbBuscarCodigo.Checked)
+                    {
+                        usuario.codigo = int.Parse(txtNome.Text);
+                        if (usuario.Buscar())
+                        {
+                            txtNome.Text = usuario.nome;
+                            lblCodigo.Text = usuario.codigo.ToString();
+                            txtNome.TextAlign = HorizontalAlignment.Left;
+                            dgvDados.Focus();
+                            loadDgv();
+                            if (dgvDados.Rows.Count == 0)
+                            {
+                                MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            lblCodigo.Text = string.Empty;
+                            txtNome.Clear();
+                        }
+                    }
+                    else
+                    {                     
+
+                        loadDgv();
+
+                        if (dgvDados.Rows.Count == 0)
+                        {
+                            string opcao;
+                            if (rbBuscarRegistro.Checked)
+                                opcao = "Registro";
+                            else
+                                opcao = "Código";
+
+                            MessageBox.Show("Não encontramos nenhum registro de empréstimos pelo " + opcao + ": " + txtNome.Text + ". Verifique se houve algum erro de digitação.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                else
+                    MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
+            DataTable table;
         private void loadDgv()
         {
             dgvDados.Rows.Clear();
-            emprestimoLivroLiterario._Codigo = int.Parse(lblCodigo.Text);
+            if (rbBuscarCodigo.Checked)
+            {
+                emprestimoLivroLiterario._Codigo = int.Parse(lblCodigo.Text);
+                table = emprestimoLivroLiterario.BuscarEmprestimoPorCodigoUsuario();
+            }
+            else
+            {
+                emprestimoLivroLiterario._Registro = int.Parse(txtNome.Text);
+                table = emprestimoLivroLiterario.BuscarEmprestimoPorRegistroLivro();
+            }
+            
 
-            foreach (DataRow item in emprestimoLivroLiterario.BuscarEmprestimo().Rows)
+            foreach (DataRow item in table.Rows)
             {
                 int newRow = dgvDados.Rows.Add();
+                lblCodigo.Text = item["Cod_Usuario"].ToString();
+                txtNome.Text = item["Nome_Usuario"].ToString();
                 dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
                 dgvDados.Rows[newRow].Cells[1].Value = item["N_Registro"].ToString();
                 dgvDados.Rows[newRow].Cells[2].Value = item["Titulo"].ToString();
@@ -130,9 +188,9 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Informe o Aluno/Funcionário/Outro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
-                errorProvider.SetError(txtNome, "Informe o Aluno/Funcionário/Outro!");
+                errorProvider.SetError(txtNome, "Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!");
                 txtNome.Focus();
                 return;
             }
@@ -157,14 +215,71 @@ namespace Controle_de_livros
             }
             else
                 MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }       
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.Clear();
+                lblCodigo.Text = "";
+                dgvDados.Rows.Clear();
+            }
         }
 
-        private void LimparCampos()
+        private void cbProcurarPorCodigo_CheckedChanged(object sender, EventArgs e)
         {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                txtNome.ReadOnly = false;
+                txtNome.BackColor = Color.White;
+                lblCodigo.Text = "";
+                txtNome.Clear();
+                txtNome.Focus();
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.MaxLength = 9;
+                rbBuscarCodigo.Visible = true;
+                rbBuscarRegistro.Visible = true;
+                rbBuscarCodigo.Checked = true;
+            }
+            else
+            {
+                rbBuscarCodigo.Visible = false;
+                rbBuscarRegistro.Visible = false;
+                rbBuscarCodigo.Checked = false;
+                rbBuscarRegistro.Checked = false; 
+                txtNome.ReadOnly = true;
+                txtNome.BackColor = SystemColors.Control;
+                txtNome.TextAlign = HorizontalAlignment.Left;
+                txtNome.MaxLength = 32767;
+            }
+        }
+
+        private void FrmDevolucaoLivrosLiterarios_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+                btnFinalizarDevolucao_Click(sender, e);
+        }
+
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPesquisar_Click(sender, e);
+        }
+
+        private void rbBuscarCodigo_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNome.Focus();
             txtNome.Clear();
-            lblCodigo.Text = "";
-            cbSelecionarTudo.Visible = false;
-            dgvDados.Rows.Clear();
+            txtNome.TextAlign = HorizontalAlignment.Right;
+        }
+
+        private void rbBuscarRegistro_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNome.Focus();
+            txtNome.Clear();
+            txtNome.TextAlign = HorizontalAlignment.Right;
         }
     }
 }

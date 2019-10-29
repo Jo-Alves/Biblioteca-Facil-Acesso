@@ -54,8 +54,7 @@ namespace Controle_de_livros
         }
 
         private void btnOK_Click(object sender, EventArgs e)
-        {
-
+        { 
             if (cbAno.SelectedIndex >= 0)
             {
                 ReportParameterCollection rpc = new ReportParameterCollection();

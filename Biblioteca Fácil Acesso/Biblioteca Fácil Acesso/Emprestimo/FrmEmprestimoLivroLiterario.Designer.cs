@@ -62,6 +62,7 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
@@ -81,9 +82,9 @@
             this.groupBox1.Controls.Add(this.btnAdicionar);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtRegistro);
-            this.groupBox1.Location = new System.Drawing.Point(16, 128);
+            this.groupBox1.Location = new System.Drawing.Point(16, 153);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(741, 397);
+            this.groupBox1.Size = new System.Drawing.Size(741, 372);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -95,7 +96,7 @@
             this.groupBox2.Controls.Add(this.dgvLivro);
             this.groupBox2.Location = new System.Drawing.Point(27, 96);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(697, 295);
+            this.groupBox2.Size = new System.Drawing.Size(697, 270);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             // 
@@ -125,7 +126,7 @@
             this.dgvLivro.Name = "dgvLivro";
             this.dgvLivro.ReadOnly = true;
             this.dgvLivro.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLivro.Size = new System.Drawing.Size(691, 270);
+            this.dgvLivro.Size = new System.Drawing.Size(691, 245);
             this.dgvLivro.TabIndex = 0;
             this.dgvLivro.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.DgvLivro_DataBindingComplete);
             // 
@@ -181,7 +182,7 @@
             this.btnRemover.Location = new System.Drawing.Point(663, 44);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(61, 46);
-            this.btnRemover.TabIndex = 7;
+            this.btnRemover.TabIndex = 5;
             this.toolTip.SetToolTip(this.btnRemover, "Remover item");
             this.btnRemover.UseVisualStyleBackColor = true;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
@@ -194,7 +195,7 @@
             this.btnAdicionar.Location = new System.Drawing.Point(596, 44);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(61, 46);
-            this.btnAdicionar.TabIndex = 6;
+            this.btnAdicionar.TabIndex = 4;
             this.toolTip.SetToolTip(this.btnAdicionar, "Adicionar Item");
             this.btnAdicionar.UseVisualStyleBackColor = true;
             this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
@@ -217,7 +218,7 @@
             this.txtRegistro.Location = new System.Drawing.Point(27, 44);
             this.txtRegistro.Name = "txtRegistro";
             this.txtRegistro.Size = new System.Drawing.Size(562, 46);
-            this.txtRegistro.TabIndex = 4;
+            this.txtRegistro.TabIndex = 3;
             this.txtRegistro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtRegistro.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRegistro_KeyDown);
             this.txtRegistro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtRegistro_KeyPress);
@@ -251,7 +252,7 @@
             this.btnSair.Location = new System.Drawing.Point(17, 264);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(246, 46);
-            this.btnSair.TabIndex = 11;
+            this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair - ESC";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -263,7 +264,7 @@
             this.btnFinalizarEmprestimo.Location = new System.Drawing.Point(17, 212);
             this.btnFinalizarEmprestimo.Name = "btnFinalizarEmprestimo";
             this.btnFinalizarEmprestimo.Size = new System.Drawing.Size(246, 46);
-            this.btnFinalizarEmprestimo.TabIndex = 10;
+            this.btnFinalizarEmprestimo.TabIndex = 6;
             this.btnFinalizarEmprestimo.Text = "Finalizar empréstimo - F1";
             this.btnFinalizarEmprestimo.UseVisualStyleBackColor = true;
             this.btnFinalizarEmprestimo.Click += new System.EventHandler(this.btnFinalizarEmprestimo_Click);
@@ -331,6 +332,7 @@
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.cbProcurarPorCodigo);
             this.groupBox5.Controls.Add(this.btnVerHistorico);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
@@ -339,7 +341,7 @@
             this.groupBox5.Controls.Add(this.txtNome);
             this.groupBox5.Location = new System.Drawing.Point(16, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(741, 118);
+            this.groupBox5.Size = new System.Drawing.Size(741, 135);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
             // 
@@ -348,10 +350,10 @@
             this.btnVerHistorico.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnVerHistorico.Enabled = false;
             this.btnVerHistorico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerHistorico.Location = new System.Drawing.Point(633, 38);
+            this.btnVerHistorico.Location = new System.Drawing.Point(633, 62);
             this.btnVerHistorico.Name = "btnVerHistorico";
             this.btnVerHistorico.Size = new System.Drawing.Size(102, 38);
-            this.btnVerHistorico.TabIndex = 8;
+            this.btnVerHistorico.TabIndex = 2;
             this.btnVerHistorico.Text = "Ver Histórico";
             this.btnVerHistorico.UseVisualStyleBackColor = true;
             this.btnVerHistorico.Click += new System.EventHandler(this.btnVerHistorico_Click);
@@ -359,7 +361,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 22);
+            this.label2.Location = new System.Drawing.Point(96, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 19);
             this.label2.TabIndex = 7;
@@ -368,14 +370,14 @@
             // lblQuantidadeLivrosEmprestados
             // 
             this.lblQuantidadeLivrosEmprestados.AutoSize = true;
-            this.lblQuantidadeLivrosEmprestados.Location = new System.Drawing.Point(99, 88);
+            this.lblQuantidadeLivrosEmprestados.Location = new System.Drawing.Point(106, 100);
             this.lblQuantidadeLivrosEmprestados.Name = "lblQuantidadeLivrosEmprestados";
             this.lblQuantidadeLivrosEmprestados.Size = new System.Drawing.Size(0, 19);
             this.lblQuantidadeLivrosEmprestados.TabIndex = 6;
             // 
             // lblCodigo
             // 
-            this.lblCodigo.Location = new System.Drawing.Point(12, 42);
+            this.lblCodigo.Location = new System.Drawing.Point(13, 67);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(80, 31);
             this.lblCodigo.TabIndex = 5;
@@ -386,10 +388,10 @@
             this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
-            this.btnPesquisar.Location = new System.Drawing.Point(543, 38);
+            this.btnPesquisar.Location = new System.Drawing.Point(543, 62);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
-            this.btnPesquisar.TabIndex = 4;
+            this.btnPesquisar.TabIndex = 1;
             this.btnPesquisar.UseVisualStyleBackColor = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
@@ -397,12 +399,29 @@
             // 
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Location = new System.Drawing.Point(99, 45);
+            this.txtNome.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.Location = new System.Drawing.Point(100, 70);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(437, 26);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 0;
+            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            // 
+            // cbProcurarPorCodigo
+            // 
+            this.cbProcurarPorCodigo.AutoSize = true;
+            this.cbProcurarPorCodigo.Location = new System.Drawing.Point(100, 21);
+            this.cbProcurarPorCodigo.Name = "cbProcurarPorCodigo";
+            this.cbProcurarPorCodigo.Size = new System.Drawing.Size(151, 23);
+            this.cbProcurarPorCodigo.TabIndex = 11;
+            this.cbProcurarPorCodigo.Text = "Procurar por código";
+            this.cbProcurarPorCodigo.UseVisualStyleBackColor = true;
+            this.cbProcurarPorCodigo.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
             // 
             // FrmEmprestimoLivroLiterario
             // 
@@ -472,5 +491,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuRemover;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVerHistorico;
+        private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
     }
 }

@@ -19,7 +19,7 @@ namespace Controle_de_livros
             lblUsuario.Text = "Aluno/Funcionário/Outro: " + id + " - " + nome;
             emprestimoLivroDidatico._Codigo = int.Parse(id);
             lblQuantidadeLivrosEmprestados.Text += qtdLivros + " livro(s)";
-           foreach(DataRow dataRow in emprestimoLivroDidatico.BuscarLivrosDidaticosEmprestados().Rows)
+           foreach(DataRow dataRow in emprestimoLivroDidatico.BuscarLivrosDidaticosEmprestadosPorCodigoUsuario().Rows)
             {
                 int newRow = dgvHistorico.Rows.Add();
                 dgvHistorico.Rows[newRow].Cells["ColRegistro"].Value = dataRow["N_Registro"].ToString();

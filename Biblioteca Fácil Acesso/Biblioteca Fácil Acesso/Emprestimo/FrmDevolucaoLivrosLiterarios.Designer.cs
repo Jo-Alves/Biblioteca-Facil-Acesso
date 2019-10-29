@@ -39,8 +39,10 @@
             this.ColDataSolicitacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrazo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.rbBuscarCodigo = new System.Windows.Forms.RadioButton();
+            this.rbBuscarRegistro = new System.Windows.Forms.RadioButton();
+            this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -152,8 +154,10 @@
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.rbBuscarCodigo);
+            this.groupBox5.Controls.Add(this.rbBuscarRegistro);
+            this.groupBox5.Controls.Add(this.cbProcurarPorCodigo);
             this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
             this.groupBox5.Controls.Add(this.lblCodigo);
             this.groupBox5.Controls.Add(this.btnPesquisar);
             this.groupBox5.Controls.Add(this.txtNome);
@@ -163,26 +167,55 @@
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             // 
+            // rbBuscarCodigo
+            // 
+            this.rbBuscarCodigo.AutoSize = true;
+            this.rbBuscarCodigo.Location = new System.Drawing.Point(332, 25);
+            this.rbBuscarCodigo.Name = "rbBuscarCodigo";
+            this.rbBuscarCodigo.Size = new System.Drawing.Size(139, 23);
+            this.rbBuscarCodigo.TabIndex = 15;
+            this.rbBuscarCodigo.TabStop = true;
+            this.rbBuscarCodigo.Text = "Buscar por código";
+            this.rbBuscarCodigo.UseVisualStyleBackColor = true;
+            this.rbBuscarCodigo.Visible = false;
+            this.rbBuscarCodigo.CheckedChanged += new System.EventHandler(this.rbBuscarCodigo_CheckedChanged);
+            // 
+            // rbBuscarRegistro
+            // 
+            this.rbBuscarRegistro.AutoSize = true;
+            this.rbBuscarRegistro.Location = new System.Drawing.Point(477, 25);
+            this.rbBuscarRegistro.Name = "rbBuscarRegistro";
+            this.rbBuscarRegistro.Size = new System.Drawing.Size(143, 23);
+            this.rbBuscarRegistro.TabIndex = 14;
+            this.rbBuscarRegistro.TabStop = true;
+            this.rbBuscarRegistro.Text = "Buscar por registro";
+            this.rbBuscarRegistro.UseVisualStyleBackColor = true;
+            this.rbBuscarRegistro.Visible = false;
+            this.rbBuscarRegistro.CheckedChanged += new System.EventHandler(this.rbBuscarRegistro_CheckedChanged);
+            // 
+            // cbProcurarPorCodigo
+            // 
+            this.cbProcurarPorCodigo.AutoSize = true;
+            this.cbProcurarPorCodigo.Location = new System.Drawing.Point(98, 25);
+            this.cbProcurarPorCodigo.Name = "cbProcurarPorCodigo";
+            this.cbProcurarPorCodigo.Size = new System.Drawing.Size(219, 23);
+            this.cbProcurarPorCodigo.TabIndex = 12;
+            this.cbProcurarPorCodigo.Text = "Procurar por código ou registro";
+            this.cbProcurarPorCodigo.UseVisualStyleBackColor = true;
+            this.cbProcurarPorCodigo.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 22);
+            this.label2.Location = new System.Drawing.Point(89, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(160, 19);
             this.label2.TabIndex = 7;
             this.label2.Text = "Aluno/Funcionário/Outro";
             // 
-            // lblQuantidadeLivrosEmprestados
-            // 
-            this.lblQuantidadeLivrosEmprestados.AutoSize = true;
-            this.lblQuantidadeLivrosEmprestados.Location = new System.Drawing.Point(99, 88);
-            this.lblQuantidadeLivrosEmprestados.Name = "lblQuantidadeLivrosEmprestados";
-            this.lblQuantidadeLivrosEmprestados.Size = new System.Drawing.Size(0, 19);
-            this.lblQuantidadeLivrosEmprestados.TabIndex = 6;
-            // 
             // lblCodigo
             // 
-            this.lblCodigo.Location = new System.Drawing.Point(12, 42);
+            this.lblCodigo.Location = new System.Drawing.Point(6, 72);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(80, 31);
             this.lblCodigo.TabIndex = 5;
@@ -193,7 +226,7 @@
             this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
-            this.btnPesquisar.Location = new System.Drawing.Point(707, 38);
+            this.btnPesquisar.Location = new System.Drawing.Point(701, 68);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
             this.btnPesquisar.TabIndex = 4;
@@ -204,12 +237,15 @@
             // 
             this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Location = new System.Drawing.Point(99, 45);
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNome.Location = new System.Drawing.Point(93, 75);
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(601, 26);
             this.txtNome.TabIndex = 3;
+            this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // cbSelecionarTudo
             // 
@@ -232,7 +268,7 @@
             this.btnFinalizarDevolucao.Name = "btnFinalizarDevolucao";
             this.btnFinalizarDevolucao.Size = new System.Drawing.Size(246, 46);
             this.btnFinalizarDevolucao.TabIndex = 19;
-            this.btnFinalizarDevolucao.Text = "Finalizar Devolução";
+            this.btnFinalizarDevolucao.Text = "Finalizar Devolução - F1";
             this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
             this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
             // 
@@ -254,7 +290,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devolução de livros literários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FrmDevolucaoLivros_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDevolucaoLivrosLiterarios_KeyDown);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.groupBox5.ResumeLayout(false);
@@ -269,7 +305,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblQuantidadeLivrosEmprestados;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtNome;
@@ -282,5 +317,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDataSolicitacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrazo;
+        private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
+        private System.Windows.Forms.RadioButton rbBuscarCodigo;
+        private System.Windows.Forms.RadioButton rbBuscarRegistro;
     }
 }

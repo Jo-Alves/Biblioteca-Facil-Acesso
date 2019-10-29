@@ -89,7 +89,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     errorProvider.Clear();
                     errorProvider.SetError(txtNome, "Informe aqui");
                     txtNome.Focus();
@@ -224,7 +224,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Informe o Aluno/Funcionário/Outro para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe aqui");
                 txtNome.Focus();
@@ -307,6 +307,61 @@ namespace Controle_de_livros
 
         bool sair = true;
 
+        private void txtNome_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPesquisar_Click(sender, e);
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {       //aceita só números
+                if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (Char)8)
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void cbProcurarPorCodigo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                cbProfessor.Visible = false;
+                cbProfessor.Checked = false;
+                txtNome.ReadOnly = false;
+                txtNome.BackColor = Color.White;
+                lblCodigo.Text = "";
+                txtNome.Clear();
+                lblQuantidadeLivrosEmprestados.Text = "";
+                txtNome.Focus();
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.MaxLength = 9;
+            }
+            else
+            {
+                txtNome.ReadOnly = true;
+                txtNome.BackColor = SystemColors.Control;
+                txtNome.TextAlign = HorizontalAlignment.Left;
+                txtNome.MaxLength = 32767;
+            }
+        }
+
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                cbProfessor.Visible = false;
+                cbProfessor.Checked = false;
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.Clear();
+                lblCodigo.Text = "";
+                lblQuantidadeLivrosEmprestados.Text = "";
+                btnVerHistorico.Enabled = false;
+            }
+        }
+
         private void btnVerHistorico_Click(object sender, EventArgs e)
         {
             FrmHistoricoEmprestimoDidatico historico = new FrmHistoricoEmprestimoDidatico(lblCodigo.Text, txtNome.Text, qtdLivrosEmprestados);
@@ -342,38 +397,78 @@ namespace Controle_de_livros
             dgvLivro.ClearSelection();
         }
 
+        Usuario usuario = new Usuario();
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FrmBuscarUsuario usuario = new FrmBuscarUsuario();
-            usuario.ShowDialog();
-            if (usuario.Codigo > 0)
+            try
             {
-                lblCodigo.Text = usuario.Codigo.ToString();
-                txtNome.Text = usuario.nome;
-                emprestimoLivroDidatico._Codigo = usuario.Codigo;
-                lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: " + emprestimoLivroDidatico.VerificarQuantidadeLivrosEmprestados() + " livro(s)";
-                qtdLivrosEmprestados = emprestimoLivroDidatico.VerificarQuantidadeLivrosEmprestados();
-                errorProvider.Clear();
-                ocupacao = usuario.ocupacao;
-                if (ocupacao == "Funcionário")
+                if (!cbProcurarPorCodigo.Checked)
                 {
-                    cbProfessor.Visible = true;
-                    cbProfessor.Checked = false;
+                    FrmBuscarUsuario usuario = new FrmBuscarUsuario();
+                    usuario.ShowDialog();
+                    if (usuario.Codigo > 0)
+                    {
+                        lblCodigo.Text = usuario.Codigo.ToString();
+                        txtNome.Text = usuario.nome;
+                        VerificarQuantidadeLivroDidaticoEmprestado_E_OcupacaoUsuario(usuario.Codigo, usuario.ocupacao);
+                        errorProvider.Clear();
+                        txtNome.TextAlign = HorizontalAlignment.Left;
+                        txtNome.MaxLength = 32767;
+                    }
                 }
                 else
                 {
-                    cbProfessor.Checked = false;
-                    cbProfessor.Visible = false;
+                    if (!string.IsNullOrEmpty(txtNome.Text))
+                    {
+                        usuario.codigo = int.Parse(txtNome.Text);
+                        if (usuario.Buscar())
+                        {
+                            txtNome.Text = usuario.nome;
+                            lblCodigo.Text = usuario.codigo.ToString();
+                            VerificarQuantidadeLivroDidaticoEmprestado_E_OcupacaoUsuario(int.Parse(lblCodigo.Text), usuario.ocupacao);
+                            txtNome.TextAlign = HorizontalAlignment.Left;
+                            txtRegistro.Focus();
+                            txtNome.MaxLength = 32767;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            lblCodigo.Text = string.Empty;
+                            txtNome.Clear();
+                            txtNome.Focus();
+                        }
+                    }
                 }
-                if (qtdLivrosEmprestados > 0)
-                {
-                    btnVerHistorico.Enabled = true;
-                }
-                else
-                {
-                    btnVerHistorico.Enabled = false;
-                }
-                dgvLivro.Rows.Clear();
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void VerificarQuantidadeLivroDidaticoEmprestado_E_OcupacaoUsuario(int Codigo, string ocupacao)
+        {
+            emprestimoLivroDidatico._Codigo = Codigo;
+            lblQuantidadeLivrosEmprestados.Text = "Quantidade de livros emprestados: " + emprestimoLivroDidatico.VerificarQuantidadeLivrosEmprestados() + " livro(s)";
+            qtdLivrosEmprestados = emprestimoLivroDidatico.VerificarQuantidadeLivrosEmprestados();
+            this.ocupacao = ocupacao;
+            if (ocupacao == "Funcionário")
+            {
+                cbProfessor.Visible = true;
+                cbProfessor.Checked = false;
+            }
+            else
+            {
+                cbProfessor.Checked = false;
+                cbProfessor.Visible = false;
+            }
+            if (qtdLivrosEmprestados > 0)
+            {
+                btnVerHistorico.Enabled = true;
+            }
+            else
+            {
+                btnVerHistorico.Enabled = false;
             }
         }
 

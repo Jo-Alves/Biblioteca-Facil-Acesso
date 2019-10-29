@@ -86,7 +86,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOK.Location = new System.Drawing.Point(565, 21);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4);
@@ -99,7 +99,7 @@
             // 
             // cbAno
             // 
-            this.cbAno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbAno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbAno.BackColor = System.Drawing.Color.DarkGray;
             this.cbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -114,7 +114,7 @@
             // 
             // cbTurma
             // 
-            this.cbTurma.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbTurma.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbTurma.BackColor = System.Drawing.Color.DarkGray;
             this.cbTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTurma.Enabled = false;
@@ -129,7 +129,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(50, 9);
             this.label1.Name = "label1";
@@ -139,7 +139,7 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(380, 9);
             this.label2.Name = "label2";

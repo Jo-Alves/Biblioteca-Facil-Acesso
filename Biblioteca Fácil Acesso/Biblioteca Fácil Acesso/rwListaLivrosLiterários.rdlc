@@ -9,13 +9,16 @@
               <Width>2.15604cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.20958cm</Width>
+              <Width>4.88125cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.27271cm</Width>
+              <Width>3.69063cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>1.70625cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -36,7 +39,7 @@
                             <TextRun>
                               <Value>Registro</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -91,7 +94,7 @@
                             <TextRun>
                               <Value>Título</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -146,7 +149,7 @@
                             <TextRun>
                               <Value>Autor</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -201,7 +204,7 @@
                             <TextRun>
                               <Value>Gênero</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -247,6 +250,61 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Textbox1">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Estante</Value>
+                              <Style>
+                                <FontSize>7.5pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="Textbox9">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -256,7 +314,7 @@
                             <TextRun>
                               <Value>D. Registro</Value>
                               <Style>
-                                <FontSize>11pt</FontSize>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -316,6 +374,7 @@
                             <TextRun>
                               <Value>=Fields!N_Registro.Value</Value>
                               <Style>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
@@ -370,6 +429,7 @@
                             <TextRun>
                               <Value>=Fields!Titulo.Value</Value>
                               <Style>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
@@ -424,6 +484,7 @@
                             <TextRun>
                               <Value>=Fields!Autor.Value</Value>
                               <Style>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
@@ -478,6 +539,7 @@
                             <TextRun>
                               <Value>=Fields!Genero.Value</Value>
                               <Style>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
@@ -523,6 +585,61 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Estante">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Estante.Value</Value>
+                              <Style>
+                                <FontSize>7.5pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Estante</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <TopBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </TopBorder>
+                        <BottomBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <LeftBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </LeftBorder>
+                        <RightBorder>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </RightBorder>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="data_Registro">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -532,6 +649,7 @@
                             <TextRun>
                               <Value>=Fields!data_Registro.Value</Value>
                               <Style>
+                                <FontSize>7.5pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
                               </Style>
                             </TextRun>
@@ -586,6 +704,7 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -602,7 +721,7 @@
         <Top>1.45521cm</Top>
         <Left>0.14646cm</Left>
         <Height>1.2cm</Height>
-        <Width>18.63833cm</Width>
+        <Width>17.43416cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -631,7 +750,7 @@
         <rd:DefaultName>Textbox11</rd:DefaultName>
         <Top>0.28787cm</Top>
         <Height>0.9175cm</Height>
-        <Width>18.78479cm</Width>
+        <Width>17.58062cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -647,7 +766,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>7.42126in</Width>
+  <Width>6.92151in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -693,6 +812,10 @@
         </Field>
         <Field Name="Genero">
           <DataField>Genero</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Estante">
+          <DataField>Estante</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

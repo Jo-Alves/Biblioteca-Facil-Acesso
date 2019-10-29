@@ -81,6 +81,7 @@
             // 
             this.txt_Registro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_Registro.Location = new System.Drawing.Point(29, 50);
+            this.txt_Registro.MaxLength = 9;
             this.txt_Registro.Name = "txt_Registro";
             this.txt_Registro.Size = new System.Drawing.Size(100, 26);
             this.txt_Registro.TabIndex = 0;

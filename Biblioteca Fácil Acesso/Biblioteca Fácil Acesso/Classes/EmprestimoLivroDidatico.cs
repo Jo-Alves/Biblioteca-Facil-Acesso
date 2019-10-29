@@ -46,10 +46,10 @@ namespace Controle_de_livros
             set { Entrega = value; }
         }
 
-        public DataTable BuscarEmprestimo()
+        public DataTable BuscarLivrosDidaticosEmprestadosPorCodigoUsuario()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            _sql = "select * from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro  where Emprestimo.Cod_Usuario = @Codigo and Emprestimo.Data_Entrega = ''";
+            _sql = "select * from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro inner join Usuario on usuario.Cod_Usuario = emprestimo.Cod_Usuario where Emprestimo.Cod_Usuario = @Codigo and Emprestimo.Data_Entrega = ''";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
             adapter.SelectCommand.Parameters.AddWithValue("@Codigo", _Codigo);
             adapter.SelectCommand.CommandText = _sql;
@@ -149,12 +149,12 @@ namespace Controle_de_livros
             }
         }
 
-        public DataTable BuscarLivrosDidaticosEmprestados()
+        public DataTable BuscarLivrosDidaticosEmprestadosPorRegistroLivro()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            _sql = "select * from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro  where Emprestimo.Cod_Usuario = @Codigo and Emprestimo.Data_Entrega = ''";
+            _sql = "select * from livro_Didatico as livro inner join Emprestimo_Livro_Didatico as emprestimo on emprestimo.N_Registro = livro.N_Registro inner join Usuario on usuario.Cod_Usuario = emprestimo.Cod_Usuario where Emprestimo.N_Registro = @Registro and Emprestimo.Data_Entrega = ''";
             SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
-            adapter.SelectCommand.Parameters.AddWithValue("@Codigo", _Codigo);
+            adapter.SelectCommand.Parameters.AddWithValue("@Registro", _Registro);
             adapter.SelectCommand.CommandText = _sql;
             try
             {

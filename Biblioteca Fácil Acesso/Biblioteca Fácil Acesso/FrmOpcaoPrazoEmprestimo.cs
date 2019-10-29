@@ -25,6 +25,11 @@ namespace Controle_de_livros
             cbOpcao.SelectedIndex = 0;
         }
 
+        private void cbOpcao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Text = cbOpcao.Text;
+        }
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (cbOpcao.Text == "Todos as datas")

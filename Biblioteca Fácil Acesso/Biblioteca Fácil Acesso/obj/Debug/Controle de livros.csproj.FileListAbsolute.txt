@@ -669,7 +669,6 @@ C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Bibli
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmExcluirUsuario.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmAutenticacao.resources
 C:\Users\joelmir\Desktop\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmVerificar.resources
-D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.csprojAssemblyReference.cache
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.exe.config
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmAlterarSenha.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmBuscarLivrosGenero.resources
@@ -1185,3 +1184,4 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca F�
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.FrmRelatorioLivrosLiterariosEmprestadosAlunos.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.frmListaTodosLivrosDidaticosDevolvidos.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.frmListaTodosLivrosDidaticosEmprestados.resources
+D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.csprojAssemblyReference.cache

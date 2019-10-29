@@ -91,7 +91,7 @@ namespace Controle_de_livros
         {
             string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQl = "INSERT INTO Usuario VALUES (@Nome, @Ano, @Turma, @Cep, @Bairro, @Endereco, @Numero, @Cidade, @Estado, @Telefone, @Ocupacao)";
+            string _SQl = "INSERT INTO Usuario (Nome_Usuario, Ano, Turma, Cep, Bairro, Endereco, Numero, Cidade, Estado, Telefone, Ocupacao) VALUES (@Nome, @Ano, @Turma, @Cep, @Bairro, @Endereco, @Numero, @Cidade, @Estado, @Telefone, @Ocupacao)";
             SqlCommand comando = new SqlCommand(_SQl, conexao);
                     
             comando.Parameters.AddWithValue("@Nome", nome);
@@ -169,7 +169,7 @@ namespace Controle_de_livros
             SqlConnection conexao = new SqlConnection(stringConn);
             string _sql = "Select * from Usuario where Cod_Usuario = @Codigo";
             SqlCommand comando = new SqlCommand(_sql, conexao);
-            comando.Parameters.AddWithValue("@Codigo", Codigo);
+            comando.Parameters.AddWithValue("@Codigo", codigo);
             
             comando.CommandText = _sql;
 
@@ -178,7 +178,9 @@ namespace Controle_de_livros
                 conexao.Open();
                 SqlDataReader dr = comando.ExecuteReader();
                 if (dr.Read())
-                {
+                {                    
+                    nome = dr["Nome_Usuario"].ToString();
+                    ocupacao = dr["Ocupacao"].ToString();
                     return true;
                 }
                 else

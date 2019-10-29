@@ -680,6 +680,7 @@
       <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RELATÓRIOS\Lista de livros literários devolvidos.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de livros literários devolvidos1.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos filtrados por ano e turma.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a funcionarios.rdlc" />
@@ -691,7 +692,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_DIDATICOS_EMPRESTADOS_A_TERCEIROS.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RELATORIO_LIVROS_DIDATICO_EMPRESTADOS_A_FUNCIONARIOS.rdlc" />
-    <EmbeddedResource Include="RELATÓRIOS\RELATORIO_LIVROS_LITERARIOS_DEVOLVIDOS.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Relatorio_Livros_Didaticos_Nao-Entregues.resx">
       <DependentUpon>Relatorio_Livros_Didaticos_Nao-Entregues.cs</DependentUpon>
     </EmbeddedResource>

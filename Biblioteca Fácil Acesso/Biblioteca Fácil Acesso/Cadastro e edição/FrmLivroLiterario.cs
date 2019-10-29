@@ -63,18 +63,25 @@ namespace Controle_de_livros
             {
                 case "Salvar - F1":
                     validarCampos();
-                    if (valido)
+                    try
                     {
-                        if (!SalvarLivroLiterario())
-                            return;
-                        btn_Salvar.Text = "Incluir - F1";
-                        btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
+                        if (valido)
+                        {
+                            if (!SalvarLivroLiterario())
+                                return;
+                            btn_Salvar.Text = "Incluir - F1";
+                            btn_Salvar.Image = Properties.Resources.Actions_list_add_icon;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
                 case "Incluir - F1":
-                    
+
                     DialogResult dr = MessageBox.Show("Incluir novo registro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-                    
+
                     if (dr == DialogResult.No)
                     {
                         btn_Salvar.Text = "Salvar - F1";
