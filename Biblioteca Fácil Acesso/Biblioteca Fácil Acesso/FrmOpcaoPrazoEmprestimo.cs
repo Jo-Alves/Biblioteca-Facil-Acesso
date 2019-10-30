@@ -34,26 +34,22 @@ namespace Controle_de_livros
         {
             if (cbOpcao.Text == "Todos as datas")
             {
-                _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' ";
-                this.Text = "Toda os prazos de Empréstimos de livros";
+                _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' ";               
                 message = "Não há registros de livros emprestados.";
             }
             else if (cbOpcao.Text == "A vencer")
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' and Convert(date, Prazo_Entrega, 103) >= Convert(date, @DataAtual, 103)";
-                this.Text = "Toda os prazos de Empréstimos de livros a vencer";
                 message = "Não há registros de livros emprestados com o prazo a vencer.";
             }
             else if (cbOpcao.Text == "Data atual")
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' and Convert(date, Prazo_Entrega, 103) = Convert(date, @DataAtual, 103) ";
-                this.Text = "Toda os prazos de Empréstimos de livros na data atual";
                 message = "Não há registros de livros emprestados com o prazo que vencem hoje.";
             }
             else
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = ''  and Convert(date, Prazo_Entrega, 103) < Convert(date, @DataAtual, 103)";
-                this.Text = "Toda os prazos de Empréstimos de livros vencidos";
                 message = "Não há registros de livros emprestados com o prazo Vencido.";
             }
 

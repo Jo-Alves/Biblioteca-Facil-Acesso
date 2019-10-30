@@ -65,13 +65,14 @@ namespace Controle_de_livros
                     }
                     break;
                 case "Incluir - F1":
-                    DialogResult dr = MessageBox.Show("Incluir novo registro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult dr = MessageBox.Show("Incluir outro livro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     if (dr == DialogResult.No)
                     {
                         btn_Salvar.Text = "Salvar - F1";
                         btn_Salvar.Image = Properties.Resources.Zerode_Plump_Drive_Floppy_blue;
                         txt_Registro.Focus();
+                        txt_Registro.Clear();
                         return;
                     }
 

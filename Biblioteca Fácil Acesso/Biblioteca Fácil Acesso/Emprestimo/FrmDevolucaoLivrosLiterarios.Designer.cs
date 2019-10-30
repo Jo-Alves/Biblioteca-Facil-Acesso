@@ -42,7 +42,7 @@
             this.rbBuscarCodigo = new System.Windows.Forms.RadioButton();
             this.rbBuscarRegistro = new System.Windows.Forms.RadioButton();
             this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNomeCampo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -157,7 +157,7 @@
             this.groupBox5.Controls.Add(this.rbBuscarCodigo);
             this.groupBox5.Controls.Add(this.rbBuscarRegistro);
             this.groupBox5.Controls.Add(this.cbProcurarPorCodigo);
-            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.lblNomeCampo);
             this.groupBox5.Controls.Add(this.lblCodigo);
             this.groupBox5.Controls.Add(this.btnPesquisar);
             this.groupBox5.Controls.Add(this.txtNome);
@@ -204,14 +204,14 @@
             this.cbProcurarPorCodigo.UseVisualStyleBackColor = true;
             this.cbProcurarPorCodigo.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
             // 
-            // label2
+            // lblNomeCampo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Aluno/Funcionário/Outro";
+            this.lblNomeCampo.AutoSize = true;
+            this.lblNomeCampo.Location = new System.Drawing.Point(89, 52);
+            this.lblNomeCampo.Name = "lblNomeCampo";
+            this.lblNomeCampo.Size = new System.Drawing.Size(160, 19);
+            this.lblNomeCampo.TabIndex = 7;
+            this.lblNomeCampo.Text = "Aluno/Funcionário/Outro";
             // 
             // lblCodigo
             // 
@@ -268,7 +268,7 @@
             this.btnFinalizarDevolucao.Name = "btnFinalizarDevolucao";
             this.btnFinalizarDevolucao.Size = new System.Drawing.Size(246, 46);
             this.btnFinalizarDevolucao.TabIndex = 19;
-            this.btnFinalizarDevolucao.Text = "Finalizar Devolução - F1";
+            this.btnFinalizarDevolucao.Text = "Finalizar Devolução";
             this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
             this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
             // 
@@ -284,13 +284,11 @@
             this.Controls.Add(this.groupBox5);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDevolucaoLivrosLiterarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Devolução de livros literários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDevolucaoLivrosLiterarios_KeyDown);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.groupBox5.ResumeLayout(false);
@@ -304,7 +302,7 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNomeCampo;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtNome;

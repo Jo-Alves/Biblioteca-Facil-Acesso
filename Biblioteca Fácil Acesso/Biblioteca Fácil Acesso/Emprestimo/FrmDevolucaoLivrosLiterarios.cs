@@ -31,10 +31,12 @@ namespace Controle_de_livros
                     errorProvider.Clear();
                     lblCodigo.Text = buscarUsuario.Codigo.ToString();
                     txtNome.Text = buscarUsuario.nome;
+                    txtNome.TextAlign = HorizontalAlignment.Left;
                     loadDgv();
                     if (dgvDados.Rows.Count == 0)
                     {
                         MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimparCampos_E_FocarCursor();
                     }
                 }
             }
@@ -44,7 +46,12 @@ namespace Controle_de_livros
                 {
                     if (rbBuscarCodigo.Checked)
                     {
-                        usuario.codigo = int.Parse(txtNome.Text);
+
+                        if (string.IsNullOrEmpty(lblCodigo.Text))
+                            usuario.codigo = int.Parse(txtNome.Text);
+                        else
+                            usuario.codigo = int.Parse(lblCodigo.Text);
+
                         if (usuario.Buscar())
                         {
                             txtNome.Text = usuario.nome;
@@ -52,77 +59,126 @@ namespace Controle_de_livros
                             txtNome.TextAlign = HorizontalAlignment.Left;
                             dgvDados.Focus();
                             loadDgv();
+                            lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
                             if (dgvDados.Rows.Count == 0)
                             {
                                 MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LimparCampos_E_FocarCursor();
                             }
                         }
                         else
                         {
                             MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            lblCodigo.Text = string.Empty;
-                            txtNome.Clear();
+                            LimparCampos_E_FocarCursor();
+                            MudarTextolblNomeCampo();
                         }
                     }
                     else
-                    {                     
-
+                    {
                         loadDgv();
-
-                        if (dgvDados.Rows.Count == 0)
+                        if (isValorValido)
                         {
-                            string opcao;
-                            if (rbBuscarRegistro.Checked)
-                                opcao = "Registro";
-                            else
-                                opcao = "Código";
+                            if (dgvDados.Rows.Count == 0)
+                            {
+                                string opcao;
+                                if (rbBuscarRegistro.Checked)
+                                    opcao = "Registro";
+                                else
+                                    opcao = "Código";
 
-                            MessageBox.Show("Não encontramos nenhum registro de empréstimos pelo " + opcao + ": " + txtNome.Text + ". Verifique se houve algum erro de digitação.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Não encontramos nenhum registro de empréstimos pelo " + opcao + ": " + txtNome.Text + ". Verifique se houve algum erro de digitação.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LimparCampos_E_FocarCursor();
+                            }
+                            else
+                            {
+                                lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
+                                txtNome.TextAlign = HorizontalAlignment.Left;
+                            }
                         }
                     }
                 }
                 else
-                    MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                {
+                    if (rbBuscarRegistro.Checked)
+                        opcao = "registro do livro.";
+                    else if (rbBuscarCodigo.Checked)
+                        opcao = "código do(a) aluno(a)/funcionário(a)/outro.";
+
+                    MessageBox.Show("informe o " + opcao, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtNome.Focus();
+                }
             }
         }
 
-            DataTable table;
+        private void MudarTextolblNomeCampo()
+        {
+            if (rbBuscarCodigo.Checked)
+                lblNomeCampo.Text = "Código do Aluno(a)/Funcionário(a)/Outro";
+            else
+                lblNomeCampo.Text = "Registro do Livro";
+        }
+
+        DataTable table;
+        bool isValorValido = false;
+        string opcao;
+
         private void loadDgv()
         {
-            dgvDados.Rows.Clear();
-            if (rbBuscarCodigo.Checked)
+            if (isValorValido)
+                dgvDados.Rows.Clear();
+
+            if (rbBuscarCodigo.Checked || !cbProcurarPorCodigo.Checked)
             {
                 emprestimoLivroLiterario._Codigo = int.Parse(lblCodigo.Text);
+
                 table = emprestimoLivroLiterario.BuscarEmprestimoPorCodigoUsuario();
+                isValorValido = true;
             }
             else
             {
-                emprestimoLivroLiterario._Registro = int.Parse(txtNome.Text);
-                table = emprestimoLivroLiterario.BuscarEmprestimoPorRegistroLivro();
+                if (!string.IsNullOrEmpty(lblCodigo.Text))
+                {
+                    LimparCampos_E_FocarCursor();
+
+                    MessageBox.Show("informe novamente o registro do livro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MudarTextolblNomeCampo();
+                    isValorValido = false;
+                    txtNome.Focus();
+                    return;
+                }
+                else
+                {
+                    emprestimoLivroLiterario._Registro = int.Parse(txtNome.Text);
+
+                    table = emprestimoLivroLiterario.BuscarEmprestimoPorRegistroLivro();
+                    isValorValido = true;
+                }
             }
-            
 
             foreach (DataRow item in table.Rows)
             {
                 int newRow = dgvDados.Rows.Add();
+                dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
                 lblCodigo.Text = item["Cod_Usuario"].ToString();
                 txtNome.Text = item["Nome_Usuario"].ToString();
-                dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
                 dgvDados.Rows[newRow].Cells[1].Value = item["N_Registro"].ToString();
                 dgvDados.Rows[newRow].Cells[2].Value = item["Titulo"].ToString();
                 dgvDados.Rows[newRow].Cells[3].Value = item["Autor"].ToString();
                 dgvDados.Rows[newRow].Cells[4].Value = item["Data_Solicitacao"].ToString();
                 dgvDados.Rows[newRow].Cells[5].Value = item["Prazo_Entrega"].ToString();
             }
+
             dgvDados.ClearSelection();
             if (dgvDados.Rows.Count > 0)
             {
                 cbSelecionarTudo.Visible = true;
+                cbSelecionarTudo.Checked = false;
+                dgvDados.Focus();
             }
             else
             {
-                cbSelecionarTudo.Checked = false;
                 cbSelecionarTudo.Visible = false;
+                cbSelecionarTudo.Checked = false;
             }
         }
 
@@ -172,7 +228,7 @@ namespace Controle_de_livros
                 {
                     FinalizarDevolucao();
                     if (devolucaoFeita)
-                        MessageBox.Show("Devolução finalizado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Devolução finalizado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
                         MessageBox.Show("Selecione o item para finalizar a devolução!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -215,17 +271,38 @@ namespace Controle_de_livros
             }
             else
                 MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }       
+        }
 
-        private void txtNome_Click(object sender, EventArgs e)
+        private void LimparCampos_E_FocarCursor()
         {
-            if (cbProcurarPorCodigo.Checked)
+            txtNome.Focus();
+            txtNome.Clear();
+            txtNome.TextAlign = HorizontalAlignment.Right;
+            lblCodigo.Text = "";
+            dgvDados.Rows.Clear();
+            cbSelecionarTudo.Visible = false;
+            cbSelecionarTudo.Checked = false;
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //aceita só números
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (Char)8)
             {
-                txtNome.TextAlign = HorizontalAlignment.Right;
-                txtNome.Clear();
-                lblCodigo.Text = "";
-                dgvDados.Rows.Clear();
+                e.Handled = true;
             }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            txtNome.TextAlign = HorizontalAlignment.Right;
+            lblCodigo.Text = "";
+        }
+
+        private void txtNome_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnPesquisar_Click(sender, e);
         }
 
         private void cbProcurarPorCodigo_CheckedChanged(object sender, EventArgs e)
@@ -242,24 +319,23 @@ namespace Controle_de_livros
                 rbBuscarCodigo.Visible = true;
                 rbBuscarRegistro.Visible = true;
                 rbBuscarCodigo.Checked = true;
+                dgvDados.Rows.Clear();
+                cbSelecionarTudo.Visible = false;
+                cbSelecionarTudo.Checked = false;
+                lblNomeCampo.Text = "Código do Aluno(a)/Funcionário(a)/Outro";
             }
             else
             {
                 rbBuscarCodigo.Visible = false;
                 rbBuscarRegistro.Visible = false;
                 rbBuscarCodigo.Checked = false;
-                rbBuscarRegistro.Checked = false; 
+                rbBuscarRegistro.Checked = false;
                 txtNome.ReadOnly = true;
                 txtNome.BackColor = SystemColors.Control;
                 txtNome.TextAlign = HorizontalAlignment.Left;
                 txtNome.MaxLength = 32767;
+                lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
             }
-        }
-
-        private void FrmDevolucaoLivrosLiterarios_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F1)
-                btnFinalizarDevolucao_Click(sender, e);
         }
 
         private void txtNome_KeyDown(object sender, KeyEventArgs e)
@@ -268,18 +344,36 @@ namespace Controle_de_livros
                 btnPesquisar_Click(sender, e);
         }
 
+        private void txtNome_Click(object sender, EventArgs e)
+        {
+            if (cbProcurarPorCodigo.Checked)
+            {
+                txtNome.TextAlign = HorizontalAlignment.Right;
+                txtNome.Clear();
+                lblCodigo.Text = "";
+                dgvDados.Rows.Clear();
+                cbSelecionarTudo.Visible = false;
+                cbSelecionarTudo.Checked = false;
+                MudarTextolblNomeCampo();
+            }
+        }
+
         private void rbBuscarCodigo_CheckedChanged(object sender, EventArgs e)
         {
-            txtNome.Focus();
-            txtNome.Clear();
-            txtNome.TextAlign = HorizontalAlignment.Right;
+            if (cbProcurarPorCodigo.Checked)
+            {
+                LimparCampos_E_FocarCursor();
+            }
+            lblNomeCampo.Text = "Código do Aluno(a)/Funcionário(a)/Outro";
         }
 
         private void rbBuscarRegistro_CheckedChanged(object sender, EventArgs e)
         {
-            txtNome.Focus();
-            txtNome.Clear();
-            txtNome.TextAlign = HorizontalAlignment.Right;
+            if (cbProcurarPorCodigo.Checked)
+            {
+                LimparCampos_E_FocarCursor();
+            }
+            lblNomeCampo.Text = "Registro do Livro";
         }
     }
 }

@@ -56,13 +56,13 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
             this.btnVerHistorico = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCampoNome = new System.Windows.Forms.Label();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLivro)).BeginInit();
@@ -334,7 +334,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.cbProcurarPorCodigo);
             this.groupBox5.Controls.Add(this.btnVerHistorico);
-            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.lblCampoNome);
             this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
             this.groupBox5.Controls.Add(this.lblCodigo);
             this.groupBox5.Controls.Add(this.btnPesquisar);
@@ -344,6 +344,17 @@
             this.groupBox5.Size = new System.Drawing.Size(741, 135);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
+            // 
+            // cbProcurarPorCodigo
+            // 
+            this.cbProcurarPorCodigo.AutoSize = true;
+            this.cbProcurarPorCodigo.Location = new System.Drawing.Point(100, 21);
+            this.cbProcurarPorCodigo.Name = "cbProcurarPorCodigo";
+            this.cbProcurarPorCodigo.Size = new System.Drawing.Size(151, 23);
+            this.cbProcurarPorCodigo.TabIndex = 11;
+            this.cbProcurarPorCodigo.Text = "Procurar por código";
+            this.cbProcurarPorCodigo.UseVisualStyleBackColor = true;
+            this.cbProcurarPorCodigo.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
             // 
             // btnVerHistorico
             // 
@@ -358,14 +369,14 @@
             this.btnVerHistorico.UseVisualStyleBackColor = true;
             this.btnVerHistorico.Click += new System.EventHandler(this.btnVerHistorico_Click);
             // 
-            // label2
+            // lblCampoNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Aluno/Funcionário/Outro";
+            this.lblCampoNome.AutoSize = true;
+            this.lblCampoNome.Location = new System.Drawing.Point(96, 47);
+            this.lblCampoNome.Name = "lblCampoNome";
+            this.lblCampoNome.Size = new System.Drawing.Size(160, 19);
+            this.lblCampoNome.TabIndex = 7;
+            this.lblCampoNome.Text = "Aluno/Funcionário/Outro";
             // 
             // lblQuantidadeLivrosEmprestados
             // 
@@ -411,17 +422,6 @@
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
             this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
-            // 
-            // cbProcurarPorCodigo
-            // 
-            this.cbProcurarPorCodigo.AutoSize = true;
-            this.cbProcurarPorCodigo.Location = new System.Drawing.Point(100, 21);
-            this.cbProcurarPorCodigo.Name = "cbProcurarPorCodigo";
-            this.cbProcurarPorCodigo.Size = new System.Drawing.Size(151, 23);
-            this.cbProcurarPorCodigo.TabIndex = 11;
-            this.cbProcurarPorCodigo.Text = "Procurar por código";
-            this.cbProcurarPorCodigo.UseVisualStyleBackColor = true;
-            this.cbProcurarPorCodigo.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
             // 
             // FrmEmprestimoLivroLiterario
             // 
@@ -489,7 +489,7 @@
         private System.Windows.Forms.Label lblQuantidadeLivrosEmprestados;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem menuRemover;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCampoNome;
         private System.Windows.Forms.Button btnVerHistorico;
         private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
     }

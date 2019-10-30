@@ -680,7 +680,6 @@
       <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RELATÓRIOS\Lista de livros literários devolvidos.rdlc" />
-    <EmbeddedResource Include="RELATÓRIOS\Lista de livros literários devolvidos1.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos filtrados por ano e turma.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a funcionarios.rdlc" />

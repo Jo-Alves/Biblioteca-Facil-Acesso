@@ -57,10 +57,11 @@
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.cbEmprestimoTemporario = new System.Windows.Forms.CheckBox();
             this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
             this.cbProfessor = new System.Windows.Forms.CheckBox();
             this.btnVerHistorico = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCampoNome = new System.Windows.Forms.Label();
             this.lblQuantidadeLivrosEmprestados = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -343,10 +344,11 @@
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.cbEmprestimoTemporario);
             this.groupBox5.Controls.Add(this.cbProcurarPorCodigo);
             this.groupBox5.Controls.Add(this.cbProfessor);
             this.groupBox5.Controls.Add(this.btnVerHistorico);
-            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.lblCampoNome);
             this.groupBox5.Controls.Add(this.lblQuantidadeLivrosEmprestados);
             this.groupBox5.Controls.Add(this.lblCodigo);
             this.groupBox5.Controls.Add(this.btnPesquisar);
@@ -356,6 +358,18 @@
             this.groupBox5.Size = new System.Drawing.Size(741, 138);
             this.groupBox5.TabIndex = 15;
             this.groupBox5.TabStop = false;
+            // 
+            // cbEmprestimoTemporario
+            // 
+            this.cbEmprestimoTemporario.AutoSize = true;
+            this.cbEmprestimoTemporario.Location = new System.Drawing.Point(283, 17);
+            this.cbEmprestimoTemporario.Name = "cbEmprestimoTemporario";
+            this.cbEmprestimoTemporario.Size = new System.Drawing.Size(174, 23);
+            this.cbEmprestimoTemporario.TabIndex = 11;
+            this.cbEmprestimoTemporario.Text = "Empréstimo Temporário";
+            this.cbEmprestimoTemporario.UseVisualStyleBackColor = true;
+            this.cbEmprestimoTemporario.Visible = false;
+            this.cbEmprestimoTemporario.CheckedChanged += new System.EventHandler(this.cbEmprestimoTemporario_CheckedChanged);
             // 
             // cbProcurarPorCodigo
             // 
@@ -393,14 +407,14 @@
             this.btnVerHistorico.UseVisualStyleBackColor = true;
             this.btnVerHistorico.Click += new System.EventHandler(this.btnVerHistorico_Click);
             // 
-            // label2
+            // lblCampoNome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(95, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Aluno/Funcionário/Outro";
+            this.lblCampoNome.AutoSize = true;
+            this.lblCampoNome.Location = new System.Drawing.Point(95, 43);
+            this.lblCampoNome.Name = "lblCampoNome";
+            this.lblCampoNome.Size = new System.Drawing.Size(160, 19);
+            this.lblCampoNome.TabIndex = 7;
+            this.lblCampoNome.Text = "Aluno/Funcionário/Outro";
             // 
             // lblQuantidadeLivrosEmprestados
             // 
@@ -517,7 +531,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColEnsino;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColVolume;
         private System.Windows.Forms.CheckBox cbProfessor;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCampoNome;
         private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
+        private System.Windows.Forms.CheckBox cbEmprestimoTemporario;
     }
 }

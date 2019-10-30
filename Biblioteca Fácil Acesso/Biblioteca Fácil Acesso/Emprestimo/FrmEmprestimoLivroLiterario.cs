@@ -360,6 +360,7 @@ namespace Controle_de_livros
                 lblCodigo.Text = "";
                 lblQuantidadeLivrosEmprestados.Text = "";
                 btnVerHistorico.Enabled = false;
+                lblCampoNome.Text = "Código do Aluno/Funcionário/Outro";
             }
         }
 
@@ -375,6 +376,7 @@ namespace Controle_de_livros
                 txtNome.Focus();
                 txtNome.TextAlign = HorizontalAlignment.Right;
                 txtNome.MaxLength = 9;
+                lblCampoNome.Text = "Código do Aluno/Funcionário/Outro";
             }
             else
             {
@@ -382,6 +384,7 @@ namespace Controle_de_livros
                 txtNome.BackColor = SystemColors.Control;
                 txtNome.TextAlign = HorizontalAlignment.Left;
                 txtNome.MaxLength = 32767;
+                lblCampoNome.Text = "Aluno/Funcionário/Outro";
             }
         }
 
@@ -406,7 +409,11 @@ namespace Controle_de_livros
             {
                 if (!string.IsNullOrEmpty(txtNome.Text))
                 {
-                    usuario.codigo = int.Parse(txtNome.Text);
+                    if (!string.IsNullOrEmpty(lblCodigo.Text))
+                        usuario.codigo = int.Parse(lblCodigo.Text);
+                    else
+                        usuario.codigo = int.Parse(txtNome.Text);
+                
                     if (usuario.Buscar())
                     {
                         txtNome.Text = usuario.nome;
@@ -415,6 +422,7 @@ namespace Controle_de_livros
                         txtNome.TextAlign = HorizontalAlignment.Left;
                         txtRegistro.Focus();
                         txtNome.MaxLength = 32767;
+                        lblCampoNome.Text = "Aluno/Funcionário/Outro";
                     }
                     else
                     {

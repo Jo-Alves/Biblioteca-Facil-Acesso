@@ -23,22 +23,22 @@ namespace Controle_de_livros
             if (opcao == "Todos as datas")
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' ";
-                this.Text = "Toda os prazos de Empréstimos de livros";
+                this.Text = "Todos os prazos de Empréstimos de livros";
             }
             else if (opcao == "A vencer")
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' and Convert(date, Prazo_Entrega, 103) >= Convert(date, @DataAtual, 103)";
-                this.Text = "Toda os prazos de Empréstimos de livros a vencer";
+                this.Text = "Todos os prazos de Empréstimos de livros a vencer";
             }
             else if (opcao == "Data atual")
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' and Convert(date, Prazo_Entrega, 103) = Convert(date, @DataAtual, 103) ";
-                this.Text = "Toda os prazos de Empréstimos de livros na data atual";
+                this.Text = "Todos os prazos de Empréstimos de livros na data atual";
             }
             else
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = ''  and Convert(date, Prazo_Entrega, 103) < Convert(date, @DataAtual, 103)";
-                this.Text = "Toda os prazos de Empréstimos de livros vencidos";
+                this.Text = "Todos os prazos de Empréstimos de livros vencidos";
             }
             foreach (DataRow dataRow in MostrarPrazosEmprestimos().Rows)
             {
@@ -53,7 +53,7 @@ namespace Controle_de_livros
                 dgvPrazosEmprestimos.Rows[countLinhas].Cells[7].Value = dataRow["Ocupacao"].ToString();
                 dgvPrazosEmprestimos.Rows[countLinhas].Selected = false;
 
-                //if(opcao == "Todas as datas" || opcao == "Vencidas")
+             
                 if (DateTime.Parse(dataRow["Prazo_Entrega"].ToString()) < DateTime.Parse(DateTime.Now.ToShortDateString()))
                 {
                     dgvPrazosEmprestimos.Rows[countLinhas].DefaultCellStyle.BackColor = Color.Red;
