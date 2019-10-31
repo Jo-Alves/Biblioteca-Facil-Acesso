@@ -23,7 +23,7 @@ namespace Controle_de_livros
         }
 
         int registro, countLinhas, qtdLivrosEmprestados;
-        string titulo, autor, genero;
+        string titulo, autor, genero, nome;
         Livro_Literario livroLiterario = new Livro_Literario();
         EmprestimoLivroLiterario Emprestimo_Livro_Literario = new EmprestimoLivroLiterario();
 
@@ -43,11 +43,15 @@ namespace Controle_de_livros
                     AdicionarItens();
                 }
                 else
+                {
                     MessageBox.Show("Registro inválido! Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtRegistro.Focus();
+                }
             }
             else
             {
                 MessageBox.Show("Informe o registro do livro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtRegistro.Focus();
             }
         }
 
@@ -62,6 +66,7 @@ namespace Controle_de_livros
                     if (duplicata == true)
                     {
                         MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtRegistro.Focus();
                         duplicata = false;
                     }
                     else
@@ -70,10 +75,14 @@ namespace Controle_de_livros
                         if (dgvLivro.Rows.Count == (countLinhas - qtdLivrosEmprestados))
                         {
                             if (qtdLivrosEmprestados == 0)
+                            {
                                 MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livros!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            }
                             else
+                            {
                                 MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                            txtRegistro.Clear();
+                                txtRegistro.Clear();
+                            }
                         }
                         else
                         {
@@ -87,6 +96,7 @@ namespace Controle_de_livros
                 else
                 {
                     MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou Biblioteca Fácil Acesso na busca do livro com o mesmo titulo.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtRegistro.Focus();
                 }
             }
             else
@@ -185,7 +195,7 @@ namespace Controle_de_livros
                         VerificarEmprestimo();
                         if (prazoUltrapassado)
                         {
-                            MessageBox.Show("Empréstimo a " + txtNome.Text.ToUpper() + " negado! O(A) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) obtém " + QuantidadeLivrosPendente + " livro(s) que não foi entregue no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Empréstimo a " + nome.ToUpper() + ", negado! O(A) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) obtém " + QuantidadeLivrosPendente + " livro(s) que não foi entregue no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             prazoUltrapassado = false;
                             return;
                         }
@@ -395,7 +405,7 @@ namespace Controle_de_livros
                 if (usuario.Codigo > 0)
                 {
                     lblCodigo.Text = usuario.Codigo.ToString();
-
+                    nome = usuario.nome;
                     if (usuario.ocupacao == "Aluno")
                     {
                         txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
@@ -430,7 +440,8 @@ namespace Controle_de_livros
                     if (usuario.Buscar())
                     {                        
                         lblCodigo.Text = usuario.codigo.ToString();
-                        
+                        nome = usuario.nome;
+
                         if (usuario.ocupacao == "Aluno")
                         {
                             txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;

@@ -23,7 +23,7 @@ namespace Controle_de_livros
         }
 
         int registro, countLinhas, qtdLivrosEmprestados;
-        string Disciplina, autor, volume, ensino, stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), ocupacao;
+        string Disciplina, autor, volume, ensino, stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), ocupacao, nome;
 
 
         Livro_Didatico livroDidatico = new Livro_Didatico();
@@ -51,11 +51,15 @@ namespace Controle_de_livros
                     AdicionarItens();
                 }
                 else
+                {
                     MessageBox.Show("Registro inválido! Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtRegistro.Focus();
+                }
             }
             else
             {
                 MessageBox.Show("Informe o registro do livro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtRegistro.Focus();
             }
         }
 
@@ -87,6 +91,7 @@ namespace Controle_de_livros
                         else
                         {
                             MessageBox.Show("O(A) funcionário(a)" + txtNome.Text.ToUpper() + " já tem um livro desta disciplina. Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            txtRegistro.Focus();
                         }
                     }
                     else if (ocupacao == "Aluno")
@@ -97,6 +102,7 @@ namespace Controle_de_livros
                             if (duplicata == true && cbEmprestimoTemporario.Checked == false)
                             {
                                 MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtRegistro.Focus();
                                 duplicata = false;
                             }
                             else
@@ -110,6 +116,7 @@ namespace Controle_de_livros
                         else
                         {
                             MessageBox.Show("O(A) aluno(a) " + txtNome.Text.ToUpper() + " já tem um livro desta disciplina. Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            txtRegistro.Focus();
                         }
                     }
                     else
@@ -120,6 +127,7 @@ namespace Controle_de_livros
                             if (duplicata == true)
                             {
                                 MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                txtRegistro.Focus();
                                 duplicata = false;
                             }
                             else
@@ -133,6 +141,7 @@ namespace Controle_de_livros
                         else
                         {
                             MessageBox.Show(txtNome.Text.ToUpper() + " já tem um livro desta disciplina. Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            txtRegistro.Focus();
                         }
                     }
                 }
@@ -146,7 +155,10 @@ namespace Controle_de_livros
                 }
             }
             else
+            {
                 MessageBox.Show("O livro com este registro já foi emprestado. Verifique se não houve erro de digitação ou erro na seleção da busca.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtRegistro.Focus();
+            }
         }
 
         public bool VerificarLivrosEmprestados()
@@ -259,9 +271,29 @@ namespace Controle_de_livros
         private void btnFinalizarEmprestimo_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(lblCodigo.Text))
-            {                
-                if(dgvLivro.Rows.Count > 0)
+            {
+                if (dgvLivro.Rows.Count > 0)
                 {
+                    bool EstaNoPrazo = true;
+                    int qtdLivrosPendentes = 0;
+
+                    foreach (DataRow dr in emprestimoLivroDidatico.BuscarLivrosDidaticosEmprestadosPorCodigoUsuario().Rows)
+                    {
+                        if (int.Parse(dr["Data_Solicitacao"].ToString().Substring(6, 4)) < int.Parse(DateTime.Now.ToShortDateString().Substring(6, 4)))
+                        {
+                            EstaNoPrazo = false;
+                            qtdLivrosPendentes += 1;
+                        }
+                    }
+
+                    if (bool.Parse(Settings.Default["isBloqueado"].ToString()) && !EstaNoPrazo)
+                    {
+                        if (ocupacao == "Outros")
+                            ocupacao = "ex-aluno(a)/outro";
+                        MessageBox.Show("Empréstimo a " + nome.ToUpper() + ", negado! Existe " + qtdLivrosPendentes + " livro(s) do ano anterior que " + nome.ToUpper() + " ainda não devolveu. É necessário a devolução do(s) livro(s) pendente(s) para que o novo empréstimo seja realizado.", "Bibliteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
+                    }
+
                     FinalizarEmprestimo();
                     MessageBox.Show("Operação efetuado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limparCampos();
@@ -269,6 +301,7 @@ namespace Controle_de_livros
                 else
                 {
                     MessageBox.Show("Não há livros adicionados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtRegistro.Focus();
                 }
             }
             else
@@ -477,7 +510,7 @@ namespace Controle_de_livros
                     {
                         dgvLivro.Rows.Clear();
                         lblCodigo.Text = usuario.Codigo.ToString();
-                        
+                        nome = usuario.nome;
                         if (usuario.ocupacao == "Aluno")
                         {
                             txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
@@ -529,6 +562,7 @@ namespace Controle_de_livros
                             }
 
                             lblCodigo.Text = usuario.codigo.ToString();
+                            nome = usuario.nome;
                             VerificarQuantidadeLivroDidaticoEmprestado_E_OcupacaoUsuario(int.Parse(lblCodigo.Text), usuario.ocupacao);
                             txtNome.TextAlign = HorizontalAlignment.Left;
                             txtRegistro.Focus();

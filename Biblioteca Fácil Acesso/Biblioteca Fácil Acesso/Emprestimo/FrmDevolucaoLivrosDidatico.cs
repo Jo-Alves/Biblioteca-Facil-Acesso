@@ -19,6 +19,7 @@ namespace Controle_de_livros
 
         EmprestimoLivroDidatico emprestimoLivroDidatico = new EmprestimoLivroDidatico();
         Usuario usuario = new Usuario();
+        string nome;
        
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
@@ -30,7 +31,7 @@ namespace Controle_de_livros
                 {
                     errorProvider.Clear();
                     lblCodigo.Text = buscarUsuario.Codigo.ToString();
-                   
+                    nome = buscarUsuario.nome;
                     if (buscarUsuario.ocupacao == "Aluno")
                     {
                         txtNome.Text = buscarUsuario.nome + " - " + buscarUsuario.ano + " - " + buscarUsuario.turma + " - " + buscarUsuario.ocupacao;
@@ -51,7 +52,7 @@ namespace Controle_de_livros
                     loadDgv();
                     if (dgvDados.Rows.Count == 0)
                     {
-                        MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimparCampos_E_FocarCursor();
                     }
                 }
@@ -62,7 +63,6 @@ namespace Controle_de_livros
                 {
                     if (rbBuscarCodigo.Checked)
                     {
-
                         if (string.IsNullOrEmpty(lblCodigo.Text))
                             usuario.codigo = int.Parse(txtNome.Text);
                         else
@@ -87,12 +87,13 @@ namespace Controle_de_livros
                             }
 
                             lblCodigo.Text = usuario.codigo.ToString();
+                            nome = usuario.nome;
                             txtNome.TextAlign = HorizontalAlignment.Left;
                             dgvDados.Focus();
                             loadDgv();                           
                             if (dgvDados.Rows.Count == 0)
                             {
-                                MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 LimparCampos_E_FocarCursor();
                             }
                         }

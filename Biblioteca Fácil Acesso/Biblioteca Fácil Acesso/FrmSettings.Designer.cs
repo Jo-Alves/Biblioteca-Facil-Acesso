@@ -242,9 +242,9 @@
             this.cbBloquear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.cbBloquear.Location = new System.Drawing.Point(9, 334);
             this.cbBloquear.Name = "cbBloquear";
-            this.cbBloquear.Size = new System.Drawing.Size(321, 23);
+            this.cbBloquear.Size = new System.Drawing.Size(420, 23);
             this.cbBloquear.TabIndex = 11;
-            this.cbBloquear.Text = "Bloquear Aluno/Funcionario/Outro pendente";
+            this.cbBloquear.Text = "Bloquear Aluno/Funcionario/Outro com livro(s) pendente(s)";
             this.cbBloquear.UseVisualStyleBackColor = true;
             this.cbBloquear.CheckedChanged += new System.EventHandler(this.cbBloquear_CheckedChanged);
             // 

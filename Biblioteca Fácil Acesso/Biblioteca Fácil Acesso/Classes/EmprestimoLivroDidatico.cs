@@ -186,6 +186,7 @@ namespace Controle_de_livros
                 SqlDataReader dr = comando.ExecuteReader();
                 if (dr.Read())
                 {
+                    _Solicitacao = dr["Data_Solicitacao"].ToString();
                     return true;
                 }
                 else
