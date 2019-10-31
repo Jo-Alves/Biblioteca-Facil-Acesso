@@ -30,7 +30,23 @@ namespace Controle_de_livros
                 {
                     errorProvider.Clear();
                     lblCodigo.Text = buscarUsuario.Codigo.ToString();
-                    txtNome.Text = buscarUsuario.nome;
+                   
+                    if (buscarUsuario.ocupacao == "Aluno")
+                    {
+                        txtNome.Text = buscarUsuario.nome + " - " + buscarUsuario.ano + " - " + buscarUsuario.turma + " - " + buscarUsuario.ocupacao;
+                        lblNomeCampo.Text = "Aluno(a)";
+                    }
+                    else if (buscarUsuario.ocupacao == "Funcionário")
+                    {
+                        txtNome.Text = buscarUsuario.nome + " - " + buscarUsuario.ocupacao;
+                        lblNomeCampo.Text = "Funcionário(a)";
+                    }
+                    else
+                    {
+                        txtNome.Text = buscarUsuario.nome + " - " + buscarUsuario.bairro + " - " + buscarUsuario.endereco + " - " + buscarUsuario.numero + " - " + buscarUsuario.cidade + " - " + buscarUsuario.estado + " - " + buscarUsuario.fone + " - " + buscarUsuario.ocupacao;
+                        lblNomeCampo.Text = "Ex-aluno(a)/Outro";
+                    }
+
                     txtNome.TextAlign = HorizontalAlignment.Left;
                     loadDgv();
                     if (dgvDados.Rows.Count == 0)
@@ -54,12 +70,26 @@ namespace Controle_de_livros
 
                         if (usuario.Buscar())
                         {
-                            txtNome.Text = usuario.nome;
+                            if (usuario.ocupacao == "Aluno")
+                            {
+                                txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
+                                lblNomeCampo.Text = "Aluno(a)";
+                            }
+                            else if (usuario.ocupacao == "Funcionário")
+                            {
+                                txtNome.Text = usuario.nome + " - " + usuario.ocupacao;
+                                lblNomeCampo.Text = "Funcionário(a)";
+                            }
+                            else
+                            {
+                                txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.telefone + " - " + usuario.ocupacao;
+                                lblNomeCampo.Text = "Ex-aluno(a)/Outro";
+                            }
+
                             lblCodigo.Text = usuario.codigo.ToString();
                             txtNome.TextAlign = HorizontalAlignment.Left;
                             dgvDados.Focus();
-                            loadDgv();
-                            lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
+                            loadDgv();                           
                             if (dgvDados.Rows.Count == 0)
                             {
                                 MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -91,7 +121,24 @@ namespace Controle_de_livros
                             }
                             else
                             {
-                                lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
+                                usuario.codigo = int.Parse(lblCodigo.Text);
+                                usuario.Buscar();
+                                if (usuario.ocupacao == "Aluno")
+                                {
+                                    txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
+                                    lblNomeCampo.Text = "Aluno(a)";
+                                }
+                                else if (usuario.ocupacao == "Funcionário")
+                                {
+                                    txtNome.Text = usuario.nome + " - " + usuario.ocupacao;
+                                    lblNomeCampo.Text = "Funcionário(a)";
+                                }
+                                else
+                                {
+                                    txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.telefone + " - " + usuario.ocupacao;
+                                    lblNomeCampo.Text = "Ex-aluno(a)/Outro";
+                                }
+
                                 txtNome.TextAlign = HorizontalAlignment.Left;
                             }
                         }
@@ -160,8 +207,7 @@ namespace Controle_de_livros
             {
                 int newRow = dgvDados.Rows.Add();
                 dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
-                lblCodigo.Text = item["Cod_Usuario"].ToString();
-                txtNome.Text = item["Nome_Usuario"].ToString();
+                lblCodigo.Text = item["Cod_Usuario"].ToString();                
                 dgvDados.Rows[newRow].Cells[1].Value = item["N_Registro"].ToString();
                 dgvDados.Rows[newRow].Cells[2].Value = item["Disciplina"].ToString();
                 dgvDados.Rows[newRow].Cells[3].Value = item["Ensino"].ToString();

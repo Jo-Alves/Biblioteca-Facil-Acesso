@@ -181,6 +181,15 @@ namespace Controle_de_livros
                 {                    
                     nome = dr["Nome_Usuario"].ToString();
                     ocupacao = dr["Ocupacao"].ToString();
+                    ano = dr["Ano"].ToString();
+                    turma = dr["Turma"].ToString();
+                    bairro = dr["Bairro"].ToString();
+                    endereco = dr["Endereco"].ToString();
+                    numero = dr["Numero"].ToString();
+                    estado = dr["Estado"].ToString();
+                    telefone = dr["Telefone"].ToString();
+                    cidade = dr["cidade"].ToString();                    
+
                     return true;
                 }
                 else

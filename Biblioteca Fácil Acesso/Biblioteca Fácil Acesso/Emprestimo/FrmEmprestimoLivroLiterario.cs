@@ -322,7 +322,6 @@ namespace Controle_de_livros
             {
                 if (dgvLivro.Rows.Count > 0)
                 {
-
                     DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (dr == DialogResult.No)
                     {
@@ -330,13 +329,11 @@ namespace Controle_de_livros
                     }
                     else
                     {
-
                         sair = false;
                     }
                 }
             }
         }
-
 
         private void DgvLivro_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -398,7 +395,23 @@ namespace Controle_de_livros
                 if (usuario.Codigo > 0)
                 {
                     lblCodigo.Text = usuario.Codigo.ToString();
-                    txtNome.Text = usuario.nome;
+
+                    if (usuario.ocupacao == "Aluno")
+                    {
+                        txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
+                        lblCampoNome.Text = "Aluno(a)";
+                    }
+                    else if (usuario.ocupacao == "Funcionário")
+                    {
+                        txtNome.Text = usuario.nome + " - " + usuario.ocupacao;
+                        lblCampoNome.Text = "Funcionário(a)";
+                    }
+                    else
+                    {
+                        txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + usuario.fone + " - " + usuario.ocupacao;
+                        lblCampoNome.Text = "Ex-aluno(a)/Outro";
+                    }
+
                     VerificarQuantidadeLivroEmprestado(usuario.Codigo);
                     txtNome.TextAlign = HorizontalAlignment.Left;
                     txtRegistro.Focus();
@@ -415,14 +428,29 @@ namespace Controle_de_livros
                         usuario.codigo = int.Parse(txtNome.Text);
                 
                     if (usuario.Buscar())
-                    {
-                        txtNome.Text = usuario.nome;
+                    {                        
                         lblCodigo.Text = usuario.codigo.ToString();
+                        
+                        if (usuario.ocupacao == "Aluno")
+                        {
+                            txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
+                            lblCampoNome.Text = "Aluno(a)";
+                        }
+                        else if (usuario.ocupacao == "Funcionário")
+                        {
+                            txtNome.Text = usuario.nome + " - " + usuario.ocupacao;
+                            lblCampoNome.Text = "Funcionário(a)";
+                        }
+                        else
+                        {
+                            txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.telefone + " - " + usuario.ocupacao;
+                            lblCampoNome.Text = "Ex-aluno(a)/Outro";
+                        }
+
                         VerificarQuantidadeLivroEmprestado(int.Parse(lblCodigo.Text));
                         txtNome.TextAlign = HorizontalAlignment.Left;
                         txtRegistro.Focus();
-                        txtNome.MaxLength = 32767;
-                        lblCampoNome.Text = "Aluno/Funcionário/Outro";
+                        txtNome.MaxLength = 32767;                        
                     }
                     else
                     {
@@ -436,6 +464,7 @@ namespace Controle_de_livros
                 else
                 {
                     MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    txtNome.Focus();
                 }
             }
         }

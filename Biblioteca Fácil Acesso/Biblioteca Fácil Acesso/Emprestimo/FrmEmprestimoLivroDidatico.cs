@@ -477,7 +477,23 @@ namespace Controle_de_livros
                     {
                         dgvLivro.Rows.Clear();
                         lblCodigo.Text = usuario.Codigo.ToString();
-                        txtNome.Text = usuario.nome;
+                        
+                        if (usuario.ocupacao == "Aluno")
+                        {
+                            txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
+                            lblCampoNome.Text = "Aluno(a)";
+                        }
+                        else if (usuario.ocupacao == "Funcionário")
+                        {
+                            txtNome.Text = usuario.nome + " - " + usuario.ocupacao;
+                            lblCampoNome.Text = "Funcionário(a)";
+                        }
+                        else
+                        {
+                            txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.fone + " - " + usuario.ocupacao;
+                            lblCampoNome.Text = "Ex-aluno(a)/Outro";
+                        }
+
                         VerificarQuantidadeLivroDidaticoEmprestado_E_OcupacaoUsuario(usuario.Codigo, usuario.ocupacao);
                         errorProvider.Clear();
                         txtNome.TextAlign = HorizontalAlignment.Left;
@@ -496,13 +512,27 @@ namespace Controle_de_livros
                         if (usuario.Buscar())
                         {
                             dgvLivro.Rows.Clear();
-                            txtNome.Text = usuario.nome;
+                            if (usuario.ocupacao == "Aluno")
+                            {
+                                txtNome.Text = usuario.nome + " - " + usuario.ano + " - " + usuario.turma + " - " + usuario.ocupacao;
+                                lblCampoNome.Text = "Aluno(a)";
+                            }
+                            else if (usuario.ocupacao == "Funcionário")
+                            {
+                                txtNome.Text = usuario.nome + " - " + usuario.ocupacao;
+                                lblCampoNome.Text = "Funcionário(a)";
+                            }
+                            else
+                            {
+                                txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.telefone + " - " + usuario.ocupacao;
+                                lblCampoNome.Text = "Ex-aluno(a)/Outro";
+                            }
+
                             lblCodigo.Text = usuario.codigo.ToString();
                             VerificarQuantidadeLivroDidaticoEmprestado_E_OcupacaoUsuario(int.Parse(lblCodigo.Text), usuario.ocupacao);
                             txtNome.TextAlign = HorizontalAlignment.Left;
                             txtRegistro.Focus();
-                            txtNome.MaxLength = 32767;
-                            lblCampoNome.Text = "Aluno/Funcionário/Outro";
+                            txtNome.MaxLength = 32767;                          
                         }
                         else
                         {
@@ -511,6 +541,11 @@ namespace Controle_de_livros
                             txtNome.Clear();
                             txtNome.Focus();
                         }
+                    }
+                    else
+                    {
+                        MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        txtNome.Focus();
                     }
                 }
             }catch(Exception ex)
