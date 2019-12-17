@@ -291,6 +291,7 @@ namespace Controle_de_livros
                         if (ocupacao == "Outros")
                             ocupacao = "ex-aluno(a)/outro";
                         MessageBox.Show("Empréstimo a " + nome.ToUpper() + ", negado! Existe " + qtdLivrosPendentes + " livro(s) do ano anterior que " + nome.ToUpper() + " ainda não devolveu. É necessário a devolução do(s) livro(s) pendente(s) para que o novo empréstimo seja realizado.", "Bibliteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        limparCampos();
                         return;
                     }
 

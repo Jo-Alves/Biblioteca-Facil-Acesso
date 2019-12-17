@@ -216,6 +216,7 @@
             this.txtRegistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRegistro.Font = new System.Drawing.Font("Times New Roman", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegistro.Location = new System.Drawing.Point(27, 44);
+            this.txtRegistro.MaxLength = 9;
             this.txtRegistro.Name = "txtRegistro";
             this.txtRegistro.Size = new System.Drawing.Size(562, 46);
             this.txtRegistro.TabIndex = 3;

@@ -29,17 +29,17 @@
           <DataField>Turma</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Data_Solicitacao">
-          <DataField>Data_Solicitacao</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Data_Entrega">
-          <DataField>Data_Entrega</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Ano">
           <DataField>Ano</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Data_Solicitacao">
+          <DataField>Data_Solicitacao</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="Data_Entrega">
+          <DataField>Data_Entrega</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
@@ -771,7 +771,7 @@
         <Height>2in</Height>
         <Style />
       </Body>
-      <Width>10.21355in</Width>
+      <Width>10.21356in</Width>
       <Page>
         <PageHeader>
           <Height>1.05833cm</Height>

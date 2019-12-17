@@ -20,7 +20,7 @@ namespace Controle_de_livros
         {
             InitializeComponent();
             this.opcao = opcao;
-            if (opcao == "Todos as datas")
+            if (opcao == "Todas as datas")
             {
                 _sql = "select * from Emprestimo_Livro_Literario inner join Livro_Literario on Livro_Literario.N_Registro =  Emprestimo_Livro_Literario.N_Registro inner join Usuario on Usuario.Cod_Usuario = Emprestimo_Livro_Literario.Cod_Usuario where Emprestimo_Livro_Literario.Data_Entrega = '' ";
                 this.Text = "Todos os prazos de Empréstimos de livros";

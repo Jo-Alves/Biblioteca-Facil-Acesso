@@ -197,6 +197,7 @@ namespace Controle_de_livros
                         {
                             MessageBox.Show("Empréstimo a " + nome.ToUpper() + ", negado! O(A) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) obtém " + QuantidadeLivrosPendente + " livro(s) que não foi entregue no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             prazoUltrapassado = false;
+                            limparCampos();
                             return;
                         }
                     }

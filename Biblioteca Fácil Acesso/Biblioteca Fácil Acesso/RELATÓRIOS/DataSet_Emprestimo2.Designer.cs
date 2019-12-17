@@ -4159,7 +4159,7 @@ ORDER BY Usuario.Nome_Usuario";
 FROM            Emprestimo_Livro_Literario INNER JOIN
                          Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN
                          Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario
-WHERE        (Usuario.Ocupacao = 'ALUNO') AND (Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND (Emprestimo_Livro_Literario.Data_Entrega = '')
+WHERE        (Usuario.Ocupacao = 'ALUNO') AND (Emprestimo_Livro_Literario.Data_Entrega = '')
 ORDER BY Usuario.Turma";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }

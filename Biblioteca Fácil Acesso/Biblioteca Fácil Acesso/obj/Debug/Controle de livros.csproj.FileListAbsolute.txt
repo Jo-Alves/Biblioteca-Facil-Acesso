@@ -1185,3 +1185,5 @@ D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca F�
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.frmListaTodosLivrosDidaticosDevolvidos.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle_de_livros.frmListaTodosLivrosDidaticosEmprestados.resources
 D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.csprojAssemblyReference.cache
+D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\bin\Debug\System.Threading.Tasks.Dataflow.dll
+D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\obj\Debug\Controle de livros.csproj.CoreCompileInputs.cache

@@ -46,7 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.usuarioTableAdapter = new Controle_de_livros.dataSet2TableAdapters.UsuarioTableAdapter();
+            this.mkCelular = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
@@ -268,7 +268,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtCelular);
+            this.groupBox3.Controls.Add(this.mkCelular);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.txtCidade);
             this.groupBox3.Controls.Add(this.label10);
@@ -292,18 +292,6 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Localização:";
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCelular.Location = new System.Drawing.Point(134, 163);
-            this.txtCelular.MaxLength = 15;
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(156, 26);
-            this.txtCelular.TabIndex = 23;
-            this.txtCelular.TextChanged += new System.EventHandler(this.txtCelular_TextChanged);
-            this.txtCelular.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTelefone_KeyDown);
-            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // label11
             // 
@@ -559,6 +547,17 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
+            // mkCelular
+            // 
+            this.mkCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mkCelular.Location = new System.Drawing.Point(134, 163);
+            this.mkCelular.Mask = "(00) 00000-0000";
+            this.mkCelular.Name = "mkCelular";
+            this.mkCelular.Size = new System.Drawing.Size(116, 26);
+            this.mkCelular.TabIndex = 22;
+            this.mkCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkCelular_MaskInputRejected);
+            // 
             // FrmCadastroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -634,6 +633,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox mkCelular;
     }
 }

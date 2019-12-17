@@ -26,7 +26,7 @@ namespace Controle_de_livros
             txt_Endereco.Clear();
             txt_Nome.Clear();
             txt_Numero.Clear();
-            txtCelular.Clear();
+            mkCelular.Clear();
             cb_Ano.SelectedIndex = -1;
             cb_Turma.SelectedIndex = -1;
             lbl_Codigo.Text = "";
@@ -91,7 +91,7 @@ namespace Controle_de_livros
             adapter.SelectCommand.Parameters.AddWithValue("@Turma", cb_Turma.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Endereco", txt_Endereco.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Numero", txt_Numero.Text);
-            adapter.SelectCommand.Parameters.AddWithValue("@Telefone", txtCelular.Text);
+            adapter.SelectCommand.Parameters.AddWithValue("@Telefone", mkCelular.Text);
             adapter.SelectCommand.Parameters.AddWithValue("@Ocupacao", Ocupacao);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -133,7 +133,7 @@ namespace Controle_de_livros
                 cb_Ano.Text = busca.ano;
                 cb_Turma.Text = busca.turma;
                 txt_Numero.Text = busca.numero;
-                txtCelular.Text = busca.fone;
+                mkCelular.Text = busca.fone;
             }
         }
 
@@ -170,7 +170,7 @@ namespace Controle_de_livros
             usuario.numero = txt_Numero.Text.Trim();
             usuario.cidade = txtCidade.Text.Trim();
             usuario.estado = cbEstado.Text;
-            usuario.telefone = txtCelular.Text;
+            usuario.telefone = mkCelular.Text;
             if (rb_Aluno.Checked)
             {
                 usuario.ocupacao = rb_Aluno.Text;
@@ -241,7 +241,7 @@ namespace Controle_de_livros
                     usuario.numero = txt_Numero.Text.Trim();
                     usuario.cidade = txtCidade.Text.Trim();
                     usuario.estado = cbEstado.Text;
-                    usuario.telefone = txtCelular.Text;
+                    usuario.telefone = mkCelular.Text;
                     if (rb_Aluno.Checked)
                     {
                         usuario.ocupacao = rb_Aluno.Text;
@@ -335,10 +335,10 @@ namespace Controle_de_livros
                     valido = false;
                     return;
                 }
-                else if (txtCelular.Text.Length < 15)
+                else if (!mkCelular.MaskCompleted)
                 {
-                    error_Provider.SetError(txtCelular, "Campo Obrigatório!");
-                    txtCelular.Focus();
+                    error_Provider.SetError(mkCelular, "Campo Vazio ou incompleto!");
+                    mkCelular.Focus();
                     valido = false;
                     return;
                 }
@@ -378,19 +378,10 @@ namespace Controle_de_livros
                     valido = false;
                     return;
                 }
-                else if (txtCelular.Text.Length > 0 && txtCelular.Text.Length < 15)
-                {
-                    error_Provider.SetError(txtCelular, "Campo do telefone inválido!!");
-                    txtCelular.Focus();
-                    valido = false;
-                    return;
-                }
                 else
                 {
                     valido = true;
                 }
-
-                //MessageBox.Show(Celular.Length.ToString());
             }
         }
 
@@ -600,23 +591,23 @@ namespace Controle_de_livros
             {
                 if (System.Text.RegularExpressions.Regex.IsMatch(o, "[0-9]{1}"))
                 {
-                    if (txtCelular.Text.Length == 1)
+                    if (mkCelular.Text.Length == 1)
                     {
-                        txtCelular.Text = "(" + txtCelular.Text;
-                        txtCelular.SelectionStart = txtCelular.Text.Length;
+                        mkCelular.Text = "(" + mkCelular.Text;
+                        mkCelular.SelectionStart = mkCelular.Text.Length;
                     }
-                    else if (txtCelular.Text.Length == 3)
+                    else if (mkCelular.Text.Length == 3)
                     {
-                        txtCelular.Text = txtCelular.Text + ") ";
-                        txtCelular.SelectionStart = txtCelular.Text.Length;
+                        mkCelular.Text = mkCelular.Text + ") ";
+                        mkCelular.SelectionStart = mkCelular.Text.Length;
                     }
-                    else if (txtCelular.Text.Length == 10)
+                    else if (mkCelular.Text.Length == 10)
                     {
-                        txtCelular.Text = txtCelular.Text + "-";
-                        txtCelular.SelectionStart = txtCelular.Text.Length;
+                        mkCelular.Text = mkCelular.Text + "-";
+                        mkCelular.SelectionStart = mkCelular.Text.Length;
                     }
 
-                    txtCelular.Refresh();
+                    mkCelular.Refresh();
                 }
             }
         }
@@ -630,7 +621,7 @@ namespace Controle_de_livros
             }
         }
 
-        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        private void mkCelular_KeyPress(object sender, KeyPressEventArgs e)
         {
             //aceita só números
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (Char)8)
@@ -657,12 +648,7 @@ namespace Controle_de_livros
         private void cbEstado_SelectedIndexChanged(object sender, EventArgs e)
         {
             error_Provider.Clear();
-        }
-
-        private void txtCelular_TextChanged(object sender, EventArgs e)
-        {
-            error_Provider.Clear();
-        }
+        }        
 
         private void cb_Turma_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -731,6 +717,11 @@ namespace Controle_de_livros
         {
             if (e.KeyCode == Keys.Enter)
                 btnBuscarCep_Click(sender, e);
+        }
+
+        private void mkCelular_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            error_Provider.Clear();
         }
     }
 }

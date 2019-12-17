@@ -930,11 +930,11 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             private global::System.Data.DataColumn columnTurma;
             
+            private global::System.Data.DataColumn columnAno;
+            
             private global::System.Data.DataColumn columnData_Solicitacao;
             
             private global::System.Data.DataColumn columnData_Entrega;
-            
-            private global::System.Data.DataColumn columnAno;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -995,6 +995,14 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn AnoColumn {
+                get {
+                    return this.columnAno;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Data_SolicitacaoColumn {
                 get {
                     return this.columnData_Solicitacao;
@@ -1006,14 +1014,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             public global::System.Data.DataColumn Data_EntregaColumn {
                 get {
                     return this.columnData_Entrega;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn AnoColumn {
-                get {
-                    return this.columnAno;
                 }
             }
             
@@ -1054,15 +1054,15 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTableLivrosLiterariosDevolvidosRow AddDataTableLivrosLiterariosDevolvidosRow(string Titulo, string Nome_Usuario, string Turma, string Data_Solicitacao, string Data_Entrega, string Ano) {
+            public DataTableLivrosLiterariosDevolvidosRow AddDataTableLivrosLiterariosDevolvidosRow(string Titulo, string Nome_Usuario, string Turma, string Ano, System.DateTime Data_Solicitacao, System.DateTime Data_Entrega) {
                 DataTableLivrosLiterariosDevolvidosRow rowDataTableLivrosLiterariosDevolvidosRow = ((DataTableLivrosLiterariosDevolvidosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Titulo,
                         Nome_Usuario,
                         Turma,
+                        Ano,
                         Data_Solicitacao,
-                        Data_Entrega,
-                        Ano};
+                        Data_Entrega};
                 rowDataTableLivrosLiterariosDevolvidosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTableLivrosLiterariosDevolvidosRow);
                 return rowDataTableLivrosLiterariosDevolvidosRow;
@@ -1088,9 +1088,9 @@ namespace Controle_de_livros.RELATÓRIOS {
                 this.columnTitulo = base.Columns["Titulo"];
                 this.columnNome_Usuario = base.Columns["Nome_Usuario"];
                 this.columnTurma = base.Columns["Turma"];
+                this.columnAno = base.Columns["Ano"];
                 this.columnData_Solicitacao = base.Columns["Data_Solicitacao"];
                 this.columnData_Entrega = base.Columns["Data_Entrega"];
-                this.columnAno = base.Columns["Ano"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1102,20 +1102,20 @@ namespace Controle_de_livros.RELATÓRIOS {
                 base.Columns.Add(this.columnNome_Usuario);
                 this.columnTurma = new global::System.Data.DataColumn("Turma", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTurma);
-                this.columnData_Solicitacao = new global::System.Data.DataColumn("Data_Solicitacao", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnData_Solicitacao);
-                this.columnData_Entrega = new global::System.Data.DataColumn("Data_Entrega", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnData_Entrega);
                 this.columnAno = new global::System.Data.DataColumn("Ano", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAno);
+                this.columnData_Solicitacao = new global::System.Data.DataColumn("Data_Solicitacao", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnData_Solicitacao);
+                this.columnData_Entrega = new global::System.Data.DataColumn("Data_Entrega", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnData_Entrega);
                 this.columnTitulo.AllowDBNull = false;
                 this.columnTitulo.MaxLength = 2147483647;
                 this.columnNome_Usuario.AllowDBNull = false;
                 this.columnNome_Usuario.MaxLength = 30;
                 this.columnTurma.MaxLength = 14;
-                this.columnData_Solicitacao.MaxLength = 11;
-                this.columnData_Entrega.MaxLength = 11;
                 this.columnAno.MaxLength = 25;
+                this.columnData_Solicitacao.ReadOnly = true;
+                this.columnData_Entrega.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4370,40 +4370,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Data_Solicitacao {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTableLivrosLiterariosDevolvidos.Data_SolicitacaoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Solicitacao\' na tabela \'DataTableLivrosLiterariosDevolvid" +
-                                "os\' é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableLivrosLiterariosDevolvidos.Data_SolicitacaoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Data_Entrega {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTableLivrosLiterariosDevolvidos.Data_EntregaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Entrega\' na tabela \'DataTableLivrosLiterariosDevolvidos\' " +
-                                "é DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTableLivrosLiterariosDevolvidos.Data_EntregaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string Ano {
                 get {
                     try {
@@ -4421,6 +4387,40 @@ namespace Controle_de_livros.RELATÓRIOS {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Data_Solicitacao {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDataTableLivrosLiterariosDevolvidos.Data_SolicitacaoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Solicitacao\' na tabela \'DataTableLivrosLiterariosDevolvid" +
+                                "os\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableLivrosLiterariosDevolvidos.Data_SolicitacaoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime Data_Entrega {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableDataTableLivrosLiterariosDevolvidos.Data_EntregaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'Data_Entrega\' na tabela \'DataTableLivrosLiterariosDevolvidos\' " +
+                                "é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTableLivrosLiterariosDevolvidos.Data_EntregaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTurmaNull() {
                 return this.IsNull(this.tableDataTableLivrosLiterariosDevolvidos.TurmaColumn);
             }
@@ -4429,6 +4429,18 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTurmaNull() {
                 this[this.tableDataTableLivrosLiterariosDevolvidos.TurmaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsAnoNull() {
+                return this.IsNull(this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetAnoNull() {
+                this[this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4453,18 +4465,6 @@ namespace Controle_de_livros.RELATÓRIOS {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetData_EntregaNull() {
                 this[this.tableDataTableLivrosLiterariosDevolvidos.Data_EntregaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsAnoNull() {
-                return this.IsNull(this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetAnoNull() {
-                this[this.tableDataTableLivrosLiterariosDevolvidos.AnoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -6702,9 +6702,9 @@ ORDER BY Usuario.Turma";
             tableMapping.ColumnMappings.Add("Titulo", "Titulo");
             tableMapping.ColumnMappings.Add("Nome_Usuario", "Nome_Usuario");
             tableMapping.ColumnMappings.Add("Turma", "Turma");
+            tableMapping.ColumnMappings.Add("Ano", "Ano");
             tableMapping.ColumnMappings.Add("Data_Solicitacao", "Data_Solicitacao");
             tableMapping.ColumnMappings.Add("Data_Entrega", "Data_Entrega");
-            tableMapping.ColumnMappings.Add("Ano", "Ano");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -6721,12 +6721,12 @@ ORDER BY Usuario.Turma";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.Titulo, Usuario.Nome_Usuario, Usuario.Ano, Usuario.Turma, Emprestimo_Livro_Literario.Data_Solicitacao, 
-                         Emprestimo_Livro_Literario.Data_Entrega
+            this._commandCollection[0].CommandText = @"SELECT        Livro_Literario.Titulo, Usuario.Nome_Usuario, Usuario.Ano, Usuario.Turma, CONVERT(date, Emprestimo_Livro_Literario.Data_Solicitacao, 103) AS Data_Solicitacao, 
+                         CONVERT(Date, Emprestimo_Livro_Literario.Data_Entrega, 103) AS Data_Entrega
 FROM            Emprestimo_Livro_Literario INNER JOIN
                          Livro_Literario ON Emprestimo_Livro_Literario.N_Registro = Livro_Literario.N_Registro INNER JOIN
                          Usuario ON Emprestimo_Livro_Literario.Cod_Usuario = Usuario.Cod_Usuario
-WHERE        (Emprestimo_Livro_Literario.Data_Solicitacao <> '') AND (Emprestimo_Livro_Literario.Data_Entrega <> '')";
+WHERE        (Emprestimo_Livro_Literario.Data_Entrega <> '')";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
