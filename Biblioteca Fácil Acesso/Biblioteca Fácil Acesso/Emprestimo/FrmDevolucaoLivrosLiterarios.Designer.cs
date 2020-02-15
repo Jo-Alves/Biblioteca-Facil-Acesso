@@ -185,10 +185,10 @@
             this.rbBuscarRegistro.AutoSize = true;
             this.rbBuscarRegistro.Location = new System.Drawing.Point(477, 25);
             this.rbBuscarRegistro.Name = "rbBuscarRegistro";
-            this.rbBuscarRegistro.Size = new System.Drawing.Size(143, 23);
+            this.rbBuscarRegistro.Size = new System.Drawing.Size(193, 23);
             this.rbBuscarRegistro.TabIndex = 14;
             this.rbBuscarRegistro.TabStop = true;
-            this.rbBuscarRegistro.Text = "Buscar por registro";
+            this.rbBuscarRegistro.Text = "Buscar por registro do livro";
             this.rbBuscarRegistro.UseVisualStyleBackColor = true;
             this.rbBuscarRegistro.Visible = false;
             this.rbBuscarRegistro.CheckedChanged += new System.EventHandler(this.rbBuscarRegistro_CheckedChanged);

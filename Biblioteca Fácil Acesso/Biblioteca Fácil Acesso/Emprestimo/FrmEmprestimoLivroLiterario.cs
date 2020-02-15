@@ -76,11 +76,11 @@ namespace Controle_de_livros
                         {
                             if (qtdLivrosEmprestados == 0)
                             {
-                                MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livros!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livro(s)!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                             else
                             {
-                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livro(s) e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livro(s) emprestado(s). Para adicionar mais itens para empréstimos altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 txtRegistro.Clear();
                             }
                         }
@@ -95,7 +95,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou Biblioteca Fácil na busca do livro com o mesmo titulo.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou erro de acesso na busca do livro com o mesmo titulo.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtRegistro.Focus();
                 }
             }

@@ -172,7 +172,7 @@ namespace Controle_de_livros
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão com banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         conexao.Close();
 
@@ -217,7 +217,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controle de livros", "Biblioteca Fácil Acesso\Controle de livros.csproj", "{A843B823-9982-4175-BCB5-12D0765265FE}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Biblioteca Fácil", "..\..\installer\Biblioteca Fácil\Biblioteca Fácil.vdproj", "{B0305B67-4345-4100-B726-08EC9F242E7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A843B823-9982-4175-BCB5-12D0765265FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A843B823-9982-4175-BCB5-12D0765265FE}.Release|x86.ActiveCfg = Release|x86
 		{A843B823-9982-4175-BCB5-12D0765265FE}.Release|x86.Build.0 = Release|x86
+		{B0305B67-4345-4100-B726-08EC9F242E7C}.Debug|Any CPU.ActiveCfg = Debug
+		{B0305B67-4345-4100-B726-08EC9F242E7C}.Debug|x86.ActiveCfg = Debug
+		{B0305B67-4345-4100-B726-08EC9F242E7C}.Release|Any CPU.ActiveCfg = Release
+		{B0305B67-4345-4100-B726-08EC9F242E7C}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -682,7 +682,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos filtrados por ano e turma.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos.rdlc" />
-    <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos1.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a funcionarios.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a terceiros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Todos os Livros Didaticos Devovolvidos.rdlc" />

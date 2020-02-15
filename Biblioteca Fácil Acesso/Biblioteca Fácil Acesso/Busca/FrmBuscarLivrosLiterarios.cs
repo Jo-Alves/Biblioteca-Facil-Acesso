@@ -154,7 +154,7 @@ namespace Controle_de_livros
                     }
                 }
                 else
-                    MessageBox.Show("Livro não encontrado.Verifique se há algum Biblioteca Fácil na grafia!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Livro não encontrado.Verifique se há algum erro na ortografia!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
                 MessageBox.Show("Preencha o campo Título!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

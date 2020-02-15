@@ -29,7 +29,7 @@ namespace Controle_de_livros
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtInstituicao.Text != "" && txtInstituicao.Text != "")
+            if (!string.IsNullOrWhiteSpace(txtInstituicao.Text) && !string.IsNullOrWhiteSpace(txtNomeBiblioteca.Text))
             {
                 Settings.Default["Instituicao"] = txtInstituicao.Text.Trim();
                 Settings.Default["Biblioteca"] = txtNomeBiblioteca.Text.Trim();
@@ -38,7 +38,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Preencha todos os campos!", "Biblioteca Fácil do sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Preencha todos os campos!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

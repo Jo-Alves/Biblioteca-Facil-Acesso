@@ -221,7 +221,7 @@ namespace Controle_de_livros
         {
             if (lbl_Codigo.Text == "")
             {
-                MessageBox.Show("Pesquise os dados que seráo alterados no botão pesquisar.", "Biblioteca Fácil Acessoo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pesquise os dados que seráo alterados no botão pesquisar.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -390,7 +390,7 @@ namespace Controle_de_livros
 
             if (lbl_Codigo.Text == "")
             {
-                MessageBox.Show("Pesquise os dados que será excluido no botão pesquisar.", "Biblioteca Fácil Acessoo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Pesquise os dados que será excluido no botão pesquisar.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
@@ -417,7 +417,7 @@ namespace Controle_de_livros
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Biblioteca Fácil ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -426,7 +426,7 @@ namespace Controle_de_livros
             }
             else if ((ExcluirUsuarioEPL() == 2) || (ExcluirUsuarioEPD() == 2))
             {
-                MessageBox.Show(txt_Nome.Text.ToUpper() + " está devendo livro(s). É necessário quitar todos os livros emprestados para que seja feita a exclusão dos dados na base de dados!", "Biblioteca Fácil Acessoo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(txt_Nome.Text.ToUpper() + " está devendo livro(s). É necessário quitar todos os livros emprestados para que seja feita a exclusão dos dados na base de dados!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if ((ExcluirUsuarioEPL() == 0) || (ExcluirUsuarioEPD() == 0))
             {
@@ -482,7 +482,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return 0;
         }
@@ -580,7 +580,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acessoo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
