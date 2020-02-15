@@ -52,7 +52,7 @@ namespace Controle_de_livros
                     loadDgv();
                     if (dgvDados.Rows.Count == 0)
                     {
-                        MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimparCampos_E_FocarCursor();
                     }
                 }
@@ -93,13 +93,13 @@ namespace Controle_de_livros
                             loadDgv();                            
                             if (dgvDados.Rows.Count == 0)
                             {
-                                MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 LimparCampos_E_FocarCursor();
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             LimparCampos_E_FocarCursor();
                             MudarTextolblNomeCampo();
                         }
@@ -117,7 +117,7 @@ namespace Controle_de_livros
                                 else
                                     opcao = "Código";
 
-                                MessageBox.Show("Não encontramos nenhum registro de empréstimos pelo " + opcao + ": " + txtNome.Text + ". Verifique se houve algum erro de digitação.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Não encontramos nenhum registro de empréstimos pelo " + opcao + ": " + txtNome.Text + ". Verifique se houve algum erro de digitação.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 LimparCampos_E_FocarCursor();
                             }
                             else
@@ -152,7 +152,7 @@ namespace Controle_de_livros
                     else if (rbBuscarCodigo.Checked)
                         opcao = "código do(a) aluno(a)/funcionário(a)/outro.";
 
-                    MessageBox.Show("informe o " + opcao, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("informe o " + opcao, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtNome.Focus();
                 }
             }
@@ -188,7 +188,7 @@ namespace Controle_de_livros
                 {
                     LimparCampos_E_FocarCursor();
 
-                    MessageBox.Show("informe novamente o registro do livro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("informe novamente o registro do livro", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     MudarTextolblNomeCampo();
                     isValorValido = false;
                     txtNome.Focus();
@@ -275,10 +275,10 @@ namespace Controle_de_livros
                 {
                     FinalizarDevolucao();
                     if (devolucaoFeita)
-                        MessageBox.Show("Devolução finalizado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Devolução finalizado com sucesso.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                     {
-                        MessageBox.Show("Selecione o item para finalizar a devolução!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Selecione o item para finalizar a devolução!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
                     loadDgv();
@@ -286,12 +286,12 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!");
                 txtNome.Focus();
@@ -318,7 +318,7 @@ namespace Controle_de_livros
                 }
             }
             else
-                MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void LimparCampos_E_FocarCursor()

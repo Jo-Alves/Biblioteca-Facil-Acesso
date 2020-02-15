@@ -44,7 +44,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Autor(a) Não encontrado(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Autor(a) Não encontrado(a)!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 conexao.Close();
             }
@@ -69,7 +69,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -133,7 +133,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -158,7 +158,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -260,7 +260,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

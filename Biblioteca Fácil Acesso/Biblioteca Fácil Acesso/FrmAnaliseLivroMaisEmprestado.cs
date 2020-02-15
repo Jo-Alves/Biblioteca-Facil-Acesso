@@ -53,7 +53,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Dados não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Dados não encontrado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Titulo.Focus();
             }
         }
@@ -91,7 +91,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Dados não encontrado! Verifique outra opção!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Dados não encontrado! Verifique outra opção!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

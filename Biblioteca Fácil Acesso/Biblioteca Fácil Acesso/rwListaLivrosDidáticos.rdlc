@@ -580,7 +580,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetListaLivros</rd:DataSetName>
-        <rd:SchemaPath>D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\DataSet's\DataSetListaLivros.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Meus Projetos\Biblioteca Fácil\Biblioteca Fácil\Biblioteca Fácil\DataSet's\DataSetListaLivros.xsd</rd:SchemaPath>
         <rd:TableName>Livro_Didatico</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

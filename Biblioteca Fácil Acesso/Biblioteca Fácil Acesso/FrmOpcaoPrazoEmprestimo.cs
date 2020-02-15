@@ -60,7 +60,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show(message + " Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message + " Tente outra opção...", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

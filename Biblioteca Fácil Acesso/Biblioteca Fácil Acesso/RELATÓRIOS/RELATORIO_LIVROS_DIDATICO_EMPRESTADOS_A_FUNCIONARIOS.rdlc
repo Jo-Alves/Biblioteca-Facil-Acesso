@@ -32,7 +32,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_Emprestimos</rd:DataSetName>
-        <rd:SchemaPath>D:\Meus Projetos\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\RELATÓRIOS\DataSet_Emprestimos.xsd</rd:SchemaPath>
+        <rd:SchemaPath>D:\Meus Projetos\Biblioteca Fácil\Biblioteca Fácil\Biblioteca Fácil\RELATÓRIOS\DataSet_Emprestimos.xsd</rd:SchemaPath>
         <rd:TableName>TableEmprestimoLivroDidaticoFuncionario</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

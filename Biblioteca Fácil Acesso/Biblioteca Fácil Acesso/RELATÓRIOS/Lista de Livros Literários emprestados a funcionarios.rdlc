@@ -36,7 +36,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_Emprestimo2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\joelmir\Desktop\Biblioteca Fácil\Biblioteca-Facil-Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\RELATÓRIOS\DataSet_Emprestimo2.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\joelmir\Desktop\Biblioteca Fácil\Biblioteca-Facil-Acesso\Biblioteca Fácil\Biblioteca Fácil\RELATÓRIOS\DataSet_Emprestimo2.xsd</rd:SchemaPath>
         <rd:TableName>TabelaEmprestimoLivrosLiterariosFuncionario</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

@@ -82,14 +82,14 @@ namespace Controle_de_livros
                         autenticacao._Usuario = cb_Usuario.Text;
                         autenticacao._Senha = ClassSecurityPassword.Pass(txt_SenhaRedefinir.Text);
                         autenticacao.alterarSenha();
-                        MessageBox.Show("Senha alterado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Senha alterado com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         atualizar_cb_Usuario();
                         txt_SenhaAtual.Clear();
                         txt_SenhaRedefinir.Clear();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 

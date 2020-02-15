@@ -25,14 +25,8 @@ namespace Controle_de_livros
 
         private void RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS_Load(object sender, EventArgs e)
         {
-            this.dataTableLivrosLiterariosDevolvidosTableAdapter.Fill(this.dataSet_Emprestimos.DataTableLivrosLiterariosDevolvidos);
-
+            this.dataTableLivrosLiterariosDevolvidosTableAdapter.Fill(this.dataSet_Emprestimo3.DataTableLivrosLiterariosDevolvidos);
             this.reportViewer1.RefreshReport();
-        }
-
-        private void reportViewer1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

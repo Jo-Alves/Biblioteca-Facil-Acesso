@@ -81,7 +81,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -137,7 +137,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Realize a busca para verificar quais livros estão em mãos do usuário!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Realize a busca para verificar quais livros estão em mãos do usuário!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -167,7 +167,7 @@ namespace Controle_de_livros
                 dataGridView_Nome.DataSource = table;
             }
             else
-                MessageBox.Show("Aluno não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Aluno não encontrado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void cb_Nome_SelectedIndexChanged(object sender, EventArgs e)
@@ -187,7 +187,7 @@ namespace Controle_de_livros
                 }
             }catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -298,7 +298,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
             finally
@@ -325,7 +325,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 0;
             }
             finally

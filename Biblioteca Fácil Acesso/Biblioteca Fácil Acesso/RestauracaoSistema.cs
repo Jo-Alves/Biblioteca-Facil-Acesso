@@ -44,7 +44,7 @@ namespace Controle_de_livros
                 {
                     conn.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Sistema Restaurado com sucesso", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sistema Restaurado com sucesso", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Cursor = Cursors.Default;
                     confirmacao = "Restaurado";
                     txt_ReceberFile.Clear();                   
@@ -59,14 +59,14 @@ namespace Controle_de_livros
                 }
             }
             else
-                MessageBox.Show("É necessário buscar o diretório onde encontra o arquivo de backup para a restaraução do sistema!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("É necessário buscar o diretório onde encontra o arquivo de backup para a restaraução do sistema!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void RestauracaoSistema_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (confirmacao == "Restaurado")
             {
-                MessageBox.Show("È necessário reiniciar o programa.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("È necessário reiniciar o programa.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

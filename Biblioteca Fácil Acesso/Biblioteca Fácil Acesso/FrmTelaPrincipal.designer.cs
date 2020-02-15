@@ -793,8 +793,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmTelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Biblioteca Fácil - SISTEMA PARA CONTROLE DE LIVROS (Escola Estadual Felício dos S" +
-    "antos)";
+            this.Text = "Biblioteca Fácil - SISTEMA PARA CONTROLE DE LIVROS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Fomulario_Principal_FormClosing);
             this.Load += new System.EventHandler(this.Fomulario_Principal_Load);

@@ -32,10 +32,10 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_Emprestimos = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimos();
+            this.dataSet_Emprestimo3 = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimo3();
             this.dataTableLivrosLiterariosDevolvidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataTableLivrosLiterariosDevolvidosTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_EmprestimosTableAdapters.DataTableLivrosLiterariosDevolvidosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).BeginInit();
+            this.dataTableLivrosLiterariosDevolvidosTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimo3TableAdapters.DataTableLivrosLiterariosDevolvidosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableLivrosLiterariosDevolvidosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,22 +45,23 @@
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.dataTableLivrosLiterariosDevolvidosBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Controle_de_livros.RELATÓRIOS.Lista de livros literários devolvidos.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Controle_de_livros.RELATÓRIOS.Lista de todos os Livros Literários devolvidos.rdlc" +
+    "";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(917, 497);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSet_Emprestimos
+            // dataSet_Emprestimo3
             // 
-            this.dataSet_Emprestimos.DataSetName = "DataSet_Emprestimos";
-            this.dataSet_Emprestimos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataSet_Emprestimo3.DataSetName = "DataSet_Emprestimo3";
+            this.dataSet_Emprestimo3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataTableLivrosLiterariosDevolvidosBindingSource
             // 
             this.dataTableLivrosLiterariosDevolvidosBindingSource.DataMember = "DataTableLivrosLiterariosDevolvidos";
-            this.dataTableLivrosLiterariosDevolvidosBindingSource.DataSource = this.dataSet_Emprestimos;
+            this.dataTableLivrosLiterariosDevolvidosBindingSource.DataSource = this.dataSet_Emprestimo3;
             // 
             // dataTableLivrosLiterariosDevolvidosTableAdapter
             // 
@@ -80,7 +81,7 @@
             this.Text = "LISTA DE LIVROS LITERÁRIOS DEVOLVIDOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTableLivrosLiterariosDevolvidosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -89,8 +90,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private RELATÓRIOS.DataSet_Emprestimos dataSet_Emprestimos;
+        private RELATÓRIOS.DataSet_Emprestimo3 dataSet_Emprestimo3;
         private System.Windows.Forms.BindingSource dataTableLivrosLiterariosDevolvidosBindingSource;
-        private RELATÓRIOS.DataSet_EmprestimosTableAdapters.DataTableLivrosLiterariosDevolvidosTableAdapter dataTableLivrosLiterariosDevolvidosTableAdapter;
+        private RELATÓRIOS.DataSet_Emprestimo3TableAdapters.DataTableLivrosLiterariosDevolvidosTableAdapter dataTableLivrosLiterariosDevolvidosTableAdapter;
     }
 }

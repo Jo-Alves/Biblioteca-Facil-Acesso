@@ -25,9 +25,8 @@ namespace Controle_de_livros
 
         private void FrmRelatorioLivrosLiterariosEmprestados_Load(object sender, EventArgs e)
         {
-           
-            this.tabelaEmprestimoLivroLiterarioAlunoTableAdapter.Fill(this.dataSet_Emprestimo2.TabelaEmprestimoLivroLiterarioAluno);
 
+            this.tabelaEmprestimoLivroLiterarioAlunoTableAdapter.Fill(this.dataSet_Emprestimo3.TabelaEmprestimoLivroLiterarioAluno);
             this.reportViewer1.RefreshReport();
         }
     }

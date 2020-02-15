@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controle de livros", "Biblioteca Fácil Acesso\Controle de livros.csproj", "{A843B823-9982-4175-BCB5-12D0765265FE}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Biblioteca Fácil Acesso", "Biblioteca Fácil Acesso\Biblioteca Fácil Acesso.vdproj", "{3BAD6397-B50F-4499-8C6C-7CA7EFD6B13B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +21,6 @@ Global
 		{A843B823-9982-4175-BCB5-12D0765265FE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A843B823-9982-4175-BCB5-12D0765265FE}.Release|x86.ActiveCfg = Release|x86
 		{A843B823-9982-4175-BCB5-12D0765265FE}.Release|x86.Build.0 = Release|x86
-		{3BAD6397-B50F-4499-8C6C-7CA7EFD6B13B}.Debug|Any CPU.ActiveCfg = Debug
-		{3BAD6397-B50F-4499-8C6C-7CA7EFD6B13B}.Debug|x86.ActiveCfg = Debug
-		{3BAD6397-B50F-4499-8C6C-7CA7EFD6B13B}.Release|Any CPU.ActiveCfg = Release
-		{3BAD6397-B50F-4499-8C6C-7CA7EFD6B13B}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

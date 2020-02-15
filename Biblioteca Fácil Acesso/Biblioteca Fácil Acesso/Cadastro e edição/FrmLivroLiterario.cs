@@ -75,12 +75,12 @@ namespace Controle_de_livros
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     break;
                 case "Incluir - F1":
 
-                    DialogResult dr = MessageBox.Show("Incluir outro livro?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult dr = MessageBox.Show("Incluir outro livro?", "Biblioteca Fácil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     if (dr == DialogResult.No)
                     {
@@ -111,7 +111,7 @@ namespace Controle_de_livros
                 int x = int.Parse(txt_Registro.Text);
                 if (x == 0)
                 {
-                    MessageBox.Show("Valor do Registro Inválido!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Valor do Registro Inválido!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
                 else
@@ -126,13 +126,13 @@ namespace Controle_de_livros
                     {
 
                         literario.Cadastrar();
-                        MessageBox.Show("Livro cadastrado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro cadastrado com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txt_Registro.Focus();
                         return true;
                     }
                     else
                     {
-                        MessageBox.Show("O número do registro já existe!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("O número do registro já existe!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return false;
                     }
                 }
@@ -264,7 +264,7 @@ namespace Controle_de_livros
                     if (literario.Atualizar() == true)
                     {
                         literario.Atualizar();
-                        MessageBox.Show("Dados atualizado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Dados atualizado com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         cb_Estante.SelectedIndex = -1;
                         recarregarFormatoPadrao();
                         txt_Registro.Focus();
@@ -298,12 +298,12 @@ namespace Controle_de_livros
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else if (VerificarLivroEmprestado() == 2)
                 {
-                    MessageBox.Show("É necessário quitar todos os livros emprestados para que seja feita a exclusão do livro na base de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("É necessário quitar todos os livros emprestados para que seja feita a exclusão do livro na base de dados!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else if (VerificarLivroEmprestado() == 0)
                 {
@@ -315,7 +315,7 @@ namespace Controle_de_livros
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -324,7 +324,7 @@ namespace Controle_de_livros
                 error_Provider.Clear();
                 error_Provider.SetError(txt_Registro, "Campo inválido!");
                 txt_Registro.Focus();
-                MessageBox.Show("Campo vazio! Informe o registro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Campo vazio! Informe o registro!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
         }
@@ -337,11 +337,11 @@ namespace Controle_de_livros
                 {
                     literario.registro = int.Parse(txt_Registro.Text);
                     literario.Deletar();
-                    MessageBox.Show("Dados excluido com sucesso", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Dados excluido com sucesso", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     recarregarFormatoPadrao();
                 }
                 else
-                    MessageBox.Show("Não existe dados com este registro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Não existe dados com este registro!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -375,7 +375,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso de conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil de conexão com o banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return 0;
         }

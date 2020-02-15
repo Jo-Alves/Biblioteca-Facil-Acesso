@@ -31,23 +31,13 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRelatorioLivrosLiterariosEmprestadosAlunos));
-            this.tabelaEmprestimoLivroLiterarioAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_Emprestimo2 = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimo2();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tabelaEmprestimoLivroLiterarioAlunoTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimo2TableAdapters.TabelaEmprestimoLivroLiterarioAlunoTableAdapter();
+            this.dataSet_Emprestimo3 = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimo3();
+            this.tabelaEmprestimoLivroLiterarioAlunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabelaEmprestimoLivroLiterarioAlunoTableAdapter = new Controle_de_livros.RELATÓRIOS.DataSet_Emprestimo3TableAdapters.TabelaEmprestimoLivroLiterarioAlunoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimo3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaEmprestimoLivroLiterarioAlunoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimo2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabelaEmprestimoLivroLiterarioAlunoBindingSource
-            // 
-            this.tabelaEmprestimoLivroLiterarioAlunoBindingSource.DataMember = "TabelaEmprestimoLivroLiterarioAluno";
-            this.tabelaEmprestimoLivroLiterarioAlunoBindingSource.DataSource = this.dataSet_Emprestimo2;
-            // 
-            // dataSet_Emprestimo2
-            // 
-            this.dataSet_Emprestimo2.DataSetName = "DataSet_Emprestimo2";
-            this.dataSet_Emprestimo2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -62,6 +52,16 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // dataSet_Emprestimo3
+            // 
+            this.dataSet_Emprestimo3.DataSetName = "DataSet_Emprestimo3";
+            this.dataSet_Emprestimo3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabelaEmprestimoLivroLiterarioAlunoBindingSource
+            // 
+            this.tabelaEmprestimoLivroLiterarioAlunoBindingSource.DataMember = "TabelaEmprestimoLivroLiterarioAluno";
+            this.tabelaEmprestimoLivroLiterarioAlunoBindingSource.DataSource = this.dataSet_Emprestimo3;
             // 
             // tabelaEmprestimoLivroLiterarioAlunoTableAdapter
             // 
@@ -79,8 +79,8 @@
             this.Text = "LISTA DE ALUNOS COM LIVROS LITERÁRIOS EMPRESTADOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmRelatorioLivrosLiterariosEmprestados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimo3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabelaEmprestimoLivroLiterarioAlunoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Emprestimo2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -88,8 +88,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private RELATÓRIOS.DataSet_Emprestimo2 dataSet_Emprestimo2;
+        private RELATÓRIOS.DataSet_Emprestimo3 dataSet_Emprestimo3;
         private System.Windows.Forms.BindingSource tabelaEmprestimoLivroLiterarioAlunoBindingSource;
-        private RELATÓRIOS.DataSet_Emprestimo2TableAdapters.TabelaEmprestimoLivroLiterarioAlunoTableAdapter tabelaEmprestimoLivroLiterarioAlunoTableAdapter;
+        private RELATÓRIOS.DataSet_Emprestimo3TableAdapters.TabelaEmprestimoLivroLiterarioAlunoTableAdapter tabelaEmprestimoLivroLiterarioAlunoTableAdapter;
     }
 }

@@ -44,13 +44,13 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Registro inválido! Tente outra opção...", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Registro inválido! Tente outra opção...", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtRegistro.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Informe o registro do livro!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o registro do livro!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtRegistro.Focus();
             }
         }
@@ -65,7 +65,7 @@ namespace Controle_de_livros
                     verificarDuplicidade();
                     if (duplicata == true)
                     {
-                        MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Este livro já foi adicionado.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtRegistro.Focus();
                         duplicata = false;
                     }
@@ -76,11 +76,11 @@ namespace Controle_de_livros
                         {
                             if (qtdLivrosEmprestados == 0)
                             {
-                                MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livros!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("Não é permitido empréstimo acima de " + countLinhas + " livros!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             }
                             else
                             {
-                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                MessageBox.Show("A quantidade de empréstimo é de " + countLinhas + " livros e constamos que " + txtNome.Text.ToUpper() + " tem em suas mãos " + qtdLivrosEmprestados + " livros emprestados. Para adicionar mais itens para empréstimos altere o valor da quantidade no menu de configurações.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                 txtRegistro.Clear();
                             }
                         }
@@ -95,13 +95,13 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou Biblioteca Fácil Acesso na busca do livro com o mesmo titulo.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Existe um empréstimo com este registro. Verifique se há erros de digitação ou Biblioteca Fácil na busca do livro com o mesmo titulo.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtRegistro.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe aqui");
                 txtNome.Focus();
@@ -125,7 +125,7 @@ namespace Controle_de_livros
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            lblDataHora.Text = "Biblioteca Fácil Acesso - " + DateTime.Now.ToLongDateString() + ", " + DateTime.Now.ToLongTimeString();
+            lblDataHora.Text = "Biblioteca Fácil - " + DateTime.Now.ToLongDateString() + ", " + DateTime.Now.ToLongTimeString();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace Controle_de_livros
                 this.Close();
             else
             {
-                DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if(dr == DialogResult.Yes)
                 {
                     sair = false;
@@ -195,7 +195,7 @@ namespace Controle_de_livros
                         VerificarEmprestimo();
                         if (prazoUltrapassado)
                         {
-                            MessageBox.Show("Empréstimo a " + nome.ToUpper() + ", negado! O(A) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) obtém " + QuantidadeLivrosPendente + " livro(s) que não foi entregue no prazo determinado.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            MessageBox.Show("Empréstimo a " + nome.ToUpper() + ", negado! O(A) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) obtém " + QuantidadeLivrosPendente + " livro(s) que não foi entregue no prazo determinado.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                             prazoUltrapassado = false;
                             limparCampos();
                             return;
@@ -203,18 +203,18 @@ namespace Controle_de_livros
                     }
                     GerarPrazoEmprestimo();
                     FinalizarEmprestimo();
-                    MessageBox.Show("Operação efetuado com sucesso.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MessageBox.Show("A data limite de entrega é " + PrazoEntrega, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Operação efetuado com sucesso.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("A data limite de entrega é " + PrazoEntrega, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     limparCampos();
                 }
                 else
                 {
-                    MessageBox.Show("Não há livros adicionados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Não há livros adicionados!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             else
             {
-                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a) para prosseguir!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe aqui");
                 txtNome.Focus();
@@ -285,11 +285,11 @@ namespace Controle_de_livros
                     }
                 }
                 else
-                    MessageBox.Show("Selecione o item para remover!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Selecione o item para remover!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                MessageBox.Show("Não há itens!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Não há itens!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -333,7 +333,7 @@ namespace Controle_de_livros
             {
                 if (dgvLivro.Rows.Count > 0)
                 {
-                    DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil Acesso", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult dr = MessageBox.Show("Deseja sair sem concluir o empréstimo?", "Biblioteca Fácil", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                     if (dr == DialogResult.No)
                     {
                         e.Cancel = true;
@@ -466,7 +466,7 @@ namespace Controle_de_livros
                     }
                     else
                     {
-                        MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Aluno(a)/Funcionário(a)/Outro não encontrado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         lblCodigo.Text = string.Empty;
                         txtNome.Clear();
                         txtNome.Focus();
@@ -475,7 +475,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("informe o código do(a) aluno(a)/funcionário(a)/outro", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtNome.Focus();
                 }
             }

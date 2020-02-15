@@ -68,7 +68,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Usuário(a) não encontrado(a)!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Usuário(a) não encontrado(a)!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
@@ -115,7 +115,7 @@ namespace Controle_de_livros
                     {
                         dataGridView_Busca.DataSource = table;
                     }else
-                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -142,7 +142,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -169,7 +169,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Livros didáticos não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros didáticos não encontrado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -196,7 +196,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros didáticos pendentes não foi encontrado no banco de dados!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -222,7 +222,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -248,7 +248,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -274,7 +274,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livro não encontrado!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -300,7 +300,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Turma não encontrada!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -326,7 +326,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Livros literários não encontrado!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Livros literários não encontrado!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch
@@ -352,7 +352,7 @@ namespace Controle_de_livros
                         dataGridView_Busca.DataSource = table;
                     }
                     else
-                        MessageBox.Show("Os livros literários pendentes não foi encontrado no banco de dados!)", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Os livros literários pendentes não foi encontrado no banco de dados!)", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 catch

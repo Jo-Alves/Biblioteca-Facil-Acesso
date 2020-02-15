@@ -68,7 +68,7 @@ namespace Controle_de_livros
                 Close();
             }
             else
-                MessageBox.Show("Selecione o dado a ser confirmado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Selecione o dado a ser confirmado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void dgv_Busca_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -140,13 +140,13 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                    MessageBox.Show("Dados não encontrado!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Dados não encontrado!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txt_Dados.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Campo de busca vazio!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Campo de busca vazio!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txt_Dados.Focus();
             }
         }   

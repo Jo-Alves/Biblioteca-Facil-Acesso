@@ -38,7 +38,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Preencha todos os campos!", "Biblioteca Fácil Acesso do sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Preencha todos os campos!", "Biblioteca Fácil do sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
     }

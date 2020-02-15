@@ -77,28 +77,21 @@
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.SmoExtended, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -420,10 +413,18 @@
     <Compile Include="RelatorioLivrosDidaticosEmprestadosFuncionarios.Designer.cs">
       <DependentUpon>RelatorioLivrosDidaticosEmprestadosFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="RELATÓRIOS\DataSet_Emprestimo2.cs">
+      <DependentUpon>DataSet_Emprestimo2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RELATÓRIOS\DataSet_Emprestimo2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Emprestimo2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RELATÓRIOS\DataSet_Emprestimo3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Emprestimo3.xsd</DependentUpon>
     </Compile>
     <Compile Include="RELATÓRIOS\DataSet_Emprestimos.cs">
       <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
@@ -503,7 +504,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Sistema_Controle_LivrosDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Classes\Usuario.cs" />
     <Compile Include="Emprestimo\FrmVerificar.cs">
       <SubType>Form</SubType>
@@ -523,6 +523,7 @@
     <Compile Include="Busca\FrmVerificarSituacaoFuncionariosTerceiros.Designer.cs">
       <DependentUpon>FrmVerificarSituacaoFuncionariosTerceiros.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Autenticação\FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -679,12 +680,13 @@
     <EmbeddedResource Include="RELATÓRIOS\FrmRelatorioLivrosLiterariosEmprestadosAlunos.resx">
       <DependentUpon>FrmRelatorioLivrosLiterariosEmprestadosAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RELATÓRIOS\Lista de livros literários devolvidos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos filtrados por ano e turma.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a alunos1.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a funcionarios.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Livros Literários emprestados a terceiros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\Lista de Todos os Livros Didaticos Devovolvidos.rdlc" />
+    <EmbeddedResource Include="RELATÓRIOS\Lista de todos os Livros Literários devolvidos.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RelatorioEmprestimosLivrosLiterariosOutros.rdlc" />
     <EmbeddedResource Include="RELATÓRIOS\RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.resx">
       <DependentUpon>RELATORIO_DE_LIVROS_LITERARIOS_DEVOLVIDOS.cs</DependentUpon>
@@ -970,6 +972,17 @@
     <None Include="RELATÓRIOS\DataSet_Emprestimo2.xss">
       <DependentUpon>DataSet_Emprestimo2.xsd</DependentUpon>
     </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimo3.xsc">
+      <DependentUpon>DataSet_Emprestimo3.xsd</DependentUpon>
+    </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimo3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Emprestimo3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="RELATÓRIOS\DataSet_Emprestimo3.xss">
+      <DependentUpon>DataSet_Emprestimo3.xsd</DependentUpon>
+    </None>
     <None Include="RELATÓRIOS\DataSet_Emprestimos.xsc">
       <DependentUpon>DataSet_Emprestimos.xsd</DependentUpon>
     </None>
@@ -1104,6 +1117,18 @@
     <None Include="Resources\Hopstarter-Soft-Scraps-Text-Edit.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Connected Services\ClienteServices\configuration91.svcinfo" />
     <None Include="Connected Services\ClienteServices\configuration.svcinfo" />
     <None Include="Connected Services\ClienteServices\Reference.svcmap">
@@ -1136,18 +1161,6 @@
     <None Include="Resources\1Apps-Notifications-icon.png" />
     <None Include="Resources\Toque.wav" />
     <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\Jommans-Briefness-Search %281%29.ico" />
     <None Include="Resources\Custom-Icon-Design-Pretty-Office-9-Magnifying-glass.ico" />
     <None Include="Resources\backup-restore-icon2.png" />

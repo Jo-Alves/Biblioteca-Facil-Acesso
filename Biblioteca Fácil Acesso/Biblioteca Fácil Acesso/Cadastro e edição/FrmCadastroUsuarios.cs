@@ -190,7 +190,7 @@ namespace Controle_de_livros
                     if (string.IsNullOrEmpty(lbl_Codigo.Text))
                     {
                         usuario.Cadastrar();
-                        MessageBox.Show("Usuário cadastrado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Usuário cadastrado com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         IdentificacaoUsuario();
                         return true;
                     }
@@ -198,7 +198,7 @@ namespace Controle_de_livros
                     {
                         usuario.codigo = int.Parse(lbl_Codigo.Text);
                         usuario.Atualizar();
-                        MessageBox.Show("Dados do usuário atualizado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Dados do usuário atualizado com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         recarrecagarTelaFormatoPradao();
                         return false;
                     }
@@ -212,7 +212,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -257,12 +257,12 @@ namespace Controle_de_livros
                     try
                     {
                         usuario.Atualizar();
-                        MessageBox.Show("Usuário atualizado com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Usuário atualizado com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         recarrecagarTelaFormatoPradao();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -417,7 +417,7 @@ namespace Controle_de_livros
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -438,14 +438,14 @@ namespace Controle_de_livros
                         if (usuario.Deletar() == true)
                         {
                             usuario.Deletar();
-                            MessageBox.Show("Dados excluido com sucesso!", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Dados excluido com sucesso!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             recarrecagarTelaFormatoPradao();
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -482,7 +482,7 @@ namespace Controle_de_livros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil na conexão do banco de dados!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return 0;
         }

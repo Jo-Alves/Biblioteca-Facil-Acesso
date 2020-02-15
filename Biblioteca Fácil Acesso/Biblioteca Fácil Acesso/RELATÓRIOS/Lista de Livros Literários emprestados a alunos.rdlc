@@ -2,39 +2,39 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DataSet_Emprestimo2">
+    <DataSource Name="DataSet_Emprestimo3">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>43d265e4-3bb0-4970-8b27-b9471f576e02</rd:DataSourceID>
+      <rd:DataSourceID>0ddc495c-c874-4415-82e7-e776cffe70d7</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
       <Query>
-        <DataSourceName>DataSet_Emprestimo2</DataSourceName>
+        <DataSourceName>DataSet_Emprestimo3</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Titulo">
-          <DataField>Titulo</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Nome_Usuario">
           <DataField>Nome_Usuario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Ano">
+          <DataField>Ano</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Turma">
           <DataField>Turma</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Data_Solicitacao">
-          <DataField>Data_Solicitacao</DataField>
+        <Field Name="Titulo">
+          <DataField>Titulo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Ano">
-          <DataField>Ano</DataField>
+        <Field Name="Data_Solicitacao">
+          <DataField>Data_Solicitacao</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Prazo_Entrega">
@@ -43,8 +43,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DataSet_Emprestimo2</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\joelmir\Desktop\Biblioteca Fácil\Biblioteca-Facil-Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\RELATÓRIOS\DataSet_Emprestimo2.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSet_Emprestimo3</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\val\Desktop\my-project\Biblioteca-Facil-Acesso\Biblioteca Fácil Acesso\Biblioteca Fácil Acesso\RELATÓRIOS\DataSet_Emprestimo3.xsd</rd:SchemaPath>
         <rd:TableName>TabelaEmprestimoLivroLiterarioAluno</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -760,8 +760,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.42875cm</Top>
-            <Left>1.66219cm</Left>
+            <Top>0.45833cm</Top>
+            <Left>0.2599cm</Left>
             <Height>1.2cm</Height>
             <Width>22.91104cm</Width>
             <Style>
@@ -771,13 +771,13 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2in</Height>
+        <Height>1.16667in</Height>
         <Style />
       </Body>
-      <Width>10.27682in</Width>
+      <Width>9.23515in</Width>
       <Page>
         <PageHeader>
-          <Height>1.29646cm</Height>
+          <Height>1.16417cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -803,9 +803,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>0.20271cm</Top>
               <Height>0.89104cm</Height>
-              <Width>26.10312cm</Width>
+              <Width>23.45729cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -824,7 +823,7 @@
           </Style>
         </PageHeader>
         <PageFooter>
-          <Height>1.60542cm</Height>
+          <Height>1.95792cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -875,9 +874,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox8</rd:DefaultName>
-              <Left>0.22489cm</Left>
+              <Top>0.17639cm</Top>
               <Height>1.60542cm</Height>
-              <Width>25.65333cm</Width>
+              <Width>23.45729cm</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -907,11 +906,11 @@
     </ReportSection>
   </ReportSections>
   <ReportParameters>
-    <ReportParameter Name="instituicao">
+    <ReportParameter Name="biblioteca">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="biblioteca">
+    <ReportParameter Name="instituicao">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
@@ -924,16 +923,16 @@
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>instituicao</ParameterName>
+          <ParameterName>biblioteca</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>0</RowIndex>
-          <ParameterName>biblioteca</ParameterName>
+          <ParameterName>instituicao</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>ffae3010-fd80-4361-9fef-8883e5f4a3c6</rd:ReportID>
+  <rd:ReportID>04b38a7d-b724-4398-b571-188e2b9acc16</rd:ReportID>
 </Report>

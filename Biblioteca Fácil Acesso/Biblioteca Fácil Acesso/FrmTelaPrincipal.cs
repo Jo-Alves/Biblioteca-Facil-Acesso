@@ -9,8 +9,7 @@ using System.Linq;
 using System.Media;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
- 
+using System.Windows.Forms; 
 using Controle_de_livros.Properties;
 using Tulpep.NotificationWindow;
 
@@ -23,9 +22,14 @@ namespace Controle_de_livros
         public FrmTelaPrincipal(string Usuario)
         {
             InitializeComponent();
-            this.Text = "Bibloteca Fácil Acesso - SISTEMA PARA CONTROLE DE LIVROS (Escola Estadual Felício dos Santos) === Usuário(a): " + Usuario.ToUpper();
             this.Usuario = Usuario;
+            loadInformacao();
             NotifcarPrazoVencido();
+        }
+
+        private void loadInformacao()
+        {
+            this.Text = "Bibloteca Fácil Acesso - SISTEMA PARA CONTROLE DE LIVROS (" + Settings.Default["Instituicao"].ToString() + ") --- Usuário(a): " + Usuario.ToUpper();
         }
 
         private bool VerificarEmprestimos()
@@ -65,14 +69,14 @@ namespace Controle_de_livros
                     sound.Play();
                     PopupNotifier popup = new PopupNotifier();
                     popup.Image = Resources.Apps_Notifications_icon;
-                    popup.TitleText = "Biblioteca Fácil Acesso - Notification";
+                    popup.TitleText = "Biblioteca Fácil - Notification";
                     popup.ContentText = "O sistema notifica que existe prazos de empréstimo de livros que vencem hoje";
                     popup.Popup();
                 }
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -166,7 +170,7 @@ namespace Controle_de_livros
         string Pasta;
         private void CriarPasta()
         {
-            Pasta = Settings.Default["Disco"].ToString() + @"Biblioteca Fácil Acesso\Sistema de Segurança\";
+            Pasta = Settings.Default["Disco"].ToString() + @"Biblioteca Fácil\Sistema de Segurança\";
             if (!Directory.Exists(Pasta))
             {
                 Directory.CreateDirectory(Pasta);
@@ -261,7 +265,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há registro de livros devolvidos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há registro de livros devolvidos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }           
         }
 
@@ -335,6 +339,7 @@ namespace Controle_de_livros
             FrmInstituicao instituicao = new FrmInstituicao();
             instituicao.ShowDialog();
             lblNomeBiblioteca.Text = "BIBLIOTECA " + Settings.Default["Biblioteca"].ToString().ToUpper();
+            loadInformacao();
         }
 
         private void MenuQuantidadeLivrosCadastrados_Click(object sender, EventArgs e)
@@ -389,7 +394,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -403,7 +408,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -418,7 +423,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -438,7 +443,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros que ultrapassaram a data limite de entrega.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
           
         }
@@ -453,7 +458,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -467,7 +472,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -482,7 +487,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -498,7 +503,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimo de livros didáticos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -512,7 +517,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há registro de que foi realizado empréstimo de livros a alunos. Tente outra opção.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há registro de que foi realizado empréstimo de livros a alunos. Tente outra opção.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -526,7 +531,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há registro de que foi realizado empréstimo de livros a funcionários. Tente outra opção.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há registro de que foi realizado empréstimo de livros a funcionários. Tente outra opção.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -541,7 +546,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há registro de que foi realizado empréstimo de livros a ex-alunos e outros. Tente outra opção.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há registro de que foi realizado empréstimo de livros a ex-alunos e outros. Tente outra opção.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -556,7 +561,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -571,7 +576,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -597,7 +602,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }      
 
@@ -617,7 +622,7 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil Acesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Não há empréstimos realizados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
