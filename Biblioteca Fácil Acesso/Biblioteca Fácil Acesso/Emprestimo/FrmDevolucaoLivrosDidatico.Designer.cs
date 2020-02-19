@@ -31,9 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDevolucaoLivrosDidatico));
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblTurma = new System.Windows.Forms.Label();
+            this.rbBuscarTurma = new System.Windows.Forms.RadioButton();
+            this.cbTurma = new System.Windows.Forms.ComboBox();
+            this.cbAno = new System.Windows.Forms.ComboBox();
             this.rbBuscarCodigo = new System.Windows.Forms.RadioButton();
             this.rbBuscarRegistro = new System.Windows.Forms.RadioButton();
-            this.cbProcurarPorCodigo = new System.Windows.Forms.CheckBox();
+            this.cbProcurarPorCodigoRegistroTurma = new System.Windows.Forms.CheckBox();
             this.lblNomeCampo = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnPesquisar = new System.Windows.Forms.Button();
@@ -56,23 +60,77 @@
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.lblTurma);
+            this.groupBox5.Controls.Add(this.rbBuscarTurma);
+            this.groupBox5.Controls.Add(this.cbTurma);
+            this.groupBox5.Controls.Add(this.cbAno);
             this.groupBox5.Controls.Add(this.rbBuscarCodigo);
             this.groupBox5.Controls.Add(this.rbBuscarRegistro);
-            this.groupBox5.Controls.Add(this.cbProcurarPorCodigo);
+            this.groupBox5.Controls.Add(this.cbProcurarPorCodigoRegistroTurma);
             this.groupBox5.Controls.Add(this.lblNomeCampo);
             this.groupBox5.Controls.Add(this.lblCodigo);
             this.groupBox5.Controls.Add(this.btnPesquisar);
             this.groupBox5.Controls.Add(this.txtNome);
             this.groupBox5.Location = new System.Drawing.Point(12, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(797, 128);
+            this.groupBox5.Size = new System.Drawing.Size(940, 128);
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
+            // 
+            // lblTurma
+            // 
+            this.lblTurma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTurma.AutoSize = true;
+            this.lblTurma.Location = new System.Drawing.Point(602, 55);
+            this.lblTurma.Name = "lblTurma";
+            this.lblTurma.Size = new System.Drawing.Size(47, 19);
+            this.lblTurma.TabIndex = 22;
+            this.lblTurma.Text = "Turma";
+            this.lblTurma.Visible = false;
+            // 
+            // rbBuscarTurma
+            // 
+            this.rbBuscarTurma.AutoSize = true;
+            this.rbBuscarTurma.Location = new System.Drawing.Point(725, 29);
+            this.rbBuscarTurma.Name = "rbBuscarTurma";
+            this.rbBuscarTurma.Size = new System.Drawing.Size(136, 23);
+            this.rbBuscarTurma.TabIndex = 18;
+            this.rbBuscarTurma.TabStop = true;
+            this.rbBuscarTurma.Text = "Buscar por Turma";
+            this.rbBuscarTurma.UseVisualStyleBackColor = true;
+            this.rbBuscarTurma.Visible = false;
+            this.rbBuscarTurma.CheckedChanged += new System.EventHandler(this.rbBuscarTurma_CheckedChanged);
+            // 
+            // cbTurma
+            // 
+            this.cbTurma.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.cbTurma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbTurma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTurma.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbTurma.FormattingEnabled = true;
+            this.cbTurma.Location = new System.Drawing.Point(606, 78);
+            this.cbTurma.Name = "cbTurma";
+            this.cbTurma.Size = new System.Drawing.Size(236, 27);
+            this.cbTurma.TabIndex = 21;
+            this.cbTurma.Visible = false;
+            // 
+            // cbAno
+            // 
+            this.cbAno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbAno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cbAno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cbAno.FormattingEnabled = true;
+            this.cbAno.Location = new System.Drawing.Point(99, 78);
+            this.cbAno.Name = "cbAno";
+            this.cbAno.Size = new System.Drawing.Size(502, 27);
+            this.cbAno.TabIndex = 20;
+            this.cbAno.Visible = false;
             // 
             // rbBuscarCodigo
             // 
             this.rbBuscarCodigo.AutoSize = true;
-            this.rbBuscarCodigo.Location = new System.Drawing.Point(324, 30);
+            this.rbBuscarCodigo.Location = new System.Drawing.Point(381, 29);
             this.rbBuscarCodigo.Name = "rbBuscarCodigo";
             this.rbBuscarCodigo.Size = new System.Drawing.Size(139, 23);
             this.rbBuscarCodigo.TabIndex = 17;
@@ -85,7 +143,7 @@
             // rbBuscarRegistro
             // 
             this.rbBuscarRegistro.AutoSize = true;
-            this.rbBuscarRegistro.Location = new System.Drawing.Point(469, 30);
+            this.rbBuscarRegistro.Location = new System.Drawing.Point(526, 29);
             this.rbBuscarRegistro.Name = "rbBuscarRegistro";
             this.rbBuscarRegistro.Size = new System.Drawing.Size(193, 23);
             this.rbBuscarRegistro.TabIndex = 16;
@@ -95,16 +153,16 @@
             this.rbBuscarRegistro.Visible = false;
             this.rbBuscarRegistro.CheckedChanged += new System.EventHandler(this.rbBuscarRegistro_CheckedChanged);
             // 
-            // cbProcurarPorCodigo
+            // cbProcurarPorCodigoRegistroTurma
             // 
-            this.cbProcurarPorCodigo.AutoSize = true;
-            this.cbProcurarPorCodigo.Location = new System.Drawing.Point(99, 30);
-            this.cbProcurarPorCodigo.Name = "cbProcurarPorCodigo";
-            this.cbProcurarPorCodigo.Size = new System.Drawing.Size(219, 23);
-            this.cbProcurarPorCodigo.TabIndex = 11;
-            this.cbProcurarPorCodigo.Text = "Procurar por código ou registro";
-            this.cbProcurarPorCodigo.UseVisualStyleBackColor = true;
-            this.cbProcurarPorCodigo.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
+            this.cbProcurarPorCodigoRegistroTurma.AutoSize = true;
+            this.cbProcurarPorCodigoRegistroTurma.Location = new System.Drawing.Point(99, 30);
+            this.cbProcurarPorCodigoRegistroTurma.Name = "cbProcurarPorCodigoRegistroTurma";
+            this.cbProcurarPorCodigoRegistroTurma.Size = new System.Drawing.Size(276, 23);
+            this.cbProcurarPorCodigoRegistroTurma.TabIndex = 11;
+            this.cbProcurarPorCodigoRegistroTurma.Text = "Procurar por código ou registro ou turma";
+            this.cbProcurarPorCodigoRegistroTurma.UseVisualStyleBackColor = true;
+            this.cbProcurarPorCodigoRegistroTurma.CheckedChanged += new System.EventHandler(this.cbProcurarPorCodigo_CheckedChanged);
             // 
             // lblNomeCampo
             // 
@@ -128,7 +186,7 @@
             this.btnPesquisar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnPesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisar.Image = global::Controle_de_livros.Properties.Resources.Jommans_Briefness_Search__1_;
-            this.btnPesquisar.Location = new System.Drawing.Point(707, 71);
+            this.btnPesquisar.Location = new System.Drawing.Point(850, 71);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(84, 38);
             this.btnPesquisar.TabIndex = 4;
@@ -145,7 +203,7 @@
             this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = true;
-            this.txtNome.Size = new System.Drawing.Size(601, 26);
+            this.txtNome.Size = new System.Drawing.Size(744, 26);
             this.txtNome.TabIndex = 3;
             this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
@@ -179,7 +237,7 @@
             this.dgvDados.MultiSelect = false;
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDados.Size = new System.Drawing.Size(794, 256);
+            this.dgvDados.Size = new System.Drawing.Size(937, 256);
             this.dgvDados.TabIndex = 0;
             this.dgvDados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellClick);
             this.dgvDados.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellDoubleClick);
@@ -233,7 +291,7 @@
             this.groupBox2.Controls.Add(this.dgvDados);
             this.groupBox2.Location = new System.Drawing.Point(12, 146);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(800, 281);
+            this.groupBox2.Size = new System.Drawing.Size(943, 281);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             // 
@@ -254,7 +312,7 @@
             // 
             this.btnFinalizarDevolucao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarDevolucao.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFinalizarDevolucao.Location = new System.Drawing.Point(566, 448);
+            this.btnFinalizarDevolucao.Location = new System.Drawing.Point(709, 448);
             this.btnFinalizarDevolucao.Name = "btnFinalizarDevolucao";
             this.btnFinalizarDevolucao.Size = new System.Drawing.Size(246, 46);
             this.btnFinalizarDevolucao.TabIndex = 19;
@@ -267,7 +325,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(824, 506);
+            this.ClientSize = new System.Drawing.Size(967, 506);
             this.Controls.Add(this.btnFinalizarDevolucao);
             this.Controls.Add(this.cbSelecionarTudo);
             this.Controls.Add(this.groupBox2);
@@ -303,8 +361,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.CheckBox cbSelecionarTudo;
         private System.Windows.Forms.Button btnFinalizarDevolucao;
-        private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
+        private System.Windows.Forms.CheckBox cbProcurarPorCodigoRegistroTurma;
         private System.Windows.Forms.RadioButton rbBuscarCodigo;
         private System.Windows.Forms.RadioButton rbBuscarRegistro;
+        private System.Windows.Forms.RadioButton rbBuscarTurma;
+        private System.Windows.Forms.ComboBox cbAno;
+        private System.Windows.Forms.ComboBox cbTurma;
+        private System.Windows.Forms.Label lblTurma;
     }
 }

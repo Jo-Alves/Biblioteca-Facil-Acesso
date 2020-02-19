@@ -20,10 +20,10 @@ namespace Controle_de_livros
         EmprestimoLivroDidatico emprestimoLivroDidatico = new EmprestimoLivroDidatico();
         Usuario usuario = new Usuario();
         string nome;
-       
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            if (!cbProcurarPorCodigo.Checked)
+            if (!cbProcurarPorCodigoRegistroTurma.Checked)
             {
                 FrmBuscarUsuario buscarUsuario = new FrmBuscarUsuario();
                 buscarUsuario.ShowDialog();
@@ -90,7 +90,7 @@ namespace Controle_de_livros
                             nome = usuario.nome;
                             txtNome.TextAlign = HorizontalAlignment.Left;
                             dgvDados.Focus();
-                            loadDgv();                           
+                            loadDgv();
                             if (dgvDados.Rows.Count == 0)
                             {
                                 MessageBox.Show("Não há empréstimos realizados no nome de " + nome.ToUpper(), "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -147,7 +147,7 @@ namespace Controle_de_livros
                 }
                 else
                 {
-                   
+
                     if (rbBuscarRegistro.Checked)
                         opcao = "registro do livro.";
                     else if (rbBuscarCodigo.Checked)
@@ -176,7 +176,7 @@ namespace Controle_de_livros
             if (isValorValido)
                 dgvDados.Rows.Clear();
 
-            if (rbBuscarCodigo.Checked || !cbProcurarPorCodigo.Checked)
+            if (rbBuscarCodigo.Checked || !cbProcurarPorCodigoRegistroTurma.Checked)
             {
                 emprestimoLivroDidatico._Codigo = int.Parse(lblCodigo.Text);
 
@@ -208,7 +208,7 @@ namespace Controle_de_livros
             {
                 int newRow = dgvDados.Rows.Add();
                 dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
-                lblCodigo.Text = item["Cod_Usuario"].ToString();                
+                lblCodigo.Text = item["Cod_Usuario"].ToString();
                 dgvDados.Rows[newRow].Cells[1].Value = item["N_Registro"].ToString();
                 dgvDados.Rows[newRow].Cells[2].Value = item["Disciplina"].ToString();
                 dgvDados.Rows[newRow].Cells[3].Value = item["Ensino"].ToString();
@@ -329,6 +329,12 @@ namespace Controle_de_livros
             dgvDados.Rows.Clear();
             cbSelecionarTudo.Visible = false;
             cbSelecionarTudo.Checked = false;
+            lblTurma.Visible = false;
+            cbAno.Visible = false;
+            cbAno.SelectedIndex = -1;
+            cbTurma.Visible = false;
+            cbTurma.SelectedIndex = -1;
+            txtNome.Visible = true;
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -344,7 +350,7 @@ namespace Controle_de_livros
         {
             txtNome.TextAlign = HorizontalAlignment.Right;
             lblCodigo.Text = "";
-        }       
+        }
 
         private void txtNome_KeyUp(object sender, KeyEventArgs e)
         {
@@ -354,7 +360,7 @@ namespace Controle_de_livros
 
         private void cbProcurarPorCodigo_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbProcurarPorCodigo.Checked)
+            if (cbProcurarPorCodigoRegistroTurma.Checked)
             {
                 txtNome.ReadOnly = false;
                 txtNome.BackColor = Color.White;
@@ -365,6 +371,7 @@ namespace Controle_de_livros
                 txtNome.MaxLength = 9;
                 rbBuscarCodigo.Visible = true;
                 rbBuscarRegistro.Visible = true;
+                rbBuscarTurma.Visible = true;
                 rbBuscarCodigo.Checked = true;
                 dgvDados.Rows.Clear();
                 cbSelecionarTudo.Visible = false;
@@ -375,13 +382,21 @@ namespace Controle_de_livros
             {
                 rbBuscarCodigo.Visible = false;
                 rbBuscarRegistro.Visible = false;
+                rbBuscarTurma.Visible = false;
                 rbBuscarCodigo.Checked = false;
                 rbBuscarRegistro.Checked = false;
+                rbBuscarTurma.Checked = false;
                 txtNome.ReadOnly = true;
                 txtNome.BackColor = SystemColors.Control;
                 txtNome.TextAlign = HorizontalAlignment.Left;
                 txtNome.MaxLength = 32767;
                 lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
+                lblTurma.Visible = false;
+                cbAno.Visible = false;
+                cbAno.SelectedIndex = -1;
+                cbTurma.Visible = false;
+                cbTurma.SelectedIndex = -1;
+                txtNome.Visible = true;
             }
         }
 
@@ -393,7 +408,7 @@ namespace Controle_de_livros
 
         private void txtNome_Click(object sender, EventArgs e)
         {
-            if (cbProcurarPorCodigo.Checked)
+            if (cbProcurarPorCodigoRegistroTurma.Checked)
             {
                 txtNome.TextAlign = HorizontalAlignment.Right;
                 txtNome.Clear();
@@ -407,7 +422,7 @@ namespace Controle_de_livros
 
         private void rbBuscarCodigo_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbProcurarPorCodigo.Checked)
+            if (cbProcurarPorCodigoRegistroTurma.Checked)
             {
                 LimparCampos_E_FocarCursor();
             }
@@ -416,11 +431,20 @@ namespace Controle_de_livros
 
         private void rbBuscarRegistro_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbProcurarPorCodigo.Checked)
+            if (cbProcurarPorCodigoRegistroTurma.Checked)
             {
                 LimparCampos_E_FocarCursor();
             }
             lblNomeCampo.Text = "Registro do Livro";
+        }
+
+        private void rbBuscarTurma_CheckedChanged(object sender, EventArgs e)
+        {
+            cbTurma.Visible = true;
+            cbAno.Visible = true;
+            lblTurma.Visible = true;
+            lblNomeCampo.Text = "Ano";
+            txtNome.Visible = false;
         }
     }
 }
