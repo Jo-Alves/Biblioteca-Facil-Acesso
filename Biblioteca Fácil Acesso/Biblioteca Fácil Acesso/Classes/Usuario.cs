@@ -11,7 +11,7 @@ namespace Controle_de_livros
 {
     class Usuario
     {
-        string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
+        string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc="), _sql;
 
         private int Codigo;
         private string Nome;
@@ -88,11 +88,10 @@ namespace Controle_de_livros
         }
 
         public bool Cadastrar()
-        {
-            string stringConn = Security.Dry("9UUEoK5YaRarR0A3RhJbiLUNDsVR7AWUv3GLXCm6nqT787RW+Zpgc9frlclEXhdHWKfmyaZUAVO0njyONut81BbsmC4qd/GoI/eT/EcT+zAGgeLhaA4je9fdqhya3ASLYqkMPUjT+zc=");
+        {            
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQl = "INSERT INTO Usuario (Nome_Usuario, Ano, Turma, Cep, Bairro, Endereco, Numero, Cidade, Estado, Telefone, Ocupacao) VALUES (@Nome, @Ano, @Turma, @Cep, @Bairro, @Endereco, @Numero, @Cidade, @Estado, @Telefone, @Ocupacao)";
-            SqlCommand comando = new SqlCommand(_SQl, conexao);
+            _sql = "INSERT INTO Usuario (Nome_Usuario, Ano, Turma, Cep, Bairro, Endereco, Numero, Cidade, Estado, Telefone, Ocupacao) VALUES (@Nome, @Ano, @Turma, @Cep, @Bairro, @Endereco, @Numero, @Cidade, @Estado, @Telefone, @Ocupacao)";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
                     
             comando.Parameters.AddWithValue("@Nome", nome);
             comando.Parameters.AddWithValue("@Ano", ano);
@@ -106,7 +105,7 @@ namespace Controle_de_livros
             comando.Parameters.AddWithValue("@Telefone", telefone);
             comando.Parameters.AddWithValue("@Ocupacao", ocupacao);
 
-            comando.CommandText = _SQl;
+            comando.CommandText = _sql;
             conexao.Open();
             comando.ExecuteNonQuery();
             conexao.Close();
@@ -116,8 +115,8 @@ namespace Controle_de_livros
         public bool Atualizar()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQl = "UPDATE Usuario SET Nome_Usuario = @Nome, Ano = @Ano, Turma = @Turma, Cep = @Cep, Bairro = @Bairro, Endereco = @Endereco, Numero = @Numero, Cidade = @Cidade, Estado = @Estado, Telefone = @Telefone, Ocupacao = @Ocupacao WHERE Cod_Usuario = @Codigo";
-            SqlCommand comando = new SqlCommand(_SQl, conexao);
+            _sql = "UPDATE Usuario SET Nome_Usuario = @Nome, Ano = @Ano, Turma = @Turma, Cep = @Cep, Bairro = @Bairro, Endereco = @Endereco, Numero = @Numero, Cidade = @Cidade, Estado = @Estado, Telefone = @Telefone, Ocupacao = @Ocupacao WHERE Cod_Usuario = @Codigo";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.Parameters.AddWithValue("@Codigo", codigo);
             comando.Parameters.AddWithValue("@Nome", nome);
             comando.Parameters.AddWithValue("@Ano", ano);
@@ -131,7 +130,7 @@ namespace Controle_de_livros
             comando.Parameters.AddWithValue("@Telefone", telefone);
             comando.Parameters.AddWithValue("@Ocupacao", ocupacao);
 
-            comando.CommandText = _SQl;
+            comando.CommandText = _sql;
             conexao.Open();
             comando.ExecuteNonQuery();
             conexao.Close();
@@ -141,12 +140,12 @@ namespace Controle_de_livros
         public bool Deletar()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _SQl = "DELETE Usuario WHERE Cod_Usuario = @Codigo";
-            SqlCommand comando = new SqlCommand(_SQl, conexao);
+            _sql = "DELETE Usuario WHERE Cod_Usuario = @Codigo";
+            SqlCommand comando = new SqlCommand(_sql, conexao);
 
             comando.Parameters.AddWithValue("@Codigo", codigo);
 
-            comando.CommandText = _SQl;
+            comando.CommandText = _sql;
             try
             {
                 conexao.Open();
@@ -167,7 +166,7 @@ namespace Controle_de_livros
         public bool Buscar()
         {
             SqlConnection conexao = new SqlConnection(stringConn);
-            string _sql = "Select * from Usuario where Cod_Usuario = @Codigo";
+            _sql = "Select * from Usuario where Cod_Usuario = @Codigo";
             SqlCommand comando = new SqlCommand(_sql, conexao);
             comando.Parameters.AddWithValue("@Codigo", codigo);
             
@@ -205,6 +204,29 @@ namespace Controle_de_livros
             {
                 conexao.Close();
             }
+        }
+
+        public DataTable BuscarAnoAluno()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            _sql = "Select distinct Ano from Usuario where Ano <> ''";
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.CommandText = _sql;
+            DataTable Tabela = new DataTable();
+            adapter.Fill(Tabela);
+            return Tabela;
+        }
+
+        public DataTable BuscarTurmaAluno()
+        {
+            SqlConnection conexao = new SqlConnection(stringConn);
+            _sql = "Select distinct Turma from Usuario where Ano = @ano";
+            SqlDataAdapter adapter = new SqlDataAdapter(_sql, conexao);
+            adapter.SelectCommand.Parameters.AddWithValue("@ano", ano);
+            adapter.SelectCommand.CommandText = _sql;
+            DataTable Tabela = new DataTable();
+            adapter.Fill(Tabela);
+            return Tabela;
         }
     }
 }

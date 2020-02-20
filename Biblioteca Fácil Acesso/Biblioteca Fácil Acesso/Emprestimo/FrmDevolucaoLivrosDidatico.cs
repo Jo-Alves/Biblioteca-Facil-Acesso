@@ -145,17 +145,34 @@ namespace Controle_de_livros
                         }
                     }
                 }
+                else if (rbBuscarTurma.Checked)
+                {
+                    if (cbAno.SelectedIndex == -1)
+                    {
+                        opcao = "o ano do aluno!";
+                    }
+                    else if (cbTurma.SelectedIndex == -1)
+                    {
+                        opcao = "a turma do aluno!";
+                    }
+
+                    if (cbAno.SelectedIndex >= 0 && cbTurma.SelectedIndex >= 0)
+                    {
+                        loadDgv();
+                    }
+                    else
+                        MessageBox.Show("Informe " + opcao, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
                 else
                 {
-
                     if (rbBuscarRegistro.Checked)
-                        opcao = "registro do livro.";
+                        opcao = "registro do livro!";
                     else if (rbBuscarCodigo.Checked)
-                        opcao = "código do(a) aluno(a)/funcionário(a)/outro.";
+                        opcao = "código do(a) aluno(a)/funcionário(a)/outro!";
 
-                    MessageBox.Show("informe o " + opcao, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Informe o " + opcao, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtNome.Focus();
-                }
+                }               
             }
         }
 
@@ -183,6 +200,11 @@ namespace Controle_de_livros
                 table = emprestimoLivroDidatico.BuscarLivrosDidaticosEmprestadosPorCodigoUsuario();
                 isValorValido = true;
             }
+            else if (rbBuscarTurma.Checked)
+            {
+                table = EmprestimoLivroDidatico.BuscarLivrosDidaticosEmprestadosPorTurma(cbAno.Text, cbTurma.Text);
+                isValorValido = true;
+            }
             else
             {
                 if (!string.IsNullOrEmpty(lblCodigo.Text))
@@ -207,12 +229,13 @@ namespace Controle_de_livros
             foreach (DataRow item in table.Rows)
             {
                 int newRow = dgvDados.Rows.Add();
-                dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
-                lblCodigo.Text = item["Cod_Usuario"].ToString();
+                dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";               
                 dgvDados.Rows[newRow].Cells[1].Value = item["N_Registro"].ToString();
                 dgvDados.Rows[newRow].Cells[2].Value = item["Disciplina"].ToString();
                 dgvDados.Rows[newRow].Cells[3].Value = item["Ensino"].ToString();
                 dgvDados.Rows[newRow].Cells[4].Value = item["Data_Solicitacao"].ToString();
+                if(!rbBuscarTurma.Checked)
+                    lblCodigo.Text = item["Cod_Usuario"].ToString();
             }
 
             dgvDados.ClearSelection();
@@ -335,6 +358,8 @@ namespace Controle_de_livros
             cbTurma.Visible = false;
             cbTurma.SelectedIndex = -1;
             txtNome.Visible = true;
+            cbAno.Items.Clear();
+            cbTurma.Items.Clear();
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -397,6 +422,8 @@ namespace Controle_de_livros
                 cbTurma.Visible = false;
                 cbTurma.SelectedIndex = -1;
                 txtNome.Visible = true;
+                cbAno.Items.Clear();
+                cbTurma.Items.Clear();
             }
         }
 
@@ -445,6 +472,30 @@ namespace Controle_de_livros
             lblTurma.Visible = true;
             lblNomeCampo.Text = "Ano";
             txtNome.Visible = false;
+            loadCbAno();
+        }
+
+        private void loadCbAno()
+        {
+            foreach(DataRow row in usuario.BuscarAnoAluno().Rows)
+            {
+                cbAno.Items.Add(row["Ano"].ToString());
+            }
+        }
+
+        private void cbAno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            loadCbTurma();
+        }
+
+        private void loadCbTurma()
+        {
+            cbTurma.Items.Clear();
+            usuario.ano = cbAno.Text;
+            foreach(DataRow row in usuario.BuscarTurmaAluno().Rows)
+            {
+                cbTurma.Items.Add(row["Turma"].ToString());
+            }
         }
     }
 }
