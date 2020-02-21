@@ -312,7 +312,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmLivroDidatico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CADATRO LIVRO DIDÁTICO";
+            this.Text = "LIVRO DIDÁTICO";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLivroDidatico_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

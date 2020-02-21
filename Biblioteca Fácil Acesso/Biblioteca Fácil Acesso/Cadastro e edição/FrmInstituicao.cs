@@ -41,5 +41,11 @@ namespace Controle_de_livros
                 MessageBox.Show("Preencha todos os campos!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void FrmInstituicao_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                BtnSalvar_Click(sender, e);
+        }
     }
 }

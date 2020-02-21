@@ -315,10 +315,10 @@
     <Compile Include="FrmBuscarUsuarios.designer.cs">
       <DependentUpon>FrmBuscarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmInstituicao.cs">
+    <Compile Include="Cadastro e edição\FrmInstituicao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmInstituicao.Designer.cs">
+    <Compile Include="Cadastro e edição\FrmInstituicao.Designer.cs">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmListaRegistroLivroDidático.cs">
@@ -603,7 +603,7 @@
     <EmbeddedResource Include="FrmBuscarUsuarios.resx">
       <DependentUpon>FrmBuscarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmInstituicao.resx">
+    <EmbeddedResource Include="Cadastro e edição\FrmInstituicao.resx">
       <DependentUpon>FrmInstituicao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmListaRegistroLivroDidático.resx">

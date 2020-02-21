@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Nome = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.mkCelular = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.usuarioTableAdapter = new Controle_de_livros.dataSet2TableAdapters.UsuarioTableAdapter();
-            this.mkCelular = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
@@ -292,6 +292,17 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Localização:";
+            // 
+            // mkCelular
+            // 
+            this.mkCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mkCelular.Location = new System.Drawing.Point(134, 163);
+            this.mkCelular.Mask = "(00) 00000-0000";
+            this.mkCelular.Name = "mkCelular";
+            this.mkCelular.Size = new System.Drawing.Size(116, 26);
+            this.mkCelular.TabIndex = 22;
+            this.mkCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mkCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkCelular_MaskInputRejected);
             // 
             // label11
             // 
@@ -547,17 +558,6 @@
             // 
             this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
-            // mkCelular
-            // 
-            this.mkCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mkCelular.Location = new System.Drawing.Point(134, 163);
-            this.mkCelular.Mask = "(00) 00000-0000";
-            this.mkCelular.Name = "mkCelular";
-            this.mkCelular.Size = new System.Drawing.Size(116, 26);
-            this.mkCelular.TabIndex = 22;
-            this.mkCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mkCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mkCelular_MaskInputRejected);
-            // 
             // FrmCadastroUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -579,7 +579,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmCadastroUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CADASTRO USUÁRIO";
+            this.Text = "ALUNO/FUNCIONÁRIO/OUTRO";
             this.Load += new System.EventHandler(this.FrmCadastroUsuarios_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCadastroUsuarios_KeyDown);
             this.groupBox1.ResumeLayout(false);

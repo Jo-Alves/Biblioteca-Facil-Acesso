@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDevolucaoLivrosLiterarios));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvDados = new System.Windows.Forms.DataGridView();
@@ -69,7 +75,6 @@
             // 
             this.dgvDados.AllowUserToAddRows = false;
             this.dgvDados.AllowUserToDeleteRows = false;
-            this.dgvDados.AllowUserToOrderColumns = true;
             this.dgvDados.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -102,53 +107,77 @@
             // ColSelect
             // 
             this.ColSelect.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.NullValue = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColSelect.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColSelect.HeaderText = "";
             this.ColSelect.Name = "ColSelect";
             this.ColSelect.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColSelect.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ColSelect.Width = 19;
+            this.ColSelect.Width = 5;
             // 
             // ColRegistro
             // 
             this.ColRegistro.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColRegistro.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColRegistro.HeaderText = "Registro";
             this.ColRegistro.Name = "ColRegistro";
             this.ColRegistro.ReadOnly = true;
-            this.ColRegistro.Width = 84;
+            this.ColRegistro.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColRegistro.Width = 65;
             // 
             // ColTitulo
             // 
             this.ColTitulo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColTitulo.DataPropertyName = "Titulo";
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColTitulo.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColTitulo.HeaderText = "Titulo";
             this.ColTitulo.Name = "ColTitulo";
             this.ColTitulo.ReadOnly = true;
+            this.ColTitulo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColAutor
             // 
             this.ColAutor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ColAutor.DataPropertyName = "Autor";
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColAutor.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColAutor.HeaderText = "Autor";
             this.ColAutor.Name = "ColAutor";
             this.ColAutor.ReadOnly = true;
+            this.ColAutor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // ColDataSolicitacao
             // 
             this.ColDataSolicitacao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColDataSolicitacao.DataPropertyName = "Data_Solicitacao";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColDataSolicitacao.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColDataSolicitacao.HeaderText = "Data de Solicitação";
             this.ColDataSolicitacao.Name = "ColDataSolicitacao";
             this.ColDataSolicitacao.ReadOnly = true;
-            this.ColDataSolicitacao.Width = 152;
+            this.ColDataSolicitacao.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColDataSolicitacao.Width = 133;
             // 
             // ColPrazo
             // 
             this.ColPrazo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.ColPrazo.DataPropertyName = "PrazoEntrega";
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.ColPrazo.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColPrazo.HeaderText = "Prazo de Entrega";
             this.ColPrazo.Name = "ColPrazo";
             this.ColPrazo.ReadOnly = true;
-            this.ColPrazo.Width = 138;
+            this.ColPrazo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColPrazo.Width = 119;
             // 
             // groupBox5
             // 
@@ -245,7 +274,9 @@
             this.txtNome.Size = new System.Drawing.Size(601, 26);
             this.txtNome.TabIndex = 3;
             this.txtNome.Click += new System.EventHandler(this.txtNome_Click);
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // cbSelecionarTudo
             // 
@@ -268,7 +299,7 @@
             this.btnFinalizarDevolucao.Name = "btnFinalizarDevolucao";
             this.btnFinalizarDevolucao.Size = new System.Drawing.Size(246, 46);
             this.btnFinalizarDevolucao.TabIndex = 19;
-            this.btnFinalizarDevolucao.Text = "Finalizar Devolução";
+            this.btnFinalizarDevolucao.Text = "Finalizar Devolução - F1";
             this.btnFinalizarDevolucao.UseVisualStyleBackColor = true;
             this.btnFinalizarDevolucao.Click += new System.EventHandler(this.btnFinalizarDevolucao_Click);
             // 
@@ -284,11 +315,13 @@
             this.Controls.Add(this.groupBox5);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDevolucaoLivrosLiterarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Devolução de livros literários";
+            this.Text = "DEVOLUÇÃO DE LIVROS LITERÁRIOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDevolucaoLivrosLiterarios_KeyDown);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.groupBox5.ResumeLayout(false);
@@ -309,14 +342,14 @@
         private System.Windows.Forms.CheckBox cbSelecionarTudo;
         private System.Windows.Forms.Button btnFinalizarDevolucao;
         private System.Windows.Forms.DataGridView dgvDados;
+        private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
+        private System.Windows.Forms.RadioButton rbBuscarCodigo;
+        private System.Windows.Forms.RadioButton rbBuscarRegistro;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColSelect;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColAutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColDataSolicitacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrazo;
-        private System.Windows.Forms.CheckBox cbProcurarPorCodigo;
-        private System.Windows.Forms.RadioButton rbBuscarCodigo;
-        private System.Windows.Forms.RadioButton rbBuscarRegistro;
     }
 }

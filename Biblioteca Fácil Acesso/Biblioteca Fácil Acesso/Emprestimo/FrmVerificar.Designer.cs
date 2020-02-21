@@ -42,6 +42,8 @@
             // 
             // dataGridView_Verifica
             // 
+            this.dataGridView_Verifica.AllowUserToAddRows = false;
+            this.dataGridView_Verifica.AllowUserToDeleteRows = false;
             this.dataGridView_Verifica.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_Verifica.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dataGridView_Verifica.BackgroundColor = System.Drawing.Color.White;
@@ -64,6 +66,7 @@
             this.dataGridView_Verifica.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView_Verifica.Location = new System.Drawing.Point(0, 0);
             this.dataGridView_Verifica.Name = "dataGridView_Verifica";
+            this.dataGridView_Verifica.ReadOnly = true;
             this.dataGridView_Verifica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView_Verifica.Size = new System.Drawing.Size(656, 383);
             this.dataGridView_Verifica.TabIndex = 0;
@@ -74,6 +77,7 @@
             this.Column5.DataPropertyName = "N_Registro";
             this.Column5.HeaderText = "REGISTRO";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             this.Column5.Width = 117;
             // 
             // Column1
@@ -82,6 +86,7 @@
             this.Column1.DataPropertyName = "Disciplina";
             this.Column1.HeaderText = "DISCIPLINA";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             this.Column1.Width = 126;
             // 
             // Column6
@@ -90,6 +95,7 @@
             this.Column6.DataPropertyName = "Ensino";
             this.Column6.HeaderText = "ENSINO";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             this.Column6.Width = 95;
             // 
             // Column4
@@ -98,6 +104,7 @@
             this.Column4.DataPropertyName = "Volume";
             this.Column4.HeaderText = "VOLUME";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             this.Column4.Width = 104;
             // 
             // Column2
@@ -106,6 +113,7 @@
             this.Column2.DataPropertyName = "Serie";
             this.Column2.HeaderText = "SÉRIE";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             this.Column2.Width = 81;
             // 
             // Column3
@@ -114,9 +122,10 @@
             this.Column3.DataPropertyName = "Data_Solicitacao";
             this.Column3.HeaderText = "SOLICITAÇÃO";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             this.Column3.Width = 142;
             // 
-            // Verificar
+            // FrmVerificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,9 +135,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Verificar";
+            this.Name = "FrmVerificar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Verificar";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Verifica)).EndInit();
             this.ResumeLayout(false);
 

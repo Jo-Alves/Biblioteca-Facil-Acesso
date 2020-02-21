@@ -46,6 +46,7 @@ namespace Controle_de_livros
                 {
                     MessageBox.Show("Registro inválido! Tente outra opção...", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtRegistro.Focus();
+                    txtRegistro.Clear();
                 }
             }
             else
@@ -427,6 +428,7 @@ namespace Controle_de_livros
                     txtNome.TextAlign = HorizontalAlignment.Left;
                     txtRegistro.Focus();
                     txtNome.MaxLength = 32767;
+                    txtRegistro.Focus();
                 }
             }
             else

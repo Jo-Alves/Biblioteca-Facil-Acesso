@@ -29,12 +29,7 @@ namespace Controle_de_livros
         Livro_Didatico livroDidatico = new Livro_Didatico();
         EmprestimoLivroDidatico emprestimoLivroDidatico = new EmprestimoLivroDidatico();
 
-        private void FrmEmprestimoLivro_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BtnAdicionar_Click(object sender, EventArgs e)
+      private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtRegistro.Text))
             {
@@ -54,6 +49,7 @@ namespace Controle_de_livros
                 {
                     MessageBox.Show("Registro inválido! Tente outra opção...", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     txtRegistro.Focus();
+                    txtRegistro.Clear();
                 }
             }
             else
@@ -532,6 +528,7 @@ namespace Controle_de_livros
                         errorProvider.Clear();
                         txtNome.TextAlign = HorizontalAlignment.Left;
                         txtNome.MaxLength = 32767;
+                        txtRegistro.Focus();
                     }
                 }
                 else

@@ -139,7 +139,7 @@ namespace Controle_de_livros
                                     txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.telefone + " - " + usuario.ocupacao;
                                     lblNomeCampo.Text = "Ex-aluno(a)/Outro";
                                 }
-
+                                lblCodigo.Text = usuario.codigo.ToString(); ;
                                 txtNome.TextAlign = HorizontalAlignment.Left;
                             }
                         }
@@ -266,6 +266,7 @@ namespace Controle_de_livros
         }
 
         ErrorProvider errorProvider = new ErrorProvider();
+        string mensagem;
 
         private void btnFinalizarDevolucao_Click(object sender, EventArgs e)
         {
@@ -291,11 +292,17 @@ namespace Controle_de_livros
             }
             else
             {
-                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (rbBuscarCodigo.Checked)
+                    mensagem = "Informe o(a) Código do(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!";
+                else if (rbBuscarRegistro.Checked)
+                    mensagem = "Informe o registro do livro!";
+                else
+                    mensagem = "Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!";
+
+                MessageBox.Show(mensagem, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!");
                 txtNome.Focus();
-                return;
             }
         }
 
@@ -343,6 +350,7 @@ namespace Controle_de_livros
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
+            errorProvider.Clear();
             txtNome.TextAlign = HorizontalAlignment.Right;
             lblCodigo.Text = "";
         }
@@ -384,6 +392,8 @@ namespace Controle_de_livros
                 txtNome.MaxLength = 32767;
                 lblNomeCampo.Text = "Aluno(a)/Funcionário(a)/Outro";
             }
+
+            errorProvider.Clear();
         }
 
         private void txtNome_KeyDown(object sender, KeyEventArgs e)
@@ -413,6 +423,7 @@ namespace Controle_de_livros
                 LimparCampos_E_FocarCursor();
             }
             lblNomeCampo.Text = "Código do Aluno(a)/Funcionário(a)/Outro";
+            errorProvider.Clear();
         }
 
         private void rbBuscarRegistro_CheckedChanged(object sender, EventArgs e)
@@ -422,6 +433,13 @@ namespace Controle_de_livros
                 LimparCampos_E_FocarCursor();
             }
             lblNomeCampo.Text = "Registro do Livro";
+            errorProvider.Clear();
+        }
+
+        private void FrmDevolucaoLivrosLiterarios_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+                btnFinalizarDevolucao_Click(sender, e);
         }
     }
 }

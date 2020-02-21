@@ -139,7 +139,7 @@ namespace Controle_de_livros
                                     txtNome.Text = usuario.nome + " - " + usuario.bairro + " - " + usuario.endereco + " - " + usuario.numero + " - " + usuario.cidade + " - " + usuario.estado + " - " + usuario.telefone + " - " + usuario.ocupacao;
                                     lblNomeCampo.Text = "Ex-aluno(a)/Outro";
                                 }
-
+                                lblCodigo.Text = usuario.codigo.ToString();
                                 txtNome.TextAlign = HorizontalAlignment.Left;
                             }
                         }
@@ -210,8 +210,7 @@ namespace Controle_de_livros
                 if (!string.IsNullOrEmpty(lblCodigo.Text))
                 {
                     LimparCampos_E_FocarCursor();
-
-                    MessageBox.Show("informe novamente o registro do livro", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                        
                     MudarTextolblNomeCampo();
                     isValorValido = false;
                     txtNome.Focus();
@@ -229,11 +228,13 @@ namespace Controle_de_livros
             foreach (DataRow item in table.Rows)
             {
                 int newRow = dgvDados.Rows.Add();
-                dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";               
-                dgvDados.Rows[newRow].Cells[1].Value = item["N_Registro"].ToString();
-                dgvDados.Rows[newRow].Cells[2].Value = item["Disciplina"].ToString();
-                dgvDados.Rows[newRow].Cells[3].Value = item["Ensino"].ToString();
-                dgvDados.Rows[newRow].Cells[4].Value = item["Data_Solicitacao"].ToString();
+                dgvDados.Rows[newRow].Cells["ColSelect"].Value = "false";
+                dgvDados.Rows[newRow].Cells["ColCodAluno"].Value = item["Cod_Usuario"].ToString();
+                dgvDados.Rows[newRow].Cells["ColNomeAluno"].Value = item["Nome_Usuario"].ToString();
+                dgvDados.Rows[newRow].Cells["ColRegistro"].Value = item["N_Registro"].ToString();
+                dgvDados.Rows[newRow].Cells["ColDisciplina"].Value = item["Disciplina"].ToString();
+                dgvDados.Rows[newRow].Cells["ColEnsino"].Value = item["Ensino"].ToString();
+                dgvDados.Rows[newRow].Cells["ColDataSolicitacao"].Value = item["Data_Solicitacao"].ToString();
                 if(!rbBuscarTurma.Checked)
                     lblCodigo.Text = item["Cod_Usuario"].ToString();
             }
@@ -289,10 +290,11 @@ namespace Controle_de_livros
         }
 
         ErrorProvider errorProvider = new ErrorProvider();
+        string mensagem;
 
         private void btnFinalizarDevolucao_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(lblCodigo.Text))
+            if (!string.IsNullOrEmpty(lblCodigo.Text) || rbBuscarTurma.Checked)
             {
                 if (dgvDados.Rows.Count > 0)
                 {
@@ -304,21 +306,41 @@ namespace Controle_de_livros
                         MessageBox.Show("Selecione o item para finalizar a devolução!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                         return;
                     }
+                    
+                    if (rbBuscarTurma.Checked)
+                    {
+                        cbTurma.Items.Clear();
+                        cbAno.Items.Clear();
+                        loadCbAno();
+                    }
                     loadDgv();
                     devolucaoFeita = false;
                 }
                 else
                 {
-                    MessageBox.Show("Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper(), "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (rbBuscarTurma.Checked)
+                    {
+                        mensagem = "Informe o Ano e a turma!";
+                    }
+                    else
+                        mensagem = "Não há empréstimos realizados no nome de " + txtNome.Text.ToUpper();
+
+                    MessageBox.Show(mensagem, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
-            {
-                MessageBox.Show("Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            {               
+                if (rbBuscarCodigo.Checked)
+                    mensagem = "Informe o(a) Código do(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!";
+                else if (rbBuscarRegistro.Checked)
+                    mensagem = "Informe o registro do livro!";
+                else
+                    mensagem = "Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!";
+
+                MessageBox.Show(mensagem, "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 errorProvider.Clear();
                 errorProvider.SetError(txtNome, "Informe o(a) Aluno(a)/Funcionário(a)/Ex-aluno(a) ou Outro(a)!");
                 txtNome.Focus();
-                return;
             }
         }
 
@@ -360,6 +382,8 @@ namespace Controle_de_livros
             txtNome.Visible = true;
             cbAno.Items.Clear();
             cbTurma.Items.Clear();
+            dgvDados.Columns["ColCodAluno"].Visible = false;
+            dgvDados.Columns["ColNomeAluno"].Visible = false;
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -373,6 +397,7 @@ namespace Controle_de_livros
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
+            errorProvider.Clear();
             txtNome.TextAlign = HorizontalAlignment.Right;
             lblCodigo.Text = "";
         }
@@ -424,7 +449,16 @@ namespace Controle_de_livros
                 txtNome.Visible = true;
                 cbAno.Items.Clear();
                 cbTurma.Items.Clear();
+                dgvDados.Columns["ColCodAluno"].Visible = false;
+                dgvDados.Columns["ColNomeAluno"].Visible = false;
+                if (string.IsNullOrWhiteSpace(lblCodigo.Text))
+                {
+                    dgvDados.Rows.Clear();
+                    cbSelecionarTudo.Checked = false;
+                    cbSelecionarTudo.Visible = false;
+                }
             }
+            errorProvider.Clear();
         }
 
         private void txtNome_KeyDown(object sender, KeyEventArgs e)
@@ -454,6 +488,7 @@ namespace Controle_de_livros
                 LimparCampos_E_FocarCursor();
             }
             lblNomeCampo.Text = "Código do Aluno(a)/Funcionário(a)/Outro";
+            errorProvider.Clear();
         }
 
         private void rbBuscarRegistro_CheckedChanged(object sender, EventArgs e)
@@ -463,16 +498,30 @@ namespace Controle_de_livros
                 LimparCampos_E_FocarCursor();
             }
             lblNomeCampo.Text = "Registro do Livro";
-        }
+            errorProvider.Clear();
+        }      
 
         private void rbBuscarTurma_CheckedChanged(object sender, EventArgs e)
         {
-            cbTurma.Visible = true;
-            cbAno.Visible = true;
-            lblTurma.Visible = true;
-            lblNomeCampo.Text = "Ano";
-            txtNome.Visible = false;
-            loadCbAno();
+            if (rbBuscarTurma.Checked)
+            {
+                if (usuario.BuscarAnoAluno().Rows.Count == 0)
+                {
+                    MessageBox.Show("Não há registro de turmas com livros emprestados.", "Biblioteca Fácil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    rbBuscarCodigo.Checked = true;
+                    return;
+                }
+                
+                cbTurma.Visible = true;
+                cbAno.Visible = true;
+                lblTurma.Visible = true;
+                lblNomeCampo.Text = "Ano";
+                txtNome.Visible = false;
+                dgvDados.Columns["ColCodAluno"].Visible = true;
+                dgvDados.Columns["ColNomeAluno"].Visible = true;
+                loadCbAno();
+                errorProvider.Clear();
+            }
         }
 
         private void loadCbAno()
@@ -495,6 +544,28 @@ namespace Controle_de_livros
             foreach(DataRow row in usuario.BuscarTurmaAluno().Rows)
             {
                 cbTurma.Items.Add(row["Turma"].ToString());
+            }
+        }
+
+        private void FrmDevolucaoLivrosDidatico_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+                btnFinalizarDevolucao_Click(sender, e);
+        }
+
+        private void cbAno_KeyDown(object sender, KeyEventArgs e)
+        {
+           if(e.KeyCode == Keys.Enter)
+            {
+                btnPesquisar_Click(sender, e);
+            }
+        }
+
+        private void cbTurma_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnPesquisar_Click(sender, e);
             }
         }
     }

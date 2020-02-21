@@ -442,7 +442,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEmprestimoLivroLiterario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Emprestimo de livros literarios";
+            this.Text = "EMPRÉSTIMO DE LIVROS LITERÁRIOS";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmEmprestimoLivro_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmEmprestimoLivro_KeyDown);

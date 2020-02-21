@@ -306,7 +306,7 @@
             this.MaximizeBox = false;
             this.Name = "FrmLivroLiterario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar livro literário";
+            this.Text = "LIVRO LITERÁRIO";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLivroLiterario_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
