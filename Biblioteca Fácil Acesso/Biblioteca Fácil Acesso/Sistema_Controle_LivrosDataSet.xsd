@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Sistema_Controle_LivrosDataSet" targetNamespace="http://tempuri.org/Sistema_Controle_LivrosDataSet.xsd" xmlns:mstns="http://tempuri.org/Sistema_Controle_LivrosDataSet.xsd" xmlns="http://tempuri.org/Sistema_Controle_LivrosDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sistema_Controle_LivrosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sistema_Controle_LivrosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Controle_de_livros.Properties.Settings.GlobalReference.Default.Sistema_Controle_LivrosConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sistema_Controle_LivrosConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sistema_Controle_LivrosConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Controle_de_livros.Properties.Settings.GlobalReference.Default.Sistema_Controle_LivrosConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Livro_DidaticoTableAdapter" GeneratorDataComponentClassName="Livro_DidaticoTableAdapter" Name="Livro_Didatico" UserDataComponentName="Livro_DidaticoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectName="Sistema_Controle_Livros.dbo.Livro_Didatico" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Disciplina, Ensino FROM dbo.Livro_Didatico</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Disciplina" DataSetColumn="Disciplina" />
+              <Mapping SourceColumn="Ensino" DataSetColumn="Ensino" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Sistema_Controle_LivrosDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Sistema_Controle_LivrosDataSet" msprop:Generator_UserDSName="Sistema_Controle_LivrosDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Livro_Didatico" msprop:Generator_TableClassName="Livro_DidaticoDataTable" msprop:Generator_TableVarName="tableLivro_Didatico" msprop:Generator_RowChangedName="Livro_DidaticoRowChanged" msprop:Generator_TablePropName="Livro_Didatico" msprop:Generator_RowDeletingName="Livro_DidaticoRowDeleting" msprop:Generator_RowChangingName="Livro_DidaticoRowChanging" msprop:Generator_RowEvHandlerName="Livro_DidaticoRowChangeEventHandler" msprop:Generator_RowDeletedName="Livro_DidaticoRowDeleted" msprop:Generator_RowClassName="Livro_DidaticoRow" msprop:Generator_UserTableName="Livro_Didatico" msprop:Generator_RowEvArgName="Livro_DidaticoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Disciplina" msprop:Generator_ColumnVarNameInTable="columnDisciplina" msprop:Generator_ColumnPropNameInRow="Disciplina" msprop:Generator_ColumnPropNameInTable="DisciplinaColumn" msprop:Generator_UserColumnName="Disciplina" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ensino" msprop:Generator_ColumnVarNameInTable="columnEnsino" msprop:Generator_ColumnPropNameInRow="Ensino" msprop:Generator_ColumnPropNameInTable="EnsinoColumn" msprop:Generator_UserColumnName="Ensino" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

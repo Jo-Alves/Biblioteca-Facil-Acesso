@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Usuario" targetNamespace="http://tempuri.org/DataSet_Usuario.xsd" xmlns:mstns="http://tempuri.org/DataSet_Usuario.xsd" xmlns="http://tempuri.org/DataSet_Usuario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sistema_Controle_LivrosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sistema_Controle_LivrosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Controle_de_livros.Properties.Settings.GlobalReference.Default.Sistema_Controle_LivrosConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Sistema_Controle_LivrosConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Sistema_Controle_LivrosConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Controle_de_livros.Properties.Settings.GlobalReference.Default.Sistema_Controle_LivrosConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuarioTableAdapter" GeneratorDataComponentClassName="UsuarioTableAdapter" Name="Usuario" UserDataComponentName="UsuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectName="Sistema_Controle_Livros.dbo.Usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT Turma 
+ FROM            Usuario
+WHERE        (Turma &lt;&gt; '') 
+ORDER BY Turma</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Turma" DataSetColumn="Turma" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Livro_LiterarioTableAdapter" GeneratorDataComponentClassName="Livro_LiterarioTableAdapter" Name="Livro_Literario" UserDataComponentName="Livro_LiterarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Sistema_Controle_LivrosConnectionString1 (Settings)" DbObjectName="Sistema_Controle_Livros.dbo.Livro_Literario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT Titulo AS TÍTULO, Genero AS GÊNERO, Estante AS ESTANTE
+FROM            Livro_Literario</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TÍTULO" DataSetColumn="TÍTULO" />
+              <Mapping SourceColumn="GÊNERO" DataSetColumn="GÊNERO" />
+              <Mapping SourceColumn="ESTANTE" DataSetColumn="ESTANTE" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Usuario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet_Usuario" msprop:Generator_UserDSName="DataSet_Usuario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent" msprop:Generator_RowClassName="UsuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Turma" msprop:Generator_ColumnVarNameInTable="columnTurma" msprop:Generator_ColumnPropNameInRow="Turma" msprop:Generator_ColumnPropNameInTable="TurmaColumn" msprop:Generator_UserColumnName="Turma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Livro_Literario" msprop:Generator_TableClassName="Livro_LiterarioDataTable" msprop:Generator_TableVarName="tableLivro_Literario" msprop:Generator_RowChangedName="Livro_LiterarioRowChanged" msprop:Generator_TablePropName="Livro_Literario" msprop:Generator_RowDeletingName="Livro_LiterarioRowDeleting" msprop:Generator_RowChangingName="Livro_LiterarioRowChanging" msprop:Generator_RowEvHandlerName="Livro_LiterarioRowChangeEventHandler" msprop:Generator_RowDeletedName="Livro_LiterarioRowDeleted" msprop:Generator_RowClassName="Livro_LiterarioRow" msprop:Generator_UserTableName="Livro_Literario" msprop:Generator_RowEvArgName="Livro_LiterarioRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TÍTULO" msprop:Generator_ColumnVarNameInTable="columnTÍTULO" msprop:Generator_ColumnPropNameInRow="TÍTULO" msprop:Generator_ColumnPropNameInTable="TÍTULOColumn" msprop:Generator_UserColumnName="TÍTULO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GÊNERO" msprop:Generator_ColumnVarNameInTable="columnGÊNERO" msprop:Generator_ColumnPropNameInRow="GÊNERO" msprop:Generator_ColumnPropNameInTable="GÊNEROColumn" msprop:Generator_UserColumnName="GÊNERO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTANTE" msprop:Generator_ColumnVarNameInTable="columnESTANTE" msprop:Generator_ColumnPropNameInRow="ESTANTE" msprop:Generator_ColumnPropNameInTable="ESTANTEColumn" msprop:Generator_UserColumnName="ESTANTE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
